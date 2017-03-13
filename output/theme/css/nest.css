@@ -12,12 +12,12 @@
 }
 @media (min-width: 992px) {
   .container {
-    width: 850px;
+    width: 950px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 850px;
+    width: 1200px;
   }
 }
 
@@ -25,6 +25,7 @@
 body {
     font-family: "Open Sans", sans-serif;
 /*    font-size: 15px;*/
+    font-size: 18px;
     color: #4b505a;
     background-color: #f5f5f5;
     line-height: 24px;
@@ -49,7 +50,7 @@ a:hover, a:active{
 
 a.navigate{
     background-color: rgba(0,0,0,0.5);
-    font-size: 12px;
+    font-size: 15px;
     padding-left: 4px;
     padding-right: 4px;
     min-width: 100px;
@@ -64,7 +65,7 @@ a.navigate:hover{
 }
 
 a.more{
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 30px;
 }
 
@@ -73,7 +74,7 @@ a.more{
 pre, code {
     background: #f8f7fa;
     padding: 34px;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 24px;
     font-family: Consolas, monaco, monospace;
     border-radius: 0px;
@@ -93,7 +94,7 @@ code { padding: 3px 6px; }
 	padding-left:20px;
 	padding-right:0px;
 	background:#333;
-	font-size:14px;
+	font-size:17px;
 	font-weight:400;
 	font-family:Consolas,monaco,monospace;
 	color:#fff
@@ -108,7 +109,7 @@ code { padding: 3px 6px; }
   padding-left: 40px;
   padding-right: 40px;
   background:#333; 
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
   font-family: Consolas, monaco, monospace;
   color: #fff;
@@ -117,7 +118,7 @@ code { padding: 3px 6px; }
 /* Titles */
 
 h1 { 
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
     letter-spacing: 2px;
@@ -125,7 +126,7 @@ h1 {
 }
 
 h2 { 
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
     margin-top: 40px;   
@@ -141,7 +142,7 @@ h2:after {
 }
 
 h3 { 
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
     margin-top: 30px; 
@@ -156,7 +157,7 @@ h3:after {
 }
 
 h4 { 
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
     margin-top: 30px; 
@@ -173,10 +174,10 @@ h4:after {
 
 /* Navbar */
 .header-nav{
-    height:100px;
-    line-height:100px;
+    height:50px;
+    line-height:50px;
     color:#fff;
-    font-size:12px;
+    font-size:15px;
     font-weight:600;
 }
 .header-nav .nav{
@@ -204,7 +205,7 @@ h4:after {
     background-color: rgba(0,0,0,0.2);
 }
 .header-logo {
-    font-size:15px;
+    font-size:18px;
     font-weight:600;
     text-transform: uppercase;
 }
@@ -218,7 +219,7 @@ h4:after {
 .header-container {
     background: #f5f5f5;
     padding: 0;
-    min-height: 360px;
+    min-height: 120; /*360*/
 }
 .header-wrapper{
     padding-left: 40px;
@@ -229,13 +230,13 @@ h4:after {
     padding: 25px 0 55px 0;
 }
 .header-title {
-    font-size: 28px;
+    font-size: 32px;
     color: #fff;
     font-weight: 700;
 }
 .header-date {
     margin-top: 15px;
-    font-size: 12px;
+    font-size: 15px;
     color: #fff;
     opacity: 0.8;
 
@@ -252,7 +253,7 @@ h4:after {
     border-bottom: 3px solid #eb2344;
 }
 .header-subtitle {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     color: #fff;
     font-weight: 300;
@@ -263,7 +264,7 @@ h4:after {
     font-style: italic;
 }
 .header-tags {
-    font-size: 11px;
+    font-size: 15px;
     color: #fff;
     font-style: italic;
 }
@@ -300,7 +301,7 @@ h4:after {
 }
 
 .content dt{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 24px;    
 }
@@ -319,7 +320,7 @@ h4:after {
 
 /* Menu */
 .menu{
-  font-size: 14px;
+  font-size: 18px;
 }
 .menu h4{
     margin-top: 0px;
@@ -341,7 +342,7 @@ h4:after {
     margin-top: 40px; 
 }
 .article {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -358,7 +359,7 @@ h4:after {
     text-decoration: None;
 }
 .article .date{
-    font-size: 12px;
+    font-size: 15px;
     margin-bottom: 10px;
     opacity: 0.9;  
 }
@@ -369,7 +370,7 @@ h4:after {
     margin-bottom: 40px; 
 }
 .archive {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -385,14 +386,14 @@ h4:after {
     text-decoration: None;
 }
 .archive dt{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 24px;    
 }
 /* Styling */
 
 blockquote{
-    font-size: 15px;
+    font-size: 20px;
     opacity: 0.65;
 }
 /* Comments */
@@ -406,14 +407,14 @@ blockquote{
 
 /* Gradients */
 .gradient {
-    background-color: #356689;
+    background-color: #B14A55; /*#356689; the header bar color */
 }
 
 /* Footer */
 
 .footer{
     background-color: #333;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     text-align: left;
     color: #fff;
@@ -423,7 +424,7 @@ blockquote{
     text-transform: uppercase;
     margin-bottom: 3px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
 }
 .footer-container{
     padding-top: 20px;
