@@ -42,7 +42,7 @@ DEFAULT_PAGINATION = 5
 NEST_CSS_MINIFY = False
 
 # Add items to top menu before pages
-MENUITEMS = [('Homepage', '/'),('Categories','/categories.html')]
+MENUITEMS = [ ]  #[('Homepage', '/'),('Categories','/categories.html')]
 
 # Add header background image from content/images : 'background.jpg'
 NEST_HEADER_IMAGES = ''
