@@ -10,7 +10,7 @@ PATH = 'content'
 PLUGIN_PATH = './plugins'
 PLUGINS = ['ipynb.markup']
 
-THEME = 'theme_library/nest'
+THEME = 'theme/nest'
 MARKUP = ('md', 'ipynb')
 
 TIMEZONE = 'Europe/Paris'
