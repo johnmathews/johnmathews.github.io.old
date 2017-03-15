@@ -7,7 +7,7 @@ SITENAME = 'John Mathews'
 SITEURL = ''
 
 PATH = 'content'
-PLUGIN_PATH = './plugins'
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
 
 THEME = 'theme/nest'
