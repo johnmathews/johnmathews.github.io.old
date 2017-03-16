@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="|CODE0| [Spotify recently sent me their &#39;2016 Wrapped&#39; email containing a few statistics about my listening habits in 2016, and a playlist of my 101 most played songs.]{style=&#34;color: #000000;&#34;}...">
+        <meta name="keywords" content="Data, Music, Pandas, Python, Spotify">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>Spotify song history - John Mathews</title>
+
+        <!-- Stylesheets -->
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/theme/css/fonts.css" rel="stylesheet">
+        <link href="/theme/css/nest.css" rel="stylesheet">
+        <link href="/theme/css/pygment.css" rel="stylesheet">
+        <!-- /Stylesheets -->
+
+        <!-- RSS Feeds -->
+        <!-- /RSS Feeds -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+    <div class="header-container gradient">
+
+            <!-- Static navbar -->
+            <div class="container">
+                <div class="header-nav">
+                    <div class="header-logo">
+                        <a class="pull-left" href="/"><img class="mr20" src="/images/logo.jpeg" alt="logo">John Mathews</a>
+                    </div>
+                    <div class="nav pull-right">
+                            <a  href="/pages/about.html">About</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /Static navbar -->
+
+            <!-- Header -->
+    <!-- Header -->
+    <div class="container header-wrapper">
+        <div class="row">
+              <div class="col-lg-12">   
+                  <div class="header-content">
+                     <h1 class="header-title">Spotify song history</h1>
+                      <p class="header-date">By <a href="/author/jm.html">JM</a>, Thu 22 December 2016, in category <a href="/category/data-analysis.html">Data analysis</a></p>
+                      <div class="header-underline"></div>
+                      <div class="clearfix"></div>
+                      <p class="pull-right header-tags">
+                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
+<a href="/tag/data.html">Data</a>, <a href="/tag/music.html">Music</a>, <a href="/tag/pandas.html">Pandas</a>, <a href="/tag/python.html">Python</a>, <a href="/tag/spotify.html">Spotify</a>                      </p>
+                  </div> 
+              </div>
+        </div>
+    </div>
+    <!-- /Header -->
+            <!-- /Header -->
+
+        </div>
+        <!-- /Header -->
+
+
+        <!-- Content -->
+    <div class="container content">
+        <p>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+|CODE0|
+
+</p>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+[Spotify recently sent me their '2016 Wrapped' email containing a few
+statistics about my listening habits in 2016, and a playlist of my 101
+most played songs.]{style="color: #000000;"}
+
+[There is an option in Spotify's to log your song history to last.fm,
+from where you to download your song history. I thought it would be
+interesting to verify Spotify's statistics and see if I could discover
+other interesting insights.]{style="color: #000000;"}
+
+Below is an analysis of my song history data compared of Spotify's
+results. It uses the Pandas library for Python and the Jupyter Notebook
+tool.\[1. The notebook was converted to HTML using the method described
+[here](http://chrisholdgraf.com/blogging-in-wordpress-with-ipython-jupyter-notebooks/)
+and
+[here](http://prooffreaderplus.blogspot.co.uk/2014/11/how-to-quickly-turn-ipython-notebook.html).
+From Terminal run
+
+`jupyter nbconvert --to html --template basic source_file.ipynb `\] \[2.
+The exported html file placed a ¶ after every section name. I manually
+removed this in Vim using  
+`:%s/&#182;//g `\]  
+<!--more-->
+
+<form action="javascript:code_toggle()">
+<input type="submit" value="show/hide script">
+</form>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Notebook set-up {#1.-Notebook-set-up}
+---------------
+
+Import some libraries, set some settings…
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[1\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Display plot results inline, not in a separate window
+    %matplotlib inline
+    %pylab inline
+
+    # Set the size of all figures
+    pylab.rcParams['figure.figsize'] = (14, 5)
+
+    # Import pandas and a nicer plotting style
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    plt.style.use = 'default'
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Populating the interactive namespace from numpy and matplotlib
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[2\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Make the dataframes look a bit prettier
+    from IPython.core.display import HTML
+    css = open('style-table.css').read() + open('style-notebook.css').read()
+    HTML('<style>{}</style>'.format(css))
+
+    # Print output to 2 decimal places only
+    #pd.options.display.float_format = '{:,.2f}'.format # Just works for this cell only
+
+    # This sets behaviour for entire notebook
+    %precision %.2f  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[2\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    '%.2f'
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Load the data {#2.-Load-the-data}
+-------------
+
+Import the song history data I downloaded from last.fm, set the column
+names and do a little formatting:
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[3\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Load in the data from the .csv file I downloaded
+    column_names = ['Artist', 'Album', 'Name', 'd_t']
+
+    # Choose the column names
+    df = pd.read_csv('listening_history.csv', index_col=None, names = column_names, encoding='utf-8', header=None) 
+
+    # Convert the date time column (d_t) from a string to date time, so that I can search by date 
+    df['d_t'] = pd.to_datetime(df['d_t'])
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Explore the data {#3.-Explore-the-data}
+----------------
+
+Now the data is loaded, lets look around and see what the log contains:
+
+Some initial questions to answer to get a feel for the data:
+
+-   How much data is there?
+-   What type of data is present?
+-   What are the maximum and minimum values?
+-   ...etc.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[4\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # View the top 10 rows
+    df.head(10)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[4\]:
+
+</div>
+
+<div
+class="output_html rendered_html output_subarea output_execute_result">
+
+<div>
+
+      Artist          Album                       Name                  d\_t
+  --- --------------- --------------------------- --------------------- ---------------------
+  0   Bonobo          Animal Magic                Kota                  NaT
+  1   Samaris         Samaris                     Góða tungl            2016-12-15 09:44:00
+  2   The Staves      Dead & Born & Grown         Mexico                2016-12-15 09:40:00
+  3   Bonobo          Animal Magic                Kota                  2016-12-15 09:34:00
+  4   The Gloaming    The Gloaming                The Sailor's Bonnet   2016-12-15 09:30:00
+  5   St. Germain     St Germain                  Forget Me Not         2016-12-15 09:24:00
+  6   Yosi Horikawa   Wandering                   Bubbles               2016-12-15 09:19:00
+  7   South           Music from The O.C. Mix 1   Paint the Silence     2016-12-15 09:13:00
+  8   The Staves      Sleeping In A Car           Sleeping In A Car     2016-12-15 09:09:00
+  9   Bonobo          Days to Come                Recurring             2016-12-15 09:04:00
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[5\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    #How many rows are there?
+    len(df)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[5\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    36454
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[6\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # How many 2016 rows
+    len(df[df.d_t.dt.year == 2016])
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[6\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    1983
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[7\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Are there any NaN values in 2016?
+    Ans = len(df[(df.d_t.dt.year == 2016) & (df.isnull().any(axis=1))])
+    print('There are', Ans, 'rows with NaN values in 2016 (NaT's not considered)')
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    There are 0 rows with NaN values in 2016 (NaT's not considered)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[8\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Maximum and minimum dates
+    print("Oldest record is:",df.d_t.min())
+    print("Most recent record is:",df.d_t.max())
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Oldest record is: 1970-01-01 00:00:00
+    Most recent record is: 2016-12-15 09:44:00
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Logging data to last.fm was turned off for the first half of 2016.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[9\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    #print("Oldest record in 2016 is:",df[df.d_t.dt.year == 2016].d_t.min())
+    print(' Logging my song history in 2016 began at:',df[df.d_t.dt.year == 2016].d_t.min())
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Logging my song history in 2016 began at: 2016-06-14 20:24:00
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Therefore it will be important to remember that the data being analysed
+only represents about half of 2016.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Analysis {#4.-Verify-Spotify's-statistics}
+--------
+
+### Total Minutes {#4a.-Total-Minutes}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+According to Spotify, I listened to 2357 unique artists this year, and
+3309 unique tracks. Total streaming time was 45202 minutes.
+Spotify don’t tell me how many non-unique plays I accumulated.
+
+Googling ‘average song length’ reveals that most pop songs last 3.5
+minutes, but I think the songs I listen to are longer than that.
+
+Spotify’s UI is understandably light on details, so initially I wondered
+how to calculate my average song length. First I just eyeballed the
+data. Then I realised I could sort the playlist by song length and then
+I could pick the Median, although I’d need to know how mang songs were
+in the playlist.
+
+Whilst searching for playlist properties like ‘number of songs’ I simply
+spotted what I needed below the description; 101 songs, total play time
+of 8 hours, 29 minutes.
+
+Spotify tell me I’ve spent 45202 minutes streaming music and listened to
+3309 unique tracks in 2016.
+
+Therefore:
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[10\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Average length of my 101 most listened to songs
+    Average = round((8*60 + 29)*60/101,2)
+    print("Average song length:", Average, "seconds")
+    print("or 5 minutes, 2 seconds \n")
+
+    # Time spent listening to Spotify in days
+    print("Days listening to Spotify in 2016:", round(45303/60/24,2))
+    print("...Really? A whole month?!? \n")
+
+    # Time spent listening to Spotify in seconds
+    seconds_used = 45202 * 60 
+
+    # Number of songs played 
+    n_tracks = round(seconds_used / Average,2)
+    print("Number of songs played in 2016:",n_tracks)
+
+    # Average number of plays per songs
+    unique_tracks = 3309 # From summary email
+    average_plays = round(n_tracks / unique_tracks,2)
+    print("On average, I listen to each track", average_plays, "times")
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Average song length: 302.38 seconds
+    or 5 minutes, 2 seconds 
+
+    Days listening to Spotify in 2016: 31.46
+    ...Really? A whole month?!? 
+
+    Number of songs played in 2016: 8969.24
+    On average, I listen to each track 2.71 times
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+This is a surprisingly large amount of time spent listening. I cannot
+believe I spent 1/12 of 2016 streaming music from Spotify. I also
+thought I was quite a repetitive listener, so the average of 2.7 plays
+per song is surprisingly low. (For example, I have a short playlist with
+‘Recurring’ by Bonobo in it 5 times.)
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+### Unique artists {#4b.-Unique-artists}
+
+According to Spotify, I listened to 2357 unique artists in 2016.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[11\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    Ans = len(df.Artist[df.d_t.dt.year == 2016].value_counts())
+    print('Number of unique artists scrobbled in 2016:', Ans)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Number of unique artists scrobbled in 2016: 510
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+If all songs were being logged to last.fm and my listening behaviour
+remained the same throughout the year, I would have expected the result
+to be about half of Spotify’s result (because I only began logging
+data in June). The summary email reported 2357 unique artists in 2016.
+510 is clearly much less than half of 2357.
+
+### Unique tracks {#4c.-Unique-tracks}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[12\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    Ans = len(df.Name[df.d_t.dt.year == 2016].value_counts())
+    print('Number of unique tracks logged in 2016:',Ans)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Number of unique tracks logged in 2016: 1060
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Spotify reported 3309 unique tracks played in 2016. My result of 1060
+unique tracks in only the second half of 2016 is less than I would have
+expected, though the difference between expectation and result is not as
+great as for unique artists.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+### My top tracks {#4d.-My-top-tracks}
+
+According to Spotify, my 3 most played tracks in 2016 are:
+
+1.  Lights Out Words Gone
+2.  Shuffle
+3.  Luna
+
+...all by Bombay Bicycle Club
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[13\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Which tracks did I listen to the most in 2016?
+    df.Name[df.d_t.dt.year == 2016].value_counts().head(10)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[13\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    Shuffle                  14
+    Miserere                 14
+    The Pilgrim’s Song       12
+    Always Like This         12
+    Lights Out Words Gone    12
+    Luna                     11
+    The Hare                 11
+    You Already Know         11
+    Koop Island Blues        10
+    Steady                   10
+    Name: Name, dtype: int64
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+This shows that whilst the ‘top tracks’ are some of my most listened to
+tracks, Spotify either uses a different method to calculate plays, or
+‘top’ is not synonymous to ‘most frequent’.
+
+When using data from June onwards, my ‘top tracks’ are only my joint
+1st, 3rd and 6th most frequent plays.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+### Top Artists {#4e.-Top-Artists}
+
+Results from Spotify:
+
+1.  Bonobo
+2.  Bombay Bicycle Club
+3.  The Staves
+4.  Thievery Corporation
+5.  Jack Johnson
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[14\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df.Artist[df.d_t.dt.year == 2016].value_counts().head(10)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[14\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    The Staves                          170
+    Bonobo                              161
+    The Gloaming                        132
+    Koop                                107
+    Bombay Bicycle Club                 105
+    Giovanni Pierluigi da Palestrina     70
+    Jimi Hendrix                         48
+    Jack Johnson                         44
+    Gregorio Allegri                     43
+    Broken Social Scene                  33
+    Name: Artist, dtype: int64
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+My results are different to Spotify's, but not by much.
+
+  Artist                 Spotify's results   My result
+  ---------------------- ------------------- -----------
+  Bonobo                 1                   2
+  Bombay Bicycle Club    2                   5
+  The Staves             3                   1
+  Thievery Corporation   4                   -
+  Jack Johnson           5                   8
+
+Apart from Thievery Corporation being conspicuously absent from my own
+data set, all other differences could reasonably be explained by
+listening trends being different from Jan – June than July – Dec.
+
+The results show that I prefer listening to Bonobo over Bombay Bicycle
+Club, but that my 3 most played songs are all by Bombay Bicycle Club.
+This shows that there are more songs by Bonobo that I enjoy listening
+to, and that I have more polarised opinions about songs by Bombay
+Bicycle Club.
+
+### Favourite day to listen {#4f.-Favourite-day-to-listen}
+
+According to Spotify, I stream more music on Saturday than any other
+day.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[15\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Plot how many songs were played on each day of the week in the second half of 2016
+    df[df.d_t.dt.year == 2016].Name.groupby(df.d_t.dt.dayofweek).count().plot(kind="bar")
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[15\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x11319a6d8>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_png output_subarea">
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzIAAAFOCAYAAABdSii+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz%20AAALEgAACxIB0t1+/AAAGrlJREFUeJzt3X+MZedZH/Dv46xiJQEsC5qd1Gvs0KTBRlAnxRuQW3Uq%20KseBko1AckOq8iNNG2SFpCChrEOl3VRViZEABaGUioR0Q5M6JhWN00Jiu+kFQRvbYLtx2MWsKtY4%20q+wkEEhIjWCNn/4xN/Z4vLszu3Nn7rx3Px/pymfee+49z+zjc3a/9z3n3OruAAAAjOSSeRcAAABw%20vgQZAABgOIIMAAAwHEEGAAAYjiADAAAMR5ABAACGs+kgU1WXVNUDVXXn9OfLq+quqnqkqj5eVZet%20WffWqjpeVceq6sbtKBwAALh4nc+MzFuTHF3z88Ek93T3y5J8IsmtSVJV1ya5Ock1SV6d5N1VVbMp%20FwAAYJNBpqr2JfnOJO9ZM3wgyZHp8pEkr50uvybJ7d39RHefSHI8yf6ZVAsAAJDNz8j8bJIfT9Jr%20xvZ290qSdPepJC+cjl+R5LE1652cjgEAAMzEhkGmqr4ryUp3P5TkXKeI9TmeAwAAmJk9m1jnhiSv%20qarvTPK8JF9dVb+c5FRV7e3ulapaSvK56fonk1y55vX7pmPPUFWCDwAAsKHuftaEyoYzMt399u7+%20+u7+hiSvS/KJ7v5nST6a5Aenq/1Ako9Ml+9M8rqqem5VvTjJS5Lcd5b3XtjHoUOH5l6Dh/5djA+9%20G/uhf2M/9G/ch96N/Vj0/p3NZmZkzuadSe6oqjckeTSrdypLdx+tqjuyeoez00lu6XNVAAAAC2Rp%206eqsrDy6o9t8xzvesWPb2rv3qpw6dWLHtnc25xVkuvs3kvzGdPkLSf7RWdb7ySQ/ueXqAABgMKsh%20Zic/xz88feyMlZXd8c0q5/M9MpyH5eXleZfAFujfuPRubPo3Nv0bl96NbnneBcxFzeusr6pyxhkA%20AAtn9bvgF/nfuXXOa1dmvrWq9IVc7A8AALDbCDIAAMBwBBkAAGA4W7n9MgAA22Aet+/dSbvl9r2M%20zcX+AAC7jIvFx6Z/M96ai/0BAIBFIcgAAADDEWQAAIDhCDIAAMBwBBkAAGA4ggwAADAcQQYAABiO%20IAMAAAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAEGQAAYDiCDAAAMBxBBgAAGI4gAwAADEeQAQAA%20hiPIAAAAwxFkAACA4WwYZKrq0qq6t6oerKqHq+rQdPxQVX2mqh6YPm5a85pbq+p4VR2rqhu38xcA%20YPssLV2dqlrYx9LS1fP+IwbgAlV3b7xS1fO7+/Gqek6S307yliSvTvLn3f0z69a9JskHk1yfZF+S%20e5K8tNdtqKrWDwGwy1RVkkU+Vlf8XcRuZN8bm/7NeGtV6e5aP76pU8u6+/Hp4qVJ9uTpzjzrDZMc%20SHJ7dz/R3SeSHE+y/7wrBgAAOItNBZmquqSqHkxyKsnd3X3/9Kk3V9VDVfWeqrpsOnZFksfWvPzk%20dAwAAGAmNjsj82R3vzyrp4rtr6prk7w7yTd093VZDTg/vX1lAgAAPG3P+azc3V+qqkmSm9ZdG/OL%20ST46XT6Z5Mo1z+2bjj3L4cOHn1peXl7O8vLy+ZQDAAAsmMlkkslksuF6G17sX1Vfl+R0d3+xqp6X%205ONJ3pnkge4+NV3nR5Nc392vn87WfCDJK7N6StndcbE/wJBcsArzYd8bm/7NeGtnudh/MzMyL0py%20pKouyeqpaB/q7l+rqvdX1XVJnkxyIsmbkqS7j1bVHUmOJjmd5BaJBQAAmKVN3X55WzZsRgZg1/Op%20IsyHfW9s+jfjrW3l9ssAAAC7iSADAAAMR5ABAACGI8gAAADDEWQAAIDhCDIAAMBwBBkAAGA4ggwA%20ADAcQQYAABiOIAMAAAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAEGQAAYDiCDAAAMBxBBgAAGI4g%20AwAADEeQAQAAhrNn3gXslKWlq7Oy8ui8y9g2e/delVOnTsy7DAAA2BHV3fPZcFXv5LarKsl8fted%20UZlXL4HF5dgJ82HfG5v+zXhrVenuWj/u1DIAAGA4ggwAADAcQQYAABiOIAMAAAxHkAEAAIazYZCp%20qkur6t6qerCqHq6qQ9Pxy6vqrqp6pKo+XlWXrXnNrVV1vKqOVdWN2/kLAAAAF59N3X65qp7f3Y9X%201XOS/HaStyT53iR/0t0/VVVvS3J5dx+sqmuTfCDJ9Un2JbknyUvX32vZ7ZdnbbFvYwjMh2MnzId9%20b2z6N+OtbeX2y939+HTx0qx+iWYnOZDkyHT8SJLXTpdfk+T27n6iu08kOZ5k/4WXDgAA8EybCjJV%20dUlVPZjkVJK7u/v+JHu7eyVJuvtUkhdOV78iyWNrXn5yOgYAADATm52RebK7X57VU8X2V9U35dnz%20ZYs8fwYAAOwie85n5e7+UlVNktyUZKWq9nb3SlUtJfncdLWTSa5c87J907FnOXz48FPLy8vLWV5e%20Pp9yAACABTOZTDKZTDZcb8OL/avq65Kc7u4vVtXzknw8yTuT/IMkX+ju285ysf8rs3pK2d1xsf8O%20WOyL5oD5cOyE+bDvjU3/Zry1s1zsv5kZmRclOVJVl2T1VLQPdfevVdUnk9xRVW9I8miSm5Oku49W%201R1JjiY5neSWHU0sAADAwtvU7Ze3ZcNmZGZssT/ZAObDsRPmw743Nv2b8da2cvtlAACA3USQAQAA%20hiPIAAAAwxFkAACA4QgyAADAcAQZAABgOIIMAAAwHEEGAAAYjiADAAAMR5ABAACGI8gAAADDEWQA%20AIDhCDIAAMBwBBkAAGA4ggwAADAcQQYAABiOIAMAAAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAE%20GQAAYDiCDAAAMBxBBgAAGI4gAwAADEeQAQAAhrNhkKmqfVX1iar6vap6uKp+ZDp+qKo+U1UPTB83%20rXnNrVV1vKqOVdWN2/kLAAAAF5/q7nOvULWUZKm7H6qqr0ryu0kOJPknSf68u39m3frXJPlgkuuT%207EtyT5KX9roNVdX6oW1VVUl2bns7r7KTf57AxcGxE+bDvjc2/Zvx1qrS3bV+fMMZme4+1d0PTZe/%20nORYkiu+8r5neMmBJLd39xPdfSLJ8ST7L7RwAACA9c7rGpmqujrJdUnunQ69uaoeqqr3VNVl07Er%20kjy25mUn83TwAQAA2LJNB5npaWUfTvLW6czMu5N8Q3dfl+RUkp/enhIBAACeac9mVqqqPVkNMb/c%203R9Jku7+/JpVfjHJR6fLJ5Ncuea5fdOxZzl8+PBTy8vLy1leXt5k2QAAwCKaTCaZTCYbrrfhxf5J%20UlXvT/LH3f1ja8aWuvvUdPlHk1zf3a+vqmuTfCDJK7N6StndcbH/Dljsi+aA+XDshPmw741N/2a8%20tbNc7L/hjExV3ZDknyZ5uKoezGpX3p7k9VV1XZInk5xI8qYk6e6jVXVHkqNJTie5ZUcTCwAAsPA2%20NSOzLRs2IzNji/3JBjAfjp0wH/a9senfjLd2obdfBgAA2G0EGQAAYDiCDAAAMBxBBgAAGI4gAwAA%20DEeQAQAAhiPIAAAAwxFkAACA4QgyAADAcAQZAABgOIIMAAAwHEEGAAAYjiADAAAMR5ABAACGI8gA%20AADDEWQAAIDhCDIAAMBwBBkAAGA4ggwAADAcQQYAABiOIAMAAAxHkAEAAIYjyAAAAMPZM+8CAIDt%20sbR0dVZWHp13Gdti796rcurUiXmXAcxRdfd8NlzVO7ntqkoyn991Z1Tm1UtgcTl2jm2x+6d3Y9O/%20se1s/6oq3V3rx51aBgAADGfDIFNV+6rqE1X1e1X1cFW9ZTp+eVXdVVWPVNXHq+qyNa+5taqOV9Wx%20qrpxO38BAADg4rPhqWVVtZRkqbsfqqqvSvK7SQ4k+aEkf9LdP1VVb0tyeXcfrKprk3wgyfVJ9iW5%20J8lL159H5tSyWVvsKVpgPhw7x7bY/dO7senf2AY5tay7T3X3Q9PlLyc5ltWAciDJkelqR5K8drr8%20miS3d/cT3X0iyfEk+7f8GwAAAEyd1zUyVXV1kuuSfDLJ3u5eSVbDTpIXTle7Islja152cjoGAAAw%20E5u+/fL0tLIPJ3lrd3+5qtbPJ533/NLhw4efWl5eXs7y8vL5vgUAALBAJpNJJpPJhutt6vbLVbUn%20yX9L8uvd/a7p2LEky929Mr2O5n929zVVdTBJd/dt0/U+luRQd9+77j1dIzNTi32uKTAfjp1jW+z+%206d3Y9G9sg1wjM/VLSY5+JcRM3ZnkB6fLP5DkI2vGX1dVz62qFyd5SZL7LqhqAACAM9jMXctuSPKb%20SR7OarTsJG/Paji5I8mVSR5NcnN3/9n0Nbcm+edJTmf1VLS7zvC+ZmRmarE/2QDmw7FzbIvdP70b%20m/6NbXfMyGzq1LLtIMjM2mIfEID5cOwc22L3T+/Gpn9j2x1B5rzuWgYAALAbCDIAAMBwBBkAAGA4%20ggwAADAcQQYAABiOIAMAAAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAEGQAAYDiCDAAAMBxBBgAA%20GI4gAwAADEeQAQAAhiPIAAAAwxFkAACA4QgyAADAcAQZAABgOIIMAAAwHEEGAAAYzp55FwCbsbR0%20dVZWHp13Gdtm796rcurUiXmXAQAwjOru+Wy4qndy21WVZD6/686ozKuXO0H/YD7se2Nb7P7p3dj0%20b2w727+qSnfX+nGnlgEAAMMRZAAAgOEIMgAAwHA2DDJV9d6qWqmqT60ZO1RVn6mqB6aPm9Y8d2tV%20Ha+qY1V143YVDgAAXLw2MyPzviSvOsP4z3T3K6aPjyVJVV2T5OYk1yR5dZJ31+rVTgAAADOzYZDp%207t9K8qdneOpMAeVAktu7+4nuPpHkeJL9W6oQGNrS0tWpqoV9LC1dPe8/YgC4KG3lGpk3V9VDVfWe%20qrpsOnZFksfWrHNyOgZcpFa//6cX9rHI328EALvZhX4h5ruT/Jvu7qr6t0l+Oskbz/dNDh8+/NTy%208vJylpeXL7AcAABgEUwmk0wmkw3X29QXYlbVVUk+2t3fcq7nqupgku7u26bPfSzJoe6+9wyv84WY%20M+WLpca2uP3Tu7Hp39gWu396Nzb9G9tYX4hZWXNNTFUtrXnue5J8erp8Z5LXVdVzq+rFSV6S5L4L%20KxkAAODMNjy1rKo+mGQ5yddW1R8lOZTkH1bVdUmeTHIiyZuSpLuPVtUdSY4mOZ3klh2ddgEAAC4K%20mzq1bFs27NSyGTNFO7bF7Z/ejU3/xrbY/dO7senf2MY6tQwAAGDXEGQAAIDhCDIAAMBwBBkAAGA4%20ggwAADAcQQYAABiOIAMAAAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAEGQAAYDiCDAAAMBxBBgAA%20GI4gAwAADEeQAQAAhiPIAAAAwxFkAACA4QgyAADAcAQZAABgOIIMAAAwHEEGAAAYjiADAAAMR5AB%20AACGI8gAAADD2TDIVNV7q2qlqj61Zuzyqrqrqh6pqo9X1WVrnru1qo5X1bGqunG7CgcAAC5em5mR%20eV+SV60bO5jknu5+WZJPJLk1Sarq2iQ3J7kmyauTvLuqanblAgAAbCLIdPdvJfnTdcMHkhyZLh9J%208trp8muS3N7dT3T3iSTHk+yfTakAAACrLvQamRd290qSdPepJC+cjl+R5LE1652cjgEAAMzMrC72%207xm9DwAAwIb2XODrVqpqb3evVNVSks9Nx08muXLNevumY2d0+PDhp5aXl5ezvLx8geUAAACLYDKZ%20ZDKZbLhedW88mVJVVyf5aHd/8/Tn25J8obtvq6q3Jbm8uw9OL/b/QJJXZvWUsruTvLTPsJGqOtPw%20tlm958AiTxxVdvLPc6fp37j0bmz6N7bF7p/ejU3/xraz/auqdPezbiC24YxMVX0wyXKSr62qP0py%20KMk7k/xKVb0hyaNZvVNZuvtoVd2R5GiS00lu2dG0AgAAXBQ2NSOzLRs2IzNjPtkY2+L2T+/Gpn9j%20W+z+6d3Y9G9su2NGZlYX+wMAAOwYQQYAABiOIAMAAAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAE%20GQAAYDiCDAAAMBxBBgAAGI4gAwAADEeQAQAAhiPIAAAAwxFkAACA4QgyAADAcAQZAABgOIIMAAAw%20HEEGAAAYjiADAAAMR5ABAACGI8gAAADDEWQAAIDhCDIAAMBwBBkAAGA4ggwAADAcQQYAABjOnq28%20uKpOJPlikieTnO7u/VV1eZIPJbkqyYkkN3f3F7dYJwAAwFO2OiPzZJLl7n55d++fjh1Mck93vyzJ%20J5LcusVtAAAAPMNWg0yd4T0OJDkyXT6S5LVb3AYAAMAzbDXIdJK7q+r+qnrjdGxvd68kSXefSvLC%20LW4DAADgGbZ0jUySG7r7s1X1N5LcVVWPZDXcrLX+ZwAAgC3ZUpDp7s9O//v5qvqvSfYnWamqvd29%20UlVLST53ttcfPnz4qeXl5eUsLy9vpRwAAGBwk8kkk8lkw/Wq+8ImTKrq+Uku6e4vV9ULktyV5B1J%20viPJF7r7tqp6W5LLu/vgGV7fF7rtC6w3iz05VNnJP8+dpn/j0rux6d/YFrt/ejc2/RvbzvavqtLd%20tX58KzMye5P8alX19H0+0N13VdXvJLmjqt6Q5NEkN29hGwAAAM9ywTMyW96wGZkZ88nG2Ba3f3o3%20Nv0b22L3T+/Gpn9j2x0zMlu9axkAAMCOE2QAAIDhCDIAAMBwBBkAAGA4ggwAADAcQQYAABiOIAMA%20AAxHkAEAAIYjyAAAAMMRZAAAgOEIMgAAwHAEGQAAYDiCDAAAMBxBBgAAGI4gAwAADEeQAQAAhiPI%20AAAAwxFkAACA4QgyAADAcAQZAABgOIIMAAAwHEEGAAAYjiADAAAMR5ABAACGI8gAAADDEWQAAIDh%20bFuQqaqbqur3q+oPqupt27UdAADg4rMtQaaqLkny80leleSbknxfVX3jdmxr95rMuwC2ZDLvArhg%20k3kXwJZM5l0AWzKZdwFcsMm8C2BLJvMuYC62a0Zmf5Lj3f1od59OcnuSA9u0rV1qMu8C2JLJvAvg%20gk3mXQBbMpl3AWzJZN4FcMEm8y6ALZnMu4C52K4gc0WSx9b8/JnpGAAAwJa52B8AABhOdffs37Tq%2025Ic7u6bpj8fTNLdfduadWa/YQAAYOF0d60f264g85wkjyT5jiSfTXJfku/r7mMz3xgAAHDR2bMd%20b9rdf11Vb05yV1ZPX3uvEAMAAMzKtszIAAAAbCcX+wMAAMMRZAAAgOFsyzUyF6uq2punvy/nZHev%20zLMeuFjY98amf+PSu7Hp37j0bpVrZGagqq5L8gtJLktycjq8L8mfJbmlux+YV21snoPCeOx7Y9O/%20cend2PRvXHr3TILMDFTVQ0ne1N33rhv/tiT/obv/znwqYzMcFMZl3xub/o1L78amf+PSu2dyatls%20vGD9/1BJ0t2frKoXzKMgzst/zNkPCu9LclEdFAZj3xub/o1L78amf+PSuzUEmdn49ar670nen+Sx%206diVSb4/ycfmVhWb5aAwLvve2PRvXHo3Nv0bl96t4dSyGamqVyc5kDXXWCS5s7t/bX5VsRlV9XNJ%20/lbOfFD4w+5+87xqY2P2vbHp37j0bmz6Ny69e5ogA3FQAAAYje+R2WZV9S/nXQMb6+5f7+4f7u7v%20nj5+WIgZm31vbPo3Lr0bm/6N62LsnSCz/WreBXDhLsaDwgKx741N/8ald2PTv3FddL1zsf+MVNU3%205synJv2H+VXFDFx0B4XRTPe9K5Lc291fXvPUo3MqifNQVfuTdHffX1XXJrkpye87do6nqt7f3d+v%20d+Opqr+XZH+ST+vf7lZVr0xyrLu/VFXPS3IwySuSHE3y7+Za3ByYkZmBqnpbktuz+o/e+6aPSvKf%20q+rgPGtjy/5q3gVwdlX1liQfSfIjST5dVQfWPH3RHdBHU1WHkvxckn9fVT+Z5OeTvCDJwar6ibkW%20xzlV1Z3rHh9N8j1f+Xne9XFuVXXfmuV/kdV976uTHPLvll3vl5I8Pl1+V1a/A++26dj75lXUvLjY%20fwaq6g+SfFN3n143/twkv9fdL51PZWxVVf1Rd3/9vOvgzKrq4STf3t1frqqrk3w4yS9397uq6sHu%20fvlcC+Scpv27LsmlSU4l2bfmU8Z7u/tb5logZ1VVD2T1E+D3JOlMP7xL8rok6e7fmF91bGTt8bGq%207k/ynd39+elXDnyyu795vhVyNlV1rLuvmS4/0N2vWPPcQ9193fyq23lOLZuNJ5P8zTz7VJYXTZ9j%20F6uqT53tqSR7d7IWztslXzmdrLtPVNVykg9X1VVxWuAInujuv07yeFX93+7+UpJ0919UlWPn7vat%20Sd6a5CeS/Hh3P1RVfyHADOOSqro8q2fmPKe7P58k3f3/quqJ+ZbGBj5dVT/U3e9L8n+q6lu7+3eq%206m8nOb3RixeNIDMb/yrJ/6iq43n6e0i+PslLkvgOkt1vb5JXJfnTdeOV5H/tfDmch5Wquq67H0qS%206czMP87q1LtPFHe/v6qq53f340n+7lcGq+qy+BBoV+vuJ5P8bFX9yvS/K/FvipFcluR3s/r3XFfV%20i7r7s1X1VfEh0G73xiTvqqp/neSPk/zvqnosq//+fONcK5sDp5bNSFVdktUL5dZe7H//9NNGdrGq%20em+S93X3b53huQ929+vnUBabUFX7svqp/qkzPHdDd//2HMpik6rq0u7+yzOMf12SF3X3w3MoiwtQ%20Vd+V5Ibufvu8a+HCVdXzk+zt7j+cdy2cW1V9TZIXZ/UDhM9098qcS5oLQQYAABiOu5YBAADDEWQA%20AIDhCDIAAMBwBBkAAGA4ggwAc1VVh6rqx87y3A9U1dJO1wTA7ifIALCb/WCevq09ADxFkAFgx1XV%20T1TVI1X1m0ledpZ1vjer3yD/n6rqgaq6dEeLBGBXE2QA2FFV9YokNyf5liTfleT6M63X3f8lyf1J%20Xt/drzjTl2cCcPHaM+8CALjo/P0kvzoNJn9ZVXeeY92aPgDgGczIAAAAwxFkANhpv5nktVV1aVV9%20dZLvPse6X0ryNTtTFgAjcWoZADuqux+sqg8l+VSSlST3nWP1I0l+oaoeT/LtrpMB4Cuqu+ddAwAA%20wHlxahkAADAcp5YBMHdV9fNJbkjSWb1LWSd5V3cfmWthAOxaTi0DAACG49QyAABgOIIMAAAwHEEG%20AAAYjiADAAAMR5ABAACG8/8BoY9xktAYC98AAAAASUVORK5CYII=)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Monday = 0 and Sunday = 6.
+
+This result shows that I stream more music on a Sunday than any other
+day. This is a different result to Spotify’s report.
+
+The small difference could be explained (again) by my data set only
+relating to the second half of 2016. From January to June I listened to
+more music on a Saturday than a Sunday – probably when I was playing
+Starcraft. This hobby unfortunately was put on ice and had to come
+second to revision for exams in July and November.
+
+### Time of day {#5.-Time-of-day}
+
+I thought it would be interesting to also see how much music I listen to
+at different times. I expect my listening habits to be different during
+the week compared to weekends, so I split the data by week day or
+weekend and then summed the songs played during each hour.
+
+The figures below show an unexpected dip around 3pm at weekends, and
+consistent streaming through the day whilst at the office during the
+week. No matter which day of the week, it appears I always listen to
+music in the evenings.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[16\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Count number of songs played during each hour at the weekends 
+    df[(df.d_t.dt.year == 2016) & (df.d_t.dt.dayofweek > 4)].Name.groupby(df.d_t.dt.hour).count().plot(kind="bar")
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[16\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x1131644a8>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_png output_subarea">
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzIAAAFUCAYAAAD/BwlDAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz%20AAALEgAACxIB0t1+/AAAHmZJREFUeJzt3XuUrXddHvDnGyIURGLEJiMEOFzkUpZAI2pYah0EBC+F%20qBWBVoi6rBcEKq2aqMscq63QtayLilQRxXhB5KImUoSYhi26Wggt9xAiFgkhmsELYNHq4vLtH3sf%20mDNn5pwzZ2bPu3+Tz2etvdaed+/9vs/e877zzrPfW3V3AAAARnLW1AEAAAB2S5EBAACGo8gAAADD%20UWQAAIDhKDIAAMBwFBkAAGA4pywyVfWLVbVRVW/fNOzcqrq6qm6sqtdW1TmbHrusqt5TVTdU1Vct%20KzgAAHDbdTpbZF6c5LFbhl2a5JrufkCSa5NcliRV9U+SPDHJg5J8dZIXVFXtX1wAAIDTKDLd/UdJ%20PrRl8BOSXLG4f0WSixf3H5/kpd398e5+X5L3JPni/YkKAAAwd6bHyJzX3RtJ0t23JjlvMfzuSW7e%209LxbFsMAAAD2zX4d7N/7NB4AAIBTOvsMX7dRVed390ZVrSX54GL4LUnusel5FyyGnaCqlB8AAOCU%20uvuE4+5Pd4tMLW7HXJXkksX9pyW5ctPwJ1XV7avq3knul+S6kwTa99vll1++lPHe1rOOlnekrKPl%20lVXe0bKOlldWeUfLOlpeWcfLu5NTbpGpqpckWU9y16p6f5LLkzwnycur6tuS3JT5mcrS3e+qqpcl%20eVeSjyX5nj7Z1AEAAM7AKYtMdz9lh4cevcPzfzLJT+4lFAAAwMns18H+K2N9fX3qCKdtpKzJWHlH%20ypqMlVfW5Rkp70hZk7Hyyro8I+UdKWsyVl5Zl+eg89ZUe35Vlb3OAGAFra0dycbGTfs6zvPPv1du%20vfV9+zpO4LahqtLbHOyvyAAAx6mq7P+VFeqkB+0C7GSnInPodi0DAAAOP0UGAAAYjiIDAAAMR5EB%20AACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNR%20ZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwDA0NbWjqSq9v22tnZk6rfGSVR3TzPhqp5q%202gDAzqoqyX6voyvW+yzLcubZxHy7Gqoq3V1bh9siAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAADA%20cBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwA%20ADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAnGBt7Uiqal9va2tHpn5bHCLV3dNM%20uKqnmjYAsLOqSrLf6+iK9f5YRpoPlpM1Md+uhqpKd9fW4bbIAAAAw1FkAACA4eypyFTV91XVO6vq%207VX161V1+6o6t6qurqobq+q1VXXOfoUFAABI9lBkqupuSZ6R5MLufkiSs5M8OcmlSa7p7gckuTbJ%20ZfsRFAAA4Ji97lp2uySfWVVnJ7ljkluSPCHJFYvHr0hy8R6nAQAAcJwzLjLd/WdJfirJ+zMvMB/p%207muSnN/dG4vn3JrkvP0ICgAAcMzZZ/rCqvrszLe+3CvJR5K8vKr+ZU48992O56w7evTop+6vr69n%20fX39TOMAAACHwGw2y2w2O+Xzzvg6MlX1L5I8tru/Y/HztyS5KMlXJlnv7o2qWkvyuu5+0Davdx0Z%20AFhBI10/hOUZaT5wHZnDbRnXkXl/kouq6h/VfO55VJJ3JbkqySWL5zwtyZV7mAYAAMAJ9nKMzHVJ%20XpHkLUnelqSSvDDJc5M8pqpuzLzcPGcfcgIAnGBt7Uiqat9va2tHpn5rwCmc8a5le56wXcsAYCXZ%20pSixS5H5YDHm2/x8sAqWsWsZAADAJBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADD%20UWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAA%20wHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAADAcBQZAABgOIoM%20AAAwHEUGAAAYjiIDAAAMR5EBAIADtLZ2JFW1r7e1tSNTv60DV909zYSreqppAwA7q6ok+72Orixj%20vb+crMmy8o7EfJCMlffwzrNVle6urcNtkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAA%20MBxFBgAAGI4iAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAADAcBQZAIADsLZ2JFW177e1tSNTvzWY%20RHX3NBOu6qmmDQDsrKqS7Pc6urKM9f5ysibLyDtS1sR8sBjzQHmXk3UVVFW6u7YOt0UGAAAYjiID%20AAAMZ09FpqrOqaqXV9UNVXV9VX1JVZ1bVVdX1Y1V9dqqOme/wgIAACR73yLzvCSv7u4HJXlokncn%20uTTJNd39gCTXJrlsj9MAAAA4zhkf7F9Vd0nylu6+75bh707yFd29UVVrSWbd/cBtXu9gfwBYQSMd%20iDzSQd4jZU3MB4sxD5TXwf67ce8kf1lVL66qN1fVC6vqTknO7+6NJOnuW5Oct4dpAAAAnODsPb72%20wiRP7+7/VVU/nfluZVur4I7V8OjRo5+6v76+nvX19T3EAQAARjebzTKbzU75vL3sWnZ+kv/Z3fdZ%20/PxlmReZ+yZZ37Rr2esWx9Bsfb1dywBgBY2028tIuxSNlDUxHyzGPFBeu5adtsXuYzdX1f0Xgx6V%205PokVyW5ZDHsaUmuPNNpAAAAbOeMt8gkSVU9NMmLknxGkvcm+dYkt0vysiT3SHJTkid294e3ea0t%20MgCwgkb6tnikb+JHypqYDxZjHijvbW+LzJ6KzF4oMgCwmkb6J2ukf2BHypqYDxZjHijvba/I7PU6%20MgAAAAdOkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAA%20hqPIAAAAw1FkAACA4SgyAADAcBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADDUWQA%20AIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAU%20GQAAYDiKDAAAMBxFBpZkbe1Iqmpfb2trR6Z+WwAAK6G6e5oJV/VU04aDUFVJ9nser1hugGUb6e/X%20crImy8g7UtbEfLAY80B5D+//CFWV7q6tw22RAQAAhqPIAAAAw1FkAACA4SgyAADAcBQZAABgOIoM%20AAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADCcPReZqjqr%20qt5cVVctfj63qq6uqhur6rVVdc7eYwIAAHzafmyReVaSd236+dIk13T3A5Jcm+SyfZgGAADAp+yp%20yFTVBUm+JsmLNg1+QpIrFvevSHLxXqYBAACw1V63yPx0ku9P0puGnd/dG0nS3bcmOW+P0wAAADjO%202Wf6wqr62iQb3f3Wqlo/yVN7pweOHj36qfvr6+tZXz/ZaIBlWVs7ko2Nm/Z9vOeff6/ceuv79n28%20AMDhNZvNMpvNTvm86t6xZ5z8hVX/Mcm/SvLxJHdM8llJfjvJw5Osd/dGVa0leV13P2ib1/eZThtG%20UFU5SY8/07FmGcvNcrImy8oLLJe/X8ky8o6UNTEfLMY8UN7Du86tqnR3bR1+xruWdfcPdfc9u/s+%20SZ6U5Nru/pYkv5vkksXTnpbkyjOdBgAAwHaWcR2Z5yR5TFXdmORRi58B9s3a2pFU1b7e1taOTP22%20AIBdOONdy/Y8YbuWcciNtNnYJvnkMG+Sh90aaRkb6e/XSFkT88FizAPlPbzrsX3ftQwAAGAqigwA%20ADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZABgyZZx7SPXPwJu61xHBpZkpHPEO/9+cpjPv8/0%20LGPJWFkT15ExHyzGPFDew7secx0ZAADg0FBkAACA4SgyAADAcBQZAABgOIoMAAAwHEUGAAAYjiID%20AAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQFYorW1%20I6mqfb+trR2Z+q0BwKSqu6eZcFVPNW04CFWVZL/n8coylpvlZE3GyjtS1mRZeVmO0eYDy1iyjLwj%20ZU3MB4sxD5T38K4XqirdXVuH2yIDAAAMR5EBAACGo8gAAADDUWQASOLEBACMxcH+sCQjHcjnIMlk%20rKyJA5HHMtpnaxlLLGPmg8WYB8p7eP/WOtgfAAA4NBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EB%20AACGo8gAAADDUWQAAIBtrfLFkl0QE5ZkpItduZBYMlbWxMX6xjLaZ2sZSyxj5oPFmAfKO1LWZDd5%20XRATAAA4NBSZ27hV3lwIAAA7OXvqAExrY+OmLGNz4cbGCVv/AABg39giAwAADEeRAQAAhqPIAAAA%20w1FkAACA4ZxxkamqC6rq2qq6vqreUVXPXAw/t6qurqobq+q1VXXO/sUFAADY2xaZjyd5dnc/OMkj%20kjy9qh6Y5NIk13T3A5Jcm+SyvccEAAD4tDMuMt19a3e/dXH/o0luSHJBkickuWLxtCuSXLzXkAAA%20AJvtyzEyVXUkycOSvCHJ+d29kczLTpLz9mMaAAAAx+y5yFTVnZO8IsmzFltmtl5dcf+vtggAANym%20nb2XF1fV2ZmXmF/t7isXgzeq6vzu3qiqtSQf3On1R48e/dT99fX1rK+v7yUOAAAwuNlsltlsdsrn%20VfeZbzCpql9J8pfd/exNw56b5K+7+7lV9YNJzu3uS7d5be9l2uyPqspyNppVbuu/3+V8tsv5XEeb%20D3y2yTLyjpR1NKN9tpaxxDJmPliMeaC8I2VNdpO3qtLddcLwM33DVfWlSV6f5B2Zv7tO8kNJrkvy%20siT3SHJTkid294e3eb0iswJWYeY8rPyRSsbKO1LWxD9ZYxnts7WMJZYx88FizAPlHSlrMmmR2StF%20ZjWswsx5WPkjlYyVd6SsiX+yxjLaZ2sZSyxj5oPFmAfKO1LWZD+KzL6ctQwAAOAgKTIAAMBwFBkA%20AGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxF%20BgAAGI4iAwAADEeRAQAAhqPIMIy1tSOpqn2/ra0dmfqtAWdgGX8T/D0AGEd19zQTruqpps2nVVWS%20ZfweKvv9+x0pa7KsvCNlTcbKO1LWxDJmPliMeaC8I2VNLGPmg8WYB8o7UtZkN3mrKt1dW4fbIgMA%20AAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPI%20AAAAw1FkAACA4SgyAADAcBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gswdrakVTVvt7W%201o5M/bYAAGBlnD11gMNoY+OmJL3P46x9HR8AAIzMFhkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEA%20AIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMJylFZmqelxVvbuq/riqfnBZ0wEAAG57llJk%20quqsJM9P8tgkD07y5Kp64DKmtdVsNjuIyeyT2dQBdmk2dYBdmE0dYJdmUwfYhdnUAXZhNnWAXZpN%20HWAXZlMH2KXZ1AF2YTZ1gF2YTR1gl2ZTB9iF2dQBdmk2dYBdmE0dYBdmUwfYpdmBTm1ZW2S+OMl7%20uvum7v5YkpcmecKZjmxt7Uiq6rRuj3zkI0/7uWtrR/br/Z6h2cTT363Z1AF2YTZ1gF2aTR1gF2ZT%20B9iF2dQBdmk2dYBdmE0dYJdmUwfYhdnUAXZhNnWAXZpNHWAXZlMH2KXZ1AF2YTZ1gF2YTR1gl2YH%20OrVlFZm7J7l5088fWAw7IxsbNyXp07xdftrPnY8XAAAYjYP9AQCA4VR37/9Iqy5KcrS7H7f4+dIk%203d3P3fSc/Z8wAABw6HR3bR22rCJzuyQ3JnlUkj9Pcl2SJ3f3Dfs+MQAA4Dbn7GWMtLs/UVXfm+Tq%20zHdf+0UlBgAA2C9L2SIDAACwTA72BwAAhqPIAAAAw1nKMTIHrarOz6evU3NLd29MmedkZF2e0fIC%20AHDmhj5GpqoeluTnkpyT5JbF4AuSfDjJ93T3m6fKtpWsyzNaXgAYWVU9MMkTsunLwyRXreqJnUbK%20O1LWZPq8oxeZtyb5zu5+45bhFyX5+e5+6DTJTiTr8oyWN5l+wd+NkbImY+WVdXlGyjtS1mSsvLLu%20v6r6wSRPTvLSJB9YDL4gyZOSvLS7nzNVtu2MlHekrMlq5B29yLynuz9/h8f+pLvvd9CZdiLr8gyY%20d/IF/3SNlDUZK6+syzNS3pGyJmPllXU5quqPkzy4uz+2Zfjtk1y/0/p4KiPlHSlrshp5Ry8y/yXJ%20fZP8SpKbF4PvkeSpSf60u793qmxbybo8A+adfME/XSNlTcbKK+vyjJR3pKzJWHllXY6qeneSx3b3%20TVuG3yvJ1d39gGmSbW+kvCNlTVYj79AH+3f3M6vqq3Piptif7e5XT5fsRLIuz2h5k3wyyd2S3LRl%20+OctHlslI2VNxsor6/KMlHekrMlYeWVdjn+T5L9X1Xvy6S8P75nkfklW6ovDhZHyjpQ1WYG8Q2+R%20gRFV1eOSPD/Jtgt+d79mqmxbjZQ1GSuvrMszUt6RsiZj5ZV1earqrCRfnOO/PHxTd39iulQ7Gynv%20SFmT6fMe2iJTVf+6u184dY7TIevyrGreqRf83RgpazJWXlmXZ6S8I2VNxsorKxxuQ+9adgo1dYBd%20kHV5VjJvd38yyRumznE6RsqajJVX1uUZKe9IWZOx8sp6sKrqVd39dVPnOF0j5R0pa3Jwec9a9gSW%20qaq+pKrusrh/x6r6sar63ap6buZn/lgZVfXMqrrHdo91988fdJ6TqarbV9VTq+rRi5+fUlXPr6qn%20J/mlieNtq6ruU1X/rqqeV1X/uaq+q6rusmqf7alU1aumznC6RsqajJVX1uUZKe9IWZOx8sq6NN8x%20dYBdGinvSFmTA8o79K5lVXV9kod298er6oVJ/i7JK5I8ajH8GyYNuElVfSTJ3yb5P0l+I8nLu/sv%20pk21var69cy31t0p84tK3jnJb2X+uaa7L5ks3Daq6plJvi7J65N8TZK3ZJ776zO/IOZsunS7U1Wf%20191/PnWO0zFS1mSsvLIuz0h5R8qajJVXVjgcRi8yN3T3gxb339zdF2567K3d/bDp0h2vqt6S5AuT%20PDrJNyd5fJL/nXmp+a3u/r8TxjtOVb29ux9SVWdnvo/u3br7E1VVSd7W3Q+ZOOJxquodSR62yHin%20JK/u7vWqumeSK7v7n04cEQ6dqjqvuz84dY7DqKru2t1/NXUO2E5VnZPksiQXJzkvSSf5YJIrkzyn%20uz88Ybxdqarf6+6vnjrHMYu9jC7L/BpCv9fdL9n02Au6+3smC7eNqlpLcnnmZ9b70STPSPKNSW5I%208qyDKOBD71qW5J1V9a2L+2+rqocnSVXdP8nHdn7ZJLq7P9ndV3f3t2d+msUXJHlckvdOG+0EZy3O%20Xf9ZmW+VOWcx/A5JPmOyVCd37HivO2S+BSnd/f6sYN6qOqeqnlNV766qv66qv6qqGxbDPnvqfKer%20qn5v6gxbVdVdquonq+pXq+opWx57wVS5tlNVa1X1X6vqZ6vqrlV1tKreUVUvq6rPmzrfZlX1OVtu%20d01yXVWdW1WfM3W+rRZngDp2/5yq+sWqentVvaSqzp8y21aL5f5zF/cfXlXvTfLGqrqpqr5i4ngn%20qKo3V9WPVNV9p85yKovP83VV9WtVdY+q+v2q+khVvamqVuoLrqq6c1X9+6q6fpHxL6rqDVV1ydTZ%20tvGyJB9Kst7dn9Pdd03yyMWwl02abBtVdeEOty9MsjJfeC+8OPNje1+Z5ElV9cqqusPisYumi7Wj%20X07yrszPtPe6JP8v8z1j/jDJzx1EgNG3yJyT5HlJvjzJXya5MPMP8+Ykz+zut00Y7zhV9ZadtgxU%201Z26++8OOtNOqur7Mm/Vt0vyU5lfn+W9mS9Er+juH5sw3gmq6llJvj3JGzOfF57b3S+uqn+c5JXd%20/c8mDbhFVb02ybVJrujuWxfD1pI8Lcmjuvurpsy3WVVduNNDSV7V3av2D/crMz996RuSfFvmX2g8%20pbv/YetW26lV1WuS/Lckn5nkKUl+PclLMv+W89Hd/YQJ4x2nqj6ZE69vcUHmVyDv7r7Pwafa2ebf%20dVW9KMmtSX4hyTck+YruvnjKfJtV1Tu6+wsW91+X5Ae6+02LL+Re0t0Pnzbh8arqTzP/J+uJmX+u%20v5HkN7v7zyYNto2qui7zb4s/O8l/SvJ93f2KqnpUkp/o7kdMGnCTqroyyW8nuSbzz/YzMz/W90eS%203NLdPzRhvONU1Y07XejwZI9Npao+keQPsv3Jfy7q7jsecKQdbd2bqKp+OPNi8Pgkv79K67Dk+P9t%20q+r93X3PTY8dyJ5RQxeZYxab4u6d+bfyH+jujYkjnaCq7t/dfzx1jtNVVXdLku7+s8VWgkcneX93%20Xzdtsu1V1YOTPCjJO7v73VPnOZmRVgIjrQCSsVYCq7ACOF1V9W+TPCbJ93f3OxbD/rS77z1tsu1t%20KTJb54lV+2xvSPIFi2M939DdF2167FMlZ1Vs+Wy/PMmTMy+INyT5jVU63f0plrEdv1ycQlW9rbsf%20uunnN3X3F9X8lMzv6u4HThjvOFV1deaF64pj/28ttnRekuQx3f3oCeOdoKremeTru/s92zx2c3dv%20eyKmKSz+Hjx4cQa7Y8MuSfL9Se7c3feaKtt2Ns+3VfUT3f0jmx47kL9fh+L0y939N0lWZuvLdkYq%20Mcm8wGy6/+HMT6Kwsrr7+iTXT53jNN1UVT+Q7VcCN5/shRO4Icl37rQCmCDPqdyhqs46thLo7v9Q%20VbdkfiKIO08b7QSbd+39lS2P3e4gg5xKd/9UVf1mkp9e/N4vz3y/+FV1XlU9O/MCfk5VVX/6W7tV%2026X6BUleXVXPSfKaqnpe5idX+cokb5002Sl09x8m+cOqekbmRfebk6xMkUny91X1VZnvHt1VdXF3%20/85il71VuzbL31bVl3X3H1XV45P8dTI/JXNVrdplBL45yaVJ/mCx7uokG0muynxr0qo5mp2X+2cc%20YI7T8buZL/vXHBvQ3b9cVbcm+ZnJUu3syqq6c3d/dEuJuV+SGw8iwKEoMjCYzSuB8xbDjq0Evmmy%20VNs7mnFWAMlYK4HJVwC70d0fSPJNi3+yfj/z4+dW1S9kfoxfMt+H+3OT/MViF86VKgfd/TM1P2HJ%20dye5f+br5c9P8jtJfnzKbDs44Uu5nl+w8TWL2yr5rsx3Kftkkscm+e6q+uXMT2Kzaqey/a4kL6qq%20z8/8S7lvS5LFLtI/O2Wwrbr7Q1X14sz/Dryhuz967LGaH5+2UvPBYnfCBy52KXzj5rxJ/n6qXNvp%207h/YLmt3v6bmZ2hdKd39o4u8d8/xef9ksVvv0h2KXcvgsKiqb+3uF0+d43SMlDUZK++qZ62qOya5%20b3e/c9WzbjVS3pGyJmPllfXMLf6hfnrmW+wflvnZqa5cPLZSxyImY+VdbN383gyQNVmNvIoMrJCt%20+3GvspGyJmPllXV5Rso7UtZkrLyynrnFFsRHdPdHq+pI5rue/2p3P2/Vjj1Kxso7UtZkNfLatQwO%20WFW9faeHkqzaqWGHyZqMlVfW5Rkp70hZk7Hyyro0Z23aheh9VbWe5BVVda9sf2KYqY2Ud6SsyQrk%20VWTg4J2f+f7aH9oyvJL8j4OPc1IjZU3Gyivr8oyUd6SsyVh5ZV2Ojap6WHe/NUkW38Z/XZJfSrJS%20Z9lbGCnvSFmTFciryMDBe1Xmp1E84aDjqpodfJyTGilrMlZeWZdnpLwjZU3Gyivrcjw1ycc3D+ju%20jyd5alX9/DSRTmqkvCNlTVYgr2NkAACA4aza+fQBAABOSZEBAACGo8gAAADDUWQAmFRVXV5Vz97h%20sadV1dpBZwJg9SkyAKyyS5LcfeoQAKweRQaAA1dVP1xVN1bV65M8YIfnfGOShyf5tap6c1Xd4UBD%20ArDSFBkADlRVXZjkiUkekuRrk3zRds/r7lcmeVOSp3T3hd39DweXEoBV54KYABy0L0/y24ti8g9V%20ddVJnluLGwAcxxYZAABgOIoMAAft9Ukurqo7VNVnJfnnJ3nu3yS5y8HEAmAkdi0D4EB191uq6jeT%20vD3JRpLrTvL0K5L8XFX9XZJHOE4GgGOqu6fOAAAAsCt2LQMAAIZj1zIAJldVz0/ypUk687OUdZLn%20dfcVkwYDYGXZtQwAABiOXcsAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABjO/welE9JaD7CgfQAA%20AABJRU5ErkJggg==)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[17\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Count number of songs played during each hour during the week
+    df[(df.d_t.dt.year == 2016) & (df.d_t.dt.dayofweek < 5)].Name.groupby(df.d_t.dt.hour).count().plot(kind="bar")
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[17\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x1131fe978>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_png output_subarea">
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzIAAAFUCAYAAAD/BwlDAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz%20AAALEgAACxIB0t1+/AAAHgpJREFUeJzt3X2wbWddH/DvL6QwIhoBJUcT5KIgREaMCCnW2h4L8tJa%20gjgC0hlBbItSXqodJVHHXKyt4Ax2qJr6AmJUIkQQA1RipHBE2yGhQnhLgFhMCJFcqbwoWh0gv/6x%20901Ozj33nnNz17lrP/d8PjN72Fl7n7W+51z2y3c/z3p2dXcAAABGctrcAQAAAI6XIgMAAAxHkQEA%20AIajyAAAAMNRZAAAgOEoMgAAwHB2LDJVdXZVvaWq3l9V762q5y63X1RVH62qdy4vj9v0MxdW1fVV%20dV1VPWYvfwEAAGD/qZ2+R6aq1pKsdfc1VXWPJH+S5PwkT0ny1939s1vuf06SS5M8IsnZSd6c5IHt%20C2sAAICJ7Dgi0923dPc1y+ufSXJdkrOWN9c2P3J+kld19+e6+4Yk1yc5b5q4AAAAx3mOTFUdSHJu%20kquWm55TVddU1cuq6ozltrOS3LTpx27O7cUHAADghO26yCynlb0myfOXIzMXJ/mq7j43yS1JXrI3%20EQEAAO7o9N3cqapOz6LE/EZ3X54k3f3xTXf5lSRvWF6/Ocl9N9129nLb1n06ZwYAANhRdx9xSstu%20R2R+Ncm13f3SwxuWiwAc9qQk71tef32Sp1bVXavq/kkekOTqowSa9HLRRRdNvk8ZV/Mi4/7JOEpO%20GWVcpYuM+yfjKDlllPFELkez44hMVX1zkn+V5L1V9a4kneRHkzytqs5NcmuSG5I8a1lOrq2qy5Jc%20m+SzSZ7dx0oAAABwnHYsMt39P5PcZZubrjjGz/x0kp8+gVwAAABHdVyrlq269fX1uSPsSMZpyDiN%20ETImY+SUcRoyTkPGaYyQMRkjp4zTkPGOdvxCzD07cJUZZwAAwDFVVfoETvYHAABYGYoMAAAwHEUG%20AAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxH%20kQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAAAA%20w1FkAACA4SgyAADAcBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIA%20AMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiK%20DAAAMBxFBgAAGI4iAwAADEeRAQDglLS2diBVNellbe3A3L8WSzsWmao6u6reUlXvr6r3VtXzltvv%20WVVXVtUHq+r3q+qMTT9zYVVdX1XXVdVj9vIXAACA7Rw6dGOSnvSy2CeroLr72HeoWkuy1t3XVNU9%20kvxJkvOTfG+Sv+zun6mqFyS5Z3dfUFVfm+SVSR6R5Owkb07ywN5yoKraugkAACZTVVkUkEn3Gu9h%20T66qSnfX1u07jsh09y3dfc3y+meSXJdFQTk/ySXLu12S5InL609I8qru/lx335Dk+iTnnfBvAAAA%20sHRc58hU1YEk5yZ5e5Izu/tQsig7Se6zvNtZSW7a9GM3L7cBAABM4vTd3nE5rew1SZ7f3Z+pqq1j%20asc9xnbw4MHbrq+vr2d9ff14dwEAAJxCNjY2srGxseP9djxHJkmq6vQkb0zypu5+6XLbdUnWu/vQ%208jyat3b3OVV1QZLu7hcv73dFkou6+6ot+3SODAAAe8Y5MqeGO32OzNKvJrn2cIlZen2SZyyvPz3J%205Zu2P7Wq7lpV90/ygCRX36nUAAAA29jNqmXfnORtSd6b29ee+9EsysllSe6b5MYkT+7uTy1/5sIk%2035fks1lMRbtym/0akQEAYM8YkTk1HG1EZldTy/aCIgMAwF5SZE4NJzq1DAAAYGUoMgAAwHAUGQAA%20YDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAADAcBQZAABgOIoMAAAwHEUG%20AAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxH%20kQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAABw%203NbWDqSqJr2srR2Y+9diINXd8xy4quc6NgAAJ6aqkkz9Xq4y5fvDETKys6pKd9fW7UZkAACA4Sgy%20AADAcBQZAABgOIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4%20igwAADAcRQYAABiOIgMAAAxnxyJTVS+vqkNV9Z5N2y6qqo9W1TuXl8dtuu3Cqrq+qq6rqsfsVXAA%20AGD/2s2IzCuSPHab7T/b3Q9bXq5Ikqo6J8mTk5yT5PFJLq6qmiwtAABAdlFkuvuPk3xym5u2Kyjn%20J3lVd3+uu29Icn2S804oIQAAwBYnco7Mc6rqmqp6WVWdsdx2VpKbNt3n5uU2AACAyZx+J3/u4iQ/%202d1dVT+V5CVJ/vXx7uTgwYO3XV9fX8/6+vqdjAMAAJwKNjY2srGxseP9qrt3vlPV/ZK8obsfeqzb%20quqCJN3dL17edkWSi7r7qm1+rndzbAAAVs/iNOip38tVpnx/OEJGdlZV6e4jTmvZ7dSyyqZzYqpq%20bdNtT0ryvuX11yd5alXdtarun+QBSa6+c5EBAAC2t+PUsqq6NMl6kntX1UeSXJTkW6vq3CS3Jrkh%20ybOSpLuvrarLklyb5LNJnm3YBQAAmNquppbtyYFNLQMAGNYI07ZGyMjOTnRqGQAAwMpQZAAAgOEo%20MgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAADAcBQZAACY%200dragVTVZJe1tQNz/0onRXX3PAeu6rmODQDAiamqJFO/l6tM+f5whIzJXuScPuOcqirdXVu3G5EB%20AACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNR%20ZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAAAr%20Zm3tQKpq0sva2oG5fy2YVHX3PAeu6rmODQCwyqoqydTvkypTvveSccI9Tp5z+oxzqqp0d23dbkQG%20AAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAsK/4skk4NfhCTABgXxnh%20SxJlnGhvA2RMfCHmTnwhJgAAcMpQZAAAgOEoMgAAwHAUGQAAYDg7FpmqenlVHaqq92zads+qurKq%20PlhVv19VZ2y67cKqur6qrquqx+xVcAAAYP/azYjMK5I8dsu2C5K8ubsflOQtSS5Mkqr62iRPTnJO%20kscnubgWyzAAAABMZsci091/nOSTWzafn+SS5fVLkjxxef0JSV7V3Z/r7huSXJ/kvGmiAgAALNzZ%20c2Tu092HkqS7b0lyn+X2s5LctOl+Ny+3AQAATOb0ifZzp75x5+DBg7ddX19fz/r6+kRxAACAEW1s%20bGRjY2PH+9VuvvWzqu6X5A3d/dDlf1+XZL27D1XVWpK3dvc5VXVBku7uFy/vd0WSi7r7qm322afS%20N44CAGMY4dveZZxobwNkTPYi5/QZ51RV6e4jzrvf7dSyWl4Oe32SZyyvPz3J5Zu2P7Wq7lpV90/y%20gCRX36nEAAAAR7Hj1LKqujTJepJ7V9VHklyU5EVJfruqnpnkxixWKkt3X1tVlyW5NslnkzzbsAsA%20ADC1XU0t25MDm1oGAMxghOlGMk60twEyJqaW7eREp5YBAACsDEUGAAAYjiIDAAAMR5EBAACGo8gA%20AADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEo%20MgAAwHAUGQAAYDiKDAAAMBxFBgAAGI4iAwAADEeRAQAAhqPIAAAAw1FkAACA4SgyAADAcBQZAABg%20OIoMAAAwHEUGAAAYjiIDAAAMR5EBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwAADAcRQYA%20ABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDDCLtbUDqapJL2trB+b+tQCA%20k6S6e54DV/VcxwbmV1VJpn4OqHhe4c5aWzuQQ4dunGx/Z555v9xyyw2T7Y/pjPD8I+NEexsgY7IX%20OU+t18OqSnfXEdsVGWAOo7y4sH+M8EZC2ZrGCM8/Mk60twEyJmM8/8xJkQFWyigvLuwfI7yRGCHj%20CEZ4/pFxor0NkDHx2N7J0YqMc2QAAIDhKDIAAMBwTj+RH66qG5J8OsmtST7b3edV1T2TvDrJ/ZLc%20kOTJ3f3pE8wJAABwmxMdkbk1yXp3f0N3n7fcdkGSN3f3g5K8JcmFJ3gMAACAOzjRIlPb7OP8JJcs%20r1+S5IkneAwAYBC+Iwo4WU5o1bKq+nCSTyX5fJJf6u6XVdUnu/uem+7zie6+1zY/a9Uy2MdGWUmG%20/WOEVYP2Z8ZkP65kJeNEexsgYzLGY3tOR1u17ITOkUnyzd39sar6siRXVtUHc+S/wqnzVwQAAFbC%20CRWZ7v7Y8n8/XlW/m+S8JIeq6szuPlRVa0n+4mg/f/Dgwduur6+vZ319/UTiAAAAg9vY2MjGxsaO%2097vTU8uq6u5JTuvuz1TVFya5MskLkzwqySe6+8VV9YIk9+zuC7b5eVPLYB8bZbif/WOEqR37M2Oy%20H6cbyTjR3gbImIzx2J7TXkwtOzPJ66qql/t5ZXdfWVX/O8llVfXMJDcmefIJHAMAAOAIJ3Sy/wkd%202IgM7GujfErG/jHCJ6L7M2OyHz+ll3GivQ2QMRnjsT2no43InOjyywAAACedIgMAAAxHkQEAAIaj%20yAAAAMNRZAAAgOEoMgCDW1s7kKqa7LK2dmDuXwkAdmT5ZWAWoyyJOQLLdk5jhL/j/syY7McleWWc%20aG8DZEzGeGzPyfLLAADAKUORAQAAhqPIAAAAx7SK52M6RwaYxSjzlkdgbvU0Rvg77s+MyX48b0LG%20ifY2QMZkvz62d5/ROTIAx2nqT5/284pgq/hJHgBjMyIDzGKET8lGyJj4JG+yPco4zR4HeNzIONHe%20ZJxuj/vysW1EBgAA2IcUGQAAYDiKDAAAMBxFBgAAGI4iA6cgq20BAKe60+cOAEzv0KEbM/UqLYcO%20HbFYCADAbIzIAAAAw1Fk4DiZtgUAMD9Ty+A4mbYFADA/IzIAAMBwFBkAAGA4igwAADAcRQYAABiO%20IgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHAUGQAAYDiKDAAAMBxFhpWytnYgVTXpZW3twNy/%20FgAAEzt97gCw2aFDNybpifdZk+4PAID5GZEBAACGo8gAAADDUWQAAIDhKDIAAMBwFBkAAGA4igwA%20ADAcRQYAABiOIgMAAAxHkQEAAIajyAAAAMNRZAAAgOEoMgAAwHD2rMhU1eOq6gNV9aGqesFeHQcA%20ANh/9qTIVNVpSX4+yWOTPCTJd1fVg/fiWJttbGzs9SGOam3tQKpqssva2oF9mXH3NmY89m5tzB1g%20FzbmDrBLG3MH2IWNuQPswsbcAXZhY+4Au7Axd4Bd2Jg7wC5szB1gFzbmDrBLG3MH2IWNuQPswsbc%20AXZhY+4Au7Bx0o60VyMy5yW5vrtv7O7PJnlVkvP36Fi3mbPIHDp0Y5LexeWiXd1vsb/9l3H3NmY8%209m5tzB1gFzbmDrBLG3MH2IWNuQPswsbcAXZhY+4Au7Axd4Bd2Jg7wC5szB1gFzbmDrBLG3MH2IWN%20uQPswsbcAXZhY+4Au7Bx0o60V0XmrCQ3bfrvjy633Sm7HUl44QtfOMBIAgAAcKKGONn/1BpJAAAA%20TlR19/Q7rXpkkoPd/bjlf1+QpLv7xZvuM/2BAQCAU05319Zte1Vk7pLkg0keleRjSa5O8t3dfd3k%20BwMAAPad0/dip939+ap6TpIrs5i+9nIlBgAAmMqejMgAAADspSFO9gcAANhMkQEAAIazJ+fInExV%20dWZu/46am7v70Jx5tiPjNGQEAOCwYc+Rqapzk/xikjOS3LzcfHaSTyV5dne/c65sh8k4DRkBYBxV%209eAk52fTB3tJXr9KCz+NkDEZI+ecGUcuMtckeVZ3X7Vl+yOT/FJ3f/08ye6QRcYJyDgtT4rTkHEa%20Mk5DxumMkHOVM1bVC5J8d5JXJfnocvPZSZ6a5FXd/aK5sh02QsZkjJxzZxy5yFzf3Q88ym1/2t0P%20ONmZtskh4wRknM7cTzi7IeM0ZJyGjNMYIWMyRs5Vz1hVH0rykO7+7Jbtd03y/qO9Vp5MI2RMxsg5%20d8aRi8x/TfLVSX49yU3LzfdN8j1J/qy7nzNXtsNknIaM05n7CWc3ZJyGjNOQcRojZEzGyLnqGavq%20A0ke2903btl+vyRXdveD5kl2hywrnzEZI+fcGYc92b+7n1dVj8+RQ6u/0N2/N1+y28k4DRkndWuS%20r0hy45btX768bRXIOA0ZpyHjNEbImIyRc9Uz/vsk/6Oqrs/tH+x9ZZIHJFmJD/UyRsZkjJyzZhx2%20RAY4flX1uCQ/n2TbJ5zuvmKubIfJOA0ZpyHjNEbImIyRc5CMpyU5L3f8YO8d3f35+VLd0QgZkzFy%20zpnxlCwyVfVvu/uX585xLDJOQ8bj50lxGjJOQ8ZpyDidEXKOkBFOhmGnlu2g5g6wCzJOQ8bj1N23%20Jnn73DmORcZpyDgNGacxQsZkjJwjZNxOVb2xu7997hzHMkLGZIycJyPj0CMyq7z8YJJU1T9Mcl13%20/1VVfUGSC5I8LMm1Sf5zd3961oBJqup5SV7X3TfteOeZLE9gfGqSP+/uN1fV05L8oyTXJfnlrSc8%20zqWqvirJk7I4yf/zST6U5NLu/qtZg+2SJ8VpyDgNGach43RGyLnqGavqy7v7Y3PnOJYRMiZj5DwZ%20GYctMqu+/GCSVNX7k3x9d3+uqn45yd8meU2SRy23P2nWgEmq6tNJ/ibJ/0nyW0l+u7s/Pm+qO6qq%20V2Yxenj3LL5g8h5JfieLv2O6+xmzhVtaFsJvT/K2JP88ybuyyPodWXwh5sZ86XbHk+I0ZJyGjNOQ%20cToj5BwhI0xp5CKz0ssPLrNc193nLK+/s7sftum2a7r73PnS3ZbjXUm+McmjkzwlyROS/EkWpeZ3%20uvuvZ4yXJKmq93T3Q6vq9CxG3b6iuz9fVZXk3d390Jkjpqrem+TcZa67J/m97l6vqq9Mcnl3f8PM%20EWEIVXWf7v6LuXOMrqru3d1/OXcO9p+qOiPJhUmemOQ+STrJXyS5PMmLuvtTM8bbUVW9qbsfP3eO%20JKmqL87ib3l2kjd196Wbbru4u589W7jbc6wluSiLFfN+Islzk3xnFrNmnr/Xxfq0vdz5Hju8/OBW%20q7L8YJK8r6q+d3n93VX18CSpqq9JshLToZJ0d9/a3Vd29/dl8Te9OMnjknx43mi3OW1ZUL8oi1GZ%20M5bb75bkH8yW6kiHzzm7WxajRunuj2SFMlbVGVX1oqr6QFV9oqr+sqquW277krnz7aSq3jR3hmTx%204lJVP11Vv7Gc6rj5tovnyrVZVa1V1X+rql+oqntX1cGqem9VXVZVXz53viSpqnttudw7ydVVdc+q%20utfc+ZLbVog6fP2Mqnp5Vb2nqi6tqjPnzHbY8vH7pcvrD6+qDye5qqpurKp/OnO8JIsP86rqx6vq%20q+fOcizLv99bq+o3q+q+VfUHVfXpqnpHVa3EB1JVdY+q+smqev8y28er6u1V9Yy5sy1dluSTSda7%20+17dfe8k37rcdtmsyZaq6mFHuXxjktk/ZN7kFVmcZ/vaJE+tqtdW1d2Wtz1yvlh38GtZnDJxU5K3%20Jvl/WcxM+aMkv7jXBx95RGaE5QfPSPLSJN+S5P9mcX7MTcvL87r73TPGS7IYkTnaaEFV3b27//Zk%20Z9omxw9m0fDvkuQlWZwX9eEsHsSv6e4XzhgvSVJVz0/yfUmuyuLf+8Xd/Yqq+rIkr+3ufzJrwKWq%20+v0kb0lySXffsty2luTpSR7V3Y+ZM98yz8OOdlOSN3b37G/Cq+q1WTz3vD3JM7P4YOJp3f33W0df%2051JVVyT570m+MMnTkrwyyaVZfEr66O4+f8Z4SZKqujVHfhfG2VlMF+7u/qqTn+qONv97VtXLktyS%205FeyOB/un3b3E+fMlyxGhLv765bX35rkR7r7HcsPzS7t7ofPmzCpqj/L4s3Yk7P4G/5Wkld395/P%20GmyLqro6i0+XvyTJzyT5we5+TVU9KslPdfc3zRowSVVdnuR1Sd6cxd/zC7OYZv/jSW7u7h+dMV6q%206oN9lC9BPNZtJ1NVfT7JH2b7xXge2d1fcJIjbWvr7J2q+rEsSsITkvzBirzW3PY+sqo+0t1fuem2%20PZ99NGyRScZZfnA5NHj/LD6x/2h3H5o50m2q6mu6+0Nz59hJVX1FknT3ny9HDh6d5CPdffW8yW5X%20VQ9Jck6S93X3B+bOsx0vMNPw4jKNqvoPSb4tyQ9393uX2/6su+8/b7LbbSkyW//dV+XveF2Sr1ue%20j/n27n7kpttuKzlz2vJ3/JYsznF9UhbTT36rV2SJ+h0eN0f94O9kqqp3d/fXb/rvd3T3I5bvia7t%207gfPGC9VdWUWJeuSw+93lqOXz0jybd396BnjJUmq6n1JvqO7r9/mtpu6+74zxDrC8rH9kF6sUnd4%202zOS/HCSe3T3/ebKdtjm/z9W1U91949vum3Pn3+GXn65B1l+sBerVs0++rKdEUpMsigwm65/KotF%20E1ZKd78/yfvnzrGDG6vqR7L9C8yqrFx3XZJnHe0FZoY827lbVZ12+MWlu/9TVd2cxWIP95g32m02%20Tx3+9S233eVkBjma7n5JVb06yX9Z/ttelMV8+lVyn6r6oSyK9RlVVX37J4CrMj374iS/V1UvSnJF%20Vb00iwVR/lmSa2ZNto3u/qMkf1RVz82iyD4lyUoUmSR/V1WPyWIKc1fVE7v7d5dT9FblQ9K/qap/%203N1/XFVPSPKJZPGeqKpWYbn/p2SxSusfLl9fOsmhJK/PYgRpFRzM0R+/zz2JOXbyhiwex28+vKG7%20f62qbknyc7OluqPLq+oe3f2ZLSXmAUk+uNcHH7rIAMdt8wvMfZbbDr/AfNdsqe7oYFb/BcaLy0S6%20+6NJvmv5huwPsjgPbpX8Shbn5yWLueBfmuTjyymZK1ESuvvnarHgyA8k+ZosXtsfmOR3k/zHObNt%20csSHZsvZE1csL6vi+7OYUnZrkscm+YGq+rUsZnz8mxlzbfb9SV5WVQ/M4sOzZybJcirzL8wZLEm6%20+5NV9YosHs9v7+7PHL5teVrA7P/ey+mCD15OGbxqc8YkfzdXrq26+0e2y9ndV9RitdTZdfdPLDOe%20lTtm/NPldNw9NfTUMmA6VfW93f2KuXMci4zTWNWMtfi+ra/u7vetasbNZJzGCBmTMXKuQsblG+x/%20l8Xo+rlZrFx1+fK2VTmHcOUzJsly1PI5WeGcc2dUZIAkR84HX0UyTkPGacg4jREyJmPkXIWMy9HB%20b+ruz1TVgSymgv9Gd790hc4zWvmMyRg5585oahnsI1X1nqPdlGRVlpKVcQIyTkPGaYyQMRkj5wAZ%20T9s0veiGqlpP8pqqul+2X8RlDiNkTMbIOWtGRQb2lzOzmPf9yS3bK8n/OvlxtiXjNGSchozTGCFj%20MkbOVc94qKrO7e5rkmT5Sf23J/nVJLOvoLc0QsZkjJyzZlRkYH95YxZLNh5xknJVbZz8ONuScRoy%20TkPGaYyQMRkj56pn/J4kn9u8obs/l+R7quqX5ol0hBEyJmPknDWjc2QAAIDhrMoa+AAAALumyAAA%20AMNRZAAAgOEoMgDMqqouqqofOsptT6+qtZOdCYDVp8gAsMqekeSsuUMAsHoUGQBOuqr6sar6YFW9%20LcmDjnKf70zy8CS/WVXvrKq7ndSQAKw0RQaAk6qqHpbkyUkemuRfJHnEdvfr7tcmeUeSp3X3w7r7%20709eSgBWnS/EBOBk+5Ykr1sWk7+vqtcf4761vADAHRiRAQAAhqPIAHCyvS3JE6vqblX1RUn+5THu%20+1dJvvjkxAJgJKaWAXBSdfe7qurVSd6T5FCSq49x90uS/GJV/W2Sb3KeDACHVXfPnQEAAOC4mFoG%20AAAMx9QyAGZXVT+f5JuTdBarlHWSl3b3JbMGA2BlmVoGAAAMx9QyAABgOIoMAAAwHEUGAAAYjiID%20AAAMR5EBAACG8/8BdAg7kKH3KwwAAAAASUVORK5CYII=)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+Conclusions {#6.-Conclusions}
+-----------
+
+</div>
+
+</div>
+
+</div>
+
+<p>Most of my attempts to verify Spotify’s statistics fall short because
+the data only covers the second half of 2016. This shows that good
+quality inputs are required o achieve good quality results.</p>
+<p>Having said that, it is clear that I listen to Spotify far more than I
+thought I did. The observation that I like many of Bonobo’s tracks but
+have more polarised views about Bombay Bicycle Club’s songs is novel.
+For £5/month, I’m getting great value!</p>
+<p>My top 101 songs of 2016 can be played on
+Spotify <a href="https://open.spotify.com/user/spotify/playlist/37i9dQZF1CyJD4o58dMxry">here</a>.</p>
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+
+
+        
+    </div>
+        <!-- /Content --> 
+
+        <!-- Footer -->
+        <!--
+        <div class="footer gradient-2">
+            <div class="container footer-container ">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title">Sitemap</div>
+                        <ul class="list-unstyled">
+                            <li><a href="/archives.html">Archives</a></li>
+                            <li><a href="/tags.html">Tags</a></li>
+                            <li><a href="/authors.html">Authors</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title">Social</div>
+                        <ul class="list-unstyled">
+                            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+                            <li><a href="#" target="_blank">Another social link</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title">Links</div>
+                        <ul class="list-unstyled">
+                            <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+                            <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+                            <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
+                        </ul>
+                    </div> 
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <p class="pull-right text-right">
+                            <small><em>Proudly powered by <a href="http://docs.getpelican.com/" target="_blank">pelican</a></em></small><br/>
+                            <small><em>Theme and code by <a href="https://github.com/molivier" target="_blank">molivier</a></em></small><br/>
+                            <small>&copy; blogname 2015</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- /Footer -->
+    </body>
+</html>
