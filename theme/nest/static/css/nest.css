@@ -179,7 +179,7 @@ h4:after {
     height:100px;
     line-height:100px;
     color:#fff;
-    font-size:12px;
+    font-size:16px;
     font-weight:600;
 }
 .header-nav .nav{
@@ -277,6 +277,7 @@ h4:after {
 /* Content */
 
 .content{
+   // margin-top: 42px;
     background-color: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -340,9 +341,42 @@ h4:after {
 }
 
 /* Article */
+.neighbors{
+    padding-top: 10px;
+   // padding-right: 10px;
+   // border: 1px solid black;
+    text-align: right;
+    position: relative;
+    height: 50px;
+}
+.previous_article{
+    position: absolute;
+    left: 0px; /*keep this*/
+    list-style: none; 
+}
+
+.previous_article::before{
+    content: "Previous: ";
+   // color: green;
+   // font-size: 20px;
+}
+
+.next_article{
+   // color: blue;
+    list-style: none;  
+}
+
+.next_article::before{
+    content: "Next: ";
+    // color: green;
+    // font-size: 20px;
+}
+
 .article-container{
     margin-top: 40px; 
+    margin-bottom: 40px; 
 }
+
 .article {
     font-size: 14px;
     line-height: 24px;

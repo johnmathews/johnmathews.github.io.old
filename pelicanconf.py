@@ -9,6 +9,8 @@ SITEURL = ''
 PATH = 'content'
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup','neighbors']
+LOAD_CONTENT_CACHE = False
+
 
 THEME = 'theme/nest'
 MARKUP = ('md', 'ipynb')
