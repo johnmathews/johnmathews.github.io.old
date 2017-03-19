@@ -1,11 +1,12 @@
 Title: Time Since
 Date: 2016-07-30 13:29
-Author: JM
-Category: Web
+Author: John Mathews
+Category: Front-end
 Tags: CoffeeScript, JavaScript, Time Since, Übersicht, Widgets
 Slug: time-since
 Status: published
 
+# 'Time since'
 [Übersicht](http://tracesof.net/uebersicht/) is a desktop widgets app
 for OS X. Its free, open source, and has a pretty good widgets library
 to download and play with. A widget is a small app or feature that
@@ -31,7 +32,5 @@ widget. I then added some extra features including:
 -   Choice of expanded or abbreviated display styles
 -   Flexible formatting to remove and zero amounts
 
-The widget is called ["Time
-Since"](http://tracesof.net/uebersicht-widgets/#time_since) and is in
-the Übersicht widgets
-[gallery](http://tracesof.net/uebersicht-widgets/).
+The widget is called ["Time Since"](http://tracesof.net/uebersicht-widgets/#time_since) and is in
+the Übersicht [widgets gallery](http://tracesof.net/uebersicht-widgets/).

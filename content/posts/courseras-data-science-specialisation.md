@@ -1,10 +1,12 @@
 Title: Coursera's "Data Science Specialisation"
 Date: 2016-08-01 13:30
-Author: JM
+Author: John Mathews
 Category: Data Analysis
 Tags: Coursera, Data Science, JHU, R
 Slug: courseras-data-science-specialisation
 Status: published
+
+# Coursera's Data Science Specialisation
 
 Last year I decided to learn the tools required to work as a data
 scientist. I was confident I already had the mathematical and analysis
@@ -20,6 +22,7 @@ and depth.
 The main downside to me is that the courses exclusively use R (which is
 popular in academia) and I would rather be using Python (which is more
 popular in Industry).  
+
 Each course lasts about 3 weeks and deals with a specific aspect of data
 science, such as statistical inference or machine learning. Key concepts
 and tools in each subject are explained and developed, and whilst it's

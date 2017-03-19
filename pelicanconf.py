@@ -6,7 +6,7 @@ AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
 SITEURL = ''
 
-PATH = 'content'
+PATH = 'content'  # ['content/posts','content']
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup','neighbors']
 LOAD_CONTENT_CACHE = False
@@ -15,6 +15,10 @@ LOAD_CONTENT_CACHE = False
 THEME = 'theme/nest'
 MARKUP = ('md', 'ipynb')
 
+
+# JINJA_FILTERS = {'datetime':format_datetime}
+
+DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
 
