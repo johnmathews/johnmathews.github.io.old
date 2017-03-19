@@ -64,7 +64,8 @@ NEST_FOOTER_HTML = ''
 NEST_INDEX_HEAD_TITLE = u'Homepage'
 NEST_INDEX_HEADER_TITLE = u'My Awesome Blog'
 NEST_INDEX_HEADER_SUBTITLE = u'Smashing The Stack For Fun And Profit'
-NEST_INDEX_CONTENT_TITLE = u'Latest Posts'
+NEST_INDEX_CONTENT_TITLE = u''
+
 # archives.html
 NEST_ARCHIVES_HEAD_TITLE = u'Archives'
 NEST_ARCHIVES_HEAD_DESCRIPTION = u'Posts Archives'
@@ -96,7 +97,7 @@ NEST_CATEGORY_HEAD_DESCRIPTION = u'Category Archive'
 NEST_CATEGORY_HEADER_TITLE = u'Category'
 NEST_CATEGORY_HEADER_SUBTITLE = u'Category Archive'
 # pagination.html
-USE_PAGER = True
+USE_PAGER = False
 NEST_PAGINATION_PREVIOUS = u'Previous'
 NEST_PAGINATION_NEXT = u'Next'
 # period_archives.html

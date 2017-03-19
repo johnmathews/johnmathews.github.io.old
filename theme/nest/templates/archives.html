@@ -31,8 +31,8 @@
             <h2><a href="{{ SITEURL }}/archives.html">{{ NEST_ARCHIVES_CONTENT_TITLE }}</a></h2>
             <dl class="dl-horizontal">
             	{% for article in articles %}
-            	<dt>{{ article.locale_date}}</dt>
-            	<dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+            	<dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+            	<dd>{{ article.locale_date}}</dd>
             	{% endfor %}
             </dl>
         </div>

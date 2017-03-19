@@ -34,8 +34,8 @@
             <h2><a href="{{ SITEURL }}/{{ articles_page.url }}">{{ NEST_INDEX_CONTENT_TITLE }} {% if articles_page.has_previous() %}<small>- page {{ articles_page.number }}</small>{% endif %}</a></h2>
             <dl class="dl-horizontal">
                 {% for article in articles_page.object_list %}
-                <dt>{{ article.locale_date}}</dt>
-                <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+                <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+                <dd>{{ article.locale_date }}</dd>
                 {% endfor %}
             </dl>
         </div>
@@ -47,7 +47,7 @@
             <h2><a href="{{ SITEURL }}/">{{ NEST_INDEX_CONTENT_TITLE }}</a></h2>
             <dl class="dl-horizontal">
                 {% for article in articles %}
-                <dt>{{ article.locale_date}}</dt>
+                <dt>{{ article.locale_date }}</dt>
                 <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
                 {% endfor %}
             </dl>

@@ -138,9 +138,9 @@ h2:after {
     content: " ";
     margin-top: 10px;
     width: 40px;
-    border-bottom: 3px solid brown
-    /*border-bottom: 3px solid rgba(235,35,68,1);*/
-    /*border-bottom: 3px solid rgba(0,0,0,0.2);*/
+    /* border-bottom: 3px solid brown */
+    /* border-bottom: 3px solid rgba(235,35,68,1);*/
+    /* border-bottom: 3px solid rgba(0,0,0,0.2);*/
 }
 
 h3 { 
@@ -408,8 +408,8 @@ h4:after {
 .archive {
     font-size: 18px;
     line-height: 24px;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     border-top: 1px solid rgba(0,0,0,0.1);
 }
@@ -423,10 +423,18 @@ h4:after {
 }
 .archive dt{
     text-align: left;
-    width: 30%;
+    width: 70%;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 1.42857143;    
+    font-weight: 700;
+    line-height: 2; //1.42857143;    
+}
+
+.archive dd{
+    text-align: right;
+  /*  width: 30%;
+    font-size: 18px;
+    font-weight: 400; */
+    line-height: 2; //1.42857143;    
 }
 /* Styling */
 
