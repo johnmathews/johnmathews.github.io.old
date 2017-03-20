@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="In a previous post I described how I was introduced to CoffeeScript via Übersicht (a desktop widget app for OS X) and eventually published the &#34;Time Since&#34; widget to the widgets gallery. Seeing a...">
+        <meta name="description" content="Time Until In a previous post I described how I was introduced to CoffeeScript via Übersicht, the desktop widget app for OS X, and eventually published the &#34;Time Since&#34; widget. Seeing a few people...">
         <meta name="keywords" content="AppleScript, CoffeeScript, JavaScript, Time Until, Übersicht">
         <link rel="icon" href="/favicon.ico">
 
@@ -56,7 +56,7 @@
               <div class="col-lg-12">   
                   <div class="header-content">
                      <h1 class="header-title">Time Until</h1>
-                      <p class="header-date">By <a href="/author/jm.html">JM</a>, Aug 07 2016, in category <a href="/category/web.html">Web</a></p>
+                      <p class="header-date">By <a href="/author/john-mathews.html">John Mathews</a>, Aug 07 2016, in category <a href="/category/web.html">Web</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
@@ -76,12 +76,10 @@
 
         <!-- Content -->
     <div class="container content">
-        <p>In a previous <a href="http://www.johnmathews.eu/2016/07/30/time-since/">post</a> I
+        <h1>Time Until</h1>
+<p>In a <a href="http://www.johnmathews.eu/2016/07/30/time-since/">previous post</a> I
 described how I was introduced to CoffeeScript via
-<a href="http://tracesof.net/uebersicht/">Übersicht</a> (a desktop widget app for
-OS X) and eventually published the "<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time
-Since</a>" widget to
-the widgets gallery.</p>
+<a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for OS X, and eventually published the "<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>" widget.</p>
 <p>Seeing a few people download the widget was really satisfying, and I was
 soon wondering what else I could publish. As a pragmatic engineer, it
 seemed clear to me what the next widget should do: If my first widget
@@ -89,10 +87,10 @@ calculated the time since an event, the next should calculate the time
 until an event. I set out to create the companion to "Time Since" and
 improve upon the underlying code.</p>
 <p>My first code design choice was to cut out the use of an Apple Script
-and calculated everything in one CoffeeScript. It would be more
+and calculated everything in one CoffeeScript file. It would be more
 efficient and easier to read.</p>
-<p>Unfortunately I soon began to realise why the original widget I'd  built
-"Time Since" around, had used AppleScript to calculate the time elapsed.
+<p>Unfortunately I soon began to realise why the original widget I'd based
+"Time Since" on had used AppleScript to calculate the time elapsed.
 Date-Times are fiddly to work with in many languages, and this is true
 in JavaScript also.</p>
 <p>My code began to look increasingly like spaghetti as I tried to achieve
@@ -117,7 +115,7 @@ knew the AppleScript file could correctly consider the number of days in
 the months between the 2 dates (feature 1), and it contains a function
 to pluralise the correct parts of the string (feature 5).</p>
 <p>The remaining features were added by using a combination of
-<em>if </em>statements and arrays. The <em>if</em> statements simply ask if an amount
+if statements and arrays. The if statements simply ask if an amount
 is equal to zero. If not, then it's appended to an array of terms to
 include in the output. At the end of this code chunk it's possible to
 ask how many non-zero terms to include in the output. An array with
@@ -128,9 +126,9 @@ index of the longer array and appending each term to a final array. The
 final array is the output.</p>
 <p><em>'<a href="http://tracesof.net/uebersicht-widgets/#time_until">Time Until</a>'</em> can
 be downloaded from the <a href="http://tracesof.net/uebersicht/">Übersicht</a>
-widgets <a href="http://tracesof.net/uebersicht-widgets/">gallery</a>. I think
+<a href="http://tracesof.net/uebersicht-widgets/">widgets gallery</a>. I think
 another useful feature would be an option to specify the output only in
-terms of a chosen amount, such as weeks or days, maybe I'll do that in
+terms of a chosen amount, such as weeks or days. Maybe I'll do that in
 the future.</p>
 
     

@@ -1,14 +1,15 @@
 Title: Jupyter (iPython) notebooks + Pandas
 Date: 2016-08-03 13:04
-Author: JM
+Author: John Mathews
 Category: Data Analysis, Tools
 Tags: Data, Jupyter Notebook, Pandas, Python
-Slug: jupyter-ipython-notebooks-pandas
+Slug: Jupyter-ipython-notebooks-pandas
 Status: published
 
+# Jupyter notebooks & Pandas
+
 When working with more data than can fit in an Excel file, or when you
-want to be sure the data won't be accidentally changed, you usually need
-to use a data processing tool that will  require you to interact with
+want to be sure the data won't be edited, you usually need to interact with
 the data by writing scripts.
 
 One of the biggest time sinks (for me) when working with these tools

@@ -8,7 +8,7 @@ SITEURL = ''
 
 PATH = 'content'  # ['content/posts','content']
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup','neighbors']
+PLUGINS = ['ipynb.markup','neighbors', 'pelican_youtube']
 LOAD_CONTENT_CACHE = False
 
 

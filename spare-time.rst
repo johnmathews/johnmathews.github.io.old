@@ -1,13 +1,17 @@
-Title: Spare time
-Date: 2016-08-13 21:15
-Author: John Mathews
-Category: Other
-Tags: Habits
-Slug: spare-time
-Status: published
+Spare Time 
+##############
 
-# Spare Time
-   
+:date: 2016-08-13 21:15
+:tags: habits
+:category: Other
+:slug: spare-time
+:authors: John Mathews
+:status: published
+
+====================
+Spare Time
+====================
+
 This is a list of interests I want to consider pursuing. I wrote it when
 I began to study for my last set of exams and my mind filled with things
 I'd rather be doing instead. Some of these interests are just me
@@ -15,7 +19,7 @@ reacting to having no spare time for a few months, but others are decent
 goals and projects. Temporarily losing my spare time made me value it
 more.
 
-![free-time](/images/spare_time.jpg)
+.. image:: /images/spare_time.jpg
 
 I wrote this post so that I could compare what I thought was important
 when I was busy and when I wasn't. Writing the list allowed me to move
@@ -34,7 +38,7 @@ on without forgetting. Here's a break down of each item:
 
 2.  "Be Insanity strong" - As in, do the Insanity workout programme.
     Again. I thought about it and decided to do
-    [P90x](http://johnmathews.eu/p90x/) instead. Week 1 is going
+    `P90x <http://johnmathews.eu/p90x/>`_ instead. Week 1 is going
     great.
 
 3.  "Read the bible habitually" - When I was 17 I found out about Jesus
@@ -52,7 +56,7 @@ on without forgetting. Here's a break down of each item:
     social chatter. I remember enjoying the benefits and thinking that I
     should keep this habit. The reasons why I think Christianity is so
     wonderful are well summarised in
-    [this](http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders)
+    `this <http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders>`_ 
     sermon.
 
     It's now 10 years later, and whilst my convictions are strong, my
@@ -89,15 +93,14 @@ on without forgetting. Here's a break down of each item:
 
 7.  "Blog about interesting data" - Here I am, blogging. I should stick
     to the main topic and get technical. I was inspired by this
-    [blog](http://www.curiousgnu.com/) in particular.
+    `blog <http://www.curiousgnu.com/>`_ in particular.
 
-8.  "Finish Coursera" - The [data science specialization](http://johnmathews.eu/courseras-data-science-specialisation/)
-    is great! It's in R, and I want to focus on Python, but I'd still
+8.  "Finish Coursera" - The `data science specialization <http://johnmathews.eu/courseras-data-science-specialisation/>`_    is great! It's in R, and I want to focus on Python, but I'd still
     like to do it. I need to consider the opportunity cost of the time
     committed, though.
 
-9.  "Read for fun, history, fiction" - When I started my job, in April 2014, I was half way through 
-[Savage Continent](https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&asin=B00796LLLK&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4), which is an eye-opening and eye-watering history of Europe in the
+9.  "Read for fun, history, fiction" - When I started my job, in April 2014, I was half way through [Savage
+    Continent](https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&asin=B00796LLLK&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4), which is an eye-opening and eye-watering history of Europe in the
     years after World War 2. I see Europe through different eyes because
     of it. However I only got half way though, and since April '14 I
     never felt I had the free time or energy to pick it back up. This
@@ -143,6 +146,9 @@ on without forgetting. Here's a break down of each item:
     St-Pierre](https://youtu.be/LybrzdG96_8) made me want to train
     for MMA. For now though, I'll do P90x. I can reconsider in 90 days. 
     
+.. youtube:: LybrzdG96_8
+:align: center
+
 15. "Get out of London" - My contract ends in April 2017, next summer
     will be a crossroads. I hate the commute, I hate being constantly
     rushed. Living in other cities has been a lot more pleasant.

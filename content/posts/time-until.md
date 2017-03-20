@@ -1,17 +1,16 @@
 Title: Time Until
 Date: 2016-08-07 11:40
-Author: JM
+Author: John Mathews
 Category: Web
 Tags: AppleScript, CoffeeScript, JavaScript, Time Until, Übersicht
 Slug: time-until
 Status: published
 
-In a previous [post](http://www.johnmathews.eu/2016/07/30/time-since/) I
+# Time Until
+
+In a [previous post](http://www.johnmathews.eu/2016/07/30/time-since/) I
 described how I was introduced to CoffeeScript via
-[Übersicht](http://tracesof.net/uebersicht/) (a desktop widget app for
-OS X) and eventually published the "[Time
-Since](http://tracesof.net/uebersicht-widgets/#time_since)" widget to
-the widgets gallery.
+[Übersicht](http://tracesof.net/uebersicht/), the desktop widget app for OS X, and eventually published the "[Time Since](http://tracesof.net/uebersicht-widgets/#time_since)" widget.
 
 Seeing a few people download the widget was really satisfying, and I was
 soon wondering what else I could publish. As a pragmatic engineer, it
@@ -21,11 +20,11 @@ until an event. I set out to create the companion to "Time Since" and
 improve upon the underlying code.
 
 My first code design choice was to cut out the use of an Apple Script
-and calculated everything in one CoffeeScript. It would be more
+and calculated everything in one CoffeeScript file. It would be more
 efficient and easier to read.
 
-Unfortunately I soon began to realise why the original widget I'd  built
-"Time Since" around, had used AppleScript to calculate the time elapsed.
+Unfortunately I soon began to realise why the original widget I'd based
+"Time Since" on had used AppleScript to calculate the time elapsed.
 Date-Times are fiddly to work with in many languages, and this is true
 in JavaScript also.
 
@@ -52,7 +51,7 @@ the months between the 2 dates (feature 1), and it contains a function
 to pluralise the correct parts of the string (feature 5).
 
 The remaining features were added by using a combination of
-*if *statements and arrays. The *if* statements simply ask if an amount
+if statements and arrays. The if statements simply ask if an amount
 is equal to zero. If not, then it's appended to an array of terms to
 include in the output. At the end of this code chunk it's possible to
 ask how many non-zero terms to include in the output. An array with
@@ -65,11 +64,7 @@ final array is the output.
 
 *'[Time Until](http://tracesof.net/uebersicht-widgets/#time_until)'* can
 be downloaded from the [Übersicht](http://tracesof.net/uebersicht/)
-widgets [gallery](http://tracesof.net/uebersicht-widgets/). I think
+[widgets gallery](http://tracesof.net/uebersicht-widgets/). I think
 another useful feature would be an option to specify the output only in
-terms of a chosen amount, such as weeks or days, maybe I'll do that in
+terms of a chosen amount, such as weeks or days. Maybe I'll do that in
 the future.
-
- 
-
- 

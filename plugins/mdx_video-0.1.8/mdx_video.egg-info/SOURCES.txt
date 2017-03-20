@@ -1,0 +1,8 @@
+mdx_video.py
+setup.py
+mdx_video.egg-info/PKG-INFO
+mdx_video.egg-info/SOURCES.txt
+mdx_video.egg-info/dependency_links.txt
+mdx_video.egg-info/pbr.json
+mdx_video.egg-info/requires.txt
+mdx_video.egg-info/top_level.txt
