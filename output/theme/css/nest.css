@@ -17,7 +17,7 @@
 }
 @media (min-width: 1200px) {
   .container {
-    width: 850px;
+    width: 900px;
   }
 }
 
@@ -284,8 +284,8 @@ h4:after {
     background-color: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
    /* border-left: 1px solid rgba(0,0,0,0.1);
     border-right: 1px solid rgba(0,0,0,0.1); */
 }
