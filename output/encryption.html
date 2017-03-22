@@ -157,100 +157,92 @@ the product of two large prime numbers.</p>
 <p>RSA (as well as other cryptographic techniques) makes use of a number
 line which loops back to zero after reaching a maximum value, rather
 than increasing indefinitely. This means that once a maximum number
-\$n\$ has been defined, if a number greater than \$n\$ is created, the
+<span class="math">\(n\)</span> has been defined, if a number greater than <span class="math">\(n\)</span> is created, the
 result simply loops around to 0 and begins counting from 0 again. i.e.
-if \$n = 10\$, then \$7 + 5 = 12 - 10 = 2\$. The result of a calculation
+if <span class="math">\(n = 10\)</span>, then <span class="math">\(7 + 5 = 12 - 10 = 2\)</span>. The result of a calculation
 on a looping number line may be easily found by doing long division and
-using the remainder as the final answer, i.e. \$12/10 = 1\$ with \$2\$
+using the remainder as the final answer, i.e. <span class="math">\(12 / 10 = 1\)</span> with <span class="math">\(2\)</span>
 remaining.</p>
 <h2>Generation of a pair of RSA keys:</h2>
 <h2>1. Generate the RSA modulus</h2>
 <ul>
-<li>Select two large random prime numbers, \$p\$ and \$q\$. They need to
+<li>Select two large random prime numbers, <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. They need to
     be random because anyone who knows or guesses them will be able to
     decrypt the encryption.</li>
-<li>Calculate \$n = pq\$</li>
+<li>Calculate <span class="math">\(n = pq\)</span></li>
 </ul>
-<h3>2. Find derived number (e)</h3>
+<h2>2. Find derived number (e)</h2>
 <ul>
-<li><em>e</em> must be greater than 1 and less than \$\left( p - 1 \right)
-    \left( q - 1 \right)\$</li>
-<li>There must be no common factor for e and \$ \left( p - 1 \right)
-    \left( q - 1 \right)\$ except for 1[1. If this is the case then
-    e and \$latex \left( p - 1 \right) \left( q - 1 \right)\$ are
-    called "coprime"].</li>
+<li><em>e</em> must be greater than 1 and less than <span class="math">\(( p - 1)( q - 1)\)</span></li>
+<li>There must be no common factor for e and <span class="math">\(( p - 1)
+    ( q - 1)\)</span> except for 1[1. If this is the case then
+    e and <span class="math">\(( p - 1) ( q - 1 )\)</span> are called "coprime"].</li>
 </ul>
-<h3>3. Form the public key</h3>
+<h2>3. Form the public key</h2>
 <ul>
-<li>The pair of numbers \$(n, e)\$<em> </em>form the public key and can be made
+<li>The pair of numbers <span class="math">\((n, e)\)</span> form the public key and can be made
     public</li>
-<li>Even though \$n\$<em> </em>is public, it is so difficult to factor a large
+<li>Even though <span class="math">\(n\)</span><em> </em>is public, it is so difficult to factor a large
     prime number that an attacker would not be able to find its
     component primes in the time available. The strength of RSA rests
-    entirely on the difficulty of factoring \$n\$ into its two component
+    entirely on the difficulty of factoring <span class="math">\(n\)</span> into its two component
     prime numbers.</li>
 </ul>
-<h3>4. Generate the private key (d)</h3>
+<h2>4. Generate the private key (d)</h2>
 <ul>
-<li>The private key is generated from using \$p\$, \$q\$ and e as inputs
+<li>The private key is generated from using <span class="math">\(p\)</span>, <span class="math">\(q\)</span> and e as inputs
     to the Extended Euclidean Algorithm. For a given set of values,
-    there is a unique answer \$d\$</li>
-<li>\$d\$ is the inverse of  e modulo \$latex \left( p - 1 \right)
-    \left( q - 1 \right)\$. This means that \$d\$ is the number less
-    than \$latex \left( p - 1 \right) \left( q - 1 \right)\$ such
-    that when it is multiplied by e, it is equal to 1 modulo \$latex
-    \left( p - 1 \right) \left( q - 1 \right)\$</li>
+    there is a unique answer <span class="math">\(d\)</span></li>
+<li><span class="math">\(d\)</span> is the inverse of <span class="math">\(e\)</span> modulo <span class="math">\(( p - 1)( q - 1 )\)</span>. This means that <span class="math">\(d\)</span> is the number less
+    than <span class="math">\(( p - 1 ) ( q - 1 )\)</span> such
+    that when it is multiplied by e, it is equal to <span class="math">\(1\)</span> modulo <span class="math">\(( p - 1 ) ( q - 1 )\)</span></li>
 </ul>
 <h2>RSA example:</h2>
 <p>RSA does not directly operate on strings as bits, it operates on numbers
-modulo (less than) \$n\$. and it is necessary to represent plaintext as
-a series of numbers less than \$n\$. The dominant encoding on the
+modulo (less than) <span class="math">\(n\)</span>. and it is necessary to represent plain text as
+a series of numbers less than <span class="math">\(n\)</span>. The dominant encoding on the
 internet is <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>, which
-represents each upper case latin letter as a number between 65 and 90.
-Using this encoding, a message "HELLO" would become "\$72, 69, 76, 76,
-79\$".</p>
-<p>The maximum number \$n\$ needs to be the product of the two prime
-numbers \$p\$ and \$q\$. For this example choose \$p = 7\$ and \$q =
-13\$, so \$n  = 91\$[1. Whilst the Extended Euclidean Algorithm is
-apparently simple to compute, its description is not. Therefore I've
-used the same numbers in the following example as in the tutorials
-<a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a>
-and
-<a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a>.].</p>
+represents each upper case Latin letter as a number between 65 and 90.
+Using this encoding, a message "HELLO" would become "<span class="math">\(72, 69, 76, 76,
+79\)</span>".</p>
+<p>The maximum number <span class="math">\(n\)</span> needs to be the product of the two prime
+numbers <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. For this example choose <span class="math">\(p = 7\)</span> and <span class="math">\(q =
+13\)</span>, so <span class="math">\(n  = 91\)</span><sup id="fnref-4"><a class="footnote-ref" href="#fn-4">4</a></sup></p>
 <p>The public key component <em>e</em> can be any number we choose,  as long as
 there is no number other than 1 which is a common factor of
-<em>e</em> and \$\left( p - 1 \right) \left( q - 1 \right)\$. In our
+<em>e</em> and <span class="math">\(( p - 1 ) ( q - 1 )\)</span>. In our
 example, this requires that there be no common factor between
-72 and e other than 1, so let <em>e</em> \$= 5\$.</p>
+72 and e other than 1, so let <em>e</em> <span class="math">\(= 5\)</span>.</p>
 <p>Therefore our public key is (91, 5). This can be made available to
 anyone without messages being decrypted because of the difficulty of
 factoring a (very large) prime number.</p>
 <p>Using the fact that we know 5 and 11 are the prime factors of 55 and e
 is 5, we can use the Extended Euclidean Algorithm  to compute our
-private key \$d\$, which is 29.</p>
+private key <span class="math">\(d\)</span>, which is 29.</p>
 <p>Therefore when the prime factors 7 and 13 are used, the public key is
 (91, 5) and the private key is (91, 29). These parameters fully define a
 functional RSA system.</p>
 <h3>Encoding</h3>
 <p>To encode the first letter of our short and unimaginative message ('H',
-which is \$72\$ in UTF-8), we need to multiply it by itself <em>e </em>times
-(\$e = 5\$), remembering to wrap around each time we pass our maximum
-value of \$n = 91\$.</p>
-<p>\$72 \times 72 = 5184, 5184 / 91 = 56\$ with \$88\$ remaining, (i.e.
-\$5184 = 91 \times 56 + 88\$). Therefore \$72 \times 72 = 5184 = 88 \$</p>
-<p>\$88 \times 72 = 6336 = 57\$</p>
-<p>\$57 \times 72 = 4104 = 9\$</p>
-<p>\$9 \times 72 = 648 = 11\$</p>
-<p>Therefore the encrypted value of "H" is "\$11\$"</p>
+which is <span class="math">\(72\)</span> in UTF-8), we need to multiply it by itself <em>e </em>times
+(<span class="math">\(e = 5\)</span>), remembering to wrap around each time we pass our maximum
+value of <span class="math">\(n = 91\)</span>.</p>
+<p><span class="math">\(72 \times 72 = 5184, 5184 / 91 = 56\)</span> with <span class="math">\(88\)</span> remaining, (i.e.
+<span class="math">\(5184 = 91 \times 56 + 88\)</span>). 
+Therefore <span class="math">\(72 \times 72 = 5184 = 88\)</span>
+<span class="math">\(88 \times 72 = 6336 = 57\)</span>
+<span class="math">\(57 \times 72 = 4104 = 9\)</span>
+<span class="math">\(9 \times 72 = 648 = 11\)</span></p>
+<p>Therefore the encrypted value of "H" is "<span class="math">\(11\)</span>"</p>
 <p>Using the method for each character in the message "HELLO" results in
-the encoded message "\$11,62,20,20,53\$".</p>
+the encoded message "\<span class="math">\(11,62,20,20,53\\)</span>".</p>
 <p>To decrypt the message, we take each number and multiply it by itself
-\$d\$ times, (\$d=29\$) wrapping around each time we pass \$91\$.</p>
-<p>\$11 \times 11 = 121 = 30\$</p>
-<p>\$30 \times 11 = 330 = 57\$</p>
+<span class="math">\(d\)</span> times, (<span class="math">\(d=29\)</span>) wrapping around each time we pass <span class="math">\(91\)</span>.</p>
+<p><span class="math">\(11 \times 11 = 121 = 30\)</span></p>
+<p><span class="math">\(30 \times 11 = 330 = 57\)</span></p>
 <p>...</p>
-<p>\$57 \times 11 = 627 = 81\$</p>
-<p>\$81 \times 11 = 891 = 72\$</p>
+<p><span class="math">\(57 \times 11 = 627 = 81\)</span></p>
+<p><span class="math">\(81 \times 11 = 891 = 72\)</span></p>
 <p>And we're back to our original encoding.</p>
 <h2>Files</h2>
 <p>The spreadsheet I used to calculate the encrypted and decrypted values
@@ -266,14 +258,74 @@ It uses the AES encryption method.</p>
 <p>I used the explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a lot.&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn-2">
-<p>A simple example is \$A=1, B=2\$ etc]&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>A simple example is <span class="math">\(A=1, B=2\)</span> etc]&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn-3">
 <p>Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving algorithm</a> which
 finds all the primes up to a given limit.&#160;<a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
+<li id="fn-4">
+<p>Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I've used the same numbers in the following example as in the tutorials <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a>.&#160;<a class="footnote-backref" href="#fnref-4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
     
     <div class="neighbors">

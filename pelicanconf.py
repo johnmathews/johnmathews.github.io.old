@@ -8,13 +8,12 @@ SITEURL = ''
 
 PATH = 'content'  # ['content/posts','content']
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup','neighbors', 'pelican_youtube']
+PLUGINS = ['ipynb.markup','neighbors', 'pelican_youtube', 'render_math']
 LOAD_CONTENT_CACHE = False
 
 
 THEME = 'theme/nest'
 MARKUP = ('md', 'ipynb')
-
 
 # JINJA_FILTERS = {'datetime':format_datetime}
 

@@ -52,8 +52,7 @@ on without forgetting. Here's a break down of each item:
     social chatter. I remember enjoying the benefits and thinking that I
     should keep this habit. The reasons why I think Christianity is so
     wonderful are well summarised in
-    [this](http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders)
-    sermon.
+    [this sermon](http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders).
 
     It's now 10 years later, and whilst my convictions are strong, my
     knowledge of the bible is sadly pretty fuzzy. My thinking is clouded
@@ -115,7 +114,7 @@ on without forgetting. Here's a break down of each item:
     things that history books are ill-suited for? Great fiction would be
     essential for exploring these. But for now, I'll prioritise point 3.
 
-    <iframe style="max-width: 100%;" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    <iframe style="max-width: 100%; float:middle" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 10. "Do a photography project" - This I would love to do, but probably
     won't. It would be a luxury, and the opportunity cost would be too

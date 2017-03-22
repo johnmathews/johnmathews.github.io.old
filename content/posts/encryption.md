@@ -97,70 +97,61 @@ the product of two large prime numbers.
 RSA (as well as other cryptographic techniques) makes use of a number
 line which loops back to zero after reaching a maximum value, rather
 than increasing indefinitely. This means that once a maximum number
-\$n\$ has been defined, if a number greater than \$n\$ is created, the
+$n$ has been defined, if a number greater than $n$ is created, the
 result simply loops around to 0 and begins counting from 0 again. i.e.
-if \$n = 10\$, then \$7 + 5 = 12 - 10 = 2\$. The result of a calculation
+if $n = 10$, then $7 + 5 = 12 - 10 = 2$. The result of a calculation
 on a looping number line may be easily found by doing long division and
-using the remainder as the final answer, i.e. \$12/10 = 1\$ with \$2\$
+using the remainder as the final answer, i.e. $12 / 10 = 1$ with $2$
 remaining.
 
 ## Generation of a pair of RSA keys:
 ## 1. Generate the RSA modulus
--   Select two large random prime numbers, \$p\$ and \$q\$. They need to
+-   Select two large random prime numbers, $p$ and $q$. They need to
     be random because anyone who knows or guesses them will be able to
     decrypt the encryption.
--   Calculate \$n = pq\$
+-   Calculate $n = pq$
 
-### 2. Find derived number (e)
--   *e* must be greater than 1 and less than \$\\left( p - 1 \\right)
-    \\left( q - 1 \\right)\$
--   There must be no common factor for e and \$ \\left( p - 1 \\right)
-    \\left( q - 1 \\right)\$ except for 1\[1. If this is the case then
-    e and \$latex \\left( p - 1 \\right) \\left( q - 1 \\right)\$ are
-    called "coprime"\].
+## 2. Find derived number (e)
+-   *e* must be greater than 1 and less than $( p - 1)( q - 1)$
+-   There must be no common factor for e and $( p - 1)
+    ( q - 1)$ except for 1\[1. If this is the case then
+    e and $( p - 1) ( q - 1 )$ are called "coprime"\].
 
-### 3. Form the public key
--   The pair of numbers \$(n, e)\$* *form the public key and can be made
+## 3. Form the public key
+-   The pair of numbers $(n, e)$ form the public key and can be made
     public
--   Even though \$n\$* *is public, it is so difficult to factor a large
+-         Even though $n$* *is public, it is so difficult to factor a large
     prime number that an attacker would not be able to find its
     component primes in the time available. The strength of RSA rests
-    entirely on the difficulty of factoring \$n\$ into its two component
+    entirely on the difficulty of factoring $n$ into its two component
     prime numbers.
 
-### 4. Generate the private key (d)
--   The private key is generated from using \$p\$, \$q\$ and e as inputs
+## 4. Generate the private key (d)
+-   The private key is generated from using $p$, $q$ and e as inputs
     to the Extended Euclidean Algorithm. For a given set of values,
-    there is a unique answer \$d\$
--   \$d\$ is the inverse of  e modulo \$latex \\left( p - 1 \\right)
-    \\left( q - 1 \\right)\$. This means that \$d\$ is the number less
-    than \$latex \\left( p - 1 \\right) \\left( q - 1 \\right)\$ such
-    that when it is multiplied by e, it is equal to 1 modulo \$latex
-    \\left( p - 1 \\right) \\left( q - 1 \\right)\$
+    there is a unique answer $d$
+-   $d$ is the inverse of $e$ modulo $( p - 1)( q - 1 )$. This means that $d$ is the number less
+    than $( p - 1 ) ( q - 1 )$ such
+    that when it is multiplied by e, it is equal to $1$ modulo $( p - 1 ) ( q - 1 )$
 
 ## RSA example:
 RSA does not directly operate on strings as bits, it operates on numbers
-modulo (less than) \$n\$. and it is necessary to represent plaintext as
-a series of numbers less than \$n\$. The dominant encoding on the
+modulo (less than) $n$. and it is necessary to represent plain text as
+a series of numbers less than $n$. The dominant encoding on the
 internet is [UTF-8](https://en.wikipedia.org/wiki/UTF-8), which
-represents each upper case latin letter as a number between 65 and 90.
-Using this encoding, a message "HELLO" would become "\$72, 69, 76, 76,
-79\$".
+represents each upper case Latin letter as a number between 65 and 90.
+Using this encoding, a message "HELLO" would become "$72, 69, 76, 76,
+79$".
 
-The maximum number \$n\$ needs to be the product of the two prime
-numbers \$p\$ and \$q\$. For this example choose \$p = 7\$ and \$q =
-13\$, so \$n  = 91\$\[1. Whilst the Extended Euclidean Algorithm is
-apparently simple to compute, its description is not. Therefore I've
-used the same numbers in the following example as in the tutorials
-[here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm)
-and
-[here](http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/).\].
+The maximum number $n$ needs to be the product of the two prime
+numbers $p$ and $q$. For this example choose $p = 7$ and $q =
+13$, so $n  = 91$[^4]
 
 The public key component *e* can be any number we choose,  as long as
 there is no number other than 1 which is a common factor of
-*e* and \$\\left( p - 1 \\right) \\left( q - 1 \\right)\$. In our
+*e* and $( p - 1 ) ( q - 1 )$. In our
 example, this requires that there be no common factor between
-72 and e other than 1, so let *e* \$= 5\$.
+72 and e other than 1, so let *e* $= 5$.
 
 Therefore our public key is (91, 5). This can be made available to
 anyone without messages being decrypted because of the difficulty of
@@ -168,7 +159,7 @@ factoring a (very large) prime number.
 
 Using the fact that we know 5 and 11 are the prime factors of 55 and e
 is 5, we can use the Extended Euclidean Algorithm  to compute our
-private key \$d\$, which is 29.
+private key $d$, which is 29.
 
 Therefore when the prime factors 7 and 13 are used, the public key is
 (91, 5) and the private key is (91, 29). These parameters fully define a
@@ -176,36 +167,34 @@ functional RSA system.
 
 ### Encoding
 To encode the first letter of our short and unimaginative message ('H',
-which is \$72\$ in UTF-8), we need to multiply it by itself *e *times
-(\$e = 5\$), remembering to wrap around each time we pass our maximum
-value of \$n = 91\$.
+which is $72$ in UTF-8), we need to multiply it by itself *e *times
+($e = 5$), remembering to wrap around each time we pass our maximum
+value of $n = 91$.
 
-\$72 \\times 72 = 5184, 5184 / 91 = 56\$ with \$88\$ remaining, (i.e.
-\$5184 = 91 \\times 56 + 88\$). Therefore \$72 \\times 72 = 5184 = 88 \$
+$72 \times 72 = 5184, 5184 / 91 = 56$ with $88$ remaining, (i.e.
+$5184 = 91 \times 56 + 88$). 
+Therefore $72 \times 72 = 5184 = 88$
+$88 \times 72 = 6336 = 57$
+$57 \times 72 = 4104 = 9$
+$9 \times 72 = 648 = 11$
 
-\$88 \\times 72 = 6336 = 57\$
-
-\$57 \\times 72 = 4104 = 9\$
-
-\$9 \\times 72 = 648 = 11\$
-
-Therefore the encrypted value of "H" is "\$11\$"
+Therefore the encrypted value of "H" is "$11$"
 
 Using the method for each character in the message "HELLO" results in
 the encoded message "\$11,62,20,20,53\$".
 
 To decrypt the message, we take each number and multiply it by itself
-\$d\$ times, (\$d=29\$) wrapping around each time we pass \$91\$.
+$d$ times, ($d=29$) wrapping around each time we pass $91$.
 
-\$11 \\times 11 = 121 = 30\$
+$11 \times 11 = 121 = 30$
 
-\$30 \\times 11 = 330 = 57\$
+$30 \times 11 = 330 = 57$
 
 ...
 
-\$57 \\times 11 = 627 = 81\$
+$57 \times 11 = 627 = 81$
 
-\$81 \\times 11 = 891 = 72\$
+$81 \times 11 = 891 = 72$
 
 And we're back to our original encoding.
 
@@ -219,6 +208,8 @@ It uses the AES encryption method.
 
 ### Footnotes
 [^1]: I used the explanations [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) a lot.
-[^2]: A simple example is \$A=1, B=2\$ etc\]
+[^2]: A simple example is $A=1, B=2$ etc]
 [^3]: Eratosthenes invented his famous [sieving algorithm](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which
 finds all the primes up to a given limit.
+[^4]: Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I've used the same numbers in the following example as in the tutorials [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/).
+
