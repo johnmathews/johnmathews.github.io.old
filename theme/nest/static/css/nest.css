@@ -349,8 +349,7 @@ h4 {
 /* Article */
 .neighbors{
     padding-top: 10px;
-   // padding-right: 10px;
-   // border: 1px solid black;
+   // padding-right: 10px; 
     text-align: right;
     position: relative;
     height: 50px;
@@ -363,19 +362,14 @@ h4 {
 
 .previous_article::before{
     content: "Previous: ";
-   // color: green;
-   // font-size: 20px;
 }
 
 .next_article{
-   // color: blue;
     list-style: none;  
 }
 
 .next_article::before{
     content: "Next: ";
-    // color: green;
-    // font-size: 20px;
 }
 
 .article-container{
@@ -436,14 +430,39 @@ h4 {
 }
 
 @media screen and (max-width: 766px){
+    .neighbors{
+        padding-top: 10px;
+        text-align: right;
+        position: relative;
+        height: 50px;
+    }
+    .previous_article{
+        position: relative;
+        left: -40px; /*keep this, orginally at 0px*/
+        list-style: none;
+        text-align: left; 
+    }
+
+    .previous_article::before{
+        content: "Previous: ";
+    }
+
+    .next_article{
+        list-style: none;  
+    }
+
+    .next_article::before{
+        content: "Next: ";
+    }
+
     dt{
         text-align: left !important;
         width: 100% !important;
         margin-bottom: 20px !important;
     }
- /*   dt:after{
+ /*   dt:after{  // put a line under each post name
         display: block;
-        text-align: center !important;
+        // text-align: center !important;
         content: " ";
         width: 40px;
         border-bottom: 3px solid brown 
@@ -453,13 +472,6 @@ h4 {
         width:0% !important;
     }
 }
-
-/*
-.archive hidden-xs dt{
-    text-align: center !important;
-    width: 100%;
-}
-*/
 
 .archive dd{
     text-align: right;
