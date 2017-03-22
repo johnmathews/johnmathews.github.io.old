@@ -124,18 +124,20 @@ h1 {
     font-size: 28px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border:none;
+    margin-top: 10px;   
+    margin-bottom: 10px;
 }
 
 h2 { 
     font-size: 20px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
-    margin-top: 40px;   
-    margin-bottom: 40px;
+    margin-top: 20px;   
+    margin-bottom: 10px;
 }
-h2:after {
+/*h2:after {
     display: block;
     content: " ";
     margin-top: 10px;
@@ -143,38 +145,39 @@ h2:after {
     /* border-bottom: 3px solid brown */
     /* border-bottom: 3px solid rgba(235,35,68,1);*/
     /* border-bottom: 3px solid rgba(0,0,0,0.2);*/
-}
+}*/
 
 h3 { 
     font-size: 16px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
-    margin-top: 30px; 
-    margin-bottom: 30px;
+    margin-top: 20px; 
+    margin-bottom: 10px;
 }
-h3:after {
+/*h3:after {
     display: block;
     content: " ";
     margin-top: 10px;
     width: 40px;
     border-bottom: 3px solid rgba(235,35,68,1);
-}
+}*/
 
 h4 { 
     font-size: 12px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
-    margin-top: 30px; 
-    margin-bottom: 30px;
+    margin-top: 10px; 
+    margin-bottom: 5px;
     text-transform: uppercase;
 }
-h4:after {
+
+/*h4:after {
     display: block;
     content: " ";
     margin-top: 10px;
     width: 40px;
     border-bottom: 3px solid rgba(0,0,0,0.2);    
-}
+}*/
 
 /* Navbar */
 .header-nav{
@@ -186,14 +189,14 @@ h4:after {
 }
 .header-nav .nav{
     float:right;
-    padding-right: 20px;
+    padding-right: 5px;
 }
 .header-nav .nav a{
     font-weight:600;
     color:#fff;
     text-decoration:none;
     padding:8px;
-    margin-left:20px;
+    margin-left:5px;
     text-transform: uppercase;
     transition: all 0.2s ease-out;
 }
@@ -282,8 +285,8 @@ h4:after {
 .content{
    // margin-top: 42px;
     background-color: #fff;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
    /* border-left: 1px solid rgba(0,0,0,0.1);

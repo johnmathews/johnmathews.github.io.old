@@ -1,11 +1,12 @@
 Title: Digital currencies: the basics
 Date: 2016-08-19 21:02
-Author: JM
+Author: John Mathews
 Category: Bitcoin, Distributed Ledgers
 Tags: Bitcoin, Cryptocurrencies, Cryptography, Digital Currencies, Finance, Fintech
 Slug: digital-currencies-the-basics
 Status: published
 
+# Digital currencies: the basics
 Digital currencies are often discussed in the context of finance,
 technology and economics. The Blockchain - the technology which
 applications like Bitcoin are built on - is significant because it
@@ -17,16 +18,14 @@ This post is intended to introduce the basic concepts of digital
 currencies and the problems a distributed ledger system needs to
 overcome.
 
-### What is a digital currency?
-
+## What is a digital currency?
 A digital currency is an internet based medium of exchange. Units of
 digital currency are not printed, are not physical, and represent
 nothing. A unit of currency is produced by running algorithms to solve
 complex mathematical problems. When a solution is found, a unit of
 currency (for example, 1 Bitcoin) is generated.
 
-### If the currency represents nothing, why is it valuable?
-
+## If the currency represents nothing, why is it valuable?
 Because people believe that in future, other people will believe
 it does, and because people are willing to trade real goods and services
 in exchange for it.
@@ -51,8 +50,7 @@ requiring an intermediary. This is made possible by using cryptographic
 techniques developed over the last few decades, and cheap, powerful
 computers which have only recently become available.
 
-### Central and distributed ledgers
-
+## Central and distributed ledgers
 With conventional currencies everyone's balance and transactions are
 recorded in one central ledger (a list showing how much money each
 account has) and each account holder only has access to their own
@@ -70,16 +68,14 @@ be involved in every transaction between its account holders. This
 need for an intermediary increases the complexity and cost of doing
 business.
 
-### Sending money
-
+## Sending money
 To send money, a message is broadcast to the network that the amount in
 your account should decrease and the amount in another account should
 increase. Each computer in the network (a node) which receives this
 message will check its authenticity, make the changes, and pass the
 message along to other nodes.
 
-### What problems does blockchain solve?
-
+## What problems does blockchain solve?
 For a transaction to be accepted and entered into the distributed
 ledger, its authenticity needs to be verified. Because the ledger is
 distributed, everyone can see everyone else's transactions. Therefore
@@ -96,10 +92,11 @@ many unrelated users. If each party has their own copy of the ledger,
 updating (or changing) it as they want, how would the ledgers
 completeness and accuracy be assured? How would you update your ledger
 to take account of transactions between third parties, and how would you
-know the order in which they occurred?\[ref\]This is the Byzantine
-Generals problem, which is nicely described in the introduction of this
-[paper](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)\[/ref\]
-
-The blockchain is remarkable because it is the first technology to solve
+know the order in which they occurred?[^1] The blockchain is remarkable because it is the first technology to solve
 all of these problems. Future posts will consider each of these problems
 are overcome.
+
+[^1]: This is the Byzantine Generals problem, which is nicely described in the introduction of 
+[this paper](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)
+
+

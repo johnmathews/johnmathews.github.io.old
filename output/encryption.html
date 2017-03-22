@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="[Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods...">
+        <meta name="description" content="Encryption Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern...">
         <meta name="keywords" content="Encryption, RSA">
         <link rel="icon" href="/favicon.ico">
 
@@ -38,9 +38,11 @@
             <!-- Static navbar -->
             <div class="container">
                 <div class="header-nav">
-                    <div class="header-logo">
-                        <a class="pull-left" href="/"><img class="mr20" src="/images/logo.jpeg" alt="logo">John Mathews</a>
+                    <div class="header-logo ">
+                        <a class="pull-left hidden-xs" href="/"><img class="mr20" src="/images/logo.jpeg" alt="logo"> </a>
+                        <a class="pull-left" href="/">John Mathews </a>
                     </div>
+                    <!-- <div class="header-logo"> Hi this is paragraph text</div> -->
                     <div class="nav pull-right">
                             <a  href="/pages/about.html">About</a>
                     </div>
@@ -56,7 +58,7 @@
               <div class="col-lg-12">   
                   <div class="header-content">
                      <h1 class="header-title">Encryption</h1>
-                      <p class="header-date">By <a href="/author/jm.html">JM</a>, Aug 30 2016, in category <a href="/category/distributed-ledgers.html">Distributed ledgers</a></p>
+                      <p class="header-date">By <a href="/author/john-mathews.html">John Mathews</a>, Aug 30 2016, in category <a href="/category/distributed-ledgers.html">Distributed ledgers</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
@@ -76,21 +78,16 @@
 
         <!-- Content -->
     <div class="container content">
-        <p>[Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate
+        <h1>Encryption</h1>
+<p>Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate
 users and authorise transactions. These notes introduce the field of
 cryptography and explains how modern cryptographic methods
-work. ]{style="line-height: 1.5;"}I wrote them to teach myself about
-encryption[1. I used the
-explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a>
-and
-<a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a
-lot].</p>
-<p>To begin with the the absolute basics, encryption generally works by
-taking a message and representing it as a series of numbers[2. A simple
-example is \$A=1, B=2\$ etc] which are then turned into a series of
+work. I wrote them to teach myself about encryption<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> </p>
+<p>To begin with the absolute basics, encryption generally works by
+taking a message and representing it as a series of numbers<sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup> which are then turned into a series of
 random looking numbers. Decryption works by turning the random looking
 numbers back into the original message.</p>
-<h3>Background</h3>
+<h2>Background</h2>
 <p>The history of Cryptography can be split into classical and modern eras.
 Modern cryptography began in 1977 with the introduction of the RSA and
 Diffie-Hellman algorithms.  Until then, Cryptography required using a
@@ -127,12 +124,8 @@ will ever know."</em></p>
 numbers is computationally simple, but factorising the result is not.
 This type of problem is a key feature of modern cryptography. Factoring
 prime numbers is a super famous mathematical problem, it was studied
-by <a href="https://en.wikipedia.org/wiki/Eratosthenes">Eratosthenes</a>[1.
-Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving
-algorithm</a> which
-finds all the primes up to a given limit] in the 3^rd^ century BC and
-more recently the <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge">RSA Factoring
-Challenge</a> has
+by <a href="https://en.wikipedia.org/wiki/Eratosthenes">Eratosthenes</a><sup id="fnref-3"><a class="footnote-ref" href="#fn-3">3</a></sup> in the 3rd century BC and
+more recently the <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge">RSA Factoring Challenge</a> has
 intended to track state-of-the-art factorisation techniques by issues
 cash prizes for the factorisation of large primes.</p>
 <p>Generally, the bigger the difference in difficulty between executing the
@@ -153,12 +146,10 @@ keys are required.</p>
 factorisation will become redundant as the difficulty gap between
 creating and solving them shrinks. A better trap door function is
 required.</p>
-<h3>Overview of the RSA algorithm</h3>
-<p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron
-Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi
+<h2>Overview of the RSA algorithm</h2>
+<p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi
 Shamir</a>, and
-<a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard Adleman">Leonard
-Adleman</a>),
+<a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard Adleman">Leonard Adleman</a>),
 RSA was one of the first public-key encryption algorithms and is still
 widely used. The asymmetry of encoding with a public key and decrypting
 with a different (private) key is based on the difficulty of factoring
@@ -172,15 +163,15 @@ if \$n = 10\$, then \$7 + 5 = 12 - 10 = 2\$. The result of a calculation
 on a looping number line may be easily found by doing long division and
 using the remainder as the final answer, i.e. \$12/10 = 1\$ with \$2\$
 remaining.</p>
-<h4>Generation of a pair of RSA keys:</h4>
-<h5>1. Generate the RSA modulus</h5>
+<h2>Generation of a pair of RSA keys:</h2>
+<h2>1. Generate the RSA modulus</h2>
 <ul>
 <li>Select two large random prime numbers, \$p\$ and \$q\$. They need to
     be random because anyone who knows or guesses them will be able to
     decrypt the encryption.</li>
 <li>Calculate \$n = pq\$</li>
 </ul>
-<h5>2. Find derived number (e)</h5>
+<h3>2. Find derived number (e)</h3>
 <ul>
 <li><em>e</em> must be greater than 1 and less than \$\left( p - 1 \right)
     \left( q - 1 \right)\$</li>
@@ -189,7 +180,7 @@ remaining.</p>
     e and \$latex \left( p - 1 \right) \left( q - 1 \right)\$ are
     called "coprime"].</li>
 </ul>
-<h5>3. Form the public key</h5>
+<h3>3. Form the public key</h3>
 <ul>
 <li>The pair of numbers \$(n, e)\$<em> </em>form the public key and can be made
     public</li>
@@ -199,7 +190,7 @@ remaining.</p>
     entirely on the difficulty of factoring \$n\$ into its two component
     prime numbers.</li>
 </ul>
-<h5>4. Generate the private key (d)</h5>
+<h3>4. Generate the private key (d)</h3>
 <ul>
 <li>The private key is generated from using \$p\$, \$q\$ and e as inputs
     to the Extended Euclidean Algorithm. For a given set of values,
@@ -210,7 +201,7 @@ remaining.</p>
     that when it is multiplied by e, it is equal to 1 modulo \$latex
     \left( p - 1 \right) \left( q - 1 \right)\$</li>
 </ul>
-<h4>RSA example:</h4>
+<h2>RSA example:</h2>
 <p>RSA does not directly operate on strings as bits, it operates on numbers
 modulo (less than) \$n\$. and it is necessary to represent plaintext as
 a series of numbers less than \$n\$. The dominant encoding on the
@@ -240,7 +231,7 @@ private key \$d\$, which is 29.</p>
 <p>Therefore when the prime factors 7 and 13 are used, the public key is
 (91, 5) and the private key is (91, 29). These parameters fully define a
 functional RSA system.</p>
-<h5>Encoding</h5>
+<h3>Encoding</h3>
 <p>To encode the first letter of our short and unimaginative message ('H',
 which is \$72\$ in UTF-8), we need to multiply it by itself <em>e </em>times
 (\$e = 5\$), remembering to wrap around each time we pass our maximum
@@ -261,13 +252,28 @@ the encoded message "\$11,62,20,20,53\$".</p>
 <p>\$57 \times 11 = 627 = 81\$</p>
 <p>\$81 \times 11 = 891 = 72\$</p>
 <p>And we're back to our original encoding.</p>
-<h3>Files</h3>
+<h2>Files</h2>
 <p>The spreadsheet I used to calculate the encrypted and decrypted values
 can be downloaded <a href="http://johnmathews.eu/encryption/rsa-example/">here</a>.</p>
 <p>A simple python script to encrypt and decrypt a message is
 <a href="http://johnmathews.eu/wp-content/uploads/2016/09/AES_Example.txt">here</a>.
 It uses the AES encryption method.</p>
 <h3>Footnotes</h3>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-1">
+<p>I used the explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a lot.&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn-2">
+<p>A simple example is \$A=1, B=2\$ etc]&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn-3">
+<p>Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving algorithm</a> which
+finds all the primes up to a given limit.&#160;<a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
     
     <div class="neighbors">

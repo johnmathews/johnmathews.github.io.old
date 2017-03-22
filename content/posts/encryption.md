@@ -1,29 +1,23 @@
 Title: Encryption
 Date: 2016-08-30 23:04
-Author: JM
+Author: John Mathews
 Category: Distributed Ledgers
 Tags: Encryption, RSA
 Slug: encryption
 Status: published
 
-[Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate
+# Encryption
+Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate
 users and authorise transactions. These notes introduce the field of
 cryptography and explains how modern cryptographic methods
-work. ]{style="line-height: 1.5;"}I wrote them to teach myself about
-encryption\[1. I used the
-explanations [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm)
-and
-[here](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) a
-lot\].
+work. I wrote them to teach myself about encryption[^1] 
 
-To begin with the the absolute basics, encryption generally works by
-taking a message and representing it as a series of numbers\[2. A simple
-example is \$A=1, B=2\$ etc\] which are then turned into a series of
+To begin with the absolute basics, encryption generally works by
+taking a message and representing it as a series of numbers[^2] which are then turned into a series of
 random looking numbers. Decryption works by turning the random looking
 numbers back into the original message.
 
-### Background
-
+## Background
 The history of Cryptography can be split into classical and modern eras.
 Modern cryptography began in 1977 with the introduction of the RSA and
 Diffie-Hellman algorithms.  Until then, Cryptography required using a
@@ -61,18 +55,12 @@ remarked:
 the number 8,616,460,799? I think it unlikely that anyone but myself
 will ever know."*
 
- 
-
 This simple problem shows that finding the product of two (secret) prime
 numbers is computationally simple, but factorising the result is not.
 This type of problem is a key feature of modern cryptography. Factoring
 prime numbers is a super famous mathematical problem, it was studied
-by [Eratosthenes](https://en.wikipedia.org/wiki/Eratosthenes)\[1.
-Eratosthenes invented his famous [sieving
-algorithm](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which
-finds all the primes up to a given limit\] in the 3^rd^ century BC and
-more recently the [RSA Factoring
-Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge) has
+by [Eratosthenes](https://en.wikipedia.org/wiki/Eratosthenes)[^3] in the 3rd century BC and
+more recently the [RSA Factoring Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge) has
 intended to track state-of-the-art factorisation techniques by issues
 cash prizes for the factorisation of large primes.
 
@@ -97,13 +85,10 @@ factorisation will become redundant as the difficulty gap between
 creating and solving them shrinks. A better trap door function is
 required.
 
-### Overview of the RSA algorithm
-
-Named after its founders ([Ron
-Rivest](https://en.wikipedia.org/wiki/Ron_Rivest "Ron Rivest"), [Adi
+## Overview of the RSA algorithm
+Named after its founders ([Ron Rivest](https://en.wikipedia.org/wiki/Ron_Rivest "Ron Rivest"), [Adi
 Shamir](https://en.wikipedia.org/wiki/Adi_Shamir "Adi Shamir"), and
-[Leonard
-Adleman](https://en.wikipedia.org/wiki/Leonard_Adleman "Leonard Adleman")),
+[Leonard Adleman](https://en.wikipedia.org/wiki/Leonard_Adleman "Leonard Adleman")),
 RSA was one of the first public-key encryption algorithms and is still
 widely used. The asymmetry of encoding with a public key and decrypting
 with a different (private) key is based on the difficulty of factoring
@@ -119,17 +104,14 @@ on a looping number line may be easily found by doing long division and
 using the remainder as the final answer, i.e. \$12/10 = 1\$ with \$2\$
 remaining.
 
-#### Generation of a pair of RSA keys:
-
-##### 1. Generate the RSA modulus
-
+## Generation of a pair of RSA keys:
+## 1. Generate the RSA modulus
 -   Select two large random prime numbers, \$p\$ and \$q\$. They need to
     be random because anyone who knows or guesses them will be able to
     decrypt the encryption.
 -   Calculate \$n = pq\$
 
-##### 2. Find derived number (e)
-
+### 2. Find derived number (e)
 -   *e* must be greater than 1 and less than \$\\left( p - 1 \\right)
     \\left( q - 1 \\right)\$
 -   There must be no common factor for e and \$ \\left( p - 1 \\right)
@@ -137,8 +119,7 @@ remaining.
     e and \$latex \\left( p - 1 \\right) \\left( q - 1 \\right)\$ are
     called "coprime"\].
 
-##### 3. Form the public key
-
+### 3. Form the public key
 -   The pair of numbers \$(n, e)\$* *form the public key and can be made
     public
 -   Even though \$n\$* *is public, it is so difficult to factor a large
@@ -147,8 +128,7 @@ remaining.
     entirely on the difficulty of factoring \$n\$ into its two component
     prime numbers.
 
-##### 4. Generate the private key (d)
-
+### 4. Generate the private key (d)
 -   The private key is generated from using \$p\$, \$q\$ and e as inputs
     to the Extended Euclidean Algorithm. For a given set of values,
     there is a unique answer \$d\$
@@ -158,8 +138,7 @@ remaining.
     that when it is multiplied by e, it is equal to 1 modulo \$latex
     \\left( p - 1 \\right) \\left( q - 1 \\right)\$
 
-#### RSA example:
-
+## RSA example:
 RSA does not directly operate on strings as bits, it operates on numbers
 modulo (less than) \$n\$. and it is necessary to represent plaintext as
 a series of numbers less than \$n\$. The dominant encoding on the
@@ -195,8 +174,7 @@ Therefore when the prime factors 7 and 13 are used, the public key is
 (91, 5) and the private key is (91, 29). These parameters fully define a
 functional RSA system.
 
-##### Encoding
-
+### Encoding
 To encode the first letter of our short and unimaginative message ('H',
 which is \$72\$ in UTF-8), we need to multiply it by itself *e *times
 (\$e = 5\$), remembering to wrap around each time we pass our maximum
@@ -231,8 +209,7 @@ To decrypt the message, we take each number and multiply it by itself
 
 And we're back to our original encoding.
 
-### Files
-
+## Files
 The spreadsheet I used to calculate the encrypted and decrypted values
 can be downloaded [here](http://johnmathews.eu/encryption/rsa-example/).
 
@@ -241,3 +218,7 @@ A simple python script to encrypt and decrypt a message is
 It uses the AES encryption method.
 
 ### Footnotes
+[^1]: I used the explanations [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) a lot.
+[^2]: A simple example is \$A=1, B=2\$ etc\]
+[^3]: Eratosthenes invented his famous [sieving algorithm](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which
+finds all the primes up to a given limit.

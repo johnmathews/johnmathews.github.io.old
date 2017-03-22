@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Digital currencies are often discussed in the context of finance, technology and economics. The Blockchain - the technology which applications like Bitcoin are built on - is significant because it...">
+        <meta name="description" content="Digital currencies: the basics Digital currencies are often discussed in the context of finance, technology and economics. The Blockchain - the technology which applications like Bitcoin are built...">
         <meta name="keywords" content="Bitcoin, Cryptocurrencies, Cryptography, Digital Currencies, Finance, Fintech">
         <link rel="icon" href="/favicon.ico">
 
@@ -38,9 +38,11 @@
             <!-- Static navbar -->
             <div class="container">
                 <div class="header-nav">
-                    <div class="header-logo">
-                        <a class="pull-left" href="/"><img class="mr20" src="/images/logo.jpeg" alt="logo">John Mathews</a>
+                    <div class="header-logo ">
+                        <a class="pull-left hidden-xs" href="/"><img class="mr20" src="/images/logo.jpeg" alt="logo"> </a>
+                        <a class="pull-left" href="/">John Mathews </a>
                     </div>
+                    <!-- <div class="header-logo"> Hi this is paragraph text</div> -->
                     <div class="nav pull-right">
                             <a  href="/pages/about.html">About</a>
                     </div>
@@ -56,7 +58,7 @@
               <div class="col-lg-12">   
                   <div class="header-content">
                      <h1 class="header-title">Digital currencies: the basics</h1>
-                      <p class="header-date">By <a href="/author/jm.html">JM</a>, Aug 19 2016, in category <a href="/category/bitcoin-distributed-ledgers.html">Bitcoin, distributed ledgers</a></p>
+                      <p class="header-date">By <a href="/author/john-mathews.html">John Mathews</a>, Aug 19 2016, in category <a href="/category/bitcoin-distributed-ledgers.html">Bitcoin, distributed ledgers</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
@@ -76,7 +78,8 @@
 
         <!-- Content -->
     <div class="container content">
-        <p>Digital currencies are often discussed in the context of finance,
+        <h1>Digital currencies: the basics</h1>
+<p>Digital currencies are often discussed in the context of finance,
 technology and economics. The Blockchain - the technology which
 applications like Bitcoin are built on - is significant because it
 removes the need for trust or an intermediary between unrelated parties
@@ -85,13 +88,13 @@ digital currency is Bitcoin.</p>
 <p>This post is intended to introduce the basic concepts of digital
 currencies and the problems a distributed ledger system needs to
 overcome.</p>
-<h3>What is a digital currency?</h3>
+<h2>What is a digital currency?</h2>
 <p>A digital currency is an internet based medium of exchange. Units of
 digital currency are not printed, are not physical, and represent
 nothing. A unit of currency is produced by running algorithms to solve
 complex mathematical problems. When a solution is found, a unit of
 currency (for example, 1 Bitcoin) is generated.</p>
-<h3>If the currency represents nothing, why is it valuable?</h3>
+<h2>If the currency represents nothing, why is it valuable?</h2>
 <p>Because people believe that in future, other people will believe
 it does, and because people are willing to trade real goods and services
 in exchange for it.</p>
@@ -113,7 +116,7 @@ hasn't been practical because:</p>
 requiring an intermediary. This is made possible by using cryptographic
 techniques developed over the last few decades, and cheap, powerful
 computers which have only recently become available.</p>
-<h3>Central and distributed ledgers</h3>
+<h2>Central and distributed ledgers</h2>
 <p>With conventional currencies everyone's balance and transactions are
 recorded in one central ledger (a list showing how much money each
 account has) and each account holder only has access to their own
@@ -129,13 +132,13 @@ only one copy of the ledger, maintained by the bank, then the bank must
 be involved in every transaction between its account holders. This
 need for an intermediary increases the complexity and cost of doing
 business.</p>
-<h3>Sending money</h3>
+<h2>Sending money</h2>
 <p>To send money, a message is broadcast to the network that the amount in
 your account should decrease and the amount in another account should
 increase. Each computer in the network (a node) which receives this
 message will check its authenticity, make the changes, and pass the
 message along to other nodes.</p>
-<h3>What problems does blockchain solve?</h3>
+<h2>What problems does blockchain solve?</h2>
 <p>For a transaction to be accepted and entered into the distributed
 ledger, its authenticity needs to be verified. Because the ledger is
 distributed, everyone can see everyone else's transactions. Therefore
@@ -150,12 +153,18 @@ many unrelated users. If each party has their own copy of the ledger,
 updating (or changing) it as they want, how would the ledgers
 completeness and accuracy be assured? How would you update your ledger
 to take account of transactions between third parties, and how would you
-know the order in which they occurred?[ref]This is the Byzantine
-Generals problem, which is nicely described in the introduction of this
-<a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf">paper</a>[/ref]</p>
-<p>The blockchain is remarkable because it is the first technology to solve
+know the order in which they occurred?<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> The blockchain is remarkable because it is the first technology to solve
 all of these problems. Future posts will consider each of these problems
 are overcome.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-1">
+<p>This is the Byzantine Generals problem, which is nicely described in the introduction of 
+<a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf">this paper</a>&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
     
     <div class="neighbors">
