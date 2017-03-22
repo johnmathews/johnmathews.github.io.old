@@ -435,6 +435,32 @@ h4 {
     line-height: 2; //1.42857143;    
 }
 
+@media screen and (max-width: 766px){
+    dt{
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+ /*   dt:after{
+        display: block;
+        text-align: center !important;
+        content: " ";
+        width: 40px;
+        border-bottom: 3px solid brown 
+    }
+    */
+    dd{
+        width:0% !important;
+    }
+}
+
+/*
+.archive hidden-xs dt{
+    text-align: center !important;
+    width: 100%;
+}
+*/
+
 .archive dd{
     text-align: right;
   /*  width: 30%;
