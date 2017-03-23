@@ -140,7 +140,9 @@ on without forgetting. Here's a break down of each item:
 14. "Learn to fight - Krav Maga / MMA" - Ever since watching The Bourne
     Identity I've wanted to learn Krav Maga, and [Georges
     St-Pierre](https://youtu.be/LybrzdG96_8) made me want to train
-    for MMA. For now though, I'll do P90x. I can reconsider in 90 days. 
+    for MMA. For now though, I'll do P90x. I can reconsider in 90 days.
+
+    [[embed url=https://youtube.com/watch?v=LybrzdG96_8]] 
     
 15. "Get out of London" - My contract ends in April 2017, next summer
     will be a crossroads. I hate the commute, I hate being constantly

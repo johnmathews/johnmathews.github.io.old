@@ -5,6 +5,7 @@ Category: Engineering
 Tags: doctorate, granular flow, Granular materials, PhD, research, Silo, thesis, Vienna
 Slug: silos
 Status: published
+image: {photo}folder/image.jpg
 
 # Silos
 In this post I want to introduce my doctorate research without assuming
@@ -21,7 +22,12 @@ Edinburgh.
 My research quantified the effects of changing the strength of gravity
 on granular materials moving through storage silos.
 
-This post contains an overview of my work, as well as links to download
+gallery: {photo}folder
+gallery: {photo}folder, {photo}folder2
+{photo}folder, {photo}folder2{This is a title}
+{photo}folder/image.jpg
+
+This post contains an overview of my work, {lightbox}folder/image.jpg as well as links to download
 my PhD thesis and the short presentation I used when I defended it.
 
 Granular materials are a very general grouping of materials that are
