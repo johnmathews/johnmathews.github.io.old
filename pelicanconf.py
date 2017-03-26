@@ -6,7 +6,7 @@ AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
 SITEURL = ''
 
-PATH = 'content'  # ['content/posts','content']
+PATH = 'content'  
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup','neighbors', 'pelican_youtube', 'render_math']
 LOAD_CONTENT_CACHE = False
@@ -19,28 +19,6 @@ PYGMENTS_STYLE = 'bw'
 DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
-
-'''
-# Photo Galleries 
-# https://github.com/getpelican/pelican-plugins/tree/master/photos
-# photos and thumbnails are only generated once. Delete the folder (output/photos) to regenerate the resized photos again.
-PHOTO_LIBRARY = "~/git/blog/content/images"
-PHOTO_GALLERY = (1024, 768, 80)
-PHOTO_ARTICLE = (200, 159, 80) # (760, 506, 80)
-PHOTO_THUMB = (192, 144, 60)
-PHOTO_RESIZE_JOBS = 5 # default is 1
-PHOTO_WATERMARK = False
-PHOTO_WATERMARK_TEXT = SITENAME
-PHOTO_WATERMARK_IMG = '' # file path
-
-# The following features require the piexif library 
-PHOTO_EXIF_KEEP = True
-PHOTO_EXIF_REMOVE_GPS = False
-PHOTO_EXIF_COPYRIGHT = 'COPYRIGHT' # see details at: https://github.com/getpelican/pelican-plugins/tree/master/photos
-PHOTO_EXIF_COPYRIGHT_AUTHOR = 'Your Name Here'
-'''
-
-
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -75,7 +53,7 @@ NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/logo.jpeg'
 
 # Static files
-STATIC_PATHS = ['images', 'pdfs', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg']
+STATIC_PATHS = ['images', 'documents', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},

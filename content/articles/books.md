@@ -1,0 +1,1562 @@
+Title: Books
+Date: 2017-02-01 08:53
+Author: JM
+Category: Data Analysis
+Tags: books, catalogue, library, Pandas, Python, text
+Slug: books
+Status: published
+
+<p>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  
+|CODE0|
+
+</p>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+ {#Catalogue-of-books}
+
+A friend of mine has collected books for many years and has recently
+begun to catalogue them. In this post I do some simple analysis of the
+catalogue and query an ISBN database to fill in some missing data.
+<!--more-->
+
+<form action="javascript:code_toggle()">
+<input type="submit" value="show/hide script">
+</form>
+### Set-up and data preparation {#Set-up-and-data-preparation}
+
+#### Set some settings and import some command libraries {#Set-some-settings-and-import-some-command-libraries}
+
+</div>
+
+</div>
+
+</div>
+
+ 
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[1\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # Display plot results inline, not in a separate window
+    %matplotlib inline
+    %pylab inline
+
+    # Set the size of all figures
+    pylab.rcParams['figure.figsize'] = (14, 5)
+
+    import pandas as pd
+    import re
+    import bibtexparser
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    Populating the interactive namespace from numpy and matplotlib
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+#### Load the catalogue file {#Load-the-catalogue-file}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[2\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    table = pd.read_excel('Library.xlsx')
+    table = table[0:9188]
+    df = table
+    orig_rows = (df.shape[0])
+
+    print("There are %d rows in the catalogue" % (df.shape[0]) )
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    There are 9187 rows in the catalogue
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+#### Data formatting and tidying {#Data-formatting-and-tidying}
+
+View the top 5 rows to see how the data is arranged and how many cells
+are complete.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[3\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df.head()
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[3\]:
+
+</div>
+
+<div
+class="output_html rendered_html output_subarea output_execute_result">
+
+<div>
+
+      Location   Subject               Title                           Author              Publisher          ISBN?           Shelf   Pages   Price   Value   Date
+  --- ---------- --------------------- ------------------------------- ------------------- ------------------ --------------- ------- ------- ------- ------- ---------------------
+  0   HR         Islam                 The Islamic Invasion            R Morey             Harvest HP 1960    0 89081 983 1   17cm    221     3       8       2008-04-01 00:00:00
+  1   HR         Word lists            New Testament Word Lists        Morrison & Barnes   Erdmans 1975       0 8028 1141 8   NaN     125     3       NaN     2008-04-01 00:00:00
+  2   HR         Theology: Salvation   The Triumph of the crucified    E Sauer             Paternoster 1952   NaN             NaN     207     3       10      2008-04-01 00:00:00
+  3   HR         Early Fathers         Ante-Nicene Christian Library   Ed Menzies          T&T Clark 1897     NaN             NaN     533     9       NaN     2010-03-01 00:00:00
+  4   HR         Apologetics           Earth's earliest ages           G.H. Pember         H & S 1895         NaN             NaN     494     3       NaN     2008-04-01 00:00:00
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Set float format to two decimal places (currency). Not all rows can become a float. {#Set-float-format-to-two-decimal-places-(currency).-Not-all-rows-can-become-a-float.}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[4\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    pd.options.display.float_format = '{:,.2f}'.format
+
+    def to_number(s): 
+        try:
+            s1 = round(float(s),2)
+            return s1
+        except ValueError:
+            return s
+        
+    df.Price = df.Price.map(lambda f : to_number(f))  
+    df.Value = df.Value.map(lambda f : to_number(f))  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Find and remove blank rows {#Find-and-remove-blank-rows}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[5\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # How many rows are all NaN values
+    df = df.dropna(how='all')              # drop a row only if ALL columns are NaN
+    print('%d row removed ' % (orig_rows - df.shape[0]) ) # 1 row contained all NaN and has been removed
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+    1 row removed 
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### List the number of rows in each column which are empty {#List-the-number-of-rows-in-each-column-which-are-empty}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[6\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    # How many rows in each column are NaN
+    df.isnull().sum().sort_values()
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[6\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    Location       29
+    Title          34
+    Publisher     175
+    Shelf         336
+    Pages         540
+    Author        915
+    Price        3611
+    ISBN?        4770
+    Date         5712
+    Subject      6208
+    Value        9179
+    dtype: int64
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+*Based on these results, title and publisher are the most complete
+columns*
+
+##### Split a column containing two types of data {#Split-a-column-containing-two-types-of-data}
+
+The "Publisher" column contains both the publisher and the year it was
+published. This should be split into two columns.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[7\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    pd.options.mode.chained_assignment = None  # default='warn'
+    df['PubYear'] = df['Publisher'].str.extract('(\d\d\d\d)', expand=True)          # regex is confusing
+    df['Publisher'] = df['Publisher'].str.extract('(((?!\d).)*)', expand=True)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Improve the format of the 'Date' column {#Improve-the-format-of-the-'Date'-column}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[8\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+The data frame is now in the columns I want it to be in, and the top 5
+rows are:
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[9\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df.head()
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[9\]:
+
+</div>
+
+<div
+class="output_html rendered_html output_subarea output_execute_result">
+
+<div>
+
+      Location   Subject               Title                           Author              Publisher     ISBN?           Shelf   Pages   Price   Value   Date         PubYear
+  --- ---------- --------------------- ------------------------------- ------------------- ------------- --------------- ------- ------- ------- ------- ------------ ---------
+  0   HR         Islam                 The Islamic Invasion            R Morey             Harvest HP    0 89081 983 1   17cm    221     3.00    8.00    2008-04-01   1960
+  1   HR         Word lists            New Testament Word Lists        Morrison & Barnes   Erdmans       0 8028 1141 8   NaN     125     3.00    NaN     2008-04-01   1975
+  2   HR         Theology: Salvation   The Triumph of the crucified    E Sauer             Paternoster   NaN             NaN     207     3.00    10.00   2008-04-01   1952
+  3   HR         Early Fathers         Ante-Nicene Christian Library   Ed Menzies          T&T Clark     NaN             NaN     533     9.00    NaN     2010-03-01   1897
+  4   HR         Apologetics           Earth's earliest ages           G.H. Pember         H & S         NaN             NaN     494     3.00    NaN     2008-04-01   1895
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+### Insights {#Insights}
+
+#### Distribution of books by year published {#Distribution-of-books-by-year-published}
+
+The bar chart below shows how many books in the library were published
+in a given decade. The list below shows the 5 oldest books.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[10\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    pd.options.display.float_format = '{:,}'.format
+    df.PubYear = pd.to_numeric(df.PubYear, errors='ignore')
+    fig = df.groupby(df.PubYear // 10 * 10).size().plot(kind='bar', xlim=[1000,2016], logy = False)
+    fig.set_xlabel("Decade of Publication")
+    fig.set_ylabel("Number of Books")
+    fig
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[10\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x112e007b8>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_png output_subarea">
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAFgCAYAAACBh1mpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz%20AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xm4ZHV97/v3BxquRhHBBHYCSqOCgEMMkcYkRLcTas4J%20cL1KHHIckzz3YqKJ3kTIRHM8EfFcozEJPidHVEw0BE2OiiFMkZ1oFAEZtQHbowyS0E44JirD9/5R%20vw1ls7u7uqrWrqpd79fz1NNVv1r1qW8Na/f+7rXWb6WqkCRJkiTBLpMuQJIkSZKmhQ2SJEmSJDU2%20SJIkSZLU2CBJkiRJUmODJEmSJEmNDZIkSZIkNZ02SEnOSLIlyTUr3PfaJHcn2btv7KQkm5Ncl+To%20vvHDk1yT5HNJ3tplzZIkSZLmV9dbkN4FPHPrwST7A88AbuobOxQ4HjgUeDZwepK0u98OvKKqDgYO%20TnKfTEmSJEkaVacNUlV9HLh9hbveAvz2VmPHAmdV1Z1VdSOwGdiQZAHYo6oua8u9Bziuo5IlSZIk%20zbFVPwYpyTHALVV17VZ37Qfc0nf71ja2H/ClvvEvtTFJkiRJGqt1q/lkSe4P/C693eskSZIkaaqs%20aoMEPAJYD1zdji/aH7giyQZ6W4we1rfs/m3sVuChK4yvKEmNuWZJkiRJa0xVZaXx1djFLu1CVX2m%20qhaq6uFVdSC93eV+qqq+DHwY+KUkuyc5EHgkcGlV3QZ8M8mG1lS9GPjQ9p6wqnZ4Ofnkkwdabmcu%20s5I5S7WaOZ+Zs1SrmWZOe66ZZk5z5izVaubaytyerqf5fh/wCXozz92c5GVbLVLc2zxtAs4GNgHn%20AifUvdW/EjgD+BywuarO67JuSZIkSfOp013squqFO7j/4VvdPhU4dYXlPg08drzVSZIkSdIP23Xj%20xo2TrmGsTjnllI2Dvqb169eP/flnJbOrXDPNnPZcM82c5syucs00c5ozu8o108ztOeWUU9i4ceMp%20K92XHe2DN2uS1Fp7TZIkSZLGJwk1wUkaJEmSJGkm2CBJkiRJUmODJEmSJEmNDZIkSZIkNTZIkiRJ%20ktTYIEmSJElSY4MkSZIkSY0NkiRJkiQ1NkiSJEmS1NggSZIkSVJjgyRJkiRJjQ2SJEmSJDU2SJIk%20SZLU2CBJkiRJUmODJEmSJEmNDZIkSZIkNTZIkiRJktTYIEmSJElSY4MkSZIkCYCFhfUk2eFlYWH9%20pEvtTKpq0jWMVZJaa69JkiRJWg1JgEF+lw6z/Dt3EqoqK93nFiRJkiRJamyQJEmSJKmxQZIkSZKk%20xgZJkiRJkhobJEmSJElqbJAkSZIkqbFBkiRJkqTGBkmSJEmSGhskSZIkSWo6bZCSnJFkS5Jr+sbe%20lOS6JFcl+dskD+q776Qkm9v9R/eNH57kmiSfS/LWLmuWJEmSNL+63oL0LuCZW41dADy6qh4PbAZO%20AkhyGHA8cCjwbOD0JGmPeTvwiqo6GDg4ydaZkiRJkjSyThukqvo4cPtWYxdV1d3t5iXA/u36McBZ%20VXVnVd1Ir3nakGQB2KOqLmvLvQc4rsu6JUmSJM2nSR+D9HLg3HZ9P+CWvvtubWP7AV/qG/9SG5Mk%20SZKksZpYg5Tk94A7quqvJ1WDJEmSJPVbN4knTfJS4BeAp/YN3wo8tO/2/m1sW+PbtHHjxnuuLy4u%20sri4OEq5kiRJkmbY0tISS0tLAy2bquq0mCTrgXOq6rHt9rOANwNPqqqv9S13GPBe4Eh6u9BdCBxU%20VZXkEuBVwGXA3wNvq6rztvF81fVrkiRJktai3hxpg/wuHWb5d+4kVFVWuq/TLUhJ3gcsAg9JcjNw%20MvC7wO7AhW2Sukuq6oSq2pTkbGATcAdwQl+n80rg3cD9gHO31RxJkiRJ0ig634K02tyCJEmSJA3H%20LUiTn8VOkiRJkqaGDZIkSZIkNTZIkiRJktTYIEmSJElSY4MkSZIkSY0NkiRJkiQ1NkiSJEmS1Ngg%20SZIkSVJjgyRJkiRJjQ2SJEmSJDU2SJIkSZLU2CBJkiRJUmODJEmSJEmNDZIkSZIkNTZIkiRJktTY%20IEmSJElSY4MkSZIkSY0NkiRJkiQ1NkiSJEmS1NggSZIkSVJjgyRJkiRJjQ2SJEmSJDU2SJIkSZLU%202CBJkiRJUmODJEmSJEmNDZIkSZIkNTZIkiRJUscWFtaTZIeXhYX1ky517qWqJl3DWCWptfaaJEmS%20NNuSAIP8jhom+bvsrNQ5qiRUVVa6zy1IkiRJktTYIEmSJElSY4MkSZIkSU2nDVKSM5JsSXJN39he%20SS5IckOS85Ps2XffSUk2J7kuydF944cnuSbJ55K8tcuaJUmSJM2vrrcgvQt45lZjJwIXVdWjgI8C%20JwEkOQw4HjgUeDZwenpHiQG8HXhFVR0MHJxk60xJkiRJGlmnDVJVfRy4favhY4Ez2/UzgePa9WOA%20s6rqzqq6EdgMbEiyAOxRVZe15d7T9xhJkiRJGptJHIO0T1VtAaiq24B92vh+wC19y93axvYDvtQ3%20/qU2JkmSJEljtW7SBTDYROs7ZePGjfdcX1xcZHFxcdxPIUmSJGlGLC0tsbS0NNCynZ8oNskBwDlV%209bh2+zpgsaq2tN3nLq6qQ5OcCFRVndaWOw84GbhpeZk2/nzgyVX1/2zj+TxRrCRJkqbKrJyAdVbq%20HNWkTxSbdln2YeCl7fpLgA/1jT8/ye5JDgQeCVzadsP7ZpINbdKGF/c9RpIkSZLGptNd7JK8D1gE%20HpLkZnpbhN4IvD/Jy+ltHToeoKo2JTkb2ATcAZzQtynolcC7gfsB51bVeV3WLUmSJGk+db6L3Wpz%20FztJkiRNm1nZdW1W6hzVpHexkyRJkqSZYIMkSZIkSY0NkiRJkiQ1NkiSJEmSOrOwsJ4kA10WFtZP%20ulwnaZAkSZK6NiuTH3RR5+CZO5c7CidpkCRJkqQB2CBJkiRJUmODJEmSJEmNDZIkSZIkNTZIkiRJ%20ktTYIEmSJElSY4MkSZIkSY0NkiRJkiQ1NkiSJEmS1OxUg5RkrySP66oYSZIkSZqkHTZISZaSPCjJ%203sAVwP9M8sfdlyZJkiRJq2uQLUh7VtW3gOcA76mqI4Gnd1uWJEmSJK2+QRqkdUl+HDge+EjH9UiS%20JEkawMLCepLs8LKwsH7Spc6UdQMs81+B84GPV9VlSR4ObO62LEmSJEnbs2XLTUANsFy6L2YNSdX2%2039Qke1fV17caO7CqvthpZUNKUjt6TZIkSdJqSsIgzQyEQX+XXXuZO5c7iiRU1Yqd4yC72J2T5EF9%20YYcB54yrOEmSJEmaFoM0SG+g1yQ9MMlPA+8HfrnbsiRJkiRp9e3wGKSq+vskuwEXAHsA/2dVfa7z%20yiRJkiRplW2zQUryp/zwzoJ7Av8b+PW2z96rui5OkiRJklbT9rYgXb7V7U93WYgkSZIkTdoOZ7ED%20SLI7cHC7eUNV3dFpVSNwFjtJkiRNm7U349zancVuh8cgJVkEzgRuBAI8NMlLquqfx1mkJEmSJE3a%20ICeKfTNwdFXdAJDkYOCvgZ/usjBJkiRJWm2DTPO923JzBNBmsNutu5IkSZIkaTIG2YJ0eZJ3AH/V%20br+I+07gIEmSJEkzb4eTNCT5P4BXAke1oY8Bp1fV9zuubShO0iBJkqRps/YmVFi7kzTszCx2j6L3%20ysYyi12S3wJeAdwNXAu8DHgA8DfAAfQmhTi+qr7Zlj8JeDlwJ/DqqrpgG7k2SJIkSZoqa6+ZmeMG%20aaVZ7ICRZrFL8hPAx4FDquoHSf4GOBc4DPhaVb0pyeuAvarqxCSHAe8FjgD2By4CDlqpE7JBkiRJ%200rRZe83M2m2QBpmkYXkWuydX1ZOAZwJvGUNduwIPSLIOuD9wK3AsvWaM9u9x7foxwFlVdWdV3Qhs%20BjaMoQZJkiRJusdEZrGrqn+l13jdTK8x+mZVXQTsW1Vb2jK3Afu0h+wH3NIXcWsbkyRJkqSxmcgs%20dkkeTG9r0QHAN4H3J3kR9932NtT2tY0bN95zfXFxkcXFxaHqlCRJkjT7lpaWWFpaGmjZicxil+S5%20wDOr6lfb7f8CPBF4KrBYVVuSLAAXV9WhSU4EqqpOa8ufB5xcVZ9aIdtjkCRJkjRV1t7xQmv3GKSB%20ZrEbtyQbgDPoTbrwfeBdwGXAw4CvV9Vp25ik4Uh6u9ZdiJM0SJIkaUasvWZm7TZI2zwGKclBSd6d%205I+T7J/kH5J8J8nVSY4YpaCquhT4AHAlcDW92fH+AjgNeEaSG4CnAW9sy28CzgY20Zvt7gS7IEmS%20JEnjts0tSEk+DrwHeBDwW8BvAucAPw/8t6o6crWK3BluQZIkSdK0WXtbe9buFqTtNUhXVdXj2/XP%20V9UjV7pv2tggSZIkadqsvWZm7TZI25vm++6+69/azn2SJEmStCZsb5rvQ5JcQ+/4oEe067TbD++8%20MkmSJElaZdtrkA5dtSokSZIkaQpss0GqqptWsxBJkiRJmrTtHYMkSZIkSXPFBkmSJEmSmu2dKPYf%2027+nrV45kiRJkjQ525uk4ceT/CxwTJKz6M1ed4+quqLTyiRJkiRplW3vRLHPBV4BHAVcvtXdVVVP%207bi2oXiiWEmSJE2btXdS17V7othtNkh9D/6Dqnp9J5V1wAZJkiRJ02btNTNz3CC1gGOAJ7WbS1X1%20kTHWN1Y2SJIkSZo2a6+ZWbsN0g5nsUtyKvBqYFO7vDrJG8ZboiRJkiRN3iC72F0DPL6q7m63dwWu%20rKrHrUJ9O80tSJIkSZo2a29rzxxvQWoe3Hd9z9FLkiRJkqTpM0iDdCpwZZJ3JzkT+DTwR92WJUmS%20JK2+hYX1JBnosrCwftLlqgODTtLw48AR7ealVXVbp1WNwF3sJEmSNKyudgdbe7vDrd1d7AZqkGaJ%20DZIkSZKGZYNkgzToMUiSJEmStObZIEmSJElSs90GKcmuSa5frWIkSZIkaZK22yBV1V3ADUketkr1%20SJIkSdLErBtgmb2Azya5FPju8mBVHdNZVZIkSZI0AYM0SH/QeRWSJEmSNAV22CBV1T8lOQA4qKou%20SvIjwK7dlyZJkiRJq2uHs9gl+VXgA8D/aEP7AR/ssihJkiRJmoRBpvl+JfBzwLcAqmozsE+XRUmS%20JEnSJAzSIH2/qn6wfCPJOgY/Fa4kSZIkzYxBGqR/SvK7wP2TPAN4P3BOt2VJkiRJ0upL1fY3BiXZ%20BXgFcDQQ4HzgHbWjB05IkmktTZIkSVMuCYPvLBUG/b1z8Nx5zty53FEkoaqy4n2DFJBkd+AQeq/s%20hv5d7qaNDZIkSZKGZYNkgzTILHb/CfjfwNuAPwM+n+TZYyhqzyTvT3Jdks8mOTLJXkkuSHJDkvOT%207Nm3/ElJNrfljx71+SVJkiRpa4PsYnc98J+r6vPt9iOAv6+qQ0Z64uTdwD9V1bvaxA8PAH4X+FpV%20vSnJ64C9qurEJIcB7wWOAPYHLqJ3Xqb7FO8WJEmSJA3LLUhuQRpkkoZvLzdHzReAb49Y0IOAn6+q%20dwFU1Z1V9U3gWODMttiZwHHt+jHAWW25G4HNwIZRapAkSZKkra3b1h1JntOuXp7kXOBseq3f84DL%20RnzeA4GvJnkX8JPA5cBvAvtW1RaAqrotyfL5lvYDPtn3+FvbmCRJkiSNzTYbJOAX+65vAZ7crn8F%20uP8Ynvdw4JVVdXmStwAnct9tb0NtX9u4ceM91xcXF1lcXByuSkmSJEkzb2lpiaWlpYGWHWgWu3FL%20si/wyap6eLt9FL0G6RHAYlVtSbIAXFxVhyY5EaiqOq0tfx5wclV9aoVsj0GSJEnSUDwGyWOQBpnF%207sAkf5zk75J8ePkySkFtN7pbkhzchp4GfBb4MPDSNvYS4EPt+oeB5yfZPcmBwCOBS0epQZIkSZK2%20tr1d7JZ9EDgDOAe4e4zP/SrgvUl2ozfxw8uAXYGzk7wcuAk4HqCqNiU5G9gE3AGc4GYiSZIkSeM2%20yDTfn6qqI1epnpG5i50kSZKG5S527mI3SIP0QuAg4ALg+8vjVXXFOIscFxskSZIkDcsGyQZpkF3s%20Hgv8F+Cp3LuLXbXbkiRJkrRmDNIgPQ94eFX9oOtiJEmSJGmSdjiLHfAZ4MFdFyJJkiRJkzbIFqQH%20A9cnuYwfPgbpmM6qkiRJkqQJGKRBOrnzKiRJkiRpCuxwFrtZ4yx2kiRJGpaz2DmL3Q63ICX5Nve+%20ot2B3YDvVtWDxleiJEmSJE3eDhukqtpj+Xp67d+xwBO7LEqSJEmSJmGQWezuUT0fBJ7ZUT2SJEmS%20NDGD7GL3nL6buwBPAL7XWUWSJEmSNCGDzGL3i33X7wRupLebnSRJkiStKc5iJ0mSJDXOYucsdtvc%20gpTkD7eTWVX1+pErkyRJkqQpsr1d7L67wtgDgFcADwFskCRJkiStKQPtYpdkD+DV9Jqjs4E3V9WX%20O65tKO5iJ0mSpGG5i5272G13koYkewOvAV4EnAkcXlW3j79ESZIkSZq87R2D9N+B5wB/ATy2qr6z%20alVJkiRJ0gRscxe7JHcD36c3tXf/QqE3ScODui9v57mLnSRJkoblLnbuYrfNLUhVtUt3JUmSJEnS%209LEJkiRJkqTGBkmSJEmSGhskSZIkSWpskCRJkiSpsUGSJEnSTFpYWE+SgS4LC+snXa5mxDan+Z5V%20TvMtSZI0H7qYPtppvp3m2y1IkiRJktTYIEmSJKlz7g6nWeEudpIkSercrOwO5y527mLnFiRJkiT9%20ELf2aJ5NtEFKskuSK5J8uN3eK8kFSW5Icn6SPfuWPSnJ5iTXJTl6clVLkiStbVu23ETvL/47vvSW%20ldaOSW9BejWwqe/2icBFVfUo4KPASQBJDgOOBw4Fng2cnt62OkmSJEkam4k1SEn2B34BeEff8LHA%20me36mcBx7foxwFlVdWdV3QhsBjasUqmSJEmS5sQktyC9BfhtfviIrX2ragtAVd0G7NPG9wNu6Vvu%201jYmSZIkSWMzkQYpyX8CtlTVVcD2dpVzOjpJkiRJq2bdhJ7354BjkvwCcH9gjyR/CdyWZN+q2pJk%20AfhyW/5W4KF9j9+/ja1o48aN91xfXFxkcXFxvNVLkiRJmhlLS0ssLS0NtOzEz4OU5MnAa6vqmCRv%20Ar5WVacleR2wV1Wd2CZpeC9wJL1d6y4EDlrphEeeB0mSJGk0s3J+oVnJ3Lncec7cudxRbO88SJPa%20grQtbwTOTvJy4CZ6M9dRVZuSnE1vxrs7gBPsgiRJkiSN28S3II2bW5AkSZJGMytbZmYlc+dy5zlz%2053JHsb0tSJM+D5IkSdJUWlhYT5IdXhYW1k+6VElj5BYkSZKkFXTxl/RZMStbZmYlc+dy5zlz53JH%204RYkSZIkSRqADZIkSZIkNTZIkiRJktTYIEmSJElSY4MkSZIkSY0NkiRJ0gwbdDpypySXBuM035Ik%20SSuYlWm+Z2Wq63nO3Lncec7cudxROM23JEmSJA3ABkmSJEmSGhskSZIkSWpskCRJkiSpsUGSJEmS%20pMYGSZIkSZIaGyRJkiRJamyQJEmSJKmxQZIkSZKkxgZJkiRJkhobJEmSJElqbJAkSZIkqbFBkiRJ%20kqTGBkmSJEmSGhskSZKkVbKwsJ4kO7wsLKyfdKnS3EpVTbqGsUpSa+01SZKk1ZcEGOR3ijDo7x6T%20zRw818zxZu5c7jxn7lzuKJJQVVnpPrcgSZIkSVJjgyRJkmaeu65JGhd3sZMkSTNv7e1q5C52aylz%2053LnOXPnckfhLnaSJEmSNAAbJEmSJElqbJAkSZIkqZlIg5Rk/yQfTfLZJNcmeVUb3yvJBUluSHJ+%20kj37HnNSks1Jrkty9CTqliRJkrS2TWoL0p3Aa6rq0cDPAK9McghwInBRVT0K+ChwEkCSw4DjgUOB%20ZwOnp3e0lyRJkiSNzUQapKq6raquate/A1wH7A8cC5zZFjsTOK5dPwY4q6rurKobgc3AhlUtWpIk%20SdKaN/FjkJKsBx4PXALsW1VboNdEAfu0xfYDbul72K1tTJIkSZLGZqINUpIHAh8AXt22JG096bkn%20NJIkSZK0atZN6omTrKPXHP1lVX2oDW9Jsm9VbUmyAHy5jd8KPLTv4fu3sRVt3LjxnuuLi4ssLi6O%20sXJJkiRJs2RpaYmlpaWBls1qnKl2xSdO3gN8tape0zd2GvD1qjotyeuAvarqxDZJw3uBI+ntWnch%20cFCtUHySlYYlSdIa1pu7aZD//8OgvyesvczBc80cb+bO5c5z5s7ljiIJVbXipG+Tmub754AXAU9N%20cmWSK5I8CzgNeEaSG4CnAW8EqKpNwNnAJuBc4AS7IEmSZtPCwnqS7PCysLB+0qVKmkMT24LUFbcg%20SZI03dbeX71nJXPwXDPdgjSZzJ3LHcXUbUGSJEmSpGlkgyRJkiRJjQ2SJEmSJDU2SJIkSZLU2CBJ%20kiRJUmODJEmSJEmNDZIkSVrRoOcr8pxFktaSdZMuQJIkTactW25i0HOXbNmy4ulEJGnmuAVJkiRJ%20khobJEmSJElqbJAkSZIkqbFBkiRJkqTGBkmSJEmSGhskSZIkSWpskCRJkiSpsUGSJEmSpMYGSZIk%20SZIaGyRJkiRJamyQJElaAxYW1pNkoMvCwvpJlytJU2vdpAuQJEmj27LlJqAGXDbdFiNJM8wtSJIk%20SZJmSpdbzd2CJEmSJGmmdLnV3C1IkiStMo8XkqTpZYMkSdJ2dNHM3PuXzx1festKklaLu9hJkrQd%20Tn4gSfPFLUiSJEmS1NggSZIkSVJjgyRJkiRJjQ2SJEmSJDU2SJIkSZLU2CBJkiRJUjNTDVKSZyW5%20Psnnkrxu0vVIkqaLJ2CVJI1qZhqkJLsAfwY8E3g08IIkhwybt7S0NKbKZi+zq1wzzZz2XDPXfubK%20J2C9eIWxUU/AOlqdq5trppnTnNlVrplmDm9mGiRgA7C5qm6qqjuAs4Bjhw2bxv/YVyuzq1wzzZz2%20XDOnK3OlrT1PecpTOtjSM1qdq5fZVa6ZZk5zZle5Zpo5vFlqkPYDbum7/aU2Jkkza6Um4ZRTThmp%20SZiVzJW39px8n7HRtvRIkrSTqmomLsD/BfxF3+1fBt62wnK1tX33PeC++1Zs47Lvvgfc5/ErMXO8%20mTuTa+Z4Myf92c9zZlW1x9RWl5NXGLvvzzYzR8kcPHf1Mkd7/bOSue1cM/3er93MbeeaOanvaBtj%20pUt690+/JE8ENlbVs9rtE+m9sNO2Wm42XpAkSZKkiamqrDQ+Sw3SrsANwNOAfwMuBV5QVddNtDBJ%20kiRJa8a6SRcwqKq6K8mvAxfQO3bqDJsjSZIkSeM0M1uQJEmSJKlrszSLnSRJkiR1ygZJkiRJkpqZ%20OQZJkiRJ0mxKEmAD957H9Fbg0hrheJ8uMmGOjkGaqQ9lRmo1cz4zZ6lWM80cV+Ys1WqmmePKnKVa%20zZzuzCRHA6cDm1sWwP7AI4ETquqCaci8J3seGqRZ+lBmpVYz5zNzlmo108xxZc5SrWaaOa7MWarV%20zJnIvA54dlXduNX4gcC5VXXoNGTeo7ZxBtm1dAGuA9avMH4gcN20ZM5SrWbOZ+Ys1WqmmePKnKVa%20zTRzXJmzVKuZM5G5GVi3wvjuwOenJXP5Mi/HIK0DvrTC+K3AblOU2VWumWaOK7OrXDPNnObMrnLN%20NHOaM7vKNXM+M98JXJbkLOCWNvZQ4PnAGVOUCczPJA2z9KHMSq1mzmfmLNVqppl+78000++9mVOQ%20WVWnJvkgcCzwM234VuBFVbVpWjKXzcUxSABJDqX3BvYfbPbhUd7ALjJnqVYz5zNzlmo108xxZc5S%20rWaaOa7MWarVzOnPnCVz0yBJkiRJmi5JNlbVxmnKnPsTxSbZOAuZXeWaaea055pp5jRndpVrppnT%20nNlVrpnzmQl8etoy575BYgo/lFXONdPMac8108xpzuwq10wzpzmzq1wz5zCzqs6Ztkx3sZMkSZLU%20qSTPBI7jh49r+lBVnTdNmTBHDdJMfSgzUquZ85k5S7Waaea4MmepVjPNHFfmLNVq5nRnJnkrcDDw%20Hu6dQnx/4MXA5qp69TRk3pM9Dw3SLH0os1KrmfOZOUu1mmnmuDJnqVYzzRxX5izVauZMZH6uqg5e%20YTzA56rqoGnIvEeNcJbZWbm0N2ml8dD7oKcic5ZqNXM+M2epVjPNHFfmLNVqppnjypylWs2cicxr%20gCNWGN8AXDstmcuXeZmk4XtJjlhh/Ajge1OU2VWumWaOK7OrXDPNnObMrnLNNHOaM7vKNXM+M18K%20/FmSTUkuaJfrgLe1+6YlE4B1ozx4hrwUeHuSPbh3U+FDgW8y2ocy7kyAlwGnz0CtZs5nZle5XWS6%20Lpk5j9/7LjJdl+Yzs6vcec6c23Wpqq4AjkyyQN9xTVV125A1dpK5bC6OQVrWyRvYQWZXuWaaOa7M%20rnLNNHOaM7vKNdPMac7sKtfM+ctsxwZt6M8ELq0OmpEkh1TV9UM/fl4apCS7AFTV3Ul2Bx4D3FhV%20Xx9T/gPpHdD2har6xgg5j6uqa8ZR04DPN/QXKMnDgG9V1TeSrAeeAFxXVZ8dY30nVNXpIzx+d+CO%205ZUvyVOAw4HP1mizu3Ty2pM8gd5fae6itw/w0Ct3y+v0e9/3PCN9Tivkjbw+dbUuzdBnPzv/ESW7%20VdUdW439aFV9dci8ef7ej/1nnuvS/K5L7fGdr0+uS6OZhXUpydHA6cBmeusQ9CZ+eCRwQlVdMEqt%20KzzfzVX1sKEDRjmAaVYu9KYp3AL8G3As8CngH+ltNvzFITNP77t+FHAzcDFwC/ALI9R6F70vz+uB%20w1bhvbl5yMedCHwRuB74lfbvGcBngdcMmfmaFS5fXb4+ZObVwF7t+m8DnwB+H7gQOHWKXvuTgcuB%20i4DbgY8A/wIsAQ8dMnPs3/sOP6exr09drEsz9NkfDXwe+AfgHe1yXhs7ehzvxVbPN+zPkae07+NX%20gQuA9X33XTFk5rx/77v4mee6NIfrUntsF78/uS7N57p0Xf/3sm/8QHrN3DCZb9vG5U/pNYzDv6/j%20+HCm/QJcCSy0D+FbwKPa+AHA5UNmXtF3/WLg8Hb94cNm9tX6GOCP2g/gq9uX/z5fqkl+gdqKd3/g%20IcC3gR8mDQ90AAAMp0lEQVRr4w8APjNk5reBvwH+EDi5XW5fvj5k5mf6rl8O3L9dXwdcM0Wv/cq+%20nAOB/9WuPwO4YITMsX7vO/ycxr4+dbQuzcpnPxP/EQGXAY9u159L7xeHJy6/LyO8n/P8ve/iZ57r%200n3H1/y61Peejvv3J9el+VyXNgPrVhjfHfj8CN+lXwNessLlq8O+p1U1N5M0UG2/ybbJ7YY2dtPy%20puMR7Vm9A8Woqi+MmFlV9Rng94DfS7IBeD7w8Vb7zw6R+TLgtcD3V7jvBUPWeVdV/UeSHwD/AXwN%20oKq+29sbYSiPBt5Mb6U+par+PclLquqUYQOBbyV5THtPvwrcr9W7DoaexbGL175rVX2lXb+Z3n8+%20VNWF6Z2PYCgdfe+7+Jz6jWt96mJdmpXPfh33Hljb71ZgtyEzu/g5snu1XUCq6gPpzT70d0leB9SQ%20mfP+ve/iZ57r0n3NxbrU8sa9Prkuzee69E7gsiRn0duyB73d955Pb4vXMC6j1wR+Yus7kmwcMhOY%20n1nsSLJLVd0NvLxvbFd6neswDklyDb054dcn2auqbm8r4rCZtLx7VNWlwKVJXgs8acjMLr5AVyR5%20H70fcP8InJnkPOCpwKZhAqvqZuB5SY4FLkzyliFr6/d/A+9NcjXwZeDyJP8MPBZ4w5CZY3/tra4z%20gI8Cx9DbjE2SHwF2HTKzi+99V59TF+tTF+vSrHz2s/If0R1JFpZ/AauqzyZ5Gr3dOR4xZOa8f++7%20+JnnujSn61Kraazrk+vSveZpXaqqU5N8qOX9TBu+FXhRVQ1b53PZxrTjVXXgkJnAnEzSkN5c7tdW%201fe2Gl8PHFVVfzVE5gFbDf1bVf0gyY8CT6qqvxuy1hdW1fuGeex2MvcGvldV/z7GzHXA8+j9ZeoD%209A5gfSG9vzT8eVV9d8T8BwAbgSOratgfGstZu9Lbj/xg7v1r4Pk1/IGbW7/2I+n91W/o155kN+BX%20gcPobXJ/Z1XdleT+wD5VddMQmWP/3q/wHGP5nFZYn/61qu4YZX3qaF0a+/e+i8++5R5G7z+i/gPL%20Pzzsf0Qd/Rx5OvCVqrp6q/EHA6+sqj8aInOWv/fj+n9k3D/zVmNdmsqfoy13Ltel9vhO16f0JlM4%20Gdeloc3SujRL5qJB0n0l2aeqvjzpOnYkyUOq6mtmSpIkzaYkewIn0Zv4Yx96Dd2XgQ8Bbxym6ewi%20c9k4jr+Zekn2TPLGJNcn+XqSryW5ro09eFoyO6x1760uD6G3SXev9pesYTKf1Xf9wUnOSHJNkvcl%202XfIzDe2v/aQ5AlJvgBckuSmJE8eY+anOsicxjqvSPL7SUbavWI1cs3M7yd5+Bgzn5Dk4iR/leSh%20SS5M8o0klyX5qTFmfrPDzMdPS+Z2cmflPZ3GOo+YkTofmOS/Jvlsy/pKkkuSvHSYvFnKnKVazVwx%208yVjyPzMGL9PZ9ObjGOxqvauqofQm33x9nbftGT21AgzPMzKBTgfeB2w0De20MaGnY1j7Jkd1no3%20vSkg+y93tH+/MGRm/4wx7wD+G72D+H4L+OCQmdf2Xb8YOKJdP5jhZ6GZ58wvAv8fvc3sl7bP5ieG%20/W52mWvm2DMvBZ5NbzeLW4DntvGnAZ80czpyzZyJzA8BL6V3vpbXAH8AHAScCbxhLWfOUq1mzkTm%20DcPct9qZ9zx+lAfPymWWPpSOan0tvfM2PLZv7Isjvqf9DdJVW9131ZCZ19GmgAQu2eq+a80c6TP6%20eXonaLuNXgP2a2P67MeSa+bYM6/su37ztu4zc+3VaubYM6/e6vZl7d9dgOvXcuYs1WrmTGReAPwO%20sG/f2L70NgBcNC2Zy5e52MUOuCnJ76Rv168k+6Y3/eUt23ncamd2kltVb6Z38rA/TPLHSfZgxGk/%20gX2SvCa9mVf2TH5oLslhv1enA+cmeSpwXpI/SfLkJKcAV5k5vKr6WFWdQO8g49O4dwaZqcs1cyyZ%2030tydJLnAZXkOID0dte8y8ypyTVz+jO/m+SolnMM8HWA6s3qNuwcyrOSOUu1mjn9mb9E71xN/5Tk%209iRfpzc73t7A8VOU2TNKdzUrF2Aver9sXE/vQ/46vb/Yn0Y7S/I0ZHaZ25d/DHAJcNuIOSdvdVk+%20odgC8J4RchfpnUDuSuBa4Fx6JwG7z8nFzNxh3lmjfl9WK9fMsWf+JL3ddf8BOAT4E+Ab9E4o+LNm%20TkeumTOR+Th6u+7dDnwcOLiN/xjwqrWcOUu1mjn9me3xhwBPBx641fizpimzquajQdrBG/uyWcgc%20Zy69My4/ZpZev5nTnzlLtZpp5rTnmmnmNGfOUq1mTkcm8CrgBuCDwI3AsX33XTEtmcuXuZ/mO70z%20Fz9s2jO7yjXTzGnPNdPMac7sKtdMM6c5s6tcM9duZpJrgZ+pqu+kdx6tDwB/WVV/kuTKqtrpmSa7%20yFy2btgHzpL0zq684l30Duaaisyucs00c1yZXeWaaeY0Z3aVa6aZ05zZVa6Z85kJ7FJV3wGoqhuT%20LAIfSO8kv8Me19RFJjAnDRK9D/OZ9Pal7BfgE1OU2VWumWaOK7OrXDPNnObMrnLNNHOaM7vKNXM+%20M7ckeXxVXQXQtvr8Z+CdwGOnKBOYnwbpI/QO3rrPbGBJlqYos6tcM80cV2ZXuWaaOc2ZXeWaaeY0%20Z3aVa+Z8Zr4YuLN/oKruBF6c5H9MUSaAxyBJkiRJ0rJ5OQ+SJEmSJO2QDZIkSZIkNTZIkiRJktTY%20IEmS7pHkriRXJPlMkiuTvCbJSNOlDvCc3x5TznOTbEryj1uNH5Dk3/te1+kDZH0xyd4rjJ+c5DXt%20+ilJnjpEnQckeUHf7Z9O8tadzZEkdWNeZrGTJA3mu1V1OECSHwX+GngQsLHD5xzXbEGvAH6lqlaa%20hvbzVXV4kl2BjyY5rqo+OEpNVXXykHUeCLyQ3ntLVX0a+PSQWZKkMXMLkiRpRVX1VeDXgF8HSLJL%20kjcl+VSSq5L86vKySV6X5Jq21ekNbexXklzaxt6f5H5tfH2STyS5Osnr+58zyf/bHnNVkhUbkCQv%20aM91TZJT29gfAEcBZyQ5bTuv6S565/F4ZJInJzmnL/dPk7x4+Saw/JouSfLwFep4V5LntOtHJPmX%20VvclSR7QthT9c5LL2+WJ7aGnAke1LVqv7q8jyV5J/ld7bz6R5DFt/OQkZyS5OMnnk/zGtl6jJGk0%20NkiSpG2qqi8CuyT5MXpbaL5RVUcCG4Bfa03As4BfBI6oqp8C3tQe/rdVtaGNXd8eD/AnwJ9X1U8C%20/7b8XEmeARxUVRuAnwKekOSo/nqS/DjwRmAReDywIckxVfV64HLghVX1uhVeStrjfwR4GnDt8kvc%20zsu/vaoeB/x5q3lFSXYDzgJ+o6oeDzwd+A9gC/D0qnoC8HzgT9tDTgQ+VlWHV9Vy7nIdpwBXtPfm%2094C/7HuqRwHPAI4ETm5bwyRJY2aDJEka1NH0TsB3JfApYG/gIHoNwbuq6vsAVfWNtvxj2xaUa+jt%20UvboNv5z9BoK+OEG4GjgGUmuAK6g1xActFUNRwAXV9XXq+pu4L3Ak/ru39bxUo9ouR8Dzqmq8wd4%20vcs1/jXwxO0s9yjgX6vqCuidzb3Vtjvwjvb63w8cOsBzHkV7T6rqYmDvJA9s9/19Vd1ZVV+j13zt%20O0CeJGkneQySJGmb2q5ld1XVV9pkDb9RVRdutcyztvHwdwPHVNVnkrwEeHIbL+7dYtLf0AQ4tar+%20547K2pnX0Hx++diqPnfyw38ovN9W99c2rg9a028Bt1XV49rWnv8YqNJt+37f9bvx/3BJ6oRbkCRJ%20/e75Rb/tVvd27t017HzghCTr2v0HtV3WLgReluT+bXyvtvwDgdvaLmgv6nuOfwGWZ3HrHz8feHmS%20B7Scn2g19LsUeFKSvVvT8QJgaWdeV5+bgMOS7JbkwfR2vev3S+3f5wOf3E72DcBCkp9udT+w1bYn%209+5C+GJgeZe4bwN7bCPrY8Avt5xF4KtV9Z3tPLckacz865Mkqd/92q5ouwN3AO+pqre0+94BrAeu%20aFuTvgwcV1XnJ/lJ4PIk3wfOBX4f+EN6Dc2X6e2St9wU/CbwviS/A3xo+Ymr6sIkhwCf7MXzbXrN%20wlf6lrktyYnc2xR9pKo+snz3dl7Xfe6rqi8lORv4DPBFerv19S+/V5Krge9xb0N3n8yquiPJLwF/%201prEf6e32+HpwN+2iR/OA77bHncNcHfbVfHdwFV9mRuBd7bn/S69xmqg1yNJGo9U+TNWkiRJksBd%207CRJkiTpHjZIkiRJktTYIEmSJElSY4MkSZIkSY0NkiRJkiQ1NkiSJEmS1NggSZIkSVJjgyRJkiRJ%20zf8PuBAAXK2B8uEAAAAASUVORK5CYII=)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+View the 5 oldest titles:
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[11\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df['PubYear'] = df['PubYear'].fillna(0.0).astype(int)
+    df2 = df[df['PubYear'] != 0.0]
+    df2.sort_values(by='PubYear').head()
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[11\]:
+
+</div>
+
+<div
+class="output_html rendered_html output_subarea output_execute_result">
+
+<div>
+
+         Location   Subject       Title                               Author                    Publisher       ISBN?             Shelf    Pages   Price   Value   Date         PubYear
+  ------ ---------- ------------- ----------------------------------- ------------------------- --------------- ----------------- -------- ------- ------- ------- ------------ ---------
+  4753   Lib        NaN           In Christ's own country             Dom Ernest Graf           Burns Oates     NaN               Sh.4.5   302     Gift    NaN     1999-07-30   1037
+  3043   StM        NaN           The First Epistle of Peter          C.E.B. Cranfield          SCM Press       interesting       Sh.5.5   128     NaN     NaN     NaT          1050
+  4574   Lib        Music Score   Easy-Play Speed Music; waltz clas   NaN                       Sight & Sound   NaN               Sh.4.4   47      99P     NaN     NaT          1076
+  7184   25A        NaN           The Noble Qur'an                    transl Al-Hilali & Khan   Madinah         NaN               Sh.3.6   956     3.0     NaN     2010-12-10   1417
+  3296   Lib        NaN           Chained Bible                       NaN                       Chris Barker    Very incomplete   Sh.1.1   NaN     NaN     NaN     NaT          1585
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Location {#Location}
+
+List the number of books in each location:
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[12\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df3 = df
+    df3["Location"] = df3["Location"].astype(str).map(str.strip).str.upper().str.slice(0,5)
+    df3.groupby(df3.Location).size().sort_values(ascending=False)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[12\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    Location
+    25A      3411
+    LIB      2457
+    CH       1088
+    ST9      1000
+    STM       886
+    HR        305
+    NAN        29
+    ST.M        3
+    HR          2
+    ST M        1
+    SA          1
+    LB          1
+    CH          1
+    :LIB        1
+    dtype: int64
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Subjects {#Subjects}
+
+Create a list of the differnet subjects, order the list by the most
+frequent subjects:
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[13\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df4 = df
+    df4["Subject"] = df4["Subject"].astype(str).map(str.strip).str.upper()
+    df4.groupby(df4.Subject).size().sort_values(ascending=False).head(50)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[13\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    Subject
+    NAN                            6208
+    COMMENTARY                       61
+    LOCAL HISTORY                    58
+    SERMONS                          41
+    THE CENTURY BIBLE                37
+    THEOLOGY                         36
+    CHRISTIAN BIOGRAPHY              34
+    BIOGRAPHY                        31
+    NT COMMENTARY                    31
+    HEBREW GRAMMAR                   30
+    SACRED BOOKS OF THE EAST         30
+    POETRY                           29
+    CLARK'S FOREIGN THEOL LIB        28
+    GENERAL EDIT ANTONIA FRAZER      25
+    NOVEL                            24
+    WRITERS AND THEIR WORK           24
+    CATALOGUE                        22
+    AUTOBIOGRAPHY                    20
+    OT COMMENTARY                    19
+    GREEK                            19
+    THE EXPOSITOR'S BIBLE            18
+    SRIMAD BHAGAVATAM                18
+    THE BABYLONIAN TALMUD            18
+    PHOTOGRAPHS                      17
+    GREAT MUSEUMS OF T WORLD         15
+    CHURCH HISTORY                   14
+    DAILY READINGS                   14
+    CHRISTIAN LECTURES               14
+    NOTES ON THE CATHEDRALS          14
+    INTERNATIONAL CRITICAL COMM      13
+    ARAMAIC                          13
+    THE CLARENDON BIBLE              13
+    FICTION - CADFAEL                13
+    CLARK'S FOREIGN THEOL LIB.       13
+    APOLOGETICS                      12
+    PSALMS                           12
+    THE CAMBRIDGE BIBLE              12
+    PRAYER                           12
+    LIFE LIBRARY OF PHOTOGRAPHY      11
+    COMMENTARY ON HOLY SCRIPT        11
+    THE MASTERPIECE LIBRARY          11
+    COMMENTARY ON THE O.T.           10
+    HYMNS                            10
+    POEMS                            10
+    MYSTICISM                        10
+    DICTIONARY OF THE BIBLE          10
+    EXHIBITION CATALOGUE             10
+    POETICAL WORKS OF TENNYSON       10
+    DICTIONARY                       10
+    HISTORY                          10
+    dtype: int64
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Author {#Author}
+
+Create a list of authors in the library. Order the list by number of
+books.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[14\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df5 = df
+    df5["Author"] = df5["Author"].astype(str).map(str.strip).str.upper() #.str.slice(0,20)
+    df5.groupby(df5.Author).size().sort_values(ascending=False).head(50)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[14\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    Author
+    NAN                     915
+    VARIOUS                  31
+    BHAKTIVEDANTA S PRAB     19
+    C.H. SPURGEON            19
+    ELLIS PETERS             17
+    ED. RABBI I. EPSTEIN     17
+    LESLIE WEATHERHEAD       15
+    ED CARLO RAGGHIANTI      15
+    ALBERT BARNES            14
+    JAMES HASTINGS           13
+    GEORGE ADAM SMITH        13
+    WILLIAM TEMPLE           12
+    JAMES MOFFATT            11
+    ED J A HAMMERTON         11
+    KEIL & DELITZSCH         11
+    WILLIAM BARCLAY          10
+    SHAKESPEARE              10
+    PETER ACKROYD            10
+    IAN WILSON                9
+    CHARLES DICKENS           9
+    BERNHARD WEISS            9
+    J.B. PHILLIPS             9
+    ED QUENNELL & HODGE       8
+    CHARLES GORE              8
+    H.V. MORTON               8
+    M.F. SADLER               8
+    VARIOUS AUTHORS           8
+    ED ANDREW LANG            8
+    GEZA VERMES               8
+    S.R. DRIVER               8
+    EVELYN UNDERHILL          8
+    "                         8
+    HENRY ALFORD              7
+    ALDOUS HUXLEY             7
+    ED JAMES HASTINGS         7
+    ED ARTHUR MEE             7
+    ROY STRONG                7
+    ALEXANDER MACLAREN        7
+    MARCUS DODS               7
+    JOACHIM JEREMIAS          6
+    THOMAS WRIGHT             6
+    ED R. CROMARTY            6
+    SUSAN GLYN                6
+    DAVID FOUNTAIN            6
+    WILLIAM WHISTON           6
+    C.S. LEWIS                6
+    BARRIE TRINDER            6
+    DAVID TRUMPER             6
+    G. CAMPBELL MORGAN        6
+    ALISTER MCGRATH           6
+    dtype: int64
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+##### Distribution of book length by number of pages {#Distribution-of-book-length-by-number-of-pages}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[15\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    def blank_or_number(s): 
+        try:
+            s1 = round(float(s),2)
+            return s1
+        except ValueError:
+            return ''
+        
+        
+    df.Pages = df.Pages.map(lambda f : blank_or_number(f)) 
+    df6 = df.Pages[df.Pages != '']
+
+    plt.xticks(np.arange(0, 2000, 100.0))
+    fig = df6.hist(bins=100, range=[0, 2000])
+    fig.set_xlabel("Number of Pages")
+    fig.set_ylabel("Number of Books")
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[15\]:
+
+</div>
+
+<div class="output_text output_subarea output_execute_result">
+
+    <matplotlib.text.Text at 0x112c68e80>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt">
+
+</div>
+
+<div class="output_png output_subarea">
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0EAAAFHCAYAAABnO0ftAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz%20AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XuUZVV94PHvDxpawUA3cegyohQKijpqq4FkRSMdH6hJ%20BMMYx8dM6Bgzs2KiLs1kbBINkGSFRzQZZxIz4yOEGByCTiLoaHhEO86YkUegAAURH4WE2IUTQAUd%20AvZv/jin5FLUfdSu+9i37vezVq2+5577+PatR/eus/e5kZlIkiRJ0qzYZ9IBkiRJkjRODoIkSZIk%20zRQHQZIkSZJmioMgSZIkSTPFQZAkSZKkmeIgSJIkSdJMGfkgKCIWI+LaiLgmIq5or9saEZdExE0R%20cXFEHNxx+1Mi4uaIuDEijh91nyRJkqTZMo4jQXuBHZn5jMw8tr1uF3BZZj4R+CRwCkBEPBl4BfAk%204CXAuyMixtAoSZIkaUaMYxAUqzzPicC57eVzgZe1l08Azs/M+zNzEbgZOBZJkiRJGpJxDIISuDQi%20royI17XXbcvMJYDM3AMc2l7/aODWjvve1l4nSZIkSUOxaQzP8ezM/HpE/Avgkoi4iWZg1GnltiRJ%20kiSNxMgHQZn59fbPb0TER2imty1FxLbMXIqIOeD29ua3AY/puPth7XUPEhEOmiRJkiT1lZkPOcfA%20SKfDRcQBEfGI9vKBwPHA9cBFwM72ZicDF7aXLwJeGRH7R8QRwJHAFas9dmZW+XHqqadOvGEa22rv%20s80222yzzTbbbLNtutoyux83GfWRoG3AX7VHbjYB52XmJRFxFXBBRLwWuIXmjHBk5g0RcQFwA3Af%208PrsVV+hxcXFSSd0VXMb1N1nWxnbythWxrYytpWxrYxtZWwbvpEOgjLzq8D2Va6/A3hBl/ucAZwx%20yi5JkiRJs2vf0047bdINa3b66aefVmv3li1bmJ+fn3TGqmpug7r7bCtjWxnbythWxrYytpWxrYxt%205U4//XROO+2001deH1M22wxoTowwjd3Tbm5unqWlW7ru37btcPbsWRxfkCRJktRDRJDjPjHCLNq9%20e/ekE7pab1szAMquH70GSOPoGyXbythWxrYytpWxrYxtZWwrY9vwOQiSJEmSNFOcDqeBRQS939c2%20ep6KUJIkSRonp8NJkiRJEg6Chq7meZE1t0HdfbaVsa2MbWVsK2NbGdvK2FbGtuFzECRJkiRpprgm%20SANzTZAkSZKmiWuCJEmSJAkHQUNX87zImtug7j7bythWxrYytpWxrYxtZWwrY9vwOQiSJEmSNFNc%20E6SBuSZIkiRJ08Q1QZIkSZKEg6Chm/S8yLm5eSJi1Y999nlY130Rwdzc/ETbJ/3a9WJbGdvK2FbG%20tjK2lbGtjG1lbBu+TZMO0HAtLd1CtylrzZHA7tPVlpYecqRQkiRJ2nBcE7TB9F63s741Pa4JkiRJ%200jRxTZAkSZIk4SBo6KZ1XmQNan7tbCtjWxnbythWxrYytpWxrYxtw+eaIHXY3E55kyRJkjYu1wRt%20MOtdE7Te/X5eJEmSVAvXBEmSJEkSDoKGblrnRdag5tfOtjK2lbGtjG1lbCtjWxnbytg2fA6CJEmS%20JM0U1wRtMK4JkiRJkhquCZIkSZIkHAQN3bTOi6xBza+dbWVsK2NbGdvK2FbGtjK2lbFt+BwESZIk%20SZoprgnaYFwTJEmSJDVcEyRJkiRJOAgaummdF1mDml8728rYVsa2MraVsa2MbWVsK2Pb8DkIkiRJ%20kjRTXBO0wbgmSJIkSWq4JkiSJEmScBA0dNM6L7IGNb92tpWxrYxtZWwrY1sZ28rYVsa24XMQJEmS%20JGmmuCZog3FNkCRJktRwTZAkSZIk4SBo6KZ1XmQNan7tbCtjWxnbythWxrYytpWxrYxtw+cgSJIk%20SdJMcU3QmM3NzbO0dEvX/du2Hc6ePYvFj++aIEmSJKnRbU2Qg6Ax6z1IgfUOJBwESZIkSQ1PjDAm%200zovsgY1v3a2lbGtjG1lbCtjWxnbythWxrbhcxAkSZIkaaY4HW7MnA4nSZIkjYfT4TaIubl5IqLr%20hyRJkqTeHAQN2ajnRTZnlsseH9Or5jmltpWxrYxtZWwrY1sZ28rYVsa24RvLICgi9omIqyPionZ7%20a0RcEhE3RcTFEXFwx21PiYibI+LGiDh+HH2SJEmSZsdY1gRFxJuBZwEHZeYJEXEW8E+ZeXZEvBXY%20mpm7IuLJwHnAMcBhwGXAUSsXAM3ymqBB7u+aIEmSJGmCa4Ii4jDgJ4H3dVx9InBue/lc4GXt5ROA%208zPz/sxcBG4Gjh11oyRJkqTZMY7pcH8A/BoPPoSwLTOXADJzD3Boe/2jgVs7bndbe93UmNZ5kTWo%20+bWzrYxtZWwrY1sZ28rYVsa2MrYN30gHQRHxU8BSZi7QzKXqxjlUkiRJksZi04gf/9nACRHxk8DD%20gR+IiA8AeyJiW2YuRcQccHt7+9uAx3Tc/7D2uofYuXMn8/PzAGzZsoXt27ezY8cO4IER6SS2d+zY%200ff2sLv9c/Xt9d6/+zZj2T/J13+U27X+/Zavq6Vnrd8Pbq++vayWHr/eNvb2slp6/Hrb2NvLaunx%20621jbS9fXlxcpJexvVlqRBwH/Gp7YoSzaU6McFaXEyP8CM00uEvxxAhrvr8nRpAkSZLqe7PUM4EX%20RsRNwPPbbTLzBuAC4Abg48Drp220s/K3HBpcza+dbWVsK2NbGdvK2FbGtjK2lbFt+EY9He77MvNv%20gb9tL98BvKDL7c4AzhhXlyRJkqTZMrbpcMPkdDinw0mSJEn91DYdTpIkSZImwkHQkE3rvMga1Pza%202VbGtjK2lbGtjG1lbCtjWxnbhs9BkCRJkqSZ4pqgMXNNkCRJkjQergmSJEmSJBwEDd20zousQc2v%20nW1lbCtjWxnbythWxrYytpWxbfgcBEmSJEmaKa4JGjPXBEmSJEnj4ZogSZIkScJB0NBN67zIGtT8%202tlWxrYytpWxrYxtZWwrY1sZ24bPQZAkSZKkmeKaoDFzTZAkSZI0Hq4JkiRJkiQcBA3dtM6LrEHN%20r51tZWwrY1sZ28rYVsa2MraVsW34HARVZzMR0fVjIzvppFd2/XvPzc1POk+SJEkbhGuCxmx9a3rW%20u7/uNUG9XxvXG0mSJGltXBMkSZIkSTgIGrppnRep3mr+vNpWxrYytpWxrYxtZWwrY1uZmtt6cRAk%20SZIkaaa4JmjMXBPU496uCZIkSdIQuSZIkiRJknAQNHTTOi9SvdX8ebWtjG1lbCtjWxnbythWxrYy%20Nbf14iBIkiRJ0kxxTdCYuSaox71dEyRJkqQhck2QJEmSJOEgaOimdV6keqv582pbGdvK2FbGtjK2%20lbGtjG1lam7rxUGQJEmSpJnimqAxc01Qj3u7JkiSJElD5JogSZIkScJB0NBN67xI9Vbz59W2MraV%20sa2MbWVsK2NbGdvK1NzWi4MgSZIkSTPFNUFj5pqgHvd2TZAkSZKGyDVBkiRJkoSDoKGb1nmR6q3m%20z6ttZWwrY1sZ28rYVsa2MraVqbmtFwdBGpu5uXkiouuHJEmSNA6uCSowNzfP0tItq+7btu1w9uxZ%207HrfWV4TtL6/u2uCJEmStDbd1gQ5CCp7fkr/s+4gyEGQJEmSxmMoJ0aIiK0R8bThZUnToeb5rraV%20sa2MbWVsK2NbGdvK2Fam5rZe+g6CImJ3RBwUEYcAVwPvjYjfH32aps9m1/xIkiSpen2nw0XENZn5%20jIh4HfCYzDw1Iq7LzIkdEXI6XL3T4UbZ7nQ4SZIkrcV6psNtiohHAa8APjb0MkmSJEkao0EGQb8F%20XAx8KTOvjIjHATePNkuqS83zXW0rY1sZ28rYVsa2MraVsa1MzW29bBrgNn+TmR9a3sjMr0TEfxhh%20kyRJkiSNzCBrgj4DvCQzv9VuPxm4IDP/5Rj6ujW5Jqhof81rfvrtd02QJEmS1mY9a4J+F/hoRDwi%20Ip4FfAj4N8MOlCRJkqRx6DsIysz/CfwBcAnwp8DPZObCiLukqtQ839W2MraVsa2MbWVsK2NbGdvK%201NzWS9c1QRHxX3jw3KSDgS8Dv9IeVnpjvwePiM3Ap4H92+f6cGaeHhFbgb8ADgcWgVdk5jfb+5wC%20vBa4H3hTZl5S8heTJEmSpNV0XRMUESf3umNmnjvQE0QckJnfiYh9gc8AbwT+FfBPmXl2RLwV2JqZ%20u9r1RucBxwCHAZcBR61cAOSaINcESZIkSf10WxPU9UhQ5yAnIvYHntBu3pSZ9w36xJn5nfbi5vb5%20EjgROK69/lxgN7ALOAE4PzPvBxYj4mbgWODyQZ9PkiRJknrpuyYoInbQvC/QHwHvBr4YEc8d9Aki%20Yp+IuAbYA1yamVcC2zJzCSAz9wCHtjd/NHBrx91va6+TJqrm+a62lbGtjG1lbCtjWxnbythWpua2%20XgZ5n6B3Asdn5k0AEfEE4L8DzxrkCTJzL/CMiDgI+KuIeAoPnfO05nlOO3fuZH5+HoAtW7awfft2%20duzYATzwyRjVdmM3sKPjMt/f7n//B99+fNtsiP2j/vyutr2wsDDW51vL9sLCQlU907K9rJYev942%209vayWnr8etvY28tq6fHrbWNvL6upZ/fu3SwuLtLLIO8TdF1mPq3fdYOIiLcD3wFeB+zIzKWImAM+%20lZlPiohdQGbmWe3t/xo4NTMvX/E4rgkq2l/zmp9++10TJEmSpLVZz/sEXRUR74uIHe3He4GrBnzS%20R0bEwe3lhwMvBG4ELgJ2tjc7GbiwvXwR8MqI2D8ijgCOBK4Y5LkkSZIkaRCDDIJ+CbiB5qxub2wv%20/9KAj/8o4FMRsUBzcoOLM/PjwFnACyPiJuD5wJkAmXkDcEH7HB8HXj/RQz5Sa+Uh35rYVsa2MraV%20sa2MbWVsK2NbmZrbeum7Jigz742IPwQupZmrNPDZ4TLzeuCZq1x/B/CCLvc5AzhjkMfXLNncTiVc%203bZth7Nnz+L4ciRJkjS1BlkTtIPmNNaLNIs2HgOcnJmfHnVcjybXBBXtr3nNT7/9/e/rQUNJkiR1%20WvP7BHVY19nhJEmSJKkmg6wJ2m95AASQmV8E9htdklSfmue72lbGtjK2lbGtjG1lbCtjW5ma23oZ%205EjQVRHxPuDP2+3XMODZ4SRJkiSpNoOsCdoM/DLwnPaq/wW8OzPvHXFbrybXBBXtr3nNT7/9rgmS%20JEnS2nRbE9R3EFQjB0EOglbbP41fy5IkSRqdNb9ZakQcFRF/GhG/HxGHRcQnIuLuiLg2Io4Zba5U%20l5rnu9pWxrYytpWxrYxtZWwrY1uZmtt66XVihHOAvwP+keaNTv8EeCTwH4A/HH2aJEmSJA1f1+lw%20EbGQmdvby1/KzCNX2zcJTodzOtxq+50OJ0mSpE5rng4H7O24/K0e+yRJkiRpavQaBB0dEddFxPUd%20l5e3nzimPqkKNc93ta2MbWVsK2NbGdvK2FbGtjI1t/XS632CnjS2CkmSJEkaE0+RXfb8uCZo3Ptd%20EyRJkqS1KVkTJEmSJEkbjoMgaQA1z3e1rYxtZWwrY1sZ28rYVsa2MjW39dLrzVL/pv3zrPHlSJIk%20SdJo9XqfoBuA1wHvB15Nsyjj+zLz6pHXdeGaINcErbbfNUGSJEnq1G1NUK9B0MuBXwCeA1y1Yndm%205vOGXjmgUQ+C5ubmWVq6pc+tHASNd7+DIEmSJK3Nmk+MkJkfzsyXAGdn5k+s+JjYAGgcmgFQ9vjQ%20rKl5vqttZWwrY1sZ28rYVsa2MraVqbmtl17vEwRAZv52RJwAPLe9andmfmy0WZIkSZI0Gn3fJygi%20zgCOBc5rr3oVcGVm/vqI23o1jXQ63PqmrDkdbjT7nQ4nSZKktVnzmqCOO14HbM/Mve32vsA1mfm0%20kZQOwEGQg6DV9jsIkiRJUqf1vlnqlo7LBw8nSZoeNc93ta2MbWVsK2NbGdvK2FbGtjI1t/XSd00Q%20cAZwTUR8iubX8c8Fdo20SpIkSZJGpO90OICIeBRwTLt5RWbuGWlV/x6nwxW21Tvdrd9+p8NJkiRp%20bYrXBNXIQZCDoNX2T+PXsiRJkkZnvWuCpJlW83xX28rYVsa2MraVsa2MbWVsK1NzWy+DrAnSmuzX%20Hu2RJEmSVKOe0+Ha02F/PjOPHl9Sf7VPh5vmKWX17nc6nCRJktamaDpcZn4PuCkiHjuyMkmSJEka%20o0HWBG0FPh8RfxMRFy1/jDpMqknN811tK2NbGdvK2FbGtjK2lbGtTM1tvQyyJujtI6+QJmxubp6l%20pVu67t+6dRt33DHRM8NLkiRpSAZ9n6DDgaMy87KIOADYNzO/PfK67j2uCdpwbf32j3ZN0CCfc9cc%20SZIkTZfiU2RHxC8CHwb+W3vVo4GPDDdPkiRJksZjkDVBvww8G/gWQGbeDBw6yihJg6t5Lq5tZWwr%20Y1sZ28rYVsa2MrYN3yCDoHsz85+XNyJiE73nDUmSJElStfquCYqIs4G7gJ8D3gC8HrghM39j9Hld%20m1wTtOHa+u13TZAkSZLWptuaoEEGQfsAvwAcT/M/0YuB9410FNKHg6CN2NZvv4MgSZIkrU3xiREy%20cy9wLvDbwOnAuZMcAEmr20xEdP3Yd98De+6fZjXPxbWtjG1lbCtjWxnbythWxrbh6/s+QRHxU8B/%20Bb5M8+v4IyLi32fmJ0YdJw3uXnodydm7d5CjUJIkSZoFg0yH+wLw05n5pXb78cD/zMyjx9DXrcnp%20cBuurd/+ybd5AFSSJGm6FE+HA769PABqfQWY2BulSpIkSdJ6dB0ERcRJEXEScFVEfDwidkbEycBH%20gSvHViipp5rn4tpWxrYytpWxrYxtZWwrY9vw9VoT9NKOy0vAce3lbwAPH1mRJEmSJI1Q3zVBNXJN%200EZs67d/8m3T+L0iSZI0y7qtCRrk7HBH0LxJ6nzn7TPzhGEGSpIkSdI4DHJihI8Ai8B/Ad7Z8SGp%20AjXPxbWtjG1lbCtjWxnbythWxrbh63skCPh/mfmfSx48Ig4D/gzYBuwF3puZ/zkitgJ/ARxOM8B6%20RWZ+s73PKcBrgfuBN2XmJSXPLUmSJEmrGeR9gl4NHAVcQvOOlABk5tV9HzxiDpjLzIWIeATw98CJ%20wM8D/5SZZ0fEW4GtmbkrIp4MnAccAxwGXAYctXIBkGuCNmJbv/2Tb3NNkCRJ0nQpXhMEPBX4t8Dz%20aI7mQPO/xef1u2Nm7gH2tJfvjogbaQY3J/LA2ebOBXYDu4ATgPMz835gMSJuBo4FLh+gU5IkSZL6%20GmRN0M8Cj8vM4zLzJ9qPvgOglSJiHtgOfBbYlplL8P2B0qHtzR4N3Npxt9va6yR1UfNcXNvK2FbG%20tjK2lbGtjG1lbBu+QY4EfQ7YAtxe+iTtVLgP06zxuTsiVs4rWvM8o507dzI/Pw/Ali1b2L59Ozt2%207AAe+GSUbjd2Azs6LtOx3W9/rdu4v3j/vu00yYfaunUbf/mX5w/t62+t2wsLC2N9vo2yvayWns7t%20hYWFqno6t/16K9teVkuPX28be3tZLT1+vW3s7WU19ezevZvFxUV6GWRN0G7gacCVPHhN0ECnyI6I%20TcDHgE9k5rva624EdmTmUrtu6FOZ+aSI2NU8dJ7V3u6vgVMz8/IVj+maoA3X1m9/3W2uF5IkSarP%20etYEnbrO5/4T4IblAVDrImAncBZwMnBhx/XnRcQf0EyDOxK4Yp3PL0mSJEnft0+/G2Tm3672MciD%20R8SzgdcAz4uIayLi6oh4Mc3g54URcRPwfODM9rluAC4AbgA+Drx+pId8pA1g5eHomthWxrYytpWx%20rYxtZWwrY9vw9T0SFBHf5oF5QPsD+wH3ZOZB/e6bmZ8B9u2y+wVd7nMGcEa/x5YkSZKkEn3XBD3o%20xs1imROBH83MXSOr6t/hmqAN19Zvf91tHrCUJEmqT7c1QX2nw3XKxkeAFw2tTJIkSZLGqO8gKCJO%206vh4eUScCfy/MbRJGkDNc3FtK2NbGdvK2FbGtjK2lbFt+AY5O9xLOy7fDyzSTImTJEmSpKmzpjVB%20tXBN0EZs67e/7rZp/D6SJEna6Nb8PkER8Zs9Hi8z87eHUjYCc3PzLC3d0nX/tm2Hs2fP4viCJEmS%20JFWj15qge1b5APgF4K0j7lqXZgCUXT96DZCkYZubmyciun7Mzc2v6/FrnotrWxnbythWxrYytpWx%20rYxtw9f1SFBmvnP5ckT8APAm4OeB84F3drvfdNjcTnmTRu+BQXm3/X4tSpIkjVPPNUERcQjwFuA1%20wLnAuzLzzjG1ddVvTdD61vSsd3/da1fqbeu3v+629X49uqZIkiRp+ErWBP0ecBLwHuCpmXn3CPsk%20SZIkaSx6rQn6VeCHgLcB/xgR32o/vh0R3xpPnqR+ap6La1sZ28rYVsa2MraVsa2MbcPXa01Q3zdS%20lSRJkqRpsyHfJ8g1QdPY1m9/3W2uCZIkSapPtzVBHu2RJEmSNFMcBElTrua5uLaVsa2MbWVsK2Nb%20GdvK2DZ8DoIkSZIkzRTXBA19f91rV+pt67e/7jbXBEmSJNVnze8TJGlQm9uBjiRJkqaB0+GkdbuX%205khPt4/Rqnkurm1lbCtjWxnbythWxrYytg2fgyBJkiRJM8U1QUPfX/falXrb+u3f2G3T+H0oSZJU%20O98nSJIkSZJwECRNvZrn4tpWxrYytpWxrYxtZWwrY9vwOQiSJEmSNFNcEzT0/Rt77Yrto3nsafw+%20lCRJqp1rgiRJkiQJB0HS1Kt5Lq5tZWwrY1sZ28rYVsa2MrYNn4MgSZIkSTPFNUFD37+x167YPprH%20nsbvQ0mSpNq5JkiSJEmScBAkTb2a5+LaVsa2MraVsa2MbWVsK2Pb8DkIkiRJkjRTXBM09P0be+2K%207aN47IcB93bdu23b4ezZs9jj/pIkSVpNtzVBmyYRI6nTvfQaJC0tPeT7VpIkSevgdDhpytU8F9e2%20MraVsa2MbWVsK2NbGduGz0GQNOVOOumVRMSqH3Nz85POkyRJqo5rgoa+fyOvXbF9Us9d/vXuexBJ%20kqTZ5fsESZIkSRIOgqQpsLnrdLfmKFC9ap4nbFsZ28rYVsa2MraVsa1MzW29eHY4qXq9zx7XTKeT%20JEnSoFwTNPT9s712ZTbb626bxu9xSZKkYXBNkCRJkiThIEjSCNU8T9i2MraVsa2MbWVsK2NbmZrb%20enEQJEmSJGmmuCZo6PvrXh9Sb1u//baVtk3j97gkSdIwuCZIkiRJkhjxICgi3h8RSxFxXcd1WyPi%20koi4KSIujoiDO/adEhE3R8SNEXH8KNskjV7N84RtK2NbGdvK2FbGtjK2lam5rZdRHwk6B3jRiut2%20AZdl5hOBTwKnAETEk4FXAE8CXgK8O2p/J0hJkiRJU2fka4Ii4nDgo5n5tHb7C8BxmbkUEXPA7sw8%20OiJ2AZmZZ7W3+wRwWmZevspjuiZow7X1229baZtrgiRJ0qyqaU3QoZm5BJCZe4BD2+sfDdzacbvb%202uskSZIkaWhqODGCv6aWNqia5wnbVsa2MraVsa2MbWVsK1NzWy+bJvCcSxGxrWM63O3t9bcBj+m4%203WHtdavauXMn8/PzAGzZsoXt27ezY8eOjlvsBnZ0XKZje9T7a93G/SPZv3zdytvXsX/5h9Py94fb%20zfayWno6txcWFqrq6dxeWFioqmdatpfV0uPX28beXlZLj19vG3t7WU09u3fvZnFxkV7GsSZonmZN%200FPb7bOAOzLzrIh4K7A1M3e1J0Y4D/gRmmlwlwJHrbb4xzVBG7Gt337bSttcEyRJkmZVtzVBIz0S%20FBEfBHYAPxgRXwNOBc4EPhQRrwVuoTkjHJl5Q0RcANwA3Ae8vudIR5IkSZIK7DPKB8/MV2fmD2Xm%205sx8bGaek5l3ZuYLMvOJmXl8Zt7VcfszMvPIzHxSZl4yyjZJo7fyUHlNbCtjWxnbythWxrYytpWp%20ua2XkQ6CJEmSJKk2I18TNAquCdqIbf3221baNo3f45IkScNQ0/sESZIkSdLEOAiSNrTNRETXj7m5%20+ZE+e83zhG0rY1sZ28rYVsa2MraVqbmtl0m8T5CksbmXXlPplpYecnRYkiRpw3NN0ND3170+pN62%20fvttG1XbNP4MkCRJGoRrgiRJkiQJB0GSRqjmecK2lbGtjG1lbCtjWxnbytTc1ouDIEldzc3NT/TE%20CpIkSaPgmqCh75/u9SH17rdtNG0Pozl5Qi+uKZIkSdOp25ogzw4nzbTeZ49rBlGSJEkbi9PhJI1M%20zfOEbStjWxnbythWxrYytpWpua0XB0GSJEmSZoprgoa+f5rXh9S837Za26bxZ4gkSZoNvk+QpKp4%205jlJkjQpDoIkjUyvecJLS7fQHGVa/aPZP5m2SbOtjG1lbCtjWxnbytg2fA6CJEmSJM2UqV0TdO21%2013bd//SnP52NvAZjY7b1229brW2lP0MGWbs3jT+fJElSPbqtCZraQdBBBz111X333Xcn3/3uP7CR%20/9O5Mdv67bet1jYHQZIkqVYb7sQI3/rWdat+fPe7vzvpNEmtmucJ21bGtjK2lbGtjG1lbCtTc1sv%20UzsIkiRJkqQSUzsdrvs0mg8AP8dGnn60Mdv67bet1janw0mSpFptuOlwkiRJklTCQZCkkTnkkLmu%20b4Y6aTXPYbatjG1lbCtjWxnbytg2fJsmHSBp47rzziV6T9WTJEkaP9cEDX3/bK8Pmc322W7r9TOk%2097of1wRJkqTRck2QJEmSJOEgSFK1NnddTxQRzM3Nr+vRa57DbFsZ28rYVsa2MraVsW34HARJWofe%20A5X1uZdmutzqH0tLt6zr0U866ZUjHWRJkqR6uSZo6Ptne33IbLbbNqm29fz88n2KJEna+FwTJEmS%20JEk4CJKk6tQ8v9q2MraVsa2MbWVsK1NzWy8OgiRNqdGeOEGSJG1crgka+v6NvQbD9tqe27Ze+8vf%20w6j//XuZm5vveeKGbdsOZ8+exaLHliRJg3NNkCStSfcjTf2OMjUDoNGd2U6SJK2PgyBJWlX3U3SP%20ehBT8/xq28rYVsa2MraVsa1MzW29bJp0gCSNxuYhvFfRJB5bkiSNmmuChr5/ttdgzGa7bRuvrd/+%20yb7HUa+0iI2AAAAPg0lEQVQ1R643kiTpAd3WBHkkSJKmzANrjlbb5xEqSZL6cU2QJFWm5vnVtpWx%20rYxtZWwrY1uZmtt6cRAkSZIkaaa4Jmjo+zf2Ogbba3tu2yazf72P/TCas8+trt+6nt7vcdT7sffZ%205wD27v1O8XP343olSVJNfJ8gSapG99NvN6fg3tP1PYr6n5Wu92M3A6DRvYdRr/dI6vfYc3PzPf/e%20/d6fSZKkQTkIkqTq9B7ITNIo536v901ma56XblsZ28rYVsa2MjW39eLZ4SRJU6L3+zNt3bqNO+7Y%20M8YeSdK0ck3Q0Pdv5HUMttf33LZNZv/GblvPvwu91yv1fuze923uP8p21zNJ0sbjmiBJ0rr1W7dT%20s37t61nPJEmaLlUOgiLixRHxhYj4YkS8ddI9kqRGv3U7vW0e8QBqv+JBznrb+520oeY587aVsa2M%20bWVsG77qBkERsQ/wh8CLgKcAr4qIoydbJUlav1Gf8OG+ET5+vzP69T5StLCwsK5n73UUa71nzXvp%20S0+q9qx8633dRsm2MraVsW34qhsEAccCN2fmLZl5H3A+cOKEmyRJ6qH3kaK3ve20nvde31S93qdU%207zeIufvuO7s+9nqnAq73tOd33XVX8XOPmm1lbCtj2/DVOAh6NHBrx/Y/tNdJkkZu1FPWNqreR4ru%20uefuEU7VG+X7TkG/r4l99z2w+O/Vb4D1jnf8p3UNovoNwnq1+75U0sZW4yBoIAcd9NJVPx7+8N+f%20dJokTbF636Noun2Pyb2u6/2crucNePvpPcC6555v9nzufgO8foOwXu39BmiLi4sD/P3KrWcKZL+2%20Ub4xcb/HPv3035no9MtefWed9Y51/d1G2b7er7dRtp911juq/Zz2+kVPdafIjogfBU7LzBe327uA%20zMyzOm5TV7QkSZKkKq12iuwaB0H7AjcBzwe+DlwBvCozb5xomCRJkqQNYdOkA1bKzO9FxK8Al9BM%2013u/AyBJkiRJw1LdkSBJkiRJGqWpOzFCTPiNVCPi/RGxFBHXdVy3NSIuiYibIuLiiDi4Y98pEXFz%20RNwYEcePuO2wiPhkRHw+Iq6PiDfW0hcRmyPi8oi4pm07tZa29rn2iYirI+Kimrra51uMiGvb1+6K%20mvoi4uCI+FD7XJ+PiB+poS0intC+Xle3f34zIt5YQ1v7XG+OiM9FxHURcV5E7F9R25va79GJ/wwZ%201s/biHhm+1p/MSL+0wjbXt5+Xr8XEc9ccftJt53dPvdCRPyPiDioorbf6vgZ99cRMTeJtm59Hft+%20NSL2RsQhk+jr8tqdGhH/0P6suzoiXlxLW3v9G9rnvz4izqylLSLO73jNvhoRV1fU9vSI+D/t98MV%20EfHDFbU9LSL+rv1+vTAiHjGJtqHJzKn5oBm0fQk4HNgPWACOHnPDc4DtwHUd150F/Mf28luBM9vL%20TwauoZl2ON+2xwjb5oDt7eVH0KytOrqivgPaP/cFPkvznlC1tL0Z+HPgopo+p+1zfgXYuuK6KvqA%20PwV+vr28CTi4lraOxn2AfwQeU0Mb8EPt53T/dvsvgJMraXsKcB2wuf0+vQR4/KTaGNLPW+By4Jj2%208seBF42o7YnAUcAngWd2XP+kCtpeAOzTXj4TOKOi1+0RHZffAPzxJNq69bXXHwb8NfBV4JCKPq+n%20Am9Z5bY1tO2g+Rmyqd1+ZC1tK/a/A3hbLW3AxcDx7eWXAJ+axPdDl7YrgOe0l3cCvzWJtmF9TNuR%20oIm/kWpm/m/gzhVXnwic214+F3hZe/kE4PzMvD8zF4Gbaf4Oo2rbk5kL7eW7gRtpfnDX0ved9uJm%20mm+UrKEtIg4DfhJ4X8fVE+/qTOShR20n3tf+JvnHM/McgPY5v1lD2wovAL6cmbdW1LYvcGBEbAIe%20DtxWSduTgMsz897M/B7waeCktmHsbcP4edseVfiBzLyyvd2fddxnqG2ZeVNm3kzzPbuyedJtl2Xm%203nbzszT/NkAdr9vdHZsHAsudY23r1tf6A+DXVlw38c9ra7VzANfQ9ks0v6S4v73N/62ordMrgA9W%201LaX5heKAFto/n2ACr5XgaPa6wEuA/7VJNqGZdoGQbW+keqhmbkEzUAEOLS9fmXvbYypNyLmaUbw%20nwW21dAXzZSza4A9wKXtN0UNbcv/uHUukKuha1kCl0bElRHxuor6jgD+b0Sc004peE9EHFBJW6d/%20zQP/wE28LTP/EXgn8LX2eb6ZmZfV0AZ8DvjxaKacHUDzy4HHVNK2bK0/bx9N82/Fskn8u1Fb22tp%20fiNbTVtE/E5EfA14NfCblbWdANyamdev2FVFH/Ar0UxzfF88MD20hrYnAM+NiM9GxKci4lkVtQEQ%20ET8O7MnMr1TU9mbgHe33w9nAKRW1fb79foBm8Lj8y5Qa2tZs2gZB02KiZ5to52h+GHhT+xu2lT0T%206cvMvZn5DJpvmmMj4imrtIy1LSJ+Clhqj6D1euv0SX5On52Zz6T5D+kvtz+0a/icbgKeCfxR23cP%20sGuVlom9dhGxH81vqD7UpWXsbRGxhea3jYfTTI07MCJeU0NbZn6BZrrZpTT/Sb6G5l0+H3LTcXb1%20UVNL9SLiN4D7MvO/T7qlU2a+LTMfC5xHMyWuChHxcODXaaad1ejdwOMyczvNLxjfOeGeTptopnL/%20KPAfeeDncE1eBVT1vUBzBO1N7ffDm4E/mXBPp9fS/D/kSpqjtv884Z51mbZB0G3AYzu2D+OBw4ST%20tBQR2wDaQ3+3t9ffRvNb1GUj722n13wY+EBmXlhbH0BmfgvYDby4grZnAydExFdofhA+LyI+AOyp%205TXLzK+3f34D+AjNdKNJv27Q/Ebn1sy8qt3+HzSDohralr0E+PuOaRg1tL0A+Epm3tFOOfsr4Mcq%20aSMzz8nMH87MHcBdNGsLq2hrrbVlIj/nVqiiLSJ20vwy5dW1tXX4IM0UzFraHk+zxuHaiPhq+1xX%20R8ShdP8/ydj6MvMbmbn8i4D38sB01Bpeu1uBv2w7rwS+FxE/SAWvG3z/fSlPolmXuayG1+3kzPwI%20QGZ+GDimlrbM/GJmvigzj6FZkvLlWtpKTNsg6ErgyIg4PCL2B14JXDSBjuDBRw0uolkgBs0C5ws7%20rn9lNGd+OgI4kmZR2Sj9CXBDZr6rpr6IeOTyYfr2N2svpFmzNNG2zPz1zHxsZj6O5uvpk5n5b4GP%20TrJrWUQcsHz2lYg4EDgeuJ4KPqftlKRbI+IJ7VXPBz5fQ1uHlb/lq6Hta8CPRsTDIiJoXrcbKmkj%20Iv5F++djgZ+h+U/pJNvW9fO2nTL3zYg4tn29f67jPsNuW7mvs3mibdGcNezXgBMy897K2o7s2Pcy%204AsTbHtQX2Z+LjPnMvNxmXkEzS9/npGZt7d9/3rCr91cx76TaKa0QgWfV5pf2j2v7XwCzclg/okK%20XrfWC4Eb2ynKy2p43W6LiOMAIuL5NOtrqmjr+PdhH+BtwH+dYNv6ZQVnZ1jLB83Rg5tovih2TeD5%20P0hzpql7af4z8/PAVpoFYjfRnAllS8ftT6E5S8aNtGf7GGHbs2mmrizQTGO5un29Dpl0H/DUtmeB%205uxTv9FeP/G2juc7jgfODldFF826m+XP5/XLX/MV9T2d5pcTCzS/8Tu4orYDgG/QLMpcvq6WtlPb%2057mOZnH/fhW1fZrmP1LXADsm+boxpJ+3wLPa75+bgXeNsO1lNL/9/i7wdeATFbXdDNxC83P4auDd%20FbV9uH2eBZr/ID1qEm3d+lbs/wrt2eEqee3+jObnyALNoGNbRW2bgA+0z3UVcFwtbe315wD/bpXb%20T/p1+7H29boG+D80g+5a2t5I87P3C8DvTup1G9aHb5YqSZIkaaZM23Q4SZIkSVoXB0GSJEmSZoqD%20IEmSJEkzxUGQJEmSpJniIEiSJEnSTHEQJEmSJGmmOAiSJPUUEXsj4vc6tn81In5zSI99TkScNIzH%206vM8L4+IGyLib1Zcf3hEfCciro6Iz0XEu0fdIkmaPAdBkqR+7gVOiohDJh3SKSL2XcPNfwF4XWY+%20f5V9X8rMZ9K8+e9TIuJlQwmUJFXLQZAkqZ/7gfcAb1m5Y+WRnIj4dvvncRGxOyI+EhFfiogzIuLV%20EXF5RFwbEUd0PMwLI+LKiPhCRPxUe/99IuLs9vYLEfGLHY/76Yi4EPj8Kj2viojr2o8z2uveDjwH%20eH9EnNXtL5mZ3wP+DjgyIg6MiMsi4qq294SO53h72/rpiPhgRLylvf5xEfGJ9u/ytxHxhPb6n42I%206yPimojYPeBrLkkaoU2TDpAkVS+BPwKu7zWI6LjtsqcBRwN3AV8B3puZPxIRbwTewAODqsMz85iI%20OBL4VEQ8HjgZuKu9/f7AZyLikvb2zwCekplf63ziiHgUcGa7/y7g0og4ITN/OyKeB7wlM69ZpTna%20+x8APB94O/Bd4GWZeXdE/CDwWeCiiDgG+BngqcBm4GrgqvZx3gP8+8z8ckQcC/xxx+Mdn5lfj4iD%20+rx+kqQxcBAkSeqrHQycC7yJZoAwiCsz83aAiPgysDyIuR7Y0XG7C9rn+FJ7u6OB44GnRsTPtrc5%20CDgKuA+4YuUAqHUM8KnMvKN9zvOA5wIXtfujS+fjI+JqmgHcRzLz4ojYBJwREc8F9gI/FBGHAj8G%20XJiZ9wH3RcRH2+c6sN33oYhYfp792j8/A5wbERcAf9n95ZIkjYuDIEnSoN5Fc+TjnI7r7qedWt3+%2053//jn33dlze27G9lwf/+9N59Cja7QDekJmXdgZExHHAPT0auw10elleE9TpNcAjgWdk5t6I+Crw%20sB6PsQ9w5yqPQ2b+UnsE6aeBv4+IZ2bmnQWdkqQhcU2QJKmfAGj/434BzUkGli0CP9xePpEHjn6s%20xc9G4/HAEcBNwMXA69sjMkTEUe10tV6uAJ4bEYe0J014FbB7gOdfbeB0MHB7OwD6CeCx7fWfAV4a%20EZsj4hE0Axsy89vAVyPi5d9/0IintX8+LjOvzMxTgduBxwzQJEkaIY8ESZL66TxS807glzuuey9w%20YURcQzNw6XaUJrtcD/A1mgHMD9CsqfnniHgfMA9c3R5huh3oeda2zNwTEbt4YODzscz82ADPv9q+%2084CPRsS1NGt+vtA+x1URcRFwLbAEXAd8s73PvwH+OCLeRvPv6/nt/t+LiKPa21yWmdf1+ntIkkYv%20Mnv9uyBJkjpFxIGZeU9EPBz4NPCLmbkw6S5J0uA8EiRJ0tq8JyKeTHN2uD91ACRJ08cjQZIkSZJm%20iidGkCRJkjRTHARJkiRJmikOgiRJkiTNFAdBkiRJkmaKgyBJkiRJM8VBkCRJkqSZ8v8B1XM0lO4w%20qxoAAAAASUVORK5CYII=)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+### Query an ISBN database to find missing data {#Query-an-ISBN-database-to-find-missing-data}
+
+Lastly, I thought it would be a fun challenge to fill in gaps in the
+data. The table below shows rows with ISBN number but missing either
+Author, Title or Publisher.
+
+It turns out that there are only 10 rows that meet this criteria, and in
+all cases it is the publisher that is missing.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[16\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df7 = df[(df['ISBN?'].notnull()) & ((df['Author'] == '') | (df['Title'] == '') | (df['Publisher'] == ''))]
+    df7
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[16\]:
+
+</div>
+
+<div
+class="output_html rendered_html output_subarea output_execute_result">
+
+<div>
+
+         Location   Subject                     Title                                    Author           Publisher   ISBN?               Shelf     Pages   Price    Value   Date         PubYear
+  ------ ---------- --------------------------- ---------------------------------------- ---------------- ----------- ------------------- --------- ------- -------- ------- ------------ ---------
+  1430   ST9        BIOGRAPHY OF SCIENTIST      Longitude (John Harrison)                DAVA SOBEL                   1 85702 571 7       Sh.1.2    184.0   5.99     NaN     NaT          1998
+  2707   STM        DEVOTIONAL!                 Romans: Momentous News                   DAVID COOK                   978 1 906173241     Sh.3.4    55.0    1.0      NaN     2011-07-28   2011
+  3874   LIB        NAN                         Annie's Box - Darwin's daughter          RANDAL KEYNES                1 84115 060 6       Sh.2.4    331.0   3.99     NaN     2002-07-20   2001
+  4705   LIB        HISTORICAL NOVEL            Galileo's Daughter                       DAVA SOBEL                   1 85702 861 9       Sh.4.5    429.0   NaN      NaN     2002-09-27   1999
+  5949   25A        NAN                         Short Life Long Times of Mrs Beeton      KATHRYN HUGHES               1 84115 373 7       Sh.1.4    525.0   £2.50P   NaN     2012-02-09   2005
+  6008   25A        NAN                         Signs in the Sky (Birth of a New Age     ADRIAN GILBERT               0 609 80793 5       Sh.1.5    329.0   4.0      NaN     2012-03-07   2001
+  6097   25A        NAN                         Isaac Newton, the last Sorcerer          MICHAEL WHITE                1 85702 706 X       Sh.1.6    403.0   £1.50P   NaN     2012-02-09   1997
+  6663   25A        NAN                         Live Wires - powerful stories of cha     D. J. CARSWELL               978 1 906173 13 5   Sh.2.7    124.0   1.0      NaN     2011-06-29   2010
+  8640   25A        KING ARTHUR QUINCENTENARY   One in Specyal                           ED SIDNEY HART               0 948485 00 0       Sh.5.9    145.0   £2.49P   NaN     2003-06-28   1985
+  8845   25A        NAN                         The Order of St John - a short history   E L EDMONDS                  0 947718 07 9       Sh.5.7b   35.0    £3.75P   NaN     NaT          1986
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[17\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    from isbnlib import *
+    from isbnlib.config import * 
+    from isbnlib.registry import * 
+    import bibtexparser
+
+    def has_isbn(isbn):
+        SERVICE = 'isbndb'
+        APIKEY = 'IZXL3ESD'  # YOUR key
+        add_apikey(SERVICE, APIKEY) # register your key
+        bibtex = bibformatters['bibtex']
+        isbn = clean(isbn)
+        try:
+            a = bibtex(meta(EAN13(isbn), SERVICE))
+            return a
+        except:
+            return 'isbn is invalid'
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[18\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    def get_pub(isbn):
+        bibtex_str = has_isbn(isbn)
+        try:
+            bib_db = bibtexparser.loads(bibtex_str)
+            dic = bib_db.entries[0]
+            return dic['publisher']
+        except:
+            return
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[19\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df7['ISBN?'] = df7['ISBN?'].astype(str)
+    df7.Publisher = df7['ISBN?'].map(lambda f : get_pub(f))
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+The table below shows the results of the isbnlib query. I thought it odd
+that all the 'missing' publishers names began with a number. It turns
+out that the regex method I used to split publisher name and year of
+publication into separate columns doesnt work when there are numbers in
+the publishers name. Rather than go back and correct this, I'll leave
+the script as it is to show how to use the isbnlib library.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">
+
+In \[20\]:
+
+</div>
+
+<div class="inner_cell">
+
+<div class="input_area">
+
+<div class="highlight hl-ipython3">
+
+    df7
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="output_wrapper">
+
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">
+
+Out\[20\]:
+
+</div>
+
+<div
+class="output_html rendered_html output_subarea output_execute_result">
+
+<div>
+
+         Location   Subject                     Title                                    Author           Publisher             ISBN?               Shelf     Pages   Price    Value   Date         PubYear
+  ------ ---------- --------------------------- ---------------------------------------- ---------------- --------------------- ------------------- --------- ------- -------- ------- ------------ ---------
+  1430   ST9        BIOGRAPHY OF SCIENTIST      Longitude (John Harrison)                DAVA SOBEL       Fourth Estate         1 85702 571 7       Sh.1.2    184.0   5.99     NaN     NaT          1998
+  2707   STM        DEVOTIONAL!                 Romans: Momentous News                   DAVID COOK       10Publishing          978 1 906173241     Sh.3.4    55.0    1.0      NaN     2011-07-28   2011
+  3874   LIB        NAN                         Annie's Box - Darwin's daughter          RANDAL KEYNES    4th Estate            1 84115 060 6       Sh.2.4    331.0   3.99     NaN     2002-07-20   2001
+  4705   LIB        HISTORICAL NOVEL            Galileo's Daughter                       DAVA SOBEL       Fourth Estate         1 85702 861 9       Sh.4.5    429.0   NaN      NaN     2002-09-27   1999
+  5949   25A        NAN                         Short Life Long Times of Mrs Beeton      KATHRYN HUGHES   None                  1 84115 373 7       Sh.1.4    525.0   £2.50P   NaN     2012-02-09   2005
+  6008   25A        NAN                         Signs in the Sky (Birth of a New Age     ADRIAN GILBERT   Three Rivers Press    0 609 80793 5       Sh.1.5    329.0   4.0      NaN     2012-03-07   2001
+  6097   25A        NAN                         Isaac Newton, the last Sorcerer          MICHAEL WHITE    Fourth Estate         1 85702 706 X       Sh.1.6    403.0   £1.50P   NaN     2012-02-09   1997
+  6663   25A        NAN                         Live Wires - powerful stories of cha     D. J. CARSWELL   None                  978 1 906173 13 5   Sh.2.7    124.0   1.0      NaN     2011-06-29   2010
+  8640   25A        KING ARTHUR QUINCENTENARY   One in Specyal                           ED SIDNEY HART   Three Golden Crowns   0 948485 00 0       Sh.5.9    145.0   £2.49P   NaN     2003-06-28   1985
+  8845   25A        NAN                         The Order of St John - a short history   E L EDMONDS      s.n                   0 947718 07 9       Sh.5.7b   35.0    £3.75P   NaN     NaT          1986
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
