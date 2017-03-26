@@ -15,6 +15,7 @@
         <link href="/theme/css/fonts.css" rel="stylesheet">
         <link href="/theme/css/nest.css" rel="stylesheet">
         <link href="/theme/css/pygment.css" rel="stylesheet">
+        <link href="/theme/css/lightbox.min.css" rel="stylesheet">
         <!-- /Stylesheets -->
 
         <!-- RSS Feeds -->
@@ -51,25 +52,6 @@
             <!-- /Static navbar -->
 
             <!-- Header -->
-    <!-- Header -->
-    <!--
-    <div class="container header-wrapper">
-        <div class="row">
-              <div class="col-lg-12">   
-                  <div class="header-content">
-                     <h1 class="header-title">Spare time</h1>
-                      <p class="header-date">By <a href="/author/john-mathews.html">John Mathews</a>, Aug 13 2016, in category <a href="/category/other.html">Other</a></p>
-                      <div class="header-underline"></div>
-                      <div class="clearfix"></div>
-                      <p class="pull-right header-tags">
-                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
-<a href="/tag/habits.html">Habits</a>                      </p>
-                  </div> 
-              </div>
-        </div>
-    </div>
-    -->
-    <!-- /Header -->
             <!-- /Header -->
 
         </div>
@@ -220,7 +202,9 @@ essential for exploring these. But for now, I'll prioritise point 3.</p>
     Identity I've wanted to learn Krav Maga, and <a href="https://youtu.be/LybrzdG96_8">Georges
     St-Pierre</a> made me want to train
     for MMA. For now though, I'll do P90x. I can reconsider in 90 days.</p>
-<p>[[embed url=https://youtube.com/watch?v=LybrzdG96_8]] </p>
+<p><div class="embed-responsive embed-responsive-16by9">
+<iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/LybrzdG96_8" frameborder="0" allowfullscreen></iframe>  <br>
+ </div></p>
 </li>
 <li>
 <p>"Get out of London" - My contract ends in April 2017, next summer
@@ -248,47 +232,17 @@ essential for exploring these. But for now, I'll prioritise point 3.</p>
         
     </div>
         <!-- /Content --> 
-
-        <!-- Footer -->
-        <!--
-        <div class="footer gradient-2">
-            <div class="container footer-container ">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-                        <div class="footer-title">Sitemap</div>
-                        <ul class="list-unstyled">
-                            <li><a href="/archives.html">Archives</a></li>
-                            <li><a href="/tags.html">Tags</a></li>
-                            <li><a href="/authors.html">Authors</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-                        <div class="footer-title">Social</div>
-                        <ul class="list-unstyled">
-                            <li><a href="#" target="_blank">You can add links in your config file</a></li>
-                            <li><a href="#" target="_blank">Another social link</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-                        <div class="footer-title">Links</div>
-                        <ul class="list-unstyled">
-                            <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-                            <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-                            <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
-                        </ul>
-                    </div> 
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                        <p class="pull-right text-right">
-                            <small><em>Proudly powered by <a href="http://docs.getpelican.com/" target="_blank">pelican</a></em></small><br/>
-                            <small><em>Theme and code by <a href="https://github.com/molivier" target="_blank">molivier</a></em></small><br/>
-                            <small>&copy; blogname 2015</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        <!-- /Footer -->
+        
+        <script src="/theme/js/lightbox-plus-jquery.js"></script>
+        <script>
+            lightbox.option({
+              'resizeDuration': 400,
+              'wrapAround': true,
+              'imageFadeDuration': 300,
+              'disableScrolling': true,
+              'showImageNumberLabel': true,
+              'positionFromTop': 50
+            })
+        </script>
     </body>
 </html>

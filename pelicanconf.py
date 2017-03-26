@@ -20,24 +20,25 @@ DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
 
+'''
 # Photo Galleries 
 # https://github.com/getpelican/pelican-plugins/tree/master/photos
-# photos and thumbnails are only generated once. Clean the (hidden) output folders to regenerate the resized photos again.
-PHOTO_LIBRARY = "~/git/blog/content/images/images"
+# photos and thumbnails are only generated once. Delete the folder (output/photos) to regenerate the resized photos again.
+PHOTO_LIBRARY = "~/git/blog/content/images"
 PHOTO_GALLERY = (1024, 768, 80)
-PHOTO_ARTICLE = (760, 506, 80)
+PHOTO_ARTICLE = (200, 159, 80) # (760, 506, 80)
 PHOTO_THUMB = (192, 144, 60)
 PHOTO_RESIZE_JOBS = 5 # default is 1
-PHOTO_WATERMARK = True
+PHOTO_WATERMARK = False
 PHOTO_WATERMARK_TEXT = SITENAME
 PHOTO_WATERMARK_IMG = '' # file path
 
 # The following features require the piexif library 
 PHOTO_EXIF_KEEP = True
 PHOTO_EXIF_REMOVE_GPS = False
-#PHOTO_EXIF_COPYRIGHT = 'COPYRIGHT' # see details at: https://github.com/getpelican/pelican-plugins/tree/master/photos
+PHOTO_EXIF_COPYRIGHT = 'COPYRIGHT' # see details at: https://github.com/getpelican/pelican-plugins/tree/master/photos
 PHOTO_EXIF_COPYRIGHT_AUTHOR = 'Your Name Here'
-
+'''
 
 
 
@@ -72,6 +73,14 @@ MENUITEMS = [ ]  #[('Homepage', '/'),('Categories','/categories.html')]
 # Add header background image from content/images : 'background.jpg'
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/logo.jpeg'
+
+# Static files
+STATIC_PATHS = ['images', 'pdfs', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/logo.svg': {'path': 'logo.svg'}
+}
 
 # Footer
 NEST_SITEMAP_COLUMN_TITLE = u'Sitemap'
@@ -141,10 +150,4 @@ NEST_TAGS_HEADER_TITLE = u'Tags'
 NEST_TAGS_HEADER_SUBTITLE = u'Tags List'
 NEST_TAGS_CONTENT_TITLE = u'Tags List'
 NEST_TAGS_CONTENT_LIST = u'tagged'
-# Static files
-STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg']
-EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
-    'extra/logo.svg': {'path': 'logo.svg'}
-}
+

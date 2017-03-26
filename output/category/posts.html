@@ -15,6 +15,7 @@
         <link href="/theme/css/fonts.css" rel="stylesheet">
         <link href="/theme/css/nest.css" rel="stylesheet">
         <link href="/theme/css/pygment.css" rel="stylesheet">
+        <link href="/theme/css/lightbox.min.css" rel="stylesheet">
         <!-- /Stylesheets -->
 
         <!-- RSS Feeds -->
@@ -73,55 +74,27 @@
         <div class="container content archive">
             <h2><a href="/category/posts.html">Posts</a></h2>
             <dl class="dl-horizontal">
+            	<dt>Mar 02 2017</dt>
+            	<dd><a href="/my-new-articles-2.html">My new Articles 2</a></dd>
             	<dt>Mar 01 2017</dt>
-            	<dd><a href="/my-article.html">My Article</a></dd>
+            	<dd><a href="/my-new-article.html">My new Article</a></dd>
             	<dt>Jan 20 2014</dt>
             	<dd><a href="/python-test.html">Python test</a></dd>
             </dl>
         </div>
     </div>
         <!-- /Content --> 
-
-        <!-- Footer -->
-        <!--
-        <div class="footer gradient-2">
-            <div class="container footer-container ">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-                        <div class="footer-title">Sitemap</div>
-                        <ul class="list-unstyled">
-                            <li><a href="/archives.html">Archives</a></li>
-                            <li><a href="/tags.html">Tags</a></li>
-                            <li><a href="/authors.html">Authors</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-                        <div class="footer-title">Social</div>
-                        <ul class="list-unstyled">
-                            <li><a href="#" target="_blank">You can add links in your config file</a></li>
-                            <li><a href="#" target="_blank">Another social link</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
-                        <div class="footer-title">Links</div>
-                        <ul class="list-unstyled">
-                            <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-                            <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-                            <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
-                        </ul>
-                    </div> 
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                        <p class="pull-right text-right">
-                            <small><em>Proudly powered by <a href="http://docs.getpelican.com/" target="_blank">pelican</a></em></small><br/>
-                            <small><em>Theme and code by <a href="https://github.com/molivier" target="_blank">molivier</a></em></small><br/>
-                            <small>&copy; blogname 2015</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        <!-- /Footer -->
+        
+        <script src="/theme/js/lightbox-plus-jquery.js"></script>
+        <script>
+            lightbox.option({
+              'resizeDuration': 400,
+              'wrapAround': true,
+              'imageFadeDuration': 300,
+              'disableScrolling': true,
+              'showImageNumberLabel': true,
+              'positionFromTop': 50
+            })
+        </script>
     </body>
 </html>

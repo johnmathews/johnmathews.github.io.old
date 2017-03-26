@@ -142,7 +142,9 @@ on without forgetting. Here's a break down of each item:
     St-Pierre](https://youtu.be/LybrzdG96_8) made me want to train
     for MMA. For now though, I'll do P90x. I can reconsider in 90 days.
 
-    [[embed url=https://youtube.com/watch?v=LybrzdG96_8]] 
+    <div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/LybrzdG96_8" frameborder="0" allowfullscreen></iframe>    
+     </div>
     
 15. "Get out of London" - My contract ends in April 2017, next summer
     will be a crossroads. I hate the commute, I hate being constantly

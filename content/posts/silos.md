@@ -22,16 +22,28 @@ Edinburgh.
 My research quantified the effects of changing the strength of gravity
 on granular materials moving through storage silos.
 
-gallery: {photo}folder
-gallery: {photo}folder, {photo}folder2
-{photo}folder, {photo}folder2{This is a title}
-{photo}folder/image.jpg
+<div class="row">
+  <div class="col-sm-6">
+    <div class="thumbnail">
+         <a class="image_link" href="images/silos1/4_silos.jpg" data-lightbox="lightbox_1" data-title="4 silos">
+            <img class="image" src="images/silos1/4_silos.jpg"  style="width: 100%;" alt="alt_text"/>
+        </a>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="thumbnail">
+       <a class="image_link" href="images/silos1/granular_materials.jpg" data-lightbox="lightbox_1" data-title="Some granular materials">
+            <img class="image" src="images/silos1/granular_materials.jpg" style="width: 100%;" alt="alt_text"/>
+        </a>
+     </div>
+  </div>
+</div>
 
-This post contains an overview of my work, {lightbox}folder/image.jpg as well as links to download
+This post contains an overview of my work, as well as links to download
 my PhD thesis and the short presentation I used when I defended it.
 
 Granular materials are a very general grouping of materials that are
-encountered everyday -  salt, pills, breakfast cereal, sand, rice, soil,
+encountered everyday - salt, pills, breakfast cereal, sand, rice, soil,
 landslides are all granular materials. They are ubiquitous and occur in
 many different sizes and varieties.
 
@@ -61,6 +73,61 @@ centre of the centrifuge at a constant speed I could simulate a higher
 gravity. I added high-speed cameras, pressure sensors and weighing
 scales so that I could measure how the material was moving once I opened
 the silo outlet and the silo began to empty.
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="thumbnail">
+       <a class="image_link" href="images/silos2/model_silo_camera.jpg" data-lightbox="lightbox_2" data-title="Model silo and camera">
+            <img class="image" src="images/silos2/model_silo_camera.jpg" style="width: 100%;" alt="alt_text"/>
+        </a>
+     </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail">
+        <a class="image_link" href="images/silos2/model_silo_in_centrifuge.jpg" data-lightbox="lightbox_2" data-title="Model silo inside centrifuge">
+            <img class="image" src="images/silos2/model_silo_in_centrifuge.jpg" style="width: 100%;" alt="alt_text"/>
+        </a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail">
+        <a class="image_link" href="images/silos2/silo_open_mechanism.jpg" data-lightbox="lightbox_2" data-title="Silo opening mechanism">
+            <img class="image" src="images/silos2/silo_open_mechanism.jpg" style="width: 100%;" alt="alt_text"/>
+        </a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail">
+         <a class="image_link" href="images/silos2/centrifuge.jpg" data-lightbox="lightbox_2" data-title="Centrifuge">
+            <img class="image" style="width: 100%;" src="images/silos2/centrifuge.jpg" alt="alt_text"/>
+        </a>
+    </div>
+  </div>  
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="thumbnail">
+         <a class="image_link" href="images/silos2/silo_render.jpg" data-lightbox="lightbox_2" data-title="Silo model">
+            <img class="image" style="width: 100%;" src="images/silos2/silo_render.jpg" alt="alt_text"/>
+        </a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail">
+       <a class="image_link" href="images/silos2/silo_pressure_pads.jpg" data-lightbox="lightbox_2" data-title="Silo wall pressure measurements">
+            <img class="image" src="images/silos2/silo_pressure_pads.jpg" style="width: 100%;" alt="alt_text"/>
+        </a>
+     </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="thumbnail">
+        <a class="image_link" href="images/silos2/silo_piv.jpg" data-lightbox="lightbox_2" data-title="Particle Image Velocimetry result showing average flow velocities">
+            <img class="image" src="images/silos2/silo_piv.jpg" style="width: 100%;" alt="alt_text"/>
+        </a>
+    </div>
+  </div>
+</div>
 
 ### Numerical modelling
 I also programmed a computer model (using the commercial PFC 3D software
