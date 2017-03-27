@@ -11,7 +11,8 @@ PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup','neighbors', 'pelican_youtube', 'render_math']
 LOAD_CONTENT_CACHE = False
 
-PYNB_IGNORE_CSS = False
+IPYNB_IGNORE_CSS = False
+IGNORE_FILES = ['.ipynb_checkpoints']
 
 THEME = 'theme/nest'
 MARKUP = ('md', 'ipynb')
