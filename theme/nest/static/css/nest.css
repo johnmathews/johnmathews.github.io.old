@@ -4,6 +4,16 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+/* For ipynb dataframes, the table has no padding by default */
+td,
+th {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+
+
 /* Responsive */
 @media (min-width: 768px) {
   .container {
