@@ -4,11 +4,12 @@ from __future__ import unicode_literals
 
 AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
-SITEURL = ''
+SITEURL = 'http://johnmathews.eu'
+DISQUS_SITENAME = "https://johnmathews.disqus.com/"
 
 PATH = 'content'  
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup','neighbors', 'pelican_youtube', 'render_math']
+PLUGINS = ['ipynb.markup', 'neighbors', 'pelican_youtube', 'render_math']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
