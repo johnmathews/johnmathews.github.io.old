@@ -4,12 +4,29 @@ from __future__ import unicode_literals
 
 AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
-SITEURL = 'http://johnmathews.eu'
-DISQUS_SITENAME = "https://johnmathews.disqus.com/"
+SITEURL = 'http://johnmathews.eu' # should include http://
+DISQUS_SITENAME = 'johnmathews'
 
-PATH = 'content'  
+USE_FOLDER_AS_CATEGORY = False
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
+
+'''
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+'''
+
+PATH = 'content' 
+OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'pelican_youtube', 'render_math']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
@@ -18,11 +35,13 @@ IGNORE_FILES = ['.ipynb_checkpoints']
 THEME = 'theme/nest'
 MARKUP = ('md', 'ipynb')
 PYGMENTS_STYLE = 'bw'
+TYPOGRIFY = True
 # JINJA_FILTERS = {'datetime':format_datetime}
 
 DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
+WITH_FUTURE_DATES = True # if False, future dates have default status of 'draft'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -43,8 +62,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 20
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 # Minified CSS
 NEST_CSS_MINIFY = False
