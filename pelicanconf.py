@@ -62,7 +62,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 20
 
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 
 # Minified CSS
 NEST_CSS_MINIFY = False
