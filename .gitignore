@@ -1,1 +1,5 @@
 /users/John/Git/Blog/output
+*.swp
+*.pid
+ .DS_STORE
+ .DS_Store
