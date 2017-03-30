@@ -8,7 +8,7 @@ SITEURL = 'http://johnmathews.eu' # should include http://
 DISQUS_SITENAME = 'johnmathews'
 
 USE_FOLDER_AS_CATEGORY = False
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
 
@@ -68,7 +68,7 @@ RELATIVE_URLS = False
 NEST_CSS_MINIFY = False
 
 # Add items to top menu before pages
-MENUITEMS = [ ]  #[('Homepage', '/'),('Categories','/categories.html')]
+MENUITEMS = [] #[('Homepage', '/'),('Categories','/categories.html')]
 
 # Add header background image from content/images : 'background.jpg'
 NEST_HEADER_IMAGES = ''

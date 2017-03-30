@@ -1,11 +1,11 @@
 Title: About
 Date: 2017-03-15
 
-# About
-I’m an engineer (PhD, MEng) and a chartered accountant (ACA). I make a living by auditing banks. 
-
-This is a blog of things I want to be better at and things I think are important. 
-
+#<br> About
+<br>
+I’m an engineer (PhD, MEng) and a chartered accountant (ACA). I make a living by auditing banks.
+<br><br>
+I have a [LinkedIn profile](https://www.linkedin.com/in/johnmathews1), and I'm beginning to get the hang of [github](http://www.github.com/johnmathews).
+<br><br>
 Information about my work investigating silos and granular flows at increased gravities can be found [here]({filename}../articles/silos.md).
 
-My [LinkedIn profile](https://www.linkedin.com/in/johnmathews1) is pretty thorough, and I'm beginning to get the hang of [github](http://www.github.com/johnmathews).
