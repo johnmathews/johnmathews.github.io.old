@@ -23,6 +23,10 @@ MARKDOWN = {
 }
 '''
 
+MD_EXTENSIONS = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
+                 'headerid',
+                 'extra']
+
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
@@ -37,6 +41,10 @@ MARKUP = ('md', 'ipynb')
 PYGMENTS_STYLE = 'bw'
 TYPOGRIFY = True
 # JINJA_FILTERS = {'datetime':format_datetime}
+
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
 
 DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
