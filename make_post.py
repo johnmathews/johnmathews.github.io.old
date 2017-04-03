@@ -1,15 +1,16 @@
 import sys
+import os 
+import subprocess
 from datetime import datetime
 
 TEMPLATE = """
-{title}
-{hashes}
-date: {year}-{month}-{day} {hour}:{minute:02d}
-tags:
-category:
+Title: {title}
 slug: {slug}
-summary:
+date: {year}-{month}-{day} {hour}:{minute:02d}
+category:
+tags:
 status: draft
+summary:
 
 
 """
@@ -18,7 +19,7 @@ status: draft
 def make_entry(title):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
-    f_create = "content/{}_{:0>2}_{:0>2}_{}.md".format(
+    f_create = "content/articles/{}_{:0>2}_{:0>2}_{}.md".format(
         today.year, today.month, today.day, slug)
     t = TEMPLATE.strip().format(title=title,
                                 hashes='#' * len(title),
@@ -31,11 +32,16 @@ def make_entry(title):
     with open(f_create, 'w') as w:
         w.write(t)
     print("File created -> " + f_create)
+    os.system("open "+f_create)
 
-
+'''
+    App_Path = '/usr/local/Cellar/macvim/8.0-127/MacVim.app'
+    subprocess.Popen([App_Path, f_create], shell = True)
+'''
 if __name__ == '__main__':
 
     if len(sys.argv) > 1:
         make_entry(sys.argv[1])
     else:
-        print "No title given"
+        print("No title given")
+

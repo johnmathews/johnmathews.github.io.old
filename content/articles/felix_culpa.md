@@ -2,6 +2,7 @@ Title: Felix Culpa
 Date: 2017-03-29
 Slug: felix-culpa
 Author: John Mathews
+Status: Published
 
 # Felix Culpa 
 

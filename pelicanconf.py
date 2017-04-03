@@ -23,9 +23,11 @@ MARKDOWN = {
 }
 '''
 
-MD_EXTENSIONS = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
+'''
+MARKDOWN = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
                  'headerid',
                  'extra']
+'''
 
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
@@ -43,7 +45,6 @@ TYPOGRIFY = True
 # JINJA_FILTERS = {'datetime':format_datetime}
 
 DEFAULT_METADATA = {
-    'status': 'draft',
 }
 
 DEFAULT_DATE_FORMAT = '%b %d %Y'
