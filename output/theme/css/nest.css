@@ -11,6 +11,9 @@ div.highlight.hl-ipython3 pre{
 
 div.output_html.rendered_html.output_subarea.output_execute_result{
   overflow: auto;
+  margin-bottom: 10px;
+  padding-bottom: 0px !important;
+  border: none; 
 }
 
 .anchor-link{
