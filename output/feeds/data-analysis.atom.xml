@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Data Analysis</title><link href="johnmathews.github.io/" rel="alternate"></link><link href="johnmathews.github.io/feeds/data-analysis.atom.xml" rel="self"></link><id>johnmathews.github.io/</id><updated>2016-08-01T13:30:00+02:00</updated><entry><title>Coursera’s “Data Science Specialisation”</title><link href="johnmathews.github.io/courseras-data-science-specialisation.html" rel="alternate"></link><published>2016-08-01T13:30:00+02:00</published><updated>2016-08-01T13:30:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2016-08-01:johnmathews.github.io/courseras-data-science-specialisation.html</id><summary type="html">&lt;h1&gt;Coursera&amp;#8217;s Data Science&amp;nbsp;Specialisation&lt;/h1&gt;
+&lt;p&gt;Last year I decided to learn the tools required to work as a data
+scientist. I was confident I already had the mathematical and analysis
+skills I needed, but I wasn&amp;#8217;t familiar with the tools of the&amp;nbsp;trade.&lt;/p&gt;
+&lt;p&gt;Some googling brought me to Coursera …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Coursera&amp;#8217;s Data Science&amp;nbsp;Specialisation&lt;/h1&gt;
+&lt;p&gt;Last year I decided to learn the tools required to work as a data
+scientist. I was confident I already had the mathematical and analysis
+skills I needed, but I wasn&amp;#8217;t familiar with the tools of the&amp;nbsp;trade.&lt;/p&gt;
+&lt;p&gt;Some googling brought me to Coursera, and the &lt;a href="https://www.coursera.org/specializations/jhu-data-science"&gt;Data Science
+Specialisation&lt;/a&gt;
+run by Johns Hopkins University.  It consists of 9 courses, and so far
+I&amp;#8217;ve completed five. If you do the courses in order then prior knowledge
+isn&amp;#8217;t required, and I think the courses strike a good balance of brevity
+and&amp;nbsp;depth.&lt;/p&gt;
+&lt;p&gt;The main downside to me is that the courses exclusively use R (which is
+popular in academia) and I would rather be using Python (which is more
+popular in&amp;nbsp;Industry).  &lt;/p&gt;
+&lt;p&gt;Each course lasts about 3 weeks and deals with a specific aspect of data
+science, such as statistical inference or machine learning. Key concepts
+and tools in each subject are explained and developed, and whilst it&amp;#8217;s
+not as thorough as a longer course would be, there is more than enough
+material packed into the lectures, quizzes, assignments and projects to
+apply to real&amp;nbsp;applications.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve read that the second half of the specialisation is a lot more
+technical than the first, so I&amp;#8217;m looking forward to setting aside some
+time, working through the assignments and acquiring some useful&amp;nbsp;skills!&lt;/p&gt;</content><category term="Coursera"></category><category term="Data Science"></category><category term="JHU"></category><category term="R"></category></entry></feed>

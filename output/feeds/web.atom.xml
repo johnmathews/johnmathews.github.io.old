@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Web</title><link href="johnmathews.github.io/" rel="alternate"></link><link href="johnmathews.github.io/feeds/web.atom.xml" rel="self"></link><id>johnmathews.github.io/</id><updated>2016-08-07T11:40:00+02:00</updated><entry><title>Time Until</title><link href="johnmathews.github.io/time-until.html" rel="alternate"></link><published>2016-08-07T11:40:00+02:00</published><updated>2016-08-07T11:40:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2016-08-07:johnmathews.github.io/time-until.html</id><summary type="html">&lt;h1&gt;Time&amp;nbsp;Until&lt;/h1&gt;
+&lt;p&gt;In a &lt;a href="http://www.johnmathews.eu/2016/07/30/time-since/"&gt;previous post&lt;/a&gt; I
+described how I was introduced to CoffeeScript via
+&lt;a href="http://tracesof.net/uebersicht/"&gt;Übersicht&lt;/a&gt;, the desktop widget app for &lt;span class="caps"&gt;OS&lt;/span&gt; X, and eventually published the &amp;#8220;&lt;a href="http://tracesof.net/uebersicht-widgets/#time_since"&gt;Time Since&lt;/a&gt;&amp;#8221;&amp;nbsp;widget.&lt;/p&gt;
+&lt;p&gt;Seeing a few people download the widget was really satisfying, and I was
+soon wondering what else I could publish …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Time&amp;nbsp;Until&lt;/h1&gt;
+&lt;p&gt;In a &lt;a href="http://www.johnmathews.eu/2016/07/30/time-since/"&gt;previous post&lt;/a&gt; I
+described how I was introduced to CoffeeScript via
+&lt;a href="http://tracesof.net/uebersicht/"&gt;Übersicht&lt;/a&gt;, the desktop widget app for &lt;span class="caps"&gt;OS&lt;/span&gt; X, and eventually published the &amp;#8220;&lt;a href="http://tracesof.net/uebersicht-widgets/#time_since"&gt;Time Since&lt;/a&gt;&amp;#8221;&amp;nbsp;widget.&lt;/p&gt;
+&lt;p&gt;Seeing a few people download the widget was really satisfying, and I was
+soon wondering what else I could publish. As a pragmatic engineer, it
+seemed clear to me what the next widget should do: If my first widget
+calculated the time since an event, the next should calculate the time
+until an event. I set out to create the companion to &amp;#8220;Time Since&amp;#8221; and
+improve upon the underlying&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;My first code design choice was to cut out the use of an Apple Script
+and calculated everything in one CoffeeScript file. It would be more
+efficient and easier to&amp;nbsp;read.&lt;/p&gt;
+&lt;p&gt;Unfortunately I soon began to realise why the original widget I&amp;#8217;d based
+&amp;#8220;Time Since&amp;#8221; on had used AppleScript to calculate the time elapsed.
+Date-Times are fiddly to work with in many languages, and this is true
+in JavaScript&amp;nbsp;also.&lt;/p&gt;
+&lt;p&gt;My code began to look increasingly like spaghetti as I tried to achieve
+6 key&amp;nbsp;features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Calculate the number of months and days between two dates
+    (complicated by the varying number of days in different&amp;nbsp;months)&lt;/li&gt;
+&lt;li&gt;Add the option to specify the level of detail in the output text (to
+    the minute, to the hour, to the day,&amp;nbsp;etc.)&lt;/li&gt;
+&lt;li&gt;Remove any 0 amounts from the output (&amp;#8220;2 Months and 5 Hours&amp;#8221; not &amp;#8220;2
+    Months, 0 Days and 5&amp;nbsp;Hours&amp;#8221;)&lt;/li&gt;
+&lt;li&gt;Add the option to abbreviate times (&amp;#8216;years&amp;#8217; → &amp;#8216;y&amp;#8217;, &amp;#8216;hours&amp;#8217; → &amp;#8216;h&amp;#8217;,
+    &amp;#8216;and&amp;#8217; → &amp;#8216;&amp;amp;&amp;#8217;,&amp;nbsp;etc.)&lt;/li&gt;
+&lt;li&gt;Output a grammatically correct sentence (correct pluralisation and
+    comma separated terms, with an &amp;#8220;and&amp;#8221; between the last two&amp;nbsp;terms)&lt;/li&gt;
+&lt;li&gt;Prepend and append users defined&amp;nbsp;strings&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After a few frustrating hours, it was clear that it would be a lot
+easier to modify the existing AppleScript rather than reinvent the wheel
+in JavaScript. I decided to use it instead of using only JavaScript as I
+knew the AppleScript file could correctly consider the number of days in
+the months between the 2 dates (feature 1), and it contains a function
+to pluralise the correct parts of the string (feature&amp;nbsp;5).&lt;/p&gt;
+&lt;p&gt;The remaining features were added by using a combination of
+if statements and arrays. The if statements simply ask if an amount
+is equal to zero. If not, then it&amp;#8217;s appended to an array of terms to
+include in the output. At the end of this code chunk it&amp;#8217;s possible to
+ask how many non-zero terms to include in the output. An array with
+length one less than the number of output terms is created and filled
+with commas with an &amp;#8216;and&amp;#8217; in the final&amp;nbsp;position.&lt;/p&gt;
+&lt;p&gt;The two arrays are combined in the correct order by looping through the
+index of the longer array and appending each term to a final array. The
+final array is the&amp;nbsp;output.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;&lt;a href="http://tracesof.net/uebersicht-widgets/#time_until"&gt;Time Until&lt;/a&gt;&amp;#8217;&lt;/em&gt; can
+be downloaded from the &lt;a href="http://tracesof.net/uebersicht/"&gt;Übersicht&lt;/a&gt;
+&lt;a href="http://tracesof.net/uebersicht-widgets/"&gt;widgets gallery&lt;/a&gt;. I think
+another useful feature would be an option to specify the output only in
+terms of a chosen amount, such as weeks or days. Maybe I&amp;#8217;ll do that in
+the&amp;nbsp;future.&lt;/p&gt;</content><category term="AppleScript"></category><category term="CoffeeScript"></category><category term="JavaScript"></category><category term="Time Until"></category><category term="Übersicht"></category></entry></feed>
