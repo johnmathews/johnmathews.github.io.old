@@ -6,6 +6,7 @@ AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
 SITEURL = 'http://johnmathews.eu' # should include http://
 DISQUS_SITENAME = 'johnmathews'
+GOOGLE_ANALYTICS = 'UA-82253540-1'
 
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = True
