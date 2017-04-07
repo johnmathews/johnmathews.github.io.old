@@ -15,7 +15,7 @@ exams plans were put on hold and hobbies were ceased. Now that life is
 returning to normal, I have opportunity to post again.
 
 ## PATH
-!\$PATH is a variable (of type string) which contains a series of folder
+$PATH is a variable (string) which contains a series of folder
 locations separated by ":". Each of these folders contains programmes.
 When you type the name of a programme into terminal without specifying
 its location, the OS looks sequentially in each of the folder locations
@@ -36,5 +36,3 @@ application.
     /Users/John/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/
     3.5/bin:/Users/John/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/
     Library/TeX/texbin
-
-...simple.

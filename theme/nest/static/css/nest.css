@@ -4,6 +4,11 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+.highlight pre {
+  font-size: 15px !important;
+}
+
+
 /* For ipynb dataframes, the table has no padding by default */
 div.highlight.hl-ipython3 pre{
   margin-top: 5px;
