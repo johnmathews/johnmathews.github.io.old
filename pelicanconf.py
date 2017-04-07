@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
 SITEURL = 'http://johnmathews.eu' # should include http://
+ASSET_URL = './css/'
 DISQUS_SITENAME = 'johnmathews'
 GOOGLE_ANALYTICS = 'UA-82253540-1'
 
@@ -33,7 +34,7 @@ MARKDOWN = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False

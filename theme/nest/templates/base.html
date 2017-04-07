@@ -12,6 +12,11 @@
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
         <!-- Stylesheets -->
+        {% assets filters="cssmin", output="css/main.min.css", "css/bootstrap.css","css/fonts.css", "css/nest.css", "css/pygment.css","css/lightbox.css" %}
+        <link rel="stylesheet" href="/{{ ASSET_URL }}">
+        {% endassets %}
+        
+        <!--
         {% if NEST_CSS_MINIFY %}
         <link href="{{ SITEURL }}/theme/css/all.min.css" rel="stylesheet">
         {% else %}
@@ -21,6 +26,7 @@
         <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/lightbox.css" rel="stylesheet">
         {% endif %}
+        -->
         <!-- /Stylesheets -->
 
         <!-- RSS Feeds -->
