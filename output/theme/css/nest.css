@@ -9,6 +9,10 @@ div.highlight.hl-ipython3 pre{
   margin-top: 5px;
 }
 
+table.dataframe{
+  overflow: auto;
+}
+
 .anchor-link{
     font-size: 0;
 }
