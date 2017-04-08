@@ -1,3 +1,5 @@
+~/Git/Blog/output/*
+/users/John/Git/Blog/output/*
 /users/John/Git/Blog/output
 *.swp
 *.pid
