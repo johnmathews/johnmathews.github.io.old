@@ -17,6 +17,14 @@
 {% block content %}
     
     <div class="container content">
+        <!--
+        <div class="article_title"> 
+            {{ article.title }} 
+        </div>
+        -->
+        <div class="article_date"> 
+            {{ article.locale_date }} 
+        </div>
         {{ article.content }}
 
         {% if article.related_posts %}

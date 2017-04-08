@@ -4,6 +4,14 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+.article_date {
+  text-align: right;
+}
+
+.article_title {
+  text-align: center;
+}
+
 .highlight pre {
   font-size: 15px !important;
 }
