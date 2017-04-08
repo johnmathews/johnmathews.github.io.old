@@ -228,8 +228,8 @@ h4 {
 
 /* Navbar */
 .container{
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+    padding-right: 10px !important;
+    padding-left: 5px !important;
 }
 .header-nav{
     height:120px;
@@ -553,6 +553,7 @@ blockquote{
 /* Footer */
 
 .footer{
+    margin-top: 20px;
     background-color: #333;
     font-size: 14px;
     font-weight: 300;
@@ -567,8 +568,8 @@ blockquote{
     font-size: 12px;
 }
 .footer-container{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
 }
 .footer a{
