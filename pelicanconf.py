@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-RELATIVE_URLS = True # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
+RELATIVE_URLS = False # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
 
 AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'

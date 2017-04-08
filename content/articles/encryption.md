@@ -105,28 +105,29 @@ using the remainder as the final answer, i.e. $12 / 10 = 1$ with $2$
 remaining.
 
 ## Generation of a pair of RSA keys:
-## 1. Generate the RSA modulus
+### 1. Generate the RSA module
+
 -   Select two large random prime numbers, $p$ and $q$. They need to
     be random because anyone who knows or guesses them will be able to
     decrypt the encryption.
 -   Calculate $n = pq$
 
-## 2. Find derived number (e)
+### 2. Find derived number (e)
 -   *e* must be greater than 1 and less than $( p - 1)( q - 1)$
 -   There must be no common factor for e and $( p - 1)
     ( q - 1)$ except for 1\[1. If this is the case then
     e and $( p - 1) ( q - 1 )$ are called "coprime"\].
 
-## 3. Form the public key
+### 3. Form the public key
 -   The pair of numbers $(n, e)$ form the public key and can be made
     public
--         Even though $n$* *is public, it is so difficult to factor a large
+-   Even though $n$* *is public, it is so difficult to factor a large
     prime number that an attacker would not be able to find its
     component primes in the time available. The strength of RSA rests
     entirely on the difficulty of factoring $n$ into its two component
     prime numbers.
 
-## 4. Generate the private key (d)
+### 4. Generate the private key (d)
 -   The private key is generated from using $p$, $q$ and e as inputs
     to the Extended Euclidean Algorithm. For a given set of values,
     there is a unique answer $d$

@@ -236,7 +236,7 @@ h4 {
 }
 .header-nav .nav{
     float:right;
-    padding-right: 5px;
+    padding-right: 0px;
 }
 .header-nav .nav a{
     font-weight:600;
