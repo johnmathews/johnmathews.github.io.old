@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+RELATIVE_URLS = False # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
+
 AUTHOR = 'John Mathews'
 SITENAME = 'John Mathews'
 SITEURL = 'http://johnmathews.eu' # should include http://
@@ -73,7 +75,6 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 20
 
-RELATIVE_URLS = True
 
 # Minified CSS
 NEST_CSS_MINIFY = False
