@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Digital currencies: the basics Digital currencies are often discussed in the context of finance, technology and economics. The Blockchain - the technology which applications like Bitcoin are built...">
+        <meta name="keywords" content="Bitcoin, Cryptocurrencies, Cryptography, Digital Currencies, Finance, Fintech">
+        <link rel="icon" href="johnmathews.github.io/favicon.ico">
+
+        <title>Digital currencies: the&nbsp;basics - John Mathews</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="johnmathews.github.io/theme/css/all.min.css?6687d046">
+        
+        <!--
+        <link href="johnmathews.github.io/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="johnmathews.github.io/theme/css/fonts.css" rel="stylesheet">
+        <link href="johnmathews.github.io/theme/css/nest.css" rel="stylesheet">
+        <link href="johnmathews.github.io/theme/css/pygment.css" rel="stylesheet">
+        <link href="johnmathews.github.io/theme/css/lightbox.css" rel="stylesheet">
+        -->
+        <!-- /Stylesheets -->
+
+        <!-- RSS Feeds -->
+        <link href="johnmathews.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="John Mathews Full Atom Feed" />
+        <link href="johnmathews.github.io/feeds/bitcoin-distributed-ledgers.atom.xml" type="application/atom+xml" rel="alternate" title="John Mathews Categories Atom Feed" />
+        <!-- /RSS Feeds -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-82253540-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <!-- /Google Analytics -->
+
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+    <div class="header-container gradient">
+
+            <!-- Static navbar -->
+            <div class="container">
+                <div class="header-nav">
+                    <div class="header-logo ">
+                        <a class="pull-left hidden-xs" href="johnmathews.github.io/"><img class="mr20" src="johnmathews.github.io/images/logo.jpeg" alt="logo"> </a>
+                        <a class="pull-left" href="johnmathews.github.io/">John Mathews </a>
+                    </div>
+                    <div class="nav pull-right">
+                            <a  href="johnmathews.github.io/pages/about.html">About</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /Static navbar -->
+
+            <!-- Header -->
+            <!-- /Header -->
+
+        </div>
+        <!-- /Header -->
+
+
+        <!-- Content -->
+    
+    <div class="container content">
+        <h1>Digital currencies: the&nbsp;basics</h1>
+<p>Digital currencies are often discussed in the context of finance,
+technology and economics. The Blockchain - the technology which
+applications like Bitcoin are built on - is significant because it
+removes the need for trust or an intermediary between unrelated parties
+transacting with each other. So far, the most influential and famous
+digital currency is&nbsp;Bitcoin.</p>
+<p>This post is intended to introduce the basic concepts of digital
+currencies and the problems a distributed ledger system needs to&nbsp;overcome.</p>
+<h2>What is a digital&nbsp;currency?</h2>
+<p>A digital currency is an internet based medium of exchange. Units of
+digital currency are not printed, are not physical, and represent
+nothing. A unit of currency is produced by running algorithms to solve
+complex mathematical problems. When a solution is found, a unit of
+currency (for example, 1 Bitcoin) is&nbsp;generated.</p>
+<h2>If the currency represents nothing, why is it&nbsp;valuable?</h2>
+<p>Because people believe that in future, other people will believe
+it does, and because people are willing to trade real goods and services
+in exchange for&nbsp;it.</p>
+<p>This is the same as for dollars, sterling and euros (fiat currencies)
+which also don&#8217;t represent anything physical. (Although these examples
+are  supported by laws or&nbsp;regulation).</p>
+<p>In the past, creating a new currency without the support of government
+hasn&#8217;t been practical&nbsp;because:</p>
+<ol>
+<li>A central bank was required to control the physical creation of new
+    currency (otherwise people would create counterfeit currency,
+    decreasing scarcity and moving its value towards&nbsp;zero)</li>
+<li>An intermediary (a bank) was required for all large or remote
+    transactions, to make sure that the amount of money each party
+    owns is correctly recorded and updated in a ledger (preventing
+    double spending of&nbsp;funds)</li>
+</ol>
+<p>The technological breakthrough was preventing double spending without
+requiring an intermediary. This is made possible by using cryptographic
+techniques developed over the last few decades, and cheap, powerful
+computers which have only recently become&nbsp;available.</p>
+<h2>Central and distributed&nbsp;ledgers</h2>
+<p>With conventional currencies everyone&#8217;s balance and transactions are
+recorded in one central ledger (a list showing how much money each
+account has) and each account holder only has access to their own
+balance and transactions. With digital currencies, a copy of the entire
+ledger (every transaction ever made by everyone) is held on each
+computer (or node), and anyone can see everyone&#8217;s&nbsp;transactions.</p>
+<p>Conventionally, if two parties wish to make a remote transaction then
+they need a bank to be the intermediary. The bank mediates by
+updating the central ledger to record the change in each parties funds
+as a result of the transaction. This is how one party knows if the
+counter-party is able to pay, and how payment is confirmed. If there is
+only one copy of the ledger, maintained by the bank, then the bank must
+be involved in every transaction between its account holders. This
+need for an intermediary increases the complexity and cost of doing&nbsp;business.</p>
+<h2>Sending&nbsp;money</h2>
+<p>To send money, a message is broadcast to the network that the amount in
+your account should decrease and the amount in another account should
+increase. Each computer in the network (a node) which receives this
+message will check its authenticity, make the changes, and pass the
+message along to other&nbsp;nodes.</p>
+<h2>What problems does blockchain&nbsp;solve?</h2>
+<p>For a transaction to be accepted and entered into the distributed
+ledger, its authenticity needs to be verified. Because the ledger is
+distributed, everyone can see everyone else&#8217;s transactions. Therefore
+user authentication and transaction authorisation needs to be possible
+without compromising a user&#8217;s ability to send secure payments in&nbsp;future.</p>
+<p>There is also the problem of double spending - because the currency is
+neither physical, printed or representative of anything, how do you
+prevent a user from spending their currency more than once, or simply
+creating as much new currency as they&nbsp;want?</p>
+<p>Another problem is the addition of new transactions to the ledger from
+many unrelated users. If each party has their own copy of the ledger,
+updating (or changing) it as they want, how would the ledgers
+completeness and accuracy be assured? How would you update your ledger
+to take account of transactions between third parties, and how would you
+know the order in which they occurred?<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> The blockchain is remarkable because it is the first technology to solve
+all of these problems. Future posts will consider each of these problems
+are&nbsp;overcome.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-1">
+<p>This is the Byzantine Generals problem, which is nicely described in the introduction of 
+<a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf">this paper</a>&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+    
+        <div class="neighbors">
+             <ul>
+                     <li class="previous_article">
+                         <a href="johnmathews.github.io/spare-time.html">
+                             Spare&nbsp;time
+                         </a>
+                     </li>
+                 
+                     <li class="next_article">
+                         <a href="johnmathews.github.io/encryption.html">
+                             Encryption
+                         </a>
+                     </li>
+            </ul>
+        </div>
+    
+        <div> 
+
+    <div class="comments">
+        <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'johnmathews';
+                var disqus_identifier = 'digital-currencies-the-basics.html';
+                var disqus_url = 'johnmathews.github.io/digital-currencies-the-basics.html';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+        <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://johnmathews.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->                           </div>
+    </div>    
+        <!-- /Content --> 
+        
+        <script src="johnmathews.github.io/theme/js/lightbox-plus-jquery.js"></script>
+        <script>
+            lightbox.option({
+              'resizeDuration': 400,
+              'wrapAround': true,
+              'imageFadeDuration': 300,
+              'disableScrolling': true,
+              'showImageNumberLabel': true,
+              'positionFromTop': 50
+            })
+        </script>
+    </body>
+</html>
