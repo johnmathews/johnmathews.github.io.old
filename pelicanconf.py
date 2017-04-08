@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-RELATIVE_URLS = False # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
+RELATIVE_URLS = True #False for www, True for local # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
 
 AUTHOR = 'John Mathews'
-SITENAME = 'John Mathews'
+SITENAME = "Hi! I'm John."
 SITEURL = 'http://johnmathews.eu' # should include http://
 ASSET_URL = './css/'
 DISQUS_SITENAME = 'johnmathews'
@@ -64,20 +64,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = () #its a list of lists. each item is a list where the first item is the text and the scond is the url
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = ()
 
 DEFAULT_PAGINATION = 20
-
-
-# Minified CSS
-NEST_CSS_MINIFY = False
 
 # Add items to top menu before pages
 MENUITEMS = [] #[('Homepage', '/'),('Categories','/categories.html')]
