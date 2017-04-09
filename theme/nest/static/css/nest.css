@@ -4,6 +4,12 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+dt, dd {
+  font-weight: normal !important;
+  font-size: 20px !important;
+}
+
+
 .article_date {
   text-align: right;
 }
@@ -472,8 +478,9 @@ h4 {
     text-decoration: None;
 }
 .archive dt{
+    padding-left: 10px;
     text-align: left;
-    width: 70%;
+    width: 60%;
     font-size: 18px;
     font-weight: 700;
     line-height: 2; //1.42857143;    
