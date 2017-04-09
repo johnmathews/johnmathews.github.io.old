@@ -15,11 +15,11 @@ exams plans were put on hold and hobbies were ceased. Now that life is
 returning to normal, I have opportunity to post again.
 
 ## PATH
-$PATH is a variable (string) which contains a series of folder
+<html>&#36;</html>PATH is a variable (string) which contains a series of folder
 locations separated by ":". Each of these folders contains programmes.
 When you type the name of a programme into terminal without specifying
 its location, the OS looks sequentially in each of the folder locations
-listed in !\$PATH to see if the programme is there, and then executes
+listed in <html>&#36;</html>PATH to see if the programme is there, and then executes
 it.
 
 ## BIN
@@ -28,7 +28,7 @@ Bin as in Binary, not Bin as in Trash.
 The bin folders contain binary files, which are programmes ready to be
 run.
 
-If I run "echo \$PATH" from the Terminal, I see 9 folders called bin,
+If I run "echo <html>&#36;</html>PATH" from the Terminal, I see 9 folders called bin,
 and its only by convention that they contain binaries. They are just
 normal folders, which the OS is set to look in when asked to run an
 application.
