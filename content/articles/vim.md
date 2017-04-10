@@ -2,9 +2,13 @@ Title: Vim!
 Date: 2016-12-01 22:32
 Author: JM
 Category: Tools
-Tags: Vim
+Tags: Vim, text editor
 Slug: vim
 Status: published
+
+
+
+# Vim
 
 Vim is a text editor renowned for its simplicity and efficiency, and is
 based on the Vi text editor from the 1970's. It was first released in
