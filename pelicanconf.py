@@ -15,6 +15,17 @@ USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
+SITEMAP = {
+    'format': 'xml' ,
+    'priorities' : {'articles': 0.5, 
+                  'pages': 0.5,
+                  'indexes': 0.5 
+                 },
+    'changefreqs': { 'articles': 'daily',
+                  'pages': 'daily',
+                  'indexes': 'daily'
+                }
+        }
 
 '''
 MARKDOWN = {
@@ -36,7 +47,7 @@ MARKDOWN = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
