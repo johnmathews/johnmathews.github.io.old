@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://johnmathews.eu/Sitemap.xml
