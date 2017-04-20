@@ -12,7 +12,7 @@
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
         <!-- Stylesheets -->
-        {% assets filters="yui_css, cssmin", output="css/all.min.css", "css/bootstrap.css","css/fonts.css", "css/nest.css", "css/pygment.css","css/lightbox.css" %}
+        {% assets filters="cssmin", output="css/all.min.css", "css/bootstrap.css","css/fonts.css", "css/nest.css", "css/pygment.css","css/lightbox.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
 
@@ -20,19 +20,6 @@
         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
         {% endassets %}
         
-        <!--
-        {% if NEST_CSS_MINIFY %}
-        <link href="{{ SITEURL }}/theme/css/all.min.css" rel="stylesheet">
-        {% else %}
-        <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/css/fonts.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/css/nest.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/css/lightbox.css" rel="stylesheet">
-        {% endif %}
-        -->
-        <!-- /Stylesheets -->
-
         <!-- RSS Feeds -->
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
