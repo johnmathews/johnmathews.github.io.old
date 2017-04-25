@@ -200,10 +200,9 @@ And we're back to our original encoding.
 
 ## Files
 The spreadsheet I used to calculate the encrypted and decrypted values
-can be downloaded [here](http://johnmathews.eu/encryption/rsa-example/).
+can be downloaded [here]({attach}/documents/rsa-example/).
 
-A simple python script to encrypt and decrypt a message is
-[here](http://johnmathews.eu/wp-content/uploads/2016/09/AES_Example.txt).
+A simple python script to encrypt and decrypt a message is [here]({attach}/documents/AES_Example.txt).
 It uses the AES encryption method.
 
 ### Footnotes
