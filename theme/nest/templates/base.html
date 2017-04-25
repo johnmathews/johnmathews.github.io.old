@@ -103,6 +103,9 @@
         {% block headerstyle %}
         {% endblock headerstyle %}
 
+        {% if page in NO_HEADER %} 
+
+        {% else %} 
             <!-- Static navbar -->
             <div class="container">
                 <div class="header-nav">
@@ -127,6 +130,7 @@
                 </div>
             </div>
             <!-- /Static navbar -->
+        {% endif %}
 
             <!-- Header -->
             {% block header %}

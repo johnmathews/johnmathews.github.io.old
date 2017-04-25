@@ -15,6 +15,7 @@ USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
+NO_HEADER = ['archives','tags', 'categories']
 SITEMAP = {
     'format': 'xml' ,
     'priorities' : {'articles': 0.5, 
