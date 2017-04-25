@@ -115,8 +115,7 @@ remaining.
 ### 2. Find derived number (e)
 -   *e* must be greater than 1 and less than $( p - 1)( q - 1)$
 -   There must be no common factor for e and $( p - 1)
-    ( q - 1)$ except for 1\[1. If this is the case then
-    e and $( p - 1) ( q - 1 )$ are called "coprime"\].
+    ( q - 1)$ except for 1.[^0]      
 
 ### 3. Form the public key
 -   The pair of numbers $(n, e)$ form the public key and can be made
@@ -208,6 +207,7 @@ A simple python script to encrypt and decrypt a message is
 It uses the AES encryption method.
 
 ### Footnotes
+[^0]: If this is the case then $e$ and $( p - 1) ( q - 1 )$ are called "coprime"
 [^1]: I used the explanations [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) a lot.
 [^2]: A simple example is $A=1, B=2$ etc]
 [^3]: Eratosthenes invented his famous [sieving algorithm](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which
