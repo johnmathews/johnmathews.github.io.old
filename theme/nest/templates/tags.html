@@ -11,33 +11,32 @@
     {% endif %}
 {% endblock headerstyle %}
 
-{% block header %}
-    <div class="container header-wrapper">
-        <div class="row">
-              <div class="col-lg-12">
-                  <div class="header-content">
-                      <h1 class="header-title text-uppercase">{{ NEST_TAGS_HEADER_TITLE }}</h1>
-                      <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage">{{ NEST_TAGS_HEADER_SUBTITLE }}</p>
-                  </div>
-              </div>
-        </div>
-    </div>
-{% endblock header %}
-
 {% block content %}
     <div class="archive-container">
         <div class="container content archive">
             <h2><a href="{{ SITEURL }}/tags.html">{{ NEST_TAGS_CONTENT_TITLE }}</a></h2>
             <dl class="dl-horizontal">
-            	{% for tag, articles in tags|sort %}
-            	{% set articles_count = articles | count %}
-            	<dt><span class="label label-default">{{ articles | count }}</span> {% if articles_count == 1 %}article{% else %}articles{% endif %} {{ NEST_TAGS_CONTENT_LIST }}</dt>
-            	<dd><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></dd>
+                {% for tag, articles in tags|sort %}
+                {% set articles_count = articles | count %} <center>
+                <dt_tags><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></dt_tags>
+                <dd_tags><span ></span> </br> </dd_tags> </center>
             	{% endfor %}
             </dl>
         </div>
     </div>
+     
+    <!-- Footer -->
+    <div class="footer gradient-2">
+        <div class="container footer-container ">
+            <div class="row">
+            <a href="#top">Back to top</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Footer -->
+
 {% endblock content %}
+
+
 
 

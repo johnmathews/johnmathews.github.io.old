@@ -15,6 +15,7 @@ USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives'))
 NO_HEADER = ['archives','tags', 'categories']
 SITEMAP = {
     'format': 'xml' ,
@@ -164,6 +165,6 @@ NEST_TAGS_HEAD_TITLE = u'Tags'
 NEST_TAGS_HEAD_DESCRIPTION = u'Tags List'
 NEST_TAGS_HEADER_TITLE = u'Tags'
 NEST_TAGS_HEADER_SUBTITLE = u'Tags List'
-NEST_TAGS_CONTENT_TITLE = u'Tags List'
+NEST_TAGS_CONTENT_TITLE = u''
 NEST_TAGS_CONTENT_LIST = u'tagged'
 

@@ -11,33 +11,30 @@
     {% endif %}
 {% endblock headerstyle %}
 
-{% block header %}
-    <div class="container header-wrapper">
-        <div class="row">
-              <div class="col-lg-12">
-                  <div class="header-content">
-                      <h1 class="header-title text-uppercase">{{ NEST_CATEGORIES_HEADER_TITLE }}</h1>
-                      <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage">{{ NEST_CATEGORIES_HEADER_SUBTITLE }}</p>
-                  </div>
-              </div>
-        </div>
-    </div>
-{% endblock header %}
-
 {% block content %}
     <div class="archive-container">
         <div class="container content archive">
         	{% for category, articles in categories %}
-            <h2><a href="{{ SITEURL }}/{{ category.url }}">{{ category|capitalize }}</a></h2>
+            <h2>{{ category }}</a></h2>
             <dl class="dl-horizontal">
             	{% for article in articles %}
-            	<dt>{{ article.locale_date}}</dt>
-            	<dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-            	{% endfor %}
+            	<dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+            	<dd>{{ article.locale_date}}</dd>
+                {% endfor %}
             </dl>
             {% endfor %}
         </div>
     </div>
+
+     <!-- Footer -->
+    <div class="footer gradient-2">
+        <div class="container footer-container ">
+            <div class="row">
+            <a href="#top">Back to top</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Footer -->
+
 {% endblock content %}
 
