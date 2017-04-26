@@ -1,7 +1,7 @@
 Title: Time Since
 Date: 2016-07-30 13:29
 Author: John Mathews
-Category: Front-end
+Category: Other
 Tags: CoffeeScript, JavaScript, Time Since, Übersicht, Widgets
 Slug: time-since
 Status: published

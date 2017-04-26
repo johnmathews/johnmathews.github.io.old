@@ -2,12 +2,12 @@ Title: Spare time
 Date: 2016-08-13 21:15
 Author: John Mathews
 Category: Other
-Tags: Habits
+Tags: Habits, Advice, Reflection
 Slug: spare-time
 Status: published
 
 # Spare Time
-   
+
 This is a list of interests I want to consider pursuing. I wrote it when
 I began to study for my last set of exams and my mind filled with things
 I'd rather be doing instead. Some of these interests are just me
@@ -32,12 +32,12 @@ on without forgetting. Here's a break down of each item:
     could run 5k easily. If I kept at it, 10k in 50 mins would be
     easy. But point 2...
 
-2.  "Be Insanity strong" - As in, do the Insanity workout programme.
+2. "Be Insanity strong" - As in, do the Insanity workout programme.
     Again. I thought about it and decided to do
     [P90x](http://johnmathews.eu/p90x/) instead. Week 1 is going
     great.
 
-3.  "Read the bible habitually" - When I was 17 I found out about Jesus
+3. "Read the bible habitually" - When I was 17 I found out about Jesus
     and became a Christian. In the months and years after that I'd
     regularly read my bible almost every day and pray a lot. I wanted to
     understand, so I set a goal of 5 chapters each day.
@@ -67,61 +67,61 @@ on without forgetting. Here's a break down of each item:
     written for an English speaker in a hurry. I should stop being in a
     hurry, and stop prioritising only quantifiable goals.
 
-4.  "Think more" - On a similar note to 3, but less supernatural. If I
+4. "Think more" - On a similar note to 3, but less supernatural. If I
     spent less time consuming content and a little more looking around
     me or walking, I reckon I'd be more self-aware and make better
     decisions. This would probably lead to a happier, more satisfying
     life.
 
-5.  "Pray more" - I don't know why, but the creator of the universe
+5. "Pray more" - I don't know why, but the creator of the universe
     wants me to talk and share my life with him. He cares about me. This
     makes no sense to me, at all. If I was God, I would not go out of my
     way to consider the views and concerns of a very flawed human. But
     when I pray, my prayers are very often answered. I should ask him
     about this.
 
-6.  "Amazon seller?" - Amazon have this "Fulfilled by Amazon" service,
+6. "Amazon seller?" - Amazon have this "Fulfilled by Amazon" service,
     which means you don't even need to hold the stock you want to sell.
     If I choose the right products, import them cheaply from China and
     reselling  them on Amazon at a profit, I end up quids in for minimal
     effort and manageable risk. Sounds intriguing.
 
-7.  "Blog about interesting data" - Here I am, blogging. I should stick
+7. "Blog about interesting data" - Here I am, blogging. I should stick
     to the main topic and get technical. I was inspired by this
     [blog](http://www.curiousgnu.com/) in particular.
 
-8.  "Finish Coursera" - The [data science specialization](http://johnmathews.eu/courseras-data-science-specialisation/)
+8. "Finish Coursera" - The [data science specialization](http://johnmathews.eu/courseras-data-science-specialisation/)
     is great! It's in R, and I want to focus on Python, but I'd still
     like to do it. I need to consider the opportunity cost of the time
     committed, though.
 
-9.  "Read for fun, history, fiction" - When I started my job, in April 2014, I was half way through 
-[Savage Continent](https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&asin=B00796LLLK&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4), which is an eye-opening and eye-watering history of Europe in the
-    years after World War 2. I see Europe through different eyes because
-    of it. However I only got half way though, and since April '14 I
-    never felt I had the free time or energy to pick it back up. This
-    should change. When I was a researcher, and when I was a student, I
-    had so much more opportunity to develop my own pursuits. Since
-    entering the corporate world, I find myself fighting a war of
-    attrition to exert my personality onto my lifestyle.
+9. "Read for fun, history, fiction" - When I started my job, in April 2014, I was half way through 
+   [Savage Continent](https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&asin=B00796LLLK&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4), which is an eye-opening and eye-watering history of Europe in the
+     years after World War 2. I see Europe through different eyes because
+     of it. However I only got half way though, and since April '14 I
+     never felt I had the free time or energy to pick it back up. This
+     should change. When I was a researcher, and when I was a student, I
+     had so much more opportunity to develop my own pursuits. Since
+     entering the corporate world, I find myself fighting a war of
+     attrition to exert my personality onto my lifestyle.
 
-    Read for fiction... I'm unconvinced. What do you have at the end of
-    it? What can you do with it? Maybe I've just been reading the wrong
-    authors, but I'm going to leave this for now. Sure, you could
-    gain an appreciation of a different time or place, but that
-    appreciation comes via the fictional characters and events, its
-    secondary. What about abstract constructs, perspectives, morals...
-    things that history books are ill-suited for? Great fiction would be
-    essential for exploring these. But for now, I'll prioritise point 3.
+     Read for fiction... I'm unconvinced. What do you have at the end of
+     it? What can you do with it? Maybe I've just been reading the wrong
+     authors, but I'm going to leave this for now. Sure, you could
+     gain an appreciation of a different time or place, but that
+     appreciation comes via the fictional characters and events, its
+     secondary. What about abstract constructs, perspectives, morals...
+     things that history books are ill-suited for? Great fiction would be
+     essential for exploring these. But for now, I'll prioritise point 3.
 
-    <iframe style="max-width: 100%; float:middle" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+     <iframe style="max-width: 100%; float:middle" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 10. "Do a photography project" - This I would love to do, but probably
-    won't. It would be a luxury, and the opportunity cost would be too
-    great right now. I'd like to shoot a series of black and white
-    portraits, and turn them into large prints. I think good portrait
-    photography is uniquely impactful and moving, choosing B&W removes
-    distractions and leaves a subjects humanity more exposed.
+  won't. It would be a luxury, and the opportunity cost would be too
+  great right now. I'd like to shoot a series of black and white
+  portraits, and turn them into large prints. I think good portrait
+  photography is uniquely impactful and moving, choosing B&W removes
+  distractions and leaves a subjects humanity more exposed.
 
 11. "Have a list of business/product ideas" - There's no excuse for this
     one, anyone can have several good ideas. It's turning them into
@@ -145,7 +145,7 @@ on without forgetting. Here's a break down of each item:
     <div class="embed-responsive embed-responsive-16by9">
     <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/LybrzdG96_8" frameborder="0" allowfullscreen></iframe>    
      </div>
-    
+
 15. "Get out of London" - My contract ends in April 2017, next summer
     will be a crossroads. I hate the commute, I hate being constantly
     rushed. Living in other cities has been a lot more pleasant.

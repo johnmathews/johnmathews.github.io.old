@@ -1,7 +1,7 @@
 Title: Jupyter (iPython) notebooks + Pandas
 Date: 2016-08-03 13:04
 Author: John Mathews
-Category: Data Analysis, Tools
+Category: Tools
 Tags: Data, Jupyter Notebook, Pandas, Python
 Slug: Jupyter-ipython-notebooks-pandas
 Status: published

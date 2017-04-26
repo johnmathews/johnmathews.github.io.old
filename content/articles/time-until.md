@@ -1,7 +1,7 @@
 Title: Time Until
 Date: 2016-08-07 11:40
 Author: John Mathews
-Category: Web
+Category: Other
 Tags: AppleScript, CoffeeScript, JavaScript, Time Until, Übersicht
 Slug: time-until
 Status: published

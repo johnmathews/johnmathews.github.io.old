@@ -1,7 +1,7 @@
 Title: Encryption
 Date: 2016-08-30 23:04
 Author: John Mathews
-Category: Distributed Ledgers
+Category: Distributed Ledger Technology
 Tags: Encryption, RSA
 Slug: encryption
 Status: published
