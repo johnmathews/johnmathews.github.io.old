@@ -48,7 +48,7 @@ MARKDOWN = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
