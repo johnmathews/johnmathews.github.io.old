@@ -17,9 +17,8 @@
             <h2><a href="{{ SITEURL }}/tags.html">{{ NEST_TAGS_CONTENT_TITLE }}</a></h2>
             <dl class="dl-horizontal">
                 {% for tag, articles in tags|sort %}
-                {% set articles_count = articles | count %} <center>
-                <dt_tags><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></dt_tags>
-                <dd_tags><span ></span> </br> </dd_tags> </center>
+                {% set articles_count = articles | count %}
+                <dt_tags><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></dt_tags> &nbsp; 
             	{% endfor %}
             </dl>
         </div>
@@ -29,7 +28,7 @@
     <div class="footer gradient-2">
         <div class="container footer-container ">
             <div class="row">
-            <a href="#top">Back to top</a>
+                <!-- <a href="#top">Back to top</a> -->
             </div>
         </div>
     </div>

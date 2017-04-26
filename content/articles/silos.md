@@ -2,7 +2,7 @@ Title: Silos
 Date: 2016-10-02 00:06
 Author: John Mathews
 Category: Engineering
-Tags: doctorate, granular flow, Granular materials, PhD, research, Silo, thesis, Vienna
+Tags: Doctorate, Granular Flow, Granular Materials, PhD, Research, Silo, Thesis, Vienna
 Slug: silos
 Status: published
 image: {photo}folder/image.jpg

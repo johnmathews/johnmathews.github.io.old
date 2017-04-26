@@ -2,7 +2,7 @@ Title: Vim!
 Date: 2016-12-01 22:32
 Author: JM
 Category: Tools
-Tags: Vim, text editor
+Tags: Vim, 
 Slug: vim
 Status: published
 
