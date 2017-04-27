@@ -5,7 +5,7 @@ Category: Engineering
 Tags: Doctorate, Granular Flow, Granular Materials, PhD, Research, Silo, Thesis, Vienna
 Slug: silos
 Status: published
-image: {photo}folder/image.jpg
+image: {photo}folder/image.jpeg
 
 # Silos
 In this post I want to introduce my doctorate research without assuming
@@ -25,15 +25,15 @@ on granular materials moving through storage silos.
 <div class="row">
   <div class="col-xs-6">
     <div class="thumbnail">
-         <a class="image_link" href="images/silos1/4_silos.jpg" data-lightbox="lightbox_1" data-title="4 silos">
-            <img class="image" src="images/silos1/4_silos.jpg"  style="width: 100%;" alt="alt_text"/>
+         <a class="image_link" href="images/silos1/4_silos.jpeg" data-lightbox="lightbox_1" data-title="4 silos">
+            <img class="image" src="images/silos1/4_silos.jpeg"  style="width: 100%;" alt="alt_text"/>
         </a>
     </div>
   </div>
   <div class="col-xs-6">
     <div class="thumbnail">
-       <a class="image_link" href="images/silos1/granular_materials.jpg" data-lightbox="lightbox_1" data-title="Some granular materials">
-            <img class="image" src="images/silos1/granular_materials.jpg" style="width: 100%;" alt="alt_text"/>
+       <a class="image_link" href="images/silos1/granular_materials.jpeg" data-lightbox="lightbox_1" data-title="Some granular materials">
+            <img class="image" src="images/silos1/granular_materials.jpeg" style="width: 100%;" alt="alt_text"/>
         </a>
      </div>
   </div>
@@ -77,29 +77,29 @@ the silo outlet and the silo began to empty.
 <div class="row">
   <div class="col-sm-3">
     <div class="thumbnail">
-       <a class="image_link" href="images/silos2/model_silo_camera.jpg" data-lightbox="lightbox_2" data-title="Model silo and camera">
-            <img class="image" src="images/silos2/model_silo_camera.jpg" style="width: 100%;" alt="alt_text"/>
+       <a class="image_link" href="images/silos2/model_silo_camera.jpeg" data-lightbox="lightbox_2" data-title="Model silo and camera">
+            <img class="image" src="images/silos2/model_silo_camera.jpeg" style="width: 100%;" alt="alt_text"/>
         </a>
      </div>
   </div>
   <div class="col-sm-3">
     <div class="thumbnail">
-        <a class="image_link" href="images/silos2/model_silo_in_centrifuge.jpg" data-lightbox="lightbox_2" data-title="Model silo inside centrifuge">
-            <img class="image" src="images/silos2/model_silo_in_centrifuge.jpg" style="width: 100%;" alt="alt_text"/>
+        <a class="image_link" href="images/silos2/model_silo_in_centrifuge.jpeg" data-lightbox="lightbox_2" data-title="Model silo inside centrifuge">
+            <img class="image" src="images/silos2/model_silo_in_centrifuge.jpeg" style="width: 100%;" alt="alt_text"/>
         </a>
     </div>
   </div>
   <div class="col-sm-3">
     <div class="thumbnail">
-        <a class="image_link" href="images/silos2/silo_open_mechanism.jpg" data-lightbox="lightbox_2" data-title="Silo opening mechanism">
-            <img class="image" src="images/silos2/silo_open_mechanism.jpg" style="width: 100%;" alt="alt_text"/>
+        <a class="image_link" href="images/silos2/silo_open_mechanism.jpeg" data-lightbox="lightbox_2" data-title="Silo opening mechanism">
+            <img class="image" src="images/silos2/silo_open_mechanism.jpeg" style="width: 100%;" alt="alt_text"/>
         </a>
     </div>
   </div>
   <div class="col-sm-3">
     <div class="thumbnail">
-         <a class="image_link" href="images/silos2/centrifuge.jpg" data-lightbox="lightbox_2" data-title="Centrifuge">
-            <img class="image" style="width: 100%;" src="images/silos2/centrifuge.jpg" alt="alt_text"/>
+         <a class="image_link" href="images/silos2/centrifuge.jpeg" data-lightbox="lightbox_2" data-title="Centrifuge">
+            <img class="image" style="width: 100%;" src="images/silos2/centrifuge.jpeg" alt="alt_text"/>
         </a>
     </div>
   </div>  
@@ -108,22 +108,22 @@ the silo outlet and the silo began to empty.
 <div class="row">
   <div class="col-sm-3">
     <div class="thumbnail">
-         <a class="image_link" href="images/silos2/silo_render.jpg" data-lightbox="lightbox_2" data-title="Silo model">
-            <img class="image" style="width: 100%;" src="images/silos2/silo_render.jpg" alt="alt_text"/>
+         <a class="image_link" href="images/silos2/silo_render.jpeg" data-lightbox="lightbox_2" data-title="Silo model">
+            <img class="image" style="width: 100%;" src="images/silos2/silo_render.jpeg" alt="alt_text"/>
         </a>
     </div>
   </div>
   <div class="col-sm-3">
     <div class="thumbnail">
-       <a class="image_link" href="images/silos2/silo_pressure_pads.jpg" data-lightbox="lightbox_2" data-title="Silo wall pressure measurements">
-            <img class="image" src="images/silos2/silo_pressure_pads.jpg" style="width: 100%;" alt="alt_text"/>
+       <a class="image_link" href="images/silos2/silo_pressure_pads.jpeg" data-lightbox="lightbox_2" data-title="Silo wall pressure measurements">
+            <img class="image" src="images/silos2/silo_pressure_pads.jpeg" style="width: 100%;" alt="alt_text"/>
         </a>
      </div>
   </div>
   <div class="col-sm-3">
     <div class="thumbnail">
-        <a class="image_link" href="images/silos2/silo_piv.jpg" data-lightbox="lightbox_2" data-title="Particle Image Velocimetry result showing average flow velocities">
-            <img class="image" src="images/silos2/silo_piv.jpg" style="width: 100%;" alt="alt_text"/>
+        <a class="image_link" href="images/silos2/silo_piv.jpeg" data-lightbox="lightbox_2" data-title="Particle Image Velocimetry result showing average flow velocities">
+            <img class="image" src="images/silos2/silo_piv.jpeg" style="width: 100%;" alt="alt_text"/>
         </a>
     </div>
   </div>
