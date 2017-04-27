@@ -11,20 +11,6 @@
     {% endif %}
 {% endblock headerstyle %}
 
-{% block header %}
-    <div class="container header-wrapper">
-        <div class="row">
-              <div class="col-lg-12">
-                  <div class="header-content">
-                      <h1 class="header-title text-uppercase">{{ NEST_AUTHORS_HEADER_TITLE }}</h1>
-                      <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage">{{ NEST_AUTHORS_HEADER_SUBTITLE }}</p>
-                  </div>
-              </div>
-        </div>
-    </div>
-{% endblock header %}
-
 {% block content %}
     <div class="archive-container">
         <div class="container content archive">
@@ -32,9 +18,9 @@
             <h2><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></h2>
             <dl class="dl-horizontal">
             	{% for article in articles %}
-            	<dt>{{ article.locale_date}}</dt>
-            	<dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-            	{% endfor %}
+            	<dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+            	<dd>{{ article.locale_date}}</dd>
+                {% endfor %}
             </dl>
             {% endfor %}
         </div>
