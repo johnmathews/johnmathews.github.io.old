@@ -140,10 +140,10 @@
         {% endassets %}
 
         {% assets filters="jsmin", output="js/packed.js", "js/lightbox-plus-jquery.js" %}
-        <script async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
         {% endassets %}
     
-        <script async src="{{ SITEURL }}/theme/js/packed.js"></script>
+        <script src="{{ SITEURL }}/theme/js/packed.js"></script>
         <script>
             lightbox.option({
               'resizeDuration': 400,
