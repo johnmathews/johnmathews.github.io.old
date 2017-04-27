@@ -136,14 +136,14 @@
         
         <!-- Stylesheets -->
         {% assets filters="cssmin", output="css/all.min.css", "css/bootstrap.css","css/fonts.css", "css/nest.css", "css/pygment.css","css/lightbox.css" %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+        <link async rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
 
         {% assets filters="jsmin", output="js/packed.js", "js/lightbox-plus-jquery.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+        <script async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
         {% endassets %}
     
-        <script src="{{ SITEURL }}/theme/js/packed.js"></script>
+        <script async src="{{ SITEURL }}/theme/js/packed.js"></script>
         <script>
             lightbox.option({
               'resizeDuration': 400,
