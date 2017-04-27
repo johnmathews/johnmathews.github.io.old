@@ -140,7 +140,7 @@
         {% endassets %}
 
         {% assets filters="jsmin", output="js/packed.js", "js/lightbox-plus-jquery.js" %}
-        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+        <script async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
         {% endassets %}
     
         <script>
