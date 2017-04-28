@@ -32,7 +32,7 @@ SITEMAP = {
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'tag_cloud']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
@@ -51,6 +51,11 @@ DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
 WITH_FUTURE_DATES = False # if False, future dates have default status of 'draft'
+
+TAG_CLOUD_STEPS = 4
+TAG_CLOUD_MAX_ITEMS = 100 # Count of different font sizes in the tag cloud.
+TAG_CLOUD_SORTING = 'alphabetically' # The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
+TAG_CLOUD_BADGE = False # Optionnal setting : can bring badges, which mean say : display the number of each tags present on all articles.
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

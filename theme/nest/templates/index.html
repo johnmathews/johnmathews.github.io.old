@@ -12,21 +12,6 @@
 {% endblock headerstyle %}
 
 {% block header %} 
-<!--
-    <div class="container header-wrapper">
-        <div class="row">
-              <div class="col-lg-12">
-                  <div class="header-content">
-                      <h1 class="header-title">{{ NEST_INDEX_HEADER_TITLE }}</h1>
-                      <div class="header-underline"></div>
-                      {% if NEST_INDEX_HEADER_SUBTITLE %}
-                      <p class="header-subtitle header-subtitle-homepage">{{ NEST_INDEX_HEADER_SUBTITLE }}</p>
-                      {% endif %}
-                  </div>
-              </div>
-        </div>
-    </div> 
--->
 {% endblock header %}
 
 {% block content %}
@@ -56,4 +41,19 @@
         </div>
     </div>
     {% endif %}
+
+    <!-- Footer -->
+    <div class="footer gradient-2">
+        <div class="container footer-container ">
+            <div class="row">
+                <a href="{{ SITEURL }}/categories.html">Categories</a> 
+                <span style="display:inline-block; width: 2%;"></span>
+                |
+                <span style="display:inline-block; width: 2%;"></span>
+                <a href="{{ SITEURL }}/tags.html">Tags</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Footer -->
+    
 {% endblock content %}

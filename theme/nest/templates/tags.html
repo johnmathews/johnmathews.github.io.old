@@ -12,23 +12,33 @@
 {% endblock headerstyle %}
 
 {% block content %}
+
     <div class="archive-container">
         <div class="container content archive">
+
             <h2><a href="{{ SITEURL }}/tags.html">{{ NEST_TAGS_CONTENT_TITLE }}</a></h2>
-            <dl class="dl-horizontal">
-                {% for tag, articles in tags|sort %}
-                {% set articles_count = articles | count %}
-                <dt_tags><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></dt_tags> &nbsp; 
-            	{% endfor %}
-            </dl>
+            <ul class="tagcloud">
+                {% for tag in tag_cloud %}
+                    <li class="tag-{{ tag.1 }}">
+                        <a href="{{ SITEURL }}/{{ tag.0.url }}">
+                        {{ tag.0 }}
+                            {% if TAG_CLOUD_BADGE %}
+                                <span class="badge">{{ tag.2 }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            
         </div>
     </div>
+
      
     <!-- Footer -->
     <div class="footer gradient-2">
         <div class="container footer-container ">
             <div class="row">
-                <!-- <a href="#top">Back to top</a> -->
+                <a href="{{ SITEURL }}">Back</a> 
             </div>
         </div>
     </div>
