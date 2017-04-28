@@ -5,12 +5,13 @@ from datetime import datetime
 
 TEMPLATE = """
 Title: {title}
-slug: {slug}
-date: {year}-{month}-{day} {hour}:{minute:02d}
-category:
-tags:
-status: draft
-summary:
+Slug: {slug}
+Date: {year}-{month}-{day} {hour}:{minute:02d}
+Category:
+Tags:
+Status: draft
+Summary:
+
 
 
 """
@@ -19,7 +20,7 @@ summary:
 def make_entry(title):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
-    f_create = "content/articles/{}_{:0>2}_{:0>2}_{}.md".format(
+    f_create = "content/articles/{}{:0>2}{:0>2}_{}.md".format(
         today.year, today.month, today.day, slug)
     t = TEMPLATE.strip().format(title=title,
                                 hashes='#' * len(title),

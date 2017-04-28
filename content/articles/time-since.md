@@ -3,12 +3,11 @@ Date: 2016-07-30 13:29
 Author: John Mathews
 Category: Other
 Tags: CoffeeScript, JavaScript, Time Since, Übersicht, Widgets, AppleScript, Time Until
-
 Status: published
 
+
 # 'Time since'
-[Übersicht](http://tracesof.net/uebersicht/) is a desktop widgets app
-for OS X. Its free, open source, and has a pretty good widgets library
+[Übersicht](http://tracesof.net/uebersicht/) is a desktop widgets app for OS X. Its free, open source, and has a pretty good widgets library
 to download and play with. A widget is a small app or feature that
 embeds into the desktop and displays some simple information. It can
 tell you what song is currently playing, a weather forecast, disk space

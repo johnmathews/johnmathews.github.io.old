@@ -29,23 +29,6 @@ SITEMAP = {
                 }
         }
 
-'''
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight'},
-        'markdown.extensions.extra': {},
-        'markdown.extensions.meta': {},
-    },
-    'output_format': 'html5',
-}
-'''
-
-'''
-MARKDOWN = ['codehilite(css_class=highlight,guess_lang=False,linenums=False)',
-                 'headerid',
-                 'extra']
-'''
-
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
@@ -67,7 +50,7 @@ DEFAULT_METADATA = {
 DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
-WITH_FUTURE_DATES = True # if False, future dates have default status of 'draft'
+WITH_FUTURE_DATES = False # if False, future dates have default status of 'draft'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
