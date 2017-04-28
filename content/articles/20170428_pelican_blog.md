@@ -30,7 +30,7 @@ I ended up using a trial subscription to [Thinkfuls](https://www.thinkful.com/bo
 
 ### Jinja templates
 
-Jinja is a tool written in Python to create HTML pages. It doesnt look intuitive to me, but I've been able to get enough done by copy-pasting similar snippets from other parts of the theme I originally downloaded (Thanks [Molivier](https://github.com/molivier/nest)!) to make the changes I wanted. I'd like to learn more as it seems to be powerful and simple.
+Jinja is a tool written in Python to create HTML pages. It doesnt look intuitive to me, but I've been able to get enough done by copy-pasting similar snippets from other parts of the theme I originally downloaded ([Thanks Molivier!](https://github.com/molivier/nest)) to make the changes I wanted. I'd like to learn more as it seems to be powerful and simple.
 
 ### Pelican
 
@@ -74,8 +74,8 @@ Make those images as small as possible to help make the site as fast as possible
 
 ### Assets
 
-Before I started working with Pelican, minifying css and JavaScript would have seemed totally beyond me. But once [Pingdom](https://tools.pingdom.com/) and googles [Pagespeed](https://developers.google.com/speed/pagespeed/insights/) started criticising me for my multiple .css files, I decided to see what could be done. As with all these plugins, you can get it from Github and the readme is clear and accurate. 
+Before I started working with Pelican, minifying css and JavaScript would have seemed totally beyond me. But once [Pingdom](https://tools.pingdom.com/) and Googles [Pagespeed](https://developers.google.com/speed/pagespeed/insights/) started criticising me for my multiple .css files, I decided to see what could be done. As with all these plugins, you can get it from Github and the readme is clear and accurate. 
 
 ## Conclusion
 
-Im super happy wth the websites design and functionality. It's designed the way I want it, and I've learnt a ton of useful stuff along the way.
+I'm super happy wth the websites design and functionality. It's designed the way I want it, and I've learnt a ton of useful stuff along the way.
