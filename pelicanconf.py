@@ -2,14 +2,12 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-RELATIVE_URLS = True #True for www, True for local # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
+RELATIVE_URLS = True #False for www, True for development/testing # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
 
 AUTHOR = 'John Mathews'
 SITENAME = "John Mathews"
 SITEURL = 'http://johnmathews.eu' # should include http://
 ASSET_URL = './css/'
-DISQUS_SITENAME = 'johnmathews'
-GOOGLE_ANALYTICS = 'UA-82253540-1'
 
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = True

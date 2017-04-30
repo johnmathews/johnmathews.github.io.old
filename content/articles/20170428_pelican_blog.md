@@ -1,4 +1,4 @@
-Title: Pelican
+Title: Blogging with Pelican
 Slug: pelican
 Date: 2017-4-28 1:21
 Category: Tools
@@ -6,17 +6,17 @@ Tags: Pelican, Blog, css, html, Python, GitHub
 Status: published
 Summary: Creating a blog in Pelican is complicated and a great way to learn HTML, CSS, Jinja and Git
 
-# Blogging using Pelican
+# Blogging with Pelican
 
-Wordpress is a great way to begin blogging, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blogs design and features. When I began to blog in 2016 I began to notice the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. This made it easier to focus on the content by removing visual clutter. An examples of a blog design I admire is [unwiredcouch.com](unwiredcouch.com).
+Wordpress is a great way to begin blogging, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blogs design and features. When I began to blog in 2016 I began to notice the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. This made it easier to focus on the content by removing visual clutter. Examples of blog designs I admire are [unwiredcouch.com](unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com).
 
-This led me to learn about static sites, which contain only HTML and CSS, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use Pelican rather than another static site generators such as  Jekyll or Ghost.
+This led me to learn about static sites, which contain only fixed content, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use [Pelican](https://blog.getpelican.com/) rather than another static site generators such as  Jekyll or Ghost.
 
-There are plenty of sites to tell you how to start blogging in Pelican, so here I will inlcude my experience of the learning curve once the site was initally set-up. When I was learning how to begin to use Pelican, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html/) blog particularly useful and clear.
+There are plenty of sites to tell you how to start blogging in Pelican, so here I will inlcude my experience of the learning curve once the site was initally set-up. When I was learning how to begin to use Pelican, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
 
 ## The learning curve
 
-… was much longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following to hack my blog together:
+… was longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following to hack my blog together:
 
 ### HTML
 
