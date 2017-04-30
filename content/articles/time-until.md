@@ -1,4 +1,4 @@
-Title: Time Until
+Title: Übersicht widget: Time Until
 Date: 2016-08-07 11:40
 Author: John Mathews
 Category: Other

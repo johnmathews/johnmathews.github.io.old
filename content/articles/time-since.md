@@ -1,4 +1,4 @@
-Title: Time Since
+Title: Übersicht widget: Time Since
 Date: 2016-07-30 13:29
 Author: John Mathews
 Category: Other
