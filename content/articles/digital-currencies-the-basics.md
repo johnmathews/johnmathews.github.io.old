@@ -1,7 +1,7 @@
 Title: Digital currencies: the basics
 Date: 2016-08-19 21:02
 Author: John Mathews
-Category:  Distributed Ledger Technology
+Category: Blockchains, Digital Currencies
 Tags: Bitcoin, Cryptocurrencies, Cryptography, Digital Currencies, Finance, Fintech
 Slug: digital-currencies-the-basics
 Status: published

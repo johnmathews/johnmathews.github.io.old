@@ -1,8 +1,8 @@
 Title: Encryption
 Date: 2016-08-30 23:04
 Author: John Mathews
-Category: Distributed Ledger Technology
-Tags: Encryption, RSA
+Category: Blockchains, Digital Currencies
+Tags: Encryption, RSA, DLT, Blockchains, Bitcoin, Digital Currencies
 Slug: encryption
 Status: published
 
