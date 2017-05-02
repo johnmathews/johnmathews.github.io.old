@@ -8,7 +8,9 @@ Summary: An overview of my experience discovering the AEternity project and cont
 
 # AEternity ICO: My experience
 
-<img src="{filename}/images/seternity_logo.png" alt="Drawing" style="width: 75%;"/>
+<img src="{filename}/images/aeternity_logo.png" alt="Drawing" style="width: 75%;"/>
+
+Phase 1 of AEternity's ICO process was clearly designed and worked well. In order to avoid extra costs I contributed ETH rather than a traditional currency. Setting up accounts at exchanges and quickly converting GBP to ETH was complicated. What follows is a brief note describing the overall experience:
 
 On April 3rd, I was supposed to be in professional development seminar, learning about something that didn't concern me. Instead I was sat in the lobby googling digital currencies and blockchain innovations. 
 
