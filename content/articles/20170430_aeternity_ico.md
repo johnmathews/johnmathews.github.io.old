@@ -1,4 +1,4 @@
-Title: The Aeternity ICO: My experience
+Title: The AEternity ICO: My experience
 Slug: aeternity-ico
 Date: 2017-4-30 23:37
 Category: Blockchains, Digital Currencies
