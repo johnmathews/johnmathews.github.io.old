@@ -10,9 +10,9 @@ Summary: Creating a blog in Pelican is complicated and a great way to learn HTML
 
 # Blogging with Pelican
 
-Wordpress is a great way to begin blogging, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blogs design and features. When I began to blog in 2016 I began to notice the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. This made it easier to focus on the content by removing visual clutter. Examples of blog designs I admire are [unwiredcouch.com](unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com).
+Wordpress is a great way to begin blogging, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blog's design and features. When I began to blog in 2016 I began to notice the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. This made it easier to focus on the content by removing visual clutter. Examples of blog designs I admire are [unwiredcouch.com](unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com).
 
-This led me to learn about static sites, which contain only fixed content, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use [Pelican](https://blog.getpelican.com/) rather than another static site generators such as  Jekyll or Ghost.
+This led me to learn about static sites, which contain only fixed content, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use [Pelican](https://blog.getpelican.com/) rather than another static site generator such as  Jekyll.
 
 There are plenty of sites to tell you how to start blogging in Pelican, so here I will inlcude my experience of the learning curve once the site was initally set-up. When I was learning how to begin to use Pelican, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
 
@@ -46,7 +46,7 @@ I can stage and commit files, I can create local and remote repo's from the comm
 
 This is one tool for which the awesome SO and Google cannot magic up the exact right answer immediatly, unfortunately. 
 
-For example, there is still an output folder in the [source repo](https://github.com/johnmathews/blog) that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an "@" in its name. How it got there… I cannot say. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal commands. 
+For example, there is still an output folder in the [source repo](https://github.com/johnmathews/blog) that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an "@" in its name. I don't know how it got there. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal commands. 
 
 I find git's commands the least intuitive of all the tools I use, with its preceeding single dashes and double dashes, and random words thrown into the middle of otherwise reasonable commands. 
 
@@ -62,7 +62,7 @@ You'll also need to update the DNS records of your domain name to point the name
 
 One thing I didn't want when moving away from Wordpress was a site bloated with features that didn't make the content easier to read. However I found I still needed a few plugins to optimise my site and provide some basic functionality that doesnt come with the vanilla Pelican.
 
-## iPython notebooks 
+### iPython notebooks 
 
 Super useful, as all I need to do to publish a notebook as a webpage is copy the .ipynb file into the context directory and add a sidecar .ipynb-meta file with standard meta data. This functionality is one of the main reasons why Pelican is popular with data bloggers. (Though [Nikola](https://getnikola.com/) is another option).
 
