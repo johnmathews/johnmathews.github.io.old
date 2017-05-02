@@ -8,6 +8,8 @@ Summary: Creating a blog in Pelican is complicated and a great way to learn HTML
 
 # Blogging with Pelican
 
+<img src="{filename}/images/get_pelican.jpg" alt="Drawing" style="width: 75%;"/>
+
 Wordpress is a great way to begin blogging, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blogs design and features. When I began to blog in 2016 I began to notice the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. This made it easier to focus on the content by removing visual clutter. Examples of blog designs I admire are [unwiredcouch.com](unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com).
 
 This led me to learn about static sites, which contain only fixed content, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use [Pelican](https://blog.getpelican.com/) rather than another static site generators such as  Jekyll or Ghost.
