@@ -5,7 +5,6 @@ Category: Other
 Tags: Doctorate, Granular Flow, Granular Materials, PhD, Research, Engineering, Silo, Thesis, Vienna
 Slug: silos
 Status: published
-image: {photo}folder/image.jpeg
 
 # Silos
 In this post I want to introduce my doctorate research without assuming

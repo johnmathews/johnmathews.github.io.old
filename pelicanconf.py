@@ -30,13 +30,20 @@ SITEMAP = {
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'tag_cloud']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'tag_cloud', 'photos']
 LOAD_CONTENT_CACHE = False
+
+PHOTO_LIBRARY = "~/Git/Blog/content/images"
+PHOTO_GALLERY = (1024, 768, 80)
+PHOTO_ARTICLE = (760, 506, 80)
+
+
 
 IPYNB_IGNORE_CSS = False
 IGNORE_FILES = ['.ipynb_checkpoints']
 
 THEME = 'theme/nest'
+THEME_STATIC_DIR = 'theme'
 MARKUP = ('md', 'ipynb')
 PYGMENTS_STYLE = 'bw'
 TYPOGRIFY = True

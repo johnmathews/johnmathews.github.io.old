@@ -14,6 +14,7 @@ ul.tagcloud {
   list-style-position: inital ; 
   list-style-image: inital; 
   padding: 0;
+  text-align: justify;
 }
 
 ul.tagcloud li {
