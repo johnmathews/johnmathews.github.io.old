@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}{{ NEST_INDEX_HEAD_TITLE }} {% if articles_page.has_previous() %}- page {{ articles_page.number }} {% endif %}- {{ super() }}{% endblock title %}
-{% block description %}{{ SITENAME }}, {{ SITESUBTITLE }}{% endblock description %}
+{% block title %}{{ NEST_CATEGORIES_HEAD_TITLE }} - {{ super() }}{% endblock title %}
+{% block description %}{{ NEST_CATEGORIES_HEAD_DESCRIPTION }}{% endblock description %}
 
 {% block headerstyle %}
     {% if NEST_HEADER_IMAGES %}
@@ -11,49 +11,39 @@
     {% endif %}
 {% endblock headerstyle %}
 
-{% block header %} 
-{% endblock header %}
-
 {% block content %}
-    {% if DEFAULT_PAGINATION %}    
     <div class="archive-container">
         <div class="container content archive">
-            <h2><a href="{{ SITEURL }}/{{ articles_page.url }}">{{ NEST_INDEX_CONTENT_TITLE }} {% if articles_page.has_previous() %}<small>- page {{ articles_page.number }}</small>{% endif %}</a></h2>
+        	{% for category, articles in categories %}
+            <h2>{{ category }}</a></h2>
             <dl class="dl-horizontal">
-                {% for article in articles_page.object_list %}
-                <dt><a rel="canonical" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
-                <dd class="hidden-xs">{{ article.locale_date }}</dd>
+            	{% for article in articles %}
+            	<dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+            	<dd class="hidden-xs">{{ article.locale_date}}</dd>
                 {% endfor %}
             </dl>
+            {% endfor %}
         </div>
     </div>
-    {% include 'pagination.html' %}
-    {% else %}
-    <div class="archive-container">
-        <div class="container content archive">
-            <h2><a href="{{ SITEURL }}/">{{ NEST_INDEX_CONTENT_TITLE }}</a></h2>
-            <dl class="dl-horizontal">
-                {% for article in articles %}
-                <dt>{{ article.locale_date }}</dt>
-                <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-                {% endfor %}
-            </dl>
-        </div>
-    </div>
-    {% endif %}
 
     <!-- Footer -->
     <div class="footer gradient-2">
         <div class="container footer-container ">
             <div class="row">
+                <a href="{{ SITEURL }}">Home</a> 
+                <span style="display:inline-block; width: 2%;"></span>
+                |
+                <span style="display:inline-block; width: 2%;"></span>
                 <a href="{{ SITEURL }}/categories.html">Categories</a> 
                 <span style="display:inline-block; width: 2%;"></span>
                 |
                 <span style="display:inline-block; width: 2%;"></span>
                 <a href="{{ SITEURL }}/tags.html">Tags</a>
+            
             </div>
         </div>
     </div>
     <!-- /Footer -->
-    
+
 {% endblock content %}
+
