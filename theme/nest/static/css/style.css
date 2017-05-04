@@ -27,13 +27,11 @@ ul.tagcloud li {
 }
 
 li.tag-1 a {
-    font-size: 170%;
-    font-weight: 800;
+    font-size: 150%;
 }
 
 li.tag-2 a {
     font-size: 110%;
-    font-weight: 600;
 }
 
 li.tag-3 a {
