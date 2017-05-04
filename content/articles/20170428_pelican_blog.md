@@ -5,8 +5,7 @@ Category: Tools
 Tags: Pelican, Blog, Python 
 Status: published
 Summary: Creating a blog in Pelican is complicated and a great way to learn HTML, CSS, Jinja and Git
-
-<img src="{filename}/images/get_pelican.jpg" alt="Pelican" style="width: 20%;"/>
+Image: src="/images/get_pelican.jpg" alt="Pelican" style="width: 20%;"
 
 # Blogging with Pelican
 

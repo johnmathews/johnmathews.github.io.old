@@ -5,8 +5,7 @@ Category: Blockchains, Digital Currencies
 Tags: Fintech, Finance, Digital Currencies, Blockchains, DLT, AEternity, ICO
 Status: Published
 Summary: An overview of my experience discovering the AEternity project and contributing to the ICO by converting Sterling to AEons via Ether
-
-<img src="{filename}/images/aeternity_logo.png" alt="Drawing" style="width: 50%;"/>
+Image: src="/images/aeternity_logo.png" alt="Drawing" style="width: 50%;"
 
 # AEternity ICO: My experience
 

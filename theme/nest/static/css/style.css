@@ -4,6 +4,11 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+.article_image img {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
 ul.tagcloud .list-group-item <span>.badge {
   background-color: grey;
   color: white;
@@ -50,6 +55,7 @@ dt, dd {
 
 .article_date {
   text-align: right;
+  font-weight: bold;
 }
 
 .article_title {
