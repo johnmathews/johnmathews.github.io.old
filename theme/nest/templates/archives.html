@@ -11,19 +11,6 @@
     {% endif %}
 {% endblock headerstyle %}
 
-{% block header %}
-    <div class="container header-wrapper">
-        <div class="row">
-              <div class="col-lg-12">
-                  <div class="header-content">
-                      <h1 class="header-title text-uppercase">{{ NEST_ARCHIVES_HEADER_TITLE }}</h1>
-                      <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage">{{ NEST_ARCHIVES_HEADER_SUBTITLE }}</p>
-                  </div>
-              </div>
-        </div>
-    </div>
-{% endblock header %}
 
 {% block content %}
     <div class="archive-container">
@@ -37,5 +24,25 @@
             </dl>
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer gradient-2">
+        <div class="container footer-container ">
+            <div class="row">
+                <a href="{{ SITEURL }}">Home</a> 
+                <span style="display:inline-block; width: 2%;"></span>
+                |
+                <span style="display:inline-block; width: 2%;"></span>
+                <a href="{{ SITEURL }}/archives.html">Archives</a> 
+                <span style="display:inline-block; width: 2%;"></span>
+                |
+                <span style="display:inline-block; width: 2%;"></span>
+                <a href="{{ SITEURL }}/tags.html">Tags</a>
+            
+            </div>
+        </div>
+    </div>
+    <!-- /Footer -->
+
 {% endblock content %}
 
