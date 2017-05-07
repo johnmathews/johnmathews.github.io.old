@@ -97,6 +97,7 @@ NEST_COPYRIGHT = u'&copy; blogname 2015'
 NEST_FOOTER_HTML = ''
 # index.html
 NEST_INDEX_HEAD_TITLE = u'Homepage'
+NEST_INDEX_HEAD_DESCRIPTION = u'Homepage'
 NEST_INDEX_HEADER_TITLE = u'My Awesome Blog'
 NEST_INDEX_HEADER_SUBTITLE = u'Smashing The Stack For Fun And Profit'
 NEST_INDEX_CONTENT_TITLE = u''
