@@ -4,6 +4,46 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+.article_date {
+  text-align: right;
+  font-style: italic;
+  margin-top: 0;
+  display: block;
+  box-sizing: border-box;
+  /*font-family: "PT Serif", Georgia, "Times New Roman", serif; */
+  font-size: 20px;
+  line-height: 1.5;    
+  margin-bottom: 2rem;
+  color: #9a9a9a;
+}
+
+.article_author {
+  text-align: left;
+  font-size: 20px;
+  /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.article_title {
+  font-size: 36px !important;
+  line-height: 1.285714285714286em;
+  font-weight: 600;
+  letter-spacing: 0px;
+  border:none;
+  margin-bottom: 10px !important; 
+  text-align: left;
+  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  font-weight: bold !important;
+  letter-spacing: -.025rem;
+  font-size: 2rem;
+  text-rendering: optimizeLegibility;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
 .article_image img {
     margin-top: 5px !important;
     margin-bottom: 5px !important;
@@ -57,51 +97,9 @@ dt, dd {
   font-size: 20px !important;
 }
 
-
-.article_date {
-  text-align: left;
-  font-style: italic;
-  margin-top: 0;
-  display: block;
-  box-sizing: border-box;
-  /*font-family: "PT Serif", Georgia, "Times New Roman", serif; */
-  font-size: 20px;
-  line-height: 1.5;    
-  margin-bottom: 2rem;
-  color: #9a9a9a;
-}
-
-.article_author {
-  text-align: left;
-  font-size: 20px;
-  /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
-  line-height: 1.5;
-  box-sizing: border-box;
-}
-
-.article_title {
-  font-size: 36px !important;
-  line-height: 1.285714285714286em;
-  font-weight: 600;
-  letter-spacing: 0px;
-  border:none;
-  margin-bottom: 10px !important; 
-  text-align: left;
-  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
-  font-weight: bold !important;
-  letter-spacing: -.025rem;
-  font-size: 2rem;
-  text-rendering: optimizeLegibility;
-  -webkit-margin-before: 0.67em;
-  -webkit-margin-after: 0.67em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-
 .highlight pre {
   font-size: 15px !important;
 }
-
 
 /* For ipynb dataframes, the table has no padding by default */
 div.highlight.hl-ipython3 pre{
@@ -155,12 +153,6 @@ table {
 }
 
 /* Default styling */
-@media (min-width: 38em)
-poole.css:56
-html {
-    font-size: 20px;
-} 
-
 body {
     font-family: Arial; /* "Open Sans", sans-serif; */
     /* this font size was originally commented out */
@@ -174,6 +166,7 @@ body {
     -webkit-font-smoothing:antialiased;
     text-rendering: optimizeLegibility;
 }
+
 /* Links */
 /* eb2344*/
 /* 009bff*/
@@ -182,7 +175,7 @@ a, a:visited {
     color: brown; 
     text-decoration: none; 
     transition: all 0.2s ease-out;
-
+}
 a:hover, a:active{ 
     text-decoration:underline; 
     color:#eb2344; 
@@ -667,3 +660,4 @@ blockquote{
 .footer a{
     color: #fff;
 }
+
