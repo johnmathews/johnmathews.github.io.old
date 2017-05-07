@@ -6,8 +6,6 @@ Tags: Data, Jupyter Notebook, Pandas, Python
 Slug: Jupyter-ipython-notebooks-pandas
 Status: published
 
-# Jupyter notebooks & Pandas
-
 When working with more data than can fit in an Excel file, or when you
 want to be sure the data won't be edited, you usually need to interact with
 the data by writing scripts.

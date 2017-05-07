@@ -6,7 +6,6 @@ Tags: Doctorate, Granular Flow, Granular Materials, PhD, Research, Engineering, 
 Slug: silos
 Status: published
 
-# Silos
 In this post I want to introduce my doctorate research without assuming
 any engineering knowledge.
 

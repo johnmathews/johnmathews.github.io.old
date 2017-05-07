@@ -6,8 +6,6 @@ Tags: Habits, Advice, Reflection
 Slug: spare-time
 Status: published
 
-# Spare Time
-
 This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I'd rather be doing instead. Some of these interests are just me reacting to having no spare time for a few months, but others are decent goals and projects. Temporarily losing my spare time made me value it more.
 
 ![free-time](/images/spare_time.jpg)
@@ -51,11 +49,11 @@ I wrote this post so that I could compare what I thought was important when I w
      <iframe style="max-width: 100%; float:middle" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 10. "Do a photography project" - This I would love to do, but probably
- won't. It would be a luxury, and the opportunity cost would be too
- great right now. I'd like to shoot a series of black and white
- portraits, and turn them into large prints. I think good portrait
- photography is uniquely impactful and moving, choosing B&W removes
- distractions and leaves a subjects humanity more exposed.
+  won't. It would be a luxury, and the opportunity cost would be too
+   great right now. I'd like to shoot a series of black and white
+   portraits, and turn them into large prints. I think good portrait
+   photography is uniquely impactful and moving, choosing B&W removes
+   distractions and leaves a subjects humanity more exposed.
 
 11. "Have a list of business/product ideas" - There's no excuse for this
     one, anyone can have several good ideas. It's turning them into

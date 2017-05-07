@@ -6,10 +6,6 @@ Tags: Vim,
 Slug: vim
 Status: published
 
-
-
-# Vim
-
 Vim is a text editor renowned for its simplicity and efficiency, and is
 based on the Vi text editor from the 1970's. It was first released in
 1991 and is still being developed today. Using a system of keyboard

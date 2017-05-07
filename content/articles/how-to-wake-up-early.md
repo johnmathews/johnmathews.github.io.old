@@ -6,8 +6,6 @@ Tags: Productivity, Sleep
 Slug: how-to-wake-up-early
 Status: published
 
-# How to wake up early
-
 For years I've wished that I could wake up early and use the quiet
 pre-breakfast hours for distraction-free productivity. And for years I
 have spectacularly failed at this. I love the quiet, distraction-free

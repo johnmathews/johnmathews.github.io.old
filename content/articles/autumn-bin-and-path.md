@@ -6,7 +6,8 @@ Tags: Unix
 Slug: autumn-bin-and-path
 Status: published
 
-# Autumn, BIN and $PATH
+
+
 Two small things have been learnt recently: the importance of PATH and
 the contents of various BIN folders.
 

@@ -6,8 +6,6 @@ Tags: Coursera, Data Science, R
 Slug: courseras-data-science-specialisation
 Status: published
 
-# Coursera's Data Science Specialisation
-
 Last year I decided to learn the tools required to work as a data
 scientist. I was confident I already had the mathematical and analysis
 skills I needed, but I wasn't familiar with the tools of the trade.

@@ -6,7 +6,6 @@ Tags: Bitcoin, Cryptocurrencies, Cryptography, Digital Currencies, Finance, Fint
 Slug: digital-currencies-the-basics
 Status: published
 
-# Digital currencies: the basics
 Digital currencies are often discussed in the context of finance,
 technology and economics. The Blockchain - the technology which
 applications like Bitcoin are built on - is significant because it

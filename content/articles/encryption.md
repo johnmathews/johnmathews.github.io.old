@@ -6,7 +6,6 @@ Tags: Encryption, RSA, DLT, Blockchains, Bitcoin, Digital Currencies
 Slug: encryption
 Status: published
 
-# Encryption
 Blockchain uses Elliptical Curve Cryptography (ECC) to authenticate
 users and authorise transactions. These notes introduce the field of
 cryptography and explains how modern cryptographic methods
