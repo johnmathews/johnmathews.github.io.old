@@ -7,8 +7,6 @@ Status: Published
 Summary: An overview of my experience discovering the AEternity project and contributing to the ICO by converting Sterling to AEons via Ether
 Image: src="/images/aeternity_logo.png" alt="Drawing" style="width: 50%;"
 
-# AEternity ICO: My experience
-
 Phase 1 of AEternity's ICO process was clearly designed and worked well. In order to avoid extra costs I contributed ETH rather than a traditional currency. Setting up accounts at exchanges and quickly converting GBP to ETH was complicated. What follows is a brief note describing the overall experience:
 
 On April 3rd, I was supposed to be in professional development seminar, learning about something that didn't concern me. Instead I was sat in the lobby googling digital currencies and blockchain innovations. 

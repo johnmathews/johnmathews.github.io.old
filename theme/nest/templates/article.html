@@ -17,15 +17,18 @@
 {% block content %}
     
     <div class="container content">
-        <!--
-        <div class="article_title"> 
-            {{ article.title }} 
-        </div>
-        -->
         <div class="article_image">
             <img {{ article.image }} />
         </div>
 
+        <div class="article_title"> 
+            {{ article.title }} 
+        </div>
+
+        <div class="article_author"> 
+            {{ article.author }} 
+        </div>
+        
         <div class="article_date"> 
             {{ article.locale_date }} 
         </div>
