@@ -13,7 +13,7 @@ from pelicanconf import *
 DISQUS_SITENAME = 'johnmathews'
 GOOGLE_ANALYTICS = 'UA-82253540-1'
 
-DELETE_OUTPUT_DIRECTORY = False
+DELETE_OUTPUT_DIRECTORY = True
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'

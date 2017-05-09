@@ -1,6 +1,6 @@
 Title: Vim!
 Date: 2016-12-01 22:32
-Author: JM
+Author: John Mathews
 Category: Tools
 Tags: Vim, 
 Slug: vim

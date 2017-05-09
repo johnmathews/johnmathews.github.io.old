@@ -78,7 +78,7 @@ NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/logo.jpeg'
 
 # Static files
-STATIC_PATHS = ['images', 'documents', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg']
+STATIC_PATHS = ['images', 'documents', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
