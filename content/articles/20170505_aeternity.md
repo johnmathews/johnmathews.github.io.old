@@ -19,14 +19,14 @@ This post is presently a series of sparse notes which are to be updated with add
 
 ## Written in Erlang
 
-- Erland is normally used for large-scale systems that manage the allocation of scarce network resources (telecoms, banking, instant messaging)
+- [Erlang](https://en.wikipedia.org/wiki/Erlang_(programming_language)) is normally used for large-scale systems that manage the allocation of scarce network resources (telecoms, banking, instant messaging)
 - Could make it easier to process many state-channels in parallel
 - AEternity is the first blockchain project to be written in Erlang (AFAIK)
 
 ## Diverse node roles
 
 - The AEternity network will contain nodes dedicated to the efficient functioning of particular elements of the network 
-- Specialist functions include consensus processes, prediction markets, state channel liquidity, exchanges, (...)
+- Specialist functions include consensus processes, prediction markets, state channel liquidity, exchanges
 
 ## Sharding
 
@@ -40,7 +40,7 @@ This post is presently a series of sparse notes which are to be updated with add
 
 ##  Oracles
 
-- On-chain, rather than off-chain like...
+- On-chain, rather than off-chain
 
 - Consensus nodes could be used for several roles on the chain, including validating oracles
 
@@ -64,9 +64,8 @@ This post is presently a series of sparse notes which are to be updated with add
 
 - AEternities emphasis on oracles meshes well with prediction market functionality. 
 - Prediction markets are proposed as a novel method to implement governance of the AEternity blockchain.
-
 - The AEternity protocol would be governed by user input, by having a prediction market for which protocol changes and features will lead to a higher aeon price. 
 - The incentive to increase the value of an AEon would allow the AEternity community to decide efficiently which changes to implement.
-  - Low level protocol changes to variables like blocktimes and block capacity could be possible 
-  - The consensus developed by the prediction market will initially provide input to the development team’s decision-making.
-  - Later, a fully autonomous prediction market for governance is expected (a DAO) 
+- Low level protocol changes to variables like blocktimes and block capacity could be possible 
+- The consensus developed by the prediction market will initially provide input to the development team’s decision-making.
+- Later, a fully autonomous prediction market for governance is expected (a DAO) 
