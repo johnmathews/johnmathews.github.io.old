@@ -6,75 +6,67 @@ Tags: AEternity, DLT, Digital Currencies, Finance, Blockchains
 Status: Published
 Summary:
 
-This post is a draft. The AEternity project has the following notable technical features. 
+This post is presently a series of sparse notes which are to be updated with additional details.
+
+ The AEternity project has the following notable technical features. 
 
 - Sharding
-- On-chain oracles
+- Oracles
 - Smart Contracts in state-channels
 - Prediction markets (governance) 
 - Written in Erlang
 - Diverse node roles? 
 
+## Written in Erlang
+
+- Erland is normally used for large-scale systems that manage the allocation of scarce network resources (telecoms, banking, instant messaging)
+- Could make it easier to process many state-channels in parallel
+- AEternity is the first blockchain project to be written in Erlang (AFAIK)
+
+## Diverse node roles
+
+- The AEternity network will contain nodes dedicated to the efficient functioning of particular elements of the network 
+- Specialist functions include consensus processes, prediction markets, state channel liquidity, exchanges, (...)
+
 ## Sharding
 
-- concept related to scalability improvement
-- split the space of possible accounts into subspaces (e.g. based on the first digit of a numerical address)
-- each shard gets a set of validators, each validator doesnt validate more than 1 shard
-- messages (contracts/tnsxs) within the shard work as normal
+- Allows a greater transaction volume, removing scalability problems that Bitcoin and Ethereum have experienced.
+- Sharding works by splitting the space of possible accounts into subspaces (for example based on the first digit of a numerical address)
+- Each shard gets a set of validators. Each validator validates 1 shard only
+- Contracts and transactions within the same shard work as normal
 
 
-- contracts across shards need special techniques based on "transaction receipts" 
+- Contracts and transactions across shards require alternative techniques based on "transaction receipts" 
 
-##  On-chain oracles
+##  Oracles
 
-- Aeternity’s oracle infrastructure is designed to work with the same consensus mechanism as the Aeternity blockchain
+- On-chain, rather than off-chain like...
+
+- Consensus nodes could be used for several roles on the chain, including validating oracles
 
 
-- Consensus nodes can play several roles on the chain: one of them is validating oracles.
-
-
-- there will be consensus nodes that validate oracle data
-
-- If their approach works, it will allow Aeternity to run a prediction market using its native consensus mechanism.  
+- Of the various node types proposed, one type will be the consensus node which will validate oracle data
+- Aeternity propose to run a prediction market using a native consensus mechanism
+- The oracle mechanism is designed to work within the same consensus mechanism on the Aeternity blockchain 
 
 ## Smart Contracts in state-channels
 
-- The Bitcoin Lightning Network is creating a system for routing payments through state channels–payment networks that exchange funds off-chain and periodically settle up accounts with the main Bitcoin blockchain. 
-
+- State channels are payment networks that exchange funds off-chain and periodically settle up accounts with the main blockchain.  
+- The Bitcoin Lightning Network is creating a system for routing payments through state channels
 - Aeternity proposes doing this for smart contracts. 
-
-- The state chain approach has several advantages. One of the biggest is smart contract privacy: because the contracts are executed off chain, actual smart contract code won’t need to be broadcast to the primary blockchain. 
-
-- This has the potential to increase processing capacity by allowing contracts to execute in parallel. 
-
-- However, because of the reduced transparency, running smart contracts in state channels requires more trust in both the contract creator and the node running it.
-
+- Advantages of the state channel approach include:
+  - Private smart contracts - because the contracts are executed off chain, the code used to execute the smart contract won’t need to be broadcast to the primary blockchain. 
+  - This has the potential to increase processing capacity by allowing contracts to execute in parallel. 
+- Disadvantages to the state-channel approach:
+  - Reduced transparency - running smart contracts in state channels requires more trust in both the contract creator and the node running it
 
 ## Prediction markets (governance) 
 
-- The emphasis on oracles makes the project well suited for prediction markets, and Aeternity proposes using prediction markets as the basis of a governance system.
+- AEternities emphasis on oracles meshes well with prediction market functionality. 
+- Prediction markets are proposed as a novel method to implement governance of the AEternity blockchain.
 
-
-- The Aeternity team will draw on user input to help govern the protocol itself: by having a prediction market for which protocol changes and features will lead to a higher aeon price, Aeternity will be able to gauge which changes the market wants.
-
-- ​ This could even include variables like blocktimes and block capacity. 
-
-- ​Initially, the consensus made by the prediction market will simply provide input to the development team’s decision-making.
-
-  - However, in the future the team plans to implement a fully autonomous prediction market governance DAO.  
-
-## Written in Erlang
-
-- language normally used for large-scale systems that manage the allocation of scarce network resources, such as telecoms, banking, e-commerce, computer telephony, and instant messaging.
-
-- has not been a common language in blockchain development to date, though it presumably should help in processing many parallel state channels.
-
-## Diverse node roles? 
-
-- different nodes in the Aeternity ecosystem that help all the elements function efficiently
-
--  specialist functions: consensus processes, prediction markets, state channel liquidity, exchanges, and others. 
-
--  exact roles and functions of different nodes hasn’t been fully explained,
-
-   ​
+- The AEternity protocol would be governed by user input, by having a prediction market for which protocol changes and features will lead to a higher aeon price. 
+- The incentive to increase the value of an AEon would allow the AEternity community to decide efficiently which changes to implement.
+  - Low level protocol changes to variables like blocktimes and block capacity could be possible 
+  - The consensus developed by the prediction market will initially provide input to the development team’s decision-making.
+  - Later, a fully autonomous prediction market for governance is expected (a DAO) 
