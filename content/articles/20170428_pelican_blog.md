@@ -4,32 +4,32 @@ Date: 2017-4-28 1:21
 Category: Tools
 Tags: Pelican, Blog, Python 
 Status: published
-Summary: Creating a blog in Pelican is complicated and a great way to learn HTML, CSS, Jinja and Git
+Summary: Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git
 Image: src="/images/get_pelican.jpg" alt="Pelican"
 
-Wordpress is a great way to begin blogging, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blog's design and features. When I began to blog in 2016 I began to notice the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. This made it easier to focus on the content by removing visual clutter. Examples of blog designs I admire are [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com).
+When I began to blog in 2016, I noticed the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. Their design made it easier to focus on the content by removing visual clutter and I wanted this for my blog, too. Examples of blog designs I admire are [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com). I used Wordpress to buid and publish my blog, which is a great way to begin, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blog's features. 
 
 This led me to learn about static sites, which contain only fixed content, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use [Pelican](https://blog.getpelican.com/) rather than another static site generator such as  Jekyll.
 
-There are plenty of sites to tell you how to start blogging in Pelican, so here I will inlcude my experience of the learning curve once the site was initally set-up. When I was learning how to begin to use Pelican, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
+There are plenty of sites to tell you how to start blogging in Pelican, so here I will inlcude my experience of the learning curve once the site was initally set-up. When I was learning how to begin, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
 
 ## The learning curve
 
-… was longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following to hack my blog together:
+… was longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following tools to hack my blog together. 
 
 ### HTML
 
-Quirky and intuitive. Tags make sense, comments are laborious, learning by google is relatively quick.
+I find HTML quirky but intuitive. Tags make sense, comments are laborious and learning by google is relatively quick. 
 
 ### CSS
 
-Much more concise that HTML, and impossible to learn from only looking at examples. There was a lightbulb moment when I realised CSS Selectors were a thing...
+Writing CSS feels a lot more concise that HTML. It also feels like its impossible to learn and hack together new phrases by only looking at examples. There was a lightbulb moment when I realised CSS Selectors were a thing...
 
 I ended up using a trial subscription to [Thinkfuls](https://www.thinkful.com/bootcamp/web-development/) Front-end developer course, which is pretty good at explaining how CSS is structured and how to arrange content on a page. If I still had access, I'd be completing the second half of the course :)
 
 ### Jinja templates
 
-Jinja is a tool written in Python to create HTML pages. It doesnt look intuitive to me, but I've been able to get enough done by copy-pasting similar snippets from other parts of the theme I originally downloaded ([Thanks Molivier!](https://github.com/molivier/nest)) to make the changes I wanted. I'd like to learn more as it seems to be powerful and simple.
+Jinja is a tool written in Python to create HTML pages. It doesnt look intuitive to me, but I've been able to get enough done by copy-pasting similar snippets from other parts of the theme I started with ([Thanks Molivier!](https://github.com/molivier/nest)) to make the changes I wanted. I'd like to learn more as it seems to be powerful and simple.
 
 ### Pelican
 

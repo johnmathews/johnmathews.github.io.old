@@ -5,17 +5,15 @@ Category: Blockchains, Digital Currencies
 Tags: Fintech, Finance, Digital Currencies, Blockchains, DLT, AEternity, ICO
 Status: Published
 Summary: An overview of my experience discovering the AEternity project and contributing to the ICO by converting Sterling to AEons via Ether
-Image: src="/images/aeternity_logo.png" alt="Drawing" style="width: 50%;"
+Image: src="/images/aeternity_logo.png" alt="AEternity blockchain"
 
-Phase 1 of AEternity's ICO process was clearly designed and worked well. In order to avoid extra costs I contributed ETH rather than a traditional currency. Setting up accounts at exchanges and quickly converting GBP to ETH was complicated. What follows is a brief note describing the overall experience:
+Phase 1 of AEternity's ICO process was clearly designed and worked well. In order to avoid extra costs I contributed ETH rather than a traditional currency and found that using an exchange to quickly convert GBP to ETH was complicated. What follows is a brief note describing the overall experience:
 
-On April 3rd, I was supposed to be in professional development seminar, learning about something that didn't concern me. Instead I was sat in the lobby googling digital currencies and blockchain innovations. 
-
-I came across the [AEternity website](http://www.aeternity.com) and skimmed their [white paper](https://blockchain.aeternity.com/%C3%A6ternity-blockchain-whitepaper.pdf). The project is ambitious, like many crypto projects, but seems unusally well organised. The (very small) team is well known in the space. There is a clear plan to develop the project and create a blockachain technology that, if successful, could bring.a step change in the use of digital currencies for high volume low value transactions, and the viable implementation of smart contracts. 
+On April 3rd, I happened to be Googling digital currencies and blockchain innovations when I came across the [AEternity website](http://www.aeternity.com) and skimmed their [white paper](https://blockchain.aeternity.com/%C3%A6ternity-blockchain-whitepaper.pdf). The project is ambitious, like many crypto projects, but seems well organised. The team is well known in the space. There is a clear plan to develop the project and create a blockachain technology that, if successful, could bring.a step change in the use of digital currencies for high volume low value transactions, and the viable implementation of smart contracts. 
 
 ## The ICO
 
-To my surprise, I realised that phase 1 of the Iniitial Coin Offering (ICO) was about to begin, and if I wanted I could aquire the rights to Aeons (the AEternity token) more cheaply than in the future. During phase 1, 1 ETH would purchase 1100 AEons. In early April 2017, 1 ETH was worth about £38.
+To my surprise, I realised that phase 1 of the Iniitial Coin Offering (ICO) was about to begin, and if I wanted I could aquire the rights to Aeons (the AEternity token). During phase 1, 1 ETH would purchase 1100 AEons. In early April 2017, 1 ETH was worth about £38.
 
 I was willing to make a small and risky investment, but in order to do that I would need to work out how to convert my conventional Sterling into Bitcoin or Ether, in order to then purchase Aeons. The AEternity website made it super easy to set up an Etherium wallet, and to use that wallet to invest in the Aeternity project, but buying Ether immediatly and putting it in my new wallet proved to be challenging. 
 
