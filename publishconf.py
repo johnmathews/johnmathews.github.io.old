@@ -13,8 +13,8 @@ from pelicanconf import *
 DISQUS_SITENAME = 'johnmathews'
 GOOGLE_ANALYTICS = 'UA-82253540-1'
 
-DELETE_OUTPUT_DIRECTORY = True
-RELATIVE_URLS = False
+DELETE_OUTPUT_DIRECTORY = False
+RELATIVE_URLS = False #False for www, True for development/testing # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
