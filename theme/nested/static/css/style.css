@@ -4,6 +4,28 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:50px; /* this needs to be bigger than footer height*/
+}
+
+.footer gradient-2{
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear:both;
+  padding-top:20px;
+} 
+
+
 .article_date {
   text-align: left;
   font-style: italic;
@@ -266,6 +288,7 @@ h2 {
     /* border-bottom: 3px solid rgba(235,35,68,1);*/
     /* border-bottom: 3px solid rgba(0,0,0,0.2);*/
 }*/
+
 
 h3 { 
     font-size: 20px ;
@@ -540,8 +563,9 @@ h4 {
     margin-bottom: 20px;  
 }
 .archive h2 a{
-    color: #4b505a;
+    color: black;  
     text-decoration: None;
+    margin-bottom: 15%;
 }
 .archive dt{
     padding-left: 10px;

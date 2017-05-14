@@ -36,7 +36,7 @@ LOAD_CONTENT_CACHE = False
 IPYNB_IGNORE_CSS = False
 IGNORE_FILES = ['.ipynb_checkpoints']
 
-THEME = 'theme/nest'
+THEME = 'theme/nested'
 MARKUP = ('md', 'ipynb')
 PYGMENTS_STYLE = 'bw'
 TYPOGRIFY = True
