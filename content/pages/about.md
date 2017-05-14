@@ -2,7 +2,7 @@ Title: About
 Date: 2017-03-15
 
 #About
-Thanks for visitng my blog. I'm an engineer working towards making finance more efficient, and the posts here are a haphazerd record of my curiosities and intrigues. I started my career in financial audits and have recently qualified as an accountant. Before that I achieved a doctorate in Engineering. I see a world full of opportunities to make things and problems to solve.
+Thanks for visitng my blog. I'm an engineer working towards making finance more efficient, and the posts here are a haphazard record of my curiosities and intrigues. I started my career in financial audits and have recently qualified as an accountant. Before that I achieved a doctorate in Engineering. I see a world full of opportunities to make things and problems to solve.
 
 I live in London but before I came (back) to the UK I lived in Austria for 4 years, which was much more comfortable. I'm now actively seeking opportunities to move me and my family somewhere overseas, again.
 
