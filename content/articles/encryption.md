@@ -68,7 +68,7 @@ Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we 
 Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional RSA system.
 
 ### Encoding
-To encode the first letter of our short and unimaginative message ('H', which is $72$ in UTF-8), we need to multiply it by itself *e *times ($e = 5$), remembering to wrap around each time we pass our maximum value of $n = 91$.
+To encode the first letter of our short and unimaginative message ('H', which is $72$ in UTF-8), we need to multiply it by itself $e$ times ($e = 5$), remembering to wrap around each time we pass our maximum value of $n = 91$.
 
 $72 \times 72 = 5184, 5184 / 91 = 56$ with $88$ remaining, (i.e. $5184 = 91 \times 56 + 88$). Therefore:
 $72 \times 72 = 5184 = 88$
@@ -87,6 +87,7 @@ $30 \times 11 = 330 = 57$
 ...
 $57 \times 11 = 627 = 81$
 $81 \times 11 = 891 = 72$
+
 And we're back to our original encoding.
 
 ## Files
@@ -95,9 +96,8 @@ The spreadsheet I used to calculate the encrypted and decrypted values can be do
 A simple python script to encrypt and decrypt a message is [here attach}/documents/AES_Example.py). It uses the AES encryption method.
 
 ### Footnotes
-[^5]: If this is the case then $e$ and $( p - 1) ( q - 1 )$ are called "coprime"
 [^1]: I used the explanations [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) a lot.
-[^2]: A simple example is $A=1, B=2$ etc]
-[^3]: Eratosthenes invented his famous [sieving algorithm https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which finds all the primes up to a given limit.
+[^2]: A simple example is $A=1, B=2$ etc
+[^3]: Eratosthenes invented his famous [sieving algorithm](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which finds all the primes up to a given limit.
 [^4]: Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I've used the same numbers in the following example as in the tutorials [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/).
-
+[^5]: If this is the case then e and ( p - 1) ( q - 1 ) are called "coprime"

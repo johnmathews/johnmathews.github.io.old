@@ -8,7 +8,7 @@ Summary: Aeternity is a new blockchain project that is pre-launch. The headline 
 
 These are my notes on the AEternity blockchain project, I'm not affiliated with the AEternity team.
 
-Aeternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources, via a decentralised oracle based on prediction markets. These terms are explains below. The AEternity project has proposed several notable technical features: 
+Aeternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources. This is made possible via a decentralised oracle based on prediction markets. These terms are explained below. The AEternity project has proposed several notable technical features: 
 
 - Smart Contracts in state-channels
 - Oracles and native prediction markets
