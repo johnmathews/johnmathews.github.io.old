@@ -17,9 +17,11 @@
 {% block content %}
     
     <div class="container content">
+        {% if article.image %}
         <div class="article_image">
             <img {{ article.image }} />
         </div>
+        {% endif %}
 
         <div> 
             <h1> {{ article.title }} </h1> 

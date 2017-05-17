@@ -17,15 +17,6 @@ html, body {
   padding-bottom:50px; /* this needs to be bigger than footer height*/
 }
 
-.footer gradient-2{
-  position: relative;
-  margin-top: -50px; /* negative value of footer height */
-  height: 50px;
-  clear:both;
-  padding-top:20px;
-} 
-
-
 .article_date {
   text-align: left;
   font-style: italic;
@@ -428,7 +419,8 @@ h4 {
 /* Content */
 
 .content{
-   /* margin-top: 42px; */
+    min-height: calc(100vh - 180px);
+    /* margin-top: 42px; */
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -650,12 +642,15 @@ blockquote{
 /* Footer */
 
 .footer{
-    margin-top: 20px;
     background-color: #333;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
-    text-align: left;
     color: #fff;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    vertical-align: middle;
+    line-height: 50px;
 }
 
 .footer-title {
@@ -664,11 +659,7 @@ blockquote{
     font-weight: 600;
     font-size: 12px;
 }
-.footer-container{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
+
 .footer a{
     color: #fff;
 }
