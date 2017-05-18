@@ -419,7 +419,7 @@ h4 {
 /* Content */
 
 .content{
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 162px);
     /* margin-top: 42px; */
     background-color: #fff;
     padding-top: 20px;
@@ -542,6 +542,12 @@ h4 {
     margin-top: 5px;
     margin-bottom: 40px; 
 }
+
+.cat_titles {
+    line-height: 20% !important;
+    vertical-align: middle;
+}
+
 .archive {
     font-size: 18px;
     line-height: 24px;

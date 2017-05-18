@@ -12,9 +12,7 @@
 {% endblock headerstyle %}
 
 {% block content %}
-
         <div class="container content">
-
             <h2><a href="{{ SITEURL }}/tags.html">{{ NEST_TAGS_CONTENT_TITLE }}</a></h2>
             <ul class="tagcloud">
                 {% for tag in tag_cloud %}
@@ -28,11 +26,7 @@
                     </li>
                 {% endfor %}
             </ul>
-            
         </div>
-
-     
-
 {% endblock content %}
 
 
