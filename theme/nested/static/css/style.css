@@ -544,8 +544,11 @@ h4 {
 }
 
 .cat_titles {
-    line-height: 20% !important;
-    vertical-align: middle;
+    text-align: center;
+}
+
+.cat_title {
+    height: 10vh;
 }
 
 .archive {
@@ -560,6 +563,12 @@ h4 {
     margin-top: 15px;
     margin-bottom: 20px;  
 }
+
+.container.content.cat_titles h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 .archive h2 a{
     color: black;  
     text-decoration: None;

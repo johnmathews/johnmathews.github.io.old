@@ -11,11 +11,12 @@
 {% endblock header %}
 
 {% block content %}
-        <div class="container content cat_titles" style="text-align:center" >
+        <div class="container content cat_titles" >
             </br>
             {% for category, articles in categories %}
-                <h2><a href="{{ SITEURL }}/{{ category.url }}"> {{ category }} </a></h2>
-                </br>
+            <h2><a href="{{ SITEURL }}/{{ category.url }}"> {{ category }} </a></h2>
+            <div class="cat_title">
+            </div>
             {% endfor %}
         </div>
 {% endblock content %}

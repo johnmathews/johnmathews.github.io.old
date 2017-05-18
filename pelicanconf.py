@@ -10,8 +10,8 @@ SITEURL = 'http://johnmathews.eu' # should include http://
 ASSET_URL = './css/'
 
 USE_FOLDER_AS_CATEGORY = False
-DISPLAY_PAGES_ON_MENU = True
-DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False 
 SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives'))
 NO_HEADER = ['archives','tags', 'categories']
