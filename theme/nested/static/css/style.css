@@ -4,6 +4,12 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+#sub_req {
+    font-style: italic;
+    text-align: center;
+}
+
+
 #mc-embedded-subscribe {
   background-color: #A52A2A !important;
   font-family: Arial !important;
