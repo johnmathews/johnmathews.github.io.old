@@ -2,7 +2,6 @@ Date: 2017-05-25
 Status: Published
 Title: Subscribe
 
-</br>
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -13,12 +12,18 @@ Title: Subscribe
 <div id="mc_embed_signup">
 <form action="//johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-    <label for="mce-EMAIL">Join my mailing list and never miss an update:</label>
-<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-	<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-	<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value=""></div>
-	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-	</div>
+	<label for="mce-EMAIL">Subscribe to our mailing list</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+<div id="button">
 </br>
 <button onclick="goBack()" >Return to previous page</button>
 <script>
@@ -26,10 +31,4 @@ function goBack() {
     window.history.back();
 }
 </script>
-
-
-</form>
-
 </div>
-
-<!--End mc_embed_signup-->

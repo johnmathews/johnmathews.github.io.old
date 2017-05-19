@@ -21,9 +21,14 @@
   letter-spacing: 0 !important;
 }
     
-    
+#button {
+ margin: auto !important;
+ display: block;
+ width: 50%;
+} 
 
 button {
+  margin: auto !important;
   transition: all 0.23s ease-in-out 0s;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -34,7 +39,7 @@ button {
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   border-radius: 3px !important;
   font-size: 16px;
 }

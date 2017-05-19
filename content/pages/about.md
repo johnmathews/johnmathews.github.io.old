@@ -10,5 +10,5 @@ I'm looking for opportunities to work on blockchain or fintech projects, because
 
 I'm on [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available in [word]({attach}/documents/John_Mathews_CV.docx) and [PDF]({attach}/documents/John_Mathews_CV.pdf) formats, and is on [Google](https://drive.google.com/file/d/0B2dxj_prWJiwT09OS1lBN0hwa3M/view?usp=sharing).
 
-Information about my work researching silos and granular flows at increased gravities can be found [here]({filename}../articles/silos.md).
+Information about my work researching silos and granular flows at increased gravities can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new, please [subscribe]({filename}../pages/subscribe.md) for updates! 
 
