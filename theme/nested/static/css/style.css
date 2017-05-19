@@ -4,6 +4,41 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+#mc-embedded-subscribe {
+  background-color: #A52A2A !important;
+  font-family: Arial !important;
+  font-size: 16px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: none !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  line-height: inherit !important;
+  letter-spacing: 0 !important;
+}
+    
+    
+
+button {
+  transition: all 0.23s ease-in-out 0s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #A52A2A;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px !important;
+  font-size: 16px;
+}
+
 html, body {
   height: 100%;
 }
