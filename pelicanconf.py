@@ -34,6 +34,7 @@ PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'opt
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
+IPYNB_USE_META_SUMMARY = True
 IGNORE_FILES = ['.ipynb_checkpoints']
 
 THEME = 'theme/nested'
@@ -41,6 +42,8 @@ MARKUP = ('md', 'ipynb')
 PYGMENTS_STYLE = 'bw'
 TYPOGRIFY = True
 # JINJA_FILTERS = {'datetime':format_datetime}
+SUMMARY_MAX_LENGTH = 0
+
 
 DEFAULT_METADATA = {
 }

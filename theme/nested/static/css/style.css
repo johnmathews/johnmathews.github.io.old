@@ -4,6 +4,35 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+.summary {
+    display: block;
+    color: gray;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.48;
+    letter-spacing: -.014em;
+}
+
+@media (max-width: 760px) {
+  .summary {
+    text-align: justify;
+
+  }
+}
+
+
+@media (min-width: 768px) {
+  .summary {
+    padding-right: 20%;
+  }
+}
+
+
+
 #sub_req {
     font-style: italic;
     text-align: center;
@@ -90,12 +119,16 @@ html, body {
         margin-top: 5px !important;
         margin-bottom: 5px !important;
         width: 50% !important;
+        padding-bottom: 20px;
+        padding-top: 20px;
 }
 }
 
 @media screen and (max-width: 768px) and (min-width: 415px) {
   .article_image img {
   width: 75% !important;  
+  padding-bottom; 20px;
+  padding-top: 20px;
 }
 }
 
@@ -205,7 +238,7 @@ table {
 body {
     font-family: Arial; /* "Open Sans", sans-serif; */
     /* this font size was originally commented out */
-    font-size: 17.6px;
+    font-size: 18px;
     font-weight: 300;
     font-style: normal;
     color: black;
