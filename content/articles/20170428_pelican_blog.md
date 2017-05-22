@@ -3,9 +3,9 @@ Slug: pelican
 Date: 2017-4-28 1:21
 Category: Tools
 Tags: Pelican, Blog, Python 
-Status: published
-Summary: Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git
+Status: published 
 Image: src="/images/get_pelican.jpg" alt="Pelican"
+Summary: I became frustrated with my WordPress blog and switched to Pelican. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.
 
 When I began to blog in 2016, I noticed the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. Their design made it easier to focus on the content by removing visual clutter and I wanted this for my blog, too. Examples of blog designs I admire are [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com). I used Wordpress to buid and publish my blog, which is a great way to begin, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blog's features. 
 

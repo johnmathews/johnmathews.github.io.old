@@ -4,11 +4,11 @@ Date: 2017-5-5 21:04
 Category: Blockchains, Digital Currencies
 Tags: AEternity, DLT, Digital Currencies, Finance, Blockchains 
 Status: Published
-Summary: Aeternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources, via a decentralised oracle based on prediction markets.
+Summary: AEternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based on prediction markets.
 
 These are my notes on the AEternity blockchain project, I'm not affiliated with the AEternity team.
 
-Aeternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources. This is made possible via a decentralised oracle based on prediction markets. These terms are explained below. The AEternity project has proposed several notable technical features: 
+AEternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources. This is made possible via a decentralised oracle based on prediction markets. These terms are explained below. The AEternity project has proposed several notable technical features: 
 
 - Smart Contracts in state-channels
 - Oracles and native prediction markets

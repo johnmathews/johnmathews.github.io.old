@@ -8,8 +8,8 @@
     display: block;
     color: gray;
     margin: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
@@ -102,7 +102,7 @@ html, body {
   /*font-family: "PT Serif", Georgia, "Times New Roman", serif; */
   font-size: 20px;
   line-height: 1.5;    
-  color: #9a9a9a;
+  color: gray;
 }
 
 .article_author {
@@ -120,7 +120,7 @@ html, body {
         margin-bottom: 5px !important;
         width: 50% !important;
         padding-bottom: 20px;
-        padding-top: 20px;
+        padding-top: 0px;
 }
 }
 
@@ -128,13 +128,15 @@ html, body {
   .article_image img {
   width: 75% !important;  
   padding-bottom; 20px;
-  padding-top: 20px;
+  padding-top: 0px;
+  margin-top: 10px !important;
 }
 }
 
 @media screen and (max-width: 415px) {
   div .article_image img {
   width: 100% !important;  
+  margin-top: 10px !important;
 }
 }
 

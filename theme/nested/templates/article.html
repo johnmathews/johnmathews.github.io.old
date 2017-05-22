@@ -17,23 +17,22 @@
 {% block content %}
     
     <div class="container content">
-        {% if article.image %}
-        <div class="article_image">
-            <img {{ article.image }} />
-        </div>
-        {% endif %}
-
         <div> 
             <h1> {{ article.title }} </h1> 
         </div>
         
-        {# this is a jinja comment. ## is a single line comment 
+        {# this is a jinja comment. ## is a single line comment #} 
         {% if article.summary %}
         <div class="summary">
             {{ article.summary }}
         </div>
         {% endif %}
-        #}
+        
+        {% if article.image %}
+        <div class="article_image">
+            <img {{ article.image }} />
+        </div>
+        {% endif %}
 
         <div class="article_author"> 
            By {{ article.author }} 
