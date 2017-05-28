@@ -62,10 +62,10 @@ Back to the fruit. If Lizzie wants to accept Johns IOU she can use public-key cr
 Date: 1234 From: John To: Lizzie What: 1 Orange
 ```
 
-2] John creates a public private key pair and adds a line of text to the IOU which he encrypts using his private key.
+2] John creates a public private key pair and encrypts the IOU using his private key. He adds an unencrypted "From" line.
 ```objdump
-Date: 1234, From: John, To: Lizzie, What: 1 Orange
-"Signed by John" <- John encrypts this line using his private key
+Date: 1234 To: Lizzie, What: 1 Orange <- John "signs" this line by encrypting it  using his private key
+From: John 
 ```
 
 3] John makes his public key freely available to anyone who wants it.
@@ -83,15 +83,16 @@ So far we've seen how 1 IOU (for an orange) can be securely created, signed and 
 The original note:
 
 ```objdump
-Date: 1234, From: John, To: Lizzie, What: 1 Orange //  "Signed and encrypted by John using his private key" 
+Date: 1234, To: Lizzie, What: 1 Orange <- Signed and encrypted by John using his private key
+From: John
 ```
 
 Then some additional transactions:
 
 ```objdump
-Date: 1235, From: Lizzie, To: John, What: 2 Apples //  "Signed and encrypted by Lizzie using her private key" 
-Date: 1236, From: John, To: Chris, What: 1 Banana //  "Signed and encrypted by John using his private key" 
-Date: 1237, From: Chris, To: Lizzie, What: 2 Bananas //  "Signed and encrypted by Chris using his private key" 
+From: Lizzie // Date: 1235, To: John, What: 2 Apples <- Signed and encrypted by Lizzie using her private key
+From: John // Date: 1236, To: Chris, What: 1 Banana <- Signed and encrypted by John using his private key
+From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas <- Signed and encrypted by Chris using his private key
 ```
 
 After these 4 transactions, between John, Chris and Lizzie, this is what each person owes:
@@ -103,10 +104,10 @@ After these 4 transactions, between John, Chris and Lizzie, this is what each pe
 This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called "coins" and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten as: 
 
 ```objdump
-Date: 1234, From: John, To: Lizzie, What: 2 coins //  "Signed and encrypted by John using his private key" 
-Date: 1235, From: Lizzie, To: John, What: 2 coins //  "Signed and encrypted by Lizzie using her private key" 
-Date: 1236, From: John, To: Chris, What: 2 coins //  "Signed and encrypted by John using his private key" 
-Date: 1237, From: Chris, To: Lizzie, What: 4 coins //  "Signed and encrypted by Chris using his private key" 
+From: John // Date: 1234, To: Lizzie, What: 2 coins <- Signed and encrypted by John using his private key
+From: Lizzie // Date: 1235, To: John, What: 2 coins <- Signed and encrypted by Lizzie using her private key
+From: John // Date: 1236, To: Chris, What: 2 coins <- Signed and encrypted by John using his private key
+From: Chris // Date: 1237, To: Lizzie, What: 4 coins <- Signed and encrypted by Chris using his private key
 ```
 
 By going through the list of transactions we can see that:
@@ -117,10 +118,10 @@ By going through the list of transactions we can see that:
 
 So far Lizzie is the only person who appears to have any business skills.
 
-What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris' promise to pay her 4 coins so that Chris would pay John instead? Yes, because everyone can trust that the record of the transactions is accurate and authentic, a debt can be used as payment. Lizzie's transaction would look like this:
+What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris' promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie's transaction would look like this:
 
 ```objdump
-Date: 1235, From: Lizzie, To: John, What: ba781... //  "Signed and encrypted by Lizzie using her private key"
+From: Lizzie // Date: 1235, To: John, What: ba781... <- Signed and encrypted by Lizzie using her private key
 ```
 
 The "What" section contains a [hash](http://www.movable-type.co.uk/scripts/sha256.html) of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie's transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie's private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another person.
@@ -128,7 +129,7 @@ The "What" section contains a [hash](http://www.movable-type.co.uk/scripts/sha25
 This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the "What" part of the transaction. If we make two other changes - removing the "To" part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would be:
 
 ```objdump
-Date: 2345, From: Chris, What: "A photo of me" //  "Transaction hash: d6f18..., Signed and encrypted by Chris using his private key" 
+From: Chris // Date: 2345, What: "A photo of me" <- Signed and encrypted by Chris using his private key 
 ```
 
 This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris' private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the photo. 
