@@ -64,8 +64,8 @@ Date: 1234 From: John To: Lizzie What: 1 Orange
 
 2] John creates a public private key pair and encrypts the IOU using his private key. He adds an unencrypted "From" line.
 ```objdump
-Date: 1234 To: Lizzie, What: 1 Orange <- John "signs" this line by encrypting it  using his private key
 From: John 
+Date: 1234 To: Lizzie, What: 1 Orange <- John "signs" this line by encrypting it  using his private key
 ```
 
 3] John makes his public key freely available to anyone who wants it.
