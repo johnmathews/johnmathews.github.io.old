@@ -2,7 +2,7 @@ Title: Blockchains from the ground up: Part 1
 Slug: blockchain-introduction
 Date: 2017-5-25 20:38
 Category: Blockchains, Digital Currencies
-Tags: blockchains, digital currencies, distributed ledger technology, fruit, public key infrastructure  
+Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Public Key Cryptography  
 Status: Published
 Summary: Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.
 
@@ -65,7 +65,7 @@ Date: 1234 From: John To: Lizzie What: 1 Orange
 2] John creates a public private key pair and encrypts the IOU using his private key. He adds an unencrypted "From" line.
 ```objdump
 From: John 
-Date: 1234 To: Lizzie, What: 1 Orange <- John "signs" this line by encrypting it  using his private key
+Date: 1234 To: Lizzie, What: 1 Orange <- Signed and encrypted by John using his private key
 ```
 
 3] John makes his public key freely available to anyone who wants it.
@@ -83,8 +83,8 @@ So far we've seen how 1 IOU (for an orange) can be securely created, signed and 
 The original note:
 
 ```objdump
-Date: 1234, To: Lizzie, What: 1 Orange <- Signed and encrypted by John using his private key
 From: John
+Date: 1234, To: Lizzie, What: 1 Orange <- Signed and encrypted by John using his private key
 ```
 
 Then some additional transactions:
@@ -95,7 +95,7 @@ From: John // Date: 1236, To: Chris, What: 1 Banana <- Signed and encrypted by J
 From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas <- Signed and encrypted by Chris using his private key
 ```
 
-After these 4 transactions, between John, Chris and Lizzie, this is what each person owes:
+After these 4 transactions, between John, Chris and Lizzie:
 
 - John owes 1 orange to Lizzie and 1 banana to Chris
 - Lizzie owes 2 apples to John

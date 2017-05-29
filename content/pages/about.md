@@ -12,3 +12,5 @@ I'm on [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent 
 
 Information about my work researching silos and granular flows at increased gravities can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new, please [subscribe]({filename}../pages/subscribe.md) for updates! 
 
+* @johnmathews
+
