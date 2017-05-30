@@ -88,6 +88,7 @@ MENUITEMS = [] #[('Homepage', '/'),('Categories','/categories.html')]
 # Add header background image from content/images : 'background.jpg'
 NEST_HEADER_IMAGES = ''
 NEST_HEADER_LOGO = '/images/logo.jpeg'
+#NEST_HEADER_LOGO = '/images/john_mathews.jpeg'
 
 # Static files
 STATIC_PATHS = ['images', 'documents', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg', 'CNAME']

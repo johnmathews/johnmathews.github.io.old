@@ -42,7 +42,7 @@ From: John
 To: Lizzie
 What: 1 Orange
 Witness: Walter
-Signed: "John's signature", "Lizzie's signature", "Walter's signature"""
+Signed: "John's signature", "Lizzie's signature", "Walter's signature"
 ```
 
 This is a much stronger document and is more difficult to forge. If Lizzie changes the "What:" to "11 Oranges", both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie's 1. Lizzie will be laughed out of court. Hahaha. 
