@@ -5,6 +5,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="{% block fbdescription %}{% endblock fbdescription %}">
+        {##
+        <meta property="og:title" content="{% block fbdescription %}{{ SITENAME }}{% endblock fbdescription %}">       
+        <meta property="og:url" content="{% block fburl %}{% endblock fburl %}">
+        <meta property="og:image" content="{% block fbimage %}{% endblock fbimage %}">
+        ##}
         <meta name="description" content="{% block description %}{% endblock description %}">
         <meta name="keywords" content="{% block keywords %}{% endblock keywords %}">
         <link rel="icon" href="{{ SITEURL }}/favicon.ico">

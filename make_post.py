@@ -9,10 +9,9 @@ Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
 Category:
 Tags:
-Status: draft
+Tweet:
 Summary:
-
-
+Status: draft
 
 """
 
