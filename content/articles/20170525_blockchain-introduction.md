@@ -4,6 +4,7 @@ Date: 2017-5-25 20:38
 Category: Blockchains, Digital Currencies
 Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Public Key Cryptography  
 Status: Published
+Tweet: This is the tweet text
 Summary: Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.
 
 # How to maintain a reliable list across a small network without a central authority 

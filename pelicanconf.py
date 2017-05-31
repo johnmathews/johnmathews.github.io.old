@@ -39,7 +39,7 @@ MARKDOWN = {
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'tag_cloud']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'share_post', 'tag_cloud']
 LOAD_CONTENT_CACHE = False
 
 IPYNB_IGNORE_CSS = False
