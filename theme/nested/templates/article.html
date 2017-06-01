@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}{{ article.title|striptags }} - {{ super() }}{% endblock title %}
+{% block title %} {{ article.title|striptags }} - {{ super() }} {% endblock title %}
+{%- block ogtitle -%} {{ article.title|striptags }} {%- endblock ogtitle -%}
+{%- block ogtype -%} article {%- endblock ogtype -%}
+{%- block ogurl -%} {{ SITEURL }}/{{ article.url }} {%- endblock ogurl -%}
+
+{%- block twittercard -%}Summary{%- endblock twittercard -%}"
+
+{% block keywords %}
+    {% for tag in article.tags|sort -%}
+        {{ tag }}
+        {%- if not loop.last -%}, 
+        {%- endif -%}
+    {% endfor %}
+{% endblock keywords %}
 
 {% block description %}
     {%- if article.summary -%}
@@ -10,15 +23,14 @@
     {%- endif -%}
 {% endblock description %}
 
-{% block fbdescription -%}
-    {%- if article.summary -%}
-    {{ article.summary|striptags|truncate(200)|e }}
-    {%- else -%}
-    {{ article.content|striptags|truncate(200)|e }}
-    {%- endif -%}
-{%- endblock fbdescription %}
 
-{% block keywords %}{% for tag in article.tags|sort %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}{% endblock keywords %}
+{% block ogimage -%}
+    {%- if article.image -%}
+    {{ SITEURL }}/{{ article.image }}
+    {%- else -%}
+    {{ SITEURL }}{{NEST_HEADER_LOGO_BIG }}
+    {%- endif -%}
+{%- endblock ogimage %}
 
 {% block headerstyle %}
     {% if article.illustration %}

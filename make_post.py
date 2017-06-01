@@ -7,9 +7,10 @@ TEMPLATE = """
 Title: {title}
 Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category:
+Category: Blockchains, Digital Currencies | Data Analysis | Other | Tools
 Tags:
-Tweet:
+Image: src="/images/filename.extension" alt=" "
+Tweet: via @johnmathews
 Summary:
 Status: draft
 
