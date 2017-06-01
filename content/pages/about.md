@@ -4,7 +4,7 @@ Date: 2017-03-15
 #About
 Thanks for visiting my blog. I'm an engineer working towards making finance more efficient, and the posts here are a haphazard record of my curiosities and intrigues. I started my career in financial audits and recently qualified as an accountant. Before that I achieved a doctorate in Engineering. I see a world full of opportunities to make things and problems to solve.
 
-I live in London but before I came (back) to the UK I lived in Austria which was much more comfortable. I'm now actively seeking opportunities to move me and my family somewhere overseas.
+I live in London but before I came back to the UK I lived in Austria which was much more comfortable. I'm now actively seeking opportunities to move me and my family somewhere overseas.
 
 I'm looking for opportunities to work on blockchain or fintech projects, because blockchains are incredible and finance needs to be fairer, quicker and easier to understand.
 
