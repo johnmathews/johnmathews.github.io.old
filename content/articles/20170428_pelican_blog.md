@@ -7,15 +7,15 @@ Status: published
 Image: src="/images/get_pelican.jpg" alt="Pelican"
 Summary: I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.
 
-When I began to blog in 2016, I began to appreciated aspects of the design of blogs I admired and I realised that many of them were static sites. They had simple designs which made it easier to focus on the content, and they were fast. I wanted this for my blog, too. Examples of blog designs I admire are [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com). I'd used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on the design and functionality. I wanted to have control over my blog's features. 
+When I began blogging in 2016, I became more aware of how blogs are designed. Many of my favorting blogs had simple designs which made it easier to focus on the content, and they loaded really fast. (E.g.  [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com)). I wanted this for my blog, too. I'd used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on its design and functionality. I wanted to have control over my blog's features. 
 
-This led me to static sites, which contain only fixed content and are faster to load and easier to design that a dynamic blogging platform such as Wordpress. Because I was familiar with Python already I chose [Pelican](https://blog.getpelican.com/) rather than another static site generator such as Jekyll.
+This led me to static sites which contain only fixed content and are faster to load and easier to design than one built using a dynamic blogging platform such as Wordpress. Because I was already familiar with Python I chose [Pelican](https://blog.getpelican.com/) rather than another static site generator such as Jekyll.
 
 There are plenty of sites to tell you how to start blogging in Pelican, so here I will focus on my experience after the initial set-up. When I was learning how to begin, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
 
 ## The learning curve
 
-… was longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following tools to hack my blog together. I'm really happy about this because these tools could be used in future projects too.  
+… was longer than I expected. Since setting out to switch from Wordpress to Pelican, I've taught myself enough of the following tools to hack this site together. I'm really happy about this because these tools could be used in future projects too.
 
 ### HTML
 
@@ -73,7 +73,7 @@ Make those images as small as possible to help make the site as fast as possible
 
 ### Assets
 
-Before I started working with Pelican, minifying css and JavaScript would have seemed totally beyond me. But once [Pingdom](https://tools.pingdom.com/) and Googles [Pagespeed](https://developers.google.com/speed/pagespeed/insights/) started criticising me for my multiple .css files, I decided to see what could be done. As with all these plugins, you can get it from Github and the readme is clear and accurate. 
+Before I started working with Pelican, minifying css and JavaScript would have been too advanced. But once [Pingdom](https://tools.pingdom.com/) and Google [Pagespeed](https://developers.google.com/speed/pagespeed/insights/) started criticising me for my multiple .css files, I accepted the challenge. 
 
 ## Conclusion
 

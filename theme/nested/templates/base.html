@@ -9,19 +9,21 @@
         <meta name="keywords" content="{% block keywords %}{% endblock keywords %}">
        
         <meta name="twitter:card" value="{% block twittercard %}{% endblock twittercard %}">
-        <meta name="twitter:site" content="@johnmathews">
+        <meta name="twitter:domain" content="http://johnmathews.eu">
         <meta name="twitter:title" content="{{ self.ogtitle() }} ">
         <meta name="twitter:description" content="{{ self.description() }}">
         <meta name="twitter:creator" content="@johnmathews">
         <meta name="twitter:image" content="{{ self.ogimage() }}">
 
         
-        <meta property="og:title" content="{% block ogtitle %}{% endblock ogtitle %}">       
+        <meta property="og:title" content="{% block ogtitle %}{% endblock ogtitle %}" />       
         <meta property="og:type" content="{% block ogtype %}{% endblock ogtype %}" />
-        <meta property="og:url" content="{% block ogurl %}{% endblock ogurl %}">
-        <meta property="og:image" content="{% block ogimage %}{% endblock ogimage %}">
-        <meta property="og:description" content="{{ self.description() }}">
-        
+        <meta property="og:url" content="{% block ogurl %}{% endblock ogurl %}" />
+        <meta property="og:site_name" content="John Mathews' blog" />
+        <meta property="og:image" content="{% block ogimage %}{% endblock ogimage %}" />
+        <meta property="og:description" content="{{ self.description() }}" />
+        <meta property="fb:app_id" content="871943349626197" />
+
         <link rel="icon" href="{{ SITEURL }}/favicon.ico">
 
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>

@@ -10,7 +10,7 @@ Date: {year}-{month}-{day} {hour}:{minute:02d}
 Category: Blockchains, Digital Currencies | Data Analysis | Other | Tools
 Tags:
 Image: (1200x627px ideally) src="/images/filename.extension" alt=" "
-Tweet: via @johnmathews
+Tweet: (include hashtags)
 Summary:
 Status: draft
 
