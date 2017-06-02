@@ -25,13 +25,16 @@ def article_tweet(content):
     tweet = ''
     if hasattr(content, 'tweet'):
         tweet =  BeautifulSoup(content.tweet, 'html.parser').get_text().strip()
-        return quote(('%s%s%s' % (' ', tweet, ' ')).encode('utf-8'))
+        return quote(('%s' % (tweet)).strip().encode('utf-8'))
     else:
         return ' ' 
 
 def article_url(content):
     site_url = content.settings['SITEURL']
     return quote(('%s/%s' % (site_url, content.url)).encode('utf-8'))
+
+def twitter_handle(content):
+    return content.settings['TWITTER_HANDLE']
 
 def article_summary(content):
     return quote(BeautifulSoup(content.summary, 'html.parser').get_text().strip().encode('utf-8'))
@@ -43,13 +46,15 @@ def share_post(content):
     url = article_url(content)
     summary = article_summary(content)
     tweet = article_tweet(content)
-    tweet_as_byte = ('%s%s%s' % (title, tweet, url)).encode('utf-8')
+    tweet_as_byte = ('%s' % (tweet)).encode('utf-8')
     tweet = str(tweet_as_byte,'utf-8')
+    t_handle = twitter_handle(content)
     
     diaspora_link = 'https://sharetodiaspora.github.io/?title=%s&url=%s' % (title, url)
     facebook_link = 'http://www.facebook.com/sharer/sharer.php?u=%s' % url
-    gplus_link = 'https://plus.google.com/share?url=%s' % url
-    twitter_link = 'http://twitter.com/home?status=%s' % tweet
+    plus_link = 'https://plus.google.com/share?url=%s' % url
+    #twitter_link = 'http://twitter.com/home?status=%s' % tweet
+    twitter_link = 'http://twitter.com/share?url=%s&text=%s&via=%s' % (url, tweet, t_handle)
     linkedin_link = 'https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s&summary=%s&source=%s' % (
         url, title, summary, url
     )
@@ -60,7 +65,7 @@ def share_post(content):
                    'diaspora': diaspora_link,
                    'twitter': twitter_link,
                    'facebook': facebook_link,
-                   'google-plus': gplus_link,
+                   #'google-plus': gplus_link,
                    'linkedin': linkedin_link,
                    'email': mail_link
                    }

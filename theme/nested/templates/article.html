@@ -23,8 +23,8 @@
     {%- endif -%}
 {% endblock description %}
 
-
-{% block ogimage -%}
+# image should be ideally 1200 pixels x 627 pixels (1.91/1 ratio)
+{% block ogimage -%} 
     {%- if article.image -%}
     {{ SITEURL }}/{{ article.image }}
     {%- else -%}

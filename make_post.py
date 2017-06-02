@@ -9,7 +9,7 @@ Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
 Category: Blockchains, Digital Currencies | Data Analysis | Other | Tools
 Tags:
-Image: src="/images/filename.extension" alt=" "
+Image: (1200x627px ideally) src="/images/filename.extension" alt=" "
 Tweet: via @johnmathews
 Summary:
 Status: draft

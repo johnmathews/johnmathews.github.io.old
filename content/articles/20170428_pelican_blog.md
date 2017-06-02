@@ -5,39 +5,39 @@ Category: Tools
 Tags: Pelican, Blog, Python 
 Status: published 
 Image: src="/images/get_pelican.jpg" alt="Pelican"
-Summary: I became frustrated with my WordPress blog and switched to Pelican. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.
+Summary: I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.
 
-When I began to blog in 2016, I noticed the design of other blogs I admired, and I realised that many of them were static sites that had realtively simple designs. Their design made it easier to focus on the content by removing visual clutter and I wanted this for my blog, too. Examples of blog designs I admire are [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com). I used Wordpress to buid and publish my blog, which is a great way to begin, but I began to feel like I was compromising on the design and functionality. I wanted to have control over my blog's features. 
+When I began to blog in 2016, I began to appreciated aspects of the design of blogs I admired and I realised that many of them were static sites. They had simple designs which made it easier to focus on the content, and they were fast. I wanted this for my blog, too. Examples of blog designs I admire are [unwiredcouch.com](https://unwiredcouch.com) and [CuriousGnu](https://www.curiousgnu.com). I'd used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on the design and functionality. I wanted to have control over my blog's features. 
 
-This led me to learn about static sites, which contain only fixed content, and are faster to load and easier to design that a dynamic site built using PHP, such as Wordpress. Because I was familiar with Python already, I chose to use [Pelican](https://blog.getpelican.com/) rather than another static site generator such as  Jekyll.
+This led me to static sites, which contain only fixed content and are faster to load and easier to design that a dynamic blogging platform such as Wordpress. Because I was familiar with Python already I chose [Pelican](https://blog.getpelican.com/) rather than another static site generator such as Jekyll.
 
-There are plenty of sites to tell you how to start blogging in Pelican, so here I will inlcude my experience of the learning curve once the site was initally set-up. When I was learning how to begin, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
+There are plenty of sites to tell you how to start blogging in Pelican, so here I will focus on my experience after the initial set-up. When I was learning how to begin, I found [Amy Hanlons](http://mathamy.com/migrating-to-github-pages-using-pelican.html) blog particularly useful and clear.
 
 ## The learning curve
 
-… was longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following tools to hack my blog together. 
+… was longer than I expected. Since setting out to convert my blog from Wordpress to Pelican, I've taught myself enough of the following tools to hack my blog together. I'm really happy about this because these tools could be used in future projects too.  
 
 ### HTML
 
-I find HTML quirky but intuitive. Tags make sense, comments are laborious and learning by google is relatively quick. 
+I find HTML quirky but intuitive. Tags make sense, comments are laborious and learning by google is relatively quick. Whatever it is I'm trying to do (like add a link to jump back to the top of the page) someone will have posted the answer somewhere.
 
 ### CSS
 
-Writing CSS feels a lot more concise that HTML. It also feels like its impossible to learn and hack together new phrases by only looking at examples. There was a lightbulb moment when I realised CSS Selectors were a thing...
+Writing CSS feels a lot more concise that HTML but it also felt impossible to learn without taking a step back and reading an introductory course. Usually I learn by hacking new phrases together from existing examples so it was frustrating to go backwards before progressing. There was a lightbulb moment when I realised CSS Selectors were a thing, and realising CSS files get called in the header (usually) of an HTML file…
 
 I ended up using a trial subscription to [Thinkfuls](https://www.thinkful.com/bootcamp/web-development/) Front-end developer course, which is pretty good at explaining how CSS is structured and how to arrange content on a page. If I still had access, I'd be completing the second half of the course :)
 
 ### Jinja templates
 
-Jinja is a tool written in Python to create HTML pages. It doesnt look intuitive to me, but I've been able to get enough done by copy-pasting similar snippets from other parts of the theme I started with ([Thanks Molivier!](https://github.com/molivier/nest)) to make the changes I wanted. I'd like to learn more as it seems to be powerful and simple.
+Jinja is a tool written in Python to create HTML pages. It doesn't look intuitive to me, but I've been able to get enough done by copy-pasting similar snippets from other parts of the theme I started with ([Thanks Molivier!](https://github.com/molivier/nest)) to make the changes I wanted. I'd like to learn more as it seems really powerful.
 
 ### Pelican
 
-To build a website using Pelican, you need to run commands from the terminal. There are various options but I found myself using only a few commands regularly. "Pelican-quickstart" will generate a project skeleton to get you started. "make devserver" will initialise a local server so that I can view changes locally before uploading (and its opposite, "make stopserver" to stop running localhost) and then "pelican content -s publishconf.py" generates the html and css for remote hosting (on github pages, which I didn't initally realise was possible)
+To build a website using Pelican, you need to run commands from the terminal. There are various commands but I found myself using only a few regularly. "Pelican-quickstart" will generate a project skeleton to get you started. "make devserver" will initialise a local server and generate output files so that I can view changes locally before uploading (its opposite is "make stopserver"). Finally "pelican content -s publishconf.py" generates the html and css for remote hosting. Some of the plugins I use such as "Assets" which minifies the CSS only work when publshconf.py is called, which confused me initially as I didn't think it was working when I was only using "make devserver". 
 
 ### Git
 
-This really challenged me, and I still dont feel like I know what I'm doing. Git is far more powerful than I need it to be, when all I want to do is undo some erronous edits and upload a new version of the site to Github. 
+This really challenged me, and I still don't feel like I know what I'm doing. Git is far more powerful than I need it to be, when all I want to do is undo some erroneous edits and upload a new version of the site to Github. 
 
 I can stage and commit files, I can create local and remote repo's from the command line. I can change a remote's URL, reset a repo and force a push or a pull. That's all. I haven't tried to merge or to create a test branch, and if some part of the process goes wrong it usually takes hours to make it right again. 
 
@@ -57,7 +57,7 @@ You'll also need to update the DNS records of your domain name to point the name
 
 ## Plugins
 
-One thing I didn't want when moving away from Wordpress was a site bloated with features that didn't make the content easier to read. However I found I still needed a few plugins to optimise my site and provide some basic functionality that doesnt come with the vanilla Pelican.
+One thing I didn't want when moving away from Wordpress was a site bloated with features that didn't make the content easier to read. However I found I still needed a few plugins to optimise my site and provide some basic functionality that doesn't come with the vanilla Pelican.
 
 ### iPython notebooks 
 
@@ -77,4 +77,6 @@ Before I started working with Pelican, minifying css and JavaScript would have s
 
 ## Conclusion
 
-I'm super happy wth the websites design and functionality. It's designed the way I want it, and I've learnt a ton of useful stuff along the way.
+I'm super happy wth the websites design and speed. It's designed the way I want it, and I've learnt a ton of useful stuff along the way. 
+
+Update: My second post about blogging in Pelican is [here]({filename}../articles/20170601_pelican_2.md).
