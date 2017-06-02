@@ -2,7 +2,7 @@ Title: Blogging with Pelican
 Slug: pelican
 Date: 2017-4-28 1:21
 Category: Tools
-Tags: Pelican, Blog, Python 
+Tags: Pelican, Blog, Python, Static Site, 
 Status: published 
 Image: src="/images/get_pelican.jpg" alt="Pelican"
 Summary: I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.
