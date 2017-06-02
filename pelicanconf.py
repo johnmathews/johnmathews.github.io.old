@@ -93,6 +93,7 @@ NEST_HEADER_LOGO_BIG = '/images/logo_big.jpeg'
 
 TWITTER_HANDLE = 'johnmathews' # dont need the @
 EMAIL_ICON = '/images/email_logo.png'
+LINKEDIN_ICON = '/images/linkedin_logo.png'
 FACEBOOK_ICON = '/images/facebook_logo.png'
 TWITTER_ICON = '/images/twitter_logo.png'
 
