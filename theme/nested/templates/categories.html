@@ -14,6 +14,11 @@
 {% block content %}
     <div class="archive-container">
         <div class="container content archive">
+
+            <div id="sort_posts">
+                <h3><a href="{{ SITEURL }}/archives.html">Sort by date</a></h3>
+            </div>
+            
         	{% for category, articles in categories %}
             <h2>{{ category }}</a></h2>
             <dl class="dl-horizontal">

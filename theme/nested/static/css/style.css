@@ -93,6 +93,14 @@ html, body {
   padding-bottom:50px; /* this needs to be bigger than footer height*/
 }
 
+#sort_posts {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: right;
+    font-style: italic;
+    margin-bottom: -5px;
+}
+
 .article_date {
   text-align: left;
   font-style: italic;
