@@ -5,7 +5,13 @@
 {%- block ogtype -%} article {%- endblock ogtype -%}
 {%- block ogurl -%} {{ SITEURL }}/{{ article.url }} {%- endblock ogurl -%}
 
-{%- block twittercard -%}Summary_large_image{%- endblock twittercard -%}"
+{%- block twittercard -%}
+    {%- if article and article.image is defined -%}
+        Summary_large_image
+    {%- else -%}
+        Summary
+    {%- endif -%}
+{%- endblock twittercard -%}"
 
 {% block keywords %}
     {% for tag in article.tags|sort -%}
