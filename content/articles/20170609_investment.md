@@ -1,4 +1,4 @@
-Title: Understanding Investment
+Title: Understanding VC Investment
 Slug: investment
 Date: 2017-6-9 23:03
 Category: Other
