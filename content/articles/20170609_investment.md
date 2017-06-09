@@ -4,7 +4,7 @@ Date: 2017-6-9 23:03
 Category: Other
 Tags: LIS, FinTech, Startup, Founder
 Image: 
-Tweet: #lis17 #Lisbon #Portugal #startup #entrepreneur 
+Tweet: How to pitch #lis17 #Lisbon #Portugal #startup #entrepreneur 
 Summary: How to pitch to a venture capitalist: Market + Management + Model + Momentum
 Status: Published
 
