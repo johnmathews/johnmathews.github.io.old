@@ -5,8 +5,8 @@ Category: Other
 Tags: LIS, FinTech, Startup, Founder
 Image: 
 Tweet: #lis17 #Lisbon #Portugal #startup #entrepreneur 
-Summary:
-Status: draft
+Summary: How to pitch to a venture capitalist: Market + Management + Model + Momentum
+Status: Published
 
 I attended the [Lisbon Investment Summit](http://www.lis-summit.com/) in June and wrote about my experiences [here]({filename}../articles/20170609_lis17.md). One of the best sessions was with [Boris Golden](https://twitter.com/Boris_Golden) called "Understand Investment". These are my notes:
 
