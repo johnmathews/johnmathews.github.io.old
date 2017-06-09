@@ -32,7 +32,7 @@ Oussama spoke with passion and humour. It's clear that he cares about encouragin
 18. So be pragmatic about risk.
 19. Incorporate in London where the laws are good, even if you don't want to operate in the UK. It has a better designed system of corporate law. Estonia is also good. 
 
-## Best European city for founders:
+## Best European city for founders
 
 London, Paris, Berlin..
 
