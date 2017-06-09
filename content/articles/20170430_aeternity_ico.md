@@ -7,7 +7,7 @@ Status: Published
 Image: src="/images/aeternity_logo.png" alt="AEternity blockchain"
 Summary: I participated in phase 1 of the AEternity ICO by converting Sterling to AEons via Ether. I tried several exchanges and chose the quickest, cheapest conversion method.
 
-On April 3rd, I happened to be Googling digital currencies and blockchain innovations when I came across the [AEternity website](http://www.aeternity.com) and skimmed their [white paper](https://blockchain.aeternity.com/%C3%A6ternity-blockchain-whitepaper.pdf). The project is ambitious, like many crypto projects, but seems well organised. The team is well known in the space. There is a clear plan to develop the project and create a blockachain technology that, if successful, could bring.a step change in the use of digital currencies for high volume low value transactions, and the viable implementation of smart contracts. 
+On April 3rd, I happened to be Googling digital currencies and blockchain innovations when I came across the [AEternity website](http://www.aeternity.com) and skimmed their [white paper](https://blockchain.aeternity.com/%C3%A6ternity-blockchain-whitepaper.pdf). The project is ambitious, like many crypto projects, but seems well organised. The team is well known in the space. There is a clear plan to develop the project and create a blockchain technology that, if successful, could bring. A step change in the use of digital currencies for high volume low value transactions, and the viable implementation of smart contracts. 
 
 ## The ICO
 
