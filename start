@@ -4,7 +4,7 @@ echo Stage blog files
 git add .
 
 echo Commit blog files
-git commit -m "-"
+git commit -m "$1"
 
 echo Push blog files
 git push
@@ -16,7 +16,7 @@ echo Stage output files
 git add .
 
 echo Commit output files
-git commit -m "-"
+git commit -m "$1"
 
 echo Push output files
 git push
