@@ -1,10 +1,26 @@
 #!/bin/bash
 
-echo Staging Files
+echo Stage blog files 
 git add .
 
-echo Committing files
+echo Commit blog files
 git commit -m "-"
 
-echo Pushing files
+echo Push blog files
 git push
+
+cd output
+pwd
+
+echo Stage output files
+git add .
+
+echo Commit output files
+git commit -m "-"
+
+echo Push output files
+git push
+
+cd ..
+
+pwd 
