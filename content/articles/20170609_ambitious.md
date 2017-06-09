@@ -8,7 +8,7 @@ Tweet: #lis17 #Lisbon #Portugal #startup #entrepreneur
 Summary: Creating something that matters is hard. Learn to leverage your time, you can never get it back. Being a successful founder is not impossible, it is always exciting.
 Status: Published
 
-Whilst at the [Lisbon Investment Summit](http://www.lis-summit.com/) I went to a session called "What it means to be ambitious for founders in Europe" by [Oussama Ammar](https://twitter.com/daedalium?lang=en). 
+Whilst at the [Lisbon Investment Summit](http://www.lis-summit.com/) I went to a session called "What it means to be ambitious for founders in Europe" by [Oussama Ammar](https://twitter.com/daedalium?lang=en). I've written generally about the summit [here.]({filename}../articles/20170609_lis17.md)
 
 Oussama spoke with passion and humour. It's clear that he cares about encouraging would-be founders and confronting some of the cultural hurdles that exist in Europe. These are my notes from the session:
 
