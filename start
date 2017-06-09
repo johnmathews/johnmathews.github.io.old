@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo Staging Files
+git add .
+
+echo Committing files
+git commit -m "-"
+
+echo Pushing files
+git push
