@@ -16,8 +16,8 @@ I attended the [Lisbon Investment Summit](http://www.lis-summit.com/) in June an
 4. Whilst executing and discovering a scalable way to grow.
 5. Startups need money for ambitious but credible growth plans.
 6. A typical stake for a VC could be roughly 20%.
-7. VC's want an exit price of at least 100m, otherwise their business models don't workout.
-8. 10m can seem a lot for a founder with a 30% stake, but it's not enough to attract VCs so aim higher.
+7. VC's want an exit price of at least 100m, otherwise their business models don't work out.
+8. $10m can seem a lot for a founder with a 30% stake, but it's not enough to attract VCs, so aim higher.
 
 ## How to pitch
 
@@ -48,5 +48,5 @@ I attended the [Lisbon Investment Summit](http://www.lis-summit.com/) in June an
 
 - Show traction and that you've cracked the important problem
 - Show ambitous and credible growth plans
-- With a capital efficient growth model
+- With a capital-efficient growth model
 - And a clear strategy to scale and win
