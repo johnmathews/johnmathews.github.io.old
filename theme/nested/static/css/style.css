@@ -576,7 +576,6 @@ h4 {
 /* Article */
 .neighbors{
     padding-top: 10px;
-   // padding-right: 10px; 
     text-align: right;
     position: relative;
     height: 50px;
@@ -673,7 +672,7 @@ h4 {
     line-height: 2; //1.42857143;    
 }
 
-@media screen and (max-width: 766px){
+@media screen and (max-width: 769px){
     .neighbors{
         padding-top: 10px;
         text-align: right;
