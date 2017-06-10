@@ -17,11 +17,11 @@ Oussama spoke with passion and humour. It's clear that he cares about encouragin
 3. It's really important to learn how to leverage your time effectively. You can lose anything else and get it back but you can never recover the time you've already spent.
 4. The only way to succeed is to try hard.
 5. It's hard to do something that matters.
-6. In Europe you need to be more ambitious than average (measured against other countries) because the environment makes it harder to be an entrepreneur. (Attitudes to risk, comfort, security, expectations of failure.. are all unhelpful for Founders.)
+6. In Europe you need to be more ambitious than average (measured against other countries) because the environment makes it harder to be an entrepreneur. (Attitudes to risk, comfort, security, expectations of failure.. are all unhelpful for founders.)
 7. It's not impossible, just harder. So be more ambitious.
 8. Everyone is replaceable, no-one is unique.
 9. You can always lose money and replace it. There is so much money in the world.
-10. Take a look at Crunchbase and see the failure rate for companies that raised \$1m - \$10m, it is the same rate for those that raised \$10m+ .
+10. Take a look at Crunchbase and see the failure rate for companies that raised $1m - $10m, it is the same rate for those that raised $10m+.
 11. If you lose money on a project you will learn things from that experience and you can leverage that learning
 12. … But you will never get back the time you spent.
 13. Zombies are companies that make enough money to survive but not enough to provide joy to the people in the company - aim high and…
@@ -47,4 +47,4 @@ London, Paris, Berlin..
 
 The founder of Slack lives in Vancouver	with his wife and kids. He spends 1 day each week in California and everyone thinks Slack is Californian due to good marketing. Forget national pride, be pragmatic. Leverage the internet. 
 
-The founders of Airbnb would fly from New York's to California for 1 day each week. They were originally in California where AirBnB started, but decided that if they could make it work in New York then AirBnB would be a success, so they moved to New York and flew back for meetings , etc. If you ask Europeans to come to a meeting in London (which is not as far as California is from New York) people start complaining and deciding they can't be bothered. 
+The founders of Airbnb would fly from New York to California for 1 day each week. They were originally in California where AirBnB started, but decided that if they could make it work in New York then AirBnB would be a success, so they moved to New York and flew back for meetings , etc. If you ask Europeans to come to a meeting in London (which is not as far as California is from New York) people start complaining and deciding they can't be bothered. 
