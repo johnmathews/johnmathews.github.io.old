@@ -98,10 +98,10 @@ FACEBOOK_ICON = '/images/facebook_logo.png'
 TWITTER_ICON = '/images/twitter_logo.png'
 
 # Static files
-STATIC_PATHS = ['images', 'documents', 'extra/robots.txt', 'extra/favicon.ico', 'extra/logo.svg', 'CNAME']
+STATIC_PATHS = ['images', 'documents', 'extra/robots.txt', 'extra/favicon.png', 'extra/logo.svg', 'CNAME']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon.png': {'path': 'favicon.png'},
     'extra/logo.svg': {'path': 'logo.svg'}
 }
 
