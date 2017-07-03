@@ -20,8 +20,7 @@ Status: draft
 def make_entry(title):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
-    f_create = "content/articles/{}{:0>2}{:0>2}_{}.md".format(
-        today.year, today.month, today.day, slug)
+    f_create = "content/articles/{}.md".format(slug)
     t = TEMPLATE.strip().format(title=title,
                                 hashes='#' * len(title),
                                 year=today.year,
@@ -41,7 +40,7 @@ def make_entry(title):
 '''
 if __name__ == '__main__':
 
-    if len(sys.argv) > 1:
+    if len(sys.argv) != 0:
         make_entry(sys.argv[1])
     else:
         print("No title given")

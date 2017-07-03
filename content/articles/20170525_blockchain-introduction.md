@@ -7,7 +7,7 @@ Tweet:
 Summary: Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.
 Status: Published
 
-# How to maintain a reliable list across a small network without a central authority 
+## Maintain an accurate list of two-party transactions, without a central authority: 
 
 This is part 1 of an introduction to the key features of a generalised blockchain. I haven't included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain technology.
 
@@ -102,7 +102,9 @@ After these 4 transactions, between John, Chris and Lizzie:
 - Lizzie owes 2 apples to John
 - Chris owes 2 bananas to Lizzie.
 
-This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called "coins" and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten as: 
+## Blockchains as a financial ledger
+
+This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is profitable? We cannot say. To be able to know, we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange), also lets invent a currency called "coins" and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten as: 
 
 ```objdump
 From: John // Date: 1234, To: Lizzie, What: 2 coins <- Signed and encrypted by John using his private key
@@ -119,13 +121,15 @@ By going through the list of transactions we can see that:
 
 So far Lizzie is the only person who appears to have any business skills.
 
-What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris' promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie's transaction would look like this:
+What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris' promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows credit to be used as payment. Lizzie's transaction would look like this:
 
 ```objdump
 From: Lizzie // Date: 1235, To: John, What: ba781... <- Signed and encrypted by Lizzie using her private key
 ```
 
 The "What" section contains a [hash](http://www.movable-type.co.uk/scripts/sha256.html) of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie's transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie's private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another person.
+
+## Blockchains as proof of identity
 
 This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the "What" part of the transaction. If we make two other changes - removing the "To" part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would be:
 
@@ -135,8 +139,12 @@ From: Chris // Date: 2345, What: "A photo of me" <- Signed and encrypted by Chri
 
 This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris' private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the photo. 
 
+## Blockchains for identity verification (Know Your Customer)
+
 Another use for public-key cryptography arises if Chris were an employee in a bank, and the "What" contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer's true identity and documenting the evidence that's been collected to show that the bank knows who their customer really is. If the transaction included a new section called "Customer ID" (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind KYC on a blockchain. 
 
-Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of "coins" will need to be controlled in order to maintain their value. In the example above, people can freely create "coins" and can also carry negative amounts of "coins". This would result in the value of a "coin" plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable manner.
+## Next Steps
+
+Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of "coins" will need to be controlled in order to maintain their value. In the example above, people can freely create "coins" and can also carry negative amounts of "coins". This would result in a worthless"coin". Therefore their creation must be controlled in a predictable manner.
 
 Our examples so far only include 3 people. If there are a lot of people in the network it wouldn't be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in part 2.
