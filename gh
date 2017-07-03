@@ -1,24 +1,24 @@
 #!/bin/bash
 
-echo ***Stage blog files*** 
+echo Stage blog files 
 git add .
 
-echo ***Commit blog files***
+echo Commit blog files
 git commit -m "$1"
 
-echo ***Push blog files***
+echo Push blog files
 git push
 
 cd output
 pwd
 
-echo ***Stage output files***
+echo Stage output files
 git add .
 
-echo ***Commit output files***
+echo Commit output files
 git commit -m "$1"
 
-echo ***Push output files***
+echo Push output files
 git push
 
 cd ..

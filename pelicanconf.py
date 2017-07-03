@@ -8,7 +8,6 @@ AUTHOR = 'John Mathews'
 SITENAME = "John Mathews"
 SITEURL = 'http://johnmathews.eu' # should include http://
 ASSET_URL = './css/'
-CATEGORIES_VIEW = False # If true then index page will display posts by category
 
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = False
