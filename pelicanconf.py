@@ -8,6 +8,7 @@ AUTHOR = 'John Mathews'
 SITENAME = "John Mathews"
 SITEURL = 'http://johnmathews.eu' # should include http://
 ASSET_URL = './css/'
+USE_CATEGORIES = False
 
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = False
