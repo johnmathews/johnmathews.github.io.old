@@ -1,7 +1,7 @@
 Title: Coursera's "Data Science Specialisation"
 Date: 2016-08-01 13:30
 Author: John Mathews
-Category: Data Analysis
+Category: Data
 Tags: Coursera, Data Science, R
 Slug: courseras-data-science-specialisation
 Status: published

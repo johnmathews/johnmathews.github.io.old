@@ -1,7 +1,7 @@
 Title: Digital currencies: the basics
 Date: 2016-08-19 21:02
 Author: John Mathews
-Category: Blockchains, Digital Currencies
+Category: DLT
 Tags: Bitcoin, Cryptocurrencies, Cryptography, Digital Currencies, Finance, Fintech
 Slug: digital-currencies-the-basics
 Status: published

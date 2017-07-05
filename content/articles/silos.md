@@ -1,7 +1,7 @@
 Title: Silos: Introduction to my doctorate research
 Date: 2016-10-02 00:06
 Author: John Mathews
-Category: Other
+Category: Engineering
 Tags: Doctorate, Granular Flow, Granular Materials, PhD, Research, Engineering, Silo, Thesis, Vienna
 Slug: silos
 Status: published

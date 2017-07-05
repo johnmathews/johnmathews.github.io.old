@@ -1,7 +1,7 @@
 Title: Übersicht widget: Time Until
 Date: 2016-08-07 11:40
 Author: John Mathews
-Category: Other
+Category: Front-end
 Tags: AppleScript, CoffeeScript, JavaScript, Time Until, Übersicht, Widgets
 Slug: time-until
 Status: published

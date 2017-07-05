@@ -1,7 +1,7 @@
 Title: Übersicht widget: Time Since
 Date: 2016-07-30 13:29
 Author: John Mathews
-Category: Other
+Category: Front-end
 Tags: CoffeeScript, JavaScript, Time Since, Übersicht, Widgets, AppleScript, Time Until
 Status: published
 

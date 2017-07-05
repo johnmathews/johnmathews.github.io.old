@@ -1,7 +1,7 @@
 Title: Understanding VC Investment
 Slug: investment
 Date: 2017-6-9 23:03
-Category: Other
+Category: Startups
 Tags: LIS, FinTech, Startup, Founder
 Image: 
 Tweet: How to pitch #lis17 #Lisbon #Portugal #startup #entrepreneur 
