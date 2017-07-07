@@ -23,4 +23,8 @@ git push
 
 cd ..
 
-pwd 
+pwd
+
+echo *****************
+echo *** ALL DONE! ***
+echo *****************
