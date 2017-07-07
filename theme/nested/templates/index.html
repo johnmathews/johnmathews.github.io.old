@@ -16,7 +16,7 @@
         <div class="container content archive">
             {% if USE_CATEGORIES %}
                 <div id="sort_posts">
-                    <h3><a href="{{ SITEURL }}/archives.html">Sort by date</a></h3>
+                    <h3 style="font-weight:normal;"><a href="{{ SITEURL }}/archives.html">Sort by date</a></h3>
                 </div>
                 {% for category, articles in categories %}
                 <h2>{{ category }}</h2>
@@ -29,7 +29,7 @@
                 {% endfor %}
             {% else %}
                 <div id="sort_posts">
-                    <h3><a href="{{ SITEURL }}/categories.html">Sort by category</a></h3>
+                    <h3 style="font-weight:normal;"><a href="{{ SITEURL }}/categories.html">Sort by category</a></h3>
                 </div>
                 {% for year, year_group in articles|groupby('date.year')|sort(reverse=True) %}
                     <h2>{{ year }}</h2>
