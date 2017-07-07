@@ -451,14 +451,13 @@ h4 {
 
 .header-logo a:hover {
     color: #fff;
-    text-decoration:underline;
 }
 /* Header */
 
 .header-container {
     background: #f5f5f5;
     padding: 0;
-    min-height: 105px;
+    min-height: 125px;
 }
 .header-wrapper{
     padding-left: 0px;
