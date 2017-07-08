@@ -7,10 +7,10 @@ TEMPLATE = """
 Title: {title}
 Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category: Blockchains, Digital Currencies | Data Analysis | Other | Tools
+Category: Data | DLT | Engineering | Finance | Front-end | Lifestyle | Startups | Tools 
 Tags:
-Image: (1200x627px ideally) src="/images/filename.extension" alt=" "
-Tweet: (include hashtags)
+Image: src="/images/filename.extension" alt=" " 1200x627px
+Tweet: #hashtags
 Summary:
 Status: draft
 
@@ -20,8 +20,7 @@ Status: draft
 def make_entry(title):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
-    f_create = "content/articles/{}{:0>2}{:0>2}_{}.md".format(
-        today.year, today.month, today.day, slug)
+    f_create = "content/articles/{}.md".format(slug)
     t = TEMPLATE.strip().format(title=title,
                                 hashes='#' * len(title),
                                 year=today.year,

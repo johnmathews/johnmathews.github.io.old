@@ -4,6 +4,7 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+
 .summary {
     display: block;
     color: gray;
@@ -127,9 +128,10 @@ html, body {
     .article_image img {
         margin-top: 5px !important;
         margin-bottom: 5px !important;
-        width: 50% !important;
+        /* width: 50% !important; */
         padding-bottom: 20px;
         padding-top: 0px;
+        max-height: 500px !important;
 }
 }
 
@@ -149,21 +151,34 @@ html, body {
 }
 }
 
+.tags {
+   -webkit-column-width: 175px;
+  -moz-column-width: 175px;
+  -o-column-width: 175px;
+  -ms-column-width: 175px;
+  column-width: 175px;
+ 
+  -webkit-column-rule-style: solid;
+  -moz-column-rule-style: solid;
+  -o-column-rule-style: solid;
+  -ms-column-rule-style: solid;
+  column-rule-style: solid;
+}
+
+.tags li {
+    list-style: none;
+  padding-bottom: 0px;
+}
+
 ul.tagcloud .list-group-item <span>.badge {
   background-color: grey;
   color: white;
 }
 
 ul.tagcloud {
-  list-style-type: initial ;
-  list-style-position: inital ; 
-  list-style-image: inital; 
-  padding: 0;
-  text-align: justify;
-}
-
-ul.tagcloud li {
-    display: inline;
+    padding-right: 10px;
+    padding-left: 10px !important;
+    font-weight: bold;
 }
 
 li.tag-1 a {
