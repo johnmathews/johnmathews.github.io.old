@@ -1,5 +1,5 @@
-Title: I'm Leaving
-Slug: leaving
+Title: Moving on
+Slug: move
 Date: 2017-7-8 12:26
 Category: Lifestyle
 Tags: Lifestyle
