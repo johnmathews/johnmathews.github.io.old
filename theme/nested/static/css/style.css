@@ -5,6 +5,10 @@
  */
 
 
+#go_back{
+    text-align:center; 
+}
+
 .summary {
     display: block;
     color: gray;
