@@ -18,11 +18,11 @@ As well as some outstanding sessions there was a high ratio of investors to star
 
 The most useful sessions for me were:
 
-* "What it means to be ambitious for founders in Europe" by [Oussama Ammar](https://twitter.com/daedalium?lang=en) from [TheFamily](https://www.thefamily.co) (my [notes]({filename}../articles/20170609_ambitious.md))
+* ["What it means to be ambitious for founders in Europe"]({filename}../articles/ambitious.md) by [Oussama Ammar](https://twitter.com/daedalium?lang=en) from [TheFamily](https://www.thefamily.co)
 
-* "Understanding Investment" by [Boris Golden](https://twitter.com/Boris_Golden) from [Partech Ventures](https://www.partechventures.com) (my [notes]({filename}../articles/20170609_investment.md))
+* ["Understanding Investment"]({filename}../articles/investment.md) by [Boris Golden](https://twitter.com/Boris_Golden) from [Partech Ventures](https://www.partechventures.com) 
 
-* "Building successful businesses on blockchain technologies" a panel discussion moderated by [Kevin Loaec](https://twitter.com/kloaec?lang=en), founder of the [Chainsmiths](http://chainsmiths.com/) blockchain consultancy, and including Mir Serena Liponi from [Blockchain Lab](http://www.blockchainlab.it/) 
+* "Building successful businesses on blockchain technologies" a panel discussion moderated by [Kevin Loaec](https://twitter.com/kloaec?lang=en), founder of the [Chainsmiths](http://chainsmiths.com/) blockchain consultancy, and including [Mir Serena Liponi](https://twitter.com/mir_btc) from [Blockchain Lab](http://www.blockchainlab.it/) 
 
 The blockchain session was valuable because it's unusual to meet people who have been working in the blockchain space for several years. I'm always wary of being distracted by the hype and noise around developments in the blockchain space so I appreciated hearing some informed and level-headed opinions.
 

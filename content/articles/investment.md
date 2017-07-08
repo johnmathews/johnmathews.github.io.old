@@ -8,7 +8,7 @@ Tweet: How to pitch #lis17 #Lisbon #Portugal #startup #entrepreneur
 Summary: How to pitch to a venture capitalist: Market + Management + Model + Momentum
 Status: Published
 
-I attended the [Lisbon Investment Summit](http://www.lis-summit.com/) in June and wrote about my experiences [here]({filename}../articles/20170609_lis17.md). One of the best sessions was with [Boris Golden](https://twitter.com/Boris_Golden) called "Understand Investment". These are my notes:
+I attended the [Lisbon Investment Summit](http://www.lis-summit.com/) in June and wrote about my experiences [here]({filename}../articles/lis17.md). One of the best sessions was with [Boris Golden](https://twitter.com/Boris_Golden) called "Understand Investment". These are my notes:
 
 1. VC's are seeking to identify high-potential startups, and then support and fund them.
 2. They are looking for something that is innovative and unproven.
