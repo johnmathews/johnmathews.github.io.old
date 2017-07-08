@@ -73,7 +73,8 @@ The grass is {{ testing2 }} and now  {{ list1[0] }} and the boat is {{ list1[1] 
         {% endif %}
 
         <div class="article_author"> 
-           By {{ article.author }} 
+            By {{ article.author }} </br>
+           In: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
         </div>
         
         <div class="article_date"> 

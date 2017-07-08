@@ -1,60 +1,112 @@
 Title: Blockchains from the ground up: Part 2
 Slug: blockchain-networks
-Date: 2017-6-21 13:52
-Category: Blockchains, Digital Currencies
+Date: 2017-7-8 13:52
+Category: DLT
 Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Distributed Consensus, Sybil, 
-Tweet: (include hashtags)
-Summary:
-Status: draft
+Tweet: #Blockchains from the group up: Part 2
+Summary: An overview of the essential features of a blockchain, using proof-of-work for consensus
+Status: Published
 
 ## Maintain an accurate list of transactions across a large group of users, without a central authority
 
-This is part 2 of an introduction to the key features of a generalised blockchain. [Part 1]({filename}../content/articles/20170525_blockchain-introduction.md) introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how many users can all maintain the same true list of transactions and protect each other against fraud. 
+This is part 2 of an introduction to the key features of a generalised blockchain. [Part 1]({filename}../articles/blockchain-introduction.md) introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how a network of users can maintain the same (true) list of transactions and protect each other against fraud. 
 
-## Double Spending
+## Broadcasting transactions to the network
 
-Back in part 1, we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. As the number of people in the network grows, the transfer of coins from one user to another becomes harder to track and this creates an opportunity to use coins that have already been spent to pay someone who doesn't know they've already been used. This is double spending, and is possible because the ledger of everyones transactions that is shared amongst all members of the group only has *weak consistency*. 
+In  [Part 1]({filename}../articles/blockchain-introduction.md) we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. These transactions were authenticated using PKI which:
 
-Weak consistency can be solved by requiring that everyone accept a transaction before it is accepted into the ledger (Unanimous consensus), or to save time we could less the requirements so that only 50% of all users need to validate a transaction before it is accepted into the ledger (Quorum consensus). Either of these solutions is possible for a small local group with a list of all users. 
+- Ensured transaction integrity 
 
-Unanimous or Quorum consensus doesn't solve the weak consistency problem if:
+
+- Prevented participants claiming that they didn't make a past transaction 
+- Prevents anyone creating a transaction on someone else's behalf without their consent. 
+
+As the number of people in the network grows, the transfer of coins from one user to another becomes harder to track. If every users ledger is not identical then the opportunity arises to use coins that have already been spent to pay someone who doesn't know they've already been used. 
+
+This is double spending, and is possible because the ledger that is shared amongst all members of the group only has *weak consistency* - it is not necessarily correct all the time in all locations. 
+
+### Weak Consistency
+
+Weak consistency could be solved by requiring that everyone votes to accept a transaction before it is accepted into the ledger (Unanimous consensus), or to save time we could reduce the requirements so that only 50% of all users validate a transaction before it is accepted into the ledger (Quorum consensus). Either of these solutions is possible for a small local group with a list of all users. 
+
+However Unanimous or Quorum Consensus doesn't solve the weak consistency problem if:
 
 1. The group is large
 2. The group is small but spread across different locations or timezones
 3. It is not possible to know how many members there are and therefore what proportion of uses are participating.
-4. The identity of a user is unknown
+4. The real identity of a user is unknown
 
 In these cases a peer-to-peer network is required where transactions between users require approval by other users before being confirmed. This has not been trivial to solve, as some users would be incentivised to double spend (lie), and some may make mistakes. This is the distributed consensus problem, which on [wikipedia](https://en.wikipedia.org/wiki/Consensus_(computer_science)) is defined as: 
 
 >The consensus problem requires agreement among a number of agents for a single data value. Some of the processes (agents) may fail or be unreliable in other ways, so consensus protocols must be fault tolerant or resilient. The processes must somehow put forth their candidate values, communicate with one another, and agree on a single consensus value.
 
-When the number and identity of participants is known, distributed consensus is possible. Two types of protocol which allows all users in a distributed system to agree on a transaction are the [Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)) family of protocols and the [Two-phase commit](http://courses.cs.vt.edu/~cs5204/fall00/distributedDBMS/duckett/tpcp.html) protocol. Both of these would require that only at least 50% of all users reach agreement in order to add a new transaction. 
+## Distributed Consensus
 
-However in a public peer-to-peer network the total number of active users is not known, and it's possible to quickly and cheaply create new user profiles. This makes it impossible to know how many users 50% would be. Additionally, because its possible to cheaply create new user profiles (just generate a new public-private key pair), a single actor could generate and control many user accounts in order to have many votes and force incorrect transactions onto the ledger. An attack where one user subverts a network by creating many profiles is known as a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack).
+When the number and identity of participants is known, distributed consensus is possible. Two types of protocol which allows all users in a distributed system to agree on a transaction are the [Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)) family of protocols and the [Two-phase commit](http://courses.cs.vt.edu/~cs5204/fall00/distributedDBMS/duckett/tpcp.html) protocol. Both of these would require that at least 50% of all users reach agreement in order to add a new transaction. 
 
-The solution to the Sybil attack is to increase the cost of verifying a transaction such that the cost exceeds the reward. This is achieved through proof-of-work (PoW), which is a process that is relatively expensive for a sender claiming to have verified a transaction, and relatively cheap for the receiver to verify that the transaction has been checked for validity. 
+However in a public peer-to-peer network the total number of active users is not known - its  fast and cheap to create new user profiles, and existing user profiles may become dormant. This makes it impossible to know how many users 50% would be. Additionally, because its possible to cheaply create new user profiles (just generate a new public-private key pair), a single actor could generate and control many user accounts in order to have many votes and force incorrect transactions onto the ledger. An attack where one user subverts a network by creating many profiles is known as a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack).
 
-One possible implementation of this principle is to require that the hash of a verification message begins with a certain set of characters. The chosen set of characters is called a *nonce*. The only way to create a verification message with an acceptable hash is to try many different slightly different messages, which is inefficient and computationally expensive because there is no way to predict what message will generate the required hash value, due to the random nature of output hash values. Therefore a user who seeks to verify a transaction must repeatedly try different messages until they randomly find a message that meets the nonce requirements. It is simple for a user to check if a transaction verification message meets the nonce requirements, because it is simple to hash a message, find its hash value and compare this value to the nonce.
+### Proof of Work
 
-The effect of this requirement is a process that makes it expensive to claim that a transaction has been verified and cheap to check the verification claim. This removes the threat of a Sybil attack, but does not remove the distributed consensus problems created by not knowing:
+The solution to the Sybil attack is to increase the cost of verifying a transaction such that the cost exceeds the reward. This is achieved through proof-of-work (PoW) algorithms, which are computationally expensive for a sender claiming to have verified a transaction, and much computationally simple for the receiver to verify that the sender has validated the transaction.
+
+One possible Proof of Work approach is to require that the hash of a verification message begins with a certain set of characters. The chosen set of characters is called a *nonce* and the only way to create a verification message with an acceptable hash is to try many slightly different messages. For example, a nonce may be 3 zeros. It's arbitrary, but the longer the nonce is the more difficult it becomes to find a hash that fits. 
+
+This is because a hash is a random list of characters, and altering even a single part of the data being hashed will result in a completely different hash value. Therefore there is no way to control a hash value except repeatedly altering the data being hashed until a hash with the required features is randomly achieved. This is computationally expensive to achieve, but computationally simple to verify. 
+
+Using the method, a user who seeks to verify a transaction must repeatedly try different messages until they randomly find a message that meets the nonce requirements. It is simple for a user to check if a transaction verification message meets the nonce requirements, because it is simple to inspect a hash and compare it to the nonce.
+
+The effect of this requirement is a process that makes it expensive to claim that a transaction has been verified and cheap to check that verification claim. This removes the threat of a Sybil attack, but does not remove the distributed consensus problems created by not knowing:
 
 1. The true identity of users in the network
 2. How many users exist
 
-This problem cannot be completely solved, and the practical solution is to relax the requirements such that the probability of accepting a fraudulent transaction is lower than some user defined threshold. This is acceptable because a user would require a higher degree of confirmation for a high value transaction than they would for a small low value transaction, and would therefore be willing to incur more time and cost to verify a high value transaction. 
+This problem cannot be completely solved, and the practical solution is to relax the requirements such that the probability of accepting a fraudulent transaction is lower than some user defined threshold. This is acceptable because a user would require a higher degree of confirmation for a high-value transaction than they would for a low-value transaction, and would therefore be willing to incur more time and cost to verify a high value transaction and reduce the probability of accepting an incorrect transaction below a threshold. 
 
-If a user wishes to make fast or low-value transactions, or trusts the party they're transacting with, then they may accept a zero-confirmation transaction, where no other network participants are contacted and the user trusts the sender of the funds completely.
+If a user wishes to make fast or low-value transactions, or trusts the party they're transacting with, then they may accept a transaction without any other users on the network verifying that the sender has the required funds available.
 
-When the senders integrity is not assured, an N-confirmation transaction is required. In this case N other network users are contacted to verify that the sender has access to the funds being sent before the transaction is accepted. The higher the value of N the higher the probability that a dishonest transaction will be identified before being accepted. 
+However when the senders trustworthiness is not assured, verification is required. The more risky or valuable the transaction, the more users the receiver of the funds will ask to verify that the sender has access to the required funds. The higher the number of users, The higher the probability that a dishonest transaction will be identified before being accepted.
 
-An appropriate value for N will depend on the amount being transferred and how well the reciever of the funds knows the sender. 
+An appropriate level of verification will depend on the amount being transferred and how well the receiver of the funds knows the sender. 
 
+## Transaction fees
 
+Asking peers on the network to verify transactions introduces a new problem. Verifying a transaction requires time and effort, and therefore incurs a cost. This cost requires that network participants be rewarded for correctly verifying transactions between other participants. 
 
+An attacker would only attack if the cost is less than the reward and therefore the number of verifications required should be just enough to make the cost of all the required verifications more than the value of the transaction.
 
+This *kind of* solves the distributed consensus problem, but introduces the problem that it costs more to verify a transaction than the value of the transaction itself. It is also a recursive problem because the users who verified the first transaction would need to verify that the payment they received was then also valid. Furthermore, a significant proportion of the original amount is spent as a transaction fee (for verification) which is not efficient.
 
+This non-sensical scenario is avoided by combining multiple transactions and verifying them together, creating a block of transactions. By confirming multiple transactions at once (and proving it using proof-of-work), transaction fees can be aggregated (allowing each individual fee to be much lower). Each block would include a list of verified transactions, a reference to the previous block, and a block ID.
 
+The transaction verification process outlines above is remarkable because it creates a demand for new participants to the network by creating a financial incentive to verify transactions. This makes the network more secure as increasing the number of participants makes a sybil attack more difficult. 
 
+## Summary
 
+1. Users generate new transactions and broadcast them on a peer-to-peer network for verification
 
+2. An idle user listens for new transactions and collects them until the sum of all transactions' verification fees is greater than the cost the user will incur to verify them and meet the proof-of-work requirements
 
+3. The idle user adds an extra transaction to their list of transactions that transfers the sum of the transaction fee's to them self.
+
+4. The idle user generates the block of newly verified transactions, referencing the previously verified block (so that transactions can be chronologically ordered) and completing the proof-of-work challenge. This new block is then broadcast to the network.
+
+5. All other users are listening for new block announcements. These users verify that the block is valid according to the proof-of-work requirements. (It is easier to verify a proof-of-work requirement than to generate it.)
+
+6. Users with unverified transactions look inside the verified block to see if their pending transactions have been accepted.
+
+## Competing to validate blocks of transactions
+
+Each user can choose which transactions they verify, and how many to verify before beginning the proof-of-work requirement and hopefully collecting the transaction fees. This lack of consensus around verification is fine because the only way to increase the probability of claiming the transaction fees associated with a block is to spend more CPU power searching for the required partial hash collision. 
+
+If two users compete a block at approximately the same time then the blockchain will look different in different parts of the network as each completed block begins to propagate and other users accept the new block and add it to their ledger. This is ok if a rule is enforced that requires a user to accept the longest chain of blocks. 
+
+This works because even if multiple blocks are created at the same time, the time it takes to create subsequent blocks will vary due to the random behaviour of the proof-of-work algorithm. This will make one version of the block chain longer than the others, and provide a clear candidate for which branch of the blockchain to use. If there are transactions in the discarded branch which are not present in the new (longest) blockchain then they are immediately added back into the pool of transactions awaiting verification. 
+
+## A block of transactions in never absolutely immutable
+
+The above procedure for verifying transactions and adding new blocks onto the chain means that even if a user inspects a new block and sees that their transaction has been verified, its possible that in the future a longer chain will be discovered (which must be accepted) which doesn't include their transaction. 
+
+Therefore any block could potentially be removed, which means a transaction is never completely verified. However the probability of a block being removed decreases as the number of blocks after it increases and this means verification can be thought of in terms of the number of blocks that have been added to the chain *after* the block containing the transaction. 
+
+If you are willing to accept a high level of risk, or you trust the party you are transacting with you could opt for a small number of blocks to be added after the block containing your transaction. This has the benefit of increasing the speed of the transaction verification. If the transaction is risky or high-value, you might require a larger number of blocks to be added to the chain before accepting the transaction. This will increase the time required to verify the transaction, but reduce the probability that a longer chain will undo the block containing the transaction in question. 

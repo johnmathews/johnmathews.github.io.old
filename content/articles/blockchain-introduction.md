@@ -2,7 +2,7 @@ Title: Blockchains from the ground up: Part 1
 Slug: blockchain-introduction
 Date: 2017-5-25 20:38
 Category: DLT
-Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Public Key Cryptography  
+Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Public Key Cryptography
 Tweet:
 Summary: Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.
 Status: Published
@@ -139,4 +139,4 @@ Another use for public-key cryptography arises if Chris were an employee in a ba
 
 Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of "coins" will need to be controlled in order to maintain their value. In the example above, people can freely create "coins" and can also carry negative amounts of "coins". This would result in the value of a "coin" plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable manner.
 
-Our examples so far only include 3 people. If there are a lot of people in the network it wouldn't be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in part 2.
+Our examples so far only include 3 people. If there are a lot of people in the network it wouldn't be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in [part 2]({filename}../articles/blockchain-networks.md).
