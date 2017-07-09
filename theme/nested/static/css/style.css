@@ -4,6 +4,21 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+#pec-decrypt-form ~ #sub_req {
+    display: none !important;   
+}
+
+#pec-decrypt-content {
+    margin-left: 0px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+#pec-content-password {
+    outline: solid;
+    outline-width: 1px;
+    outline-color: gray;
+}
 
 #go_back{
     text-align:center; 
