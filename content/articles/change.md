@@ -5,7 +5,7 @@ Category: Lifestyle
 Tags: Lifestyle
 Image: src="/images/square_mile.jpg" alt="London's Square Mile"
 Tweet: Don't settle for less #ambition #dreams
-Summary: It's time to leave London, find a bette lifestype and see what I'm capable of.
+Summary: It's time to leave London, find a better life, and… 
 Password: R1tsya
 Status: 
 

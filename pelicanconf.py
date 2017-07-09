@@ -44,8 +44,8 @@ PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'opt
 LOAD_CONTENT_CACHE = False
 
 ENCRYPT_CONTENT = {
-    'title_prefix': '[Encrypted]',
-    'summary': 'This content is encrypted.'
+    'title_prefix': '',
+    'summary': ''
 }
 
 IPYNB_IGNORE_CSS = False
