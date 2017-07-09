@@ -40,8 +40,13 @@ MARKDOWN = {
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'share_post', 'tag_cloud']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'share_post', 'tag_cloud', 'encrypt_content']
 LOAD_CONTENT_CACHE = False
+
+ENCRYPT_CONTENT = {
+    'title_prefix': '[Encrypted]',
+    'summary': 'This content is encrypted.'
+}
 
 IPYNB_IGNORE_CSS = False
 IPYNB_USE_META_SUMMARY = True
