@@ -5,9 +5,9 @@ Category: Lifestyle
 Tags: Lifestyle
 Image: src="/images/square_mile.jpg" alt="London's Square Mile"
 Tweet: Don't settle for less #ambition #dreams
-Summary: I want to find out what I'm really capable of. I'm leaving my corporate job in search of a better life.
+Summary: I want to find out what I'm capable of doing without distractions and compromises. I'm leaving London in search of a better life.
 Password: R1tsya
-Status: Published
+Status: Draft
 
 
 
