@@ -2,9 +2,9 @@ Title: Life in a corporate
 Slug: corporate
 Date: 2017-7-10 21:37
 Category: Lifestyle
-Tags: Career, Corporate, 
-Image: src="/images/filename.extension" alt=" " 1200x627px
-Tweet: #hashtags
+Tags: Career, Corporate, London
+Image: src="/images/empty.jpg" alt="empty"
+Tweet: 
 Summary:
 Password: Ritsya
 Status: 
