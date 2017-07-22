@@ -92,7 +92,7 @@ And we're back to our original encoding.
 ## Files
 The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded [here]({attach}/documents/RSA-Example.xlsx).
 
-A simple python script to encrypt and decrypt a message is [here attach}/documents/AES_Example.py). It uses the AES encryption method.
+A simple python script to encrypt and decrypt a message is [here]({attach}/documents/AES_Example.py). It uses the AES encryption method.
 
 ### Footnotes
 [^1]: I used the explanations [here](http://www.tutorialspoint.com/cryptography/public_key_encryption.htm) and [here](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) a lot.
