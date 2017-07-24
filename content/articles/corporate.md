@@ -5,21 +5,20 @@ Category: Lifestyle
 Tags: Career, Corporate, London
 Image: src="/images/empty.jpg" alt="empty"
 Tweet: 
-Summary: 
 Password: R1tsya
+Summary: 
 Status: 
 
 # 2014 - 2017
 
 Having made arrangements to leave London, it seems like a reasonable time to reflect on my time here. 
 
-London is a tough city to live in — its big enough that a sub 1-hour commute is considered good, and is generally [expensive]({filename}../articles/london.md) without any big lifestyle benefits. My time in London has been defined by my quest to complete my graduate scheme in financial services. 
+London is a tough city to live in — its big enough that a sub 1-hour commute is considered good, and is generally expensive without any big lifestyle benefits. My time in London has been defined by my quest to complete my graduate scheme in financial services. 
 
 When I first arrived I had no idea what London would be like or what life in a corporate would be like. I was coming from academia and my motivation for moving into finance could be summed up in two points:
 
 1. Understand more about the 2008 financial crisis
 2. Get paid more for using mostly the same skills (math) as in engineering
-
 
 I don't this there's any wrong with these motivations but hindsight has shown this wasn't a great way to plan a career. 
 
