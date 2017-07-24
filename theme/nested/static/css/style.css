@@ -740,7 +740,7 @@ h4 {
     dt{
         text-align: left !important;
         width: 100% !important;
-        margin-bottom: 20px !important;
+        /* margin-bottom: 20px !important; */
     }
  /*   dt:after{  // put a line under each post name
         display: block;
