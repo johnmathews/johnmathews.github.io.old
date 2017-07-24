@@ -1,6 +1,6 @@
 Title: Flee
 Slug: flee
-Date: 2017-7-24 21:42
+Date: 2017-7-4 08:42
 Category: Poems
 Tags:
 Image: src="/images/filename.extension" alt=" " 1200x627px
@@ -38,11 +38,11 @@ Grow old
 
 Face death 
 
-Dodge evil
+Dodge evil.
 
 </br>
 
-Don't tire
+Don't tire.
 
 </br>
 
@@ -57,3 +57,5 @@ Markets stab.
 </br>
 
 Got to get out.
+
+</br>
