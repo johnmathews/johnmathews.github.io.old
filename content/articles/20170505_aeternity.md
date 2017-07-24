@@ -1,7 +1,7 @@
 Title: Introduction to the AEternity blockchain project
 Slug: aeternity
 Date: 2017-5-5 21:04
-Category: DLT
+Category: Distributed Applications
 Tags: AEternity, DLT, Digital Currencies, Finance, Blockchains 
 Status: Published
 Summary: AEternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based on prediction markets.
