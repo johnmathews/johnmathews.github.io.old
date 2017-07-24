@@ -3,12 +3,10 @@ Slug: flee
 Date: 2017-7-4 08:42
 Category: Poems
 Tags:
-Image: src="/images/filename.extension" alt=" " 1200x627px
+Image: src="/images/houses_streets.jpeg" alt="suburban houses"
 Tweet: #hashtags
 Summary:
 Status: 
-
-# Flee
 
 </br>
 
@@ -32,13 +30,13 @@ Death arrives.
 
 </br>
 
-Grow up
+Grow-up
 
 Grow old
 
 Face death 
 
-Dodge evil.
+Evade evil.
 
 </br>
 
