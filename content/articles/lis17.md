@@ -34,7 +34,7 @@ On the topic of Brexit, which inevitably arose due to London's present role as a
 
 ## Overall
 
-The two days in Lisbon were full of useful and energetic conversations and it was a great experience pitching [Oula.la](http://www.oula.la) multiple times and talking about what we're trying to do and how blockchains are a part of that. The opportunities to meet founders and investors are invaluable for making informed decisions. Lisbon is a beautiful city which I found easy to get around and always felt safe in. It's also refreshingly [affordable!]({filename}../articles/20170512_london.md)
+The two days in Lisbon were full of useful and energetic conversations and it was a great experience pitching [Oula.la](http://www.oula.la) multiple times and talking about what we're trying to do and how blockchains are a part of that. The opportunities to meet founders and investors are invaluable for making informed decisions. Lisbon is a beautiful city which I found easy to get around and always felt safe in. It's also refreshingly [affordable!]({filename}../articles/london.md)
 
 ![Panoramic street]({filename}../images/lis4.JPG)
 ![Google talks]({filename}../images/lis3.JPG)

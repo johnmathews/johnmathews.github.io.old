@@ -123,5 +123,5 @@ Finally, when I was testing Facebook to see if the correct text or image was bei
 
 You can see the new sharing buttons below, please click them and see what happens!
 
-Note: My first article describing how I began to use Pelican is [here]({filename}../articles/20170428_pelican_blog.md)
+Note: My first article describing how I began to use Pelican is [here]({filename}../articles/pelican_blog.md)
 

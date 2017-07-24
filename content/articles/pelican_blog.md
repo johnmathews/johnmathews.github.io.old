@@ -43,7 +43,7 @@ I can stage and commit files, I can create local and remote repo's from the comm
 
 This is one tool for which the awesome SO and Google cannot magic up the exact right answer immediatly, unfortunately. 
 
-For example, there is still an output folder in the [source repo](https://github.com/johnmathews/blog) that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an "@" in its name. I don't know how it got there. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal commands. 
+For example, there is still an output folder in the source repo that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an "@" in its name. I don't know how it got there. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal commands. 
 
 I find git's commands the least intuitive of all the tools I use, with its preceeding single dashes and double dashes, and random words thrown into the middle of otherwise reasonable commands. 
 
@@ -79,4 +79,4 @@ Before I started working with Pelican, minifying css and JavaScript would have b
 
 I'm super happy wth the websites design and speed. It's designed the way I want it, and I've learnt a ton of useful stuff along the way. 
 
-Update: My second post about blogging in Pelican is [here]({filename}../articles/20170601_pelican_2.md).
+Update: My second post about blogging in Pelican is [here]({filename}../articles/pelican_2.md).
