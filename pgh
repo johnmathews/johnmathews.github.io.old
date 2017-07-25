@@ -1,0 +1,32 @@
+#!/bin/bash
+echo generate blog output files
+pub
+
+echo Stage blog files 
+git add .
+
+echo Commit blog files
+git commit -m "$1"
+
+echo Push blog files
+git push
+
+cd output
+pwd
+
+echo Stage output files
+git add .
+
+echo Commit output files
+git commit -m "$1"
+
+echo Push output files
+git push
+
+cd ..
+
+pwd
+
+
+echo /// ALL DONE! ///
+
