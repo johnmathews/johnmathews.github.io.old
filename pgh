@@ -1,6 +1,6 @@
 #!/bin/bash
 echo generate blog output files
-pub
+pelican content -s publishconf.py
 
 echo Stage blog files 
 git add .
