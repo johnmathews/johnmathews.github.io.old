@@ -11,9 +11,9 @@ Status:
 
 # Ambition
 
-Since I was 15 one of my ambitions has been to be an entrepreneur. I used to joke with my dad about buying him a nice boat one day.
+Since I was 15, one of my ambitions has been to be an entrepreneur. I used to joke with my dad about buying him a nice boat one day.
 
-Having learnt enough to call my formal education complete, I’m running away from things that don’t make sense and towards being my own manager. Ultimately I want to develop multiple sources of passive income. I want to create.
+Having learnt enough to call my formal education complete, I’m running away from the things that don’t make sense and towards being my own manager. Ultimately I want to develop multiple sources of passive income. I want to create.
 
 ## Summer 2017
 
