@@ -19,7 +19,7 @@ Information about my work researching silos and granular flows can be found [her
 — [@johnmathews](http://twitter.com/johnmathews)
 
 
-<div style="font-size:16px;margin:0 auto;width:400px" class="blockchain-btn"
+<div style="font-size:16px;margin:0 auto;" class="blockchain-btn"
      data-address="1LXTB9WssALLvHAnk2LqH2PfcvPxbqo6yA"
      data-shared="false">
     <div class="blockchain stage-begin">
