@@ -8,7 +8,7 @@ I'm looking for opportunities to work on blockchain or dapp projects in order to
 
 In 2009 I graduated from Edinburgh University with a masters in Civil Engineering. The  [Great Recession](https://en.wikipedia.org/wiki/Great_Recession) had arrived and I found a job at Starbucks. This made me curious about finance and I resolved to one day understand "how banks work". 
 
-In 2010 I became a PhD candidate in Vienna, Austria and discovered I had a flare for research. 
+In 2010 I was a PhD candidate working in Vienna, Austria and discovered I was really good at research. 
 
 In 2014 I began working on financial audits of banking clients and in 2017 I qualified as an accountant.  
 
