@@ -9,7 +9,7 @@ SITENAME = "John Mathews"
 SITEURL = 'http://johnmathews.eu' # should include http://
 ASSET_URL = './css/'
 
-USE_CATEGORIES = False # on index page show either chronologial or grouped by categories
+USE_CATEGORIES = True # on index page show either chronologial or grouped by categories
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False 
