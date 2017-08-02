@@ -33,7 +33,7 @@ What: 1 Orange
 Signed: John's signature, Lizzie's signature
 ```
 
-This IOU is a nice gesture, but it's simple to forge. Lizzie has the only copy of the IOU and once Lizzie has seen Johns signature, she could easily copy it and create more IOU's. She could also change this IOU from 1 orange to 11 oranges (for example) and John couldn't prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. Its one persons word against the other. 
+This IOU is a nice gesture, but it's simple to forge. Lizzie has the only copy of the IOU and once Lizzie has seen Johns signature, she could easily copy it and create more IOU's. She could also change this IOU from 1 orange to 11 oranges (for example) and John couldn't prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. It's one person's word against the other. 
 
 Lizzie realises this and suggests an improvement - they will find a witness and make 3 copies of the IOU. Each copy will be signed by Lizzie, John and the Witness. Lets call this witness "Walter". 
 
@@ -50,13 +50,13 @@ This is a much stronger document and is more difficult to forge. If Lizzie chang
 
 3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be ruined. 
 
-This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. E.g. If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to be. 
+This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. E.G. If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to be. 
 
 The solution is [public-key infrastructure](https://en.wikipedia.org/wiki/Public-key_cryptography) (which is introduced in my [previous post]({filename}../articles/encryption.md)). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but briefly:
 
 A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it's a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data securely). 
 
-Back to the fruit. If Lizzie wants to accept Johns IOU she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the transaction.
+Back to the fruit. If Lizzie wants to accept John's IOU she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the transaction.
 
 1] Create the IOU stating that John owes Lizzie 1 orange.
 ```objdump
