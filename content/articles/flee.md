@@ -12,7 +12,7 @@ Status:
 
 Summer children
 
-Squeel and shriek,
+squeal and shriek,
 
 Watch wars.
 
