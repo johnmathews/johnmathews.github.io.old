@@ -6,7 +6,7 @@ Tags: weeks
 Image: 
 Tweet: 
 Summary: Just another week..
-Status: 
+Status: draft
 
 
 
