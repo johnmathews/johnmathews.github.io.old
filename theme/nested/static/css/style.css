@@ -249,9 +249,8 @@ tr:hover {
 }
 
 thead {
-border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000;
 }
-
 
 div.output_html.rendered_html.output_subarea.output_execute_result{
   overflow: auto;
@@ -268,8 +267,13 @@ td,
 th {
     padding-left: 5px;
     padding-right: 5px;
+    padding: 8px;
     border: none;
+    line-height: 1.2;
+}
 
+th {
+    text-align: left;
 }
 
 table {
