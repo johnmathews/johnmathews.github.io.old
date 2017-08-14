@@ -3,18 +3,18 @@ Slug: ethereum-parity-multisig-wallet
 Date: 2017-8-12 22:28
 Category: Distributed Applications 
 Tags: Ethereum, Parity, Blockchains, Fintech, Multi-Sig, Wallet
-Image: src="/images/ethereum_logo.jpeg" alt="Ethereum multisig wallet" style="width:50%"
+Image: src="/images/parity-ethereum-logo.png" alt="Ethereum multisig wallet" style="width:50%"
 Tweet: How to create a #multisig #Ethereum wallet using #Parity
-Summary: How to set-up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet's settings and view pending and past transactions
+Summary: How to setup and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet's settings and view pending and past transactions
 Status: Published
 
-I recently set-up a multi-sig Ethereum wallet and I couldn't find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get started. 
+I recently setup a multi-sig Ethereum wallet and I couldn't find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get started. 
 
-You'll need a way to interact with the Ethereum blockchain in order to create and deploy a multi-sig wallet. There are several apps that you can use. I've used Parity because I found it simple and quick. 
+You'll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I've used Parity because I found it simple and quick. 
 
 # Ethereum Wallets
 
-Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet where 2 out of 3 signatures (for example) are required to approve a transaction then you will need to have setup those 3 Ethereum accounts before creating the Multi-Sig wallet. 
+Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet with 3 signatories (for example) then you will need to have setup at least 1 of those 3 Ethereum accounts before creating the Multi-Sig wallet. 
 
 ## Parity
 
@@ -22,7 +22,7 @@ From their website:
 
 >Integrated directly into your Web browser, Parity is the fastest and most secure way of interacting with the Ethereum network.
 
-You can do a bunch of stuff with Parity, like mine Ether, manage accounts, interact with different dapps, send/receive from different accounts, and set up contracts. On the accounts tab, you can quickly set-up Mutli-Signature wallets. If you use the chrome plugin you will also get handy notifications when transactions are confirmed and contracts are deployed.
+You can do a bunch of stuff with Parity, like mine Ether, manage accounts, interact with different dapps, send/receive from different accounts, and set up contracts. On the accounts tab, you can quickly setup Mutli-Signature wallets. If you use the chrome plugin you will also get handy notifications when transactions are confirmed and contracts are deployed.
 
 ## Download and open Parity
 
