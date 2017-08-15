@@ -6,7 +6,7 @@ Tags: demo
 Image: 
 Tweet: 
 Summary: This page demonstrates an issue about the encrypt-content plugin. The password is "example"
-Status:
+Status: draft
 Password: example
 
 

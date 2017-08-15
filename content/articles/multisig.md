@@ -12,7 +12,7 @@ I recently set up a multi-sig Ethereum wallet and I couldn't find clear instruct
 
 You'll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I've used Parity because I found it simple and quick. 
 
-# Ethereum Wallets
+## Ethereum Wallets
 
 Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet with 3 signatories (for example) then you will need to have set up at least 1 of those 3 Ethereum accounts before creating the wallet. 
 
