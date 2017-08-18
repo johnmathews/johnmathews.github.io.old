@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 RELATIVE_URLS = True #False for www, True for development/testing # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
+WRITE_SELECTED = ["/output/multisig.html"]
 
 AUTHOR = 'John Mathews'
 SITENAME = "John Mathews"
