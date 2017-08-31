@@ -1,7 +1,7 @@
 Title: Encryption
 Date: 2016-08-30 23:04
 Author: John Mathews
-Category: Distributed Applications
+Category: Disintermediation
 Tags: Encryption, RSA, DLT, Blockchains, Bitcoin, Digital Currencies, Public Key Cryptography 
 Slug: encryption
 Status: published
