@@ -1,7 +1,7 @@
 Title: Blockchains from the ground up: Part 1
 Slug: blockchain-introduction
 Date: 2017-5-25 20:38
-Category: Distributed Applications
+Category: Disintermediation
 Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Public Key Cryptography
 Tweet:
 Summary: Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.

@@ -1,7 +1,7 @@
 Title: Blockchains from the ground up: Part 2
 Slug: blockchain-networks
 Date: 2017-7-8 13:52
-Category: Distributed Applications
+Category: Disintermediation
 Tags: Blockchains, Digital Currencies, Distributed Ledger Technology, Distributed Consensus, Sybil, 
 Tweet: #Blockchains from the group up: Part 2
 Summary: An overview of the essential features of a blockchain, using proof-of-work for consensus

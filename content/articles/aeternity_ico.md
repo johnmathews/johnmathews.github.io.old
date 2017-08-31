@@ -1,7 +1,7 @@
 Title: The AEternity ICO: My experience
 Slug: aeternity-ico
 Date: 2017-4-30 23:37
-Category: Distributed Applications
+Category: Disintermediation
 Tags: Fintech, Finance, Digital Currencies, Blockchains, DLT, AEternity, ICO
 Status: Published
 Image: src="/images/aeternity_logo.png" alt="AEternity blockchain"

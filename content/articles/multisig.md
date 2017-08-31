@@ -1,7 +1,7 @@
 Title: Create a Multi-Signature Ethereum wallet using Parity
 Slug: ethereum-parity-multisig-wallet
 Date: 2017-8-12 22:28
-Category: Distributed Applications 
+Category: Disintermediation
 Tags: Ethereum, Parity, Blockchains, Fintech, Multi-Sig, Wallet
 Image: src="/images/parity-ethereum-logo.png" alt="Ethereum multisig wallet" style="width:50%"
 Tweet: How to create a #multisig #Ethereum wallet using #Parity

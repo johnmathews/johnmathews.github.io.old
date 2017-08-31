@@ -3,7 +3,7 @@ Slug: corporate
 Date: 2017-7-10 21:37
 Category: Lifestyle
 Tags: Career, Corporate, London
-Image: src="/images/empty.jpg" alt="empty"
+Image: src="/images/empty.jpg" alt="empty office floor"
 Tweet: 
 Password: hazel
 Summary: Reflections on 3 years living and working in London
@@ -13,20 +13,20 @@ Status:
 
 Having made arrangements to leave London, it seems like a reasonable time to reflect on my time here.
 
-London is a tough city to live in — its big enough that a sub 1-hour commute is considered good, and its super expensive. My stay in London has been defined by my quest to complete my graduate scheme in financial services.
+London is a tough city to live in — its big enough that a sub 1-hour commute is considered good, and its super expensive. My stay in London has been defined by my quest to complete my graduate scheme and qualify as an accountant.
 
-When I first arrived I had no idea what London or working in a corporate would be like. I was coming from academia and my motivation for moving to finance could be summed up in two points:
+When I first arrived I had no idea what London or working in a corporate would be like. I was coming from academia, and my motivation for moving to finance could be summed up in two points:
 
 1. Understand more about the 2008 financial crisis
 2. Get paid more for using mostly the same skills (math) as in engineering
 
-I don’t this there’s anything wrong with these motivations, but this isn't a great way to plan a career.
+I don’t think there’s anything wrong with these motivations, but I should have been making a long term career plan instead.
 
-When I started my job I was surprised at the 6 weeks of induction, and hot-desking. Life as an auditor felt nomadic, as everyone would spend large amount of time at clients, and no-one has their own desk in the office. The only thing you really own is your knowledge and your network of relationships.
+When I started my job I was surprised at the 6 weeks of induction, and hot-desking. Life as an auditor felt nomadic, as everyone would spend large amount of time at client's offices, and no-one has their own desk in our office. The only thing you really own is your knowledge and your network of relationships.
 
-In 2014 I arrived with a high opinion of my employer and the view that I would be stay for years. Having escaped the financial insecurity of needing to win short-term research grants, I’d moved back to my home country to contribute to the system that educated me. I was happy to have a regular job with a decent and predictable salary.
+In 2014, I arrived with a high opinion of my employer and the view that I would be staying for several years. Having escaped the financial insecurity of short-term research grants, I’d moved back to my home country to contribute to the system that educated me. I was happy to have a regular job with a decent, predictable salary.
 
-A phrase that kept coming to mind in those first few months was “accountant factory”. Our training materials were scripted and everything was a standardised process. We were being processed. Graduates in, corporate accountants out.
+A phrase that kept coming to mind back then was “accountant factory”. Our training materials were scripted and everything was a standardised process. We were being processed. Graduates in, corporate accountants out.
 
 The company is huge and so are the efficiencies and barriers to competition that come with this. When I arrived I was impressed there were free biscuits, and it felt presumptuous to put a meeting in someones diary. Now I ignore any communications addressed to a mailing list.
 
