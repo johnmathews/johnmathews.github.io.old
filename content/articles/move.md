@@ -5,15 +5,15 @@ Category: Lifestyle
 Tags: Lifestyle
 Image: src="/images/square_mile.jpg" alt="London's Square Mile"
 Tweet: #ambition #dreams
-Summary: Now is the time to start trying. Training is over. 
-Password: R1tsya
+Summary: Training is over. 
+Password: hazel
 Status: 
 
 # Ambition
 
 Since I was 15, one of my ambitions has been to be an entrepreneur. I used to joke with my dad about buying him a nice boat one day.
 
-Having learnt enough to call my formal education complete, I’m running away from the things that don’t make sense and towards being my own manager. Ultimately I want to develop multiple sources of passive income. I want to create.
+Life so far has been predominantly about education, and that stage is over now. I’m walking away from what I've come to see as a lifestyle and career that has too many contradictions, it doesn't make sense to live like this. Ultimately I want to develop multiple sources of passive income. I want to create.
 
 ## Summer 2017
 

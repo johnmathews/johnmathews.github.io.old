@@ -5,7 +5,7 @@ Category: Lifestyle
 Tags: Career, Corporate, London
 Image: src="/images/empty.jpg" alt="empty"
 Tweet: 
-Password: R1tsya
+Password: hazel
 Summary: Reflections on 3 years living and working in London
 Status: 
 
