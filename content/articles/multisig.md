@@ -5,7 +5,7 @@ Category: Disintermediation
 Tags: Ethereum, Parity, Blockchains, Fintech, Multi-Sig, Wallet
 Image: src="/images/parity-ethereum-logo.png" alt="Ethereum multisig wallet" style="width:50%"
 Tweet: How to create a #multisig #Ethereum wallet using #Parity
-Summary: How to set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet's settings and view pending and past transactions
+Summary: Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet's settings and view pending and past transactions
 Status: Published
 
 I recently set up a multi-sig Ethereum wallet and I couldn't find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get started. 
