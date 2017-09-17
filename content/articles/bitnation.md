@@ -4,7 +4,7 @@ Date: 2017-9-14 11:25
 Category: Disintermediation
 Tags: Bitnation, Blockchain, Disintermediation, Identity, Consulting, Finance,
 Image: src="/images/BITNATION-logo-website-white.png" alt="Bitnation logo"
-Tweet: 
+Tweet: #bitnation
 Summary: I'm about to begin consulting for [Bitnation](http://bitnation.co) as their finance officer.
 Status: 
 
