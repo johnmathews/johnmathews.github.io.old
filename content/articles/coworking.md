@@ -4,18 +4,18 @@ Date: 2017-9-15 11:55
 Category:  Startups
 Tags: Freelance, Coworking, Dublin, Element78, Regus, OfficeSuites, CoCreate, Studio9. Glandore. tCube
 Tweet: Looking for a #Coworking space in #Dublin? Read this: 
-Summary: I'm looking for coworking space in Dublin. This is a review of 7 places I've visited
-Status: 
+Summary: A review of eight coworking spaces in Dublin
+Status: Published 
 
 I arrived in Dublin on Wednesday and I start work on Monday. Thursday and Friday were spent running around Dublin visiting as many coworking spaces as possible. Below are my impressions of 7 businesses offering either hot desks or dedicated desks. The going rate in Dublin seems to be 250 - 300 euro. Hours range from 9am - 7pm Monday - Friday, to 24/7. 
 
 ### First place: [Dogpatch Labs](http://dogpatchlabs.com/)
 
-More than just a coworking space, Dogpatch emphasise the benefits of being a community and run regular networking and mentoring events. They occupy 3 floors of offices in a redeveloped building with a range of great interiors. The middle level is fairly standard but pleasant open plan offices, the top floor is a flexible working space with informal meeting and event areas. The lower level is a series of vaults that each contain meeting rooms of various sizes. There's a lot going on and there's a productive buzz in the air. 
+Dogpatch offer more than just a coworking space by cultivating a community of tech startups, and run regular networking and mentoring events. They occupy 3 floors of offices in a redeveloped building with a range of interiors styles. The middle level is fairly standard but pleasant open plan offices, the top floor is a flexible working space with informal meeting and event areas that is also used for flexible working. The lower level is a series of vaults that each contain meeting rooms of various sizes. There's a lot going on and there's a productive buzz in the air. 
 
-The range of well designed interior spaces is a big plus for me and I'm looking forward to being able to switch up my working environment through the day. There's a couple of kitchen areas too, and a foosball and table tennis table on the top level. Access is 6am - midnight, and a hot desk is €200 per month whilst a dedicated desk is €400. 
+The range of well designed interior spaces is a big plus for me and I'm looking forward to being able to switch up my working environment through the day. There's a couple of kitchen areas too, and a table football and table-tennis table on the top level. Access is 6am - midnight, and a hot desk is €200 per month whilst a dedicated desk is €400. 
 
-Dogpatch occupy less than a quarter of a historic building by the river in central Dublin, the remainder of the space is used as a shopping mall (useful) and a museum. In my opinion Dogpatch is by far the best value for a hot desk, and if you're working in tech it'll be the goto solution in Dublin. 
+Dogpatch occupy less than a quarter of a historic building by the river in central Dublin, the remainder of the space is used as a shopping mall (useful) and a museum. In my opinion Dogpatch is by far the best value for a hot desk, and if you're working in tech it'll probably be your goto solution in Dublin. 
 
 ### Second place: [Studio9](http://studio9.ie/?page_id=223)
 
