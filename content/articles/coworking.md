@@ -11,7 +11,7 @@ I arrived in Dublin on Wednesday and I start work on Monday. Thursday and Friday
 
 I'm looking to rent a hotdesk, which means I don't store anything at the office, and I don't have a dedicated desk or storage space. Very nomadic. :) 
 
-Below are my impressions of eight businesses offering either hot desks or dedicated desks ranked in order of preference. It's a subjective ranking based on my personal requirements. The going rate in Dublin seems to be €250 - €300 per month for a hot desk. Hours range from 9am - 7pm Monday - Friday, to 24/7. 
+Below are my impressions of eight businesses offering either hot desks or dedicated desks ranked in order of preference. It's a subjective ranking based on my personal requirements. The going rate in Dublin seems to be €200 — €300 per month for a hot desk. Hours range from 9am - 7pm Monday - Friday, to 24/7. 
 
 ### First place: [Dogpatch Labs](http://dogpatchlabs.com/)
 
