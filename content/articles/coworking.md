@@ -1,4 +1,4 @@
-Title: Coworking
+Title: Coworking in Dublin
 Slug: coworking
 Date: 2017-9-15 11:55
 Category:  Startups
