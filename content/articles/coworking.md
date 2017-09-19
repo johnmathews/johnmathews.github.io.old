@@ -7,7 +7,11 @@ Tweet: Looking for a #Coworking space in #Dublin? Read this:
 Summary: A review of eight coworking spaces in Dublin
 Status: Published 
 
-I arrived in Dublin on Wednesday and I start work on Monday. Thursday and Friday were spent running around Dublin visiting as many coworking spaces as possible. Below are my impressions of 7 businesses offering either hot desks or dedicated desks. The going rate in Dublin seems to be 250 - 300 euro. Hours range from 9am - 7pm Monday - Friday, to 24/7. 
+I arrived in Dublin on Wednesday and I start work on Monday. Thursday and Friday were spent running around Dublin visiting as many coworking spaces as possible. 
+
+I'm looking to rent a "hot desk", which means I bring my equipment everyday and don't have a dedicated desk or storage space. Very nomadic. :) 
+
+Below are my impressions of eight businesses offering either hot desks or dedicated desks with my favourite first. It's a subjective ranking based on my personal preferences. The going rate in Dublin seems to be 250 - 300 euro for a hot desk. Hours range from 9am - 7pm Monday - Friday, to 24/7. 
 
 ### First place: [Dogpatch Labs](http://dogpatchlabs.com/)
 
