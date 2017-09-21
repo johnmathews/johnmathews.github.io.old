@@ -4,9 +4,8 @@ Date: 2017-7-8 12:26
 Category: Lifestyle
 Tags: Lifestyle
 Image: src="/images/square_mile.jpg" alt="London's Square Mile"
-Tweet: #ambition #dreams
+Tweet:
 Summary: Training is over. 
-Password: hazel
 Status: 
 
 # Ambition
@@ -19,7 +18,7 @@ Life so far has been predominantly about education, and that stage is over now. 
 
 The last few months have been intense, with some weeks leaving me feeling ambitious and energetic, and others feeling anxious and overwhelmed. I need to get better at defining a goal, taking the quickest path there, and ignoring interesting distractions.
 
-Ritsya is brave enough and imaginative enough to force me to think big and consider how to live a better life. My biggest fear is that I screw it up, shooting myself in the foot, and Ritsya and my daughter also. We were headed safely to an unremarkable existence and it would be terrible to swap that for something worse. That won't happen.
+Ritsya is brave enough and imaginative enough to force me to think big and consider how to live a better life. My biggest fear is that I screw it up, shooting myself in the foot and Ritsya and my daughter also. We were headed safely to an unremarkable existence and it would be terrible to swap that for something worse. That won't happen.
 
 I know that I make better decisions and produce my best work under pressure, I thrive when I'm perceived as an underdog. I need to accept this without using it as a reason to be foolish. Whilst I don’t have a clear plan, or direction, or goal, (I have many of them) I’ve got skills and I want to see what I can make. I’ll never do my best work, using my most productive combination of skills and experiences, if I’m a cog in someone else's machine.
 

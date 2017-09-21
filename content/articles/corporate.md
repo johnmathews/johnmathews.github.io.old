@@ -3,9 +3,8 @@ Slug: corporate
 Date: 2017-7-10 21:37
 Category: Lifestyle
 Tags: Career, Corporate, London
-Image: src="/images/empty.jpg" alt="empty office floor"
-Tweet: 
-Password: hazel
+Image: src="/images/canary_wharf_escalator.jpg" alt="canary wharf escalator"
+Tweet: Experiences of a grad scheme in #corporate #London
 Summary: Reflections on 3 years living and working in London
 Status: 
 
@@ -52,16 +51,16 @@ Living in London has also required a lot of time on trains — my door to desk c
 
 ## Corporate Culture
 
-Back in the office I spent the first few months figuring out how people were organised, how teams operated and how decisions were made.I think it took me about a year to feel like I understood how things really worked, and 1.5 years to feel like I could do my job. There is a difference between how things are spoken about, and how things actually happen.
+Back in the office I spent the first few months figuring out how people were organised, how teams operated and how decisions were made.I think it took me about a year to feel like I understood how things really worked, and 1.5 years to feel like I could do all aspects of my job with certainty. There is a difference between how things are spoken about, and how things actually happen.
 
-My experience has been that performance is all that matters, and behaviours are defined by self-interest. I don’t think academia is any different[^1], and the construction industry certainly isn’t. I often wonder if the only way people can endure it is if they’ve not experienced anything else, or think it normal, or necessary. I find myself wishing we could be kinder to each other, and that we could create structures that incentivise mutual support.
+My experience has been that performance is all that matters and behaviour is defined by self-interest. I don’t think this is different from previous environments I've worked in — academia isn't any different[^1] and the construction industry certainly isn’t. I wonder if the only way people can endure it is if they’ve not experienced anything else, or think it normal, or necessary. I find myself wishing we could be kinder to each other, and that we could create structures that incentivise mutual support.
 
-Corporate finance usually appears clean and well presented. Its people appear dependable and capable. The culture is sanitised and there's a lot of pressure to conform - you can see it in the clothes and accessories we wear and the jokes we tell each other. 
+Corporate finance usually appears clean and well presented. Its people appear dependable and capable. The culture is sanitised and there's a lot of pressure to conform - you can see it in the clothes and accessories we wear and the jokes we tell each other in the canteen. 
 
-I came to see my office as a glass and steel temple. I read about the Middle East, and migrants arriving in Europe, and tower blocks burning, and felt really disconnected.
+I came to see my office as a glass and steel cathedral. I read about the Middle East, and migrants arriving in Europe, and tower blocks burning, and felt really disconnected.
 
 Despite the high regard with which we hold ourselves, we don’t ask each other how we can help. Maybe we are too busy, or feel powerless to help. Apparently we do not know how to help, despite our wealth, talents, education and connections.
 
-I remember watching a man leave the office one day and thought that if he gave his whole career and left after decades of service, there would be no evidence of him after a few weeks. The work will always get done. Market forces will dictate how the business adapts and grows. The City carries on.
+I remember watching a man leave the office one day and thought that if he gave his whole career and left his firm after decades of service, there would be nothing left to identify him after a few weeks. The work will always get done. Market forces will dictate how the business adapts and grows. The City rolls on.
 
 [^1]: Publications trump almost all other metrics, and the incentives to publish quantity over quality are such that risky or slow research is inexcusable. The metrics used to standardise success and allocate resources can be subverted just as well in academia as in any other industry. What management measures, the team prioritises.

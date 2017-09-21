@@ -19,7 +19,7 @@ For most people the most obvious way to increase wealth is to buy property. Mort
 It's a trap. Repayments on a mortgage are cheaper than paying rent, but you cannot save enough for a deposit because;
 
 1. so much of your salary goes to paying rent[^1], and
-2. the average cost of a *flat* in London is 500k[^2], which means a 5% deposit is £25k - which is a higher deposit than you would need anywhere else in the UK, despite being the place you are least able to accumualte it. 
+2. the average cost of a *flat* in London is 500k[^2], which means a 5% deposit is £25k — which is a higher deposit than you would need anywhere else in the UK, despite being the place you are least able to accumulate it. 
 
 
 What if my partner went back to work and we put our baby in childcare? Childcare is not cheap, and working would need to bring in more than the cost of childcare. This requires a higher than average salary from a graduate job, (which is the life stage when people might reasonably start having children), so unless both parents are unusually high earners that option isnt viable either.
