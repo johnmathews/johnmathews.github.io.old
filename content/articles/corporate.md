@@ -51,7 +51,7 @@ Living in London has also required a lot of time on trains — my door to desk c
 
 ## Corporate Culture
 
-Back in the office I spent the first few months figuring out how people were organised, how teams operated and how decisions were made.I think it took me about a year to feel like I understood how things really worked, and 1.5 years to feel like I could do all aspects of my job with certainty. There is a difference between how things are spoken about, and how things actually happen.
+Back in the office I spent the first few months figuring out how people were organised, how teams operated and how decisions were made. I think it took me about a year to feel like I understood how things really worked, and 1.5 years to feel like I could do all aspects of my job with certainty. There is a difference between how things are spoken about, and how things actually happen.
 
 My experience has been that performance is all that matters and behaviour is defined by self-interest. I don’t think this is different from previous environments I've worked in — academia isn't any different[^1] and the construction industry certainly isn’t. I wonder if the only way people can endure it is if they’ve not experienced anything else, or think it normal, or necessary. I find myself wishing we could be kinder to each other, and that we could create structures that incentivise mutual support.
 
