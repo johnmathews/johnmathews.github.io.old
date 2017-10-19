@@ -12,7 +12,7 @@ Status:
 
 Having made arrangements to leave London, it seems like a reasonable time to reflect on my time here.
 
-London is a tough city to live in — its big enough that a sub 1-hour commute is considered good, and its super expensive. My stay in London has been defined by my quest to complete my graduate scheme and qualify as an accountant.
+London is a tough city to live in — it's big enough that a sub 1-hour commute is considered good, and it's super expensive. My stay in London has been defined by my quest to complete my graduate scheme and qualify as an accountant.
 
 When I first arrived I had no idea what London or working in a corporate would be like. I was coming from academia, and my motivation for moving to finance could be summed up in two points:
 
@@ -21,7 +21,7 @@ When I first arrived I had no idea what London or working in a corporate would b
 
 I don’t think there’s anything wrong with these motivations, but I should have been making a long term career plan instead.
 
-When I started my job I was surprised at the 6 weeks of induction, and hot-desking. Life as an auditor felt nomadic, as everyone would spend large amount of time at client's offices, and no-one has their own desk in our office. The only thing you really own is your knowledge and your network of relationships.
+When I started my job I was surprised at the 6 weeks of induction and hot-desking. Life as an auditor felt nomadic, as everyone would spend large amounts of time at client's offices, and no-one has their own desk in our office. The only thing you really own is your knowledge and your network of relationships.
 
 In 2014, I arrived with a high opinion of my employer and the view that I would be staying for several years. Having escaped the financial insecurity of short-term research grants, I’d moved back to my home country to contribute to the system that educated me. I was happy to have a regular job with a decent, predictable salary.
 
@@ -31,7 +31,7 @@ The company is huge and so are the efficiencies and barriers to competition that
 
 ## Accountant
 
-The toughest experiences were related to the accountancy qualification. Naively I had believed that the qualification wouldn’t be a big deal and I didn’t give any thought to it when I applied — I just wanted to find out how banks worked. - If there were some exams to be done then it would be fine, I’d already achieved a PhD and I would handle it.
+The toughest experiences were related to the accountancy qualification. Naïvely I had believed that the qualification wouldn’t be a big deal and I didn’t give any thought to it when I applied — I just wanted to find out how banks worked. If there were some exams to be done then it would be fine, I’d already achieved a PhD and I would handle it.
 
 That turned out to be a mistake. A huge mistake. The alarm bells should have rung louder when I realised most of my graduate colleagues had only applied so that they could get the qualification (and were already intending to leave asap afterwards). Doing the pre-course work before college wasn't trivial. College - I was being sent to a classroom again. We were being taken out of the office, away from clients, and put in a classroom to prepare for these exams…
 

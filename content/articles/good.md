@@ -16,5 +16,7 @@ This contrasts with an attitude we often impress upon our children, to always tr
 
 < 80% of the benefit in 20% of the time >
 
+<difficult decisions can be made easier by looking at the other side of the coin. Do I want to marry this person? Goes to - how would I feel if I didn't marry this person? >
+
 
 
