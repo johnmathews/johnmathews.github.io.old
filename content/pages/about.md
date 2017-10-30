@@ -19,17 +19,15 @@ Information about my work researching silos and granular flows can be found [her
 — [@johnmathews](http://twitter.com/johnmathews)
 
 
-<div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
-     data-address="1LXTB9WssALLvHAnk2LqH2PfcvPxbqo6yA"
-     data-shared="false">
-    <div class="blockchain stage-begin">
-        <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
+<div style="font-size:16px; margin-left:10px" class="blockchain-btn" data-address="1LXTB9WssALLvHAnk2LqH2PfcvPxbqo6yA" data-shared="false">
+    <div class="blockchain stage-begin" style="width:50px; margin-left:0px">
+        <img src="/images/bitcoin_PNG42.png"/>
     </div>
     <div class="blockchain stage-ready">
-         <p align="center">If you're feeling kind, please send Bitcoin to: <b>[[address]]</b></p>
-         <p align="center" class="qr-code"></p>
+         <p align="left">Bitcoin address: <b>[[address]]</b></p>
+         <p align="left" style="width:300px" class="qr-code"></p>
     </div>
-    <div class="blockchain stage-paid">
+    <div class="blockchain stage-paid" style="width:400px">
          Donation of <b>[[value]] BTC</b> Received. Thank You.
     </div>
     <div class="blockchain stage-error">
