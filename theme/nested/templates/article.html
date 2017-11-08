@@ -109,18 +109,18 @@ The grass is {{ testing2 }} and now  {{ list1[0] }} and the boat is {{ list1[1] 
         
          <div class="neighbors">
              <ul>
-                 {% if article.prev_article %}
+                 {% if article.prev_article_in_subcategory1 %}
                      <li class="previous_article">
-                         <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
-                             {{ article.prev_article.title }}
+                         <a href="{{ SITEURL }}/{{ article.prev_article_in_subcategory1.url}}">
+                             {{ article.prev_article_in_subcategory1.title }}
                          </a>
                      </li>
                  {% endif %}
                  
-                 {% if article.next_article %}
+                 {% if article.next_article_in_subcategory1 %}
                      <li class="next_article">
-                         <a href="{{ SITEURL }}/{{ article.next_article.url}}">
-                             {{ article.next_article.title }}
+                         <a href="{{ SITEURL }}/{{ article.next_article_in_subcategory1.url}}">
+                             {{ article.next_article_in_subcategory1.title }}
                          </a>
                      </li>
                  {% endif %}
