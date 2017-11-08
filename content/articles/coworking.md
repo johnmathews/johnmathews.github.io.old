@@ -2,12 +2,14 @@ Title: Coworking in Dublin
 Slug: coworking
 Date: 2017-9-15 11:55
 Category:  Startups
+Image: src="/images/dogpatch1.jpg" alt="dogpatch"
 Tags: Freelance, Coworking, Dublin, Element78, Regus, OfficeSuites, CoCreate, Studio9, Glandore, tCube
+
 Tweet: Looking for a #Coworking space in #Dublin? Read this: 
 Summary: A review of eight coworking spaces in Dublin
 Status: Published 
 
-Last week I arrived in Dublin and had two days to find a coworking space. I spent them running around Dublin visiting as many as possible. 
+Last week I arrived in Dublin and had two days to find a coworking space. I ran around Dublin visiting as many as possible. 
 
 I'm looking to rent a hotdesk, which means I don't have any storage space at the office and I don't have a particular desk. 
 
