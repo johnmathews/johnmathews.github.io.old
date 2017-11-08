@@ -14,9 +14,9 @@ Next week I begin working with [Bitnation](http://bitnation.co) as their finance
 
 ### Bitnation
 
-Bitnation's purpose is to offer the same services as governments do, in a way that delivers more benefit to ordinary citizens. 
+Bitnation's purpose is to offer the same services as governments do, in a way that delivers more benefit to users. 
 
-In the west this may not immediately sound like a big deal. Our governments are fairly organised and the services are usually "good enough". Most significantly, we are not used to thinking about ID services (passports, visa, drivers licences) or asset registration services (land registry, marriage certificates) as a service that we are customers of - like our internet service provider, or our electricity supplier. 
+In the West this may not immediately sound like a big deal. Our governments are fairly organised and the services are usually "good enough". Most significantly, we are not used to thinking about ID services (passports, visa, drivers licences) or registration services (land registry, marriage certificates) as a service that we are customers of - like our internet service provider, or our electricity supplier. 
 
 In many parts of the world dysfunctional or unjust governments represent a huge obstacle to improving everyday life, the progress and achievement that many people can hope to realise is limited because of this. 
 
