@@ -5,7 +5,7 @@ Category: Lifestyle
 Tags: Lifestyle
 Image: src="/images/square_mile.jpg" alt="London's Square Mile"
 Tweet:
-Summary: Training is over. 
+Summary: Training's over 
 Status: 
 
 # Ambition
