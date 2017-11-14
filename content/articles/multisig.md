@@ -86,6 +86,14 @@ Select the Accounts tab from the top of the page and then select "**+ Account**"
 
     ![Wallet management]({filename}../images/parity-conf-box.jpeg)
 
+## Adding an existing multi-sig wallet
+
+Once your wallet is created and deployed, you'll need to add it to other parity clients so that the other signatories can make or confirm transactions, and view the wallets balance. This is done by adding a watch wallet.
+
+Process: Accounts tab > + Wallet > Watch wallet > enter the address of the multi-sig wallet. 
+
+The other signatories will now be able to view the wallet's balance, get notifications about pending confirmations, and be able to make and monitor transactions.
+
 ## Managing a multi-sig wallet
 
 8. Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet's address.
