@@ -1,14 +1,11 @@
-Title: Bitcoin is better than gold
+Title: Bitcoin is a safe haven asset
 Slug: bitcoin-vs-gold
 Date: 2017-11-21 17:35
 Category: disintermediation
 Tags: bitcoin, gold, safe haven, 
 Image: src="/images/gold.jpg" alt="gold"
 Tweet: why #bitcoin is better than #gold
-Summary:
-
-
-## Bitcoin will become a better safe haven asset than gold
+Summary: Bitcoin will become a better safe haven asset than gold
 
 Historically, the ultimate safe haven asset has always been gold. This is not because of anything inherently special about gold, but simply because that is what people believe is the most reliable long term method of storing value. 
 
