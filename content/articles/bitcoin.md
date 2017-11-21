@@ -31,8 +31,8 @@ The fundamentals are already established:
 
 1. A decentralised network ensures that it can't be regulated or controlled, and therefore it is safer than asset controlled by a single government or organisation
 2. The present and future rate of supply is publicly available and inviolable. This increases market efficiency and creates more rational pricing than a market where the future rate of supply is unverifiable.
-3. Supply is naturally limited through mathematics and proof of work algorithms. 
+3. Supply is naturally (mathematically) limited using proof of work algorithms. 
 4. It doesn't wear out.
-5. Its impossible to fake.
+5. It's impossible to fake.
 6. It can be stored and transported more easily than gold. - If you can remember 12 words you can transport all your bitcoin effortlessly where ever you go. 
 
