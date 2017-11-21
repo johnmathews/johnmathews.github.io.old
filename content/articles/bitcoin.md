@@ -5,7 +5,7 @@ Category: disintermediation
 Tags: bitcoin, gold, safe haven, 
 Image: src="/images/gold.jpg" alt="gold"
 Tweet: why #bitcoin is better than #gold
-Summary: I Bitcoin will become a better safe haven asset than gold
+Summary: I predict Bitcoin will become a safe haven asset comparable to gold
 
 A safe haven asset is something to buy when there is short term economic insecurity. Historically, the safest asset you can buy has been gold. This is not because of anything inherently special about gold, but because that is what people believe to be the most reliable long term method of storing value. 
 
@@ -23,7 +23,7 @@ A safe-haven asset must fulfil the following criteria:
 6. (Almost) everyone considers it to be precious and valuable, so its easy to find a buyer to negotiate a price with.
 7. It can be stored and transported simply. It's not delicate or volatile.
 
-For these reasons, and because of historical consensus, people have been happy to believe gold is valuable and use it as a store of value. Silver also meets these requirements, but (presumably) is a bit more abundant than gold and therefore less expensive.
+For these reasons, and because of historical consensus, people have been happy to use gold as a store of value in times of economic uncertainty and for long durations. Silver also meets these requirement.
 
 ### Bitcoin compared to gold
 
