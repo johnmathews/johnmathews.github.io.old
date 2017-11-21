@@ -8,7 +8,7 @@ Tweet: why #bitcoin is better than #gold
 Summary:
 
 
-## Bitcoin will become a better safe have asset than gold 
+## Bitcoin will become a better safe haven asset than gold
 
 Historically, the ultimate safe haven asset has always been gold. This is not because of anything inherently special about gold, but simply because that is what people believe is the most reliable long term method of storing value. 
 
