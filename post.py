@@ -7,12 +7,11 @@ TEMPLATE = """
 Title: {title}
 Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category: Data | DLT | Engineering | Finance | Front-end | Lifestyle | Startups | Tools 
+Category: Data | Disintermediation | Engineering | Finance | Front-end | Lifestyle | Startups | Tools 
 Tags:
-Image: src="/images/filename.extension" alt=" " 1200x627px
+Image: src="/images/filename.extension" alt=" "
 Tweet: #hashtags
 Summary:
-Status: draft
 
 """
 
