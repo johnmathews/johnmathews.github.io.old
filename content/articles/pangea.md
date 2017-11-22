@@ -1,10 +1,10 @@
-Title: The Pangea platform
+Title: Pangea
 Slug: pangea
 Date: 2017-11-22 16:49
 Category: Disintermediation
 Tags: bitnation, pangea, 
 Image: src="/images/pangea.jpg" alt="Pangea app"
-Tweet: Decentralised, Borderless and Voluntary - the internet of sovereignty is arriving. 
+Tweet: Decentralised, Borderless and Voluntary - #Pangea will empower citizens to self govern 
 Summary: Societies cannot escape their need to create reliable and enforceable agreements.
 
 ## The problem
