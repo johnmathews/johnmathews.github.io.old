@@ -7,25 +7,31 @@ Image: src="/images/beach.jpg" alt="beach"
 Tweet: 
 Summary: Living or working near water has significantly improved my quality of life
 
-I notice an improvement in my mood, happiness and creativity when I'm living near water. I find water relaxing.
+I notice an improvement in my mood, happiness and creativity when I'm living near water. I find it very calming.
 
 ### Dublin
 
 ![Dublin]({filename}../images/dublin.jpg)
 
-### The Hague
+![Dublin]({filename}../images/dublin1.jpg)
+
+### The Netherlands
 
 ![Hague]({filename}../images/hague.jpg)
 
+![Hague]({filename}../images/amsterdam3.jpg)
+
+![Hague]({filename}../images/amsterdam2.jpg)
+
+![Hague]({filename}../images/amsterdam1.jpg)
+
 ### California
-
-![California]({filename}../images/california.jpg)
-
-![California]({filename}../images/california2.jpg)
 
 ![California]({filename}../images/california3.jpg)
 
-![California]({filename}../images/california7.jpg)
+![California]({filename}../images/california2.jpg)
+
+![California]({filename}../images/california9.jpg)
 
 ### Dorset
 
