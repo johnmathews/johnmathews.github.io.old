@@ -5,7 +5,7 @@ Category:  Lifestyle
 Tags: water
 Image: src="/images/beach.jpg" alt="beach"
 Tweet: 
-Summary: Living or working near water has significantly improved my quality of life
+Summary: Living or working near water improves my quality of life
 
 I notice an improvement in my mood, happiness and creativity when I'm living near water. I find it very calming.
 
