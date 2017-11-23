@@ -5,7 +5,7 @@ Category: Disintermediation
 Tags: bitnation, pangea, 
 Image: src="/images/pangea.jpg" alt="Pangea app"
 Tweet: Decentralised, Borderless and Voluntary - #Pangea will empower citizens to self govern 
-Summary: Societies cannot escape their need to create reliable and enforceable agreements.
+Summary: Societies cannot escape their need to create reliable and enforceable agreements. 
 
 ## The problem
 
@@ -31,7 +31,7 @@ Societies cannot escape their need to use currency as stores of value. They also
 
 Generating Bitcoin through proof of work occurs because individuals believe that Bitcoin will be continuously used — that it will meet an ongoing need to transact using a decentralised and disintermediated method. 
 
-Generating PAT by being a good citizen will occur because individuals believe that Pangea will be continuously used  — that it will meet an ongoing need to create enforceable agreements using a voluntary and geography agnostic (and decentralised) method.
+Generating PAT by being a good citizen will occur because individuals believe that Pangea will be continuously used  — that it will meet an ongoing need to create enforceable agreements using a voluntary and geographically agnostic (and decentralised) method.
 
 ### Comments
 
