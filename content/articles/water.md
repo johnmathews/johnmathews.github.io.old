@@ -21,8 +21,6 @@ I notice an improvement in my mood, happiness and creativity when I'm living nea
 
 ![Hague]({filename}../images/amsterdam3.jpg)
 
-![Hague]({filename}../images/amsterdam2.jpg)
-
 ![Hague]({filename}../images/amsterdam1.jpg)
 
 ### California
@@ -30,6 +28,8 @@ I notice an improvement in my mood, happiness and creativity when I'm living nea
 ![California]({filename}../images/california3.jpg)
 
 ![California]({filename}../images/california2.jpg)
+
+![California]({filename}../images/california7.jpg)
 
 ![California]({filename}../images/california9.jpg)
 
