@@ -5,11 +5,11 @@ Category: Disintermediation
 Tags: bitnation, pangea, 
 Image: src="/images/pangea.jpg" alt="Pangea app"
 Tweet: Decentralised, Borderless and Voluntary - #Pangea will empower citizens to self govern 
-Summary: Societies cannot escape their need to create reliable and enforceable agreements. 
+Summary: Communities cannot escape their need to create reliable and enforceable agreements with each other. 
 
 ## The problem
 
-In many countries access to affordable and fair legal services are beyond the reach of ordinary people. Legal services are often unfair and corrupt, or inefficient, opaque and deliver dubious value. Legal services are in need of disruption.
+In many countries the ability to create legally binding agreements is not available to average citizens. Legal services are often unaffordable and opaque, or service providers are corrupt. Legal services are in need of disruption.
 
 ## The solution
 

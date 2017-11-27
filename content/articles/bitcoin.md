@@ -38,3 +38,7 @@ The fundamentals are already established:
 5. Bitcoin is impossible to fake.
 6. Bitcoin can be stored and transported more easily than gold. - If you can remember 24 words you can transport all your bitcoin effortlessly where ever you go. 
 
+
+### Read more
+
+This [article](http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/), published a week after I wrote this post, looks at different factors to consider when evaluating bitcoins value. It goes into a lot of detail, relative to what I've seen in other articles. 
