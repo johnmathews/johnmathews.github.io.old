@@ -5,7 +5,7 @@ Category: Disintermediation
 Tags: bitnation, pangea, 
 Image: src="/images/pangea.jpg" alt="Pangea app"
 Tweet: Decentralised, Borderless and Voluntary - #Pangea will empower citizens to self govern 
-Summary: Communities cannot escape their need to create reliable and enforceable agreements with each other. 
+Summary: Communities will always need to create reliable and enforceable agreements with each other. 
 
 ## The problem
 

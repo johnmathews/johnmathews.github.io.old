@@ -41,4 +41,4 @@ The fundamentals are already established:
 
 ### Read more
 
-This [article](http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/), published a week after I wrote this post, looks at different factors to consider when evaluating bitcoins value. It goes into a lot of detail, relative to what I've seen in other articles. 
+This [article](http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/), published a week after I wrote this post, looks at different factors to consider when evaluating Bitcoin's value. It goes into a lot of detail, relative to what I've seen in other articles. 
