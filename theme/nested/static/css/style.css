@@ -320,7 +320,7 @@ body {
 /* 009bff*/
 /* CE2323 */
 a, a:visited { 
-    color: #2B4436; 
+    color: #000000; 
     text-decoration: none; 
     transition: all 0.2s ease-out;
 }
