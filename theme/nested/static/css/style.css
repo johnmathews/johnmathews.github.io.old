@@ -319,14 +319,27 @@ body {
 /* eb2344*/
 /* 009bff*/
 /* CE2323 */
-a, a:visited { 
+.archive-container a, .archive-container a:visited { 
     color: #000000; 
     text-decoration: none; 
     transition: all 0.2s ease-out;
 }
+
+a, a:visited { 
+    color: darkblue; 
+    text-decoration: none; 
+    transition: all 0.2s ease-out;
+}
+
+ .archive-container a:hover, .archive-container a:focus, a:active{ 
+    text-decoration:underline; 
+    color: #000000; 
+/*    opacity: 0.8; */
+}
+
 a:hover, a:focus, a:active{ 
     text-decoration:underline; 
-    color:#2B4436; 
+    color: darkblue; 
 /*    opacity: 0.8; */
 }
 

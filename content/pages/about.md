@@ -10,7 +10,7 @@ In 2010 I was a PhD candidate working in Vienna, Austria. I'm a really great res
 
 In 2014 I began working on financial audits of banking clients and in 2017 I qualified as an accountant.  
 
-I'm on [Angel List](https://angel.co/john-mathews-3) and [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available to [download](https://drive.google.com/file/d/0B2dxj_prWJiwUlZOaTRxNHYxa3c/view?usp=sharing).
+I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available to [download](https://drive.google.com/file/d/0B2dxj_prWJiwUlZOaTRxNHYxa3c/view?usp=sharing).
 
 Information about my current role is [here]({filename}../articles/pangea.md). Information about my work researching silos and granular flows can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new on this site, please [subscribe]({filename}../pages/subscribe.md) for updates. I don't send emails as often as I make new posts. 
 
