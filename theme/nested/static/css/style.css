@@ -61,7 +61,7 @@
 
 
 #mc-embedded-subscribe {
-  background-color: #145A32 !important;
+  background-color: #2B4436 !important;
   font-family: Arial !important;
   font-size: 16px !important;
   -webkit-appearance: none !important;
@@ -89,7 +89,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: #145A32;
+  background-color: #2B4436;
   border: none;
   color: white;
   padding: 5px 10px;
@@ -320,13 +320,13 @@ body {
 /* 009bff*/
 /* CE2323 */
 a, a:visited { 
-    color: #145A32; 
+    color: #2B4436; 
     text-decoration: none; 
     transition: all 0.2s ease-out;
 }
 a:hover, a:focus, a:active{ 
     text-decoration:underline; 
-    color:#145A32; 
+    color:#2B4436; 
 /*    opacity: 0.8; */
 }
 
@@ -420,7 +420,7 @@ h2 {
     content: " ";
     margin-top: 10px;
     width: 40px;
-    /* border-bottom: 3px solid #145A32 */
+    /* border-bottom: 3px solid #2B4436 */
     /* border-bottom: 3px solid rgba(235,35,68,1);*/
     /* border-bottom: 3px solid rgba(0,0,0,0.2);*/
 }*/
@@ -543,7 +543,7 @@ h4 {
     margin-top: 10px;
     margin-bottom: 15px;
     width: 50px;
-    border-bottom: 3px solid #145A32;
+    border-bottom: 3px solid #2B4436;
 }
 .header-subtitle {
     font-size: 14px;
@@ -624,7 +624,7 @@ h4 {
 .menu a{
   color: #fff;
   padding:0px;
-  background-color: #145A32;
+  background-color: #2B4436;
   padding-left: 3px;
   padding-right: 3px;
   padding-top: 2px;
@@ -769,7 +769,7 @@ h4 {
         // text-align: center !important;
         content: " ";
         width: 40px;
-        border-bottom: 3px solid #145A32 
+        border-bottom: 3px solid #2B4436 
     }
     */
     dd{
@@ -801,7 +801,7 @@ blockquote{
 
 /* Gradients */
 .gradient {
-    background-color: #145A32;
+    background-color: #1E8449 ; #top nav bar # :1E 8449 
 }
 
 /* Footer */
