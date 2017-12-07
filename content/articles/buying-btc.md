@@ -46,7 +46,7 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 9. If you're going to lose sleep over your investment, invest less.
 
-10. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. The [chart](https://uk.tradingview.com/x/TrL9SA7o/) below shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (if not sooner) the price will return to between the 20 day and 55 day average.
+10. Don't buy at an all time high. Do your research, wait for the price to correct.  _BTC will correct_. The [chart](https://uk.tradingview.com/x/TrL9SA7o/) below shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (if not sooner) the price will return to between the 20 day and 55 day average.
 
 11. [Coinbase](http://www.coinbase.com) is a user friendly and reputable exchange, there are other good exchanges too.
 
