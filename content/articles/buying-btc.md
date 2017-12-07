@@ -56,9 +56,8 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 Leave a comment if you think I've missed something or if you disagree.
 
+<p align="center">[bigger chart](https://uk.tradingview.com/x/TrL9SA7o/)</p>
 ![BTC hype]({filename}../images/btc_hype.png)
- [bigger chart](https://uk.tradingview.com/x/TrL9SA7o/)
-
 
 
 This is not financial advice, these are my opinions. Do everything at your own risk.
