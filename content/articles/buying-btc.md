@@ -1,7 +1,7 @@
 Title: How to buy Bitcoin
 Slug: buying-btc
 Date: 2017-12-7 9:56
-Category: Disintermediation 
+Category: Lifestyle 
 Tags: Bitcoin
 Image: src="/images/btc_hype.png" alt="bitcoin hype"
 Tweet: What to consider before buying Bitcoin
@@ -46,8 +46,13 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 11. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. This image shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (at the latest) the price will return to between the 20 day and 55 day average. 
 
+12. Don't make a decision when you're feeling rushed! 
+
 Leave a comment if you think I've missed something out or if you disagree!
 
+ [big chart](https://uk.tradingview.com/x/TrL9SA7o/)
 ![BTC hype]({filename}../images/btc_hype.png)
+
+
 
 This is not financial advice, these are my opinions. Do everything at your own risk.
