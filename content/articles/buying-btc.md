@@ -9,7 +9,7 @@ Summary: What to consider before buying Bitcoin
 
 Recently a few friends have asked me how they can buy Bitcoin. Here are a few things that come to mind:
 
-1. I'm not a financial advisor and this is not financial advice. These are my personal opinions only. Do everything at your own risk.
+1. I’m not your financial advisor and this is not financial advice. These are my personal opinions only.
 
 2. Don't invest what you can't afford to lose.
 
@@ -44,10 +44,8 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
     * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
     * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following).
 
-
-
-
 9. [Coinbase](http://www.coinbase.com) is a user friendly and reputable exchange, there are other good exchanges too. 
+
 
 10. If you're going to lose sleep over your investment, invest less.
 11. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. The [chart](https://uk.tradingview.com/x/TrL9SA7o/) below shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (if not sooner) the price will return to between the 20 day and 55 day average.
@@ -61,4 +59,4 @@ Leave a comment if you think I've missed something or if you disagree.
 
 
 
-_This is not financial advice, these are my opinions. Do everything at your own risk._
+_I’m not your financial advisor and this is not financial advice. These are my personal opinions only._
