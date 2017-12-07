@@ -42,26 +42,15 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 8. Take some time to read about the fundamentals, understand the tech as much as you can, think about why people would behave in certain ways, what makes bitcoin special and useful, or not. Get started on this today, it will take some time before it begins to make sense.
 
     * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
-
     * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following)
-
-      ​
 
 9. If you're going to lose sleep over your investment, invest less.
 
-    ​
-
 10. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. The [chart](https://uk.tradingview.com/x/TrL9SA7o/) below shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (if not sooner) the price will return to between the 20 day and 55 day average.
-
-    ​
 
 11. [Coinbase](http://www.coinbase.com) is a user friendly and reputable exchange, there are other good exchanges too.
 
-      
-
 12. Don't make financial decisions when you're feeling rushed.
-
-     ​
 
 13. Once you've bought some Bitcoin or other cryptocurrencies, don't store them on an exchange. Transfer them to a wallet that you control. If you don't own your private key, you don't own the asset. If you don't know what that means, go to point 8. 
 
