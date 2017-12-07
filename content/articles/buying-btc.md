@@ -44,8 +44,8 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
     * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
     * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following).
 
-
 10. If you're going to lose sleep over your investment, invest less.
+
 11. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. The [chart](https://uk.tradingview.com/x/TrL9SA7o/) below shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (if not sooner) the price will return to between the 20 day and 55 day average.
 12. [Coinbase](http://www.coinbase.com) is a user friendly and reputable exchange, there are other good exchanges too. 
 13. Don't make financial decisions when you're feeling rushed.
