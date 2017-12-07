@@ -9,7 +9,7 @@ Summary: What to consider before buying Bitcoin
 
 Recently a few friends have asked me how they can buy Bitcoin. Here are a few things that come to mind:
 
-1. This is not financial advice, these are my opinions. Do everything at your own risk.
+1. I'm not a financial advisor and this is not financial advice. These are my personal opinions only. Do everything at your own risk.
 
 2. Don't invest what you can't afford to lose.
 
