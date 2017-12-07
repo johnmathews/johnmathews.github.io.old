@@ -39,7 +39,7 @@
 
 @media (max-width: 760px) {
   .summary {
-    text-align: justify;
+    text-align: left;
 
   }
 }
