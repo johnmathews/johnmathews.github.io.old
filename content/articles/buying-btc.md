@@ -33,7 +33,7 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
    By putting something you care about in a very risky situation (it is risky) you will need to control your psychology and identity when other people are trying to manipulate you. This is useful in all areas of life.
 
-7. Almost no one has a clue what's happening. Conventional economists and traders certainly don't.
+7. Almost no one has a clue what's happening. Conventional economists and traders certainly don't. This is crypto-economics.
 
 8. Take some time to read about the fundamentals, understand the tech as much as you can, think about why people would behave in certain ways, what makes bitcoin special and useful, or not. Get started on this today, it will take some time before it begins to make sense.
 
@@ -44,14 +44,14 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 10. If you're going to lose sleep over your investment, invest less.
 
-11. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. This image shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (at the latest) the price will return to between the 20 day and 55 day average. 
+11. Buy the dips, do your research, wait for the price to correct.  _BTC will correct_. The chart below shows the 20 day and 55 day moving average compared to the daily price. I expect that in early January (if not sooner) the price will return to between the 20 day and 55 day average. 
 
-12. Don't make a decision when you're feeling rushed! 
+12. Don't make financial decisions when you're feeling rushed.
 
-Leave a comment if you think I've missed something out or if you disagree!
+Leave a comment if you think I've missed something out or if you disagree.
 
- [big chart](https://uk.tradingview.com/x/TrL9SA7o/)
 ![BTC hype]({filename}../images/btc_hype.png)
+ [bigger chart](https://uk.tradingview.com/x/TrL9SA7o/)
 
 
 
