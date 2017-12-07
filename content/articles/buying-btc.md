@@ -18,12 +18,8 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 4. Write down the following:
 
     * How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc
-
     * How long you want to invest it for
-
     * How much you want to make
-
-      ​
 
 5. You will need to get good at identifying and ignoring the following, even from your friends:
 
@@ -32,8 +28,6 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
     * Fear, Uncertainty, Doubt (FUD) 
 
     Don't trust. Verify.
-
-    ​
 
 6. Point 5 is really important and one of the best reasons to invest - money has an intensely psychological quality about it, and crypto currencies are the most intense trading experience there is right now. 
 
@@ -54,7 +48,9 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 12. Don't make financial decisions when you're feeling rushed.
 
-Leave a comment if you think I've missed something out or if you disagree.
+13. Once you've bought some Bitcoin or other cryptocurrencies, don't store them on an exchange. Transfer them to a wallet that you control. If you don't own your private key, you don't own the asset. If you don't know what that means, go to point 8. 
+
+Leave a comment if you think I've missed something or if you disagree.
 
 ![BTC hype]({filename}../images/btc_hype.png)
  [bigger chart](https://uk.tradingview.com/x/TrL9SA7o/)
