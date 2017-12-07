@@ -13,11 +13,11 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 2. Don't invest what you can't afford to lose.
 
-3. If the price falls 50%, you need to be able to wait whilst the price recovers
+3. If the price falls 50%, you need to be able to wait whilst the price recovers.
 
 4. Write down the following:
 
-    * How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc
+    * How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc.
 
     * How long you want to invest it for
 
@@ -42,8 +42,8 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 8. Take some time to read about the fundamentals, understand the tech as much as you can, think about why people would behave in certain ways, what makes bitcoin special and useful, or not. Get started on this today, it will take some time before it begins to make sense.
 
     * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
-    * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following) 
-      <br>
+    * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following).
+      <p>==$0</p>
 
 9. If you're going to lose sleep over your investment, invest less.
 
