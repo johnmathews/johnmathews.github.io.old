@@ -42,7 +42,8 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 8. Take some time to read about the fundamentals, understand the tech as much as you can, think about why people would behave in certain ways, what makes bitcoin special and useful, or not. Get started on this today, it will take some time before it begins to make sense.
 
     * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
-    * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following) <br>
+    * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following) 
+      <br>
 
 9. If you're going to lose sleep over your investment, invest less.
 
