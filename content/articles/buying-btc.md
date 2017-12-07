@@ -17,28 +17,28 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 4. Write down the following:
 
-   * How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc
-   * How long you want to invest it for
-   * How much you want to make
+    * How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc
+    * How long you want to invest it for
+    * How much you want to make
 
 5. You will need to get good at identifying and ignoring the following, even from your friends:
 
-   * Hype
-   * Fake news 
-   * Fear, Uncertainty, Doubt (FUD) 
+    * Hype
+    * Fake news 
+    * Fear, Uncertainty, Doubt (FUD) 
 
-   Don't trust. Verify.
+    Don't trust. Verify.
 
 6. Point 5 is really important and one of the best reasons to invest - money has an intensely psychological quality about it, and crypto currencies are the most intense trading experience there is right now. 
 
-   By putting something you care about in a very risky situation (it is risky) you will need to control your psychology and identity when other people are trying to manipulate you. This is useful in all areas of life.
+    By putting something you care about in a very risky situation (it is risky) you will need to control your psychology and identity when other people are trying to manipulate you. This is useful in all areas of life.
 
 7. Almost no one has a clue what's happening. Conventional economists and traders certainly don't. This is crypto-economics.
 
 8. Take some time to read about the fundamentals, understand the tech as much as you can, think about why people would behave in certain ways, what makes bitcoin special and useful, or not. Get started on this today, it will take some time before it begins to make sense.
 
-   * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
-   * Twitter has a lot of good information but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following).
+    * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
+    * Twitter has a lot of good information but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following).
 
 9. [Coinbase](http://www.coinbase.com) is a user friendly and reputable exchange, there are other good exchanges too. 
 
