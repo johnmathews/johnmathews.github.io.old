@@ -17,17 +17,17 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
 4. Write down the following:
 
-   1. How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc
-   2. How long you want to invest it for
-   3. How much you want to make
+   - How much you can afford to invest. Consider how much cash you will need over the next year, how long it would take to recover any losses, etc
+   - How long you want to invest it for
+   - How much you want to make
 
 5. You will need to get good at identifying and ignoring the following, even from your friends:
 
-   1. Hype
-   2. Fake news 
-   3. Fear, Uncertainty, Doubt (FUD) 
+   - Hype
+   - Fake news 
+   - Fear, Uncertainty, Doubt (FUD) 
 
-   Don't trust, Verify.
+   Don't trust. Verify.
 
 6. Point 5 is really important and one of the best reasons to invest - money has an intensely psychological quality about it, and crypto currencies are the most intense trading experience there is right now. 
 
