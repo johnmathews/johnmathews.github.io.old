@@ -43,7 +43,6 @@ Recently a few friends have asked me how they can buy Bitcoin. Here are a few th
 
     * YouTube has a tonne of videos, and these two sites are good and detailed ([one](http://lopp.net/bitcoin.html), [two](http://nakamotoinstitute.org/)). 
     * Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and FUD (see point 4). You can see who I follow on [twitter](https://twitter.com/johnmathews/following).<p></p>
-      ​
 
 9. If you're going to lose sleep over your investment, invest less.
 
