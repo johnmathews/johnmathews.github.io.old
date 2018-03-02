@@ -1,4 +1,4 @@
-Title: Bitcoin as a safe haven
+Title: Bitcoin compared to gold
 Slug: bitcoin-vs-gold
 Date: 2017-11-21 17:35
 Category: Disintermediation

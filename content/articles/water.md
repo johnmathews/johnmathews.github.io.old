@@ -7,7 +7,7 @@ Image: src="/images/beach.jpg" alt="beach"
 Tweet: 
 Summary: Living or working near water improves my quality of life
 
-I notice an improvement in my mood, happiness and creativity when I'm living near water. I find it very calming.
+I love working and living near water - waterfalls, rivers, canals and oceans  are relaxing, beautiful and inspiring.
 
 ### Dublin
 
@@ -36,3 +36,8 @@ I notice an improvement in my mood, happiness and creativity when I'm living nea
 ### Dorset
 
 ![Dorset]({filename}../images/dorset.jpg)
+
+### Acapulco
+
+![Acapulco]({filename}../images/mex1.jpg)
+![Acapulco]({filename}../images/mex2.jpg)
