@@ -1,7 +1,7 @@
 Title: How to buy Bitcoin
 Slug: buying-btc
 Date: 2017-12-7 9:56
-Category: Lifestyle 
+Category: Disintermediation
 Tags: Bitcoin
 Image: src="/images/btc_hype.png" alt="bitcoin hype"
 Tweet: What to consider before buying Bitcoin
