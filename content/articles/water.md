@@ -7,7 +7,7 @@ Image: src="/images/beach.jpg" alt="beach"
 Tweet: 
 Summary: Living or working near water improves my quality of life
 
-I love working and living near water - waterfalls, rivers, canals and oceans  are relaxing, beautiful and inspiring.
+Waterfalls, rivers, canals and oceans: beautiful, calming, inspiring.
 
 ### Dublin
 
