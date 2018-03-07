@@ -5,9 +5,9 @@ Category:  Lifestyle
 Tags: water
 Image: src="/images/beach.jpg" alt="beach"
 Tweet: 
-Summary: Living or working near water increases quality of life
+Summary: Being near water increases quality of life
 
-Waterfalls, rivers, canals and oceans: beautiful, calming, inspiring.
+Waterfalls, rivers, canals, oceans: beautiful, calming, inspiring.
 
 ### Dublin
 
