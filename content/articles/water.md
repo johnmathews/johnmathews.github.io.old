@@ -3,7 +3,7 @@ Slug: ocean
 Date: 2017-11-23 18:48
 Category:  Lifestyle 
 Tags: water
-Image: src="/images/California2.jpg" alt="beach"
+Image: src="/images/california2.jpg" alt="Californian beach"
 Tweet: 
 Summary: Being near water increases quality of life
 
