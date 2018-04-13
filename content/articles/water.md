@@ -3,17 +3,13 @@ Slug: ocean
 Date: 2017-11-23 18:48
 Category:  Lifestyle 
 Tags: water
-Image: src="/images/beach.jpg" alt="beach"
+Image: src="/images/California2.jpg" alt="beach"
 Tweet: 
 Summary: Being near water increases quality of life
-
-Waterfalls, rivers, canals, oceans: beautiful, calming, inspiring.
 
 ### California
 
 ![California]({filename}../images/california3.jpg)
-
-![California]({filename}../images/california2.jpg)
 
 ![California]({filename}../images/california7.jpg)
 
@@ -22,6 +18,8 @@ Waterfalls, rivers, canals, oceans: beautiful, calming, inspiring.
 ### Dorset
 
 ![Dorset]({filename}../images/dorset.jpg)
+
+![Dorset]({filename}../images/beach.jpg)
 
 ### Acapulco
 
