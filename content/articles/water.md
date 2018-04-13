@@ -9,20 +9,6 @@ Summary: Being near water increases quality of life
 
 Waterfalls, rivers, canals, oceans: beautiful, calming, inspiring.
 
-### Dublin
-
-![Dublin]({filename}../images/dublin.jpg)
-
-![Dublin]({filename}../images/dublin1.jpg)
-
-### The Netherlands
-
-![Hague]({filename}../images/hague.jpg)
-
-![Hague]({filename}../images/amsterdam3.jpg)
-
-![Hague]({filename}../images/amsterdam1.jpg)
-
 ### California
 
 ![California]({filename}../images/california3.jpg)
@@ -41,3 +27,18 @@ Waterfalls, rivers, canals, oceans: beautiful, calming, inspiring.
 
 ![Acapulco]({filename}../images/mex1.jpg)
 ![Acapulco]({filename}../images/mex2.jpg)
+
+### Dublin
+
+![Dublin]({filename}../images/dublin.jpg)
+
+![Dublin]({filename}../images/dublin1.jpg)
+
+### The Netherlands
+
+![Hague]({filename}../images/hague.jpg)
+
+![Hague]({filename}../images/amsterdam3.jpg)
+
+![Hague]({filename}../images/amsterdam1.jpg)
+
