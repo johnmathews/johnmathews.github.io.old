@@ -76,7 +76,9 @@
                                 <a href="{{ SITEURL }}{{ link }}">{{ title }}</a>
                             {% endif %}
                         {% endfor %}
-                <a class="active" href="{{ SITEURL }}/pages/about.html"> About </a>
+                <a class="active" href="{{ SITEURL }}/pages/lists.html">Collections</a>
+                |
+                <a class="active" href="{{ SITEURL }}/pages/about.html">About</a>
                         {% if DISPLAY_PAGES_ON_MENU %}
                         {% for pg in pages %}
                             <a {% if pg == page %} class="active"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>

@@ -7,7 +7,8 @@ TEMPLATE = """
 Title: {title}
 Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category: Data | Disintermediation | Engineering | Finance | Front-end | Lifestyle | Startups | Tools 
+Category: 
+Lists:
 Tags:
 Image: src="/images/filename.extension" alt=" "
 Tweet: #hashtags
@@ -31,7 +32,7 @@ def make_entry(title):
     with open(f_create, 'w') as w:
         w.write(t)
     print("File created -> " + f_create)
-    os.system("open "+f_create)
+    os.system("open -a MacVim "+f_create)
 
 '''
     App_Path = '/usr/local/Cellar/macvim/8.0-127/MacVim.app'

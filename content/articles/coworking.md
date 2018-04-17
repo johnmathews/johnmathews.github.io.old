@@ -4,7 +4,6 @@ Date: 2017-9-15 11:55
 Category:  Startups
 Image: src="/images/dogpatch1.jpg" alt="dogpatch"
 Tags: Freelance, Coworking, Dublin, Element78, Regus, OfficeSuites, CoCreate, Studio9, Glandore, tCube
-
 Tweet: Looking for a #Coworking space in #Dublin? Read this: 
 Summary: A review of eight coworking spaces in Dublin
 Status: Published 
