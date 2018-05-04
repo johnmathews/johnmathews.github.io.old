@@ -4,13 +4,15 @@ Date: 2017-07-24
 #About
 Thanks for visiting my blog. 
 
+In 2017 I qualified as a chartered accountant and became a financial consultant. I began working remotely and created my consultancy, Anaheim Consulting B.V.
+
+In 2014 I moved to London and began work as an external financial auditor for banking clients in London, I also began qualifying as a chartered accountant with the [ICAEW](https://careers.icaew.com/en/why-a-career-in-chartered-accountancy/why-become-an-icaew-chartered-accountant).  
+
+In 2010 I began researching granular materials as a PhD candidate in Vienna, Austria. 
+
 In 2009 I graduated from Edinburgh University with a masters in Civil Engineering. The  [Great Recession](https://en.wikipedia.org/wiki/Great_Recession) had arrived and I found a job at Starbucks. This made me curious about finance and I resolved to one day understand how banks work. 
 
-In 2010 I was a PhD candidate working in Vienna, Austria. I'm a really great researcher. 
-
-In 2014 I began working on financial audits of banking clients and in 2017 I qualified as an accountant.  
-
-I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available to [download](https://drive.google.com/file/d/0B2dxj_prWJiwUlZOaTRxNHYxa3c/view?usp=sharing).
+I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available to [download](https://docs.google.com/document/d/1PGDKLEUr-_KT-RN-GIIQMMttSqmhdVIPjRZxmNcJ8X8/edit?usp=sharing).
 
 Information about my current role is [here]({filename}../articles/pangea.md). Information about my work researching silos and granular flows can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new on this site, please [subscribe]({filename}../pages/subscribe.md) for updates. I don't send emails as often as I make new posts. 
 
