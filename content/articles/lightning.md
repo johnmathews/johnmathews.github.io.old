@@ -8,7 +8,7 @@ Tweet: Bitcoin lightning network
 Summary: The lightning network is a protocol that operates on top of the Bitcoin network. It allows instant transactions between participants and is the leading solution to current scalability problems.
 Status: Draft
 
-This post is based on the excellent seminar by by Joseph Poon and Thaddeus Dryja "Scaling Bitcoin to Billions of Transactions Per Day" which was given at the San Francisco bitcoin developers conference in early 2015. You can see the seminar [here](https://youtu.be/8zVzw912wPo).
+This post is based on the excellent seminar by Joseph Poon and Thaddeus Dryja "Scaling Bitcoin to Billions of Transactions Per Day" which was given at the San Francisco bitcoin developers conference in early 2015. You can see the seminar [here](https://youtu.be/8zVzw912wPo).
 
 ## The Problem
 
