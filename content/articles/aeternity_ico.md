@@ -1,4 +1,3 @@
-
 Title: The Æternity ICO: My experience
 Slug: aeternity-ico
 Date: 2017-4-30 23:37
