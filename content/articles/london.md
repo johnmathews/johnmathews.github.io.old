@@ -1,7 +1,7 @@
 Title: London Rent vs. London Salaries
 Slug: london
 Date: 2017-5-12 22:55
-Category: Lifestyle
+Category: Life
 Tags: London, Rent
 Status: Published
 Summary: Living in London is only financially possible if you are either single or household income is more than £60k/year.

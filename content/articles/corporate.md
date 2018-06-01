@@ -1,7 +1,7 @@
 Title: Corporate London
 Slug: corporate
 Date: 2017-7-10 21:37
-Category: Lifestyle
+Category: Life
 Tags: Career, Corporate, London
 Image: src="/images/canary_wharf_escalator.jpg" alt="canary wharf escalator"
 Tweet: Experiences of a grad scheme in #corporate #London

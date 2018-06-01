@@ -1,7 +1,7 @@
 Title: Good enough
 Slug: good
 Date: 2017-9-15 13:12
-Category: Lifestyle
+Category: Life
 Tags: Engineering, 
 Image: src="/images/filename.extension" alt=" " 1200x627px
 Tweet: Don't try your hardest, use the least effort necessary to get as many things done as possible. 

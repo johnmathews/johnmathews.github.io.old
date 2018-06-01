@@ -1,7 +1,7 @@
 Title: Spare time
 Date: 2016-08-13 21:15
 Author: John Mathews
-Category: Lifestyle
+Category: Life
 Tags: Habits, Advice, Reflection
 Slug: spare-time
 Status: published

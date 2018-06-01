@@ -1,7 +1,7 @@
 Title: How to wake up early
 Date: 2016-08-06 22:04
 Author: John Mathews
-Category: Lifestyle
+Category: Life
 Tags: Productivity, Sleep
 Slug: how-to-wake-up-early
 Status: published

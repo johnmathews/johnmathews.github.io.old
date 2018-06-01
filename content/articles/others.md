@@ -1,7 +1,7 @@
 Title: others
 Slug: others
 Date: 2018-2-25 15:13
-Category: Lifestyle
+Category: Life
 Tags:
 Image: src="/images/filename.extension" alt=" "
 Tweet: #hashtags
