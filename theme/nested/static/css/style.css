@@ -4,6 +4,13 @@
  * Licensed under Apache V2 (https://github.com/molivier/nest/blob/master/LICENSE)
  */
 
+
+
+/*    width: 100%;
+    float: left;
+    display: block;
+*/
+
 #pec-decrypt-form ~ #sub_req {
     display: none !important;   
 }
