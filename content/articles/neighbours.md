@@ -28,9 +28,13 @@ When we disucss taxation, social mobility, migration, military intervention, why
 Horton the elephant, the title charachter in "Horton Hears a Who" by Dr. Zeuss, gets it. He went to great lengths to protect the tiny and weak people in who-ville. Jesus gets it. He said that we should love our neighbours, and even told us that our neighbours are people we come across who need our help.
 
 I wonder if forgetting that humans are inherantly worthy of respect is a prerequisite for declining;
+
 - standards of governance
+
 - social mobility
+
 - peace
+
 - economic growth
 
 Which makes me think it is a self defeating blindness. When we choose to disregard a group of humans because it is inconvenient to help them, we are elevating our needs above theirs. Ultimately this seems to create a chain of events where everybody suffers.
