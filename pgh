@@ -2,15 +2,6 @@
 echo generate blog output files
 pelican content -s publishconf.py
 
-echo Stage blog files 
-git add .
-
-echo Commit blog files
-git commit -m "$1"
-
-echo Push blog files
-git push
-
 cd output
 pwd
 
@@ -24,6 +15,16 @@ echo Push output files
 git push
 
 cd ..
+pwd
+
+echo Stage blog files 
+git add .
+
+echo Commit blog files
+git commit -m "$1"
+
+echo Push source files
+git push
 
 pwd
 
