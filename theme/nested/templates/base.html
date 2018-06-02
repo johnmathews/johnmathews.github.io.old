@@ -66,24 +66,24 @@
                 <div class="header-nav" >
                     <div class="header-logo" >
                         <a class="pull-left hidden-xs" href="{{ SITEURL }}"><img class="mr20" src="{{ SITEURL }}{{NEST_HEADER_LOGO }}" alt="John Mathews" height="115" width="115"> </a>
-                      <div class="header-text" style="padding-left:10px;margin-right:auto;margin-left:auto;width:900px;">
-                        <a class="pull-left" href="{{ SITEURL }}"> Hello! I'm John </a>
-                      </div>
-                    </div>
-                    <div class="nav pull-right" >
-                        {% for title, link in MENUITEMS %}
-                            {% if 'http://' in link or 'https://' in link %}
-                                <a href="{{ link }}">{{ title }}</a>
-                            {% else %}
-                                <a href="{{ SITEURL }}{{ link }}">{{ title }}</a>
+                      <div class="header-text">
+                        <a class="pull-left" style='margin-left:10px;' href="{{ SITEURL }}"> Hello! I'm John </a>
+                        <div class="anon" style='text-align:right; padding-right:10px;' >
+                            {% for title, link in MENUITEMS %}
+                                {% if 'http://' in link or 'https://' in link %}
+                                    <a href="{{ link }}">{{ title }}</a>
+                                {% else %}
+                                    <a href="{{ SITEURL }}{{ link }}">{{ title }}</a>
+                                {% endif %}
+                            {% endfor %}
+                            <a class="active" href="{{ SITEURL }}/pages/about.html">About</a>
+                            {% if DISPLAY_PAGES_ON_MENU %}
+                            {% for pg in pages %}
+                                <a {% if pg == page %} class="active"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>
+                            {% endfor %}
                             {% endif %}
-                        {% endfor %}
-                        <a class="active" href="{{ SITEURL }}/pages/about.html">About</a>
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for pg in pages %}
-                            <a {% if pg == page %} class="active"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>
-                        {% endfor %}
-                        {% endif %}
+                          </div>
+                    </div>
                     </div>
                 </div>
             </div>

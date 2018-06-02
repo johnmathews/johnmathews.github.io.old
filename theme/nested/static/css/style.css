@@ -295,16 +295,35 @@ table {
   .container {
     width: 730px;
   }
+  .header-text {
+    padding-left:10px;
+    margin-right:auto;
+    margin-left:auto;
+    width:730px;    
 }
+}
+
 @media (min-width: 992px) {
   .container {
     width: 850px;
   }
+  .header-text {
+    padding-left:10px;
+    margin-right:auto;
+    margin-left:auto;
+    width:850px;    
+}
 }
 @media (min-width: 1200px) {
   .container {
     width: 900px;
   }
+  .header-text {
+    padding-left:10px;
+    margin-right:auto;
+    margin-left:auto;
+    width:900px;    
+}  
 }
 
 /* Default styling */
