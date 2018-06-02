@@ -66,9 +66,11 @@
                 <div class="header-nav" >
                     <div class="header-logo" >
                         <a class="pull-left hidden-xs" href="{{ SITEURL }}"><img class="mr20" src="{{ SITEURL }}{{NEST_HEADER_LOGO }}" alt="John Mathews" height="115" width="115"> </a>
-                      <div class="header-text" style="padding-left:10px;margin-right:auto;margin-left:auto;">
+                      <div class="header-text" style="padding-left:10px;margin-right:auto;margin-left:auto;width:900px;">
                         <a class="pull-left" href="{{ SITEURL }}"> Hello! I'm John </a>
-                        <div class="pull-right" style="text-align:right;">
+                      </div>
+                    </div>
+                    <div class="nav pull-right" >
                         {% for title, link in MENUITEMS %}
                             {% if 'http://' in link or 'https://' in link %}
                                 <a href="{{ link }}">{{ title }}</a>
@@ -82,9 +84,9 @@
                             <a {% if pg == page %} class="active"{% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>
                         {% endfor %}
                         {% endif %}
-                        </div>
                     </div>
                 </div>
+            </div>
             <!-- /Static navbar -->
         {% endif %}
 

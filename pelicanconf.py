@@ -44,9 +44,7 @@ MARKDOWN = {
 PATH = 'content' 
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap',
-           'pelican_alias', 'share_post', 'tag_cloud',
-           'encrypt_content'] #,'optimize_images']
+PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap', 'optimize_images', 'pelican_alias', 'share_post', 'tag_cloud', 'encrypt_content']
 LOAD_CONTENT_CACHE = False
 
 ENCRYPT_CONTENT = {
