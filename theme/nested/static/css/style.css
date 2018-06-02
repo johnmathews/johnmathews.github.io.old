@@ -292,17 +292,17 @@ table {
 
 /* Responsive */
 @media (min-width: 736px) {
-  .container {
+  .header-text {
     width: 730px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .header-text {
     width: 850px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .header-text {
     width: 900px;
   }
 }
