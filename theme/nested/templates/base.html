@@ -62,8 +62,8 @@
         {% if page in NO_HEADER %} 
         {% else %} 
             <!-- Static navbar -->
-            <div class="container">
-                <div class="header-nav">
+            <div class="container" style="width:100%;float:left;display:block;">
+                <div class="header-nav" >
                     <div class="header-logo ">
                         <a class="pull-left hidden-xs" href="{{ SITEURL }}"><img class="mr20" src="{{ SITEURL }}{{NEST_HEADER_LOGO }}" alt="John Mathews" height="115" width="115"> </a>
                         <a class="pull-left" href="{{ SITEURL }}"> Hello! I'm John </a>
@@ -88,10 +88,10 @@
             <!-- /Static navbar -->
         {% endif %}
 
-            <!-- Header -->
-            {% block header %}
-            {% endblock header %}
-            <!-- /Header -->
+        <!-- Header -->
+        {% block header %}
+        {% endblock header %}
+        <!-- /Header -->
         </div>
 
         <!-- Content -->
