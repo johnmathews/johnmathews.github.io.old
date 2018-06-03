@@ -5,7 +5,7 @@ Category: Tools
 Tags: Git, Rys, Tutorial, Ryan Hodson,
 Image: src="/images/rys-git-tutorial.jpg" alt="book front cover"
 Tweet: Ry's Git Tutorial is the best #git #tutorial - learn by doing.
-Summary: Ry's Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple website using Git. 
+Summary: Ry's Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple website. 
 
 For tracking changes to a collection of files, Git is the ubiquitous solution. It's free, robust, comprehensive, and there is a plethora of resources that are easy to find.  
 
