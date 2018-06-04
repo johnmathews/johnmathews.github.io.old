@@ -7,17 +7,15 @@ Image:
 Tweet: Three generations to forget what was previously cherished.
 Summary: Humans deserve respect, simply because they are human. This truth is in the process of going from self evident, to assumed, to denied.
 
-A useful model I've come across states that it takes three generations for a society to forget something previously considered true. The first generation studies or experiences something which leads to a particluar value or belief. The second generation inherits the belief and assumes it to be true. They do not arrive at the belief through their own effort. The third generation then questions the assumption and disregards it. 
+A useful model I've come across states that it takes three generations for a society to deny something previously considered true. The first generation studies or experiences something which leads to a particluar value or belief. The second generation inherits the belief and assumes it to be true, but doesnt arrive at the belief through their own critical thought. The third generation then questions the assumption, realises that most holders of the belief do not have a good basis for their belief, and disregards it. 
 
-I believe that people have a reponsibility to look after each other and treat each other with a minimum level of respect. 
+The belief that people have a reponsibility to look after each other and treat each other with a minimum level of respect seems to be following this route.  
 
-This point of view appears to be being rejected. It used to be assumed and it is not being promoted as it should. 
+That humans inherantly deserve a degree of respect and dignity simply because they are human is self-evident. In times of comfort and excess it could be ignored, but in times of calamity and in the aftermath of disasters it becomes undeniable and obvious. This is partly because disasters reveal our instinct for justice and our frailty in the face of misfortune.
 
-I think that this belief - that humans inherantly deserve a degree of respect and dignity simply because they are human - is self-evident. In times of comfort and excess it could be ignored, but in times of calamity and in the aftermath of disasters it becomes undeniable and obvious. This is partly because disasters reveal our instinct for justice and our frailty in the face of misfortune.
+Life is exerienced through the lens of the mind, and its percpetion is mostly governed by funadamental circumstances or desires. The trappings of a prosperous society allows this reality to be covered by a veneer of soft arguments, or rejected in favor of a viewpoint that says we have superseded these suposedly basic origins. 
 
-Life is exerienced through the lens of the mind, and its percpetion is mostly governed by funadamental and simple circumstances or desires. The trappings of a prosperous society allows this reality to be ignored or rejected in favor of a viewpoint that says we have superseded these suposedly basic origins. 
-
-But good leaders should know better. They should study history and be self-aware. In the past they have forgotten this reality and have been forced to relearn it at great cost. Are we about to forget, again, and let our children live with those consequences?
+Good leaders should know better. They should study history and be self-aware. In the past they have forgotten this reality and have been forced to relearn it at great cost. Are we about to forget, again, and let our children live with those consequences?
 
 My grandfathers generation saw the damage that sectarian systems bring, and were forced to answer questions around how much respect people deserve only because they are people. As the consequences of different views and systems became evident, my fathers generation assumed the answers to be self-evident, because the consequences of the previous "forgetting" were still clear. 
 
