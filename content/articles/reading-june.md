@@ -3,7 +3,7 @@ Slug: reading
 Date: 2018-6-4 15:52
 Category: Life
 Tags: Reading
-Summary: A list of interesting things discovered between June 1 and June 5
+Summary: A list of interesting things. June 1 - June 5
 
 - [Mental models](https://www.fs.blog/a-lesson-on-worldly-wisdom/) is a comprehensive list of mental models organised around different disciplines. Long read. Probably one of the most easy to apply and tangibly useful things I've read in a while.
 
@@ -11,3 +11,4 @@ Summary: A list of interesting things discovered between June 1 and June 5
 
 - [Invisible asymptotes](http://www.eugenewei.com/blog/2018/5/21/invisible-asymptotes) - A well written and long look at various facets of business strategy.
 
+- [Factors from scratch](http://osam.com/Commentary/factors-from-scratch) - How factors work
