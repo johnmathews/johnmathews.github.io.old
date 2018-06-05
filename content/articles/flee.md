@@ -20,7 +20,7 @@ Excitement mounts.
 
 </br>
 
-Exotic.
+How exotic.
 
 </br>
 
