@@ -65,7 +65,7 @@ I wrote this post so that I could compare what I thought was important when I w
     for MMA. For now though, I'll do P90x. I can reconsider in 90 days.
 
     <div class="embed-responsive embed-responsive-16by9">
-    <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/LybrzdG96_8" frameborder="0" allowfullscreen></iframe>    
+    <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/u0_8dzaNxhg" frameborder="0" allowfullscreen></iframe>    
      </div>
 
 15. "Get out of London" - My contract ends in April 2017, next summer
