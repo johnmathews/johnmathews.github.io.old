@@ -3,8 +3,8 @@ Slug: entrepreneurs
 Date: 2018-6-7 13:17
 Category: Data
 Tags: Crypto, Entrepreneur, Startups, Businesses, 
-Summary: This is a guest post written by Josh Wardini
 Staus: Draft
+Summary: This is a guest post written by Josh Wardini
 
 # Cryptocurrencies - The New Money Spinner?
 
