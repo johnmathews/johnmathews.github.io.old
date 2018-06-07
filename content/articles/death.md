@@ -4,8 +4,8 @@ Date: 2018-6-3 21:56
 Category: Life
 Tags: death
 Tweet: 
-Status: Draft
 Summary: Given our 100% mortality rate, death is conspicuously absent from our conversations and thoughts.
+Status: Draft
 
 In 100 years I will be dead, and so will my children. It is likely that no-one will know that I ever existed, except perhaps a few grand-children. I have a limited amount of time to live, do stuff, and experience the world. This limitation should result in vastly different behaviour than if I had unlimited time. 
 
