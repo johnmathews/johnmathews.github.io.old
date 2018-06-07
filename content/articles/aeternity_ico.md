@@ -4,7 +4,7 @@ Date: 2017-4-30 23:37
 Category: Disintermediation
 Tags: Fintech, Finance, Digital Currencies, Blockchains, DLT, Æternity, ICO
 Status: Published
-Image: src="/images/Æternity_logo.png" alt="Æternity blockchain"
+Image: src="/images/AEternity_logo.png" alt="Æternity blockchain"
 Summary: I participated in phase 1 of the Æternity ICO by converting Sterling to Æons via Ether. I tried several exchanges and chose the quickest, cheapest conversion method.
 
 On April 3rd, I happened to be Googling digital currencies and blockchain innovations when I came across the [Æternity website](http://www.Æternity.com) and skimmed their [white paper](https://blockchain.Æternity.com/%C3%A6ternity-blockchain-whitepaper.pdf). The project is ambitious, like many crypto projects, but seems well organised. The team is well known in the space. There is a clear plan to develop the project and create a blockchain technology that, if successful, could bring. A step change in the use of digital currencies for high volume low value transactions, and the viable implementation of smart contracts. 
