@@ -1,39 +1,46 @@
 {% extends "base.html" %}
 
-{% block title %}{{ NEST_ARCHIVES_HEAD_TITLE }} - {{ super() }}{% endblock title %}
-{% block description %}{{ NEST_ARCHIVES_HEAD_DESCRIPTION }}{% endblock description %}
+  {% block title %}
+    {{ NEST_ARCHIVES_HEAD_TITLE }} - {{ super() }}
+  {% endblock title %}
+  
+  {% block description %}
+    {{ NEST_ARCHIVES_HEAD_DESCRIPTION }}
+  {% endblock description %}
 
-{% block headerstyle %}
+  {% block headerstyle %}
     {% if NEST_HEADER_IMAGES %}
-    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ SITEURL }}/images/{{ NEST_HEADER_IMAGES }}'); background-position: center; background-size: cover;">
+      <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ SITEURL }}/images/{{ NEST_HEADER_IMAGES }}'); background-position: center; background-size: cover;">
     {% else %}
-    <div class="header-container gradient">
+      <div class="header-container gradient">
     {% endif %}
-{% endblock headerstyle %}
+  {% endblock headerstyle %}
 
 
-{% block content %}
-    <div class="archive-container">
+    {% block content %}
+      <div class="archive-container">
         <div class="container content archive">
-            <div id="sort_posts">
-                <h3 style="font-weight:normal;"><a href="{{ SITEURL }}/categories.html">Sort by category</a></h3>
-            </div>
-                {% for year, year_group in articles|groupby('date.year')|sort(reverse=True) %}
-                    <h2>{{ year }}</h2>
-                        <dl class="dl-horizontal hidden-xs">
-                            {% for article in year_group %}
-                            <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {#<font color="black" ><i> - {{ article.category }}</i></font>#} </a></dt>
-                            <dd>{{ article.locale_date }}</dd>
-                            {% endfor %}
-                        </dl>
-               
-                        <dl class="dl-horizontal hidden-sm hidden-md hidden-lg">
-                            {% for article in year_group %}
-                            <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
-                            {% endfor %}
-                        </dl>
-                {% endfor %}
+          <div id="sort_posts">
+            <h3 style="font-weight:normal;"><a href="{{ SITEURL }}/categories.html">Sort by category</a></h3>
+          </div>
+          {% for year, year_group in articles|groupby('date.year')|sort(reverse=True) %}
+          <h2>{{ year }}</h2>
+          <dl class="dl-horizontal hidden-xs">
+            {% for article in year_group %}
+              <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {#<font color="black" ><i> - {{ article.category }}</i></font>#} </a></dt>
+              <dd>{{ article.locale_date }}</dd>
+              {% endfor %}
+            </dl>
+
+            <dl class="dl-horizontal hidden-sm hidden-md hidden-lg">
+              {% for article in year_group %}
+                <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+            {% endfor %}
+          </dl>
+          {% endfor %}
         </div>
+      </div>
+    {% endblock content %}
     </div>
-{% endblock content %}
+  </div>
 
