@@ -2,6 +2,7 @@ Title: Prediction Markets
 Slug: prediction
 Date: 2018-6-7 12:29
 Category: Disintermediation
+Image: src="/images/dover.jpg" alt="Port of Dover"
 Tags: Gnosis, Prediction, Markets, Brexit, Betting, 
 Tweet: Prediction markets - more reliable than surveys, experts and many statistical methods, and they're getting easier and cheaper! #Gnosis
 Summary: Prediction markets can be more accurate than surveys, experts, and polls, and they're becoming easier and cheaper to create.
