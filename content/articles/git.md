@@ -20,8 +20,12 @@ I am hosting the tutorial here so that it continues to be useful. If the author 
 Download the .epub file [here]({attach}/documents/Ry’s Git Tutorial.epub)
  
 Download the example files for each module below:
-- [chapter 2]({attach}/documents/chapter2.zip)
-- [chapter 3]({attach}/documents/chapter3.zip)
-- [chapter 4]({attach}/documents/chapter4.zip)
-- [chapter 5]({attach}/documents/chapter5.zip)
+
+- [chapter 2: Undoing Changes]({attach}/documents/chapter2.zip)
+
+- [chapter 3: Branches I]({attach}/documents/chapter3.zip)
+
+- [chapter 4: Branches II]({attach}/documents/chapter4.zip)
+
+- [chapter 5: Rebasing]({attach}/documents/chapter5.zip)
 
