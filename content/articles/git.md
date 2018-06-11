@@ -15,7 +15,7 @@ Ry's Git Tutorial by Ryan Hodson is the best way to learn Git that I have come a
 
 Unfortunately the website which originally hosted the tutorial seems to no longer exist. Each tutorial chapter starts with a link to download the project files up to that point, so the reader doesn't need to start at the beginning but can jump into the most relevant point (interactive rebase, anyone?). Unfortunately these links are dead now. 
 
-I am hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I only want to keep this great tutorial available so that others can benefit from it.
+I am hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I only want to keep this great resource available so that others can benefit from it.
 
 Download the .epub file [here]({attach}/documents/Ry’s Git Tutorial.epub)
  
