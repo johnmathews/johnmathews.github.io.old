@@ -6,7 +6,7 @@ Thanks for visiting my blog.
 
 In 2017 I qualified as a chartered accountant and became a financial consultant. I began working with clients remotely and created my consultancy, [Anaheim Consulting B.V](https://anaheimconsulting.eu).
 
-In 2014 I moved to London and began work as an external financial auditor for banking clients. I also began qualifying as a chartered accountant with the [ICAEW](https://careers.icaew.com/en/why-a-career-in-chartered-accountancy/why-become-an-icaew-chartered-accountant).  
+In 2014 I moved to London and began work as an external financial auditor for banking clients. I also began qualifying as a chartered accountant with the [ICAEW](https://careers.icaew.com/en/why-a-career-in-chartered-accountancy/why-become-an-icaew-chartered-accountant).
 
 In 2010 I began my PhD researching granular materials at the [BOKU](https://www.baunat.boku.ac.at/igt/) in Vienna, Austria. 
 
@@ -16,9 +16,7 @@ I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.l
 
 Information about my current work might be [here](https://anaheimconsulting.eu). Information about my work researching silos and granular flows can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new on this site, please [subscribe]({filename}../pages/subscribe.md) for updates. I don't send emails as often as I make new posts. 
 
-I think that
-[this](https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
-is generally good avice, and [this](https://www.fs.blog/mental-models/) is
+I think that [this](https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short) is generally good advice, and [this](https://www.fs.blog/mental-models/) is
 a useful set of tools.
 
 — [@johnmathews](http://twitter.com/johnmathews)
