@@ -1,17 +1,16 @@
 import sys
-import os 
-import subprocess
+import os
+#  import subprocess
 from datetime import datetime
 
 TEMPLATE = """
 Title: {title}
 Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category: 
-Lists:
+Category:
 Tags:
 Image: src="/images/filename.extension" alt=" "
-Tweet: #hashtags
+Tweet:
 Summary:
 
 """
@@ -33,6 +32,8 @@ def make_entry(title):
         w.write(t)
     print("File created -> " + f_create)
     os.system("open -a MacVim "+f_create)
+    #  os.system("open -a Vi "+f_create)
+
 
 '''
     App_Path = '/usr/local/Cellar/macvim/8.0-127/MacVim.app'
