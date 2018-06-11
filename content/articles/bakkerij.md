@@ -1,11 +1,10 @@
 Title: BakkeRij
 Slug: bakkerij
 Date: 2018-6-11 13:09
-Category: Lifestyle
+Category: Life
 Tags: coworking, Netherlands, Haarlem, 
 Image: src="/images/bakkerij3.jpg" alt="Bakke-Rij "
-Tweet: This is a great example of repurposing an industrial space for the
-next stage of the industrial revolution - knowledge work.
+Tweet: This is a great example of repurposing an industrial space for the next stage of the industrial revolution - knowledge work. 
 Summary: Shipping containers make surprisingly good offices
 
 Recently I've moved into a new coworking space, sharing an office unit with
