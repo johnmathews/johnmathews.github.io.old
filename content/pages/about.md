@@ -16,6 +16,11 @@ I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.l
 
 Information about my current work might be [here](https://anaheimconsulting.eu). Information about my work researching silos and granular flows can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new on this site, please [subscribe]({filename}../pages/subscribe.md) for updates. I don't send emails as often as I make new posts. 
 
+I think that
+[this](https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
+is generally good avice, and [this](https://www.fs.blog/mental-models/) is
+a useful set of tools.
+
 — [@johnmathews](http://twitter.com/johnmathews)
 
 
