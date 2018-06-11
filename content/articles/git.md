@@ -7,7 +7,7 @@ Image: src="/images/rys-git-tutorial.jpg" alt="book front cover"
 Tweet: Ry's Git Tutorial is the best #git #tutorial - learn by doing.
 Summary: Ry's Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple website. 
 
-For tracking changes to a collection of files, Git is the ubiquitous solution. It's free, robust, comprehensive, and there is a plethora of resources that are easy to find.  
+For tracking changes to a collection of files, Git is the ubiquitous solution. It's free, robust, comprehensive, and there is a plethora of resources that are easy to find. 
 
 I usually find the commands difficult to remember though, and the concepts which Git is built on often seem counter-intuitive to me. This means I spend a lot of time searching for answers and trying to remember how I can use Git to experiment with a project without fear of losing any hard won progress. 
 
@@ -19,3 +19,9 @@ I am hosting the tutorial here so that it continues to be useful. If the author 
 
 Download the .epub file [here]({attach}/documents/Ry’s Git Tutorial.epub)
  
+Download the example files for each module below:
+- [chapter 2]({attach}/documents/chapter2.zip)
+- [chapter 3]({attach}/documents/chapter3.zip)
+- [chapter 4]({attach}/documents/chapter4.zip)
+- [chapter 5]({attach}/documents/chapter5.zip)
+

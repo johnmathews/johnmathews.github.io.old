@@ -31,8 +31,8 @@ def make_entry(title):
     with open(f_create, 'w') as w:
         w.write(t)
     print("File created -> " + f_create)
-    os.system("open -a MacVim "+f_create)
-    #  os.system("open -a Vi "+f_create)
+    #  os.system("open -a MacVim "+f_create)
+    os.system("open -e vi "+f_create)
 
 
 '''
