@@ -11,11 +11,11 @@ For tracking changes to a collection of files, Git is the ubiquitous solution. I
 
 I usually find the commands difficult to remember though, and the concepts which Git is built on often seem counter-intuitive to me. This means I spend a lot of time searching for answers and trying to remember how I can use Git to experiment with a project without fear of losing any hard won progress. 
 
-Ry's Git Tutorial by Ryan Hodson is the best way to learn Git that I have come across. Its simple, practical, and clear. The reader learns how to use Git to creating and maintaining a simple website. This gives the Git commands a meaningful context, which makes them a lot easier to remember and use in the future.
+Ry's Git Tutorial by Ryan Hodson is the best way to learn Git that I have come across. Its simple, practical, and clear. The reader learns how to use Git yy creating and maintaining a simple website. This gives the Git commands a meaningful context, which makes them a lot easier to remember and use in the future.
 
-Unfortunately the website which originally hosted the tutorial seems to no longer exist. Each tutorial chapter starts with a link to download the project files up to that point, so the reader doesn't need to start at the beginning but can jump into the most relevant point (interactive rebase, anyone?). Unfortunately these links are dead now. 
+The tutorial was first published in 2012 and the website which originally hosted the examples no longer exists. Each tutorial chapter starts with a link to download the project files up to that point, so the reader doesn't need to start at the beginning but can jump into any part of the guide. Unfortunately these links are dead now. 
 
-I am hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I only want to keep this great resource available so that others can benefit from it.
+Therefore I'm hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I'd like to keep this great resource available so that others can benefit from it.
 
 Download the .epub file [here]({attach}/documents/Ry’s Git Tutorial.epub)
  
@@ -29,3 +29,6 @@ Download the example files for each module below:
 
 - [chapter 5: Rebasing]({attach}/documents/chapter5.zip)
 
+- [chapter 6: Rewriting History]({attach}/documents/chapter6.zip)
+
+- [chapter 7: Remotes]({attach}/documents/chapter7.zip)
