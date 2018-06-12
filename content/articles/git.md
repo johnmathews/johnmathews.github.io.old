@@ -21,22 +21,22 @@ Download the .epub file [here]({attach}/documents/Ry’s Git Tutorial.epub)
  
 Download the example files for each module below:
 
-- [chapter 2: Undoing Changes]({attach}/documents/chapter2.zip)
+- [Chapter 2: Undoing Changes]({attach}/documents/chapter2.zip)
 
-- [chapter 3: Branches I]({attach}/documents/chapter3.zip)
+- [Chapter 3: Branches I]({attach}/documents/chapter3.zip)
 
-- [chapter 4: Branches II]({attach}/documents/chapter4.zip)
+- [Chapter 4: Branches II]({attach}/documents/chapter4.zip)
 
-- [chapter 5: Rebasing]({attach}/documents/chapter5.zip)
+- [Chapter 5: Rebasing]({attach}/documents/chapter5.zip)
 
-- [chapter 6: Rewriting History]({attach}/documents/chapter6.zip)
+- [Chapter 6: Rewriting History]({attach}/documents/chapter6.zip)
 
-- [chapter 7: Remotes]({attach}/documents/chapter7.zip)
+- [Chapter 7: Remotes]({attach}/documents/chapter7.zip)
 
-- [chapter 8: Centralized Workflows]({attach}/documents/chapter8.zip)
+- [Chapter 8: Centralized Workflows]({attach}/documents/chapter8.zip)
 
-- [chapter 9: Distributed Workflows]({attach}/documents/chapter9.zip)
+- [Chapter 9: Distributed Workflows]({attach}/documents/chapter9.zip)
 
-- [chapter 10: Patch Workflows]({attach}/documents/chapter10.zip)
+- [Chapter 10: Patch Workflows]({attach}/documents/chapter10.zip)
 
-- [chapter 11: Tips & Tricks]({attach}/documents/chapter11.zip)
+- [Chapter 11: Tips & Tricks]({attach}/documents/chapter11.zip)
