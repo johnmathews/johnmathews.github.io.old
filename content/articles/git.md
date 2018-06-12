@@ -36,3 +36,7 @@ Download the example files for each module below:
 - [chapter 8: Centralized Workflows]({attach}/documents/chapter8.zip)
 
 - [chapter 9: Distributed Workflows]({attach}/documents/chapter9.zip)
+
+- [chapter 10: Patch Workflows]({attach}/documents/chapter10.zip)
+
+- [chapter 11: Tips & Tricks]({attach}/documents/chapter11.zip)
