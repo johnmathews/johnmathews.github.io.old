@@ -32,3 +32,7 @@ Download the example files for each module below:
 - [chapter 6: Rewriting History]({attach}/documents/chapter6.zip)
 
 - [chapter 7: Remotes]({attach}/documents/chapter7.zip)
+
+- [chapter 8: Centralized Workflows]({attach}/documents/chapter8.zip)
+
+- [chapter 9: Distributed Workflows]({attach}/documents/chapter9.zip)
