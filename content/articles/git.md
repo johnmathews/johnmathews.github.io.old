@@ -40,3 +40,7 @@ Download the example files for each module below:
 - [Chapter 10: Patch Workflows]({attach}/documents/chapter10.zip)
 
 - [Chapter 11: Tips & Tricks]({attach}/documents/chapter11.zip)
+
+- [Chapter 12: Plumbing]({attach}/documents/chapter12.zip)
+
+- [end]({attach}/documents/chapter13.zip)
