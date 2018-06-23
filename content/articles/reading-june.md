@@ -12,3 +12,5 @@ Summary: A list of interesting things. June 1 - June 5
 - [Invisible asymptotes](http://www.eugenewei.com/blog/2018/5/21/invisible-asymptotes) - A well written and long look at various facets of business strategy.
 
 - [Factors from scratch](http://osam.com/Commentary/factors-from-scratch) - How factors work
+
+- [This is tragic](https://kottke.org/18/06/a-sad-update-about-a-scissors-maker-that-went-viral) - "...But I do think this highlights the potential disconnects between mental health & business, publicity & success, and success & happiness. The internet can seem so intimate but ultimately it’s a thin view of an individual’s or company’s reality."
