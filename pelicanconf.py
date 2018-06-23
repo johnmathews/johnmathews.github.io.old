@@ -2,35 +2,33 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-RELATIVE_URLS = True #False for www, True for development/testing # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
-
-#WRITE_SELECTED = ["/output/multisig.html"]
+RELATIVE_URLS = True  #False for www, True for development/testing # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
 
 AUTHOR = 'John Mathews'
 SITENAME = "John Mathews"
-SITEURL = 'http://johnmathews.eu' # should include http://
+SITEURL = 'http://johnmathews.eu'  # should include http://
 ASSET_URL = './css/'
 
 STATIC_CREATE_LINKS = True
 
-USE_CATEGORIES = False # on index page show either chronologial or grouped by categories
+USE_CATEGORIES = False  # on index page show either chronologial or grouped by categories
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = False
-DISPLAY_CATEGORIES_ON_MENU = False 
-SLUGIFY_SOURCE = 'basename' # 'title' uses post title, 'basename' uses filename of content
+DISPLAY_CATEGORIES_ON_MENU = False
+SLUGIFY_SOURCE = 'basename'  # 'title' uses post title, 'basename' uses filename of content
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives'))
 NO_HEADER = ['archives','tags', 'categories']
 SITEMAP = {
     'format': 'xml' ,
-    'priorities' : {'articles': 0.5, 
-                  'pages': 0.5,
-                  'indexes': 0.5 
-                 },
-    'changefreqs': { 'articles': 'daily',
-                  'pages': 'daily',
-                  'indexes': 'daily'
-                }
-        }
+    'priorities' : {'articles': 0.5,
+                    'pages': 0.5,
+                    'indexes': 0.5
+                   },
+    'changefreqs': {'articles': 'daily',
+                    'pages': 'daily',
+                    'indexes': 'daily'
+                   }
+}
 
 MARKDOWN = {
     'extension_configs': {
@@ -41,11 +39,11 @@ MARKDOWN = {
     },
     'output_format': 'html5',
 }
-PATH = 'content' 
+PATH = 'content'
 OUTPUT_PATH = 'output/'
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup', 'neighbors', 'render_math', 'assets', 'sitemap',
-           'pelican_alias', 'share_post', 'tag_cloud', 'encrypt_content'] #, 'optimize_images'
+           'pelican_alias', 'share_post', 'tag_cloud', 'encrypt_content']  # 'optimize_images'
 LOAD_CONTENT_CACHE = False
 
 ENCRYPT_CONTENT = {
@@ -71,12 +69,12 @@ DEFAULT_METADATA = {
 DEFAULT_DATE_FORMAT = '%b %d %Y'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
-WITH_FUTURE_DATES = False # if False, future dates have default status of 'draft'
+WITH_FUTURE_DATES = False  # if False, future dates have default status of 'draft'
 
 TAG_CLOUD_STEPS = 4
-TAG_CLOUD_MAX_ITEMS = 100 # Count of different font sizes in the tag cloud.
-TAG_CLOUD_SORTING = 'alphabetically' # The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
-TAG_CLOUD_BADGE = False # Optionnal setting : can bring badges, which mean say : display the number of each tags present on all articles.
+TAG_CLOUD_MAX_ITEMS = 100  # Count of different font sizes in the tag cloud.
+TAG_CLOUD_SORTING = 'alphabetically'  # The tag cloud ordering scheme. Valid values: random, alphabetically, alphabetically-rev, size and size-rev
+TAG_CLOUD_BADGE = False  # Optionnal setting : can bring badges, which mean say : display the number of each tags present on all articles.
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -86,7 +84,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = () #its a list of lists. each item is a list where the first item is the text and the scond is the url
+LINKS = ()  # its a list of lists. each item is a list where the first item is the text and the scond is the url
 
 # Social widget
 SOCIAL = ()
@@ -94,15 +92,14 @@ SOCIAL = ()
 DEFAULT_PAGINATION = 20
 
 # Add items to top menu before pages
-MENUITEMS = [] #[('Homepage', '/'),('Categories','/categories.html')]
+MENUITEMS = []  # [('Homepage', '/'),('Categories','/categories.html')]
 
 # Add header background image from content/images : 'background.jpg'
 NEST_HEADER_IMAGES = ''
-NEST_HEADER_LOGO = '/images/logo.jpeg'
-#NEST_HEADER_LOGO = '/images/john_mathews.jpeg'
+NEST_HEADER_LOGO = '/images/me.jpeg'
 NEST_HEADER_LOGO_BIG = '/images/logo_big.jpeg'
 
-TWITTER_HANDLE = 'johnmathews' # dont need the @
+TWITTER_HANDLE = 'johnmathews'  # dont need the @
 EMAIL_ICON = '/images/email_logo.png'
 LINKEDIN_ICON = '/images/linkedin_logo.png'
 FACEBOOK_ICON = '/images/facebook_logo.png'
@@ -118,7 +115,7 @@ EXTRA_PATH_METADATA = {
 
 # Footer
 NEST_SITEMAP_COLUMN_TITLE = u'Sitemap'
-NEST_SITEMAP_MENU = [('Archives', '/archives.html'),('Tags','/tags.html'), ('Authors','/authors.html')]
+NEST_SITEMAP_MENU = [('Archives', '/archives.html'), ('Tags', '/tags.html'), ('Authors', '/authors.html')]
 NEST_SITEMAP_ATOM_LINK = u'Atom Feed'
 NEST_SITEMAP_RSS_LINK = u'RSS Feed'
 NEST_SOCIAL_COLUMN_TITLE = u'Social'
