@@ -5,7 +5,7 @@ Category: Life
 Tags: Reading
 Summary: A list of interesting things. June 1 - June 5
 
-- [Mental models](https://www.fs.blog/a-lesson-on-worldly-wisdom/) is a comprehensive list of mental models organised around different disciplines. Long read. Probably one of the most easy to apply and tangibly useful things I've read in a while.
+- [Mental models](https://fs.blog/mental-models/) is a comprehensive list of mental models organised around different disciplines. Long read. Probably one of the most easy to apply and tangibly useful things I've read in a while.
 
 - [Life is short](http://www.paulgraham.com/vb.html) - Is life actually short, or would we always want more time, no matter how much we could have?
 
