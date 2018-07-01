@@ -29,10 +29,15 @@ def make_entry(title):
                                 minute=today.minute,
                                 slug=slug)
     editor = os.getenv('EDITOR', 'vi')
-    with open(f_create, 'w') as w:
-        w.write(t)
+
+    if os.path.exists(f_create):
+        print("Opening existing file")
+    else:
+        with open(f_create, 'a') as w:
+            w.write(t)
+        print("File created -> " + f_create)
+
     subprocess.call('%s %s' % (editor, f_create), shell=True)
-    print("File created -> " + f_create)
 
 
 '''
