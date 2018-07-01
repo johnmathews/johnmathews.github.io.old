@@ -1,6 +1,6 @@
 import sys
 import os
-#  import subprocess
+import subprocess
 from datetime import datetime
 
 TEMPLATE = """
@@ -28,11 +28,11 @@ def make_entry(title):
                                 hour=today.hour,
                                 minute=today.minute,
                                 slug=slug)
+    editor = os.getenv('EDITOR', 'vi')
     with open(f_create, 'w') as w:
         w.write(t)
+    subprocess.call('%s %s' % (editor, f_create), shell=True)
     print("File created -> " + f_create)
-    os.system("open -a MacVim "+f_create)
-    #  os.system("open -e vi "+f_create)
 
 
 '''
