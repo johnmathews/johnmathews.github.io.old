@@ -20,6 +20,8 @@ Summary: A list of interesting things. June 1 - June 5
 
 - [Cryptocurrency regulations around the world](https://www.cnbc.com/2018/03/27/a-complete-guide-to-cyprocurrency-regulations-around-the-world.html?__source=sharebar%7Clinkedin&par=sharebar)
 
+- [On the 2008 financial crisis](https://www.lrb.co.uk/v40/n13/john-lanchester/after-the-fall) - "I’m not sure if it’s philosophically possible for an action to be both necessary and a disaster, but that in essence is what the bailouts were."
+
 ## Podcasts
 - [Jill Carlson](https://www.youtube.com/whatbitcoindid) on the "What Bitcoin Did" podcast. “For the first time there is no longer a monopoly on the creation of value or monetary systems, that is really What Bitcoin Did.”
 
