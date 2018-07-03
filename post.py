@@ -5,6 +5,7 @@ from datetime import datetime
 
 TEMPLATE = """
 Title: {title}
+Status: Draft
 Slug: {slug}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
 Category:
@@ -28,6 +29,7 @@ def make_entry(title):
                                 hour=today.hour,
                                 minute=today.minute,
                                 slug=slug)
+
     editor = os.getenv('EDITOR', 'vi')
 
     if os.path.exists(f_create):

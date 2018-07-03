@@ -3,7 +3,7 @@ Slug: reading
 Date: 2018-6-4 15:52
 Category: Life
 Tags: Reading
-Summary: A list of interesting things. June 1 - June 5
+Summary: A list of interesting things. June 2018
 
 ## Articles
 - [Mental models](https://fs.blog/mental-models/) is a comprehensive list of mental models organised around different disciplines. Long read. Probably one of the most easy to apply and tangibly useful things I've read in a while.
