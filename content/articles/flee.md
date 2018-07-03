@@ -1,7 +1,7 @@
 Title: Flee
 Slug: flee
 Date: 2017-7-4 08:42
-Category: Life
+Category: General
 Tags: Poetry
 Image: src="/images/houses_streets.jpeg" alt="suburban houses"
 Tweet: 

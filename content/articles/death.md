@@ -1,7 +1,7 @@
 Title: Constant Mortality
 Slug: mortality
 Date: 2018-6-3 21:56
-Category: Life
+Category: General
 Tags: death, mortality, taboo,
 Tweet: 
 Summary: Given our 100% mortality rate, death is conspicuously absent from our conversations and thoughts.

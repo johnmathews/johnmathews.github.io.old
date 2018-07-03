@@ -1,7 +1,7 @@
 Title: Neighbours
 Slug: neighbours
 Date: 2018-5-31 22:30
-Category: Life 
+Category: General 
 Tags: Politics, Equality,
 Image: 
 Tweet: Three generations to forget what was previously cherished.

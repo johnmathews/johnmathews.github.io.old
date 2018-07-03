@@ -1,7 +1,7 @@
 Title: Live near the ocean
 Slug: ocean
 Date: 2017-11-23 18:48
-Category: Life 
+Category: General 
 Tags: water
 Image: src="/images/california2.jpg" alt="Californian beach" 
 Summary: Being near water is better.

@@ -1,7 +1,7 @@
 Title: Move
 Slug: move
 Date: 2017-7-8 12:26
-Category: Life
+Category: General
 Tags: Lifestyle
 Image: src="/images/square_mile.jpg" alt="London's Square Mile"
 Tweet:

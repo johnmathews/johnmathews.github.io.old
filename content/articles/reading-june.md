@@ -1,7 +1,7 @@
 Title: What I'm reading
 Slug: reading
 Date: 2018-6-4 15:52
-Category: Life
+Category: General
 Tags: Reading
 Summary: A list of interesting things. June 2018
 

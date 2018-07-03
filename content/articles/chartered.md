@@ -1,7 +1,7 @@
 Title: I'm a chartered accountant
 Slug: chartered
 Date: 2017-10-19 21:56
-Category: Life 
+Category: General 
 Tags: ICAEW, ACA, Accounting
 Image: src="/images/icaew_banner.JPEG" alt="ICAEW" 
 Tweet: #ICAEW #accountant
