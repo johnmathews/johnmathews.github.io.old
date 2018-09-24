@@ -1,7 +1,7 @@
 Title: Bakke-Rij
 Slug: bakkerij
 Date: 2018-6-11 13:09
-Category: General
+Category: Startups
 Tags: coworking, Netherlands, Haarlem, 
 Image: src="/images/bakkerij3.jpg" alt="Bakke-Rij"
 Tweet: This is a great example of repurposing an industrial space for the next stage of the industrial revolution - knowledge work. 
