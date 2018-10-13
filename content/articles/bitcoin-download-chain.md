@@ -1,11 +1,10 @@
 Title: bitcoin-download-chain
-Status: Draft
+Status: Published
 Slug: bitcoin-download-chain
 Date: 2018-10-13 20:34
-Category:
-Tags:
-Image: src="/images/filename.extension" alt=" "
-Tweet:
+Category: Disintermediation
+Tags: Bitcoin
+Tweet: Sync a BTC node for the first time, quickly, on a spinning disk by moving chainstate to an SSD and symlinking to it. 
 Summary: move `chainstate` to an SSD and symlink to it from the magnetic disk.
 
 In order to run your own bitcoin node, or lightning node, you'll need to
