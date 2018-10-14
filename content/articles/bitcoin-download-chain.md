@@ -1,6 +1,7 @@
 Title: Sync a BTC node, quickly
 Status: Published
 Slug: sync-bitcoin-core-node
+Image: src="/images/btc-core.jpg" alt="bitcoin-core"
 Date: 2018-10-13 20:34
 Category: Disintermediation
 Tags: Bitcoin, btc-core, Blockchain, Node,
