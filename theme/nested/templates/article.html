@@ -30,15 +30,15 @@
 {% endblock description %}
 
 # image should be ideally 1200 pixels x 627 pixels (1.91/1 ratio)
-{% set string =  article.image|safe %}
-{% set list1 = string.split('"') %}
-The grass is {{ testing2 }} and now  {{ list1[0] }} and the boat is {{ list1[1] }}
+{% set imagestring =  article.image|safe %}
+{% set imagelist = imagestring.split('"') %}
+{{ imagelist[0] }} 
 
 {% block ogimage -%} 
     {%- if article.image -%}
-    {{ SITEURL }}{{ list1[1] }}
+    {{ SITEURL }}{{ imagelist[1] }}
     {%- else -%}
-    {{ SITEURL }}{{NEST_HEADER_LOGO_BIG }}
+    {{ SITEURL }}{{NEST_HEADER_LOGO_SMALL }}
     {%- endif -%}
 {%- endblock ogimage %}
 
