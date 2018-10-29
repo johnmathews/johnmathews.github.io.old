@@ -6,10 +6,10 @@ cd output
 pwd
 
 echo Stage output files
-git add .
+git add --all
 
 echo Commit output files
-git commit -m "$1"
+git commit -m "scheduled update"
 
 echo Push output files
 git push
@@ -18,10 +18,10 @@ cd ..
 pwd
 
 echo Stage blog files 
-git add .
+git add --all
 
 echo Commit blog files
-git commit -m "$1"
+git commit -m "scheduled update"
 
 echo Push source files
 git push
