@@ -1,6 +1,9 @@
 #!/bin/bash
 
 pwd
+echo pulling from git to get changes
+git pull
+
 echo Stage blog files 
 git add --all
 
