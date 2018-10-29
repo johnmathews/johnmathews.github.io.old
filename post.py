@@ -30,7 +30,7 @@ def make_entry(title):
                                 minute=today.minute,
                                 slug=slug)
 
-    editor = os.getenv('EDITOR', 'vi')
+    editor = os.getenv('EDITOR', 'vim')
 
     if os.path.exists(f_create):
         print("Opening existing file")
