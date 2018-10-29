@@ -1,10 +1,11 @@
 #!/bin/bash
 
+pwd
 echo Stage blog files 
-git add .
+git add --all
 
 echo Commit blog files
-git commit -m "$1"
+git commit -m "update"
 
 echo Push blog files
 git push
@@ -13,18 +14,15 @@ cd output
 pwd
 
 echo Stage output files
-git add .
+git add --all
 
 echo Commit output files
-git commit -m "$1"
+git commit -m "update"
 
 echo Push output files
 git push
 
 cd ..
-
 pwd
 
-
-echo /// ALL DONE! ///
-
+echo /// DONE! ///
