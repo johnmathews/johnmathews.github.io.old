@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/projects/blog
+
 echo Stage blog files 
 git add .
 
