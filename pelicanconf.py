@@ -96,9 +96,9 @@ MENUITEMS = []  # [('Homepage', '/'),('Categories','/categories.html')]
 
 # Add header background image from content/images : 'background.jpg'
 NEST_HEADER_IMAGES = ''
-NEST_HEADER_LOGO = '/images/me.jpeg'
-NEST_HEADER_LOGO_SMALL = '/images/me_small.jpeg'
-NEST_HEADER_LOGO_BIG = '/images/me.jpeg'
+NEST_HEADER_LOGO = '/images/logo.jpeg'
+NEST_HEADER_LOGO_SMALL = '/images/logo_big square.jpeg'
+NEST_HEADER_LOGO_BIG = '/images/logo.jpeg'
 
 TWITTER_HANDLE = 'johnmathews'  # dont need the @
 EMAIL_ICON = '/images/email_logo.png'
