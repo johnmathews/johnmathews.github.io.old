@@ -3,7 +3,7 @@ Status: Published
 Slug: shell
 Date: 2019-2-14 11:32
 Category: Tools
-Tags: shell, unix, zsh, bash
+Tags: shell, unix, zsh, bash, profiling
 Image: src="/images/zsh_order_blind_profiling.jpg" alt="what zsh spends its time doing when it starts"
 Tweet: Measure how slow you shell is and find out which components are causing the biggest delays
 Summary: I used profiling to see why zsh was taking so long to load
