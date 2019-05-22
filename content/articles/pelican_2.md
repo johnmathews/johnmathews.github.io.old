@@ -76,7 +76,7 @@ Once this function was working it was simply a case of calling the function and 
     tweet = str(tweet_as_byte,'utf-8')
     t_handle = twitter_handle(content)
 ```
-There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making [Time Until]({filename}../articles/time-until.md).
+There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making [Time Until]({static}../articles/time-until.md).
 
 ## Specifying the text and image in a Facebook share
 
@@ -123,5 +123,5 @@ Finally, when I was testing Facebook to see if the correct text or image was bei
 
 You can see the new sharing buttons below, please click them and see what happens!
 
-Note: My first article describing how I began to use Pelican is [here]({filename}../articles/pelican_blog.md)
+Note: My first article describing how I began to use Pelican is [here]({static}../articles/pelican_blog.md)
 

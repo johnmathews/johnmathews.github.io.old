@@ -9,11 +9,11 @@ Status: Published
 
 ## Maintain an accurate list of transactions across a large group of users, without a central authority
 
-This is part 2 of an introduction to the key features of a generalised blockchain. [Part 1]({filename}../articles/blockchain-introduction.md) introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how a network of users can maintain the same (true) list of transactions and protect each other against fraud. 
+This is part 2 of an introduction to the key features of a generalised blockchain. [Part 1]({static}../articles/blockchain-introduction.md) introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how a network of users can maintain the same (true) list of transactions and protect each other against fraud. 
 
 ## Broadcasting transactions to the network
 
-In  [Part 1]({filename}../articles/blockchain-introduction.md) we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. These transactions were authenticated using PKI which:
+In  [Part 1]({static}../articles/blockchain-introduction.md) we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. These transactions were authenticated using PKI which:
 
 - Ensured transaction integrity 
 

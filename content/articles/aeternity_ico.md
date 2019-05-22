@@ -17,7 +17,7 @@ I was willing to make a small and risky investment, but in order to do that I wo
 
 Helpfully, the Æternity project had partnered with the Swiss firm 'Bitcoin Suisse AG' who would directly convert to Æons from fiat currencies, cutting out the need to purchase an intermediate digital currency. However once I'd completed the identity checks and signed, scanned and sent the multiple forms, I realised I'd need to pay a 'signing on' fee of about £70. To Bitcoin Suisse' credit though, they did manually approve my identification and contract within an hour. 
 
-At the time, I thought the project would still be a good investment even with this extra cost, but I determined to exhaust all other possibilities first. I'm familiar with cryptocurrency wallets and public/private keys due to some [previous research]({filename}/articles/encryption.md), so I was able to immediately begin trying to set up an account with an exchange.
+At the time, I thought the project would still be a good investment even with this extra cost, but I determined to exhaust all other possibilities first. I'm familiar with cryptocurrency wallets and public/private keys due to some [previous research]({static}/articles/encryption.md), so I was able to immediately begin trying to set up an account with an exchange.
 
 ## Exchanges
 

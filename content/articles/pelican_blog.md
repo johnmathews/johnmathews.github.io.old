@@ -79,4 +79,4 @@ Before I started working with Pelican, minifying css and JavaScript would have b
 
 I'm super happy wth the websites design and speed. It's designed the way I want it, and I've learnt a ton of useful stuff along the way. 
 
-Update: My second post about blogging in Pelican is [here]({filename}../articles/pelican_2.md).
+Update: My second post about blogging in Pelican is [here]({static}../articles/pelican_2.md).

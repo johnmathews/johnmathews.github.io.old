@@ -54,19 +54,19 @@ and then go to the following address in your browser:
 
 You should now see something similar to this:
 
-![Parity home screen view]({filename}../images/parity-home.jpeg)
+![Parity home screen view]({static}../images/parity-home.jpeg)
 
 ## Add or create accounts
 
-![Parity toolbar]({filename}../images/Parity-toolbar-accounts.jpeg)
+![Parity toolbar]({static}../images/Parity-toolbar-accounts.jpeg)
 
-![Parity toolbar]({filename}../images/parity-account-creation.jpeg)
+![Parity toolbar]({static}../images/parity-account-creation.jpeg)
 
 Select the Accounts tab from the top of the page and then select "**+ Account**". Either create new accounts or import them using your preferred method. You don't need to import all the accounts that will be part of the multi-sig wallet, but you will need to import or create the account that will own the wallet you are about to create. This account will need to have a large enough Ether balance to pay the transaction costs to deploy the multi-sig wallet onto the Blockchain. The costs are tiny, but they are greater than zero.
 
 ## Create the multi-sig wallet
-![Parity toolbar]({filename}../images/Parity-toolbar-wallet.jpeg)
-![Wallet management]({filename}../images/parity-wallet-details.jpeg)
+![Parity toolbar]({static}../images/Parity-toolbar-wallet.jpeg)
+![Wallet management]({static}../images/parity-wallet-details.jpeg)
 
 1. Once you've either created or imported the account which will deploy the wallet, select "**+ Wallet**" from the accounts tab and choose "**Multi-Sig wallet**". Click next.
 
@@ -84,7 +84,7 @@ Select the Accounts tab from the top of the page and then select "**+ Account**"
 
 7. Click "next" and you'll be shown a pop-up window to approve the creation of the wallet. You will need to enter the password of the account which is creating the wallet, and once you click "Confirm request" the funds in the creators accounts will be used to deploy the contract on chain and create the multi-sig wallet.
 
-    ![Wallet management]({filename}../images/parity-conf-box.jpeg)
+    ![Wallet management]({static}../images/parity-conf-box.jpeg)
 
 ## Adding an existing multi-sig wallet
 
@@ -98,8 +98,8 @@ The other signatories will now be able to view the wallet's balance, get notific
 
 8. Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet's address.
 
-    ![select multisig wallet]({filename}../images/parity-select-multisig.jpeg)
-    ![select multisig wallet]({filename}../images/new-parity-wallet.jpeg)
+    ![select multisig wallet]({static}../images/parity-select-multisig.jpeg)
+    ![select multisig wallet]({static}../images/new-parity-wallet.jpeg)
 
 9. At the top of the page you click "**Edit**" to change the local name and description of the wallet.
 
@@ -119,6 +119,6 @@ The other signatories will now be able to view the wallet's balance, get notific
 19. Clicking "send" will bring you to the confirmation stage where you can enter the password for the account which is requesting the transfer.
 20. If approval from other wallet owners is required and they are also using Parity, then they can see that their approval is required in two ways:
      - The signer tab will show there is a pending request.
-        ![Wallet management]({filename}../images/parity-signer-alert.jpeg)
+        ![Wallet management]({static}../images/parity-signer-alert.jpeg)
      - The wallet management window (accessed from the accounts tab) has a "pending transactions" section where any confirmation requests will be shown.
-       ![Wallet management]({filename}../images/parity-wallet-management.jpeg)
+       ![Wallet management]({static}../images/parity-wallet-management.jpeg)

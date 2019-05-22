@@ -8,34 +8,34 @@ Summary: Being near water is better.
 
 ### California
 
-![California]({filename}../images/california3.jpg)
+![California]({static}../images/california3.jpg)
 
-![California]({filename}../images/california7.jpg)
+![California]({static}../images/california7.jpg)
 
-![California]({filename}../images/california9.jpg)
+![California]({static}../images/california9.jpg)
 
 ### Dorset
 
-![Dorset]({filename}../images/dorset.jpg)
+![Dorset]({static}../images/dorset.jpg)
 
-![Dorset]({filename}../images/beach.jpg)
+![Dorset]({static}../images/beach.jpg)
 
 ### Acapulco
 
-![Acapulco]({filename}../images/mex1.jpg)
-![Acapulco]({filename}../images/mex2.jpg)
+![Acapulco]({static}../images/mex1.jpg)
+![Acapulco]({static}../images/mex2.jpg)
 
 ### Dublin
 
-![Dublin]({filename}../images/dublin.jpg)
+![Dublin]({static}../images/dublin.jpg)
 
-![Dublin]({filename}../images/dublin1.jpg)
+![Dublin]({static}../images/dublin1.jpg)
 
 ### The Netherlands
 
-![Hague]({filename}../images/hague.jpg)
+![Hague]({static}../images/hague.jpg)
 
-![Hague]({filename}../images/amsterdam3.jpg)
+![Hague]({static}../images/amsterdam3.jpg)
 
-![Hague]({filename}../images/amsterdam1.jpg)
+![Hague]({static}../images/amsterdam1.jpg)
 

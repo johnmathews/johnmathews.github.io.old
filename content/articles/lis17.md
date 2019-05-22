@@ -18,9 +18,9 @@ As well as some outstanding sessions there was a high ratio of investors to star
 
 The most useful sessions for me were:
 
-* ["What it means to be ambitious for founders in Europe"]({filename}../articles/ambitious.md) by [Oussama Ammar](https://twitter.com/daedalium?lang=en) from [TheFamily](https://www.thefamily.co)
+* ["What it means to be ambitious for founders in Europe"]({static}../articles/ambitious.md) by [Oussama Ammar](https://twitter.com/daedalium?lang=en) from [TheFamily](https://www.thefamily.co)
 
-* ["Understanding Investment"]({filename}../articles/investment.md) by [Boris Golden](https://twitter.com/Boris_Golden) from [Partech Ventures](https://www.partechventures.com) 
+* ["Understanding Investment"]({static}../articles/investment.md) by [Boris Golden](https://twitter.com/Boris_Golden) from [Partech Ventures](https://www.partechventures.com) 
 
 * "Building successful businesses on blockchain technologies" a panel discussion moderated by [Kevin Loaec](https://twitter.com/kloaec?lang=en), founder of the [Chainsmiths](http://chainsmiths.com/) blockchain consultancy, and including [Mir Serena Liponi](https://twitter.com/mir_btc) from [Blockchain Lab](http://www.blockchainlab.it/) 
 
@@ -34,8 +34,8 @@ On the topic of Brexit, which inevitably arose due to London's present role as a
 
 ## Overall
 
-The two days in Lisbon were full of useful and energetic conversations and it was a great experience pitching [Oula.la](http://www.oula.la) multiple times and talking about what we're trying to do and how blockchains are a part of that. The opportunities to meet founders and investors are invaluable for making informed decisions. Lisbon is a beautiful city which I found easy to get around and always felt safe in. It's also refreshingly [affordable!]({filename}../articles/london.md)
+The two days in Lisbon were full of useful and energetic conversations and it was a great experience pitching [Oula.la](http://www.oula.la) multiple times and talking about what we're trying to do and how blockchains are a part of that. The opportunities to meet founders and investors are invaluable for making informed decisions. Lisbon is a beautiful city which I found easy to get around and always felt safe in. It's also refreshingly [affordable!]({static}../articles/london.md)
 
-![Panoramic street]({filename}../images/lis4.JPG)
-![Google talks]({filename}../images/lis3.JPG)
-![Statue]({filename}../images/lis1.JPG)
+![Panoramic street]({static}../images/lis4.JPG)
+![Google talks]({static}../images/lis3.JPG)
+![Statue]({static}../images/lis1.JPG)

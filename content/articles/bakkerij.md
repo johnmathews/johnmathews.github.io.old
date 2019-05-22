@@ -11,5 +11,5 @@ Recently I've moved into a new coworking space, sharing an office unit with anot
 
 The skylights, glass walls and bright green paint make a great atmosphere, and the space seems popular with designers and founders working in creative industries. It's an energetic space with a creative feel to it.
 
-![Bakke-Rij]({filename}../images/bakkerij1.jpg)
-![Bakke-Rij]({filename}../images/bakkerij2.jpg)
+![Bakke-Rij]({static}../images/bakkerij1.jpg)
+![Bakke-Rij]({static}../images/bakkerij2.jpg)
