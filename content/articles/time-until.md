@@ -6,7 +6,7 @@ Tags: AppleScript, CoffeeScript, JavaScript, Time Until, Übersicht, Widgets
 Slug: time-until
 Status: published
 
-In a [previous post]({filename}time-since.md) I described how I was introduced to CoffeeScript via [Übersicht](http://tracesof.net/uebersicht/), the desktop widget app for OS X, and eventually published the "[Time Since](http://tracesof.net/uebersicht-widgets/#time_since)" widget.
+In a [previous post]({static}time-since.md) I described how I was introduced to CoffeeScript via [Übersicht](http://tracesof.net/uebersicht/), the desktop widget app for OS X, and eventually published the "[Time Since](http://tracesof.net/uebersicht-widgets/#time_since)" widget.
 
 Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a pragmatic engineer, it seemed clear to me what the next widget should do: If my first widget calculated the time since an event, the next should calculate the time until an event. I set out to create the companion to "Time Since" and
 improve upon the underlying code.

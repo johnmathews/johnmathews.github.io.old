@@ -17,7 +17,7 @@ DELETE_OUTPUT_DIRECTORY = False
 RELATIVE_URLS = False #False for www, True for development/testing # If set to False, Pelican will use the SITEURL setting to construct absolute URLs.
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 ''' specified in pelicanconf.py
 SITEURL = 'johnmathews.eu'

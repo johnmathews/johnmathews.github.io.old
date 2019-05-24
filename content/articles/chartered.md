@@ -12,4 +12,4 @@ Earlier this year I qualified as a chartered accountant. Qualification requires 
 
 To celebrate passing your exams and verify your success, the ICAEW print the names of everyone who passed in an advert in the Financial Times. This happened for me on the 26 January.
 
-![exam pass list in the financial times]({filename}../images/exam_pass_list.jpg)
+![exam pass list in the financial times]({static}../images/exam_pass_list.jpg)
