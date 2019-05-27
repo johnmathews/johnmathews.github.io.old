@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Æternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based...">
+    <meta name="keywords" content="æternity,Blockchains,Digital Currencies,DLT,Finance">
+
+    <meta name="twitter:card" value="Summary">
+    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:title" content="Introduction to the Æternity blockchain project ">
+    <meta name="twitter:description" content="Æternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based...">
+    <meta name="twitter:creator" content="@johnmathews">
+    <meta name="twitter:image" content="./images/logo_big square.jpeg">
+
+
+    <meta property="og:title" content="Introduction to the Æternity blockchain project" />       
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="./aeternity.html" />
+    <meta property="og:site_name" content="John Mathews' blog" />
+    <meta property="og:image" content="./images/logo_big square.jpeg" />
+    <meta property="og:description" content="Æternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based..." />
+    <meta property="fb:app_id" content="871943349626197" />
+
+    <link rel="icon" href="./favicon.png">
+
+    <title> Introduction to the Æternity blockchain project - John Mathews </title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+  </head>
+
+  <body>
+    <a name="top"></a>
+
+    <!-- Header -->
+    <div class="header-container gradient">
+
+ 
+    <!-- Static navbar -->
+    <div class="container" style="width:100%;float:left;display:block;">
+      <div class="header-nav" >
+        <div class="header-logo" >
+          <a class="pull-left hidden-xs" href="."><img class="mr20" src="./images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <div class="header-text">
+            <a class="pull-left" style='margin-left:10px;' href="."> Hello! I'm John </a>
+            <div class="anon" style='text-align:right; padding-right:10px;' >
+              <a class="active" href="./pages/about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Static navbar -->
+
+    <!-- Header -->
+    <!-- /Header -->
+    </div>
+
+    <!-- Content -->
+    
+    <div class="container content">
+        <div> 
+            <h1> Introduction to the Æternity blockchain&nbsp;project </h1> 
+        </div>
+        
+ 
+        <div class="summary">
+            <p>Æternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based on prediction&nbsp;markets.</p>
+        </div>
+        
+
+        <div class="article_author"> 
+            By John Mathews </br>
+            Category: <a href="./category/disintermediation.html">Disintermediation</a>
+        </div>
+        
+        <div class="article_date"> 
+            May 05 2017 
+        </div>
+        
+        <p>These are my notes on the æternity blockchain project, I&#8217;m not affiliated with the æternity&nbsp;team.</p>
+<p>Æternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources. This is made possible via a decentralised oracle based on prediction markets. These terms are explained below. The æternity project has proposed several notable technical&nbsp;features: </p>
+<ul>
+<li>Smart Contracts in&nbsp;state-channels</li>
+<li>Oracles and native prediction&nbsp;markets</li>
+<li>Governance by prediction&nbsp;markets</li>
+<li>Written in&nbsp;Erlang</li>
+<li>Different types of&nbsp;node </li>
+<li>Sharding</li>
+</ul>
+<h2>Smart Contracts in&nbsp;state-channels</h2>
+<ul>
+<li>
+<p>A smart contract is a way to execute a contract without an intermediary (middle-man) and without&nbsp;conflict.</p>
+</li>
+<li>
+<p>The smart contract is a protocol which is stored and executed on a blockchain, executing transactions (outputs) based on specific inputs and programmable logic automatically. The logic often mirrors that contained in clauses of a written&nbsp;contract.</p>
+</li>
+<li>
+<p>State channels are payment networks that exchange funds off-chain and periodically settle up accounts with the main blockchain. (The Bitcoin Lightning Network is creating a system for routing Bitcoin payments through state&nbsp;channels.)</p>
+</li>
+<li>
+<p>State channels increase scalability by making groups of transactions independent of each other. This allows them to be processed in&nbsp;parallel.</p>
+</li>
+<li>
+<p>æternity proposes executing smart-contracts in Turing-complete state channels (Turing complete means, colloquially, real-world and general purpose), which should allow greater volumes of transactions, and make the smart contracts more secure and easier to&nbsp;analyse. </p>
+</li>
+</ul>
+<p>This is because executing the smart-contracts off-chain makes them private and the code used to execute the smart contract won’t need to be broadcast to the primary blockchain. This should increase processing capacity by allowing contracts to execute in&nbsp;parallel.</p>
+<p>Disadvantages to the state-channel approach include reduced transparency, as running smart contracts in state channels requires more trust in both the contract creator and the node running&nbsp;it.</p>
+<h2>Oracles and prediction&nbsp;markets</h2>
+<ul>
+<li>The Oracle functionality allows smart-contracts to interact with data outside the æternity blockchain. This is possible by checking on-chain prediction market results and rewarding users who made the correct prediction. Users are rewarded through automated payments and the immediate recording of transactions in the blockchain. This creates incentives to participate in prediction markets, which have  been shown to be&nbsp;effective. </li>
+<li>On-chain, rather than off-chain allows greater efficiency and&nbsp;integration</li>
+<li>The prediction market is expected to run using a native (on-chain) consensus procedure. The oracle mechanism is designed to use the same consensus&nbsp;infrastructure.  </li>
+</ul>
+<h2>Governance by prediction&nbsp;markets</h2>
+<ul>
+<li>Oracle functionality compliments prediction market&nbsp;functionality. </li>
+<li>Prediction markets are proposed to implement governance of the æternity blockchain. This is a new&nbsp;approach.</li>
+<li>The æternity protocol would be governed by user input. A prediction market will exist where changes to features and protocols would result in a higher token&nbsp;value. </li>
+<li>The incentive to increase the value of a token (Æon) would allow the æternity community to decide efficiently which changes to&nbsp;implement.</li>
+<li>Low level protocol changes to variables like block times and block capacity could be&nbsp;possible </li>
+<li>The consensus developed by the prediction market will initially provide input to the development team’s&nbsp;decision-making.</li>
+<li>Later, a fully autonomous prediction market for governance is expected (a <span class="caps">DAO</span>) </li>
+</ul>
+<h2>Written in&nbsp;Erlang</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)">Erlang</a> is normally used for large-scale systems that manage the allocation of scarce network resources (telecoms, banking, instant&nbsp;messaging)</li>
+<li>Could make it easier to run a lightning network and process many state-channels in&nbsp;parallel</li>
+<li>As far as I know, ÆTernity is the first blockchain project to be written in&nbsp;Erlang</li>
+</ul>
+<h2>Different types of&nbsp;node</h2>
+<ul>
+<li>The æternity network will contain nodes with different functions. Each type of node will contribute towards the efficient functioning of particular aspects of the&nbsp;network </li>
+<li>Node types will&nbsp;include </li>
+<li>Liquidity - Lots of channels and lots of users. Open a channel to issue a contract, for a&nbsp;fee.</li>
+<li>Exchanges - Trustless exchanges of assets offered by market makers. Profitable to market makers because of transaction&nbsp;fees.  </li>
+<li>Presumably features such as consensus algorithms and prediction markets will also require their own dedicated node types. Users of the node will incur transaction fees to participate, providing an incentive to run a&nbsp;node.</li>
+</ul>
+<h2>Sharding</h2>
+<ul>
+<li>Allows a greater transaction volume, removing scalability problems that Bitcoin and Ethereum have&nbsp;experienced.</li>
+<li>Sharding works by splitting the space of possible accounts into subspaces (for example based on the first digit of a numerical&nbsp;address)</li>
+<li>Each shard gets a set of validators. Each validator validates 1 shard&nbsp;only</li>
+<li>Contracts and transactions within the same shard work as&nbsp;normal</li>
+<li>Contracts and transactions across shards require alternative techniques based on &#8220;transaction&nbsp;receipts&#8221; </li>
+</ul>
+
+        <div id="sub_req">
+            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="./pages/subscribe" >subscribe!</a>
+            <br>
+            <br>
+        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/aeternity.html&text= &via=johnmathews" target="_blank" ><img src="./images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/aeternity.html" target="_blank"><img src="./images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/aeternity.html&title=Introduction%20to%20the%20%C3%86ternity%20blockchain%C2%A0project&summary=%C3%86ternity%20is%20a%20new%20blockchain%20project%20aiming%20to%20facilitate%20large%20volumes%20of%20smart-contracts%20which%20can%20interface%20with%20external%20data%20sources.%20This%20is%20accomplished%20using%20a%20decentralised%20oracle%20based%20on%20prediction%C2%A0markets.&source=http%3A//johnmathews.eu/aeternity.html" target="_blank"><img src="./images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="mailto:?subject=Introduction%20to%20the%20%C3%86ternity%20blockchain%C2%A0project&amp;body=http%3A//johnmathews.eu/aeternity.html" target="_blank"><img src="./images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+         </div>
+        
+         <div class="neighbors">
+             <ul>
+                     <li class="previous_article">
+                         <a href="./aeternity-ico.html">
+                             The Æternity <span class="caps">ICO</span>: My&nbsp;experience
+                         </a>
+                     </li>
+                 
+                     <li class="next_article">
+                         <a href="./blockchain-introduction.html">
+                             Blockchains from the ground up: Part&nbsp;1
+                         </a>
+                     </li>
+            </ul>
+        </div>
+    
+        <div> 
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://johnmathews.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->                   
+        </div>
+    </div>    
+
+    <!-- Footer -->
+    <div class="footer">
+
+ <a   <a  class="active" href="./pages/subscribe.html">Subscribe</a>   
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href=".">Home</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./archives.html">Archives</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./tags.html">Tags</a>
+
+    </div>
+    <!-- /Footer -->
+
+    <!-- /Content --> 
+
+    <!-- Stylesheets -->
+    <link async rel="stylesheet" href="./theme/webassets-external/5f3d01727f6012a80d07a80d177230d1_bootstrap.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/c01625840139bd96539823ec2d9bfa36_fonts.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/2d09370fbbcfe8a0ccb320338e4d3dd3_style.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/f33dd54a5edc2ac8b54bdb904a6a0f43_pygment.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/7fc5981923aacfb9134c260b7ea32233_lightbox.css">
+
+    <script async src="./theme/webassets-external/b3976572aef2ec3a45079dd346d6ce68_lightbox-plus-jquery.js"></script>
+
+    <!-- plot.ly js -->
+    <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+      lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true,
+        'imageFadeDuration': 300,
+        'disableScrolling': true,
+        'showImageNumberLabel': true,
+        'positionFromTop': 50
+      })
+    </script>
+  </body>
+</html>

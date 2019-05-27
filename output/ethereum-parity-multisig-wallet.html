@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet’s settings and view pending and past transactions">
+    <meta name="keywords" content="Blockchains,Ethereum,Fintech,Multi-Sig,Parity,Wallet">
+
+    <meta name="twitter:card" value="Summary_large_image">
+    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:title" content="Create a Multi-Signature Ethereum wallet using Parity ">
+    <meta name="twitter:description" content="Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet’s settings and view pending and past transactions">
+    <meta name="twitter:creator" content="@johnmathews">
+    <meta name="twitter:image" content="./images/parity-ethereum-logo.png">
+
+
+    <meta property="og:title" content="Create a Multi-Signature Ethereum wallet using Parity" />       
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="./ethereum-parity-multisig-wallet.html" />
+    <meta property="og:site_name" content="John Mathews' blog" />
+    <meta property="og:image" content="./images/parity-ethereum-logo.png" />
+    <meta property="og:description" content="Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet’s settings and view pending and past transactions" />
+    <meta property="fb:app_id" content="871943349626197" />
+
+    <link rel="icon" href="./favicon.png">
+
+    <title> Create a Multi-Signature Ethereum wallet using Parity - John Mathews </title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+  </head>
+
+  <body>
+    <a name="top"></a>
+
+    <!-- Header -->
+    <div class="header-container gradient">
+
+ 
+    <!-- Static navbar -->
+    <div class="container" style="width:100%;float:left;display:block;">
+      <div class="header-nav" >
+        <div class="header-logo" >
+          <a class="pull-left hidden-xs" href="."><img class="mr20" src="./images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <div class="header-text">
+            <a class="pull-left" style='margin-left:10px;' href="."> Hello! I'm John </a>
+            <div class="anon" style='text-align:right; padding-right:10px;' >
+              <a class="active" href="./pages/about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Static navbar -->
+
+    <!-- Header -->
+    <!-- /Header -->
+    </div>
+
+    <!-- Content -->
+    
+    <div class="container content">
+        <div> 
+            <h1> Create a Multi-Signature Ethereum wallet using&nbsp;Parity </h1> 
+        </div>
+        
+ 
+        <div class="summary">
+            <p>Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet&#8217;s settings and view pending and past&nbsp;transactions</p>
+        </div>
+        
+        <div class="article_image">
+            <img src="/images/parity-ethereum-logo.png" alt="Ethereum multisig wallet" style="width:50%" />
+        </div>
+
+        <div class="article_author"> 
+            By John Mathews </br>
+            Category: <a href="./category/disintermediation.html">Disintermediation</a>
+        </div>
+        
+        <div class="article_date"> 
+            Aug 12 2017 
+        </div>
+        
+        <p>I recently set up a multi-sig Ethereum wallet and I couldn&#8217;t find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get&nbsp;started. </p>
+<p>You&#8217;ll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I&#8217;ve used Parity because I found it simple and&nbsp;quick. </p>
+<h2>Ethereum&nbsp;Wallets</h2>
+<p>Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet with 3 signatories (for example) then you will need to have set up at least 1 of those 3 Ethereum accounts before creating the&nbsp;wallet. </p>
+<h2>Parity</h2>
+<p>From their&nbsp;website:</p>
+<blockquote>
+<p>Integrated directly into your Web browser, Parity is the fastest and most secure way of interacting with the Ethereum&nbsp;network.</p>
+</blockquote>
+<p>You can do a bunch of stuff with Parity including mining Ether, manage accounts, interact with different dapps, send/receive from different accounts, and set up contracts. On the accounts tab, you can quickly set up Multi-Signature wallets. If you use the Chrome plugin you will also get handy notifications when transactions are confirmed or contracts&nbsp;deployed.</p>
+<h2>Download and open&nbsp;Parity</h2>
+<p>For MacOS you can download and install Parity by visiting the Parity site and downloading the <a href="https://parity.io/parity.html">installer</a>, or from the terminal using curl or&nbsp;Homebrew.</p>
+<h3>Simple&nbsp;option</h3>
+<div class="highlight"><pre><span></span>   $ bash &lt;<span class="o">(</span>curl https://get.parity.io -kL<span class="o">)</span>
+</pre></div>
+
+
+<h3>Homebrew</h3>
+<p>Detailed instructions are <a href="https://github.com/paritytech/homebrew-paritytech">here</a>.</p>
+<div class="highlight"><pre><span></span>   brew tap paritytech/paritytech
+   brew install parity --stable
+</pre></div>
+
+
+<p>If you used the installer, then you open Parity opening the app and then using the logo in the&nbsp;menubar. </p>
+<p>If you used Brew, then start Parity with the following&nbsp;command </p>
+<blockquote>
+<p>parity</p>
+</blockquote>
+<p>and then go to the following address in your&nbsp;browser:</p>
+<blockquote>
+<p>http://127.0.0.1:8180/</p>
+</blockquote>
+<p>You should now see something similar to&nbsp;this:</p>
+<p><img alt="Parity home screen view" src="./images/parity-home.jpeg"></p>
+<h2>Add or create&nbsp;accounts</h2>
+<p><img alt="Parity toolbar" src="./images/Parity-toolbar-accounts.jpeg"></p>
+<p><img alt="Parity toolbar" src="./images/parity-account-creation.jpeg"></p>
+<p>Select the Accounts tab from the top of the page and then select &#8220;<strong>+ Account</strong>&#8220;. Either create new accounts or import them using your preferred method. You don&#8217;t need to import all the accounts that will be part of the multi-sig wallet, but you will need to import or create the account that will own the wallet you are about to create. This account will need to have a large enough Ether balance to pay the transaction costs to deploy the multi-sig wallet onto the Blockchain. The costs are tiny, but they are greater than&nbsp;zero.</p>
+<h2>Create the multi-sig&nbsp;wallet</h2>
+<p><img alt="Parity toolbar" src="./images/Parity-toolbar-wallet.jpeg">
+<img alt="Wallet management" src="./images/parity-wallet-details.jpeg"></p>
+<ol>
+<li>
+<p>Once you&#8217;ve either created or imported the account which will deploy the wallet, select &#8220;<strong>+ Wallet</strong>&#8221; from the accounts tab and choose &#8220;<strong>Multi-Sig wallet</strong>&#8220;. Click&nbsp;next.</p>
+</li>
+<li>
+<p>Enter a <strong>name</strong> for the wallet, if you want you can add a local <strong>description</strong>. </p>
+</li>
+<li>
+<p>The &#8220;<strong>From account</strong>&#8221; will be the contract owner and this account&nbsp;will </p>
+<ol>
+<li>Be one of the&nbsp;signatories.</li>
+<li>Need to have enough Ether to pay for the execution of the contract on the&nbsp;blockchain.</li>
+</ol>
+</li>
+<li>
+<p>Click the &#8220;+&#8221; button under &#8220;<strong>Other wallet owners</strong>&#8221; to add the address of the other signatory accounts. You&#8217;ll need to add one line for each signatory and these accounts will also own the wallet once it is&nbsp;deployed.</p>
+</li>
+<li>
+<p>In the &#8220;<strong>required owners</strong>&#8221; section, specify how many accounts will need to approve a transaction that is above the daily transaction&nbsp;limit.</p>
+</li>
+<li>
+<p>Use the &#8220;<strong>wallet day limit</strong>&#8221; to set how much Ether can be spent by each account per day <em>without</em> needing another account to approve the transaction. Set an amount of 0 if you want all transactions to require approval, or turn the option off using the slider to the right (which just specifies a huge&nbsp;number).</p>
+</li>
+<li>
+<p>Click &#8220;next&#8221; and you&#8217;ll be shown a pop-up window to approve the creation of the wallet. You will need to enter the password of the account which is creating the wallet, and once you click &#8220;Confirm request&#8221; the funds in the creators accounts will be used to deploy the contract on chain and create the multi-sig&nbsp;wallet.</p>
+<p><img alt="Wallet management" src="./images/parity-conf-box.jpeg"></p>
+</li>
+</ol>
+<h2>Adding an existing multi-sig&nbsp;wallet</h2>
+<p>Once your wallet is created and deployed, you&#8217;ll need to add it to other parity clients so that the other signatories can make or confirm transactions, and view the wallets balance. This is done by adding a watch&nbsp;wallet.</p>
+<p>Process: Accounts tab &gt; + Wallet &gt; Watch wallet &gt; enter the address of the multi-sig&nbsp;wallet. </p>
+<p>The other signatories will now be able to view the wallet&#8217;s balance, get notifications about pending confirmations, and be able to make and monitor&nbsp;transactions.</p>
+<h2>Managing a multi-sig&nbsp;wallet</h2>
+<ol>
+<li>
+<p>Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet&#8217;s&nbsp;address.</p>
+<p><img alt="select multisig wallet" src="./images/parity-select-multisig.jpeg">
+<img alt="select multisig wallet" src="./images/new-parity-wallet.jpeg"></p>
+</li>
+<li>
+<p>At the top of the page you click &#8220;<strong>Edit</strong>&#8221; to change the local name and description of the&nbsp;wallet.</p>
+</li>
+<li>
+<p><span class="dquo">&#8220;</span><strong>Settings</strong>&#8221; allows you add or remove owners (signatories) of the wallet and change the required number of approvals and the wallet day limit. If you change these settings then the changes will need to be executed on the blockchain and the account requesting the change will therefore need to pay the required funds. Depending on the settings being changed, other accounts will need to approve the changes before they are&nbsp;implemented.</p>
+</li>
+<li>
+<p><span class="dquo">&#8220;</span><strong>Forget</strong>&#8221; will remove the multi-sig wallet from your accounts&nbsp;tab.</p>
+</li>
+</ol>
+<h2>Moving funds out of a multi-sig&nbsp;wallet</h2>
+<ol>
+<li>
+<p>Click on &#8220;<strong>Transfer</strong>&#8221; in the wallet management window (pictured above) to begin withdrawing funds from the&nbsp;wallet. </p>
+</li>
+<li>
+<p>Select the token you want to transfer - Ethereum is the only default&nbsp;option.</p>
+</li>
+<li><span class="dquo">&#8220;</span><strong>Sender address</strong>&#8221; - specify which account wants to withdraw the funds from the multi-sig&nbsp;wallet.</li>
+<li><span class="dquo">&#8220;</span><strong>Recipient address</strong>&#8221; - specify which account will receive the&nbsp;funds.</li>
+<li><span class="dquo">&#8220;</span><strong>Amount to transfer</strong>&#8221; - specify how much you want to transfer. If the amount is greater than the remaining daily limit you will get a warning bar telling you the transaction will require confirmation from other wallet&nbsp;owners.</li>
+<li>If you want to specify the maximum transaction fee (a payment with a lower fee will be confirmed more slowly than usual) tick the &#8220;<strong>advanced sending options</strong>&#8221;&nbsp;box.</li>
+<li>Clicking &#8220;send&#8221; will bring you to the confirmation stage where you can enter the password for the account which is requesting the&nbsp;transfer.</li>
+<li>If approval from other wallet owners is required and they are also using Parity, then they can see that their approval is required in two ways:<ul>
+<li>The signer tab will show there is a pending request.
+    <img alt="Wallet management" src="./images/parity-signer-alert.jpeg"></li>
+<li>The wallet management window (accessed from the accounts tab) has a &#8220;pending transactions&#8221; section where any confirmation requests will be shown.
+   <img alt="Wallet management" src="./images/parity-wallet-management.jpeg"></li>
+</ul>
+</li>
+</ol>
+
+        <div id="sub_req">
+            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="./pages/subscribe" >subscribe!</a>
+            <br>
+            <br>
+        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/ethereum-parity-multisig-wallet.html&text=How%20to%20create%20a%20%23multisig%20%23Ethereum%20wallet%20using%20%23Parity&via=johnmathews" target="_blank" ><img src="./images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/ethereum-parity-multisig-wallet.html" target="_blank"><img src="./images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/ethereum-parity-multisig-wallet.html&title=Create%20a%20Multi-Signature%20Ethereum%20wallet%20using%C2%A0Parity&summary=Set%20up%20and%20use%20Parity%20to%20create%20and%20manage%20multi-signature%20Ethereum%20wallets%2C%20edit%20the%20wallet%E2%80%99s%20settings%20and%20view%20pending%20and%20past%C2%A0transactions&source=http%3A//johnmathews.eu/ethereum-parity-multisig-wallet.html" target="_blank"><img src="./images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="mailto:?subject=Create%20a%20Multi-Signature%20Ethereum%20wallet%20using%C2%A0Parity&amp;body=http%3A//johnmathews.eu/ethereum-parity-multisig-wallet.html" target="_blank"><img src="./images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+         </div>
+        
+         <div class="neighbors">
+             <ul>
+                     <li class="previous_article">
+                         <a href="./blockchain-networks.html">
+                             Blockchains from the ground up: Part&nbsp;2
+                         </a>
+                     </li>
+                 
+                     <li class="next_article">
+                         <a href="./bitnation.html">
+                             Bitnation
+                         </a>
+                     </li>
+            </ul>
+        </div>
+    
+        <div> 
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://johnmathews.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->                   
+        </div>
+    </div>    
+
+    <!-- Footer -->
+    <div class="footer">
+
+ <a   <a  class="active" href="./pages/subscribe.html">Subscribe</a>   
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href=".">Home</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./archives.html">Archives</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./tags.html">Tags</a>
+
+    </div>
+    <!-- /Footer -->
+
+    <!-- /Content --> 
+
+    <!-- Stylesheets -->
+    <link async rel="stylesheet" href="./theme/webassets-external/5f3d01727f6012a80d07a80d177230d1_bootstrap.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/c01625840139bd96539823ec2d9bfa36_fonts.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/2d09370fbbcfe8a0ccb320338e4d3dd3_style.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/f33dd54a5edc2ac8b54bdb904a6a0f43_pygment.css">
+    <link async rel="stylesheet" href="./theme/webassets-external/7fc5981923aacfb9134c260b7ea32233_lightbox.css">
+
+    <script async src="./theme/webassets-external/b3976572aef2ec3a45079dd346d6ce68_lightbox-plus-jquery.js"></script>
+
+    <!-- plot.ly js -->
+    <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+      lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true,
+        'imageFadeDuration': 300,
+        'disableScrolling': true,
+        'showImageNumberLabel': true,
+        'positionFromTop': 50
+      })
+    </script>
+  </body>
+</html>
