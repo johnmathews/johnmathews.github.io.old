@@ -12,17 +12,15 @@ In 2010 I began my PhD researching granular materials at the [BOKU](https://www.
 
 In 2009 I graduated from Edinburgh University with a masters degree in Civil Engineering. The  [Great Recession](https://en.wikipedia.org/wiki/Great_Recession) had arrived and I found a job at Starbucks. This made me curious about finance and I resolved to one day understand [how banks work](https://www.lrb.co.uk/v40/n13/john-lanchester/after-the-fall). 
 
-I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available to [download](https://docs.google.com/document/d/1PGDKLEUr-_KT-RN-GIIQMMttSqmhdVIPjRZxmNcJ8X8/edit?usp=sharing).
+I'm on [AngelList](https://angel.co/john-mathews-3) and [LinkedIn](https://www.linkedin.com/in/johnmathews1), and my most recent projects are on [GitHub](http://www.github.com/johnmathews). My CV is available to [download](https://docs.google.com/document/d/1yuYuM-nOroFU2qWkHvPRoCSux_nchWkezYtH9CfF5P8/edit?usp=sharing).
 
 Information about my current work might be [here](https://blockport.io/). Information about my work researching silos and granular flows can be found [here]({filename}../articles/silos.md). If you'd like to know when I publish something new on this site, please [subscribe]({filename}../pages/subscribe.md) for updates. I don't send emails as often as I make new posts. 
 
-I think that [this](https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short) is generally good advice, and [this](https://www.fs.blog/mental-models/) is
-a useful set of tools.
-
+I think that [this](https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short) is generally good advice, and [this](https://www.fs.blog/mental-models/) is a useful set of tools. 
 — [@johnmathews](http://twitter.com/johnmathews)
 
 
-<div style="font-size:16px; margin-left:10px" class="blockchain-btn" data-address="1LXTB9WssALLvHAnk2LqH2PfcvPxbqo6yA" data-shared="false">
+<div style="font-size:16px; margin-left:10px" class="blockchain-btn" data-address="3GEee3niueeFVJYPgoTHMHZZx4WGXT7w2S" data-shared="false">
     <div class="blockchain stage-begin" style="width:50px; margin-left:0px">
         <img src="/images/bitcoin_PNG42.png"/>
     </div>
