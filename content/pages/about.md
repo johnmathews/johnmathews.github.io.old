@@ -8,7 +8,7 @@ In 2017, I qualified as a chartered accountant and became a financial consultant
 
 In 2014, I moved to London and began work as an external financial auditor for banking clients. I also began qualifying as a chartered accountant with the [ICAEW](https://careers.icaew.com/en/why-a-career-in-chartered-accountancy/why-become-an-icaew-chartered-accountant).
 
-In 2010 I began my PhD researching granular materials at the [BOKU](https://www.baunat.boku.ac.at/igt/) in Vienna, Austria. 
+In 2010, I began my PhD researching granular materials at the [BOKU](https://www.baunat.boku.ac.at/igt/) in Vienna, Austria. 
 
 In 2009 I graduated from Edinburgh University with a masters degree in Civil Engineering. The  [Great Recession](https://en.wikipedia.org/wiki/Great_Recession) had arrived and I found a job at Starbucks. This made me curious about finance and I resolved to one day understand [how banks work](https://www.lrb.co.uk/v40/n13/john-lanchester/after-the-fall). 
 
