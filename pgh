@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-pelican content -o output -s pelicanconf.py 
-ghp-import -n -c johnmathews.eu output 
-git push https://github.com/johnmathews/johnmathews.github.io.git gh-pages:master
