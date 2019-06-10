@@ -6,7 +6,7 @@ pwd
 echo generate blog output files
 pelican content -s publishconf.py
 
-cd output
+cd ../blog-output/output
 pwd
 
 echo Stage output files
@@ -18,7 +18,7 @@ git commit -m "scheduled update"
 echo Push output files
 git push
 
-cd ..
+cd ../../blog
 pwd
 
 echo Stage blog files 
