@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.">
+    <meta name="keywords" content="Blockchains,Digital Currencies,Distributed Ledger Technology,Public Key Cryptography">
+
+    <meta name="twitter:card" value="Summary">
+    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:title" content="Blockchains from the ground up: Part 1 ">
+    <meta name="twitter:description" content="Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.">
+    <meta name="twitter:creator" content="@johnmathews">
+    <meta name="twitter:image" content="./images/logo_big square.jpeg">
+
+
+    <meta property="og:title" content="Blockchains from the ground up: Part 1" />       
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="./blockchain-introduction.html" />
+    <meta property="og:site_name" content="John Mathews' blog" />
+    <meta property="og:image" content="./images/logo_big square.jpeg" />
+    <meta property="og:description" content="Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains." />
+    <meta property="fb:app_id" content="871943349626197" />
+
+    <link rel="icon" href="./favicon.png">
+
+    <title> Blockchains from the ground up: Part 1 - John Mathews </title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+  </head>
+
+  <body>
+    <a name="top"></a>
+
+    <!-- Header -->
+    <div class="header-container gradient">
+
+ 
+    <!-- Static navbar -->
+    <div class="container" style="width:100%;float:left;display:block;">
+      <div class="header-nav" >
+        <div class="header-logo" >
+          <a class="pull-left hidden-xs" href="."><img class="mr20" src="./images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <div class="header-text">
+            <a class="pull-left" style='margin-left:10px;' href="."> Hello! I'm John </a>
+            <div class="anon" style='text-align:right; padding-right:10px;' >
+              <a class="active" href="./pages/about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Static navbar -->
+
+    <!-- Header -->
+    <!-- /Header -->
+    </div>
+
+    <!-- Content -->
+    
+    <div class="container content">
+        <div> 
+            <h1> Blockchains from the ground up: Part&nbsp;1 </h1> 
+        </div>
+        
+ 
+        <div class="summary">
+            <p>Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&nbsp;blockchains.</p>
+        </div>
+        
+
+        <div class="article_author"> 
+            By John Mathews </br>
+            Category: <a href="./category/disintermediation.html">Disintermediation</a>
+        </div>
+        
+        <div class="article_date"> 
+            May 25 2017 
+        </div>
+        
+        <h1>How to maintain a reliable list across a small network without a central&nbsp;authority</h1>
+<p>This is part 1 of an introduction to the key features of a generalised blockchain. I haven&#8217;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&nbsp;technology.</p>
+<h2>Create a financial document that cannot be forged or&nbsp;disputed</h2>
+<p>Let&#8217;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&nbsp;receipt.</p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
+<span class="x">From: Lizzie</span>
+<span class="x">To: John    </span>
+<span class="x">What: 1 Orange  </span>
+<span class="x">Price: 1 Apple  </span>
+</pre></div>
+
+
+<p>So far, so good. The receipt is evidence of the transaction. The next day John wants an orange but doesn&#8217;t have anything to exchange. He offers to write Lizzie a note saying he owes Lizzie 1 orange (an  <a href="https://en.wikipedia.org/wiki/IOU"><span class="caps">IOU</span></a>). They think about this and agree that John should sign the note so that Lizzie can prove that John owes her 1&nbsp;orange.</p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
+<span class="x">From: John</span>
+<span class="x">To: Lizzie</span>
+<span class="x">What: 1 Orange</span>
+<span class="x">Signed: John&#39;s signature, Lizzie&#39;s signature</span>
+</pre></div>
+
+
+<p>This <span class="caps">IOU</span> is a nice gesture, but it&#8217;s simple to forge. Lizzie has the only copy of the <span class="caps">IOU</span> and once Lizzie has seen Johns signature, she could easily copy it and create more <span class="caps">IOU</span>&#8217;s. She could also change this <span class="caps">IOU</span> from 1 orange to 11 oranges (for example) and John couldn&#8217;t prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. It&#8217;s one person&#8217;s word against the&nbsp;other. </p>
+<p>Lizzie realises this and suggests an improvement - they will find a witness and make 3 copies of the <span class="caps">IOU</span>. Each copy will be signed by Lizzie, John and the Witness. Lets call this witness&nbsp;&#8220;Walter&#8221;. </p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
+<span class="x">From: John</span>
+<span class="x">To: Lizzie</span>
+<span class="x">What: 1 Orange</span>
+<span class="x">Witness: Walter</span>
+<span class="x">Signed: &quot;John&#39;s signature&quot;, &quot;Lizzie&#39;s signature&quot;, &quot;Walter&#39;s signature&quot;</span>
+</pre></div>
+
+
+<p>This is a much stronger document and is more difficult to forge. If Lizzie changes the &#8220;What:&#8221; to &#8220;11 Oranges&#8221;, both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie&#8217;s 1. Lizzie will be laughed out of court.&nbsp;Hahaha. </p>
+<p>3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be&nbsp;ruined. </p>
+<p>This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. <span class="caps">E.G.</span> If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to&nbsp;be. </p>
+<p>The solution is <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public-key infrastructure</a> (which is introduced in my <a href="./articles/encryption.md">previous post</a>). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&nbsp;briefly:</p>
+<p>A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it&#8217;s a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data&nbsp;securely). </p>
+<p>Back to the fruit. If Lizzie wants to accept John&#8217;s <span class="caps">IOU</span> she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the&nbsp;transaction.</p>
+<p>1] Create the <span class="caps">IOU</span> stating that John owes Lizzie 1&nbsp;orange.</p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234 From: John To: Lizzie What: 1 Orange</span>
+</pre></div>
+
+
+<p>2] John creates a public private key pair and encrypts the <span class="caps">IOU</span> using his private key. He adds an unencrypted &#8220;From&#8221;&nbsp;line.</p>
+<div class="highlight"><pre><span></span><span class="x">From: John </span>
+<span class="x">Date: 1234 To: Lizzie, What: 1 Orange &lt;- Signed and encrypted by John using his private key</span>
+</pre></div>
+
+
+<p>3] John makes his public key freely available to anyone who wants&nbsp;it.</p>
+<p>This will work because anybody (not just Lizzie) can check that John signed the <span class="caps">IOU</span>. The transaction can be verified by looking at the &#8220;From&#8221; part of that transaction, noticing that this transaction is supposedly from John and then using John&#8217;s public key to decrypt the encoded &#8220;signature&#8221;&nbsp;line. </p>
+<p>The signature can only be decrypted using John&#8217;s public key if his private key was used to encrypt it. Because John is the only person with his private key, that proves the transaction is valid, and Lizzie isn&#8217;t dishonestly creating a debt for John to&nbsp;pay. </p>
+<p>Clearly if John discloses his private key (or its stolen) then he will make the system insecure, but this is a problem with John and his security protocols, not with public-key&nbsp;cryptography. </p>
+<h2>Create and maintain an accurate list of&nbsp;transactions</h2>
+<p>So far we&#8217;ve seen how 1 <span class="caps">IOU</span> (for an orange) can be securely created, signed and verified. This process can extended to be used by more people to exchange more fruit.  For&nbsp;example.</p>
+<p>The original&nbsp;note:</p>
+<div class="highlight"><pre><span></span><span class="x">From: John</span>
+<span class="x">Date: 1234, To: Lizzie, What: 1 Orange &lt;- Signed and encrypted by John using his private key</span>
+</pre></div>
+
+
+<p>Then some additional&nbsp;transactions:</p>
+<div class="highlight"><pre><span></span><span class="x">From: Lizzie // Date: 1235, To: John, What: 2 Apples &lt;- Signed and encrypted by Lizzie using her private key</span>
+<span class="x">From: John // Date: 1236, To: Chris, What: 1 Banana &lt;- Signed and encrypted by John using his private key</span>
+<span class="x">From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas &lt;- Signed and encrypted by Chris using his private key</span>
+</pre></div>
+
+
+<p>After these 4 transactions, between John, Chris and&nbsp;Lizzie:</p>
+<ul>
+<li>John owes 1 orange to Lizzie and 1 banana to&nbsp;Chris</li>
+<li>Lizzie owes 2 apples to&nbsp;John</li>
+<li>Chris owes 2 bananas to&nbsp;Lizzie.</li>
+</ul>
+<p>This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called &#8220;coins&#8221; and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten&nbsp;as: </p>
+<div class="highlight"><pre><span></span><span class="x">From: John // Date: 1234, To: Lizzie, What: 2 coins &lt;- Signed and encrypted by John using his private key</span>
+<span class="x">From: Lizzie // Date: 1235, To: John, What: 2 coins &lt;- Signed and encrypted by Lizzie using her private key</span>
+<span class="x">From: John // Date: 1236, To: Chris, What: 2 coins &lt;- Signed and encrypted by John using his private key</span>
+<span class="x">From: Chris // Date: 1237, To: Lizzie, What: 4 coins &lt;- Signed and encrypted by Chris using his private key</span>
+</pre></div>
+
+
+<p>By going through the list of transactions we can see&nbsp;that:</p>
+<ul>
+<li>John owes Lizzie and Chris 2 coins each, and is owed 2 coins from Lizzie. His net amount is&nbsp;-2</li>
+<li>Lizzie owes John 2 coins but is owed 4 coins from Chris. Her net amount is&nbsp;+2</li>
+<li>Chris owes Lizzie 4 coins but is owed 2 coins from John. His net amount is&nbsp;-2</li>
+</ul>
+<p>So far Lizzie is the only person who appears to have any business&nbsp;skills.</p>
+<p>What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris&#8217; promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie&#8217;s transaction would look like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><span class="x">From: Lizzie // Date: 1235, To: John, What: ba781... &lt;- Signed and encrypted by Lizzie using her private key</span>
+</pre></div>
+
+
+<p>The &#8220;What&#8221; section contains a <a href="http://www.movable-type.co.uk/scripts/sha256.html">hash</a> of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie&#8217;s transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie&#8217;s private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another&nbsp;person.</p>
+<p>This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the &#8220;What&#8221; part of the transaction. If we make two other changes - removing the &#8220;To&#8221; part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would&nbsp;be:</p>
+<div class="highlight"><pre><span></span><span class="x">From: Chris // Date: 2345, What: &quot;A photo of me&quot; &lt;- Signed and encrypted by Chris using his private key </span>
+</pre></div>
+
+
+<p>This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris&#8217; private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the&nbsp;photo. </p>
+<p>Another use for public-key cryptography arises if Chris were an employee in a bank, and the &#8220;What&#8221; contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer&#8217;s true identity and documenting the evidence that&#8217;s been collected to show that the bank knows who their customer really is. If the transaction included a new section called &#8220;Customer <span class="caps">ID</span>&#8221; (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind <span class="caps">KYC</span> on a&nbsp;blockchain. </p>
+<p>Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of &#8220;coins&#8221; will need to be controlled in order to maintain their value. In the example above, people can freely create &#8220;coins&#8221; and can also carry negative amounts of &#8220;coins&#8221;. This would result in the value of a &#8220;coin&#8221; plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable&nbsp;manner.</p>
+<p>Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&#8217;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in <a href="./articles/blockchain-networks.md">part 2</a>.</p>
+
+        <div id="sub_req">
+            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="./pages/subscribe" >subscribe!</a>
+            <br>
+            <br>
+        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/blockchain-introduction.html&text=&via=johnmathews" target="_blank" ><img src="./images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="./images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/blockchain-introduction.html&title=Blockchains%20from%20the%20ground%20up%3A%20Part%C2%A01&summary=Using%20a%20scenario%20that%20begins%20with%20the%20exchange%20of%20apples%20for%20oranges%2C%20understand%20the%20essential%20concepts%20and%20advantages%20of%C2%A0blockchains.&source=http%3A//johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="./images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="mailto:?subject=Blockchains%20from%20the%20ground%20up%3A%20Part%C2%A01&amp;body=http%3A//johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="./images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+         </div>
+        
+         <div class="neighbors">
+             <ul>
+                     <li class="previous_article">
+                         <a href="./aeternity.html">
+                             Introduction to the Æternity blockchain&nbsp;project
+                         </a>
+                     </li>
+                 
+                     <li class="next_article">
+                         <a href="./blockchain-networks.html">
+                             Blockchains from the ground up: Part&nbsp;2
+                         </a>
+                     </li>
+            </ul>
+        </div>
+    
+        <div> 
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://johnmathews.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->                   
+        </div>
+    </div>    
+
+    <!-- Footer -->
+    <div class="footer">
+
+ <a   <a  class="active" href="./pages/subscribe.html">Subscribe</a>   
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href=".">Home</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./archives.html">Archives</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./tags.html">Tags</a>
+
+    </div>
+    <!-- /Footer -->
+
+    <!-- /Content --> 
+
+    <!-- Stylesheets -->
+    <link async rel="stylesheet" href="./theme/css/all.min.css?c7b578ee">
+
+    <script async src="./theme/js/packed.js?4dad2a2b"></script>
+
+    <!-- plot.ly js -->
+    <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+      lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true,
+        'imageFadeDuration': 300,
+        'disableScrolling': true,
+        'showImageNumberLabel': true,
+        'positionFromTop': 50
+      })
+    </script>
+  </body>
+</html>

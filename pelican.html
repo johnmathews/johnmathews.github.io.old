@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.">
+    <meta name="keywords" content="Blog,Pelican,Python,Static Site">
+
+    <meta name="twitter:card" value="Summary_large_image">
+    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:title" content="Blogging with Pelican ">
+    <meta name="twitter:description" content="I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git.">
+    <meta name="twitter:creator" content="@johnmathews">
+    <meta name="twitter:image" content="./images/get_pelican.jpg">
+
+
+    <meta property="og:title" content="Blogging with Pelican" />       
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="./pelican.html" />
+    <meta property="og:site_name" content="John Mathews' blog" />
+    <meta property="og:image" content="./images/get_pelican.jpg" />
+    <meta property="og:description" content="I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git." />
+    <meta property="fb:app_id" content="871943349626197" />
+
+    <link rel="icon" href="./favicon.png">
+
+    <title> Blogging with Pelican - John Mathews </title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+  </head>
+
+  <body>
+    <a name="top"></a>
+
+    <!-- Header -->
+    <div class="header-container gradient">
+
+ 
+    <!-- Static navbar -->
+    <div class="container" style="width:100%;float:left;display:block;">
+      <div class="header-nav" >
+        <div class="header-logo" >
+          <a class="pull-left hidden-xs" href="."><img class="mr20" src="./images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <div class="header-text">
+            <a class="pull-left" style='margin-left:10px;' href="."> Hello! I'm John </a>
+            <div class="anon" style='text-align:right; padding-right:10px;' >
+              <a class="active" href="./pages/about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Static navbar -->
+
+    <!-- Header -->
+    <!-- /Header -->
+    </div>
+
+    <!-- Content -->
+    
+    <div class="container content">
+        <div> 
+            <h1> Blogging with&nbsp;Pelican </h1> 
+        </div>
+        
+ 
+        <div class="summary">
+            <p>I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn <span class="caps">HTML</span>, <span class="caps">CSS</span>, Jinja templates and&nbsp;Git.</p>
+        </div>
+        
+        <div class="article_image">
+            <img src="/images/get_pelican.jpg" alt="Pelican" />
+        </div>
+
+        <div class="article_author"> 
+            By John Mathews </br>
+            Category: <a href="./category/tools.html">Tools</a>
+        </div>
+        
+        <div class="article_date"> 
+            Apr 28 2017 
+        </div>
+        
+        <p>When I began blogging in 2016, I became more aware of how blogs are designed. Many of my favorting blogs had simple designs which made it easier to focus on the content, and they loaded really fast. (E.g.  <a href="https://unwiredcouch.com">unwiredcouch.com</a> and <a href="https://www.curiousgnu.com">CuriousGnu</a>). I wanted this for my blog, too. I&#8217;d used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on its design and functionality. I wanted to have control over my blog&#8217;s&nbsp;features. </p>
+<p>This led me to static sites which contain only fixed content and are faster to load and easier to design than one built using a dynamic blogging platform such as Wordpress. Because I was already familiar with Python I chose <a href="https://blog.getpelican.com/">Pelican</a> rather than another static site generator such as&nbsp;Jekyll.</p>
+<p>There are plenty of sites to tell you how to start blogging in Pelican, so here I will focus on my experience after the initial set-up. When I was learning how to begin, I found <a href="http://mathamy.com/migrating-to-github-pages-using-pelican.html">Amy Hanlons</a> blog particularly useful and&nbsp;clear.</p>
+<h2>The learning&nbsp;curve</h2>
+<p>… was longer than I expected. Since setting out to switch from Wordpress to Pelican, I&#8217;ve taught myself enough of the following tools to hack this site together. I&#8217;m really happy about this because these tools could be used in future projects&nbsp;too.</p>
+<h3><span class="caps">HTML</span></h3>
+<p>I find <span class="caps">HTML</span> quirky but intuitive. Tags make sense, comments are laborious and learning by google is relatively quick. Whatever it is I&#8217;m trying to do (like add a link to jump back to the top of the page) someone will have posted the answer&nbsp;somewhere.</p>
+<h3><span class="caps">CSS</span></h3>
+<p>Writing <span class="caps">CSS</span> feels a lot more concise that <span class="caps">HTML</span> but it also felt impossible to learn without taking a step back and reading an introductory course. Usually I learn by hacking new phrases together from existing examples so it was frustrating to go backwards before progressing. There was a lightbulb moment when I realised <span class="caps">CSS</span> Selectors were a thing, and realising <span class="caps">CSS</span> files get called in the header (usually) of an <span class="caps">HTML</span>&nbsp;file…</p>
+<p>I ended up using a trial subscription to <a href="https://www.thinkful.com/bootcamp/web-development/">Thinkfuls</a> Front-end developer course, which is pretty good at explaining how <span class="caps">CSS</span> is structured and how to arrange content on a page. If I still had access, I&#8217;d be completing the second half of the course&nbsp;:)</p>
+<h3>Jinja&nbsp;templates</h3>
+<p>Jinja is a tool written in Python to create <span class="caps">HTML</span> pages. It doesn&#8217;t look intuitive to me, but I&#8217;ve been able to get enough done by copy-pasting similar snippets from other parts of the theme I started with (<a href="https://github.com/molivier/nest">Thanks Molivier!</a>) to make the changes I wanted. I&#8217;d like to learn more as it seems really&nbsp;powerful.</p>
+<h3>Pelican</h3>
+<p>To build a website using Pelican, you need to run commands from the terminal. There are various commands but I found myself using only a few regularly. &#8220;Pelican-quickstart&#8221; will generate a project skeleton to get you started. &#8220;make devserver&#8221; will initialise a local server and generate output files so that I can view changes locally before uploading (its opposite is &#8220;make stopserver&#8221;). Finally &#8220;pelican content -s publishconf.py&#8221; generates the html and css for remote hosting. Some of the plugins I use such as &#8220;Assets&#8221; which minifies the <span class="caps">CSS</span> only work when publshconf.py is called, which confused me initially as I didn&#8217;t think it was working when I was only using &#8220;make&nbsp;devserver&#8221;. </p>
+<h3>Git</h3>
+<p>This really challenged me, and I still don&#8217;t feel like I know what I&#8217;m doing. Git is far more powerful than I need it to be, when all I want to do is undo some erroneous edits and upload a new version of the site to&nbsp;Github. </p>
+<p>I can stage and commit files, I can create local and remote repo&#8217;s from the command line. I can change a remote&#8217;s <span class="caps">URL</span>, reset a repo and force a push or a pull. That&#8217;s all. I haven&#8217;t tried to merge or to create a test branch, and if some part of the process goes wrong it usually takes hours to make it right&nbsp;again. </p>
+<p>This is one tool for which the awesome <span class="caps">SO</span> and Google cannot magic up the exact right answer immediatly,&nbsp;unfortunately. </p>
+<p>For example, there is still an output folder in the source repo that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an &#8220;@&#8221; in its name. I don&#8217;t know how it got there. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal&nbsp;commands. </p>
+<p>I find git&#8217;s commands the least intuitive of all the tools I use, with its preceeding single dashes and double dashes, and random words thrown into the middle of otherwise reasonable&nbsp;commands. </p>
+<p>But Git is ubiquitous and Github is awesome, so I will learn&nbsp;it. </p>
+<h2>Github pages with an external <span class="caps">URL</span></h2>
+<p>You&#8217;ll need to add a file called <span class="caps">CNAME</span> to the repo containing the output. <span class="caps">CNAME</span> should contain the address of your site in lowercase.&nbsp;Simple.</p>
+<p>You&#8217;ll also need to update the <span class="caps">DNS</span> records of your domain name to point the name at Github&#8217;s servers. For Github, you need two &#8220;A Records&#8221; with host type &#8220;@&#8221; and values &#8220;192.30.252.153&#8221; and &#8220;192.30.252.154&#8221; respectively. You also need a <span class="caps">CNAME</span> record with host type &#8220;www&#8221; and the value equal to &#8220;username.github.io&#8221;. It took about 12 hours for the changes to propagate, and during that time I had variable success loading the&nbsp;site. </p>
+<h2>Plugins</h2>
+<p>One thing I didn&#8217;t want when moving away from Wordpress was a site bloated with features that didn&#8217;t make the content easier to read. However I found I still needed a few plugins to optimise my site and provide some basic functionality that doesn&#8217;t come with the vanilla&nbsp;Pelican.</p>
+<h3>iPython&nbsp;notebooks</h3>
+<p>Super useful, as all I need to do to publish a notebook as a webpage is copy the .ipynb file into the context directory and add a sidecar .ipynb-meta file with standard meta data. This functionality is one of the main reasons why Pelican is popular with data bloggers. (Though <a href="https://getnikola.com/">Nikola</a> is another&nbsp;option).</p>
+<h3>Neighbors</h3>
+<p>At the end of a post there should be a link to the previous and next blog posts - I was surprised this wasn&#8217;t included as standard. After putting the plugin in the plugins folder and updating pelicanconf.py, you need to copy a couple of jinja snippets into a template, and maybe add some css to make the links look&nbsp;nice.</p>
+<h3>Optimise&nbsp;images</h3>
+<p>Make those images as small as possible to help make the site as fast as possible. Add the plugin, update pelicanconf.py, and thats&nbsp;all.</p>
+<h3>Assets</h3>
+<p>Before I started working with Pelican, minifying css and JavaScript would have been too advanced. But once <a href="https://tools.pingdom.com/">Pingdom</a> and Google <a href="https://developers.google.com/speed/pagespeed/insights/">Pagespeed</a> started criticising me for my multiple .css files, I accepted the&nbsp;challenge. </p>
+<h2>Conclusion</h2>
+<p>I&#8217;m super happy wth the websites design and speed. It&#8217;s designed the way I want it, and I&#8217;ve learnt a ton of useful stuff along the&nbsp;way. </p>
+<p>Update: My second post about blogging in Pelican is <a href="./articles/pelican_2.md">here</a>.</p>
+
+        <div id="sub_req">
+            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="./pages/subscribe" >subscribe!</a>
+            <br>
+            <br>
+        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/pelican.html&text= &via=johnmathews" target="_blank" ><img src="./images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/pelican.html" target="_blank"><img src="./images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/pelican.html&title=Blogging%20with%C2%A0Pelican&summary=I%20switched%20to%20Pelican%20from%20Wordpress%20so%20that%20I%20could%20design%20the%20blog%20I%20wanted.%20Creating%20a%20blog%20in%20Pelican%20is%20a%20great%20way%20to%20learn%20HTML%2C%20CSS%2C%20Jinja%20templates%20and%C2%A0Git.&source=http%3A//johnmathews.eu/pelican.html" target="_blank"><img src="./images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="mailto:?subject=Blogging%20with%C2%A0Pelican&amp;body=http%3A//johnmathews.eu/pelican.html" target="_blank"><img src="./images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+         </div>
+        
+         <div class="neighbors">
+             <ul>
+                     <li class="previous_article">
+                         <a href="./vim.html">
+                             Vim!
+                         </a>
+                     </li>
+                 
+                     <li class="next_article">
+                         <a href="./pelican2.html">
+                             Blogging with Pelican: Design, Plugins,&nbsp;Sharing
+                         </a>
+                     </li>
+            </ul>
+        </div>
+    
+        <div> 
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://johnmathews.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->                   
+        </div>
+    </div>    
+
+    <!-- Footer -->
+    <div class="footer">
+
+ <a   <a  class="active" href="./pages/subscribe.html">Subscribe</a>   
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href=".">Home</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./archives.html">Archives</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./tags.html">Tags</a>
+
+    </div>
+    <!-- /Footer -->
+
+    <!-- /Content --> 
+
+    <!-- Stylesheets -->
+    <link async rel="stylesheet" href="./theme/css/all.min.css?c7b578ee">
+
+    <script async src="./theme/js/packed.js?4dad2a2b"></script>
+
+    <!-- plot.ly js -->
+    <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+      lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true,
+        'imageFadeDuration': 300,
+        'disableScrolling': true,
+        'showImageNumberLabel': true,
+        'positionFromTop': 50
+      })
+    </script>
+  </body>
+</html>

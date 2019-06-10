@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods...">
+    <meta name="keywords" content="Bitcoin,Blockchains,Digital Currencies,DLT,Encryption,Public Key Cryptography,RSA">
+
+    <meta name="twitter:card" value="Summary">
+    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:title" content="Encryption ">
+    <meta name="twitter:description" content="Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods...">
+    <meta name="twitter:creator" content="@johnmathews">
+    <meta name="twitter:image" content="./images/logo_big square.jpeg">
+
+
+    <meta property="og:title" content="Encryption" />       
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="./encryption.html" />
+    <meta property="og:site_name" content="John Mathews' blog" />
+    <meta property="og:image" content="./images/logo_big square.jpeg" />
+    <meta property="og:description" content="Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods..." />
+    <meta property="fb:app_id" content="871943349626197" />
+
+    <link rel="icon" href="./favicon.png">
+
+    <title> Encryption - John Mathews </title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+  </head>
+
+  <body>
+    <a name="top"></a>
+
+    <!-- Header -->
+    <div class="header-container gradient">
+
+ 
+    <!-- Static navbar -->
+    <div class="container" style="width:100%;float:left;display:block;">
+      <div class="header-nav" >
+        <div class="header-logo" >
+          <a class="pull-left hidden-xs" href="."><img class="mr20" src="./images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <div class="header-text">
+            <a class="pull-left" style='margin-left:10px;' href="."> Hello! I'm John </a>
+            <div class="anon" style='text-align:right; padding-right:10px;' >
+              <a class="active" href="./pages/about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Static navbar -->
+
+    <!-- Header -->
+    <!-- /Header -->
+    </div>
+
+    <!-- Content -->
+    
+    <div class="container content">
+        <div> 
+            <h1> Encryption </h1> 
+        </div>
+        
+ 
+        
+
+        <div class="article_author"> 
+            By John Mathews </br>
+            Category: <a href="./category/disintermediation.html">Disintermediation</a>
+        </div>
+        
+        <div class="article_date"> 
+            Aug 30 2016 
+        </div>
+        
+        <p>Blockchains use Elliptical Curve Cryptography (<span class="caps">ECC</span>) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> </p>
+<p>To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers back into the original&nbsp;message.</p>
+<h2>Background</h2>
+<p>The history of Cryptography can be split into classical and modern eras. Modern cryptography began in 1977 with the introduction of the <span class="caps">RSA</span> and Diffie-Hellman algorithms.  Until then, Cryptography required using a single key (the secret code) to encrypt and decrypt the message. This was transferred from sender to receiver secretly, but not cryptographically. In classical cryptography, the code is a <em>shared</em>&nbsp;secret.</p>
+<p>The modern era removed the requirement for a shared secret and instead used number theory as a basis for quantifying the strength of an encryption method. The strength of a modern cryptographic technique is quantifiable and provable by reference to number theory, rather than a users ability to transport or transfer a secret&nbsp;code.</p>
+<p>Modern cryptography is defined by Public Key Cryptographic systems. They use one key (code) for encryption and another for decryption. The encryption key can be made public without any risk of the message being decrypted, and is therefore known as the public key. The key used to decrypt data is the private key, and must not be revealed. If a message is encrypted with the public key it can only be decrypted with the private&nbsp;key.</p>
+<p>Public Key Cryptographic (<span class="caps">PKC</span>) systems use algorithms that are easy to process in one direction but difficult to reverse, which are known as mathematical trap-door functions. A simple example of a trap-door function is the product of two prime numbers. If two random prime numbers are chosen, it is trivial to find their product. However if only the product of the two numbers is known, it is relatively difficult to find either of the factors used to create the number (this is factorisation). This was first noticed in 1874, when <a href="https://en.wikipedia.org/wiki/William_Stanley_Jevons#Jevons.27_number">Jevons</a>&nbsp;remarked:</p>
+<blockquote>
+<p><span class="dquo">&#8220;</span>Can the reader say what two numbers multiplied together will produce the number 8,616,460,799? I think it unlikely that anyone but myself will ever&nbsp;know.&#8221;*</p>
+</blockquote>
+<p>This simple problem shows that finding the product of two (secret) prime numbers is computationally simple, but factorising the result is not. This type of problem is a key feature of modern cryptography. Factoring prime numbers is a super famous mathematical problem, it was studied by <a href="https://en.wikipedia.org/wiki/Eratosthenes">Eratosthenes</a> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> in the 3rd century <span class="caps">BC</span> and more recently the <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"><span class="caps">RSA</span> Factoring Challenge</a> has intended to track state-of-the-art factorisation techniques by issues cash prizes for the factorisation of products of large&nbsp;primes.</p>
+<p>Generally, the bigger the difference in difficulty between executing the function and reversing it, the better the cryptographic&nbsp;technique.</p>
+<p>The <span class="caps">RSA</span> algorithm below uses factorisation as the foundation of its security, but factorisation is not the hardest problem to solve relative to the size of the keys required. Algorithms have been developed to factor the products of large prime numbers, and are much more efficient than randomly guessing possible factors. The greater the size of the primes being factored, the more efficient these algorithms become, and therefore the difference in difficulty between executing the function (multiplying two large primes) and reversing it (factorisation) becomes smaller as the size of the cryptographic key length increases. This is a problem because as public key cryptography becomes more commonly used the resources available to factor products of primes increases, and consequently larger keys are&nbsp;required.</p>
+<p>Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is&nbsp;required.</p>
+<h2>Overview of the <span class="caps">RSA</span>&nbsp;algorithm</h2>
+<p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a>, and <a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard">Leonard Adleman</a>), <span class="caps">RSA</span> was one of the first public-key encryption algorithms and is still widely&nbsp;used. </p>
+<p><span class="caps">RSA</span> (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number <span class="math">\(n\)</span> has been defined, if a number greater than <span class="math">\(n\)</span> is created the result simply loops around to 0 and begins counting from 0 again. i.e. if <span class="math">\(n = 10\)</span>, then <span class="math">\(7 + 5 = 12 - 10 = 2\)</span>. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. <span class="math">\(12 / 10 = 1\)</span> with <span class="math">\(2\)</span>&nbsp;remaining.</p>
+<h2>Generation of a pair of <span class="caps">RSA</span>&nbsp;keys:</h2>
+<h3>1. Generate the <span class="caps">RSA</span>&nbsp;module</h3>
+<ul>
+<li>Select two large random prime numbers, <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. They need to be random because anyone who knows or guesses them will be able to decrypt the&nbsp;encryption.</li>
+<li>Calculate <span class="math">\(n =&nbsp;pq\)</span></li>
+</ul>
+<h3>2. Find derived number&nbsp;(e)</h3>
+<ul>
+<li><em>e</em> must be greater than 1 and less than <span class="math">\(( p - 1)( q - 1)\)</span>.</li>
+<li>There must be no common factor for e and <span class="math">\(( p - 1)( q - 1)\)</span> except for&nbsp;1.[^]4 </li>
+</ul>
+<h3>3. Form the public&nbsp;key</h3>
+<ul>
+<li>The pair of numbers <span class="math">\((n, e)\)</span> form the public key and can be made&nbsp;public.</li>
+<li>Even though <span class="math">\(n\)</span> is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of <span class="caps">RSA</span> rests entirely on the difficulty of factoring <span class="math">\(n\)</span> into its two component prime&nbsp;numbers.</li>
+</ul>
+<h3>4. Generate the private key&nbsp;(d)</h3>
+<ul>
+<li>The private key is generated from using <span class="math">\(p\)</span>, <span class="math">\(q\)</span> and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer <span class="math">\(d\)</span>.</li>
+<li><span class="math">\(d\)</span> is the inverse of <span class="math">\(e\)</span> modulo <span class="math">\(( p - 1)( q - 1 )\)</span>. This means that <span class="math">\(d\)</span> is the number less than <span class="math">\(( p - 1 ) ( q - 1 )\)</span> such that when it is multiplied by e, it is equal to <span class="math">\(1\)</span> modulo <span class="math">\(( p - 1 ) ( q - 1 )\)</span>.</li>
+</ul>
+<h2><span class="caps">RSA</span>&nbsp;example:</h2>
+<p><span class="caps">RSA</span> does not directly operate on strings as bits, it operates on numbers modulo (less than) <span class="math">\(n\)</span>. and it is necessary to represent plain text as a series of numbers less than <span class="math">\(n\)</span>. The dominant encoding on the internet is <a href="https://en.wikipedia.org/wiki/UTF-8"><span class="caps">UTF</span>-8</a>, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &#8220;<span class="caps">HELLO</span>&#8221; would become &#8220;<span class="math">\(72, 69, 76, 76, 79\)</span><span class="dquo">&#8220;</span>.</p>
+<p>The maximum number <span class="math">\(n\)</span> needs to be the product of the two prime numbers <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. For this example choose <span class="math">\(p = 7\)</span> and <span class="math">\(q = 13\)</span>, so <span class="math">\(n  = 91\)</span>  <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">4</a></sup></p>
+<p>The public key component <em>e</em> can be any number we choose,  as long as there is no number other than 1 which is a common factor of <em>e</em> and <span class="math">\(( p - 1 ) ( q - 1 )\)</span>. In our example, this requires that there be no common factor between 72 and e other than 1, so let <em>e</em> <span class="math">\(= 5\)</span>.</p>
+<p>Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime&nbsp;numbers.</p>
+<p>Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key <span class="math">\(d\)</span>, which is&nbsp;29.</p>
+<p>Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional <span class="caps">RSA</span>&nbsp;system.</p>
+<h3>Encoding</h3>
+<p>To encode a letter H in a message (&#8216;H&#8217; is <span class="math">\(72\)</span> in <span class="caps">UTF</span>-8), we need to multiply it by itself <span class="math">\(e\)</span> times (<span class="math">\(e = 5\)</span>), remembering to wrap around each time we pass our maximum value of <span class="math">\(n = 91\)</span>.</p>
+<p><span class="math">\(72 \times 72 = 5184, 5184 / 91 = 56\)</span> with <span class="math">\(88\)</span> remaining, (i.e. <span class="math">\(5184 = 91 \times 56 + 88\)</span>). Therefore:
+<span class="math">\(72 \times 72 = 5184 = 88\)</span>
+<span class="math">\(88 \times 72 = 6336 = 57\)</span>
+<span class="math">\(57 \times 72 = 4104 = 9\)</span>
+<span class="math">\(9 \times 72 = 648 =&nbsp;11\)</span></p>
+<p>Therefore the encrypted value of &#8220;H&#8221; is &#8220;<span class="math">\(11\)</span><span class="dquo">&#8220;</span></p>
+<p>Using the method for each character in the message &#8220;<span class="caps">HELLO</span>&#8221; results in the encoded message &#8220;\<span class="math">\(11,62,20,20,53\\)</span><span class="dquo">&#8220;</span>.</p>
+<p>To decrypt the message, we take each number and multiply it by itself <span class="math">\(d\)</span> times, (<span class="math">\(d=29\)</span>) wrapping around each time we pass <span class="math">\(91\)</span>.</p>
+<p><span class="math">\(11 \times 11 = 121 = 30\)</span>
+<span class="math">\(30 \times 11 = 330 = 57\)</span>
+&#8230;
+<span class="math">\(57 \times 11 = 627 = 81\)</span>
+<span class="math">\(81 \times 11 = 891 =&nbsp;72\)</span></p>
+<p>And we&#8217;re back to our original&nbsp;encoding.</p>
+<h2>Files</h2>
+<p>The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded <a href="./RSA-Example.xlsx">here</a>.</p>
+<p>A simple python script to encrypt and decrypt a message is <a href="./AES_Example.py">here</a>. It uses the <span class="caps">AES</span> encryption&nbsp;method.</p>
+<h3>Footnotes</h3>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>I used the explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a lot.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>A simple example is <span class="math">\(A=1, B=2\)</span> etc&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving algorithm</a> which finds all the primes up to a given limit.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I&#8217;ve used the same numbers in the following example as in the tutorials <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>If this is the case then e and ( p - 1) ( q - 1 ) are called &#8220;coprime&#8221;&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+        <div id="sub_req">
+            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="./pages/subscribe" >subscribe!</a>
+            <br>
+            <br>
+        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/encryption.html&text= &via=johnmathews" target="_blank" ><img src="./images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/encryption.html" target="_blank"><img src="./images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/encryption.html&title=Encryption&summary=&source=http%3A//johnmathews.eu/encryption.html" target="_blank"><img src="./images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        &nbsp; &nbsp;
+        <a href="mailto:?subject=Encryption&amp;body=http%3A//johnmathews.eu/encryption.html" target="_blank"><img src="./images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+         </div>
+        
+         <div class="neighbors">
+             <ul>
+                     <li class="previous_article">
+                         <a href="./digital-currencies-the-basics.html">
+                             Digital currencies: the&nbsp;basics
+                         </a>
+                     </li>
+                 
+                     <li class="next_article">
+                         <a href="./aeternity-ico.html">
+                             The Æternity <span class="caps">ICO</span>: My&nbsp;experience
+                         </a>
+                     </li>
+            </ul>
+        </div>
+    
+        <div> 
+
+<!--
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://johnmathews.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->                   
+        </div>
+    </div>    
+
+    <!-- Footer -->
+    <div class="footer">
+
+ <a   <a  class="active" href="./pages/subscribe.html">Subscribe</a>   
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href=".">Home</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./archives.html">Archives</a> 
+      <span style="display:inline-block; width: 2%;"></span>
+      |
+      <span style="display:inline-block; width: 2%;"></span>
+      <a href="./tags.html">Tags</a>
+
+    </div>
+    <!-- /Footer -->
+
+    <!-- /Content --> 
+
+    <!-- Stylesheets -->
+    <link async rel="stylesheet" href="./theme/css/all.min.css?c7b578ee">
+
+    <script async src="./theme/js/packed.js?4dad2a2b"></script>
+
+    <!-- plot.ly js -->
+    <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+      lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true,
+        'imageFadeDuration': 300,
+        'disableScrolling': true,
+        'showImageNumberLabel': true,
+        'positionFromTop': 50
+      })
+    </script>
+  </body>
+</html>
