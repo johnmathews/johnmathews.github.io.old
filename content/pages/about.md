@@ -6,7 +6,7 @@ Thanks for visiting my blog.
 
 In 2017, I qualified as a chartered accountant and became a financial consultant. I began working with clients working on disintermediation problems and created my consultancy, [Anaheim Consulting B.V](https://anaheimconsulting.eu).
 
-In 2014 I moved to London and began work as an external financial auditor for banking clients. I also began qualifying as a chartered accountant with the [ICAEW](https://careers.icaew.com/en/why-a-career-in-chartered-accountancy/why-become-an-icaew-chartered-accountant).
+In 2014, I moved to London and began work as an external financial auditor for banking clients. I also began qualifying as a chartered accountant with the [ICAEW](https://careers.icaew.com/en/why-a-career-in-chartered-accountancy/why-become-an-icaew-chartered-accountant).
 
 In 2010 I began my PhD researching granular materials at the [BOKU](https://www.baunat.boku.ac.at/igt/) in Vienna, Austria. 
 
