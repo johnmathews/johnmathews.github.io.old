@@ -1,7 +1,6 @@
 ~/Git/Blog/output/*
 /users/John/Git/Blog/output/*
 /users/John/Git/Blog/output
-/output
 *.swp
 *.pid
  .DS_STORE
