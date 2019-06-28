@@ -12,18 +12,18 @@
     <meta name="twitter:title" content="Blogging with Pelican: Design, Plugins, Sharing ">
     <meta name="twitter:description" content="My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds.">
     <meta name="twitter:creator" content="@johnmathews">
-    <meta name="twitter:image" content="./images/get_pelican.jpg">
+    <meta name="twitter:image" content="http://johnmathews.eu/images/get_pelican.jpg">
 
 
     <meta property="og:title" content="Blogging with Pelican: Design, Plugins, Sharing" />       
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="./pelican2.html" />
+    <meta property="og:url" content="http://johnmathews.eu/pelican2.html" />
     <meta property="og:site_name" content="John Mathews' blog" />
-    <meta property="og:image" content="./images/get_pelican.jpg" />
+    <meta property="og:image" content="http://johnmathews.eu/images/get_pelican.jpg" />
     <meta property="og:description" content="My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds." />
     <meta property="fb:app_id" content="871943349626197" />
 
-    <link rel="icon" href="./favicon.png">
+    <link rel="icon" href="http://johnmathews.eu/favicon.png">
 
     <title> Blogging with Pelican: Design, Plugins, Sharing - John Mathews </title>
 
@@ -33,6 +33,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82253540-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- /Google Analytics -->
 
 
   </head>
@@ -48,11 +59,11 @@
     <div class="container" style="width:100%;float:left;display:block;">
       <div class="header-nav" >
         <div class="header-logo" >
-          <a class="pull-left hidden-xs" href="."><img class="mr20" src="./images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <a class="pull-left hidden-xs" href="http://johnmathews.eu"><img class="mr20" src="http://johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
           <div class="header-text">
-            <a class="pull-left" style='margin-left:10px;' href="."> Hello! I'm John </a>
+            <a class="pull-left" style='margin-left:10px;' href="http://johnmathews.eu"> Hello! I'm John </a>
             <div class="anon" style='text-align:right; padding-right:10px;' >
-              <a class="active" href="./pages/about.html">About</a>
+              <a class="active" href="http://johnmathews.eu/pages/about.html">About</a>
             </div>
           </div>
         </div>
@@ -82,7 +93,7 @@
 
         <div class="article_author"> 
             By John Mathews </br>
-            Category: <a href="./category/tools.html">Tools</a>
+            Category: <a href="http://johnmathews.eu/category/tools.html">Tools</a>
         </div>
         
         <div class="article_date"> 
@@ -142,7 +153,7 @@
 </pre></div>
 
 
-<p>There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making <a href="./articles/time-until.md">Time Until</a>.</p>
+<p>There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making <a href="http://johnmathews.eu/articles/time-until.md">Time Until</a>.</p>
 <h2>Specifying the text and image in a Facebook&nbsp;share</h2>
 <p>Sharing to Facebook worked without any formatting problems, but it bugged me that the opening text of the article was being used in the preview that was shared to Facebook when I had a summary already prepared and that would be much more useful to potential readers. For some articles I also had an article image that I wanted to see being&nbsp;used. </p>
 <p>Googling revealed that I needed to use particular meta tags in the webpage&#8217;s header if I wanted to control what Facebook would pickup. Facebook uses the &#8220;open graph&#8221; standards so I would need the headers in my article pages to include the&nbsp;following: </p>
@@ -180,31 +191,31 @@
 <p>This allows you to reuse blocks multiple times and keep your templates&nbsp;tidy.</p>
 <p>Finally, when I was testing Facebook to see if the correct text or image was being picked up I was initially frustrated to see that the new tags were not having any effect. This is because Facebook crawls your site and saves what it finds. If you want it to take a fresh look at your page with its new meta tags, you need to tell Facebook to crawl the page again, using the <a href="https://developers.facebook.com/tools/debug/">Facebook linter/debugger</a>.  </p>
 <p>You can see the new sharing buttons below, please click them and see what&nbsp;happens!</p>
-<p>Note: My first article describing how I began to use Pelican is <a href="./articles/pelican_blog.md">here</a></p>
+<p>Note: My first article describing how I began to use Pelican is <a href="http://johnmathews.eu/articles/pelican_blog.md">here</a></p>
 
         <div id="sub_req">
-            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="./pages/subscribe" >subscribe!</a>
+            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="http://johnmathews.eu/pages/subscribe" >subscribe!</a>
             <br>
             <br>
-        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/pelican2.html&text=Building%20a%20blog%20without%20compromising&via=johnmathews" target="_blank" ><img src="./images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/pelican2.html&text=Building%20a%20blog%20without%20compromising&via=johnmathews" target="_blank" ><img src="http://johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
         &nbsp; &nbsp;
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/pelican2.html" target="_blank"><img src="./images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/pelican2.html" target="_blank"><img src="http://johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
         &nbsp; &nbsp;
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/pelican2.html&title=Blogging%20with%20Pelican%3A%20Design%2C%20Plugins%2C%C2%A0Sharing&summary=My%20site%20is%20optimised%20for%20speed%20and%20clarity.%20I%E2%80%99ve%20added%20share%20buttons%20using%20a%20plugin%20which%20I%20modified%20and%20improved%2C%20and%20added%20meta%20tags%20to%20control%20how%20Twitter%20and%20Facebook%20show%20my%20articles%20in%C2%A0feeds.&source=http%3A//johnmathews.eu/pelican2.html" target="_blank"><img src="./images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/pelican2.html&title=Blogging%20with%20Pelican%3A%20Design%2C%20Plugins%2C%C2%A0Sharing&summary=My%20site%20is%20optimised%20for%20speed%20and%20clarity.%20I%E2%80%99ve%20added%20share%20buttons%20using%20a%20plugin%20which%20I%20modified%20and%20improved%2C%20and%20added%20meta%20tags%20to%20control%20how%20Twitter%20and%20Facebook%20show%20my%20articles%20in%C2%A0feeds.&source=http%3A//johnmathews.eu/pelican2.html" target="_blank"><img src="http://johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
         &nbsp; &nbsp;
-        <a href="mailto:?subject=Blogging%20with%20Pelican%3A%20Design%2C%20Plugins%2C%C2%A0Sharing&amp;body=http%3A//johnmathews.eu/pelican2.html" target="_blank"><img src="./images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+        <a href="mailto:?subject=Blogging%20with%20Pelican%3A%20Design%2C%20Plugins%2C%C2%A0Sharing&amp;body=http%3A//johnmathews.eu/pelican2.html" target="_blank"><img src="http://johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
          </div>
         
          <div class="neighbors">
              <ul>
                      <li class="previous_article">
-                         <a href="./pelican.html">
+                         <a href="http://johnmathews.eu/pelican.html">
                              Blogging with&nbsp;Pelican
                          </a>
                      </li>
                  
                      <li class="next_article">
-                         <a href="./rys-git-tutorial.html">
+                         <a href="http://johnmathews.eu/rys-git-tutorial.html">
                              Ry&#8217;s Git&nbsp;Tutorial
                          </a>
                      </li>
@@ -212,6 +223,22 @@
         </div>
     
         <div> 
+    <div class="comments">
+        <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'johnmathews';
+                var disqus_identifier = 'pelican2.html';
+                var disqus_url = 'http://johnmathews.eu/pelican2.html';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+        <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+         
+    
 
 <!--
 <div id="disqus_thread"></div>
@@ -241,19 +268,19 @@ s.setAttribute('data-timestamp', +new Date());
     <!-- Footer -->
     <div class="footer">
 
- <a   <a  class="active" href="./pages/subscribe.html">Subscribe</a>   
+ <a   <a  class="active" href="http://johnmathews.eu/pages/subscribe.html">Subscribe</a>   
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href=".">Home</a> 
+      <a href="http://johnmathews.eu">Home</a> 
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="./archives.html">Archives</a> 
+      <a href="http://johnmathews.eu/archives.html">Archives</a> 
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="./tags.html">Tags</a>
+      <a href="http://johnmathews.eu/tags.html">Tags</a>
 
     </div>
     <!-- /Footer -->
@@ -261,9 +288,9 @@ s.setAttribute('data-timestamp', +new Date());
     <!-- /Content --> 
 
     <!-- Stylesheets -->
-    <link async rel="stylesheet" href="./theme/css/all.min.css?c7b578ee">
+    <link async rel="stylesheet" href="http://johnmathews.eu/theme/css/all.min.css?c7b578ee">
 
-    <script async src="./theme/js/packed.js?4dad2a2b"></script>
+    <script async src="http://johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
 
     <!-- plot.ly js -->
     <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>

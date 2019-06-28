@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - General</title><link href="http://johnmathews.eu/" rel="alternate"></link><link href="http://johnmathews.eu/feeds/general.atom.xml" rel="self"></link><id>http://johnmathews.eu/</id><updated>2018-06-04T15:52:00+02:00</updated><entry><title>What I’m reading</title><link href="http://johnmathews.eu/reading.html" rel="alternate"></link><published>2018-06-04T15:52:00+02:00</published><updated>2018-06-04T15:52:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-04:/reading.html</id><summary type="html">&lt;p&gt;A list of interesting things. June&amp;nbsp;2018&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Articles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://fs.blog/mental-models/"&gt;Mental models&lt;/a&gt; A comprehensive list organised around different disciplines. It a long read but probably one of the most easy to apply and tangibly useful articles I&amp;#8217;ve read&amp;nbsp;recently.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.paulgraham.com/vb.html"&gt;Life is short&lt;/a&gt; - Is life actually short, or would we always want more time, no matter how much we could&amp;nbsp;have?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.eugenewei.com/blog/2018/5/21/invisible-asymptotes"&gt;Invisible asymptotes&lt;/a&gt; - A well written and long look at various facets of business&amp;nbsp;strategy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://osam.com/Commentary/factors-from-scratch"&gt;Factors from scratch&lt;/a&gt; - Investing: A unified framework to explain how factors&amp;nbsp;work. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://kottke.org/18/06/a-sad-update-about-a-scissors-maker-that-went-viral"&gt;This is tragic&lt;/a&gt; - &amp;#8220;&amp;#8230;But I do think this highlights the potential disconnects between mental health &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; business, publicity &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; success, and success &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; happiness. The internet can seem so intimate but ultimately it’s a thin view of an individual’s or company’s&amp;nbsp;reality.&amp;#8221;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://statico.github.io/vim3.html"&gt;Vim&lt;/a&gt; after 15&amp;nbsp;years&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.cnbc.com/2018/03/27/a-complete-guide-to-cyprocurrency-regulations-around-the-world.html?__source=sharebar%7Clinkedin&amp;amp;par=sharebar"&gt;Cryptocurrency regulations around the&amp;nbsp;world&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.lrb.co.uk/v40/n13/john-lanchester/after-the-fall"&gt;On the 2008 financial crisis&lt;/a&gt; - &amp;#8220;I’m not sure if it’s philosophically possible for an action to be both necessary and a disaster, but that in essence is what the bailouts&amp;nbsp;were.&amp;#8221;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Podcasts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/whatbitcoindid"&gt;Jill Carlson&lt;/a&gt; on the &amp;#8220;What Bitcoin Did&amp;#8221; podcast. “For the first time there is no longer a monopoly on the creation of value or monetary systems, that is really What Bitcoin&amp;nbsp;Did.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/deVoaRTfVqs"&gt;Georges St-Pierre&lt;/a&gt; on the Joe Rogan podcast. A long and candid conversation from one of the world&amp;#8217;s best&amp;nbsp;athletes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/KqhRZfKRriU"&gt;Ricardo Spagni&lt;/a&gt; a.k.a Fluffypony on Monero vs Bitcoin, &lt;span class="caps"&gt;EOS&lt;/span&gt;, the current bear market, Tari, and&amp;nbsp;ASICs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lots of &lt;a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html"&gt;data&amp;nbsp;sets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Reading"></category></entry><entry><title>Neighbours</title><link href="http://johnmathews.eu/neighbours.html" rel="alternate"></link><published>2018-05-31T22:30:00+02:00</published><updated>2018-05-31T22:30:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-05-31:/neighbours.html</id><summary type="html">&lt;p&gt;Humans deserve respect, simply because they are human. This truth is in the process of going from self evident, to assumed, to&amp;nbsp;denied.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A useful model I&amp;#8217;ve come across states that it takes three generations for a society to deny something previously considered true. The first generation studies or experiences something which leads to a particular value or belief. The second generation inherits the belief and assumes it to be true, but doesn&amp;#8217;t arrive at the belief through their own critical thought. The third generation then questions the assumption, realises that most holders of the belief do not have a good basis for their belief, and disregards&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The belief that people have a responsibility to look after each other and treat each other with a minimum level of respect seems to be following this&amp;nbsp;route.  &lt;/p&gt;
+&lt;p&gt;That humans inherently deserve a degree of respect and dignity simply because they are human is self-evident. In times of comfort and excess it could be ignored, but in times of calamity and in the aftermath of disasters it becomes undeniable and obvious. This is partly because disasters reveal our instinct for justice and our frailty in the face of&amp;nbsp;misfortune.&lt;/p&gt;
+&lt;p&gt;Life is experienced through the lens of the mind, and its perception is mostly governed by fundamental circumstances or desires. The trappings of a prosperous society allows this reality to be covered by a veneer of soft arguments, or rejected in favor of a viewpoint that says we have superseded these supposedly basic&amp;nbsp;origins. &lt;/p&gt;
+&lt;p&gt;Good leaders should know better. They should study history and be self-aware. In the past they have forgotten this reality and have been forced to relearn it at great cost. Are we about to forget, again, and let our children live with those&amp;nbsp;consequences?&lt;/p&gt;
+&lt;p&gt;My grandfathers generation saw the damage that sectarian systems bring, and were forced to answer questions around how much respect people deserve only because they are people. As the consequences of different views and systems became evident, my fathers generation assumed the answers to be self-evident, because the consequences of the previous &amp;#8220;forgetting&amp;#8221; were still&amp;nbsp;clear. &lt;/p&gt;
+&lt;p&gt;Who is clearly articulating this now? This&amp;nbsp;year? &lt;/p&gt;
+&lt;p&gt;When we discuss taxation, social mobility, migration, military intervention, why do we not start with the assumed self-evident truth that people are inherently valuable and important? Humans are more than metrics, and cannot be entirely evaluated using only quantitative&amp;nbsp;methods. &lt;/p&gt;
+&lt;p&gt;Horton, the title character in &amp;#8220;Horton Hears a Who&amp;#8221; by Dr. Zeus, understood this. He went to great lengths to protect the tiny and weak people in who-ville. We teach this truth to our children, but do not demonstrate it as adults. Jesus also understood it. He said that we should love our neighbours, and explained that our neighbours are people we come across who need our&amp;nbsp;help.&lt;/p&gt;
+&lt;p&gt;I wonder if forgetting that humans are inherently worthy of respect is a prerequisite for&amp;nbsp;declining;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;standards of&amp;nbsp;governance&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;social&amp;nbsp;mobility&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;peace&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;economic&amp;nbsp;growth&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Which makes me think it is a self defeating deception. When we choose to disregard a group of humans because it is inconvenient to help them, we are elevating our needs above theirs. This seems to create chains of events where everybody&amp;nbsp;suffers.&lt;/p&gt;</content><category term="Politics"></category><category term="Equality"></category></entry><entry><title>Live near the ocean</title><link href="http://johnmathews.eu/ocean.html" rel="alternate"></link><published>2017-11-23T18:48:00+01:00</published><updated>2017-11-23T18:48:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-23:/ocean.html</id><summary type="html">&lt;p&gt;Being near water is&amp;nbsp;better.&lt;/p&gt;</summary><content type="html">&lt;h3&gt;California&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="California" src="http://johnmathews.eu/images/california3.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="California" src="http://johnmathews.eu/images/california7.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="California" src="http://johnmathews.eu/images/california9.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Dorset&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Dorset" src="http://johnmathews.eu/images/dorset.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Dorset" src="http://johnmathews.eu/images/beach.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Acapulco&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Acapulco" src="http://johnmathews.eu/images/mex1.jpg"&gt;
+&lt;img alt="Acapulco" src="http://johnmathews.eu/images/mex2.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Dublin&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Dublin" src="http://johnmathews.eu/images/dublin.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Dublin" src="http://johnmathews.eu/images/dublin1.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;The&amp;nbsp;Netherlands&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Hague" src="http://johnmathews.eu/images/hague.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Hague" src="http://johnmathews.eu/images/amsterdam3.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Hague" src="http://johnmathews.eu/images/amsterdam1.jpg"&gt;&lt;/p&gt;</content><category term="water"></category></entry><entry><title>I’m a chartered accountant</title><link href="http://johnmathews.eu/chartered.html" rel="alternate"></link><published>2017-10-19T21:56:00+02:00</published><updated>2017-10-19T21:56:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-10-19:/chartered.html</id><summary type="html">&lt;p&gt;I&amp;#8217;ve qualified as a chartered accountant and will soon become a member of the Institute of Chartered Accountants in England and&amp;nbsp;Wales&lt;/p&gt;</summary><content type="html">&lt;p&gt;Earlier this year I qualified as a chartered accountant. Qualification requires passing 15 exams and gaining 3150 hours of work&amp;nbsp;experience. &lt;/p&gt;
+&lt;p&gt;To celebrate passing your exams and verify your success, the &lt;span class="caps"&gt;ICAEW&lt;/span&gt; print the names of everyone who passed in an advert in the Financial Times. This happened for me on the 26&amp;nbsp;January.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="exam pass list in the financial times" src="http://johnmathews.eu/images/exam_pass_list.jpg"&gt;&lt;/p&gt;</content><category term="ICAEW"></category><category term="ACA"></category><category term="Accounting"></category></entry><entry><title>Corporate London</title><link href="http://johnmathews.eu/corporate.html" rel="alternate"></link><published>2017-07-10T21:37:00+02:00</published><updated>2017-07-10T21:37:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-10:/corporate.html</id><summary type="html">&lt;p&gt;Reflections on 3 years living and working in&amp;nbsp;London&lt;/p&gt;</summary><content type="html">&lt;h1&gt;2014 -&amp;nbsp;2017&lt;/h1&gt;
+&lt;p&gt;Having made arrangements to leave London, it seems like a reasonable time to reflect on my time&amp;nbsp;here.&lt;/p&gt;
+&lt;p&gt;London is a tough city to live in — it&amp;#8217;s big enough that a sub 1-hour commute is considered good, and it&amp;#8217;s super expensive. My stay in London has been defined by my quest to complete my graduate scheme and qualify as an&amp;nbsp;accountant.&lt;/p&gt;
+&lt;p&gt;When I first arrived I had no idea what London or working in a corporate would be like. I was coming from academia, and my motivation for moving to finance could be summed up in two&amp;nbsp;points:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Understand more about the 2008 financial&amp;nbsp;crisis&lt;/li&gt;
+&lt;li&gt;Get paid more for using mostly the same skills (math) as in&amp;nbsp;engineering&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I don’t think there’s anything wrong with these motivations, but I should have been making a long term career plan&amp;nbsp;instead.&lt;/p&gt;
+&lt;p&gt;When I started my job I was surprised at the 6 weeks of induction and hot-desking. Life as an auditor felt nomadic, as everyone would spend large amounts of time at client&amp;#8217;s offices, and no-one has their own desk in our office. The only thing you really own is your knowledge and your network of&amp;nbsp;relationships.&lt;/p&gt;
+&lt;p&gt;In 2014, I arrived with a high opinion of my employer and the view that I would be staying for several years. Having escaped the financial insecurity of short-term research grants, I’d moved back to my home country to contribute to the system that educated me. I was happy to have a regular job with a decent, predictable&amp;nbsp;salary.&lt;/p&gt;
+&lt;p&gt;A phrase that kept coming to mind back then was “accountant factory”. Our training materials were scripted and everything was a standardised process. We were being processed. Graduates in, corporate accountants&amp;nbsp;out.&lt;/p&gt;
+&lt;p&gt;The company is huge and so are the efficiencies and barriers to competition that come with this. When I arrived I was impressed there were free biscuits, and it felt presumptuous to put a meeting in someones diary. Now I ignore any communications addressed to a mailing&amp;nbsp;list.&lt;/p&gt;
+&lt;h2&gt;Accountant&lt;/h2&gt;
+&lt;p&gt;The toughest experiences were related to the accountancy qualification. Naïvely I had believed that the qualification wouldn’t be a big deal and I didn’t give any thought to it when I applied — I just wanted to find out how banks worked. If there were some exams to be done then it would be fine, I’d already achieved a PhD and I would handle&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;That turned out to be a mistake. A huge mistake. The alarm bells should have rung louder when I realised most of my graduate colleagues had only applied so that they could get the qualification (and were already intending to leave asap afterwards). Doing the pre-course work before college wasn&amp;#8217;t trivial. College - I was being sent to a classroom again. We were being taken out of the office, away from clients, and put in a classroom to prepare for these&amp;nbsp;exams…&lt;/p&gt;
+&lt;p&gt;Starting a job that required becoming a chartered accountant, without considering the effort and time involved to qualify was dumb. It’s an oversight I find hard to&amp;nbsp;believe.&lt;/p&gt;
+&lt;p&gt;The disappointment and sadness at having to study again was profound. The teaching and assessment style was several steps behind what I’d become used to. Compared to the depth, autonomy and research-focus of a doctorate, writing cookie-cutter essays in time-pressured exams felt stupid. The exams were hard and I failed several of them, probably because of my low morale whilst revising. Retaking them required more weekends and annual leave being spent away from my family, camped-out in libraries and&amp;nbsp;offices.&lt;/p&gt;
+&lt;p&gt;This required much patience and generosity from Ritsya, who having not seen me for long periods during my doctorate expected us to have a more normal lifestyle when we came to London. I found it miserable to pause my social life and other interests whilst studying, and then I would try to rush back to them when I had the time, knowing that soon I’d have to pause them&amp;nbsp;again.&lt;/p&gt;
+&lt;p&gt;If I hadn’t already studied in Vienna, this process of working and studying in London would have been exciting and felt valuable or special. I’d passed enough exams though to know that they’re never as important as they’re made out to be, and whatever it was that was missing from my life wasn’t going to be found in another&amp;nbsp;qualification.&lt;/p&gt;
+&lt;p&gt;On the upside though, the &lt;span class="caps"&gt;ACA&lt;/span&gt; is the most practical qualification I’ve gained and has taught me many useful aspects of business and finance. I’m glad to finally see business not as some mysterious system but something attainable and&amp;nbsp;understandable.&lt;/p&gt;
+&lt;h2&gt;Neighbourhood&lt;/h2&gt;
+&lt;p&gt;Living in London has also required a lot of time on trains — my door to desk commute is about an hour each way, and I’ve never lived somewhere in London that hasn’t felt transient. We’ve needed to live near a station and didn’t want to commute more than an hour and that’s put us in neighbourhoods with other young professionals who also don’t have long term plans (or financial ability) to stay in the city. We’re all looking to move on and move up as fast as possible.  I want to leave London partly because there are so many people with the same attitudes and priorities as my&amp;nbsp;own…&lt;/p&gt;
+&lt;h2&gt;Corporate&amp;nbsp;Culture&lt;/h2&gt;
+&lt;p&gt;Back in the office I spent the first few months figuring out how people were organised, how teams operated and how decisions were made. I think it took me about a year to feel like I understood how things really worked, and 1.5 years to feel like I could do all aspects of my job with certainty. There is a difference between how things are spoken about, and how things actually&amp;nbsp;happen.&lt;/p&gt;
+&lt;p&gt;My experience has been that performance is all that matters and behaviour is defined by self-interest. I don’t think this is different from previous environments I&amp;#8217;ve worked in — academia isn&amp;#8217;t any different&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; and the construction industry certainly isn’t. I wonder if the only way people can endure it is if they’ve not experienced anything else, or think it normal, or necessary. I find myself wishing we could be kinder to each other, and that we could create structures that incentivise mutual&amp;nbsp;support.&lt;/p&gt;
+&lt;p&gt;Corporate finance usually appears clean and well presented. Its people appear dependable and capable. The culture is sanitised and there&amp;#8217;s a lot of pressure to conform - you can see it in the clothes and accessories we wear and the jokes we tell each other in the&amp;nbsp;canteen. &lt;/p&gt;
+&lt;p&gt;I came to see my office as a glass and steel cathedral. I read about the Middle East, and migrants arriving in Europe, and tower blocks burning, and felt really&amp;nbsp;disconnected.&lt;/p&gt;
+&lt;p&gt;Despite the high regard with which we hold ourselves, we don’t ask each other how we can help. Maybe we are too busy, or feel powerless to help. Apparently we do not know how to help, despite our wealth, talents, education and&amp;nbsp;connections.&lt;/p&gt;
+&lt;p&gt;I remember watching a man leave the office one day and thought that if he gave his whole career and left his firm after decades of service, there would be nothing left to identify him after a few weeks. The work will always get done. Market forces will dictate how the business adapts and grows. The City rolls&amp;nbsp;on.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Publications trump almost all other metrics, and the incentives to publish quantity over quality are such that risky or slow research is inexcusable. The metrics used to standardise success and allocate resources can be subverted just as well in academia as in any other industry. What management measures, the team prioritises.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Career"></category><category term="Corporate"></category><category term="London"></category></entry><entry><title>Move</title><link href="http://johnmathews.eu/move.html" rel="alternate"></link><published>2017-07-08T12:26:00+02:00</published><updated>2017-07-08T12:26:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-08:/move.html</id><summary type="html">&lt;p&gt;Training&amp;#8217;s&amp;nbsp;over&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Ambition&lt;/h1&gt;
+&lt;p&gt;Since I was 15, one of my ambitions has been to be an entrepreneur. I used to joke with my dad about buying him a nice boat one&amp;nbsp;day.&lt;/p&gt;
+&lt;p&gt;Life so far has been predominantly about education, and that stage is over now. I’m walking away from what I&amp;#8217;ve come to see as a lifestyle and career that has too many contradictions, it doesn&amp;#8217;t make sense to live like this. Ultimately I want to develop multiple sources of passive income. I want to&amp;nbsp;create.&lt;/p&gt;
+&lt;h2&gt;Summer&amp;nbsp;2017&lt;/h2&gt;
+&lt;p&gt;The last few months have been intense, with some weeks leaving me feeling ambitious and energetic, and others feeling anxious and overwhelmed. I need to get better at defining a goal, taking the quickest path there, and ignoring interesting&amp;nbsp;distractions.&lt;/p&gt;
+&lt;p&gt;Ritsya is brave enough and imaginative enough to force me to think big and consider how to live a better life. My biggest fear is that I screw it up, shooting myself in the foot and Ritsya and my daughter also. We were headed safely to an unremarkable existence and it would be terrible to swap that for something worse. That won&amp;#8217;t&amp;nbsp;happen.&lt;/p&gt;
+&lt;p&gt;I know that I make better decisions and produce my best work under pressure, I thrive when I&amp;#8217;m perceived as an underdog. I need to accept this without using it as a reason to be foolish. Whilst I don’t have a clear plan, or direction, or goal, (I have many of them) I’ve got skills and I want to see what I can make. I’ll never do my best work, using my most productive combination of skills and experiences, if I’m a cog in someone else&amp;#8217;s&amp;nbsp;machine.&lt;/p&gt;
+&lt;p&gt;It’s safer being an employee than self-employed. I guess the price of removing self-employment risks is the difference between the value you generate for your employer and what you’re paid. I think those risks are overpriced, and most people are more capable than they realise. Sometimes you have to walk into a situation to find out how to make the most of it. And sometimes you have to leave a place in order to gain&amp;nbsp;perspective.&lt;/p&gt;
+&lt;h2&gt;Autumn&amp;nbsp;2016&lt;/h2&gt;
+&lt;p&gt;Last year my boss gave me some advice that was supposed to be encouraging. I’d requested to reduce my involvement with some stuff that was unrelated to my job so that I could contribute more to my team and still maintain some semblance of a work/life&amp;nbsp;balance.&lt;/p&gt;
+&lt;p&gt;My boss was pretty clear that reducing my involvement in the extra stuff would not be possible. During our conversation he advised me not to worry about how much I contributed to the team because “the work will get done anyway”. This was meant to be encouraging, but instead removed any conviction that the work I did was&amp;nbsp;important.&lt;/p&gt;</content><category term="Lifestyle"></category></entry><entry><title>Flee</title><link href="http://johnmathews.eu/flee.html" rel="alternate"></link><published>2017-07-04T08:42:00+02:00</published><updated>2017-07-04T08:42:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-04:/flee.html</id><summary type="html"></summary><content type="html">&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;Summer&amp;nbsp;children&lt;/p&gt;
+&lt;p&gt;squeal and&amp;nbsp;shriek,&lt;/p&gt;
+&lt;p&gt;Watch&amp;nbsp;wars.&lt;/p&gt;
+&lt;p&gt;Excitement&amp;nbsp;mounts.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;How&amp;nbsp;exotic.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;Unexpectedly,&lt;/p&gt;
+&lt;p&gt;Death&amp;nbsp;arrives.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;Grow-up&lt;/p&gt;
+&lt;p&gt;Grow&amp;nbsp;old&lt;/p&gt;
+&lt;p&gt;Face&amp;nbsp;death &lt;/p&gt;
+&lt;p&gt;Evade&amp;nbsp;evil.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t&amp;nbsp;tire.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;World is&amp;nbsp;fragile.&lt;/p&gt;
+&lt;p&gt;Towers&amp;nbsp;burn,&lt;/p&gt;
+&lt;p&gt;Bridges&amp;nbsp;bludgeon,&lt;/p&gt;
+&lt;p&gt;Markets&amp;nbsp;stab.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;Got to get&amp;nbsp;out.&lt;/p&gt;
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;</content><category term="Poetry"></category></entry><entry><title>London Rent vs. London Salaries</title><link href="http://johnmathews.eu/london.html" rel="alternate"></link><published>2017-05-12T22:55:00+02:00</published><updated>2017-05-12T22:55:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-05-12:/london.html</id><summary type="html">&lt;p&gt;Living in London is only financially possible if you are either single or household income is more than&amp;nbsp;£60k/year.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Living in London is expensive, everyone in the &lt;span class="caps"&gt;UK&lt;/span&gt; knows this. Everyone knows that this is mostly due to the price of property, which we all enjoy talking&amp;nbsp;about.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve lived here for 3 years now, and when my wife and I were both working we lived comfortably. Two incomes under one roof is just fine. Not as fine as in many other cities, but reasonable. Just over a year ago my first child was born, and now that my wife&amp;#8217;s maternity pay has ended we are a single income household. This is not&amp;nbsp;fine. &lt;/p&gt;
+&lt;p&gt;Even though I earn almost £50k/year, and any salary increase will be taxed at 40%, I cannot cover essential day-to-day costs. I&amp;#8217;m in the 40% tax bracket, and my basic monthly outgoings exceed my monthly take home pay by £400. If my employer wanted to pay me enough to cover essential costs, it would cost them approximately double the shortfall due to tax. None of this makes&amp;nbsp;sense.&lt;/p&gt;
+&lt;p&gt;Salaries and living expenses have become really&amp;nbsp;disconnected. &lt;/p&gt;
+&lt;p&gt;For most people the most obvious way to increase wealth is to buy property. Mortgage repayments are cheaper than rent, and the value of the property increases over time. Double win. But there is a big hurdle to overcome before this is possible - saving money for a deposit on a house is often impossible without external help (i.e. the &amp;#8220;Bank of Mum and Dad&amp;#8221;), because so much of the money earnt must be spent on rent&amp;nbsp;first. &lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s a trap. Repayments on a mortgage are cheaper than paying rent, but you cannot save enough for a deposit&amp;nbsp;because;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;so much of your salary goes to paying rent&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;the average cost of a &lt;em&gt;flat&lt;/em&gt; in London is 500k&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;, which means a 5% deposit is £25k — which is a higher deposit than you would need anywhere else in the &lt;span class="caps"&gt;UK&lt;/span&gt;, despite being the place you are least able to accumulate&amp;nbsp;it. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;What if my partner went back to work and we put our baby in childcare? Childcare is not cheap, and working would need to bring in more than the cost of childcare. This requires a higher than average salary from a graduate job, (which is the life stage when people might reasonably start having children), so unless both parents are unusually high earners that option isnt viable&amp;nbsp;either.&lt;/p&gt;
+&lt;p&gt;Living in London is only financially possible if you are either single or household income is more than&amp;nbsp;£60k/year.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;You&amp;#8217;d be lucky to find a 1 bedroom flat for less than £1000/month&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;According to &lt;a href="http://www.rightmove.co.uk/house-prices/London.html"&gt;Rightmove&lt;/a&gt;, an estate agent with some useful price statistics.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="London"></category><category term="Rent"></category></entry><entry><title>Spare time</title><link href="http://johnmathews.eu/spare-time.html" rel="alternate"></link><published>2016-08-13T21:15:00+02:00</published><updated>2016-08-13T21:15:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-13:/spare-time.html</id><summary type="html"></summary><content type="html">&lt;p&gt;This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I&amp;#8217;d rather be doing instead. Some of these interests are just me reacting to having no spare time for a few months, but others are decent goals and projects. Temporarily losing my spare time made me value it&amp;nbsp;more.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="free-time" src="/images/spare_time.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I wrote this post so that I could compare what I thought was important when I was busy to when I wasn&amp;#8217;t. Writing the list allowed me to move on without forgetting. Here&amp;#8217;s a break down of each&amp;nbsp;item:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Run 10k in 50 minutes&amp;#8221; - This is easier than I imagined. When I wrote the list I could barely run 2k without stopping, but intended to go for a weekly run whilst studying. I&amp;#8217;ve struggled to stay energetic and healthy during previous exam phases, so now I have a rule that I must do some mild exercise even if I think I can&amp;#8217;t spare the time. I find running really lowers my stress levels, and increasing my heart rate and working up a sweat lets me sleep better
+    and concentrate for longer. After a few weeks of minimal running, I could run 5k easily. If I kept at it, 10k in 50 mins would be easy. But point&amp;nbsp;2&amp;#8230;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Be Insanity strong&amp;#8221; - As in, do the Insanity workout programme. Again. I thought about it and decided to do P90x instead. Week 1 is going&amp;nbsp;great.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Read the bible habitually&amp;#8221; - When I was 17 I found out about Jesus and became a Christian. In the months and years after that I&amp;#8217;d regularly read my bible almost every day and pray a lot. I wanted to understand, so I set a goal of 5 chapters each&amp;nbsp;day.&lt;/p&gt;
+&lt;p&gt;I read through the new testament repeatedly and read most of the old testament during this time. I knew the scriptures well enough that a lot of sermons became boring and obvious - I&amp;#8217;d already studied the bible passage being used. During this time I remember being aware that the way I thought was different to how it would have been otherwise. My perspectives were long-term and less me focused. I thought about what I was reading instead of the days&amp;#8217; headlines or social chatter. I remember enjoying the benefits and thinking that I should keep this habit. The reasons why I think Christianity is so wonderful are well summarised in &lt;a href="http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders"&gt;this sermon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s now 10 years later, and whilst my convictions are strong, my knowledge of the bible is sadly pretty fuzzy. My thinking is clouded by the perspectives contained in the media I consume and the conversations I&amp;#8217;m part of. I strongly suspect I would be acting and
+thinking differently if I read my bible more, but I don&amp;#8217;t know what those differences would be. Trouble is, it&amp;#8217;s often not obvious what the immediate benefits of reading the bible are, you have to work for it a bit. Praying for help is effective. The books in the bible were written to last through the ages and across all cultures, so it&amp;#8217;s not surprising that they&amp;#8217;re not as easy to read as something written for an English speaker in a hurry. I should stop being in a hurry, and stop prioritising only quantifiable&amp;nbsp;goals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Think more&amp;#8221; - On a similar note to 3, but less supernatural. If I spent less time consuming content and a little more looking around me or walking, I reckon I&amp;#8217;d be more self-aware and make better decisions. This would probably lead to a happier, more satisfying&amp;nbsp;life.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Pray more&amp;#8221; - I don&amp;#8217;t know why, but the creator of the universe wants me to talk and share my life with him. He cares about me. This makes no sense to me, at all. If I was God, I would not go out of my way to consider the views and concerns of a very flawed human. But
+    when I pray, my prayers are very often answered. I should ask him about&amp;nbsp;this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Amazon seller?&amp;#8221; - Amazon have this &amp;#8220;Fulfilled by Amazon&amp;#8221; service,
+    which means you don&amp;#8217;t even need to hold the stock you want to sell.
+    If I choose the right products, import them cheaply from China and
+    reselling  them on Amazon at a profit, I end up quids in for minimal
+    effort and manageable risk. Sounds&amp;nbsp;intriguing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Blog about interesting data&amp;#8221; - Here I am, blogging. I should stick
+    to the main topic and get technical. I was inspired by this
+    &lt;a href="http://www.curiousgnu.com/"&gt;blog&lt;/a&gt; in&amp;nbsp;particular.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Finish Coursera&amp;#8221; - The data science specialization is great! It&amp;#8217;s in R, and I want to focus on Python, but I&amp;#8217;d still like to do it. I need to consider the opportunity cost of the time committed,&amp;nbsp;though.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Read for fun, history, fiction&amp;#8221; - When I started my job, in April 2014, I was half way through &lt;a href="https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&amp;amp;asin=B00796LLLK&amp;amp;preview=newtab&amp;amp;linkCode=kpe&amp;amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4"&gt;Savage Continent&lt;/a&gt;, which is an eye-opening and eye-watering history of Europe in the years after World War 2. I see Europe through different eyes because of it. However I only got half way though, and since April &amp;#8216;14 I never felt I had the free time or energy to pick it back up. This should change. When I was a researcher, and when I was a student, I had so much more opportunity to develop my own pursuits. Since entering the corporate world, I find myself fighting a war of attrition to exert my personality onto my lifestyle. &lt;/br&gt; &lt;/br&gt; Read for fiction&amp;#8230; I&amp;#8217;m unconvinced. What do you have at the end of it? What can you do with it? Maybe I&amp;#8217;ve just been reading the wrong authors, but I&amp;#8217;m going to leave this for now. Sure, you could gain an appreciation of a different time or place, but that appreciation comes via the fictional characters and events, its secondary. What about abstract constructs, perspectives, morals&amp;#8230; things that history books are ill-suited for? Great fiction would be essential for exploring these. But for now, I&amp;#8217;ll prioritise point 3.&lt;/br&gt;  &lt;/br&gt; &lt;iframe style="max-width: 100%; float:middle" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;amp;asin=B00796LLLK&amp;amp;preview=inline&amp;amp;linkCode=kpe&amp;amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt; &lt;/br&gt; &lt;/br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Do a photography project&amp;#8221; - This I would love to do, but probably won&amp;#8217;t. It would be a luxury, and the opportunity cost would be too great right now. I&amp;#8217;d like to shoot a series of black and white portraits, and turn them into large prints. I think good portrait photography is uniquely impactful and moving, choosing B&amp;amp;W removes distractions and leaves a subjects humanity more&amp;nbsp;exposed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Have a list of business/product ideas&amp;#8221; - There&amp;#8217;s no excuse for this
+    one, anyone can have several good ideas. It&amp;#8217;s turning them into
+    reality that takes skill. Need to have the ideas first,&amp;nbsp;though.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Do a law &lt;span class="caps"&gt;MOOC&lt;/span&gt;&amp;#8221; - i.e Study particular areas of law, in my own time
+    and at my own pace. I studied a tiny bit of law during the &lt;span class="caps"&gt;ACA&lt;/span&gt;, and
+    realised employment law or contract law could be really useful.
+    (Same for the tax system - another surprise). We only had a brief
+    introduction though, so if I could find the time I&amp;#8217;d like to know&amp;nbsp;more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Do an InfoSec or Network Security &lt;span class="caps"&gt;MOOC&lt;/span&gt;&amp;#8221; - Its super interesting,
+    but not likely to be a good use of&amp;nbsp;time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Learn to fight - Krav Maga / &lt;span class="caps"&gt;MMA&lt;/span&gt;&amp;#8221; - Ever since watching The Bourne
+    Identity I&amp;#8217;ve wanted to learn Krav Maga, and &lt;a href="https://youtu.be/LybrzdG96_8"&gt;Georges
+    St-Pierre&lt;/a&gt; made me want to train
+    for &lt;span class="caps"&gt;MMA&lt;/span&gt;. For now though, I&amp;#8217;ll do P90x. I can reconsider in 90&amp;nbsp;days.&lt;/p&gt;
+&lt;p&gt;&lt;div class="embed-responsive embed-responsive-16by9"&gt;
+&lt;iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/u0_8dzaNxhg" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;  &lt;br&gt;
+ &lt;/div&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Get out of London&amp;#8221; - My contract ends in April 2017, next summer
+    will be a crossroads. I hate the commute, I hate being constantly
+    rushed. Living in other cities has been a lot more&amp;nbsp;pleasant.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Habits"></category><category term="Advice"></category><category term="Reflection"></category></entry><entry><title>How to wake up early</title><link href="http://johnmathews.eu/how-to-wake-up-early.html" rel="alternate"></link><published>2016-08-06T22:04:00+02:00</published><updated>2016-08-06T22:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-06:/how-to-wake-up-early.html</id><summary type="html"></summary><content type="html">&lt;p&gt;For years I&amp;#8217;ve wished that I could wake up early and use the quiet
+pre-breakfast hours for distraction-free productivity. And for years I
+have spectacularly failed at this. I love the quiet, distraction-free
+hours at the end of the day too, as well as waking up slowly.&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;p&gt;Many famous leaders and politicians are known to start their days early,
+and I would like to be able to do this too. After years of trying and
+failing, I have had a&amp;nbsp;break-through.&lt;/p&gt;
+&lt;p&gt;The secret of waking up early is&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;Become a&amp;nbsp;parent.&lt;/p&gt;
+&lt;p&gt;After the first couple of months with a&amp;nbsp;new-born:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You will be well-practiced at quickly waking up at previously
+    unthinkable&amp;nbsp;times&lt;/li&gt;
+&lt;li&gt;You will be used to operating on less sleep than you ever thought&amp;nbsp;possible&lt;/li&gt;
+&lt;li&gt;Your beautiful child will become a reliable alarm clock, waking you
+    up at the crack of dawn with cute smiles and increasingly insistent
+    demands that you get up, play and make&amp;nbsp;breakfast.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;If you have the freedom to begin sleeping and working when you want, I still believe this is a great option. I bashed out a PhD in 3.5 years during which I usually woke up late and began to work around lunch time! - Glorious autonomy!&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Productivity"></category><category term="Sleep"></category></entry></feed>
