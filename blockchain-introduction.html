@@ -8,22 +8,22 @@
     <meta name="keywords" content="Blockchains,Digital Currencies,Distributed Ledger Technology,Public Key Cryptography">
 
     <meta name="twitter:card" value="Summary">
-    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:domain" content="https://blog.johnmathews.eu">
     <meta name="twitter:title" content="Blockchains from the ground up: Part 1 ">
     <meta name="twitter:description" content="Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains.">
     <meta name="twitter:creator" content="@johnmathews">
-    <meta name="twitter:image" content="http://johnmathews.eu/images/logo_big square.jpeg">
+    <meta name="twitter:image" content="blog.johnmathews.eu/images/logo_big square.jpeg">
 
 
     <meta property="og:title" content="Blockchains from the ground up: Part 1" />       
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://johnmathews.eu/blockchain-introduction.html" />
+    <meta property="og:url" content="blog.johnmathews.eu/blockchain-introduction.html" />
     <meta property="og:site_name" content="John Mathews' blog" />
-    <meta property="og:image" content="http://johnmathews.eu/images/logo_big square.jpeg" />
+    <meta property="og:image" content="blog.johnmathews.eu/images/logo_big square.jpeg" />
     <meta property="og:description" content="Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains." />
     <meta property="fb:app_id" content="871943349626197" />
 
-    <link rel="icon" href="http://johnmathews.eu/favicon.png">
+    <link rel="icon" href="blog.johnmathews.eu/favicon.png">
 
     <title> Blockchains from the ground up: Part 1 - John Mathews </title>
 
@@ -52,18 +52,23 @@
     <a name="top"></a>
 
     <!-- Header -->
-    <div class="header-container gradient">
+          <div class="header-container gradient">
 
  
     <!-- Static navbar -->
-    <div class="container" style="width:100%;float:left;display:block;">
+    <div class="container" style="width:100%; float:left; display:block; ">
       <div class="header-nav" >
         <div class="header-logo" >
-          <a class="pull-left hidden-xs" href="http://johnmathews.eu"><img class="mr20" src="http://johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <a class="pull-left hidden-xs" href="blog.johnmathews.eu">
+            <img class="mr20" src="blog.johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115">
+          </a>
           <div class="header-text">
-            <a class="pull-left" style='margin-left:10px;' href="http://johnmathews.eu"> Hello! I'm John </a>
+            <a class="pull-left" style='margin-left:10px;' href="blog.johnmathews.eu">
+              Hello! I'm John
+            </a>
             <div class="anon" style='text-align:right; padding-right:10px;' >
-              <a class="active" href="http://johnmathews.eu/pages/about.html">About</a>
+              <!-- <a class="active" href="blog.johnmathews.eu/pages/about.html">About</a> -->
+              <a class="active" href="http://www.johnmathews.eu">Clients</a>
             </div>
           </div>
         </div>
@@ -76,28 +81,28 @@
     </div>
 
     <!-- Content -->
-    
-    <div class="container content">
-        <div> 
-            <h1> Blockchains from the ground up: Part&nbsp;1 </h1> 
-        </div>
-        
- 
-        <div class="summary">
-            <p>Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&nbsp;blockchains.</p>
-        </div>
-        
 
-        <div class="article_author"> 
-            By John Mathews </br>
-            Category: <a href="http://johnmathews.eu/category/disintermediation.html">Disintermediation</a>
-        </div>
-        
-        <div class="article_date"> 
-            May 25 2017 
-        </div>
-        
-        <h1>How to maintain a reliable list across a small network without a central&nbsp;authority</h1>
+          <div class="container content">
+            <div> 
+              <h1> Blockchains from the ground up: Part&nbsp;1 </h1> 
+            </div>
+
+ 
+              <div class="summary">
+                <p>Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&nbsp;blockchains.</p>
+              </div>
+
+
+            <div class="article_author"> 
+              By John Mathews </br>
+              Category: <a href="blog.johnmathews.eu/category/disintermediation.html">Disintermediation</a>
+            </div>
+
+            <div class="article_date"> 
+              May 25 2017 
+            </div>
+
+            <h1>How to maintain a reliable list across a small network without a central&nbsp;authority</h1>
 <p>This is part 1 of an introduction to the key features of a generalised blockchain. I haven&#8217;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&nbsp;technology.</p>
 <h2>Create a financial document that cannot be forged or&nbsp;disputed</h2>
 <p>Let&#8217;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&nbsp;receipt.</p>
@@ -132,7 +137,7 @@
 <p>This is a much stronger document and is more difficult to forge. If Lizzie changes the &#8220;What:&#8221; to &#8220;11 Oranges&#8221;, both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie&#8217;s 1. Lizzie will be laughed out of court.&nbsp;Hahaha. </p>
 <p>3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be&nbsp;ruined. </p>
 <p>This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. <span class="caps">E.G.</span> If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to&nbsp;be. </p>
-<p>The solution is <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public-key infrastructure</a> (which is introduced in my <a href="http://johnmathews.eu/articles/encryption.md">previous post</a>). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&nbsp;briefly:</p>
+<p>The solution is <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public-key infrastructure</a> (which is introduced in my <a href="blog.johnmathews.eu/articles/encryption.md">previous post</a>). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&nbsp;briefly:</p>
 <p>A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it&#8217;s a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data&nbsp;securely). </p>
 <p>Back to the fruit. If Lizzie wants to accept John&#8217;s <span class="caps">IOU</span> she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the&nbsp;transaction.</p>
 <p>1] Create the <span class="caps">IOU</span> stating that John owes Lizzie 1&nbsp;orange.</p>
@@ -200,106 +205,106 @@
 <p>This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris&#8217; private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the&nbsp;photo. </p>
 <p>Another use for public-key cryptography arises if Chris were an employee in a bank, and the &#8220;What&#8221; contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer&#8217;s true identity and documenting the evidence that&#8217;s been collected to show that the bank knows who their customer really is. If the transaction included a new section called &#8220;Customer <span class="caps">ID</span>&#8221; (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind <span class="caps">KYC</span> on a&nbsp;blockchain. </p>
 <p>Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of &#8220;coins&#8221; will need to be controlled in order to maintain their value. In the example above, people can freely create &#8220;coins&#8221; and can also carry negative amounts of &#8220;coins&#8221;. This would result in the value of a &#8220;coin&#8221; plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable&nbsp;manner.</p>
-<p>Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&#8217;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in <a href="http://johnmathews.eu/articles/blockchain-networks.md">part 2</a>.</p>
+<p>Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&#8217;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in <a href="blog.johnmathews.eu/articles/blockchain-networks.md">part 2</a>.</p>
 
-        <div id="sub_req">
-            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="http://johnmathews.eu/pages/subscribe" >subscribe!</a>
-            <br>
-            <br>
-        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/blockchain-introduction.html&text=&via=johnmathews" target="_blank" ><img src="http://johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="http://johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/blockchain-introduction.html&title=Blockchains%20from%20the%20ground%20up%3A%20Part%C2%A01&summary=Using%20a%20scenario%20that%20begins%20with%20the%20exchange%20of%20apples%20for%20oranges%2C%20understand%20the%20essential%20concepts%20and%20advantages%20of%C2%A0blockchains.&source=http%3A//johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="http://johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="mailto:?subject=Blockchains%20from%20the%20ground%20up%3A%20Part%C2%A01&amp;body=http%3A//johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="http://johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-         </div>
-        
-         <div class="neighbors">
-             <ul>
-                     <li class="previous_article">
-                         <a href="http://johnmathews.eu/aeternity.html">
-                             Introduction to the Æternity blockchain&nbsp;project
-                         </a>
-                     </li>
-                 
-                     <li class="next_article">
-                         <a href="http://johnmathews.eu/blockchain-networks.html">
-                             Blockchains from the ground up: Part&nbsp;2
-                         </a>
-                     </li>
-            </ul>
-        </div>
-    
-        <div> 
-    <div class="comments">
-        <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_shortname = 'johnmathews';
-                var disqus_identifier = 'blockchain-introduction.html';
-                var disqus_url = 'http://johnmathews.eu/blockchain-introduction.html';
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-        <noscript>Please enable JavaScript to view the comments.</noscript>
-    </div>
-         
-    
+            <div id="sub_req">
+              </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="blog.johnmathews.eu/pages/subscribe" >subscribe!</a>
+              <br>
+              <br>
+                <a href="http://twitter.com/share?url=blog.johnmathews.eu/blockchain-introduction.html&text=&via=johnmathews" target="_blank" ><img src="blog.johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="http://www.facebook.com/sharer/sharer.php?u=blog.johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="blog.johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=blog.johnmathews.eu/blockchain-introduction.html&title=Blockchains%20from%20the%20ground%20up%3A%20Part%C2%A01&summary=Using%20a%20scenario%20that%20begins%20with%20the%20exchange%20of%20apples%20for%20oranges%2C%20understand%20the%20essential%20concepts%20and%20advantages%20of%C2%A0blockchains.&source=blog.johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="blog.johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="mailto:?subject=Blockchains%20from%20the%20ground%20up%3A%20Part%C2%A01&amp;body=blog.johnmathews.eu/blockchain-introduction.html" target="_blank"><img src="blog.johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+            </div>
+
+            <div class="neighbors">
+              <ul>
+                  <li class="previous_article">
+                    <a href="blog.johnmathews.eu/aeternity.html">
+                      Introduction to the Æternity blockchain&nbsp;project
+                    </a>
+                  </li>
+
+                  <li class="next_article">
+                    <a href="blog.johnmathews.eu/blockchain-networks.html">
+                      Blockchains from the ground up: Part&nbsp;2
+                    </a>
+                  </li>
+              </ul>
+            </div>
+
+            <div> 
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'johnmathews';
+      var disqus_identifier = 'blockchain-introduction.html';
+      var disqus_url = 'blog.johnmathews.eu/blockchain-introduction.html';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+  </div>
 
 <!--
-<div id="disqus_thread"></div>
-<script>
+  <div id="disqus_thread"></div>
+  <script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
-*/
+ */
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://johnmathews.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 -->                   
-        </div>
-    </div>    
+            </div>
+          </div>    
 
     <!-- Footer -->
     <div class="footer">
 
- <a   <a  class="active" href="http://johnmathews.eu/pages/subscribe.html">Subscribe</a>   
+        <a  
+        <a  class="active" href="blog.johnmathews.eu/pages/subscribe.html">Subscribe 
+
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu">Home</a> 
+      <a href="blog.johnmathews.eu">Home</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/archives.html">Archives</a> 
+      <a href="blog.johnmathews.eu/archives.html">Archives</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/tags.html">Tags</a>
+      <a href="blog.johnmathews.eu/tags.html">Tags</a>
 
     </div>
     <!-- /Footer -->
 
-    <!-- /Content --> 
+    <!-- /Content -->
 
     <!-- Stylesheets -->
-    <link async rel="stylesheet" href="http://johnmathews.eu/theme/css/all.min.css?c7b578ee">
+    <link async rel="stylesheet" href="blog.johnmathews.eu/theme/css/all.min.css?c7b578ee">
 
-    <script async src="http://johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
+    <script async src="blog.johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
 
     <!-- plot.ly js -->
     <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>

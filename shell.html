@@ -8,22 +8,22 @@
     <meta name="keywords" content="bash,profiling,shell,unix,zsh">
 
     <meta name="twitter:card" value="Summary_large_image">
-    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:domain" content="https://blog.johnmathews.eu">
     <meta name="twitter:title" content="A faster shell ">
     <meta name="twitter:description" content="zsh was loading significantly slower than bash, so I used profiling to see what was slowing things down">
     <meta name="twitter:creator" content="@johnmathews">
-    <meta name="twitter:image" content="http://johnmathews.eu/images/zsh_order_blind_profiling.jpg">
+    <meta name="twitter:image" content="blog.johnmathews.eu/images/zsh_order_blind_profiling.jpg">
 
 
     <meta property="og:title" content="A faster shell" />       
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://johnmathews.eu/shell.html" />
+    <meta property="og:url" content="blog.johnmathews.eu/shell.html" />
     <meta property="og:site_name" content="John Mathews' blog" />
-    <meta property="og:image" content="http://johnmathews.eu/images/zsh_order_blind_profiling.jpg" />
+    <meta property="og:image" content="blog.johnmathews.eu/images/zsh_order_blind_profiling.jpg" />
     <meta property="og:description" content="zsh was loading significantly slower than bash, so I used profiling to see what was slowing things down" />
     <meta property="fb:app_id" content="871943349626197" />
 
-    <link rel="icon" href="http://johnmathews.eu/favicon.png">
+    <link rel="icon" href="blog.johnmathews.eu/favicon.png">
 
     <title> A faster shell - John Mathews </title>
 
@@ -52,18 +52,23 @@
     <a name="top"></a>
 
     <!-- Header -->
-    <div class="header-container gradient">
+          <div class="header-container gradient">
 
  
     <!-- Static navbar -->
-    <div class="container" style="width:100%;float:left;display:block;">
+    <div class="container" style="width:100%; float:left; display:block; ">
       <div class="header-nav" >
         <div class="header-logo" >
-          <a class="pull-left hidden-xs" href="http://johnmathews.eu"><img class="mr20" src="http://johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <a class="pull-left hidden-xs" href="blog.johnmathews.eu">
+            <img class="mr20" src="blog.johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115">
+          </a>
           <div class="header-text">
-            <a class="pull-left" style='margin-left:10px;' href="http://johnmathews.eu"> Hello! I'm John </a>
+            <a class="pull-left" style='margin-left:10px;' href="blog.johnmathews.eu">
+              Hello! I'm John
+            </a>
             <div class="anon" style='text-align:right; padding-right:10px;' >
-              <a class="active" href="http://johnmathews.eu/pages/about.html">About</a>
+              <!-- <a class="active" href="blog.johnmathews.eu/pages/about.html">About</a> -->
+              <a class="active" href="http://www.johnmathews.eu">Clients</a>
             </div>
           </div>
         </div>
@@ -76,31 +81,31 @@
     </div>
 
     <!-- Content -->
-    
-    <div class="container content">
-        <div> 
-            <h1> A faster&nbsp;shell </h1> 
-        </div>
-        
- 
-        <div class="summary">
-            <p>zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&nbsp;down</p>
-        </div>
-        
-        <div class="article_image">
-            <img src="/images/zsh_order_blind_profiling.jpg" alt="what zsh spends its time doing when it starts" />
-        </div>
 
-        <div class="article_author"> 
-            By John Mathews </br>
-            Category: <a href="http://johnmathews.eu/category/tools.html">Tools</a>
-        </div>
-        
-        <div class="article_date"> 
-            Feb 14 2019 
-        </div>
-        
-        <p>Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a&nbsp;niggle.</p>
+          <div class="container content">
+            <div> 
+              <h1> A faster&nbsp;shell </h1> 
+            </div>
+
+ 
+              <div class="summary">
+                <p>zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&nbsp;down</p>
+              </div>
+
+              <div class="article_image">
+                <img src="/images/zsh_order_blind_profiling.jpg" alt="what zsh spends its time doing when it starts" />
+              </div>
+
+            <div class="article_author"> 
+              By John Mathews </br>
+              Category: <a href="blog.johnmathews.eu/category/tools.html">Tools</a>
+            </div>
+
+            <div class="article_date"> 
+              Feb 14 2019 
+            </div>
+
+            <p>Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a&nbsp;niggle.</p>
 <p>I wanted to find out which components were causing the most delay, so I used
 <code>time</code> to measure how long it took to launch a shell. Even though shells
 might appear to be part of the low level &#8216;guts&#8217; of a computer, each shell is
@@ -110,13 +115,13 @@ just an executable and can be treated as&nbsp;such.</p>
 </pre></div>
 
 
-<p><img alt="zsh profile" src="http://johnmathews.eu/images/zsh_startup_speed.jpg"></p>
+<p><img alt="zsh profile" src="blog.johnmathews.eu/images/zsh_startup_speed.jpg"></p>
 <p>This shows that it takes 0.84 seconds to start <code>zsh</code> - not terrible, but not&nbsp;great:</p>
 <p>You can compare the performance of different shells by replacing <code>$SHELL</code> with
 <code>zsh</code>, <code>bash</code>, <code>fish</code> etc.</p>
 <p>Here are the results if I used <code>BASH</code> instead of <code>zsh</code> - 9.3x faster! (but
 without useful tools and plugins):
-<img alt="bash profile" src="http://johnmathews.eu/images/bash_startup_speed.jpg"></p>
+<img alt="bash profile" src="blog.johnmathews.eu/images/bash_startup_speed.jpg"></p>
 <p>Now that I can measure how long it takes to start, it would be useful to know
 which proccesses are causing the greatest delays. This could be done with
 something like <code>zsh -xv</code> which enables verbose output and xtrace. This creates
@@ -124,107 +129,107 @@ a tonne of output, but doesnt inlcude timestamps. All I really want is
 a summary of how much time each subproccess required to run, i.e. an order blind&nbsp;profiler.</p>
 <p>Add <code>zmodload zsh/zprof</code> at the start of <code>.zshrc</code> and <code>zprof</code> at the very end.
 Now when I start <code>zsh</code> I see the&nbsp;following: </p>
-<p><img alt="zsh startup components" src="http://johnmathews.eu/images/zsh_order_blind_profiling.jpg"></p>
+<p><img alt="zsh startup components" src="blog.johnmathews.eu/images/zsh_order_blind_profiling.jpg"></p>
 <p>Next steps - make virtualenvwrapper run faster, or asyncronously, or
 not at&nbsp;all&#8230;</p>
 <p>Update:
 <code>virtualenvwrapper</code> is the biggest cause of slow loading. Using the <a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">lazy
 loadin</a> option decreased loading time by&nbsp;0.3s</p>
-<p><img alt="zsh profile" src="http://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"></p>
+<p><img alt="zsh profile" src="blog.johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"></p>
 
-        <div id="sub_req">
-            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="http://johnmathews.eu/pages/subscribe" >subscribe!</a>
-            <br>
-            <br>
-        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/shell.html&text=Measure%20how%20slow%20you%20shell%20is%20and%20find%20out%20which%20components%20are%20causing%20the%20biggest%20delays&via=johnmathews" target="_blank" ><img src="http://johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/shell.html" target="_blank"><img src="http://johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/shell.html&title=A%20faster%C2%A0shell&summary=zsh%20was%20loading%20significantly%20slower%20than%20bash%2C%20so%20I%20used%20profiling%20to%20see%20what%20was%20slowing%20things%C2%A0down&source=http%3A//johnmathews.eu/shell.html" target="_blank"><img src="http://johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="mailto:?subject=A%20faster%C2%A0shell&amp;body=http%3A//johnmathews.eu/shell.html" target="_blank"><img src="http://johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-         </div>
-        
-         <div class="neighbors">
-             <ul>
-                     <li class="previous_article">
-                         <a href="http://johnmathews.eu/rys-git-tutorial.html">
-                             Ry&#8217;s Git&nbsp;Tutorial
-                         </a>
-                     </li>
-                 
-            </ul>
-        </div>
-    
-        <div> 
-    <div class="comments">
-        <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_shortname = 'johnmathews';
-                var disqus_identifier = 'shell.html';
-                var disqus_url = 'http://johnmathews.eu/shell.html';
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-        <noscript>Please enable JavaScript to view the comments.</noscript>
-    </div>
-         
-    
+            <div id="sub_req">
+              </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="blog.johnmathews.eu/pages/subscribe" >subscribe!</a>
+              <br>
+              <br>
+                <a href="http://twitter.com/share?url=blog.johnmathews.eu/shell.html&text=Measure%20how%20slow%20you%20shell%20is%20and%20find%20out%20which%20components%20are%20causing%20the%20biggest%20delays&via=johnmathews" target="_blank" ><img src="blog.johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="http://www.facebook.com/sharer/sharer.php?u=blog.johnmathews.eu/shell.html" target="_blank"><img src="blog.johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=blog.johnmathews.eu/shell.html&title=A%20faster%C2%A0shell&summary=zsh%20was%20loading%20significantly%20slower%20than%20bash%2C%20so%20I%20used%20profiling%20to%20see%20what%20was%20slowing%20things%C2%A0down&source=blog.johnmathews.eu/shell.html" target="_blank"><img src="blog.johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="mailto:?subject=A%20faster%C2%A0shell&amp;body=blog.johnmathews.eu/shell.html" target="_blank"><img src="blog.johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+            </div>
+
+            <div class="neighbors">
+              <ul>
+                  <li class="previous_article">
+                    <a href="blog.johnmathews.eu/rys-git-tutorial.html">
+                      Ry&#8217;s Git&nbsp;Tutorial
+                    </a>
+                  </li>
+
+              </ul>
+            </div>
+
+            <div> 
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'johnmathews';
+      var disqus_identifier = 'shell.html';
+      var disqus_url = 'blog.johnmathews.eu/shell.html';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+  </div>
 
 <!--
-<div id="disqus_thread"></div>
-<script>
+  <div id="disqus_thread"></div>
+  <script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
-*/
+ */
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://johnmathews.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 -->                   
-        </div>
-    </div>    
+            </div>
+          </div>    
 
     <!-- Footer -->
     <div class="footer">
 
- <a   <a  class="active" href="http://johnmathews.eu/pages/subscribe.html">Subscribe</a>   
+        <a  
+        <a  class="active" href="blog.johnmathews.eu/pages/subscribe.html">Subscribe 
+
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu">Home</a> 
+      <a href="blog.johnmathews.eu">Home</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/archives.html">Archives</a> 
+      <a href="blog.johnmathews.eu/archives.html">Archives</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/tags.html">Tags</a>
+      <a href="blog.johnmathews.eu/tags.html">Tags</a>
 
     </div>
     <!-- /Footer -->
 
-    <!-- /Content --> 
+    <!-- /Content -->
 
     <!-- Stylesheets -->
-    <link async rel="stylesheet" href="http://johnmathews.eu/theme/css/all.min.css?c7b578ee">
+    <link async rel="stylesheet" href="blog.johnmathews.eu/theme/css/all.min.css?c7b578ee">
 
-    <script async src="http://johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
+    <script async src="blog.johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
 
     <!-- plot.ly js -->
     <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>

@@ -8,22 +8,22 @@
     <meta name="keywords" content="AppleScript,CoffeeScript,JavaScript,Time Until,Übersicht,Widgets">
 
     <meta name="twitter:card" value="Summary">
-    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:domain" content="https://blog.johnmathews.eu">
     <meta name="twitter:title" content="Übersicht widget: Time Until ">
     <meta name="twitter:description" content="In a previous post I described how I was introduced to CoffeeScript via Übersicht, the desktop widget app for OS X, and eventually published the “Time Since” widget. Seeing a few people download...">
     <meta name="twitter:creator" content="@johnmathews">
-    <meta name="twitter:image" content="http://johnmathews.eu/images/logo_big square.jpeg">
+    <meta name="twitter:image" content="blog.johnmathews.eu/images/logo_big square.jpeg">
 
 
     <meta property="og:title" content="Übersicht widget: Time Until" />       
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://johnmathews.eu/time-until.html" />
+    <meta property="og:url" content="blog.johnmathews.eu/time-until.html" />
     <meta property="og:site_name" content="John Mathews' blog" />
-    <meta property="og:image" content="http://johnmathews.eu/images/logo_big square.jpeg" />
+    <meta property="og:image" content="blog.johnmathews.eu/images/logo_big square.jpeg" />
     <meta property="og:description" content="In a previous post I described how I was introduced to CoffeeScript via Übersicht, the desktop widget app for OS X, and eventually published the “Time Since” widget. Seeing a few people download..." />
     <meta property="fb:app_id" content="871943349626197" />
 
-    <link rel="icon" href="http://johnmathews.eu/favicon.png">
+    <link rel="icon" href="blog.johnmathews.eu/favicon.png">
 
     <title> Übersicht widget: Time Until - John Mathews </title>
 
@@ -52,18 +52,23 @@
     <a name="top"></a>
 
     <!-- Header -->
-    <div class="header-container gradient">
+          <div class="header-container gradient">
 
  
     <!-- Static navbar -->
-    <div class="container" style="width:100%;float:left;display:block;">
+    <div class="container" style="width:100%; float:left; display:block; ">
       <div class="header-nav" >
         <div class="header-logo" >
-          <a class="pull-left hidden-xs" href="http://johnmathews.eu"><img class="mr20" src="http://johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <a class="pull-left hidden-xs" href="blog.johnmathews.eu">
+            <img class="mr20" src="blog.johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115">
+          </a>
           <div class="header-text">
-            <a class="pull-left" style='margin-left:10px;' href="http://johnmathews.eu"> Hello! I'm John </a>
+            <a class="pull-left" style='margin-left:10px;' href="blog.johnmathews.eu">
+              Hello! I'm John
+            </a>
             <div class="anon" style='text-align:right; padding-right:10px;' >
-              <a class="active" href="http://johnmathews.eu/pages/about.html">About</a>
+              <!-- <a class="active" href="blog.johnmathews.eu/pages/about.html">About</a> -->
+              <a class="active" href="http://www.johnmathews.eu">Clients</a>
             </div>
           </div>
         </div>
@@ -76,25 +81,25 @@
     </div>
 
     <!-- Content -->
-    
-    <div class="container content">
-        <div> 
-            <h1> Übersicht widget: Time&nbsp;Until </h1> 
-        </div>
-        
- 
-        
 
-        <div class="article_author"> 
-            By John Mathews </br>
-            Category: <a href="http://johnmathews.eu/category/front-end.html">Front-end</a>
-        </div>
-        
-        <div class="article_date"> 
-            Aug 07 2016 
-        </div>
-        
-        <p>In a <a href="http://johnmathews.eu/articles/time-since.md">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
+          <div class="container content">
+            <div> 
+              <h1> Übersicht widget: Time&nbsp;Until </h1> 
+            </div>
+
+ 
+
+
+            <div class="article_author"> 
+              By John Mathews </br>
+              Category: <a href="blog.johnmathews.eu/category/front-end.html">Front-end</a>
+            </div>
+
+            <div class="article_date"> 
+              Aug 07 2016 
+            </div>
+
+            <p>In a <a href="blog.johnmathews.eu/articles/time-since.md">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
 <p>Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a pragmatic engineer, it seemed clear to me what the next widget should do: If my first widget calculated the time since an event, the next should calculate the time until an event. I set out to create the companion to &#8220;Time Since&#8221; and
 improve upon the underlying&nbsp;code.</p>
 <p>My first code design choice was to cut out the use of an Apple Script and calculated everything in one CoffeeScript file. It would be more efficient and easier to&nbsp;read.</p>
@@ -119,99 +124,99 @@ the months between the 2 dates (feature 1), and it contains a function to plura
 <p>The two arrays are combined in the correct order by looping through the index of the longer array and appending each term to a final array. The final array is the&nbsp;output.</p>
 <p><em><span class="quo">&#8216;</span><a href="http://tracesof.net/uebersicht-widgets/#time_until">Time Until</a>&#8217;</em> can be downloaded from the <a href="http://tracesof.net/uebersicht/">Übersicht</a> <a href="http://tracesof.net/uebersicht-widgets/">widgets gallery</a>. I think another useful feature would be an option to specify the output only in terms of a chosen amount, such as weeks or days. Maybe I&#8217;ll do that in the&nbsp;future.</p>
 
-        <div id="sub_req">
-            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="http://johnmathews.eu/pages/subscribe" >subscribe!</a>
-            <br>
-            <br>
-        <a href="http://twitter.com/share?url=http%3A//johnmathews.eu/time-until.html&text= &via=johnmathews" target="_blank" ><img src="http://johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//johnmathews.eu/time-until.html" target="_blank"><img src="http://johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//johnmathews.eu/time-until.html&title=%C3%9Cbersicht%20widget%3A%20Time%C2%A0Until&summary=&source=http%3A//johnmathews.eu/time-until.html" target="_blank"><img src="http://johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-        &nbsp; &nbsp;
-        <a href="mailto:?subject=%C3%9Cbersicht%20widget%3A%20Time%C2%A0Until&amp;body=http%3A//johnmathews.eu/time-until.html" target="_blank"><img src="http://johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
-         </div>
-        
-         <div class="neighbors">
-             <ul>
-                     <li class="previous_article">
-                         <a href="http://johnmathews.eu/time-since.html">
-                             Übersicht widget: Time&nbsp;Since
-                         </a>
-                     </li>
-                 
-            </ul>
-        </div>
-    
-        <div> 
-    <div class="comments">
-        <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_shortname = 'johnmathews';
-                var disqus_identifier = 'time-until.html';
-                var disqus_url = 'http://johnmathews.eu/time-until.html';
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-        <noscript>Please enable JavaScript to view the comments.</noscript>
-    </div>
-         
-    
+            <div id="sub_req">
+              </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="blog.johnmathews.eu/pages/subscribe" >subscribe!</a>
+              <br>
+              <br>
+                <a href="http://twitter.com/share?url=blog.johnmathews.eu/time-until.html&text= &via=johnmathews" target="_blank" ><img src="blog.johnmathews.eu/images/twitter_logo.png" alt="Twitter" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="http://www.facebook.com/sharer/sharer.php?u=blog.johnmathews.eu/time-until.html" target="_blank"><img src="blog.johnmathews.eu/images/facebook_logo.png" alt="Facebook" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=blog.johnmathews.eu/time-until.html&title=%C3%9Cbersicht%20widget%3A%20Time%C2%A0Until&summary=&source=blog.johnmathews.eu/time-until.html" target="_blank"><img src="blog.johnmathews.eu/images/linkedin_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+                &nbsp; &nbsp;
+                <a href="mailto:?subject=%C3%9Cbersicht%20widget%3A%20Time%C2%A0Until&amp;body=blog.johnmathews.eu/time-until.html" target="_blank"><img src="blog.johnmathews.eu/images/email_logo.png" alt="Email" style="margin-bottom:0px;margin-top:10px;width:40px;height:40px;display:inline-block"></a>
+            </div>
+
+            <div class="neighbors">
+              <ul>
+                  <li class="previous_article">
+                    <a href="blog.johnmathews.eu/time-since.html">
+                      Übersicht widget: Time&nbsp;Since
+                    </a>
+                  </li>
+
+              </ul>
+            </div>
+
+            <div> 
+  <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'johnmathews';
+      var disqus_identifier = 'time-until.html';
+      var disqus_url = 'blog.johnmathews.eu/time-until.html';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+  </div>
 
 <!--
-<div id="disqus_thread"></div>
-<script>
+  <div id="disqus_thread"></div>
+  <script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
-*/
+ */
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://johnmathews.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 -->                   
-        </div>
-    </div>    
+            </div>
+          </div>    
 
     <!-- Footer -->
     <div class="footer">
 
- <a   <a  class="active" href="http://johnmathews.eu/pages/subscribe.html">Subscribe</a>   
+        <a  
+        <a  class="active" href="blog.johnmathews.eu/pages/subscribe.html">Subscribe 
+
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu">Home</a> 
+      <a href="blog.johnmathews.eu">Home</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/archives.html">Archives</a> 
+      <a href="blog.johnmathews.eu/archives.html">Archives</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/tags.html">Tags</a>
+      <a href="blog.johnmathews.eu/tags.html">Tags</a>
 
     </div>
     <!-- /Footer -->
 
-    <!-- /Content --> 
+    <!-- /Content -->
 
     <!-- Stylesheets -->
-    <link async rel="stylesheet" href="http://johnmathews.eu/theme/css/all.min.css?c7b578ee">
+    <link async rel="stylesheet" href="blog.johnmathews.eu/theme/css/all.min.css?c7b578ee">
 
-    <script async src="http://johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
+    <script async src="blog.johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
 
     <!-- plot.ly js -->
     <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>

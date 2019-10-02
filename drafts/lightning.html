@@ -8,22 +8,22 @@
     <meta name="keywords" content="Bitcoin,Finance,Scaling">
 
     <meta name="twitter:card" value="Summary_large_image">
-    <meta name="twitter:domain" content="http://johnmathews.eu">
+    <meta name="twitter:domain" content="https://blog.johnmathews.eu">
     <meta name="twitter:title" content="The Bitcoin Lightning Network ">
     <meta name="twitter:description" content="The lightning network is a protocol that operates on top of the Bitcoin network. It allows instant transactions between participants and is the leading solution to current scalability problems.">
     <meta name="twitter:creator" content="@johnmathews">
-    <meta name="twitter:image" content="http://johnmathews.eu/images/lightningTestnet.jpg">
+    <meta name="twitter:image" content="blog.johnmathews.eu/images/lightningTestnet.jpg">
 
 
     <meta property="og:title" content="The Bitcoin Lightning Network" />       
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://johnmathews.eu/drafts/lightning.html" />
+    <meta property="og:url" content="blog.johnmathews.eu/drafts/lightning.html" />
     <meta property="og:site_name" content="John Mathews' blog" />
-    <meta property="og:image" content="http://johnmathews.eu/images/lightningTestnet.jpg" />
+    <meta property="og:image" content="blog.johnmathews.eu/images/lightningTestnet.jpg" />
     <meta property="og:description" content="The lightning network is a protocol that operates on top of the Bitcoin network. It allows instant transactions between participants and is the leading solution to current scalability problems." />
     <meta property="fb:app_id" content="871943349626197" />
 
-    <link rel="icon" href="http://johnmathews.eu/favicon.png">
+    <link rel="icon" href="blog.johnmathews.eu/favicon.png">
 
     <title> The Bitcoin Lightning Network - John Mathews </title>
 
@@ -52,18 +52,23 @@
     <a name="top"></a>
 
     <!-- Header -->
-    <div class="header-container gradient">
+          <div class="header-container gradient">
 
  
     <!-- Static navbar -->
-    <div class="container" style="width:100%;float:left;display:block;">
+    <div class="container" style="width:100%; float:left; display:block; ">
       <div class="header-nav" >
         <div class="header-logo" >
-          <a class="pull-left hidden-xs" href="http://johnmathews.eu"><img class="mr20" src="http://johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115"> </a>
+          <a class="pull-left hidden-xs" href="blog.johnmathews.eu">
+            <img class="mr20" src="blog.johnmathews.eu/images/logo.jpeg" alt="John Mathews" height="115" width="115">
+          </a>
           <div class="header-text">
-            <a class="pull-left" style='margin-left:10px;' href="http://johnmathews.eu"> Hello! I'm John </a>
+            <a class="pull-left" style='margin-left:10px;' href="blog.johnmathews.eu">
+              Hello! I'm John
+            </a>
             <div class="anon" style='text-align:right; padding-right:10px;' >
-              <a class="active" href="http://johnmathews.eu/pages/about.html">About</a>
+              <!-- <a class="active" href="blog.johnmathews.eu/pages/about.html">About</a> -->
+              <a class="active" href="http://www.johnmathews.eu">Clients</a>
             </div>
           </div>
         </div>
@@ -76,31 +81,31 @@
     </div>
 
     <!-- Content -->
-    
-    <div class="container content">
-        <div> 
-            <h1> The Bitcoin Lightning&nbsp;Network </h1> 
-        </div>
-        
- 
-        <div class="summary">
-            <p>The lightning network is a protocol that operates on top of the Bitcoin network. It allows instant transactions between participants and is the leading solution to current scalability&nbsp;problems.</p>
-        </div>
-        
-        <div class="article_image">
-            <img src="/images/lightningTestnet.jpg" alt="lightning network on bitcoin testate" />
-        </div>
 
-        <div class="article_author"> 
-            By John Mathews </br>
-            Category: <a href="http://johnmathews.eu/category/disintermediation.html">Disintermediation</a>
-        </div>
-        
-        <div class="article_date"> 
-            Apr 12 2018 
-        </div>
-        
-        <p>This post is based on the excellent seminar by Joseph Poon and Thaddeus Dryja &#8220;Scaling Bitcoin to Billions of Transactions Per Day&#8221; which was given at the San Francisco bitcoin developers conference in early 2015. You can see the seminar <a href="https://youtu.be/8zVzw912wPo">here</a>.</p>
+          <div class="container content">
+            <div> 
+              <h1> The Bitcoin Lightning&nbsp;Network </h1> 
+            </div>
+
+ 
+              <div class="summary">
+                <p>The lightning network is a protocol that operates on top of the Bitcoin network. It allows instant transactions between participants and is the leading solution to current scalability&nbsp;problems.</p>
+              </div>
+
+              <div class="article_image">
+                <img src="/images/lightningTestnet.jpg" alt="lightning network on bitcoin testate" />
+              </div>
+
+            <div class="article_author"> 
+              By John Mathews </br>
+              Category: <a href="blog.johnmathews.eu/category/disintermediation.html">Disintermediation</a>
+            </div>
+
+            <div class="article_date"> 
+              Apr 12 2018 
+            </div>
+
+            <p>This post is based on the excellent seminar by Joseph Poon and Thaddeus Dryja &#8220;Scaling Bitcoin to Billions of Transactions Per Day&#8221; which was given at the San Francisco bitcoin developers conference in early 2015. You can see the seminar <a href="https://youtu.be/8zVzw912wPo">here</a>.</p>
 <h2>The&nbsp;Problem</h2>
 <p>Bitcoin doesn&#8217;t scale well enough to facilitate the rate of transactions necessary for it to become a medium of exchange in everyday life. This is&nbsp;because</p>
 <ol>
@@ -145,71 +150,73 @@
 <p>Alice can either sign it immediately and keep it, or wait to sign it herself (keeping it&nbsp;half-signed).</p>
 <p>Once Alice has the refund signature she knows its safe to send her <span class="caps">BTC</span> to the multisig address she and Bob just&nbsp;created. </p>
 
-        <div id="sub_req">
-            </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="http://johnmathews.eu/pages/subscribe" >subscribe!</a>
-            <br>
-            <br>
-         </div>
-        
-         <div class="neighbors">
-             <ul>
-                 
-            </ul>
-        </div>
-    
-        <div> 
+            <div id="sub_req">
+              </br> Thanks for reading! If you'd like to know when I publish something new, please <a href="blog.johnmathews.eu/pages/subscribe" >subscribe!</a>
+              <br>
+              <br>
+            </div>
+
+            <div class="neighbors">
+              <ul>
+
+              </ul>
+            </div>
+
+            <div> 
 
 <!--
-<div id="disqus_thread"></div>
-<script>
+  <div id="disqus_thread"></div>
+  <script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 /*
 var disqus_config = function () {
 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
-*/
+ */
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://johnmathews.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 -->                   
-        </div>
-    </div>    
+            </div>
+          </div>    
 
     <!-- Footer -->
     <div class="footer">
 
- <a   <a  class="active" href="http://johnmathews.eu/pages/subscribe.html">Subscribe</a>   
+        <a  
+        <a  class="active" href="blog.johnmathews.eu/pages/subscribe.html">Subscribe 
+
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu">Home</a> 
+      <a href="blog.johnmathews.eu">Home</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/archives.html">Archives</a> 
+      <a href="blog.johnmathews.eu/archives.html">Archives</a>
       <span style="display:inline-block; width: 2%;"></span>
       |
       <span style="display:inline-block; width: 2%;"></span>
-      <a href="http://johnmathews.eu/tags.html">Tags</a>
+      <a href="blog.johnmathews.eu/tags.html">Tags</a>
 
     </div>
     <!-- /Footer -->
 
-    <!-- /Content --> 
+    <!-- /Content -->
 
     <!-- Stylesheets -->
-    <link async rel="stylesheet" href="http://johnmathews.eu/theme/css/all.min.css?c7b578ee">
+    <link async rel="stylesheet" href="blog.johnmathews.eu/theme/css/all.min.css?c7b578ee">
 
-    <script async src="http://johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
+    <script async src="blog.johnmathews.eu/theme/js/packed.js?4dad2a2b"></script>
 
     <!-- plot.ly js -->
     <script async src="https://cdn.plot.ly/plotly-latest.min.js"></script>
