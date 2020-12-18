@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - bash</title><link href="/" rel="alternate"></link><link href="feeds/bash.tag.atom.xml" rel="self"></link><id>/</id><updated>2019-02-14T11:32:00+01:00</updated><entry><title>A faster shell</title><link href="shell.html" rel="alternate"></link><published>2019-02-14T11:32:00+01:00</published><updated>2019-02-14T11:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:None,2019-02-14:shell.html</id><summary type="html">&lt;p&gt;zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&amp;nbsp;down&lt;/p&gt;</summary><content type="html">&lt;p&gt;Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a&amp;nbsp;niggle.&lt;/p&gt;
+&lt;p&gt;I wanted to find out which components were causing the most delay, so I used
+&lt;code&gt;time&lt;/code&gt; to measure how long it took to launch a shell. Even though shells
+might appear to be part of the low level &amp;#8216;guts&amp;#8217; of a computer, each shell is
+just an executable and can be treated as&amp;nbsp;such.&lt;/p&gt;
+&lt;p&gt;To measure the startup speed of your shell,&amp;nbsp;do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="k"&gt;$(&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; /usr/bin/time &lt;span class="nv"&gt;$SHELL&lt;/span&gt; -i -c exit&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="zsh profile" src="images/zsh_startup_speed.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;This shows that it takes 0.84 seconds to start &lt;code&gt;zsh&lt;/code&gt; - not terrible, but not&amp;nbsp;great:&lt;/p&gt;
+&lt;p&gt;You can compare the performance of different shells by replacing &lt;code&gt;$SHELL&lt;/code&gt; with
+&lt;code&gt;zsh&lt;/code&gt;, &lt;code&gt;bash&lt;/code&gt;, &lt;code&gt;fish&lt;/code&gt; etc.&lt;/p&gt;
+&lt;p&gt;Here are the results if I used &lt;code&gt;BASH&lt;/code&gt; instead of &lt;code&gt;zsh&lt;/code&gt; - 9.3x faster! (but
+without useful tools and plugins):
+&lt;img alt="bash profile" src="images/bash_startup_speed.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Now that I can measure how long it takes to start, it would be useful to know
+which proccesses are causing the greatest delays. This could be done with
+something like &lt;code&gt;zsh -xv&lt;/code&gt; which enables verbose output and xtrace. This creates
+a tonne of output, but doesnt inlcude timestamps. All I really want is
+a summary of how much time each subproccess required to run, i.e. an order blind&amp;nbsp;profiler.&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;zmodload zsh/zprof&lt;/code&gt; at the start of &lt;code&gt;.zshrc&lt;/code&gt; and &lt;code&gt;zprof&lt;/code&gt; at the very end.
+Now when I start &lt;code&gt;zsh&lt;/code&gt; I see the&amp;nbsp;following:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zsh startup components" src="images/zsh_order_blind_profiling.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Next steps - make virtualenvwrapper run faster, or asyncronously, or
+not at&amp;nbsp;all&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Update:
+&lt;code&gt;virtualenvwrapper&lt;/code&gt; is the biggest cause of slow loading. Using the &lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html"&gt;lazy
+loadin&lt;/a&gt; option decreased loading time by&amp;nbsp;0.3s&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zsh profile" src="images/zsh_startup_speed_lazy_load.jpg"&gt;&lt;/p&gt;</content><category term="Tools"></category><category term="shell"></category><category term="unix"></category><category term="zsh"></category><category term="bash"></category><category term="profiling"></category></entry></feed>

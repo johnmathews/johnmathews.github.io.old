@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - startups</title><link href="/" rel="alternate"></link><link href="feeds/startups.tag.atom.xml" rel="self"></link><id>/</id><updated>2020-12-08T12:59:00+01:00</updated><entry><title>Product-Led Growth</title><link href="product-led-growth.html" rel="alternate"></link><published>2020-12-08T12:59:00+01:00</published><updated>2020-12-08T12:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:None,2020-12-08:product-led-growth.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Product-Led Growth&amp;#8221; by Wes&amp;nbsp;Bush&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Part 1: Design your&amp;nbsp;strategy&lt;/h1&gt;
+&lt;h2&gt;Chapter 1: Why is product-led growth of rising&amp;nbsp;importance?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Product-Led Growth is a go-to-market (&lt;span class="caps"&gt;GTM&lt;/span&gt;) strategy that relies on using
+   your product as the main vehicle to acquire, activate and retain&amp;nbsp;customers.&lt;/li&gt;
+&lt;li&gt;Product-Led Growth (&lt;span class="caps"&gt;PLG&lt;/span&gt;) means that every team influences the product:&lt;ul&gt;
+&lt;li&gt;Marketing - how can our products generate a demand&amp;nbsp;fly-wheel?&lt;/li&gt;
+&lt;li&gt;Sales - how can we use the product to qualify our prospects for&amp;nbsp;us?&lt;/li&gt;
+&lt;li&gt;Customer Success - how can we create a product that helps customers become
+  successful beyond our&amp;nbsp;dreams?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;By having every team focussed on the product, you create a culture that is
+   built around enduring customer&amp;nbsp;value&lt;/li&gt;
+&lt;li&gt;By leading with the product throughout the org, &lt;span class="caps"&gt;PL&lt;/span&gt; companies get&lt;ul&gt;
+&lt;li&gt;shorter sales&amp;nbsp;cycles&lt;/li&gt;
+&lt;li&gt;lower Customer Acquisition Costs&amp;nbsp;(CACs)&lt;/li&gt;
+&lt;li&gt;higher Revenue Per Employee (&lt;span class="caps"&gt;RPE&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy is an action plan that specifies how a company will reach
+   target customers and achieve a competitive&amp;nbsp;advantage&lt;/li&gt;
+&lt;li&gt;In order to select a &lt;span class="caps"&gt;GTM&lt;/span&gt;, you first need to understand:&lt;ul&gt;
+&lt;li&gt;market&amp;nbsp;conditions&lt;/li&gt;
+&lt;li&gt;competitive&amp;nbsp;positioning&lt;/li&gt;
+&lt;li&gt;ideal&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;product&amp;nbsp;offering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Knowing these elements will help you choose the correct &lt;span class="caps"&gt;GTM&lt;/span&gt; that will
+   acquire, retain and grow you customer base in the most capital-efficient&amp;nbsp;way &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Sales-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
+&lt;p&gt;Profit Centers: Sales, Marketing, Customer&amp;nbsp;Success&lt;/p&gt;
+&lt;p&gt;Cost Centers: Engineering,&amp;nbsp;Product&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Annual Contract Value (&lt;span class="caps"&gt;ACV&lt;/span&gt;) can be very&amp;nbsp;high&lt;/li&gt;
+&lt;li&gt;Enterprise first solutions that are very complex and therefore need a
+high-touch sales&amp;nbsp;model&lt;/li&gt;
+&lt;li&gt;If the Total Addressable Market (&lt;span class="caps"&gt;TAM&lt;/span&gt;) is very small, because your market
+is super niche, you can quite easily talk to almost all market
+participants. (&lt;span class="caps"&gt;PLG&lt;/span&gt; is built for large&amp;nbsp;TAMs)&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s great for new categories of product where education is required,
+because you need to change how people approach a problem. This takes time
+and requires education.
+This is turn requires that you understand your customers pain points,
+objections, core problems. If you jump to quickly a &lt;span class="caps"&gt;PLG&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy then
+you risk a high church rate because you haven&amp;#8217;t understood or educated
+your customers well&amp;nbsp;enough.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Disadvantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sales cycles are very&amp;nbsp;long&lt;/li&gt;
+&lt;li&gt;The Life Time Value (&lt;span class="caps"&gt;LTV&lt;/span&gt;) must be high enough to recoup the investment in
+  &lt;span class="caps"&gt;CAC&lt;/span&gt;. This often requires charging the customer a premium. This premium
+  price isn&amp;#8217;t because the product is amazing, or more valuable to the
+  customer, but because the customer acquisition model is more&amp;nbsp;expensive.&lt;/li&gt;
+&lt;li&gt;If you use a Sales-Led &lt;span class="caps"&gt;GTM&lt;/span&gt;, you need to watch out for competitors who can
+  sell more efficiently, or have a more efficient Customer Acquisition
+  Model. They can steal your market share by offering the same product with
+  at a lower&amp;nbsp;price.&lt;/li&gt;
+&lt;li&gt;Customer Acquisition methods are super leaky. Most marketing-qualified leads (MQLs) never result in a closed deal, this is partly because:&lt;ul&gt;
+&lt;li&gt;it encourages markets to gate content in order to hit their &lt;span class="caps"&gt;MQL&lt;/span&gt;&amp;nbsp;goals    &lt;/li&gt;
+&lt;li&gt;it focusses on content consumption as a leading indicator of intent.
+  (but reading a white-paper or brochure doesn&amp;#8217;t mean im going to buy
+  the&amp;nbsp;thing).&lt;/li&gt;
+&lt;li&gt;the entire process rewards creating friction in the buying&amp;nbsp;process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Consequently, there is often a disconnect between marketing and&amp;nbsp;sales &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Product-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Switching from Sales-Led &lt;span class="caps"&gt;GTM&lt;/span&gt; to Product-Led &lt;span class="caps"&gt;GTM&lt;/span&gt; creates a defensive&amp;nbsp;moat &lt;/li&gt;
+&lt;li&gt;A product led marketing team asks &amp;#8220;How can we use the product to qualify our
+prospects for&amp;nbsp;us?&amp;#8221;&lt;/li&gt;
+&lt;li&gt;A product led customer success team asks &amp;#8220;How can we create a product that
+  helps customers be successful without our&amp;nbsp;help?&amp;#8221;&lt;/li&gt;
+&lt;li&gt;A product-led engineering team asks &amp;#8220;How can we create a product with a quick&amp;nbsp;time-to-value?&amp;#8221;&lt;/li&gt;
+&lt;li&gt;Growth is much faster, because:&lt;ul&gt;
+&lt;li&gt;you need fewer resources to&amp;nbsp;scale, &lt;/li&gt;
+&lt;li&gt;the top of the customer funnel is much&amp;nbsp;wider.&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;CAC&lt;/span&gt; is much&amp;nbsp;lower&lt;/li&gt;
+&lt;li&gt;Higher &lt;span class="caps"&gt;RPE&lt;/span&gt; (revenue per&amp;nbsp;employee)&lt;/li&gt;
+&lt;li&gt;User experience is&amp;nbsp;better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Chapter 2 - Free, Freemium or&amp;nbsp;Demo&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &lt;span class="caps"&gt;MOAT&lt;/span&gt; framework to pick the right &lt;span class="caps"&gt;GTM&lt;/span&gt;&amp;nbsp;strategy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;M&lt;/em&gt;&lt;/strong&gt;arket Strategy - Dominant? Disruptive?&amp;nbsp;Differentiated?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;O&lt;/strong&gt;cean Conditions - Blue or&amp;nbsp;Red?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;udience - Do you have a top-down or bottom-up marketing&amp;nbsp;strategy?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;ime to Value - How much time do you need for a customer to
+  experience the&amp;nbsp;value?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dominant - Do it better than the competition &lt;em&gt;and&lt;/em&gt; charge a lower&amp;nbsp;price&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is your &lt;span class="caps"&gt;TAM&lt;/span&gt; big&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;Does your product solve a specific job significantly better and at lower
+cost than anyone else on the&amp;nbsp;market?&lt;/li&gt;
+&lt;li&gt;Can the user realize significant ongoing value quickly with little or no&amp;nbsp;help?&lt;/li&gt;
+&lt;li&gt;Do you want to be the undisputed market&amp;nbsp;leader?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Differentiated - Pick and win a fight against an industry giant &lt;ul&gt;
+&lt;li&gt;Main line of defense against the giant is&amp;nbsp;specialization &lt;/li&gt;
+&lt;li&gt;Focus on an underserved&amp;nbsp;niche&lt;/li&gt;
+&lt;li&gt;Do a specific job better than the competition but charge significantly&amp;nbsp;more&lt;/li&gt;
+&lt;li&gt;This is not a one-size-fits-all&amp;nbsp;model.&lt;/li&gt;
+&lt;li&gt;Free trials and demos work well&amp;nbsp;here.&lt;/li&gt;
+&lt;li&gt;Because its specialized, combining freemium with quick time-to-value is&amp;nbsp;difficult&lt;/li&gt;
+&lt;li&gt;Main competitive advantage is how you solve your customers&amp;nbsp;problems&lt;/li&gt;
+&lt;li&gt;Does your market have underserved&amp;nbsp;customers?&lt;/li&gt;
+&lt;li&gt;Is the &lt;span class="caps"&gt;TAM&lt;/span&gt; big&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;is the &lt;span class="caps"&gt;ACV&lt;/span&gt; high&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;Could prospects experience a Magic Moment during a free&amp;nbsp;trial?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disruptive - Charge less for an inferior product (e.g. Canva, Google docs)&lt;ul&gt;
+&lt;li&gt;Build a simpler product that solves a specific pain point, and because
+  its simpler, its faster, you can charge less, and its more appropriate to
+  some over-served or priced-out&amp;nbsp;customers&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s a scaled-down&amp;nbsp;product&lt;/li&gt;
+&lt;li&gt;Costs must be&amp;nbsp;low&lt;/li&gt;
+&lt;li&gt;Product must be easy to&amp;nbsp;use&lt;/li&gt;
+&lt;li&gt;Is &lt;span class="caps"&gt;TAM&lt;/span&gt; large&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;Can on-boarding be completely&amp;nbsp;self-service?&lt;/li&gt;
+&lt;li&gt;Freemium model&amp;nbsp;thrives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Chapter 3 - Red-Ocean or Blue-Ocean&amp;nbsp;markets?&lt;/h2&gt;
+&lt;p&gt;Red-ocean companies try to outperform their rivals in order to grab a larger
+share of the existing market. As the market gets crowded, opportunity for
+profit and growth reduces. Products become commodities. Cut-throat competition
+turns the waters&amp;nbsp;red.&lt;/p&gt;
+&lt;p&gt;Blue-ocean companies access untapped market space and create demand. They have
+opportunity for highly profitable growth. Competition is irrelevant. Create and
+capture new&amp;nbsp;demand.&lt;/p&gt;
+&lt;p&gt;Some markets will be red-ocean, but a particular niche within it will be blue&amp;nbsp;ocean.&lt;/p&gt;
+&lt;p&gt;Blue Oceans require educating the customer to create the demand. This is
+high-touch, and often a &lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy isn&amp;#8217;t going to work. It needs to be
+sales-led in order to educate the customer enough. But if Time-To-Value (&lt;span class="caps"&gt;TTV&lt;/span&gt;)
+is short then &lt;span class="caps"&gt;PLG&lt;/span&gt; could be&amp;nbsp;great. &lt;/p&gt;
+&lt;p&gt;Red Oceans need big wide funnels in order to compete, and &lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategies
+work great. They&amp;#8217;re defensible, keep costs low and make sales cycles&amp;nbsp;short. &lt;/p&gt;
+&lt;h2&gt;Chapter 4 - Top-Down or Bottom-Up selling&amp;nbsp;strategy?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PLG&lt;/span&gt; works for&amp;nbsp;bottom-up.&lt;/li&gt;
+&lt;li&gt;High touch sales-led strategies work for Top-Down enterprise sales strategies, where the product is super complex and the sales cyccle is very&amp;nbsp;long.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Top-Down (Sales team is the growth&amp;nbsp;engine):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High &lt;span class="caps"&gt;ACV&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Additional&amp;nbsp;Services&lt;/li&gt;
+&lt;li&gt;Lower customer&amp;nbsp;churn&lt;/li&gt;
+&lt;li&gt;Poor revenue&amp;nbsp;distribution&lt;/li&gt;
+&lt;li&gt;High &lt;span class="caps"&gt;CAC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Long sales&amp;nbsp;cycles&lt;/li&gt;
+&lt;li&gt;Free Trial sometimes&amp;nbsp;works&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bottom-Up (Product is the growth&amp;nbsp;engine):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wider&amp;nbsp;top-of-funnel&lt;/li&gt;
+&lt;li&gt;Low &lt;span class="caps"&gt;CAC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Predictable sales&amp;nbsp;figures&lt;/li&gt;
+&lt;li&gt;Revenue&amp;nbsp;diversity&lt;/li&gt;
+&lt;li&gt;Scalable&amp;nbsp;fast&lt;/li&gt;
+&lt;li&gt;Small contracts&amp;nbsp;only&lt;/li&gt;
+&lt;li&gt;non-paying&amp;nbsp;customers&lt;/li&gt;
+&lt;li&gt;expertise&amp;nbsp;shortage&lt;/li&gt;
+&lt;li&gt;upfront investment as non-paying customers drain&amp;nbsp;resources&lt;/li&gt;
+&lt;li&gt;Freemium&lt;/li&gt;
+&lt;li&gt;Free-Trial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Chapter 5 -&amp;nbsp;Time-to-Value&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;How much time until you deliver on your promise to&amp;nbsp;prospects?&lt;/li&gt;
+&lt;li&gt;How much time until the product sells&amp;nbsp;itself?&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategies require fast&amp;nbsp;time-to-value.&lt;/li&gt;
+&lt;li&gt;Rank your uses across 2 dimensions and group into 4 quadrants. The
+   dimensions are Ability (low - high) and Motivation (low - high)&lt;ol&gt;
+&lt;li&gt;Low Motivation - Low Ability = Mission&amp;nbsp;Impossible&lt;/li&gt;
+&lt;li&gt;High Motivation - Low Ability =&amp;nbsp;Rookie&lt;/li&gt;
+&lt;li&gt;Low Motivation - High Ability =&amp;nbsp;Veteran&lt;/li&gt;
+&lt;li&gt;High Motivation - High Ability =&amp;nbsp;Spoiled&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Figure out your top two quadrants. Unless all your users are Spoiled, you
+   need to decrease&amp;nbsp;Time-To-Value.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How motivated are your&amp;nbsp;users?&lt;/li&gt;
+&lt;li&gt;Is your product easy for your target audience to&amp;nbsp;use?&lt;/li&gt;
+&lt;li&gt;Can users experience the core value (magic moment?) without&amp;nbsp;hand-holding?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Part 2 - Build Your&amp;nbsp;Foundation&lt;/h1&gt;
+&lt;h2&gt;Chapter 7 - Build a product-led&amp;nbsp;foundation&lt;/h2&gt;
+&lt;p&gt;A positive feedback loop:
+1. &lt;strong&gt;Understand&lt;/strong&gt; your value
+2. &lt;strong&gt;Communicate&lt;/strong&gt; it
+3. &lt;strong&gt;Deliver&lt;/strong&gt; on your promise
+4.&amp;nbsp;Repeat&lt;/p&gt;
+&lt;h2&gt;Chapter 8 - Understand your&amp;nbsp;value&lt;/h2&gt;
+&lt;p&gt;If you&amp;#8217;re selling live-chat software, you&amp;#8217;re not really selling live-chat
+software, you are selling a new and better way to acquire&amp;nbsp;customers. &lt;/p&gt;
+&lt;p&gt;You are selling the outcome, the result, the&amp;nbsp;why.&lt;/p&gt;
+&lt;p&gt;Pain makes us want to change so that we can avoid or prevent the pain&amp;nbsp;altogether. &lt;/p&gt;
+&lt;p&gt;Pain is product&amp;nbsp;agnostic.&lt;/p&gt;
+&lt;p&gt;There are three reasons why people buy a&amp;nbsp;product:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Functional Outcome - the core task that needs to get&amp;nbsp;done.&lt;/li&gt;
+&lt;li&gt;Emotional Outcome - how a customer wants to feel or avoid feeling as a
+result of the functional&amp;nbsp;outcome.&lt;/li&gt;
+&lt;li&gt;Social Outcome - how a customer wants to be perceived by others by using
+   your&amp;nbsp;product.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In every software, there are usage patterns that point towards to core outcomes
+that are most important to&amp;nbsp;customers.&lt;/p&gt;
+&lt;p&gt;One of the biggest differences between sales-led and product-led companies is
+that &lt;span class="caps"&gt;SL&lt;/span&gt; companies monitor usage patters to see if users are accomplishing
+meaningful outcomes. These outcomes are referred to as &lt;strong&gt;value-metrics&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A value-metric is the way you measure value exchange in your product&lt;/strong&gt;. They
+are the linchpin to successful execution of a product-led &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy because
+you are aligning your revenue model directly with your customer acquisition
+model. Because your value metrics play a vital role in how you price your
+product, set up your monitoring, and build your&amp;nbsp;team.&lt;/p&gt;
+&lt;p&gt;Value metrics could&amp;nbsp;be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for vimeo, number of videos uploaded by the&amp;nbsp;user.&lt;/li&gt;
+&lt;li&gt;for slack, number of messages sent by the&amp;nbsp;user&lt;/li&gt;
+&lt;li&gt;for paypal, amount of revenue generated by the user&amp;nbsp;(processed?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are &lt;strong&gt;functional&lt;/strong&gt; and &lt;strong&gt;outcome based&lt;/strong&gt; value metrics. Functional value
+metrics are &amp;#8220;per user&amp;#8221; or &amp;#8220;per 100 videos&amp;#8221;. Pricing scales around functions of
+usage. Outcome based value metrics charge based on the outcome, e.g. how many
+views a video received, or how much money a customer made when using your
+payment process&amp;nbsp;method.&lt;/p&gt;
+&lt;p&gt;Many SaaS companies rely on feature differentiation as a way to justify higher
+prices, but this produces higher&amp;nbsp;churn. &lt;/p&gt;
+&lt;p&gt;Value metrics outperform feature differentiation with upto 75% less churn&amp;#8230;
+Outcome based value metrics reduce church by an additional 40%.&amp;nbsp;Apparently. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A good value metric is easy for a customer to understand. They need to immediately understand what they&amp;#8217;re paying for and where they fit in your packing/pricing structure. If you&amp;#8217;re in an established market, it makes senses to look at what the competition&amp;nbsp;charges.&lt;/li&gt;
+&lt;li&gt;A good value metric is aligned with the value that the customer receives through the product. Consider the low-level components of your high-level outcome. E.g. what low level actions are necessary to get the end result?  Sending lots of messages? Meeting lots of people? Finding lots of&amp;nbsp;things?&lt;/li&gt;
+&lt;li&gt;A good value metric grows with your customers usage of the valuable outcome.
+   If customers get incredible value from the product, charge them more because
+   the product is worth it. Also, if they aren&amp;#8217;t getting much value from the
+   product, charge them&amp;nbsp;less.&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t do user based pricing if you want to get lots of users - its a conflict
+   of&amp;nbsp;interests.&lt;/li&gt;
+&lt;li&gt;If you&amp;#8217;re small, you can try different pricing strategies and iterate to&amp;nbsp;success.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ask&amp;nbsp;yourself:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What do my best customers&amp;nbsp;do?&lt;/li&gt;
+&lt;li&gt;What do my best customers not&amp;nbsp;do?&lt;/li&gt;
+&lt;li&gt;What features did my best customers try first when they were&amp;nbsp;on-boarding?&lt;/li&gt;
+&lt;li&gt;What are the similarities along my best customers that led to&amp;nbsp;success?&lt;/li&gt;
+&lt;li&gt;For churned customers, what were the main differences between them and the
+   best customers? Were they in the ideal audience? Why did they church? What
+   did they do or not do that good customers&amp;nbsp;didn&amp;#8217;t?&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Startups"></category><category term="marketing"></category><category term="startups"></category></entry><entry><title>Obviously Awesome</title><link href="obviously-awesome.html" rel="alternate"></link><published>2020-12-03T15:46:00+01:00</published><updated>2020-12-03T15:46:00+01:00</updated><author><name>John Mathews</name></author><id>tag:None,2020-12-03:obviously-awesome.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Obviously Awesome&amp;#8221; by April&amp;nbsp;Dunford&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Intro&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In order to do better marketing, understand your value and differentiators&amp;nbsp;better&lt;/li&gt;
+&lt;li&gt;Understand what makes a best-fit&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;Positioning is a fundamental input to every business tactic you&amp;nbsp;use&lt;/li&gt;
+&lt;li&gt;If you fail at positioning, you fail at marketing and&amp;nbsp;sales&lt;/li&gt;
+&lt;li&gt;Positioning is &amp;#8220;conext setting&amp;#8221; for&amp;nbsp;products&lt;/li&gt;
+&lt;li&gt;Customers need to be able to easily understand&lt;ol&gt;
+&lt;li&gt;What your product&amp;nbsp;does&lt;/li&gt;
+&lt;li&gt;Why it is&amp;nbsp;special&lt;/li&gt;
+&lt;li&gt;Why it matters to&amp;nbsp;them&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;If your prospects can&amp;#8217;t figure out what your product does quickly, they will invent a position for you. It might hide your key strengths or misunderstand your&amp;nbsp;value.&lt;/li&gt;
+&lt;li&gt;Find people to demo your product to, then ask them to describe it back to you. Do the same with existing customers. If they&amp;#8217;re not saying the same thing then you have a positioning&amp;nbsp;problem.&lt;/li&gt;
+&lt;li&gt;Products with strong positioning:&lt;ol&gt;
+&lt;li&gt;Find the best kind of&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;Make the value&amp;nbsp;obvious&lt;/li&gt;
+&lt;li&gt;Sell&amp;nbsp;quickly&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Part&amp;nbsp;1&lt;/h2&gt;
+&lt;h3&gt;Positioning as&amp;nbsp;context&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Without positioning to guide us, we don&amp;#8217;t know how to understnad a&amp;nbsp;product&lt;/li&gt;
+&lt;li&gt;Positioning lets us make assumptions about&lt;ol&gt;
+&lt;li&gt;who a product is&amp;nbsp;for&lt;/li&gt;
+&lt;li&gt;what its main features&amp;nbsp;are&lt;/li&gt;
+&lt;li&gt;how much it&amp;nbsp;costs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Without it we would be paralyzed by choice, and we wouldnt be able to make sense of all the products around&amp;nbsp;us. &lt;/li&gt;
+&lt;li&gt;The context and purpose of a product from the founders/engineers perspective are often different to those of the&amp;nbsp;prospect&lt;/li&gt;
+&lt;li&gt;Prodcuts can be positioned in multiple ways, and often the best positioning is not the default&amp;nbsp;positioning&lt;/li&gt;
+&lt;li&gt;Bad positioning makes it harder for prospects to figure out if your product is worth thinking&amp;nbsp;about.&lt;/li&gt;
+&lt;li&gt;Positioning requires considering:&lt;ol&gt;
+&lt;li&gt;Customers point of view - what problem/pain does it&amp;nbsp;solve&lt;/li&gt;
+&lt;li&gt;The ways your product is uniquely&amp;nbsp;different&lt;/li&gt;
+&lt;li&gt;The characteristics of a potential&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;The best market context to make your value uniquely&amp;nbsp;obvious&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Five (plus one) components of effective&amp;nbsp;positioning&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Alternatives - if you didnt exist, what would your customers use instead?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Its what your prospects would use to do the task if your product didnt exist. It could be excel, or pen and paper. It could be nothing, (in which case maybe you product doesnt solve a real pain&amp;nbsp;point.)&lt;/li&gt;
+&lt;li&gt;You probably know a lot more about your market, and problem, and alternative solutions, than your prospects do. (&amp;#8220;Doing nothing&amp;#8221; could be an opportunity, not a red&amp;nbsp;flag.)&lt;/li&gt;
+&lt;li&gt;Its important to understand what customers will compare your product with, because this is how they will define &amp;#8220;better&amp;#8221;. Is it &amp;#8220;easier&amp;#8221; than a pen and&amp;nbsp;paper?&lt;/li&gt;
+&lt;li&gt;Customers might never have purchased a solution like yours&amp;nbsp;before.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unique Attributes - What do you have that alternative do not?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Could be:&lt;ol&gt;
+&lt;li&gt;Delivery Model (online vs offline, installed on-site vs&amp;nbsp;not)&lt;/li&gt;
+&lt;li&gt;Business model (rental vs&amp;nbsp;purchase)&lt;/li&gt;
+&lt;li&gt;Specific expertise (data scientist with financial and back-end web dev&amp;nbsp;expertise)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Value (and quantifiable objective proof) - What value do the attributes enable for customers?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;If unique attributes are your secret sauce, the value is why someone might care about your secret&amp;nbsp;sauce&lt;/li&gt;
+&lt;li&gt;Fact based, provable, demonstrable, quantifiable, objective. 3rd party oppinions are&amp;nbsp;relevant. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target market characterists - Who cares a lot about that value?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Focus on customers who are most likely to purchase quickly, wont ask for discounts, will tell their friends about&amp;nbsp;you.&lt;/li&gt;
+&lt;li&gt;You should clearly identify who these are&amp;nbsp;and &lt;/li&gt;
+&lt;li&gt;Identidy what sets them apart from other groups of customers. why are they uniquely likely to buy from you when others wouldnt or would take longer to consider and make a&amp;nbsp;purchase&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Market Category - What context makes your value obvious to the ideal customer?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Declaring that your product exists in a certain market triggers a powerful set of&amp;nbsp;assumptions&lt;/li&gt;
+&lt;li&gt;make these assumptions help you, not hinder&amp;nbsp;you. &lt;/li&gt;
+&lt;li&gt;When presented with your product, customers will try to use what they already know to figure out what your product is all about and why its special. You want them to be able to do this really quickly and&amp;nbsp;easily. &lt;/li&gt;
+&lt;li&gt;Make these assumptions work for you, not against you. You won&amp;#8217;t have to list every feature, because most of them will be assumed by the context of the market&amp;nbsp;category. &lt;/li&gt;
+&lt;li&gt;Get it right, and sales efforts (copy) wont be wasted battling those assumptions, but can instead build off of them to show secret sauce and value more&amp;nbsp;obviously.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(Bonus) Relevant Trends - what trends make your product relevant right now?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Used carefully, trends can show prospoects why they should pay attention to your product right now. Increases&amp;nbsp;urgency.&lt;/li&gt;
+&lt;li&gt;It can increase urgency, excitement, coolness,&amp;nbsp;credibility&lt;/li&gt;
+&lt;li&gt;but the trend must be directly relevant, practically and objectively&amp;nbsp;applicable. &lt;/li&gt;
+&lt;li&gt;Blockchains, &lt;span class="caps"&gt;AI&lt;/span&gt;, &lt;span class="caps"&gt;ML&lt;/span&gt; are trends - they are relevant to multiple&amp;nbsp;markets. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these components is relevant to the&amp;nbsp;others&lt;/p&gt;</content><category term="Startups"></category><category term="marketing"></category><category term="positioning"></category><category term="startups"></category><category term="book"></category></entry></feed>

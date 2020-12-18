@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - Lightning</title><link href="/" rel="alternate"></link><link href="feeds/lightning.tag.atom.xml" rel="self"></link><id>/</id><updated>2019-01-24T12:57:00+01:00</updated><entry><title>Bitcoin Lightning</title><link href="bitcoin-lightning.html" rel="alternate"></link><published>2019-01-24T12:57:00+01:00</published><updated>2019-01-24T12:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:None,2019-01-24:bitcoin-lightning.html</id><summary type="html">&lt;p&gt;I set up a  node on the Bitcoin Lightning network and sent a payment of $0.005 which confirmed in a few&amp;nbsp;seconds.&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&amp;nbsp;Mastercard. &lt;/p&gt;
+&lt;p&gt;The most interesting solution to this problem is the &lt;a href="https://lightning.network/"&gt;Lightning protocol&lt;/a&gt; - a separate protocol that sits ontop of the Bitcoin protocol (a so-called &amp;#8216;Layer 2&amp;#8217; solution). Lightning uses hashed time locked contracts (HTLCs) to trustlessly and privately move transactions off-chain. This allows payments to be faster, cheaper and more frequent. It also has interesting implications for enhancing&amp;nbsp;privacy. &lt;/p&gt;
+&lt;p&gt;There are a lot of resources about what the Lightning network is, why it&amp;#8217;s neccesary and how it works. There are also several good guides available about how to set up and maintain a node. I used a Raspberry Pi with an external hdd. It took a few attempts, mostly because it&amp;#8217;s my first time working with an unix operating system and I tried to move a swap file to a disk that wasnt formmated as&amp;nbsp;ext4&amp;#8230; &lt;/p&gt;
+&lt;p&gt;Anyway, I&amp;#8217;ve opened and closed some channels, connected to peers, and made some transactions. I even bought some stickers using&amp;nbsp;Lightning!&lt;/p&gt;
+&lt;p&gt;You can find my node using these&amp;nbsp;details:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Alias: &lt;span class="s2"&gt;&amp;quot;johnmathews.eu&amp;quot;&lt;/span&gt;
+Public Key: &lt;span class="s2"&gt;&amp;quot;025469b50de125b4cd97457c0da67365519f0cd0f441c2ced0978fb6ae7802ae76&amp;quot;&lt;/span&gt;
+IP address: &lt;span class="m"&gt;85&lt;/span&gt;.145.183.145
+Port: &lt;span class="m"&gt;9735&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Some useful&amp;nbsp;resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://explorer.acinq.co/n/025469b50de125b4cd97457c0da67365519f0cd0f441c2ced0978fb6ae7802ae76"&gt;Lightning network&amp;nbsp;explorer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://1ml.com/node/025469b50de125b4cd97457c0da67365519f0cd0f441c2ced0978fb6ae7802ae76"&gt;Lightning node&amp;nbsp;information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://incoherency.co.uk/blog/stories/spelunking-ln.html"&gt;Interesting things to&amp;nbsp;do&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Disintermediation"></category><category term="Bitcoin"></category><category term="Lightning"></category><category term="Crypto"></category></entry></feed>

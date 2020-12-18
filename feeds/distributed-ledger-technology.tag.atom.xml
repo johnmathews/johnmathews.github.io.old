@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - Distributed Ledger Technology</title><link href="/" rel="alternate"></link><link href="feeds/distributed-ledger-technology.tag.atom.xml" rel="self"></link><id>/</id><updated>2017-07-08T13:52:00+02:00</updated><entry><title>Blockchains from the ground up: Part 2</title><link href="blockchain-networks.html" rel="alternate"></link><published>2017-07-08T13:52:00+02:00</published><updated>2017-07-08T13:52:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2017-07-08:blockchain-networks.html</id><summary type="html">&lt;p&gt;An overview of the essential features of a blockchain, using proof-of-work for&amp;nbsp;consensus&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Maintain an accurate list of transactions across a large group of users, without a central&amp;nbsp;authority&lt;/h2&gt;
+&lt;p&gt;This is part 2 of an introduction to the key features of a generalised blockchain. &lt;a href="blockchain-introduction.html"&gt;Part 1&lt;/a&gt; introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how a network of users can maintain the same (true) list of transactions and protect each other against&amp;nbsp;fraud. &lt;/p&gt;
+&lt;h2&gt;Broadcasting transactions to the&amp;nbsp;network&lt;/h2&gt;
+&lt;p&gt;In  &lt;a href="blockchain-introduction.html"&gt;Part 1&lt;/a&gt; we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. These transactions were authenticated using &lt;span class="caps"&gt;PKI&lt;/span&gt;&amp;nbsp;which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ensured transaction&amp;nbsp;integrity&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Prevented participants claiming that they didn&amp;#8217;t make a past&amp;nbsp;transaction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Prevents anyone creating a transaction on someone else&amp;#8217;s behalf without their&amp;nbsp;consent. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As the number of people in the network grows, the transfer of coins from one user to another becomes harder to track. If every users ledger is not identical then the opportunity arises to use coins that have already been spent to pay someone who doesn&amp;#8217;t know they&amp;#8217;ve already been&amp;nbsp;used. &lt;/p&gt;
+&lt;p&gt;This is double spending, and is possible because the ledger that is shared amongst all members of the group only has &lt;em&gt;weak consistency&lt;/em&gt; - it is not necessarily correct all the time in all&amp;nbsp;locations. &lt;/p&gt;
+&lt;h3&gt;Weak&amp;nbsp;Consistency&lt;/h3&gt;
+&lt;p&gt;Weak consistency could be solved by requiring that everyone votes to accept a transaction before it is accepted into the ledger (Unanimous consensus), or to save time we could reduce the requirements so that only 50% of all users validate a transaction before it is accepted into the ledger (Quorum consensus). Either of these solutions is possible for a small local group with a list of all&amp;nbsp;users. &lt;/p&gt;
+&lt;p&gt;However Unanimous or Quorum Consensus doesn&amp;#8217;t solve the weak consistency problem&amp;nbsp;if:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The group is&amp;nbsp;large&lt;/li&gt;
+&lt;li&gt;The group is small but spread across different locations or&amp;nbsp;timezones&lt;/li&gt;
+&lt;li&gt;It is not possible to know how many members there are and therefore what proportion of users are&amp;nbsp;participating.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;real&lt;/em&gt; identity of a user is&amp;nbsp;unknown&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In these cases a peer-to-peer network is required where transactions between users require approval by other users before being confirmed. This has not been trivial to solve, as some users would be incentivised to be dishonest, and some may make mistakes. This is the distributed consensus problem, which on &lt;a href="https://en.wikipedia.org/wiki/Consensus_(computer_science)"&gt;wikipedia&lt;/a&gt; is defined&amp;nbsp;as: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The consensus problem requires agreement among a number of agents for a single data value. Some of the processes (agents) may fail or be unreliable in other ways, so consensus protocols must be fault tolerant or resilient. The processes must somehow put forth their candidate values, communicate with one another, and agree on a single consensus&amp;nbsp;value.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Distributed&amp;nbsp;Consensus&lt;/h2&gt;
+&lt;p&gt;When the number and identity of participants is known, distributed consensus is possible. Two types of protocol which allows all users in a distributed system to agree on a transaction are the &lt;a href="https://en.wikipedia.org/wiki/Paxos_(computer_science)"&gt;Paxos&lt;/a&gt; family of protocols and the &lt;a href="http://courses.cs.vt.edu/~cs5204/fall00/distributedDBMS/duckett/tpcp.html"&gt;Two-phase commit&lt;/a&gt; protocol. Both of these would require that at least 50% of all users reach agreement in order to add a new&amp;nbsp;transaction. &lt;/p&gt;
+&lt;p&gt;However in a public peer-to-peer network the total number of active users is not known - its  fast and cheap to create new user profiles, and existing user profiles may become dormant. This makes it impossible to know how many users 50% would be. Additionally, because its possible to cheaply create new user profiles (just generate a new public-private key pair), a single actor could generate and control many user accounts in order to have many votes and force incorrect transactions onto the ledger. An attack where one user subverts a network by creating many profiles is known as a &lt;a href="https://en.wikipedia.org/wiki/Sybil_attack"&gt;Sybil attack&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Proof of&amp;nbsp;Work&lt;/h3&gt;
+&lt;p&gt;The solution to the Sybil attack is to increase the cost of verifying a transaction such that the cost exceeds the reward. This is achieved through proof-of-work (PoW) algorithms, which are computationally expensive for a sender claiming to have verified a transaction, and computationally simple for the receiver to verify that the sender has validated the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;One possible Proof of Work approach is to require that the hash of a verification message begins with a certain set of characters. The chosen set of characters is called a &lt;em&gt;nonce&lt;/em&gt; and the only way to create a verification message with an acceptable hash is to try many slightly different messages. For example, a nonce may be 3 zeros. It&amp;#8217;s arbitrary, but the longer the nonce is the more difficult it becomes to find a hash that fits the&amp;nbsp;requirements. &lt;/p&gt;
+&lt;p&gt;This is because a hash is a random list of characters, and altering even a single part of the data being hashed will result in a completely different hash value. Therefore there is no way to predict a hash value. The only way to generate a hash with the required none is to  repeatedly alter the data being hashed (even by just one character) until a hash with the required features is randomly achieved. This is computationally expensive to achieve, but computationally simple to&amp;nbsp;verify. &lt;/p&gt;
+&lt;p&gt;Using the method, a user who seeks to verify a transaction and broadcast the result must (once they&amp;#8217;ve verified the transactions) repeatedly try different messages until they randomly find a message that meets the nonce requirements. It is simple for a user to check if a transaction verification message meets the nonce requirements, because it is simple to inspect a hash and compare it to the&amp;nbsp;nonce.&lt;/p&gt;
+&lt;p&gt;The effect of this requirement is a process that makes it expensive to claim that a transaction has been verified and cheap to check that verification claim. This removes the threat of a Sybil attack, but does not remove the distributed consensus problems created by not&amp;nbsp;knowing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The true identity of users in the&amp;nbsp;network&lt;/li&gt;
+&lt;li&gt;How many users&amp;nbsp;exist&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This problem cannot be completely solved, and the practical solution is to relax the requirements such that the probability of accepting a fraudulent transaction is lower than some user defined threshold. This is acceptable because a user would require a higher degree of confirmation for a high-value transaction than they would for a low-value transaction, and would therefore be willing to incur more time and cost to verify a high value transaction and reduce the probability of accepting an incorrect transaction below a&amp;nbsp;threshold. &lt;/p&gt;
+&lt;p&gt;If a user wishes to make fast or low-value transactions, or trusts the party they&amp;#8217;re transacting with, then they may accept a transaction without any other users on the network verifying that the sender has the required funds&amp;nbsp;available.&lt;/p&gt;
+&lt;p&gt;However when the senders trustworthiness is not assured, verification is required. The more risky or valuable the transaction, the more users the receiver of the funds will ask to verify that the sender has access to the required funds. The higher the number of users, the higher the probability that a dishonest transaction will be identified before being&amp;nbsp;accepted.&lt;/p&gt;
+&lt;p&gt;An appropriate level of verification will depend on the amount being transferred and how well the receiver of the funds knows the&amp;nbsp;sender. &lt;/p&gt;
+&lt;h2&gt;Transaction&amp;nbsp;fees&lt;/h2&gt;
+&lt;p&gt;Asking peers on the network to verify transactions introduces a new problem. Verifying a transaction requires time and effort, and incurs a cost. This cost requires that network participants be rewarded for correctly verifying transactions between other&amp;nbsp;participants. &lt;/p&gt;
+&lt;p&gt;An attacker would only attack if the cost is less than the reward. Therefore the number and cost of verifications required should be just enough to make the cost of an attack more than the value of the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;This introduces the problem that it costs more to verify a transaction than the value of the transaction itself. It is also create the recursive problem where the users who verified the first transaction would need to verify that the payment they received was then also valid. Furthermore, a high proportion of the original transaction value is spent as a transaction fee (for verification) which is not&amp;nbsp;efficient.&lt;/p&gt;
+&lt;p&gt;These problems are avoided by combining multiple transactions and verifying them at the same time, broadcasting the successful verification of multiple transactions simultaneously by grouping the transactions together into a block of&amp;nbsp;transactions. &lt;/p&gt;
+&lt;p&gt;By confirming multiple transactions at once (and proving it using proof-of-work), transaction fees can be aggregated (allowing each individual fee to be much lower). Each block includes a list of verified transactions, a reference to the previous block, and a block &lt;span class="caps"&gt;ID&lt;/span&gt;.&lt;/p&gt;
+&lt;h2&gt;Incentivised social&amp;nbsp;responsibility&lt;/h2&gt;
+&lt;p&gt;The transaction verification process outlined above is remarkable because it creates a demand for new participants to the network by creating a financial incentive to verify transactions. This makes the network more secure as increasing the number of participants makes a sybil attack more&amp;nbsp;difficult. &lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Users generate new transactions and broadcast them on a peer-to-peer network for&amp;nbsp;verification&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An idle user listens for new transactions and collects them until the sum of all transactions&amp;#8217; verification fees is greater than the cost the user will incur to verify them and meet the proof-of-work&amp;nbsp;requirements&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The idle user adds an extra transaction to their list of transactions that transfers the sum of the transaction fees to their own&amp;nbsp;address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The idle user generates the block of newly verified transactions, referencing the previously verified block so that transactions can be chronologically ordered and completing the proof-of-work challenge. This new block is then broadcast to the&amp;nbsp;network.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other users are listening for new block announcements. These users verify that the block is valid according to the proof-of-work requirements and the order of the&amp;nbsp;blocks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Users with unverified transactions look inside the verified block to see if their pending transactions have been&amp;nbsp;accepted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Competing to validate blocks of&amp;nbsp;transactions&lt;/h2&gt;
+&lt;p&gt;Each user can choose which transactions they verify, and how many to verify before beginning the proof-of-work requirement and hopefully collecting the transaction fees. This lack of order around transaction verification is fine because the only way to increase the probability of being the first to claim the transaction fees associated with a collection of transactions (a block) is to spend more &lt;span class="caps"&gt;CPU&lt;/span&gt; power searching for the required partial hash&amp;nbsp;collision. &lt;/p&gt;
+&lt;p&gt;If two users complete a block at approximately the same time then the blockchain will look different in different parts of the network, as each completed block begins to propagate and other users accept the new block and add it to their ledger. This is ok if a rule is enforced that requires a user to always accept the longest chain of&amp;nbsp;blocks. &lt;/p&gt;
+&lt;p&gt;This works because if multiple blocks are created at the same time, the time it takes to create subsequent blocks will vary due to the random behaviour of the proof-of-work algorithm. Therefore chains of different length will always exist and one version of the block chain will be longer than the others, providing a clear candidate for which branch of the blockchain to use. If there are transactions in the discarded branch which are not present in the new (longest) blockchain then they are added back into the pool of transactions awaiting&amp;nbsp;verification. &lt;/p&gt;
+&lt;h2&gt;A block of transactions in never absolutely&amp;nbsp;immutable&lt;/h2&gt;
+&lt;p&gt;The above procedure for verifying transactions and adding new blocks onto the chain means that even if a user inspects a new block and sees that their transaction has been verified, its possible that in the future a longer chain will be discovered (which must be accepted) which doesn&amp;#8217;t include their&amp;nbsp;transaction. &lt;/p&gt;
+&lt;p&gt;Therefore any block could potentially be removed, which means a transaction is never completely verified. However the probability of a block being removed decreases as the number of blocks after it increases. This means verification can be thought of in terms of the number of blocks that have been added to the chain &lt;em&gt;after&lt;/em&gt; the block containing the&amp;nbsp;transaction. &lt;/p&gt;
+&lt;p&gt;If you are willing to accept a high level of risk, or you trust the party you are transacting with you could opt for a small number of blocks to be added after the block containing your transaction. This has the benefit of increasing the speed of the transaction verification. If the transaction is risky or high-value, you might require a larger number of blocks to be added to the chain before accepting the transaction. This will increase the time required to verify the transaction, but reduce the probability that a longer chain will undo the block containing the transaction in&amp;nbsp;question. &lt;/p&gt;</content><category term="Disintermediation"></category><category term="Blockchains"></category><category term="Digital Currencies"></category><category term="Distributed Ledger Technology"></category><category term="Distributed Consensus"></category><category term="Sybil"></category></entry><entry><title>Blockchains from the ground up: Part 1</title><link href="blockchain-introduction.html" rel="alternate"></link><published>2017-05-25T20:38:00+02:00</published><updated>2017-05-25T20:38:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2017-05-25:blockchain-introduction.html</id><summary type="html">&lt;p&gt;Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&amp;nbsp;blockchains.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;How to maintain a reliable list across a small network without a central&amp;nbsp;authority&lt;/h1&gt;
+&lt;p&gt;This is part 1 of an introduction to the key features of a generalised blockchain. I haven&amp;#8217;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&amp;nbsp;technology.&lt;/p&gt;
+&lt;h2&gt;Create a financial document that cannot be forged or&amp;nbsp;disputed&lt;/h2&gt;
+&lt;p&gt;Let&amp;#8217;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&amp;nbsp;receipt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;To: John    &lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange  &lt;/span&gt;
+&lt;span class="x"&gt;Price: 1 Apple  &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So far, so good. The receipt is evidence of the transaction. The next day John wants an orange but doesn&amp;#8217;t have anything to exchange. He offers to write Lizzie a note saying he owes Lizzie 1 orange (an  &lt;a href="https://en.wikipedia.org/wiki/IOU"&gt;&lt;span class="caps"&gt;IOU&lt;/span&gt;&lt;/a&gt;). They think about this and agree that John should sign the note so that Lizzie can prove that John owes her 1&amp;nbsp;orange.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;To: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange&lt;/span&gt;
+&lt;span class="x"&gt;Signed: John&amp;#39;s signature, Lizzie&amp;#39;s signature&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This &lt;span class="caps"&gt;IOU&lt;/span&gt; is a nice gesture, but it&amp;#8217;s simple to forge. Lizzie has the only copy of the &lt;span class="caps"&gt;IOU&lt;/span&gt; and once Lizzie has seen Johns signature, she could easily copy it and create more &lt;span class="caps"&gt;IOU&lt;/span&gt;&amp;#8217;s. She could also change this &lt;span class="caps"&gt;IOU&lt;/span&gt; from 1 orange to 11 oranges (for example) and John couldn&amp;#8217;t prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. It&amp;#8217;s one person&amp;#8217;s word against the&amp;nbsp;other. &lt;/p&gt;
+&lt;p&gt;Lizzie realises this and suggests an improvement - they will find a witness and make 3 copies of the &lt;span class="caps"&gt;IOU&lt;/span&gt;. Each copy will be signed by Lizzie, John and the Witness. Lets call this witness&amp;nbsp;&amp;#8220;Walter&amp;#8221;. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;To: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange&lt;/span&gt;
+&lt;span class="x"&gt;Witness: Walter&lt;/span&gt;
+&lt;span class="x"&gt;Signed: &amp;quot;John&amp;#39;s signature&amp;quot;, &amp;quot;Lizzie&amp;#39;s signature&amp;quot;, &amp;quot;Walter&amp;#39;s signature&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a much stronger document and is more difficult to forge. If Lizzie changes the &amp;#8220;What:&amp;#8221; to &amp;#8220;11 Oranges&amp;#8221;, both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie&amp;#8217;s 1. Lizzie will be laughed out of court.&amp;nbsp;Hahaha. &lt;/p&gt;
+&lt;p&gt;3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be&amp;nbsp;ruined. &lt;/p&gt;
+&lt;p&gt;This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. &lt;span class="caps"&gt;E.G.&lt;/span&gt; If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to&amp;nbsp;be. &lt;/p&gt;
+&lt;p&gt;The solution is &lt;a href="https://en.wikipedia.org/wiki/Public-key_cryptography"&gt;public-key infrastructure&lt;/a&gt; (which is introduced in my &lt;a href="encryption.html"&gt;previous post&lt;/a&gt;). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&amp;nbsp;briefly:&lt;/p&gt;
+&lt;p&gt;A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it&amp;#8217;s a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data&amp;nbsp;securely). &lt;/p&gt;
+&lt;p&gt;Back to the fruit. If Lizzie wants to accept John&amp;#8217;s &lt;span class="caps"&gt;IOU&lt;/span&gt; she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;1] Create the &lt;span class="caps"&gt;IOU&lt;/span&gt; stating that John owes Lizzie 1&amp;nbsp;orange.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234 From: John To: Lizzie What: 1 Orange&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2] John creates a public private key pair and encrypts the &lt;span class="caps"&gt;IOU&lt;/span&gt; using his private key. He adds an unencrypted &amp;#8220;From&amp;#8221;&amp;nbsp;line.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John &lt;/span&gt;
+&lt;span class="x"&gt;Date: 1234 To: Lizzie, What: 1 Orange &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3] John makes his public key freely available to anyone who wants&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;This will work because anybody (not just Lizzie) can check that John signed the &lt;span class="caps"&gt;IOU&lt;/span&gt;. The transaction can be verified by looking at the &amp;#8220;From&amp;#8221; part of that transaction, noticing that this transaction is supposedly from John and then using John&amp;#8217;s public key to decrypt the encoded &amp;#8220;signature&amp;#8221;&amp;nbsp;line. &lt;/p&gt;
+&lt;p&gt;The signature can only be decrypted using John&amp;#8217;s public key if his private key was used to encrypt it. Because John is the only person with his private key, that proves the transaction is valid, and Lizzie isn&amp;#8217;t dishonestly creating a debt for John to&amp;nbsp;pay. &lt;/p&gt;
+&lt;p&gt;Clearly if John discloses his private key (or its stolen) then he will make the system insecure, but this is a problem with John and his security protocols, not with public-key&amp;nbsp;cryptography. &lt;/p&gt;
+&lt;h2&gt;Create and maintain an accurate list of&amp;nbsp;transactions&lt;/h2&gt;
+&lt;p&gt;So far we&amp;#8217;ve seen how 1 &lt;span class="caps"&gt;IOU&lt;/span&gt; (for an orange) can be securely created, signed and verified. This process can extended to be used by more people to exchange more fruit.  For&amp;nbsp;example.&lt;/p&gt;
+&lt;p&gt;The original&amp;nbsp;note:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;Date: 1234, To: Lizzie, What: 1 Orange &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then some additional&amp;nbsp;transactions:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: 2 Apples &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;span class="x"&gt;From: John // Date: 1236, To: Chris, What: 1 Banana &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas &amp;lt;- Signed and encrypted by Chris using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After these 4 transactions, between John, Chris and&amp;nbsp;Lizzie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John owes 1 orange to Lizzie and 1 banana to&amp;nbsp;Chris&lt;/li&gt;
+&lt;li&gt;Lizzie owes 2 apples to&amp;nbsp;John&lt;/li&gt;
+&lt;li&gt;Chris owes 2 bananas to&amp;nbsp;Lizzie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called &amp;#8220;coins&amp;#8221; and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten&amp;nbsp;as: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John // Date: 1234, To: Lizzie, What: 2 coins &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: 2 coins &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;span class="x"&gt;From: John // Date: 1236, To: Chris, What: 2 coins &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Chris // Date: 1237, To: Lizzie, What: 4 coins &amp;lt;- Signed and encrypted by Chris using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By going through the list of transactions we can see&amp;nbsp;that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John owes Lizzie and Chris 2 coins each, and is owed 2 coins from Lizzie. His net amount is&amp;nbsp;-2&lt;/li&gt;
+&lt;li&gt;Lizzie owes John 2 coins but is owed 4 coins from Chris. Her net amount is&amp;nbsp;+2&lt;/li&gt;
+&lt;li&gt;Chris owes Lizzie 4 coins but is owed 2 coins from John. His net amount is&amp;nbsp;-2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So far Lizzie is the only person who appears to have any business&amp;nbsp;skills.&lt;/p&gt;
+&lt;p&gt;What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris&amp;#8217; promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie&amp;#8217;s transaction would look like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: ba781... &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &amp;#8220;What&amp;#8221; section contains a &lt;a href="http://www.movable-type.co.uk/scripts/sha256.html"&gt;hash&lt;/a&gt; of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie&amp;#8217;s transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie&amp;#8217;s private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another&amp;nbsp;person.&lt;/p&gt;
+&lt;p&gt;This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the &amp;#8220;What&amp;#8221; part of the transaction. If we make two other changes - removing the &amp;#8220;To&amp;#8221; part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Chris // Date: 2345, What: &amp;quot;A photo of me&amp;quot; &amp;lt;- Signed and encrypted by Chris using his private key &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris&amp;#8217; private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the&amp;nbsp;photo. &lt;/p&gt;
+&lt;p&gt;Another use for public-key cryptography arises if Chris were an employee in a bank, and the &amp;#8220;What&amp;#8221; contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer&amp;#8217;s true identity and documenting the evidence that&amp;#8217;s been collected to show that the bank knows who their customer really is. If the transaction included a new section called &amp;#8220;Customer &lt;span class="caps"&gt;ID&lt;/span&gt;&amp;#8221; (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind &lt;span class="caps"&gt;KYC&lt;/span&gt; on a&amp;nbsp;blockchain. &lt;/p&gt;
+&lt;p&gt;Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of &amp;#8220;coins&amp;#8221; will need to be controlled in order to maintain their value. In the example above, people can freely create &amp;#8220;coins&amp;#8221; and can also carry negative amounts of &amp;#8220;coins&amp;#8221;. This would result in the value of a &amp;#8220;coin&amp;#8221; plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable&amp;nbsp;manner.&lt;/p&gt;
+&lt;p&gt;Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&amp;#8217;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in &lt;a href="blockchain-networks.html"&gt;part 2&lt;/a&gt;.&lt;/p&gt;</content><category term="Disintermediation"></category><category term="Blockchains"></category><category term="Digital Currencies"></category><category term="Distributed Ledger Technology"></category><category term="Public Key Cryptography"></category></entry></feed>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - RSA</title><link href="/" rel="alternate"></link><link href="feeds/rsa.tag.atom.xml" rel="self"></link><id>/</id><updated>2016-08-30T23:04:00+02:00</updated><entry><title>Encryption</title><link href="encryption.html" rel="alternate"></link><published>2016-08-30T23:04:00+02:00</published><updated>2016-08-30T23:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2016-08-30:encryption.html</id><summary type="html">&lt;p&gt;Blockchains use Elliptical Curve Cryptography (&lt;span class="caps"&gt;ECC&lt;/span&gt;) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;To begin with the absolute basics, encryption generally works by taking a message and representing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Blockchains use Elliptical Curve Cryptography (&lt;span class="caps"&gt;ECC&lt;/span&gt;) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers &lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers back into the original&amp;nbsp;message.&lt;/p&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;The history of Cryptography can be split into classical and modern eras. Modern cryptography began in 1977 with the introduction of the &lt;span class="caps"&gt;RSA&lt;/span&gt; and Diffie-Hellman algorithms.  Until then, Cryptography required using a single key (the secret code) to encrypt and decrypt the message. This was transferred from sender to receiver secretly, but not cryptographically. In classical cryptography, the code is a &lt;em&gt;shared&lt;/em&gt;&amp;nbsp;secret.&lt;/p&gt;
+&lt;p&gt;The modern era removed the requirement for a shared secret and instead used number theory as a basis for quantifying the strength of an encryption method. The strength of a modern cryptographic technique is quantifiable and provable by reference to number theory, rather than a users ability to transport or transfer a secret&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;Modern cryptography is defined by Public Key Cryptographic systems. They use one key (code) for encryption and another for decryption. The encryption key can be made public without any risk of the message being decrypted, and is therefore known as the public key. The key used to decrypt data is the private key, and must not be revealed. If a message is encrypted with the public key it can only be decrypted with the private&amp;nbsp;key.&lt;/p&gt;
+&lt;p&gt;Public Key Cryptographic (&lt;span class="caps"&gt;PKC&lt;/span&gt;) systems use algorithms that are easy to process in one direction but difficult to reverse, which are known as mathematical trap-door functions. A simple example of a trap-door function is the product of two prime numbers. If two random prime numbers are chosen, it is trivial to find their product. However if only the product of the two numbers is known, it is relatively difficult to find either of the factors used to create the number (this is factorisation). This was first noticed in 1874, when &lt;a href="https://en.wikipedia.org/wiki/William_Stanley_Jevons#Jevons.27_number"&gt;Jevons&lt;/a&gt;&amp;nbsp;remarked:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Can the reader say what two numbers multiplied together will produce the number 8,616,460,799? I think it unlikely that anyone but myself will ever&amp;nbsp;know.&amp;#8221;*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This simple problem shows that finding the product of two (secret) prime numbers is computationally simple, but factorising the result is not. This type of problem is a key feature of modern cryptography. Factoring prime numbers is a super famous mathematical problem, it was studied by &lt;a href="https://en.wikipedia.org/wiki/Eratosthenes"&gt;Eratosthenes&lt;/a&gt; &lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt; in the 3rd century &lt;span class="caps"&gt;BC&lt;/span&gt; and more recently the &lt;a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; Factoring Challenge&lt;/a&gt; has intended to track state-of-the-art factorisation techniques by issues cash prizes for the factorisation of products of large&amp;nbsp;primes.&lt;/p&gt;
+&lt;p&gt;Generally, the bigger the difference in difficulty between executing the function and reversing it, the better the cryptographic&amp;nbsp;technique.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;RSA&lt;/span&gt; algorithm below uses factorisation as the foundation of its security, but factorisation is not the hardest problem to solve relative to the size of the keys required. Algorithms have been developed to factor the products of large prime numbers, and are much more efficient than randomly guessing possible factors. The greater the size of the primes being factored, the more efficient these algorithms become, and therefore the difference in difficulty between executing the function (multiplying two large primes) and reversing it (factorisation) becomes smaller as the size of the cryptographic key length increases. This is a problem because as public key cryptography becomes more commonly used the resources available to factor products of primes increases, and consequently larger keys are&amp;nbsp;required.&lt;/p&gt;
+&lt;p&gt;Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is&amp;nbsp;required.&lt;/p&gt;
+&lt;h2&gt;Overview of the &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;algorithm&lt;/h2&gt;
+&lt;p&gt;Named after its founders (&lt;a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest"&gt;Ron Rivest&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir"&gt;Adi Shamir&lt;/a&gt;, and &lt;a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard"&gt;Leonard Adleman&lt;/a&gt;), &lt;span class="caps"&gt;RSA&lt;/span&gt; was one of the first public-key encryption algorithms and is still widely&amp;nbsp;used.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number $n$ has been defined, if a number greater than $n$ is created the result simply loops around to 0 and begins counting from 0 again. i.e. if $n = 10$, then $7 + 5 = 12 - 10 = 2$. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. $12 / 10 = 1$ with $2$&amp;nbsp;remaining.&lt;/p&gt;
+&lt;h2&gt;Generation of a pair of &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;keys:&lt;/h2&gt;
+&lt;h3&gt;1. Generate the &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;module&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Select two large random prime numbers, $p$ and $q$. They need to be random because anyone who knows or guesses them will be able to decrypt the&amp;nbsp;encryption.&lt;/li&gt;
+&lt;li&gt;Calculate $n =&amp;nbsp;pq$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2. Find derived number&amp;nbsp;(e)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;e&lt;/em&gt; must be greater than 1 and less than $( p - 1)( q -&amp;nbsp;1)$.&lt;/li&gt;
+&lt;li&gt;There must be no common factor for e and $( p - 1)( q - 1)$ except for 1. &lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3. Form the public&amp;nbsp;key&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The pair of numbers $(n, e)$ form the public key and can be made&amp;nbsp;public.&lt;/li&gt;
+&lt;li&gt;Even though $n$ is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of &lt;span class="caps"&gt;RSA&lt;/span&gt; rests entirely on the difficulty of factoring $n$ into its two component prime&amp;nbsp;numbers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;4. Generate the private key&amp;nbsp;(d)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The private key is generated from using $p$, $q$ and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer&amp;nbsp;$d$.&lt;/li&gt;
+&lt;li&gt;$d$ is the inverse of $e$ modulo $( p - 1)( q - 1 )$. This means that $d$ is the number less than $( p - 1 ) ( q - 1 )$ such that when it is multiplied by e, it is equal to $1$ modulo $( p - 1 ) ( q - 1&amp;nbsp;)$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;example:&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; does not directly operate on strings as bits, it operates on numbers modulo (less than) $n$. and it is necessary to represent plain text as a series of numbers less than $n$. The dominant encoding on the internet is &lt;a href="https://en.wikipedia.org/wiki/UTF-8"&gt;&lt;span class="caps"&gt;UTF&lt;/span&gt;-8&lt;/a&gt;, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &amp;#8220;&lt;span class="caps"&gt;HELLO&lt;/span&gt;&amp;#8221; would become &amp;#8220;$72, 69, 76, 76,&amp;nbsp;79$&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;The maximum number $n$ needs to be the product of the two prime numbers $p$ and $q$. For this example choose $p = 7$ and $q = 13$, so $n  = 91$  &lt;sup id="fnref:5"&gt;&lt;a class="footnote-ref" href="#fn:5"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The public key component &lt;em&gt;e&lt;/em&gt; can be any number we choose,  as long as there is no number other than 1 which is a common factor of &lt;em&gt;e&lt;/em&gt; and $( p - 1 ) ( q - 1 )$. In our example, this requires that there be no common factor between 72 and e other than 1, so let &lt;em&gt;e&lt;/em&gt; $=&amp;nbsp;5$.&lt;/p&gt;
+&lt;p&gt;Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime&amp;nbsp;numbers.&lt;/p&gt;
+&lt;p&gt;Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key $d$, which is&amp;nbsp;29.&lt;/p&gt;
+&lt;p&gt;Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;system.&lt;/p&gt;
+&lt;h3&gt;Encoding&lt;/h3&gt;
+&lt;p&gt;To encode a letter H in a message (&amp;#8216;H&amp;#8217; is $72$ in &lt;span class="caps"&gt;UTF&lt;/span&gt;-8), we need to multiply it by itself $e$ times ($e = 5$), remembering to wrap around each time we pass our maximum value of $n =&amp;nbsp;91$.&lt;/p&gt;
+&lt;p&gt;$72 \times 72 = 5184, 5184 / 91 = 56$ with $88$ remaining, (i.e. $5184 = 91 \times 56 + 88$). Therefore:
+$72 \times 72 = 5184 = 88$
+$88 \times 72 = 6336 = 57$
+$57 \times 72 = 4104 = 9$
+$9 \times 72 = 648 =&amp;nbsp;11$&lt;/p&gt;
+&lt;p&gt;Therefore the encrypted value of &amp;#8220;H&amp;#8221; is&amp;nbsp;&amp;#8220;$11$&amp;#8221;&lt;/p&gt;
+&lt;p&gt;Using the method for each character in the message &amp;#8220;&lt;span class="caps"&gt;HELLO&lt;/span&gt;&amp;#8221; results in the encoded message&amp;nbsp;&amp;#8220;\$11,62,20,20,53\$&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;To decrypt the message, we take each number and multiply it by itself $d$ times, ($d=29$) wrapping around each time we pass&amp;nbsp;$91$.&lt;/p&gt;
+&lt;p&gt;$11 \times 11 = 121 = 30$
+$30 \times 11 = 330 = 57$
+&amp;#8230;
+$57 \times 11 = 627 = 81$
+$81 \times 11 = 891 =&amp;nbsp;72$&lt;/p&gt;
+&lt;p&gt;And we&amp;#8217;re back to our original&amp;nbsp;encoding.&lt;/p&gt;
+&lt;h2&gt;Files&lt;/h2&gt;
+&lt;p&gt;The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded &lt;a href="RSA-Example.xlsx"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A simple python script to encrypt and decrypt a message is &lt;a href="AES_Example.py"&gt;here&lt;/a&gt;. It uses the &lt;span class="caps"&gt;AES&lt;/span&gt; encryption&amp;nbsp;method.&lt;/p&gt;
+&lt;h3&gt;Footnotes&lt;/h3&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I used the explanations &lt;a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm"&gt;here&lt;/a&gt; and &lt;a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/"&gt;here&lt;/a&gt; a lot.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;A simple example is $A=1, B=2$ etc&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Eratosthenes invented his famous &lt;a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"&gt;sieving algorithm&lt;/a&gt; which finds all the primes up to a given limit.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;If this is the case then e and ( p - 1) ( q - 1 ) are called &amp;#8220;coprime&amp;#8221;&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I&amp;#8217;ve used the same numbers in the following example as in the tutorials &lt;a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm"&gt;here&lt;/a&gt; and &lt;a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/"&gt;here&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Disintermediation"></category><category term="Encryption"></category><category term="RSA"></category><category term="DLT"></category><category term="Blockchains"></category><category term="Bitcoin"></category><category term="Digital Currencies"></category><category term="Public Key Cryptography"></category></entry></feed>

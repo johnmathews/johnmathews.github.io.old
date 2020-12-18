@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - Engineering</title><link href="/" rel="alternate"></link><link href="feeds/engineering.tag.atom.xml" rel="self"></link><id>/</id><updated>2016-10-02T00:06:00+02:00</updated><entry><title>Silos: Introduction to my doctorate research</title><link href="silos.html" rel="alternate"></link><published>2016-10-02T00:06:00+02:00</published><updated>2016-10-02T00:06:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2016-10-02:silos.html</id><summary type="html">&lt;p&gt;In this post I want to introduce my doctorate research without assuming
+any engineering&amp;nbsp;knowledge.&lt;/p&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;From Spring 2010 until the Autumn of 2013, I was a PhD candidate living
+in Vienna, Austria and working at the University of Natural Resources
+and Life Sciences. Before working in Vienna, I completed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I want to introduce my doctorate research without assuming
+any engineering&amp;nbsp;knowledge.&lt;/p&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;From Spring 2010 until the Autumn of 2013, I was a PhD candidate living
+in Vienna, Austria and working at the University of Natural Resources
+and Life Sciences. Before working in Vienna, I completed my Masters
+degree in Civil and Environmental Engineering at the University of&amp;nbsp;Edinburgh.&lt;/p&gt;
+&lt;p&gt;My research quantified the effects of changing the amount of gravity
+acting on granular materials as they poured out of a&amp;nbsp;silo.&lt;/p&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-xs-6"&gt;
+    &lt;div class="thumbnail"&gt;
+         &lt;a class="image_link" href="images/silos1/4_silos.jpeg" data-lightbox="lightbox_1" data-title="4 silos"&gt;
+            &lt;img class="image" src="images/silos1/4_silos.jpeg"  style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-6"&gt;
+    &lt;div class="thumbnail"&gt;
+       &lt;a class="image_link" href="images/silos1/granular_materials.jpeg" data-lightbox="lightbox_1" data-title="Some granular materials"&gt;
+            &lt;img class="image" src="images/silos1/granular_materials.jpeg" style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This post contains an overview of my work, as well as links to download
+my PhD thesis and the short presentation I used when I defended&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;Granular materials are a broard class of materials that are
+encountered everyday - salt, pills, breakfast cereal, sand, rice, soil,
+landslides, salt are all granular materials. They are ubiquitous and occur in
+many different sizes and&amp;nbsp;varieties.&lt;/p&gt;
+&lt;p&gt;Silos are a common type of container for storing granular materials. You
+pour the granular material in from the top, store it for a while, and
+then dispense the material in controlled quantities from the&amp;nbsp;bottom.&lt;/p&gt;
+&lt;h2&gt;Research&amp;nbsp;focus&lt;/h2&gt;
+&lt;p&gt;My research focussed on quantifying how changes in gravity affected the
+material contained inside a silo, particularly whilst the silo was being
+emptied. This is pertinent because engineers and scientists do not yet
+have a scientific understanding of how granular materials behave. Whilst
+gravity clearly affects a granular materials, we cannot say exactly&amp;nbsp;how.&lt;/p&gt;
+&lt;p&gt;This means we can&amp;#8217;t use analytical methods to quantify the physics that
+occur in a real system. Instead we use empirical methods
+(approximations, guesses, rules-of-thumb, and knowledge of what worked
+in previous similar situations). This isn&amp;#8217;t necessarily bad, but it is
+less efficient and less reliable than an analytical&amp;nbsp;approach.&lt;/p&gt;
+&lt;h2&gt;Research&amp;nbsp;techniques&lt;/h2&gt;
+&lt;h3&gt;Physical&amp;nbsp;modelling&lt;/h3&gt;
+&lt;p&gt;I built a small model silo (30cm tall) and put it into quite a large centrifuge (3 metre diameter). By rotating the model silo around the centre of the centrifuge at a constant speed I could simulate a higher gravity. I added high-speed cameras, pressure sensors and weighing
+scales so that I could measure how the material was moving once I opened the silo outlet and the silo began to empty. Photos of the experimental model I built can be seen&amp;nbsp;below. &lt;/p&gt;
+&lt;h3&gt;Numerical&amp;nbsp;modelling&lt;/h3&gt;
+&lt;p&gt;I also programmed a computer model (using the commercial &lt;span class="caps"&gt;PFC&lt;/span&gt; 3D software
+and working in the &lt;span class="caps"&gt;FISH&lt;/span&gt; scripting language) to simulate and investigate
+if the same behaviours could be observed numerically as&amp;nbsp;physically.&lt;/p&gt;
+&lt;p&gt;The class of computer model I used is known as &lt;span class="caps"&gt;DEM&lt;/span&gt; (Discrete Element
+Modelling). These models work by considering every grain of material individually, usually as a
+sphere. If one sphere overlaps with another (i.e. the distance between
+the two particle centres is less than the sum of their radiuses) then a
+force proportional to the overlap size repels the two spheres away from
+each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over &amp;#8220;continuum&amp;#8221; based techniques that model groups of grains as if they were all just one big particle with
+unusual properties. &lt;span class="caps"&gt;DEM&lt;/span&gt; has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, &lt;span class="caps"&gt;DEM&lt;/span&gt; will only be used for theoretical research and niche&amp;nbsp;applications.&lt;/p&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;p&gt;When gravity increases by a factor of $x$, both the discharge rate and local velocities within the silo increase by  $\sqrt(x)$&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s good to know if you&amp;#8217;re planning on storing stuff on the moon, but it&amp;#8217;s also a useful step towards explaining exactly why bulk granular materials behave the way they&amp;nbsp;do.&lt;/p&gt;
+&lt;h2&gt;More&amp;nbsp;Information&lt;/h2&gt;
+&lt;p&gt;An overview of my research, my doctorate thesis and published papers can
+be downloaded below. PDFs containing 3D models and movies require flash
+to render, and Adobe Reader Desktop must be used in order to view&amp;nbsp;them.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="Mathews_J_2013_thesis.pdf"&gt;PhD Thesis&amp;nbsp;(2013)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="Mathews-Wu_2016_Model-tests-of-silo-discharge-in-a-geotechnical-centrifuge.pdf"&gt;Modeling silo discharge in a centrifuge (Powder&amp;nbsp;Technology)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="Mathews-etal_2013_Experimental-investigation-of-flow-and-segregation-behaviour-of-bulk-solids-in-silos-under-high-gravity-conditions.pdf"&gt;Experimental investigation of flow and segregation behaviour of bulk solids in silos under high gravity conditions (Particles 2013 conference&amp;nbsp;proceedings)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="Cabrera-et-al.pdf"&gt;Centrifugal modelling of granular flows (Eurofuge conference&amp;nbsp;proceedings)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="Mathews_J_2013_Defence_presentation.pdf"&gt;Overview of research (PhD defence,&amp;nbsp;2013)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+       &lt;a class="image_link" href="images/silos2/model_silo_camera.jpeg" data-lightbox="lightbox_2" data-title="Model silo and camera"&gt;
+            &lt;img class="image" src="images/silos2/model_silo_camera.jpeg" style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+        &lt;a class="image_link" href="images/silos2/model_silo_in_centrifuge.jpeg" data-lightbox="lightbox_2" data-title="Model silo inside centrifuge"&gt;
+            &lt;img class="image" src="images/silos2/model_silo_in_centrifuge.jpeg" style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+        &lt;a class="image_link" href="images/silos2/silo_open_mechanism.jpeg" data-lightbox="lightbox_2" data-title="Silo opening mechanism"&gt;
+            &lt;img class="image" src="images/silos2/silo_open_mechanism.jpeg" style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+         &lt;a class="image_link" href="images/silos2/centrifuge.jpeg" data-lightbox="lightbox_2" data-title="Centrifuge"&gt;
+            &lt;img class="image" style="width: 100%;" src="images/silos2/centrifuge.jpeg" alt="alt_text"/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;  
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+         &lt;a class="image_link" href="images/silos2/silo_render.jpeg" data-lightbox="lightbox_2" data-title="Silo model"&gt;
+            &lt;img class="image" style="width: 100%;" src="images/silos2/silo_render.jpeg" alt="alt_text"/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+       &lt;a class="image_link" href="images/silos2/silo_pressure_pads.jpeg" data-lightbox="lightbox_2" data-title="Silo wall pressure measurements"&gt;
+            &lt;img class="image" src="images/silos2/silo_pressure_pads.jpeg" style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-3"&gt;
+    &lt;div class="thumbnail"&gt;
+        &lt;a class="image_link" href="images/silos2/silo_piv.jpeg" data-lightbox="lightbox_2" data-title="Particle Image Velocimetry result showing average flow velocities"&gt;
+            &lt;img class="image" src="images/silos2/silo_piv.jpeg" style="width: 100%;" alt="alt_text"/&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content><category term="Engineering"></category><category term="Doctorate"></category><category term="Granular Flow"></category><category term="Granular Materials"></category><category term="PhD"></category><category term="Research"></category><category term="Engineering"></category><category term="Silo"></category><category term="Thesis"></category><category term="Vienna"></category></entry></feed>

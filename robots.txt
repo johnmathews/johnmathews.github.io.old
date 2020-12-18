@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /drafts/*
-Sitemap: http://johnmathews.eu/Sitemap.xml

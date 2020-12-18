@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - Public Key Cryptography</title><link href="/" rel="alternate"></link><link href="feeds/public-key-cryptography.tag.atom.xml" rel="self"></link><id>/</id><updated>2017-05-25T20:38:00+02:00</updated><entry><title>Blockchains from the ground up: Part 1</title><link href="blockchain-introduction.html" rel="alternate"></link><published>2017-05-25T20:38:00+02:00</published><updated>2017-05-25T20:38:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2017-05-25:blockchain-introduction.html</id><summary type="html">&lt;p&gt;Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&amp;nbsp;blockchains.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;How to maintain a reliable list across a small network without a central&amp;nbsp;authority&lt;/h1&gt;
+&lt;p&gt;This is part 1 of an introduction to the key features of a generalised blockchain. I haven&amp;#8217;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&amp;nbsp;technology.&lt;/p&gt;
+&lt;h2&gt;Create a financial document that cannot be forged or&amp;nbsp;disputed&lt;/h2&gt;
+&lt;p&gt;Let&amp;#8217;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&amp;nbsp;receipt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;To: John    &lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange  &lt;/span&gt;
+&lt;span class="x"&gt;Price: 1 Apple  &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So far, so good. The receipt is evidence of the transaction. The next day John wants an orange but doesn&amp;#8217;t have anything to exchange. He offers to write Lizzie a note saying he owes Lizzie 1 orange (an  &lt;a href="https://en.wikipedia.org/wiki/IOU"&gt;&lt;span class="caps"&gt;IOU&lt;/span&gt;&lt;/a&gt;). They think about this and agree that John should sign the note so that Lizzie can prove that John owes her 1&amp;nbsp;orange.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;To: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange&lt;/span&gt;
+&lt;span class="x"&gt;Signed: John&amp;#39;s signature, Lizzie&amp;#39;s signature&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This &lt;span class="caps"&gt;IOU&lt;/span&gt; is a nice gesture, but it&amp;#8217;s simple to forge. Lizzie has the only copy of the &lt;span class="caps"&gt;IOU&lt;/span&gt; and once Lizzie has seen Johns signature, she could easily copy it and create more &lt;span class="caps"&gt;IOU&lt;/span&gt;&amp;#8217;s. She could also change this &lt;span class="caps"&gt;IOU&lt;/span&gt; from 1 orange to 11 oranges (for example) and John couldn&amp;#8217;t prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. It&amp;#8217;s one person&amp;#8217;s word against the&amp;nbsp;other. &lt;/p&gt;
+&lt;p&gt;Lizzie realises this and suggests an improvement - they will find a witness and make 3 copies of the &lt;span class="caps"&gt;IOU&lt;/span&gt;. Each copy will be signed by Lizzie, John and the Witness. Lets call this witness&amp;nbsp;&amp;#8220;Walter&amp;#8221;. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;To: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange&lt;/span&gt;
+&lt;span class="x"&gt;Witness: Walter&lt;/span&gt;
+&lt;span class="x"&gt;Signed: &amp;quot;John&amp;#39;s signature&amp;quot;, &amp;quot;Lizzie&amp;#39;s signature&amp;quot;, &amp;quot;Walter&amp;#39;s signature&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a much stronger document and is more difficult to forge. If Lizzie changes the &amp;#8220;What:&amp;#8221; to &amp;#8220;11 Oranges&amp;#8221;, both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie&amp;#8217;s 1. Lizzie will be laughed out of court.&amp;nbsp;Hahaha. &lt;/p&gt;
+&lt;p&gt;3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be&amp;nbsp;ruined. &lt;/p&gt;
+&lt;p&gt;This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. &lt;span class="caps"&gt;E.G.&lt;/span&gt; If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to&amp;nbsp;be. &lt;/p&gt;
+&lt;p&gt;The solution is &lt;a href="https://en.wikipedia.org/wiki/Public-key_cryptography"&gt;public-key infrastructure&lt;/a&gt; (which is introduced in my &lt;a href="encryption.html"&gt;previous post&lt;/a&gt;). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&amp;nbsp;briefly:&lt;/p&gt;
+&lt;p&gt;A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it&amp;#8217;s a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data&amp;nbsp;securely). &lt;/p&gt;
+&lt;p&gt;Back to the fruit. If Lizzie wants to accept John&amp;#8217;s &lt;span class="caps"&gt;IOU&lt;/span&gt; she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;1] Create the &lt;span class="caps"&gt;IOU&lt;/span&gt; stating that John owes Lizzie 1&amp;nbsp;orange.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234 From: John To: Lizzie What: 1 Orange&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2] John creates a public private key pair and encrypts the &lt;span class="caps"&gt;IOU&lt;/span&gt; using his private key. He adds an unencrypted &amp;#8220;From&amp;#8221;&amp;nbsp;line.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John &lt;/span&gt;
+&lt;span class="x"&gt;Date: 1234 To: Lizzie, What: 1 Orange &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3] John makes his public key freely available to anyone who wants&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;This will work because anybody (not just Lizzie) can check that John signed the &lt;span class="caps"&gt;IOU&lt;/span&gt;. The transaction can be verified by looking at the &amp;#8220;From&amp;#8221; part of that transaction, noticing that this transaction is supposedly from John and then using John&amp;#8217;s public key to decrypt the encoded &amp;#8220;signature&amp;#8221;&amp;nbsp;line. &lt;/p&gt;
+&lt;p&gt;The signature can only be decrypted using John&amp;#8217;s public key if his private key was used to encrypt it. Because John is the only person with his private key, that proves the transaction is valid, and Lizzie isn&amp;#8217;t dishonestly creating a debt for John to&amp;nbsp;pay. &lt;/p&gt;
+&lt;p&gt;Clearly if John discloses his private key (or its stolen) then he will make the system insecure, but this is a problem with John and his security protocols, not with public-key&amp;nbsp;cryptography. &lt;/p&gt;
+&lt;h2&gt;Create and maintain an accurate list of&amp;nbsp;transactions&lt;/h2&gt;
+&lt;p&gt;So far we&amp;#8217;ve seen how 1 &lt;span class="caps"&gt;IOU&lt;/span&gt; (for an orange) can be securely created, signed and verified. This process can extended to be used by more people to exchange more fruit.  For&amp;nbsp;example.&lt;/p&gt;
+&lt;p&gt;The original&amp;nbsp;note:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;Date: 1234, To: Lizzie, What: 1 Orange &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then some additional&amp;nbsp;transactions:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: 2 Apples &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;span class="x"&gt;From: John // Date: 1236, To: Chris, What: 1 Banana &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas &amp;lt;- Signed and encrypted by Chris using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After these 4 transactions, between John, Chris and&amp;nbsp;Lizzie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John owes 1 orange to Lizzie and 1 banana to&amp;nbsp;Chris&lt;/li&gt;
+&lt;li&gt;Lizzie owes 2 apples to&amp;nbsp;John&lt;/li&gt;
+&lt;li&gt;Chris owes 2 bananas to&amp;nbsp;Lizzie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called &amp;#8220;coins&amp;#8221; and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten&amp;nbsp;as: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John // Date: 1234, To: Lizzie, What: 2 coins &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: 2 coins &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;span class="x"&gt;From: John // Date: 1236, To: Chris, What: 2 coins &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Chris // Date: 1237, To: Lizzie, What: 4 coins &amp;lt;- Signed and encrypted by Chris using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By going through the list of transactions we can see&amp;nbsp;that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John owes Lizzie and Chris 2 coins each, and is owed 2 coins from Lizzie. His net amount is&amp;nbsp;-2&lt;/li&gt;
+&lt;li&gt;Lizzie owes John 2 coins but is owed 4 coins from Chris. Her net amount is&amp;nbsp;+2&lt;/li&gt;
+&lt;li&gt;Chris owes Lizzie 4 coins but is owed 2 coins from John. His net amount is&amp;nbsp;-2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So far Lizzie is the only person who appears to have any business&amp;nbsp;skills.&lt;/p&gt;
+&lt;p&gt;What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris&amp;#8217; promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie&amp;#8217;s transaction would look like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: ba781... &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &amp;#8220;What&amp;#8221; section contains a &lt;a href="http://www.movable-type.co.uk/scripts/sha256.html"&gt;hash&lt;/a&gt; of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie&amp;#8217;s transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie&amp;#8217;s private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another&amp;nbsp;person.&lt;/p&gt;
+&lt;p&gt;This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the &amp;#8220;What&amp;#8221; part of the transaction. If we make two other changes - removing the &amp;#8220;To&amp;#8221; part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Chris // Date: 2345, What: &amp;quot;A photo of me&amp;quot; &amp;lt;- Signed and encrypted by Chris using his private key &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris&amp;#8217; private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the&amp;nbsp;photo. &lt;/p&gt;
+&lt;p&gt;Another use for public-key cryptography arises if Chris were an employee in a bank, and the &amp;#8220;What&amp;#8221; contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer&amp;#8217;s true identity and documenting the evidence that&amp;#8217;s been collected to show that the bank knows who their customer really is. If the transaction included a new section called &amp;#8220;Customer &lt;span class="caps"&gt;ID&lt;/span&gt;&amp;#8221; (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind &lt;span class="caps"&gt;KYC&lt;/span&gt; on a&amp;nbsp;blockchain. &lt;/p&gt;
+&lt;p&gt;Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of &amp;#8220;coins&amp;#8221; will need to be controlled in order to maintain their value. In the example above, people can freely create &amp;#8220;coins&amp;#8221; and can also carry negative amounts of &amp;#8220;coins&amp;#8221;. This would result in the value of a &amp;#8220;coin&amp;#8221; plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable&amp;nbsp;manner.&lt;/p&gt;
+&lt;p&gt;Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&amp;#8217;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in &lt;a href="blockchain-networks.html"&gt;part 2&lt;/a&gt;.&lt;/p&gt;</content><category term="Disintermediation"></category><category term="Blockchains"></category><category term="Digital Currencies"></category><category term="Distributed Ledger Technology"></category><category term="Public Key Cryptography"></category></entry><entry><title>Encryption</title><link href="encryption.html" rel="alternate"></link><published>2016-08-30T23:04:00+02:00</published><updated>2016-08-30T23:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2016-08-30:encryption.html</id><summary type="html">&lt;p&gt;Blockchains use Elliptical Curve Cryptography (&lt;span class="caps"&gt;ECC&lt;/span&gt;) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;To begin with the absolute basics, encryption generally works by taking a message and representing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Blockchains use Elliptical Curve Cryptography (&lt;span class="caps"&gt;ECC&lt;/span&gt;) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers &lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers back into the original&amp;nbsp;message.&lt;/p&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;The history of Cryptography can be split into classical and modern eras. Modern cryptography began in 1977 with the introduction of the &lt;span class="caps"&gt;RSA&lt;/span&gt; and Diffie-Hellman algorithms.  Until then, Cryptography required using a single key (the secret code) to encrypt and decrypt the message. This was transferred from sender to receiver secretly, but not cryptographically. In classical cryptography, the code is a &lt;em&gt;shared&lt;/em&gt;&amp;nbsp;secret.&lt;/p&gt;
+&lt;p&gt;The modern era removed the requirement for a shared secret and instead used number theory as a basis for quantifying the strength of an encryption method. The strength of a modern cryptographic technique is quantifiable and provable by reference to number theory, rather than a users ability to transport or transfer a secret&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;Modern cryptography is defined by Public Key Cryptographic systems. They use one key (code) for encryption and another for decryption. The encryption key can be made public without any risk of the message being decrypted, and is therefore known as the public key. The key used to decrypt data is the private key, and must not be revealed. If a message is encrypted with the public key it can only be decrypted with the private&amp;nbsp;key.&lt;/p&gt;
+&lt;p&gt;Public Key Cryptographic (&lt;span class="caps"&gt;PKC&lt;/span&gt;) systems use algorithms that are easy to process in one direction but difficult to reverse, which are known as mathematical trap-door functions. A simple example of a trap-door function is the product of two prime numbers. If two random prime numbers are chosen, it is trivial to find their product. However if only the product of the two numbers is known, it is relatively difficult to find either of the factors used to create the number (this is factorisation). This was first noticed in 1874, when &lt;a href="https://en.wikipedia.org/wiki/William_Stanley_Jevons#Jevons.27_number"&gt;Jevons&lt;/a&gt;&amp;nbsp;remarked:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Can the reader say what two numbers multiplied together will produce the number 8,616,460,799? I think it unlikely that anyone but myself will ever&amp;nbsp;know.&amp;#8221;*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This simple problem shows that finding the product of two (secret) prime numbers is computationally simple, but factorising the result is not. This type of problem is a key feature of modern cryptography. Factoring prime numbers is a super famous mathematical problem, it was studied by &lt;a href="https://en.wikipedia.org/wiki/Eratosthenes"&gt;Eratosthenes&lt;/a&gt; &lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt; in the 3rd century &lt;span class="caps"&gt;BC&lt;/span&gt; and more recently the &lt;a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; Factoring Challenge&lt;/a&gt; has intended to track state-of-the-art factorisation techniques by issues cash prizes for the factorisation of products of large&amp;nbsp;primes.&lt;/p&gt;
+&lt;p&gt;Generally, the bigger the difference in difficulty between executing the function and reversing it, the better the cryptographic&amp;nbsp;technique.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;RSA&lt;/span&gt; algorithm below uses factorisation as the foundation of its security, but factorisation is not the hardest problem to solve relative to the size of the keys required. Algorithms have been developed to factor the products of large prime numbers, and are much more efficient than randomly guessing possible factors. The greater the size of the primes being factored, the more efficient these algorithms become, and therefore the difference in difficulty between executing the function (multiplying two large primes) and reversing it (factorisation) becomes smaller as the size of the cryptographic key length increases. This is a problem because as public key cryptography becomes more commonly used the resources available to factor products of primes increases, and consequently larger keys are&amp;nbsp;required.&lt;/p&gt;
+&lt;p&gt;Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is&amp;nbsp;required.&lt;/p&gt;
+&lt;h2&gt;Overview of the &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;algorithm&lt;/h2&gt;
+&lt;p&gt;Named after its founders (&lt;a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest"&gt;Ron Rivest&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir"&gt;Adi Shamir&lt;/a&gt;, and &lt;a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard"&gt;Leonard Adleman&lt;/a&gt;), &lt;span class="caps"&gt;RSA&lt;/span&gt; was one of the first public-key encryption algorithms and is still widely&amp;nbsp;used.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number $n$ has been defined, if a number greater than $n$ is created the result simply loops around to 0 and begins counting from 0 again. i.e. if $n = 10$, then $7 + 5 = 12 - 10 = 2$. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. $12 / 10 = 1$ with $2$&amp;nbsp;remaining.&lt;/p&gt;
+&lt;h2&gt;Generation of a pair of &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;keys:&lt;/h2&gt;
+&lt;h3&gt;1. Generate the &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;module&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Select two large random prime numbers, $p$ and $q$. They need to be random because anyone who knows or guesses them will be able to decrypt the&amp;nbsp;encryption.&lt;/li&gt;
+&lt;li&gt;Calculate $n =&amp;nbsp;pq$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2. Find derived number&amp;nbsp;(e)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;e&lt;/em&gt; must be greater than 1 and less than $( p - 1)( q -&amp;nbsp;1)$.&lt;/li&gt;
+&lt;li&gt;There must be no common factor for e and $( p - 1)( q - 1)$ except for 1. &lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3. Form the public&amp;nbsp;key&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The pair of numbers $(n, e)$ form the public key and can be made&amp;nbsp;public.&lt;/li&gt;
+&lt;li&gt;Even though $n$ is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of &lt;span class="caps"&gt;RSA&lt;/span&gt; rests entirely on the difficulty of factoring $n$ into its two component prime&amp;nbsp;numbers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;4. Generate the private key&amp;nbsp;(d)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The private key is generated from using $p$, $q$ and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer&amp;nbsp;$d$.&lt;/li&gt;
+&lt;li&gt;$d$ is the inverse of $e$ modulo $( p - 1)( q - 1 )$. This means that $d$ is the number less than $( p - 1 ) ( q - 1 )$ such that when it is multiplied by e, it is equal to $1$ modulo $( p - 1 ) ( q - 1&amp;nbsp;)$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;example:&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; does not directly operate on strings as bits, it operates on numbers modulo (less than) $n$. and it is necessary to represent plain text as a series of numbers less than $n$. The dominant encoding on the internet is &lt;a href="https://en.wikipedia.org/wiki/UTF-8"&gt;&lt;span class="caps"&gt;UTF&lt;/span&gt;-8&lt;/a&gt;, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &amp;#8220;&lt;span class="caps"&gt;HELLO&lt;/span&gt;&amp;#8221; would become &amp;#8220;$72, 69, 76, 76,&amp;nbsp;79$&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;The maximum number $n$ needs to be the product of the two prime numbers $p$ and $q$. For this example choose $p = 7$ and $q = 13$, so $n  = 91$  &lt;sup id="fnref:5"&gt;&lt;a class="footnote-ref" href="#fn:5"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The public key component &lt;em&gt;e&lt;/em&gt; can be any number we choose,  as long as there is no number other than 1 which is a common factor of &lt;em&gt;e&lt;/em&gt; and $( p - 1 ) ( q - 1 )$. In our example, this requires that there be no common factor between 72 and e other than 1, so let &lt;em&gt;e&lt;/em&gt; $=&amp;nbsp;5$.&lt;/p&gt;
+&lt;p&gt;Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime&amp;nbsp;numbers.&lt;/p&gt;
+&lt;p&gt;Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key $d$, which is&amp;nbsp;29.&lt;/p&gt;
+&lt;p&gt;Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;system.&lt;/p&gt;
+&lt;h3&gt;Encoding&lt;/h3&gt;
+&lt;p&gt;To encode a letter H in a message (&amp;#8216;H&amp;#8217; is $72$ in &lt;span class="caps"&gt;UTF&lt;/span&gt;-8), we need to multiply it by itself $e$ times ($e = 5$), remembering to wrap around each time we pass our maximum value of $n =&amp;nbsp;91$.&lt;/p&gt;
+&lt;p&gt;$72 \times 72 = 5184, 5184 / 91 = 56$ with $88$ remaining, (i.e. $5184 = 91 \times 56 + 88$). Therefore:
+$72 \times 72 = 5184 = 88$
+$88 \times 72 = 6336 = 57$
+$57 \times 72 = 4104 = 9$
+$9 \times 72 = 648 =&amp;nbsp;11$&lt;/p&gt;
+&lt;p&gt;Therefore the encrypted value of &amp;#8220;H&amp;#8221; is&amp;nbsp;&amp;#8220;$11$&amp;#8221;&lt;/p&gt;
+&lt;p&gt;Using the method for each character in the message &amp;#8220;&lt;span class="caps"&gt;HELLO&lt;/span&gt;&amp;#8221; results in the encoded message&amp;nbsp;&amp;#8220;\$11,62,20,20,53\$&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;To decrypt the message, we take each number and multiply it by itself $d$ times, ($d=29$) wrapping around each time we pass&amp;nbsp;$91$.&lt;/p&gt;
+&lt;p&gt;$11 \times 11 = 121 = 30$
+$30 \times 11 = 330 = 57$
+&amp;#8230;
+$57 \times 11 = 627 = 81$
+$81 \times 11 = 891 =&amp;nbsp;72$&lt;/p&gt;
+&lt;p&gt;And we&amp;#8217;re back to our original&amp;nbsp;encoding.&lt;/p&gt;
+&lt;h2&gt;Files&lt;/h2&gt;
+&lt;p&gt;The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded &lt;a href="RSA-Example.xlsx"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A simple python script to encrypt and decrypt a message is &lt;a href="AES_Example.py"&gt;here&lt;/a&gt;. It uses the &lt;span class="caps"&gt;AES&lt;/span&gt; encryption&amp;nbsp;method.&lt;/p&gt;
+&lt;h3&gt;Footnotes&lt;/h3&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I used the explanations &lt;a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm"&gt;here&lt;/a&gt; and &lt;a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/"&gt;here&lt;/a&gt; a lot.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;A simple example is $A=1, B=2$ etc&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Eratosthenes invented his famous &lt;a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"&gt;sieving algorithm&lt;/a&gt; which finds all the primes up to a given limit.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;If this is the case then e and ( p - 1) ( q - 1 ) are called &amp;#8220;coprime&amp;#8221;&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I&amp;#8217;ve used the same numbers in the following example as in the tutorials &lt;a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm"&gt;here&lt;/a&gt; and &lt;a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/"&gt;here&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Disintermediation"></category><category term="Encryption"></category><category term="RSA"></category><category term="DLT"></category><category term="Blockchains"></category><category term="Bitcoin"></category><category term="Digital Currencies"></category><category term="Public Key Cryptography"></category></entry></feed>
