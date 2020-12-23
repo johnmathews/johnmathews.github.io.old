@@ -1897,7 +1897,28 @@ video {
   overflow-wrap: break-word;
 }
 
+.markdown p img {
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+  border-radius: 0.125rem;
+  border-style: solid;
+  border-width: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.markdown p img:first-child {
+  margin-top: 2.5rem;
+}
+
+.markdown p img:last-child {
+  margin-bottom: 2.5rem;
+}
+
 .markdown p {
+  font-weight: 300;
   margin-top: 0px;
   margin-bottom: 1rem;
 }
@@ -1926,7 +1947,7 @@ video {
 }
 
 .markdown strong a {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .markdown h1 {
@@ -1937,6 +1958,7 @@ video {
   line-height: 1.25;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
@@ -1947,7 +1969,7 @@ video {
   line-height: 2rem;
   line-height: 1.25;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   padding-bottom: 0.5rem;
 }
 
