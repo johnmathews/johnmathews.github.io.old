@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - btc-core</title><link href="/" rel="alternate"></link><link href="feeds/btc-core.tag.atom.xml" rel="self"></link><id>/</id><updated>2018-10-13T20:34:00+02:00</updated><entry><title>Sync a BTC node, quickly</title><link href="sync-bitcoin-core-node.html" rel="alternate"></link><published>2018-10-13T20:34:00+02:00</published><updated>2018-10-13T20:34:00+02:00</updated><author><name>John Mathews</name></author><id>tag:None,2018-10-13:sync-bitcoin-core-node.html</id><summary type="html">&lt;p&gt;Sync a &lt;span class="caps"&gt;BTC&lt;/span&gt; node for the first time, quickly, on a spinning disk by moving chainstate to an &lt;span class="caps"&gt;SSD&lt;/span&gt; and symlinking to&amp;nbsp;it.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In order to run your own bitcoin node, or lightning node, you&amp;#8217;ll need to
-download the entire bitcoin blockchain and then validate it. This takes ages on
-a magnetic disk due to the random access speed of the contents of the
-chainstate&amp;nbsp;directory.&lt;/p&gt;
-&lt;p&gt;To remove this bottleneck, move the chainstate directory to an &lt;span class="caps"&gt;SSD&lt;/span&gt; (its only
-a few &lt;span class="caps"&gt;GB&lt;/span&gt;) and symlink to it from the bitcoin data directory. More details are
-&lt;a href="https://en.bitcoin.it/wiki/Splitting_the_data_directory"&gt;on the Bitcoin wiki&lt;/a&gt;.
-When the sync is complete, replace the symlink with the actual chainstate&amp;nbsp;directory.&lt;/p&gt;</content><category term="Disintermediation"></category><category term="Bitcoin"></category><category term="btc-core"></category><category term="Blockchain"></category><category term="Node"></category></entry></feed>
