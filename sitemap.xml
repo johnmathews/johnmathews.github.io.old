@@ -4,29 +4,36 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://johnmathews.eu/blogaroo</loc>
-<lastmod>2020-12-23T22:10:48-00:00</lastmod>
+<loc>https://johnmathews.eu/blog</loc>
+<lastmod>2020-12-23T23:59:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2020-12-23T22:10:48-00:00</lastmod>
+<lastmod>2020-12-23T23:59:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2020-12-23T22:10:48-00:00</lastmod>
+<lastmod>2020-12-23T23:59:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2020-12-23T22:10:48-00:00</lastmod>
+<lastmod>2020-12-23T23:59:27-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/demo.html</loc>
+<lastmod>2020-12-23T17:36:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -427,6 +434,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>https://johnmathews.eu/ubersicht-widget-time-since.html</loc>
 <lastmod>2016-07-30T13:29:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/category/articles.html</loc>
+<lastmod>2020-12-23T17:36:00+00:20</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -1391,7 +1405,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/author/john-mathews.html</loc>
-<lastmod>2020-12-18T14:37:00+00:20</lastmod>
+<lastmod>2020-12-23T17:36:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

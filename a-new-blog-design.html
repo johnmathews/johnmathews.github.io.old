@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews" />
       <meta name="twitter:creator" content="@johnmathews" />
 
-      <meta name="description" content="We have a new blog design! This blog was my first ever project using HTML and CSS, and the code was terrible. It was poorly written and therefore harder to maintain. I’ve learnt a lot about web..." />
-      <meta name="twitter:description" content="We have a new blog design! This blog was my first ever project using HTML and CSS, and the code was terrible. It was poorly written and therefore harder to maintain. I’ve learnt a lot about web..." />
-      <meta property="og:description" content="We have a new blog design! This blog was my first ever project using HTML and CSS, and the code was terrible. It was poorly written and therefore harder to maintain. I’ve learnt a lot about web..." />
+      <meta name="description" content="We have a new blog design! This blog was my first ever project using HTML and CSS, and the code was terrible. It was poorly written and hard to maintain. I’ve learnt a lot about web development..." />
+      <meta name="twitter:description" content="We have a new blog design! This blog was my first ever project using HTML and CSS, and the code was terrible. It was poorly written and hard to maintain. I’ve learnt a lot about web development..." />
+      <meta property="og:description" content="We have a new blog design! This blog was my first ever project using HTML and CSS, and the code was terrible. It was poorly written and hard to maintain. I’ve learnt a lot about web development..." />
 
       <meta property="og:url" content="https://johnmathews.eu/a-new-blog-design.html" />
       <meta property="twitter:url" content="https://johnmathews.eu/a-new-blog-design.html" />
@@ -63,11 +63,9 @@
 
   <body>
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-green-500 text-xl">
+    <nav class="text-xl top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
-        <a href="https://johnmathews.eu/blogaroo" class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3">
-          JohnMathews.eu
-        </a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
       </div>
       <div class="flex md:hidden">
         <button id="hamburger">
@@ -98,9 +96,9 @@
       </div>
 
       <div class="markdown">
-        <p>We have a new blog design! This blog was my first ever project using <span class="caps">HTML</span> and <span class="caps">CSS</span>, and the code was terrible. It was poorly written and therefore harder to&nbsp;maintain. </p>
+        <p>We have a new blog design! This blog was my first ever project using <span class="caps">HTML</span> and <span class="caps">CSS</span>, and the code was terrible. It was poorly written and hard to&nbsp;maintain.</p>
 <p>I&#8217;ve learnt a lot about web development this year, and what was once difficult and confusing has become intuitive and familiar. I wanted to update the blog so that it would be easy and fun to use. I want to be able to play with it quickly and efficiently if&nbsp;necessary.</p>
-<p>I haven&#8217;t chosen a radical redesign, I like that the focus is on text and I&#8217;m not trying to show off any on-trend design choices. I want a design that will work for many years. But the <span class="caps">HTML</span> is easier to read, and instead of using <code>Bootstrap v3</code> I&#8217;m using the more intuitive <code>Tailwind v2.0</code>. I hope that I&#8217;ll be writing here more regularly over the next few&nbsp;months.</p>
+<p>I&#8217;m not aiming a radical re-design, I like that the focus is on text and I&#8217;m not exploring any on-trend design choices. I want a design that will work for many years. The main changes are that the <span class="caps">HTML</span> is easier to read, and instead of using <code>Bootstrap v3</code> I&#8217;m using the more intuitive <code>Tailwind v2.0</code>. I hope that I&#8217;ll be writing here more regularly over the next few&nbsp;months.</p>
 <p>It&#8217;s been a busy year and there are posts to be&nbsp;written!</p>
       </div>
 
@@ -110,6 +108,10 @@
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
               <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/product-led-growth.html"> Product-Led&nbsp;Growth</a>
+            </div>
+            <div class="flex flex-row">
+              <div class="text-green-500"> &#x2192; </div>
+              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/demo.html"> Demo</a> 
             </div>
         </div>
 
@@ -165,7 +167,7 @@
 
     <div class="footer">
       <div class="text-center py-3">
-        <a href="https://johnmathews.eu/blogaroo">Blog Posts</a> |
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
         <a href="#top">Back to top</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>

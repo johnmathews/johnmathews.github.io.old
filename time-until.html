@@ -63,11 +63,9 @@
 
   <body>
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-green-500 text-xl">
+    <nav class="text-xl top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
-        <a href="https://johnmathews.eu/blogaroo" class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3">
-          JohnMathews.eu
-        </a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
       </div>
       <div class="flex md:hidden">
         <button id="hamburger">
@@ -98,8 +96,7 @@
       </div>
 
       <div class="markdown">
- <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
-<p>Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a …</p>         <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
+        <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
 <p>Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a pragmatic engineer, it seemed clear to me what the next widget should do: If my first widget calculated the time since an event, the next should calculate the time until an event. I set out to create the companion to &#8220;Time Since&#8221; and
 improve upon the underlying&nbsp;code.</p>
 <p>My first code design choice was to cut out the use of an Apple Script and calculated everything in one CoffeeScript file. It would be more efficient and easier to&nbsp;read.</p>
@@ -190,7 +187,7 @@ the months between the 2 dates (feature 1), and it contains a function to plura
 
     <div class="footer">
       <div class="text-center py-3">
-        <a href="https://johnmathews.eu/blogaroo">Blog Posts</a> |
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
         <a href="#top">Back to top</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
