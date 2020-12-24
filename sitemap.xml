@@ -4,29 +4,29 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://johnmathews.eu/201</loc>
-<lastmod>2020-12-24T11:25:16-00:00</lastmod>
+<loc>https://johnmathews.eu/foo</loc>
+<lastmod>2020-12-24T11:42:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2020-12-24T11:25:16-00:00</lastmod>
+<lastmod>2020-12-24T11:42:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2020-12-24T11:25:16-00:00</lastmod>
+<lastmod>2020-12-24T11:42:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2020-12-24T11:25:16-00:00</lastmod>
+<lastmod>2020-12-24T11:42:54-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
