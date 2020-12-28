@@ -63,7 +63,7 @@
 
   <body>
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="text-xl top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+    <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/foo">JohnMathews.eu</a>
       </div>
@@ -79,25 +79,34 @@
       </div>
     </nav>
 
-    <main class="md:mt-20 md:pt-5">
+    <main class="lg:mt-20 lg:pt-5">
+  <div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md">
+          <img class="lg:mx-auto" src="/images/lightning_sticker.jpg" alt="I got lightning working but all i got was this sticker" />
 
-  <div class="mx-auto max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
-          <img class="mx-auto" src="/images/lightning_sticker.jpg" alt="I got lightning working but all i got was this sticker" />
-
-      <div class="markdown">
+      <div class="markdown text-center">
         <h1> Bitcoin&nbsp;Lightning </h1>
       </div>
 
-      <div class="py-1 text-gray-700 font-bold">
+      <div class="py-1 text-gray-700 font-bold text-center">
         By John Mathews
       </div>
 
-      <div class="font-light text-gray-600 pb-5">
+      <div class="py-1 text-gray-700 font-bold text-center">
+        Category:
+          <a href="https://johnmathews.eu/category/technical/cryptocurrencies.html">Cryptocurrencies</a>
+          
+      </div>
+
+      <div class="font-light text-gray-600 pb-5 text-center">
         January 2019
       </div>
 
+        <div class="markdown">
+          <p>I set up a  node on the Bitcoin Lightning network and sent a payment of $0.005 which confirmed in a few&nbsp;seconds.</p>
+        </div>
+
       <div class="markdown">
- <p>I set up a  node on the Bitcoin Lightning network and sent a payment of $0.005 which confirmed in a few&nbsp;seconds.</p>         <p>One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&nbsp;Mastercard. </p>
+        <p>One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&nbsp;Mastercard. </p>
 <p>The most interesting solution to this problem is the <a href="https://lightning.network/">Lightning protocol</a> - a separate protocol that sits ontop of the Bitcoin protocol (a so-called &#8216;Layer 2&#8217; solution). Lightning uses hashed time locked contracts (HTLCs) to trustlessly and privately move transactions off-chain. This allows payments to be faster, cheaper and more frequent. It also has interesting implications for enhancing&nbsp;privacy. </p>
 <p>There are a lot of resources about what the Lightning network is, why it&#8217;s neccesary and how it works. There are also several good guides available about how to set up and maintain a node. I used a Raspberry Pi with an external hdd. It took a few attempts, mostly because it&#8217;s my first time working with an unix operating system and I tried to move a swap file to a disk that wasnt formmated as&nbsp;ext4&#8230; </p>
 <p>Anyway, I&#8217;ve opened and closed some channels, connected to peers, and made some transactions. I even bought some stickers using&nbsp;Lightning!</p>
@@ -123,10 +132,6 @@ Port: <span class="m">9735</span>
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
               <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/sync-bitcoin-core-node.html"> Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a>
-            </div>
-            <div class="flex flex-row">
-              <div class="text-green-500"> &#x2192; </div>
-              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/shell.html"> A faster&nbsp;shell</a> 
             </div>
         </div>
 
@@ -184,6 +189,7 @@ Port: <span class="m">9735</span>
       <div class="text-center py-3">
         <a href="https://johnmathews.eu/foo">Blog Posts</a> |
         <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </div>

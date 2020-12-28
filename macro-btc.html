@@ -63,7 +63,7 @@
 
   <body>
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="text-xl top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+    <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/foo">JohnMathews.eu</a>
       </div>
@@ -79,25 +79,34 @@
       </div>
     </nav>
 
-    <main class="md:mt-20 md:pt-5">
+    <main class="lg:mt-20 lg:pt-5">
+  <div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md">
+          <img class="lg:mx-auto" src="/images/btc_board.jpg" alt="bitcoin" />
 
-  <div class="mx-auto max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
-          <img class="mx-auto" src="/images/btc_board.jpg" alt="bitcoin" />
-
-      <div class="markdown">
+      <div class="markdown text-center">
         <h1> Macro analysis of the Bitcoin&nbsp;blockchain </h1>
       </div>
 
-      <div class="py-1 text-gray-700 font-bold">
+      <div class="py-1 text-gray-700 font-bold text-center">
         By John Mathews
       </div>
 
-      <div class="font-light text-gray-600 pb-5">
+      <div class="py-1 text-gray-700 font-bold text-center">
+        Category:
+          <a href="https://johnmathews.eu/category/technical/data.html">Data</a>
+          
+      </div>
+
+      <div class="font-light text-gray-600 pb-5 text-center">
         August 2017
       </div>
 
+        <div class="markdown">
+          <p>The number of unconfirmed transactions on the Bitcoin blockchain spiked in May 2017. Attempting to identify why led to an analysis of several key performance metrics for the&nbsp;network</p>
+        </div>
+
       <div class="markdown">
- <p>The number of unconfirmed transactions on the Bitcoin blockchain spiked in May 2017. Attempting to identify why led to an analysis of several key performance metrics for the&nbsp;network</p>         <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+        <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><p><p><div class="lev1 toc-item"><a href="#Unconfirmed-transactions" data-toc-modified-id="Unconfirmed-transactions-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Unconfirmed transactions</a></div><div class="lev1 toc-item"><a href="#Median-transaction-confirmation-time-(minutes)" data-toc-modified-id="Median-transaction-confirmation-time-(minutes)-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Median transaction confirmation time (minutes)</a></div><div class="lev1 toc-item"><a href="#Average-block-size-(daily,-MB)" data-toc-modified-id="Average-block-size-(daily,-MB)-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Average block size (daily, <span class="caps">MB</span>)</a></div><div class="lev1 toc-item"><a href="#Average-number-of-transactions-per-(1MB)-block" data-toc-modified-id="Average-number-of-transactions-per-(1MB)-block-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Average number of transactions per (<span class="caps">1MB</span>) block</a></div><div class="lev1 toc-item"><a href="#Transaction-fees-earned-by-miners-each-day" data-toc-modified-id="Transaction-fees-earned-by-miners-each-day-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Transaction fees earned by miners each day</a></div><div class="lev1 toc-item"><a href="#Ratio-of-transaction-fees-to-transaction-volume" data-toc-modified-id="Ratio-of-transaction-fees-to-transaction-volume-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Ratio of transaction fees to transaction volume</a></div><div class="lev1 toc-item"><a href="#Number-of-transactions-per-day" data-toc-modified-id="Number-of-transactions-per-day-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Number of transactions per day</a></div><div class="lev1 toc-item"><a href="#Bitcoin-price" data-toc-modified-id="Bitcoin-price-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Bitcoin price</a></div><div class="lev1 toc-item"><a href="#Ratio-of-unique-addresses-to-transactions" data-toc-modified-id="Ratio-of-unique-addresses-to-transactions-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Ratio of unique addresses to transactions</a></div><div class="lev1 toc-item"><a href="#Correlation-between-each-time-series" data-toc-modified-id="Correlation-between-each-time-series-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Correlation between each time series</a></div></p>
@@ -1610,11 +1619,11 @@ valType:"boolean",dflt:!0},target:{valType:"string",strict:!0,noBlank:!0,arrayOk
         <div class="mb-10 prose prose-lg hover:text-red-500">
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
-              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/corporate.html"> Corporate&nbsp;London</a>
+              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/books.html"> Analysing a personal&nbsp;library</a>
             </div>
             <div class="flex flex-row">
               <div class="text-green-500"> &#x2192; </div>
-              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html"> Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a> 
+              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/algo-trading.html"> Trading digital&nbsp;assets</a>
             </div>
         </div>
 
@@ -1672,6 +1681,7 @@ valType:"boolean",dflt:!0},target:{valType:"string",strict:!0,noBlank:!0,arrayOk
       <div class="text-center py-3">
         <a href="https://johnmathews.eu/foo">Blog Posts</a> |
         <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </div>

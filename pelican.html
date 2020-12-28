@@ -63,7 +63,7 @@
 
   <body>
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="text-xl top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+    <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/foo">JohnMathews.eu</a>
       </div>
@@ -79,25 +79,34 @@
       </div>
     </nav>
 
-    <main class="md:mt-20 md:pt-5">
+    <main class="lg:mt-20 lg:pt-5">
+  <div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md">
+          <img class="lg:mx-auto" src="/images/get_pelican.jpg" alt="Pelican" />
 
-  <div class="mx-auto max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
-          <img class="mx-auto" src="/images/get_pelican.jpg" alt="Pelican" />
-
-      <div class="markdown">
+      <div class="markdown text-center">
         <h1> Blogging with&nbsp;Pelican </h1>
       </div>
 
-      <div class="py-1 text-gray-700 font-bold">
+      <div class="py-1 text-gray-700 font-bold text-center">
         By John Mathews
       </div>
 
-      <div class="font-light text-gray-600 pb-5">
+      <div class="py-1 text-gray-700 font-bold text-center">
+        Category:
+          <a href="https://johnmathews.eu/category/technical/web.html">Web</a>
+          
+      </div>
+
+      <div class="font-light text-gray-600 pb-5 text-center">
         April 2017
       </div>
 
+        <div class="markdown">
+          <p>I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn <span class="caps">HTML</span>, <span class="caps">CSS</span>, Jinja templates and&nbsp;Git.</p>
+        </div>
+
       <div class="markdown">
- <p>I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn <span class="caps">HTML</span>, <span class="caps">CSS</span>, Jinja templates and&nbsp;Git.</p>         <p>When I began blogging in 2016, I became more aware of how blogs are designed. Many of my favorting blogs had simple designs which made it easier to focus on the content, and they loaded really fast. (E.g.  <a href="https://unwiredcouch.com">unwiredcouch.com</a> and <a href="https://www.curiousgnu.com">CuriousGnu</a>). I wanted this for my blog, too. I&#8217;d used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on its design and functionality. I wanted to have control over my blog&#8217;s&nbsp;features. </p>
+        <p>When I began blogging in 2016, I became more aware of how blogs are designed. Many of my favorting blogs had simple designs which made it easier to focus on the content, and they loaded really fast. (E.g.  <a href="https://unwiredcouch.com">unwiredcouch.com</a> and <a href="https://www.curiousgnu.com">CuriousGnu</a>). I wanted this for my blog, too. I&#8217;d used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on its design and functionality. I wanted to have control over my blog&#8217;s&nbsp;features. </p>
 <p>This led me to static sites which contain only fixed content and are faster to load and easier to design than one built using a dynamic blogging platform such as Wordpress. Because I was already familiar with Python I chose <a href="https://blog.getpelican.com/">Pelican</a> rather than another static site generator such as&nbsp;Jekyll.</p>
 <p>There are plenty of sites to tell you how to start blogging in Pelican, so here I will focus on my experience after the initial set-up. When I was learning how to begin, I found <a href="http://mathamy.com/migrating-to-github-pages-using-pelican.html">Amy Hanlons</a> blog particularly useful and&nbsp;clear.</p>
 <h2>The learning&nbsp;curve</h2>
@@ -141,11 +150,11 @@
         <div class="mb-10 prose prose-lg hover:text-red-500">
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
-              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/books.html"> Analysing a personal&nbsp;library</a>
+              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/time-until.html"> Übersicht widget: Time&nbsp;Until</a>
             </div>
             <div class="flex flex-row">
               <div class="text-green-500"> &#x2192; </div>
-              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/aeternity-ico.html"> The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a> 
+              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/pelican2.html"> Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a>
             </div>
         </div>
 
@@ -203,6 +212,7 @@
       <div class="text-center py-3">
         <a href="https://johnmathews.eu/foo">Blog Posts</a> |
         <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </div>

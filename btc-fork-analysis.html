@@ -63,7 +63,7 @@
 
   <body>
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="text-xl top-0 w-full md:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+    <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/foo">JohnMathews.eu</a>
       </div>
@@ -79,25 +79,34 @@
       </div>
     </nav>
 
-    <main class="md:mt-20 md:pt-5">
+    <main class="lg:mt-20 lg:pt-5">
+  <div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md">
+          <img class="lg:mx-auto" src="/images/btc_board.jpg" alt="bitcoin" />
 
-  <div class="mx-auto max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
-          <img class="mx-auto" src="/images/btc_board.jpg" alt="bitcoin" />
-
-      <div class="markdown">
+      <div class="markdown text-center">
         <h1> Analysis of the mean and median value of transactions on 5&nbsp;Blockchains </h1>
       </div>
 
-      <div class="py-1 text-gray-700 font-bold">
+      <div class="py-1 text-gray-700 font-bold text-center">
         By John Mathews
       </div>
 
-      <div class="font-light text-gray-600 pb-5">
+      <div class="py-1 text-gray-700 font-bold text-center">
+        Category:
+          <a href="https://johnmathews.eu/category/technical/data.html">Data</a>
+          
+      </div>
+
+      <div class="font-light text-gray-600 pb-5 text-center">
         September 2019
       </div>
 
+        <div class="markdown">
+          <p>Comparing the daily mean and median value of on-chain transactions gives an indication of the extent of organic blockchain use. Comparing the mean-median ratio (<span class="caps">MMR</span>) across different Bitcoin forks shows that Bitcoin (<span class="caps">BTC</span>) is the least influenced by&nbsp;&#8220;whales&#8221;.</p>
+        </div>
+
       <div class="markdown">
- <p>Comparing the daily mean and median value of on-chain transactions gives an indication of the extent of organic blockchain use. Comparing the mean-median ratio (<span class="caps">MMR</span>) across different Bitcoin forks shows that Bitcoin (<span class="caps">BTC</span>) is the least influenced by&nbsp;&#8220;whales&#8221;.</p>         <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+        <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This analysis was prepared for <a href="https://coinmetrics.io/">Coin Metrics</a> as part of their recruitment process. It is a short demonstration of my thought process. The additional steps required to develop this into a useful analysis are also&nbsp;discussed.</p>
@@ -946,11 +955,7 @@ differences between each chain and differences bewtween time&nbsp;frames.</p>
         <div class="mb-10 prose prose-lg hover:text-red-500">
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
-              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/shell.html"> A faster&nbsp;shell</a>
-            </div>
-            <div class="flex flex-row">
-              <div class="text-green-500"> &#x2192; </div>
-              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/between-clients.html"> Between&nbsp;Clients</a> 
+              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/algo-trading.html"> Trading digital&nbsp;assets</a>
             </div>
         </div>
 
@@ -1008,6 +1013,7 @@ differences between each chain and differences bewtween time&nbsp;frames.</p>
       <div class="text-center py-3">
         <a href="https://johnmathews.eu/foo">Blog Posts</a> |
         <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </div>
