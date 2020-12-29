@@ -22,24 +22,33 @@
       <meta name="twitter:description" content="zsh was loading significantly slower than bash, so I used profiling to see what was slowing things down" />
       <meta property="og:description" content="zsh was loading significantly slower than bash, so I used profiling to see what was slowing things down" />
 
-      <meta property="og:url" content="./shell.html" />
-      <meta property="twitter:url" content="./shell.html" />
+      <meta property="og:url" content="https://johnmathews.eu/shell.html" />
+      <meta property="twitter:url" content="https://johnmathews.eu/shell.html" />
 
-      <meta name="twitter:image" content=" .//images/zsh_order_blind_profiling.jpg" />
-      <meta property="og:image" content=" .//images/zsh_order_blind_profiling.jpg" />
+      <meta name="twitter:image" content=" https://johnmathews.eu//images/zsh_order_blind_profiling.jpg" />
+      <meta property="og:image" content=" https://johnmathews.eu//images/zsh_order_blind_profiling.jpg" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta name="twitter:domain" content="https://johnmathews.eu" />
 
       <meta property="og:type" content="article" />
 
-      <link rel="icon" href="./favicon.png" />
+      <link rel="icon" href="https://johnmathews.eu/favicon.png" />
 
+        <script>
+          window.ga = window.ga || function () {
+                      (ga.q = ga.q || []).push(arguments);
+                    };
+                    ga.l = +new Date();
+                    ga("create", "UA-82253540-1", "auto");
+                    ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
 
       <script async src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-      <link href="./theme/css/styles.css" rel="stylesheet" />
-      <link href="./theme/css/pygment.css" rel="stylesheet" />
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" />
+      <link href="https://johnmathews.eu/theme/css/pygment.css" rel="stylesheet" />
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -56,7 +65,7 @@
     <a class="pt-20 mt-20 " name="top"></a>
     <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="./foo">JohnMathews.eu</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/foo">JohnMathews.eu</a>
       </div>
       <div class="flex md:hidden">
         <button id="hamburger">
@@ -65,8 +74,8 @@
         </button>
       </div>
       <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="./about">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="./experience">Experience</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
       </div>
     </nav>
 
@@ -84,7 +93,7 @@
 
       <div class="py-1 text-gray-700 font-bold text-center">
         Category:
-          <a href="./category/technical/developer-tools.html">Developer Tools</a>
+          <a href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
           
       </div>
 
@@ -107,13 +116,13 @@ just an executable and can be treated as&nbsp;such.</p>
 </pre></div>
 
 
-<p><img alt="zsh profile" src="./images/zsh_startup_speed.jpg"></p>
+<p><img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed.jpg"></p>
 <p>This shows that it takes 0.84 seconds to start <code>zsh</code> - not terrible, but not&nbsp;great:</p>
 <p>You can compare the performance of different shells by replacing <code>$SHELL</code> with
 <code>zsh</code>, <code>bash</code>, <code>fish</code> etc.</p>
 <p>Here are the results if I used <code>BASH</code> instead of <code>zsh</code> - 9.3x faster! (but
 without useful tools and plugins):
-<img alt="bash profile" src="./images/bash_startup_speed.jpg"></p>
+<img alt="bash profile" src="https://johnmathews.eu/images/bash_startup_speed.jpg"></p>
 <p>Now that I can measure how long it takes to start, it would be useful to know
 which proccesses are causing the greatest delays. This could be done with
 something like <code>zsh -xv</code> which enables verbose output and xtrace. This creates
@@ -121,13 +130,13 @@ a tonne of output, but doesnt inlcude timestamps. All I really want is
 a summary of how much time each subproccess required to run, i.e. an order blind&nbsp;profiler.</p>
 <p>Add <code>zmodload zsh/zprof</code> at the start of <code>.zshrc</code> and <code>zprof</code> at the very end.
 Now when I start <code>zsh</code> I see the&nbsp;following:</p>
-<p><img alt="zsh startup components" src="./images/zsh_order_blind_profiling.jpg"></p>
+<p><img alt="zsh startup components" src="https://johnmathews.eu/images/zsh_order_blind_profiling.jpg"></p>
 <p>Next steps - make virtualenvwrapper run faster, or asyncronously, or
 not at&nbsp;all&#8230;</p>
 <p>Update:
 <code>virtualenvwrapper</code> is the biggest cause of slow loading. Using the <a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">lazy
 loadin</a> option decreased loading time by&nbsp;0.3s</p>
-<p><img alt="zsh profile" src="./images/zsh_startup_speed_lazy_load.jpg"></p>
+<p><img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"></p>
       </div>
 
       <div class="border border-gray-300 mt-10 mb-10"></div>
@@ -135,7 +144,7 @@ loadin</a> option decreased loading time by&nbsp;0.3s</p>
         <div class="mb-10 prose prose-lg hover:text-red-500">
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
-              <a class="px-1 hover:text-green-700" href="./rys-git-tutorial.html"> Ry&#8217;s Git&nbsp;Tutorial</a>
+              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/rys-git-tutorial.html"> Ry&#8217;s Git&nbsp;Tutorial</a>
             </div>
         </div>
 
@@ -168,15 +177,32 @@ loadin</a> option decreased loading time by&nbsp;0.3s</p>
         <!--End mc_embed_signup-->
       </div>
 
+         <div class="mt-10" id="disqus_thread"></div>
+          <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            var disqus_config = function () {
+            this.page.url = "https://johnmathews.eu/shell.html";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "shell.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnmathews.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
       </div>
     </main>
 
     <div class="footer">
       <div class="text-center py-3">
-        <a href="./foo">Blog Posts</a> |
+        <a href="https://johnmathews.eu/foo">Blog Posts</a> |
         <a href="#top">Back to top</a> |
-        <a href="./categories">Categories</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </div>
