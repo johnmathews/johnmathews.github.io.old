@@ -22,33 +22,24 @@
       <meta name="twitter:description" content="My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds." />
       <meta property="og:description" content="My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds." />
 
-      <meta property="og:url" content="https://johnmathews.eu/pelican2.html" />
-      <meta property="twitter:url" content="https://johnmathews.eu/pelican2.html" />
+      <meta property="og:url" content="./pelican2.html" />
+      <meta property="twitter:url" content="./pelican2.html" />
 
-      <meta name="twitter:image" content=" https://johnmathews.eu//images/get_pelican.jpg" />
-      <meta property="og:image" content=" https://johnmathews.eu//images/get_pelican.jpg" />
+      <meta name="twitter:image" content=" .//images/get_pelican.jpg" />
+      <meta property="og:image" content=" .//images/get_pelican.jpg" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta name="twitter:domain" content="https://johnmathews.eu" />
 
       <meta property="og:type" content="article" />
 
-      <link rel="icon" href="https://johnmathews.eu/favicon.png" />
+      <link rel="icon" href="./favicon.png" />
 
-        <script>
-          window.ga = window.ga || function () {
-                      (ga.q = ga.q || []).push(arguments);
-                    };
-                    ga.l = +new Date();
-                    ga("create", "UA-82253540-1", "auto");
-                    ga("send", "pageview");
-        </script>
-        <script async src="https://www.google-analytics.com/analytics.js"></script>
 
       <script async src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" />
-      <link href="https://johnmathews.eu/theme/css/pygment.css" rel="stylesheet" />
+      <link href="./theme/css/styles.css" rel="stylesheet" />
+      <link href="./theme/css/pygment.css" rel="stylesheet" />
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -65,7 +56,7 @@
     <a class="pt-20 mt-20 " name="top"></a>
     <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/foo">JohnMathews.eu</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="./foo">JohnMathews.eu</a>
       </div>
       <div class="flex md:hidden">
         <button id="hamburger">
@@ -74,8 +65,8 @@
         </button>
       </div>
       <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="./about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="./experience">Experience</a>
       </div>
     </nav>
 
@@ -93,7 +84,7 @@
 
       <div class="py-1 text-gray-700 font-bold text-center">
         Category:
-          <a href="https://johnmathews.eu/category/technical/web.html">Web</a>
+          <a href="./category/technical/web.html">Web</a>
           
       </div>
 
@@ -159,7 +150,7 @@
 </pre></div>
 
 
-<p>There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making <a href="https://johnmathews.eu/time-until.html">Time Until</a>.</p>
+<p>There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making <a href="./time-until.html">Time Until</a>.</p>
 <h2>Specifying the text and image in a Facebook&nbsp;share</h2>
 <p>Sharing to Facebook worked without any formatting problems, but it bugged me that the opening text of the article was being used in the preview that was shared to Facebook when I had a summary already prepared and that would be much more useful to potential readers. For some articles I also had an article image that I wanted to see being&nbsp;used. </p>
 <p>Googling revealed that I needed to use particular meta tags in the webpage&#8217;s header if I wanted to control what Facebook would pickup. Facebook uses the &#8220;open graph&#8221; standards so I would need the headers in my article pages to include the&nbsp;following: </p>
@@ -197,7 +188,7 @@
 <p>This allows you to reuse blocks multiple times and keep your templates&nbsp;tidy.</p>
 <p>Finally, when I was testing Facebook to see if the correct text or image was being picked up I was initially frustrated to see that the new tags were not having any effect. This is because Facebook crawls your site and saves what it finds. If you want it to take a fresh look at your page with its new meta tags, you need to tell Facebook to crawl the page again, using the <a href="https://developers.facebook.com/tools/debug/">Facebook linter/debugger</a>.  </p>
 <p>You can see the new sharing buttons below, please click them and see what&nbsp;happens!</p>
-<p>Note: My first article describing how I began to use Pelican is <a href="https://johnmathews.eu/pelican.html">here</a></p>
+<p>Note: My first article describing how I began to use Pelican is <a href="./pelican.html">here</a></p>
       </div>
 
       <div class="border border-gray-300 mt-10 mb-10"></div>
@@ -205,11 +196,11 @@
         <div class="mb-10 prose prose-lg hover:text-red-500">
             <div class="flex flex-row">
               <div class="text-red-500"> &#x2190;  </div>
-              <a class="px-1 hover:text-green-700" href="https://johnmathews.eu/pelican.html"> Blogging with&nbsp;Pelican</a>
+              <a class="px-1 hover:text-green-700" href="./pelican.html"> Blogging with&nbsp;Pelican</a>
             </div>
             <div class="flex flex-row">
               <div class="text-green-500"> &#x2192; </div>
-              <a class="text-left px-1 hover:text-green-700" href="https://johnmathews.eu/a-new-blog-design.html"> A New Blog&nbsp;Design</a>
+              <a class="text-left px-1 hover:text-green-700" href="./a-new-blog-design.html"> A New Blog&nbsp;Design</a>
             </div>
         </div>
 
@@ -242,32 +233,15 @@
         <!--End mc_embed_signup-->
       </div>
 
-         <div class="mt-10" id="disqus_thread"></div>
-          <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            var disqus_config = function () {
-            this.page.url = "https://johnmathews.eu/pelican2.html";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "pelican2.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://johnmathews.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
       </div>
     </main>
 
     <div class="footer">
       <div class="text-center py-3">
-        <a href="https://johnmathews.eu/foo">Blog Posts</a> |
+        <a href="./foo">Blog Posts</a> |
         <a href="#top">Back to top</a> |
-        <a href="https://johnmathews.eu/categories">Categories</a> |
+        <a href="./categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </div>
