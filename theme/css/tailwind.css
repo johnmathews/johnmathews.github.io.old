@@ -4,10 +4,12 @@
 /* make jupyter notebook cells and output scroll instead of overflow */
 .markdown .highlight {
 	overflow: scroll;
+  @apply dark:bg-gray-100 dark:text-gray-900;
 }
 
 .markdown .output_html {
 	overflow-x: scroll;
+  @apply dark:bg-gray-100 dark:text-gray-900;
 }
 
 .markdown .anchor-link {
@@ -15,6 +17,17 @@
 }
 
 /* output_html rendered_html output_subarea output_execute_result */
+.markdown .output_execute_result {
+  @apply dark:text-gray-900;
+}
+
+.markdown .output_subarea {
+  @apply dark:bg-gray-100;
+}
+
+.markdown .output_stdout pre {
+  @apply dark:text-gray-700;
+}
 
 /* Additional vertical padding used by kbd tag. */
 .py-05 {
@@ -59,7 +72,7 @@
 }
 
 .markdown a {
-  @apply text-blue-600 font-semibold;
+  @apply text-blue-600 dark:text-blue-300 font-semibold;
 }
 
 .markdown strong a {
@@ -91,11 +104,11 @@
 }
 
 .markdown blockquote {
-  @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600;
+  @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600 dark:text-gray-200;
 }
 
 .markdown code {
-  @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-05;
+  @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-05 dark:bg-gray-800;
 }
 
 .markdown pre {
@@ -132,7 +145,8 @@
 
 /* Override pygments style background color. */
 .markdown .highlight pre {
-  @apply bg-gray-100 !important;
+  @apply bg-gray-100 dark:bg-gray-100 dark:text-gray-700 !important;
+	overflow: scroll;
 }
 
 @tailwind utilities;
