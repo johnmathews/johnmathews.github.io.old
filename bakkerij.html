@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html id="baz" class="" lang="en">
   <head>
         <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -49,6 +49,11 @@
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" />
       <link href="https://johnmathews.eu/theme/css/pygment.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <script>
+          let theme = localStorage.getItem('theme');
+        </script>
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -76,6 +81,8 @@
       <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
+        <button class="pl-5 pr-3" id="theme-toggle" onclick="modeSwitcher()"><i class="fas fa-adjust fa-lg"></i>
+        </button>
       </div>
     </nav>
 
@@ -196,6 +203,25 @@
               navToggle.item(i).classList.toggle("hidden");
             }
           };
+        </script>
+
+        <script>
+          if (localStorage.getItem('theme') === "dark") {
+            document.getElementById("baz").classList.add("dark");
+          } else {
+            document.getElementById("baz").classList.remove("dark");
+            window.localStorage.setItem('theme', 'light');
+          }
+
+          function modeSwitcher() {
+            if (localStorage.getItem('theme') === "dark") {
+              window.localStorage.setItem('theme', 'light');
+              $( "#baz" ).removeClass( "dark" );
+            } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
+            }
+          }
         </script>
 
   <script>
