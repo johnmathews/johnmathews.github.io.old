@@ -4,7 +4,17 @@
 /* make jupyter notebook cells and output scroll instead of overflow */
 .markdown .highlight {
 	overflow: scroll;
-  @apply dark:bg-gray-100 dark:text-gray-900;
+  @apply dark:bg-gray-800 dark:text-gray-200;
+}
+
+/* Override pygments style background color. */
+.markdown .highlight pre {
+  @apply bg-gray-100 dark:bg-gray-800 dark:text-gray-200 text-sm ; 
+	overflow: scroll;
+}
+
+.markdown .highlight pre span {
+	@apply border-0 leading-5;
 }
 
 .markdown .output_html {
@@ -141,12 +151,6 @@
 
 .markdown td {
   @apply border py-1 px-3;
-}
-
-/* Override pygments style background color. */
-.markdown .highlight pre {
-  @apply bg-gray-100 dark:bg-gray-100 dark:text-gray-700 !important;
-	overflow: scroll;
 }
 
 @tailwind utilities;
