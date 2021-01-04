@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews" />
       <meta name="twitter:creator" content="@johnmathews" />
 
-      <meta name="description" content="As part of the redesign of this blog I wanted to make categories a more useful feature. My previous method was simply to pick a handful of categories and then assign a category to each post. This..." />
-      <meta name="twitter:description" content="As part of the redesign of this blog I wanted to make categories a more useful feature. My previous method was simply to pick a handful of categories and then assign a category to each post. This..." />
-      <meta property="og:description" content="As part of the redesign of this blog I wanted to make categories a more useful feature. My previous method was simply to pick a handful of categories and then assign a category to each post. This..." />
+      <meta name="description" content="As part of the redesign of this blog I wanted to make an article’s category more useful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This..." />
+      <meta name="twitter:description" content="As part of the redesign of this blog I wanted to make an article’s category more useful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This..." />
+      <meta property="og:description" content="As part of the redesign of this blog I wanted to make an article’s category more useful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This..." />
 
       <meta property="og:url" content="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" />
       <meta property="twitter:url" content="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" />
@@ -104,7 +104,7 @@
 
       <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
         Category:
-          <a href="https://johnmathews.eu/category/articles.html">articles</a>
+          <a href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
           
       </div>
 
@@ -114,25 +114,25 @@
 
 
       <div class="markdown dark:text-gray-200">
-        <p>As part of the redesign of this blog I wanted to make categories a more useful
-feature. My previous method was simply to pick a handful of categories and then
-assign a category to each&nbsp;post.</p>
-<p>This method becomes too simple when an article could be relevant to multiple
-categories. Also, using nested categories seems like a useful way of grouping
-similar categories and allowing more nuanced filtering of&nbsp;interests.</p>
+        <p>As part of the redesign of this blog I wanted to make an article&#8217;s category more useful.
+Previously, I simply picked a handful of categories and then
+assigned a single category to each&nbsp;post.</p>
+<p>This method becomes too simple when an article is relevant to multiple
+categories. Also, using nested categories seems like a good way of grouping
+similar categories, and allowing more nuanced filtering of&nbsp;interests.</p>
 <p>I realised this would be a good opportunity to use a few Unix utilities and
 practice finding patterns in text files, summarizing them and then updating the
 original files. Here is how I reviewed and updated the categories of my existing&nbsp;articles.</p>
 <p>I use Pelican to generate the static files for this site. It converts markdown
-into <span class="caps">HTML</span>, and meta data for each article is set at the beginning of an
-articles markdown file. The title is set by typing <code>Title: ...</code>, and similarly
+into <span class="caps">HTML</span>. Metadata for each article is set at the beginning of an
+file, the title is set by typing <code>Title: ...</code> and similarly
 the category is set by typing <code>Category: ...</code> on its own&nbsp;line.</p>
 <p>To locate, analyse and update my existing categories I would therefore need to
 find all the markdown files which have a row that begins with <code>Category:</code></p>
 <ul>
-<li><code>grep -h ‘Category:’ **/*.md</code> - Prints each search&nbsp;result. </li>
-<li><code>grep -h ‘Category:’ **/*.md | sort</code> - Prints and sorts each search&nbsp;result.</li>
-<li><code>grep -h ‘Category:’ **/*.md | sort | uniq -c</code> Prints and sorts each search
+<li><code>grep -h ‘Category:’ **/*.md</code> - prints each search&nbsp;result. </li>
+<li><code>grep -h ‘Category:’ **/*.md | sort</code> - prints and sorts each search&nbsp;result.</li>
+<li><code>grep -h ‘Category:’ **/*.md | sort | uniq -c</code> prints and sorts each search
 result, then counts how many occurrences of each unique result there&nbsp;are.</li>
 </ul>
 <p>I had some repeat results though because some rows had white space at the end,
@@ -214,6 +214,10 @@ Tools</code> I&nbsp;did:</p>
       <div class="border border-gray-300 mt-10 mb-10"></div>
 
         <div class="mb-10 text-lg dark:text-gray-200">
+            <div class="flex flex-row">
+              <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+              <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/shell.html"> A faster&nbsp;shell</a>
+            </div>
         </div>
 
       <div class="text-left">
