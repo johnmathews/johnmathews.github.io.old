@@ -117,9 +117,10 @@
         August 2016
       </div>
 
-
-      <div class="markdown dark:text-gray-200">
-        <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
+      <main>
+        <article>
+          <div class="markdown dark:text-gray-200">
+            <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
 <p>Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a pragmatic engineer, it seemed clear to me what the next widget should do: If my first widget calculated the time since an event, the next should calculate the time until an event. I set out to create the companion to &#8220;Time Since&#8221; and
 improve upon the underlying&nbsp;code.</p>
 <p>My first code design choice was to cut out the use of an Apple Script and calculated everything in one CoffeeScript file. It would be more efficient and easier to&nbsp;read.</p>
@@ -143,7 +144,9 @@ the months between the 2 dates (feature 1), and it contains a function to plura
 <p>The remaining features were added by using a combination of if statements and arrays. The if statements simply ask if an amount is equal to zero. If not, then it&#8217;s appended to an array of terms to include in the output. At the end of this code chunk it&#8217;s possible to ask how many non-zero terms to include in the output. An array with length one less than the number of output terms is created and filled with commas with an &#8216;and&#8217; in the final&nbsp;position.</p>
 <p>The two arrays are combined in the correct order by looping through the index of the longer array and appending each term to a final array. The final array is the&nbsp;output.</p>
 <p><em><span class="quo">&#8216;</span><a href="http://tracesof.net/uebersicht-widgets/#time_until">Time Until</a>&#8217;</em> can be downloaded from the <a href="http://tracesof.net/uebersicht/">Übersicht</a> <a href="http://tracesof.net/uebersicht-widgets/">widgets gallery</a>. I think another useful feature would be an option to specify the output only in terms of a chosen amount, such as weeks or days. Maybe I&#8217;ll do that in the&nbsp;future.</p>
-      </div>
+          </div>
+        </article>
+      </main>
 
       <div class="border border-gray-300 mt-10 mb-10"></div>
 
@@ -212,14 +215,14 @@ the months between the 2 dates (feature 1), and it contains a function to plura
       </div>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
       <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
         <a href="https://johnmathews.eu/blog">Blog Posts</a> |
         <a href="#top">Back to top</a> |
         <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
-    </div>
+    </footer>
 
     <div>
           <script>

@@ -117,12 +117,13 @@
         July 2017
       </div>
 
-        <div class="markdown dark:text-gray-200">
-          <p>An overview of the essential features of a blockchain, using proof-of-work for&nbsp;consensus</p>
-        </div>
-
-      <div class="markdown dark:text-gray-200">
-        <h2>Maintain an accurate list of transactions across a large group of users, without a central&nbsp;authority</h2>
+      <main>
+        <article>
+            <div class="markdown dark:text-gray-200">
+              <p>An overview of the essential features of a blockchain, using proof-of-work for&nbsp;consensus</p>
+            </div>
+          <div class="markdown dark:text-gray-200">
+            <h2>Maintain an accurate list of transactions across a large group of users, without a central&nbsp;authority</h2>
 <p>This is part 2 of an introduction to the key features of a generalised blockchain. <a href="https://johnmathews.eu/blockchain-introduction.html">Part 1</a> introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how a network of users can maintain the same (true) list of transactions and protect each other against&nbsp;fraud. </p>
 <h2>Broadcasting transactions to the&nbsp;network</h2>
 <p>In  <a href="https://johnmathews.eu/blockchain-introduction.html">Part 1</a> we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. These transactions were authenticated using <span class="caps">PKI</span>&nbsp;which:</p>
@@ -204,7 +205,9 @@
 <p>The above procedure for verifying transactions and adding new blocks onto the chain means that even if a user inspects a new block and sees that their transaction has been verified, its possible that in the future a longer chain will be discovered (which must be accepted) which doesn&#8217;t include their&nbsp;transaction. </p>
 <p>Therefore any block could potentially be removed, which means a transaction is never completely verified. However the probability of a block being removed decreases as the number of blocks after it increases. This means verification can be thought of in terms of the number of blocks that have been added to the chain <em>after</em> the block containing the&nbsp;transaction. </p>
 <p>If you are willing to accept a high level of risk, or you trust the party you are transacting with you could opt for a small number of blocks to be added after the block containing your transaction. This has the benefit of increasing the speed of the transaction verification. If the transaction is risky or high-value, you might require a larger number of blocks to be added to the chain before accepting the transaction. This will increase the time required to verify the transaction, but reduce the probability that a longer chain will undo the block containing the transaction in&nbsp;question. </p>
-      </div>
+          </div>
+        </article>
+      </main>
 
       <div class="border border-gray-300 mt-10 mb-10"></div>
 
@@ -273,14 +276,14 @@
       </div>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
       <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
         <a href="https://johnmathews.eu/blog">Blog Posts</a> |
         <a href="#top">Back to top</a> |
         <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
-    </div>
+    </footer>
 
     <div>
           <script>
