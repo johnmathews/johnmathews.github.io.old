@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 
-
 .markdown .simple-footnotes {
 	@apply mt-10 py-3 rounded-lg italic md:w-4/6 bg-yellow-500 dark:bg-green-800;
 }

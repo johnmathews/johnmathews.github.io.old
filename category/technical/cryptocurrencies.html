@@ -48,7 +48,7 @@
       <script async src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
-      <link href="https://johnmathews.eu/theme/css/pygment.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
         <script async>
           let theme = localStorage.getItem('theme');
@@ -244,29 +244,43 @@
         </script>
 
         <script>
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
 
             document.getElementById("day").classList.remove("hidden");
             document.getElementById("night").classList.add("hidden");
+
+            changePygmentsCSS(light, dark);
           } else {
             document.getElementById("baz").classList.remove("dark");
             window.localStorage.setItem('theme', 'light');
 
             document.getElementById("day").classList.add("hidden");
             document.getElementById("night").classList.remove("hidden");
+            changePygmentsCSS(dark, light);
           }
 
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
               $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
 
               document.getElementById("day").classList.add("hidden");
               document.getElementById("night").classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
 
               document.getElementById("day").classList.remove("hidden");
               document.getElementById("night").classList.add("hidden");

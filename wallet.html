@@ -11,27 +11,29 @@
 
       <title> Hardware Wallets -  JohnMathews.eu  </title>
       <meta name="title" content=" Hardware Wallets -  JohnMathews.eu  " />
-      <meta property="og:title" content="Hardware Wallets" />
-      <meta property="twitter:title" content="Hardware Wallets " />
+      <meta property="og:title" content=" Hardware Wallets " />
+      <meta property="twitter:title" content=" Hardware Wallets  " />
 
       <meta name="keywords" content=" bitcoin,blockchain,crypto,wallet " />
       <meta name="author" content="John Mathews" />
       <meta name="twitter:creator" content="@johnmathews" />
 
-      <meta name="description" content="Current hardware wallets are technically good but are awkward to use. A good solution would solve the following problems:" />
-      <meta name="twitter:description" content="Current hardware wallets are technically good but are awkward to use. A good solution would solve the following problems:" />
-      <meta property="og:description" content="Current hardware wallets are technically good but are awkward to use. A good solution would solve the following problems:" />
+      <meta name="description" content=" Current hardware wallets are technically good but are awkward to use. A good solution would solve the following problems: " />
+      <meta name="twitter:description" content=" Current hardware wallets are technically good but are awkward to use. A good solution would solve the following problems: " />
+      <meta property="og:description" content=" Current hardware wallets are technically good but are awkward to use. A good solution would solve the following problems: " />
 
       <meta property="og:url" content="https://johnmathews.eu/wallet.html" />
       <meta property="twitter:url" content="https://johnmathews.eu/wallet.html" />
 
-      <meta name="twitter:image" content=" https://johnmathews.eu//images/hwWallets.jpg" />
-      <meta property="og:image" content=" https://johnmathews.eu//images/hwWallets.jpg" />
+      <meta name="twitter:image" content=" 
+    https://johnmathews.eu//images/hwWallets.jpg" />
+      <meta property="og:image" content=" 
+    https://johnmathews.eu//images/hwWallets.jpg" />
 
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:card" content="  summary_large_image  " />
       <meta name="twitter:domain" content="https://johnmathews.eu" />
 
-      <meta property="og:type" content="article" />
+      <meta property="og:type" content=" article " />
 
       <link rel="icon" href="https://johnmathews.eu/favicon.png" />
 
@@ -48,7 +50,7 @@
       <script async src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
-      <link href="https://johnmathews.eu/theme/css/pygment.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
         <script async>
           let theme = localStorage.getItem('theme');
@@ -153,7 +155,7 @@
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>
@@ -226,29 +228,43 @@
         </script>
 
         <script>
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
 
             document.getElementById("day").classList.remove("hidden");
             document.getElementById("night").classList.add("hidden");
+
+            changePygmentsCSS(light, dark);
           } else {
             document.getElementById("baz").classList.remove("dark");
             window.localStorage.setItem('theme', 'light');
 
             document.getElementById("day").classList.add("hidden");
             document.getElementById("night").classList.remove("hidden");
+            changePygmentsCSS(dark, light);
           }
 
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
               $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
 
               document.getElementById("day").classList.add("hidden");
               document.getElementById("night").classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
 
               document.getElementById("day").classList.remove("hidden");
               document.getElementById("night").classList.add("hidden");
