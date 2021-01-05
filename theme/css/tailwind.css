@@ -11,6 +11,10 @@
   @apply dark:bg-gray-800 dark:text-gray-200;
 }
 
+.markdown .inner_cell {
+	overflow: scroll;
+}
+
 /* Override pygments style background color. */
 .markdown .highlight pre {
   @apply bg-gray-100 dark:bg-gray-800 dark:text-gray-200 text-sm ; 
