@@ -2,7 +2,7 @@
 @tailwind components;
 
 .markdown .simple-footnotes {
-	@apply mt-10 py-3 rounded-lg italic md:w-4/6 bg-yellow-500 dark:bg-green-800;
+	@apply mt-10 py-3 pr-2 rounded-lg italic md:w-4/6 bg-yellow-500 dark:bg-green-800;
 }
 
 /* make jupyter notebook cells and output scroll instead of overflow */

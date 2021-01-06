@@ -9,21 +9,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
 
-      <title>How To Design An API - JohnMathews.eu</title>
-      <meta name="title" content="How To Design An API -  JohnMathews.eu "/>
-      <meta property="og:title" content="How To Design An API"/>
-      <meta property="twitter:title" content="How To Design An API"/>
+      <title>Test Driven Development - JohnMathews.eu</title>
+      <meta name="title" content="Test Driven Development -  JohnMathews.eu "/>
+      <meta property="og:title" content="Test Driven Development"/>
+      <meta property="twitter:title" content="Test Driven Development"/>
 
       <meta name="keywords" content="  "/>
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" Some super brief notes I made about API design: Background It’s more of an art than a science RESTful (REpresentational State Transfer) API design is an architectural style. Alternative API... "/>
-      <meta name="twitter:description" content=" Some super brief notes I made about API design: Background It’s more of an art than a science RESTful (REpresentational State Transfer) API design is an architectural style. Alternative API... "/>
-      <meta property="og:description" content=" Some super brief notes I made about API design: Background It’s more of an art than a science RESTful (REpresentational State Transfer) API design is an architectural style. Alternative API... "/>
+      <meta name="description" content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... "/>
+      <meta name="twitter:description" content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... "/>
+      <meta property="og:description" content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... "/>
 
-      <meta property="og:url" content="https://johnmathews.eu/api-design.html"/>
-      <meta property="twitter:url" content="https://johnmathews.eu/api-design.html"/>
+      <meta property="og:url" content="https://johnmathews.eu/test-driven-development.html"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/test-driven-development.html"/>
 
       <meta name="twitter:image" content="https://johnmathews.eu/
 "/>
@@ -98,7 +98,7 @@
   <div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700">
 
       <div class="markdown text-center dark:text-gray-200">
-        <h1> How To Design An <span class="caps">API</span> </h1>
+        <h1> Test Driven&nbsp;Development </h1>
       </div>
 
       <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
@@ -118,63 +118,38 @@
       <main>
         <article>
           <div class="markdown dark:text-gray-200">
-            <p>Some super brief notes I made about <span class="caps">API</span>&nbsp;design:</p>
-<h2 id="background">Background</h2>
-<ul>
-<li>It&#8217;s more of an art than a&nbsp;science</li>
-<li>RESTful (REpresentational State Transfer) <span class="caps">API</span> design is an architectural&nbsp;style.</li>
-<li>Alternative <span class="caps">API</span> architectures:<ul>
-<li><span class="caps">SOAP</span> (Simple Object Access Protocol) is a heavier&nbsp;style.</li>
-<li><code>GraphQL</code> - doesnt overfetch. Graph query language made by&nbsp;Facebook.</li>
-</ul>
-</li>
-<li>APIs are everywhere (not just web APIs). They&#8217;re an <a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction">abstraction</a> that hides an implementation. <code>Django</code> model managers are an <span class="caps">API</span> (and also part of Django&#8217;s <span class="caps">ORM</span>), JavaScript is an <span class="caps">API</span>,&nbsp;etc.</li>
-</ul>
-<h2 id="restful-apis">RESTful&nbsp;APIs</h2>
-<ul>
-<li>Web APIs (all <span class="caps">REST</span> APIs?) expose a databases to&nbsp;clients</li>
-<li>A rest api is a <span class="caps">URL</span> route (endpoint) that returns <span class="caps">JSON</span> or <span class="caps">XML</span>.</li>
-<li><span class="caps">POST</span>, <span class="caps">GET</span>, <span class="caps">PUT</span>, <span class="caps">PATCH</span>, <span class="caps">DELETE</span>, corresponds to Create, Read, Update/Replace, Update/Modify, Delete (<span class="caps">HTTP</span> methods correspond to <span class="caps">CRUD</span>&nbsp;methods)</li>
-<li><span class="caps">HTTP</span> <span class="caps">METHODS</span>:<ul>
-<li><span class="caps">PUT</span> (create or update) is idempotent, <span class="caps">POST</span> is not idempotent (keep on creating,&nbsp;updating)</li>
-<li><span class="caps">PATCH</span> - partial&nbsp;update</li>
-<li><span class="caps">GET</span>, <span class="caps">HEAD</span>, <span class="caps">OPTIONS</span> and <span class="caps">TRACE</span> methods are idempotent cos they are only designed for retrieving&nbsp;data.</li>
-<li><span class="caps">DELETE</span></li>
-<li><span class="caps">HEAD</span> - almost identical to <span class="caps">GET</span>, but without any body. Good for checking what a request would return, i.e. Before downloading a large amount of&nbsp;data, </li>
-<li><span class="caps">OPTIONS</span> - returns data describing what other methods and operations the server supports at the given <span class="caps">URL</span>. More loosely defined than other&nbsp;verbs. </li>
-</ul>
-</li>
-</ul>
-<h2 id="qualitative-advice">Qualitative&nbsp;Advice</h2>
-<ul>
-<li>Use <span class="caps">HTTP</span> verbs to make requests more&nbsp;meaningful</li>
-<li>Use sensible resource names. Naming things is hard, so think about this a bit
-    before starting.<ul>
-<li>Use identifiers in your URLs, not the query string.<ul>
-<li><strong>Good</strong>: <code>/users/12345</code></li>
-<li><strong>Poor</strong>: <code>/api?type=user&amp;id=23</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Use the hierarchical structure of the <span class="caps">URL</span> to imply the structure of the <span class="caps">API</span>.</li>
-<li>Design (names and structure of things) for the user/client, not for the database.<ul>
-<li>Resource names should be nouns not&nbsp;verbs</li>
-<li>Use plurals consistently, not collection verbiage. Good: customers/123 Bad:&nbsp;customer_list/123</li>
-<li>Use&nbsp;case-insensitivity.</li>
-<li>Use camel case or snake case&nbsp;consistency</li>
-<li>Short is better than long, but be&nbsp;clear</li>
-<li>Spend time on design before writing&nbsp;code</li>
-</ul>
-</li>
-<li>Use <span class="caps">HTTP</span> response codes to indicate&nbsp;status</li>
-<li>Prefer <span class="caps">JSON</span> over <span class="caps">XML</span>. (Hotline does <span class="caps">HTML</span>..)</li>
-<li><span class="caps">XML</span> requires schemas for validation and namespaces. Don’t support this complexity at the beginning (or ever) unless required. If it is required, make the <span class="caps">XML</span> as similar to <span class="caps">JSON</span> as&nbsp;possible.</li>
-<li>Put links in the <span class="caps">HTTP</span> link header, or use a <span class="caps">JSON</span> representation of&nbsp;this.</li>
-<li>Use the <span class="caps">HTTP</span> location header to contain a link on resource creation, or for <span class="caps">GET</span> with pagination, use first, last, next,&nbsp;prev.</li>
-<li>Connectedness - return links in the response which link to useful resources. At minimum, a link to show how the data was received, or&nbsp;posted.</li>
-<li>Idempotence - clients making the same repeated requests create the same result on the server side. I.e. making repeated requests has the same result as making a similar request, server side. On the client side, a response code may change, of&nbsp;course. </li>
-</ul>
+            <p>Test Driven Development was mind-bending when I first grappled with it.
+Last summer I was building a web app using Django and began to break things
+unintentionally when adding new features. This soon led to lots of clicking
+around different pages to test if stuff was still working each time I made an update.</p>
+<p>This soon led to me thinking there must be a better way. Which brought
+my to Test Driven Development (<span class="caps">TDD</span>).</p>
+<p>It should have just led me to writing tests, which it did. But googling
+whatever I googled got me down the <span class="caps">TDD</span> rabbit hole rather than just the “write
+some tests” rabbit hole. Write tests for your code before you write the code.
+Write tests for bugs you’ve fixed to check they stay fixed. Write tests as a
+kind of documentation to show what stuff is supposed to be doing. Errr…</p>
+<p>Django was a big enough pile of abstractions as it was. Views, ORMs, mixins,
+serializers… Trying to add factories and fixtures into that took some getting
+used to. But eventually I made some progress, and now I quite enjoy running my
+coverage reports to keep coverage <em>close</em> to 100%<sup id="sf-test-driven-development-1-back"><a href="#sf-test-driven-development-1" class="simple-footnote" title="Which is fun and all, but testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just written without ensuring that only the intended behaviours happen.">1</a></sup>.</p>
+<p>Some of the main things I’ve learnt about writing tests:</p>
+<ol>
+<li>Use PyTest as much as possible rather than other testing libraries - its <code>assert</code> statements are more intuitive than Django’s own testing framework, and you can use it in any Python codebase, not just Django. It has lots of extensions and seems good at getting the job done fairly easily.</li>
+<li>Write tests as you go. I haven’t (yet) reached the elevated level of writing
+   tests before I write the code to be tested, though I see why that would
+   sometimes be useful. I do think writing tests sooner rather than later is
+   best though, ideally as soon as you’ve got a basic version of your feature working.</li>
+<li>Use <code>Coverage</code> to show you which code is covered by your tests, and which
+   branches or edge cases are not. But be warned, it doesn’t tell you if the
+   test is useful or not, only that it passes and which methods or functions it uses.</li>
+<li>Fixtures are great for keeping tests fairly <span class="caps">DRY</span>. <code>Freezegun</code> is great for
+   testing anything to do with dates and times. </li>
+<li>Static type checkers, like <code>Mypy</code>, get more attractive in proportion to
+   codebase complexity and size.</li>
+</ol><ol class="simple-footnotes"><li id="sf-test-driven-development-1">Which is fun and all, but
+testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just
+written without ensuring that <em>only</em> the intended behaviours happen. <a href="#sf-test-driven-development-1-back" class="simple-footnote-back">↩</a></li></ol>
           </div>
         </article>
       </main>
@@ -184,11 +159,7 @@
         <div class="mb-10 text-lg dark:text-gray-200">
             <div class="flex flex-row">
               <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
-              <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/principles-of-oop.html"> Principles Of Object Orientated&nbsp;Programming</a>
-            </div>
-            <div class="flex flex-row">
-              <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
-              <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/test-driven-development.html"> Test Driven&nbsp;Development</a>
+              <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/api-design.html"> How To Design An <span class="caps">API</span></a>
             </div>
         </div>
 
@@ -231,8 +202,8 @@
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
             var disqus_config = function () {
-            this.page.url = "https://johnmathews.eu/api-design.html";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "api-design.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.url = "https://johnmathews.eu/test-driven-development.html";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "test-driven-development.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
             (function() { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
