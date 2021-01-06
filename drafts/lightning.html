@@ -70,7 +70,7 @@
 
   <body class="dark:bg-gray-800">
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
         <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-3" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
       </div>
@@ -292,6 +292,18 @@
             }
 
           }
+        </script>
+        <script>
+          var prevScrollPos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+              document.getElementById("navbar").style.top = "0";
+            } else {
+              document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollPos = currentScrollPos;
+          } 
         </script>
 
   <script>
