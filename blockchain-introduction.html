@@ -121,9 +121,9 @@
               <p>Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&nbsp;blockchains.</p>
             </div>
           <div class="markdown dark:text-gray-200">
-            <h1>How to maintain a reliable list across a small network without a central&nbsp;authority</h1>
+            <h1 id="how-to-maintain-a-reliable-list-across-a-small-network-without-a-central-authority">How to maintain a reliable list across a small network without a central&nbsp;authority</h1>
 <p>This is part 1 of an introduction to the key features of a generalised blockchain. I haven&#8217;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&nbsp;technology.</p>
-<h2>Create a financial document that cannot be forged or&nbsp;disputed</h2>
+<h2 id="create-a-financial-document-that-cannot-be-forged-or-disputed">Create a financial document that cannot be forged or&nbsp;disputed</h2>
 <p>Let&#8217;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&nbsp;receipt.</p>
 <div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
 <span class="x">From: Lizzie</span>
@@ -174,7 +174,7 @@
 <p>This will work because anybody (not just Lizzie) can check that John signed the <span class="caps">IOU</span>. The transaction can be verified by looking at the &#8220;From&#8221; part of that transaction, noticing that this transaction is supposedly from John and then using John&#8217;s public key to decrypt the encoded &#8220;signature&#8221;&nbsp;line. </p>
 <p>The signature can only be decrypted using John&#8217;s public key if his private key was used to encrypt it. Because John is the only person with his private key, that proves the transaction is valid, and Lizzie isn&#8217;t dishonestly creating a debt for John to&nbsp;pay. </p>
 <p>Clearly if John discloses his private key (or its stolen) then he will make the system insecure, but this is a problem with John and his security protocols, not with public-key&nbsp;cryptography. </p>
-<h2>Create and maintain an accurate list of&nbsp;transactions</h2>
+<h2 id="create-and-maintain-an-accurate-list-of-transactions">Create and maintain an accurate list of&nbsp;transactions</h2>
 <p>So far we&#8217;ve seen how 1 <span class="caps">IOU</span> (for an orange) can be securely created, signed and verified. This process can extended to be used by more people to exchange more fruit.  For&nbsp;example.</p>
 <p>The original&nbsp;note:</p>
 <div class="highlight"><pre><span></span><span class="x">From: John</span>
@@ -243,7 +243,7 @@
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>

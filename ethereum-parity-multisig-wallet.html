@@ -124,22 +124,22 @@
           <div class="markdown dark:text-gray-200">
             <p>I recently set up a multi-sig Ethereum wallet and I couldn&#8217;t find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get&nbsp;started. </p>
 <p>You&#8217;ll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I&#8217;ve used Parity because I found it simple and&nbsp;quick. </p>
-<h2>Ethereum&nbsp;Wallets</h2>
+<h2 id="ethereum-wallets">Ethereum&nbsp;Wallets</h2>
 <p>Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet with 3 signatories (for example) then you will need to have set up at least 1 of those 3 Ethereum accounts before creating the&nbsp;wallet. </p>
-<h2>Parity</h2>
+<h2 id="parity">Parity</h2>
 <p>From their&nbsp;website:</p>
 <blockquote>
 <p>Integrated directly into your Web browser, Parity is the fastest and most secure way of interacting with the Ethereum&nbsp;network.</p>
 </blockquote>
 <p>You can do a bunch of stuff with Parity including mining Ether, manage accounts, interact with different dapps, send/receive from different accounts, and set up contracts. On the accounts tab, you can quickly set up Multi-Signature wallets. If you use the Chrome plugin you will also get handy notifications when transactions are confirmed or contracts&nbsp;deployed.</p>
-<h2>Download and open&nbsp;Parity</h2>
+<h2 id="download-and-open-parity">Download and open&nbsp;Parity</h2>
 <p>For MacOS you can download and install Parity by visiting the Parity site and downloading the <a href="https://parity.io/parity.html">installer</a>, or from the terminal using curl or&nbsp;Homebrew.</p>
-<h3>Simple&nbsp;option</h3>
+<h3 id="simple-option">Simple&nbsp;option</h3>
 <div class="highlight"><pre><span></span>   $ bash &lt;<span class="o">(</span>curl https://get.parity.io -kL<span class="o">)</span>
 </pre></div>
 
 
-<h3>Homebrew</h3>
+<h3 id="homebrew">Homebrew</h3>
 <p>Detailed instructions are <a href="https://github.com/paritytech/homebrew-paritytech">here</a>.</p>
 <div class="highlight"><pre><span></span>   brew tap paritytech/paritytech
    brew install parity --stable
@@ -157,11 +157,11 @@
 </blockquote>
 <p>You should now see something similar to&nbsp;this:</p>
 <p><img alt="Parity home screen view" src="https://johnmathews.eu/images/parity-home.jpeg"></p>
-<h2>Add or create&nbsp;accounts</h2>
+<h2 id="add-or-create-accounts">Add or create&nbsp;accounts</h2>
 <p><img alt="Parity toolbar" src="https://johnmathews.eu/images/Parity-toolbar-accounts.jpeg"></p>
 <p><img alt="Parity toolbar" src="https://johnmathews.eu/images/parity-account-creation.jpeg"></p>
 <p>Select the Accounts tab from the top of the page and then select &#8220;<strong>+ Account</strong>&#8220;. Either create new accounts or import them using your preferred method. You don&#8217;t need to import all the accounts that will be part of the multi-sig wallet, but you will need to import or create the account that will own the wallet you are about to create. This account will need to have a large enough Ether balance to pay the transaction costs to deploy the multi-sig wallet onto the Blockchain. The costs are tiny, but they are greater than&nbsp;zero.</p>
-<h2>Create the multi-sig&nbsp;wallet</h2>
+<h2 id="create-the-multi-sig-wallet">Create the multi-sig&nbsp;wallet</h2>
 <p><img alt="Parity toolbar" src="https://johnmathews.eu/images/Parity-toolbar-wallet.jpeg">
 <img alt="Wallet management" src="https://johnmathews.eu/images/parity-wallet-details.jpeg"></p>
 <ol>
@@ -192,11 +192,11 @@
 <p><img alt="Wallet management" src="https://johnmathews.eu/images/parity-conf-box.jpeg"></p>
 </li>
 </ol>
-<h2>Adding an existing multi-sig&nbsp;wallet</h2>
+<h2 id="adding-an-existing-multi-sig-wallet">Adding an existing multi-sig&nbsp;wallet</h2>
 <p>Once your wallet is created and deployed, you&#8217;ll need to add it to other parity clients so that the other signatories can make or confirm transactions, and view the wallets balance. This is done by adding a watch&nbsp;wallet.</p>
 <p>Process: Accounts tab &gt; + Wallet &gt; Watch wallet &gt; enter the address of the multi-sig&nbsp;wallet. </p>
 <p>The other signatories will now be able to view the wallet&#8217;s balance, get notifications about pending confirmations, and be able to make and monitor&nbsp;transactions.</p>
-<h2>Managing a multi-sig&nbsp;wallet</h2>
+<h2 id="managing-a-multi-sig-wallet">Managing a multi-sig&nbsp;wallet</h2>
 <ol>
 <li>
 <p>Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet&#8217;s&nbsp;address.</p>
@@ -213,7 +213,7 @@
 <p><span class="dquo">&#8220;</span><strong>Forget</strong>&#8221; will remove the multi-sig wallet from your accounts&nbsp;tab.</p>
 </li>
 </ol>
-<h2>Moving funds out of a multi-sig&nbsp;wallet</h2>
+<h2 id="moving-funds-out-of-a-multi-sig-wallet">Moving funds out of a multi-sig&nbsp;wallet</h2>
 <ol>
 <li>
 <p>Click on &#8220;<strong>Transfer</strong>&#8221; in the wallet management window (pictured above) to begin withdrawing funds from the&nbsp;wallet. </p>
@@ -252,7 +252,7 @@
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>

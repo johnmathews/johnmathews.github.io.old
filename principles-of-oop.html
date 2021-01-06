@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" I recently interviewed for a lead developer role at Lab Digital1 and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (OOP). Object... "/>
-      <meta name="twitter:description" content=" I recently interviewed for a lead developer role at Lab Digital1 and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (OOP). Object... "/>
-      <meta property="og:description" content=" I recently interviewed for a lead developer role at Lab Digital1 and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (OOP). Object... "/>
+      <meta name="description" content=" I recently interviewed for a lead developer role at Lab Digital1 and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (OOP). You might think... "/>
+      <meta name="twitter:description" content=" I recently interviewed for a lead developer role at Lab Digital1 and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (OOP). You might think... "/>
+      <meta property="og:description" content=" I recently interviewed for a lead developer role at Lab Digital1 and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (OOP). You might think... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/principles-of-oop.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/principles-of-oop.html"/>
@@ -119,6 +119,7 @@
         <article>
           <div class="markdown dark:text-gray-200">
             <p>I recently interviewed for a lead developer role at <a href="https://labdigital.nl/en/">Lab Digital</a><sup id="sf-principles-of-oop-1-back"><a href="#sf-principles-of-oop-1" class="simple-footnote" title="Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with Infrastructure As Code, and also working at an agency. Can’t win them all.">1</a></sup> and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (<span class="caps">OOP</span>).</p>
+<p>You might think that’s a unusual way to prepare for an interview, and you’d be right. Nothing close to these notes arose during the interview, but I find this stuff interesting. If I’m motivated enough to study it, then I think that’s a good enough reason by itself, without a specific reason. These are some brief notes.</p>
 <p>Object Orientated Programming has four key aspects:</p>
 <ol>
 <li>Encapsulation (Hiding information)</li>
@@ -126,8 +127,7 @@
 <li>Inheritance</li>
 <li>Polymorphism</li>
 </ol>
-<p>These are my notes:</p>
-<h2>1. Encapsulation</h2>
+<h2 id="1-encapsulation">1. Encapsulation</h2>
 <ul>
 <li>Each object keeps its state private, inside a class.</li>
 <li>Instance variables/properties/attributes are kept private and accessor methods are made public.</li>
@@ -137,7 +137,7 @@
 <li>Public methods.</li>
 <li>You can define classes within classes, and functions within functions.</li>
 </ul>
-<h2>2. Abstraction</h2>
+<h2 id="2-abstraction">2. Abstraction</h2>
 <ul>
 <li>A natural extension of encapsulation</li>
 <li>A concept or idea that is not associated with any particular instance.</li>
@@ -151,13 +151,13 @@
 <li>Implementation changes — for example, a software update — rarely affect the abstraction you use.</li>
 <li>e.g. a coffee machine. It does a lot of stuff and makes quirky noises under the hood. But all you have to do is put in coffee and press a button.</li>
 </ul>
-<h2>3. Inheritance</h2>
+<h2 id="3-inheritance">3. Inheritance</h2>
 <ul>
 <li>In <span class="caps">OOP</span>, objects are often similar, sharing similar logic. But they are not 100% the same.</li>
 <li>Create a (child) class by deriving from another (parent) class. This way, we form a hierarchy.</li>
 <li>child class reuses all fields and methods of the parent class (common part) and can implement its own unique part using method or attribute overloading.</li>
 </ul>
-<h2>4. Polymorphism</h2>
+<h2 id="4-polymorphism">4. Polymorphism</h2>
 <ul>
 <li>Gives a way to use a class exactly like its parent so there’s no confusion with mixing types. But each child class keeps its own methods as they are.</li>
 <li>This typically happens by defining a (parent) interface to be reused. It outlines a bunch of common methods. Then, each child class implements its own version of these methods.</li>
@@ -169,8 +169,7 @@
 <li>Instance methods compared to class methods.</li>
 <li>Inheritance, mixins, and decorators.</li>
 <li>The “magic” within the <code>Django</code> source code that requires <code>mypy</code> to use extensions in order to do its static type checking correctly.</li>
-</ol><ol class="simple-footnotes"><li id="sf-principles-of-oop-1">Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with <code>Infrastructure As Code</code>,
-and also working at an agency. Can’t win them all. <a href="#sf-principles-of-oop-1-back" class="simple-footnote-back">↩</a></li></ol>
+</ol><ol class="simple-footnotes"><li id="sf-principles-of-oop-1">Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with <code>Infrastructure As Code</code>, and also working at an agency. Can’t win them all. <a href="#sf-principles-of-oop-1-back" class="simple-footnote-back">↩</a></li></ol>
           </div>
         </article>
       </main>
@@ -189,7 +188,7 @@ and also working at an agency. Can’t win them all. <a href="#sf-principles-of-
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>

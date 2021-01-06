@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Entrepreneurship</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/non-technical/entrepreneurship.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2020-12-08T12:59:00+01:00</updated><entry><title>Product-Led Growth</title><link href="https://johnmathews.eu/product-led-growth.html" rel="alternate"></link><published>2020-12-08T12:59:00+01:00</published><updated>2020-12-08T12:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-08:/product-led-growth.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Product-Led Growth&amp;#8221; by Wes&amp;nbsp;Bush&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Part 1: Design your&amp;nbsp;strategy&lt;/h1&gt;
-&lt;h2&gt;Chapter 1: Why is product-led growth of rising&amp;nbsp;importance?&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Entrepreneurship</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/non-technical/entrepreneurship.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2020-12-08T12:59:00+01:00</updated><entry><title>Product-Led Growth</title><link href="https://johnmathews.eu/product-led-growth.html" rel="alternate"></link><published>2020-12-08T12:59:00+01:00</published><updated>2020-12-08T12:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-08:/product-led-growth.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Product-Led Growth&amp;#8221; by Wes&amp;nbsp;Bush&lt;/p&gt;</summary><content type="html">&lt;h1 id="part-1-design-your-strategy"&gt;Part 1: Design your&amp;nbsp;strategy&lt;/h1&gt;
+&lt;h2 id="chapter-1-why-is-product-led-growth-of-rising-importance"&gt;Chapter 1: Why is product-led growth of rising&amp;nbsp;importance?&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Product-Led Growth is a go-to-market (&lt;span class="caps"&gt;GTM&lt;/span&gt;) strategy that relies on using
    your product as the main vehicle to acquire, activate and retain&amp;nbsp;customers.&lt;/li&gt;
@@ -31,7 +31,7 @@
 &lt;li&gt;Knowing these elements will help you choose the correct &lt;span class="caps"&gt;GTM&lt;/span&gt; that will
    acquire, retain and grow you customer base in the most capital-efficient&amp;nbsp;way &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Sales-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
+&lt;h3 id="sales-led-go-to-market-strategies"&gt;Sales-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
 &lt;p&gt;Profit Centers: Sales, Marketing, Customer&amp;nbsp;Success&lt;/p&gt;
 &lt;p&gt;Cost Centers: Engineering,&amp;nbsp;Product&lt;/p&gt;
 &lt;p&gt;Advantages:&lt;/p&gt;
@@ -71,7 +71,7 @@ your customers well&amp;nbsp;enough.&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;Consequently, there is often a disconnect between marketing and&amp;nbsp;sales &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Product-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
+&lt;h3 id="product-led-go-to-market-strategies"&gt;Product-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Switching from Sales-Led &lt;span class="caps"&gt;GTM&lt;/span&gt; to Product-Led &lt;span class="caps"&gt;GTM&lt;/span&gt; creates a defensive&amp;nbsp;moat &lt;/li&gt;
 &lt;li&gt;A product led marketing team asks &amp;#8220;How can we use the product to qualify our
@@ -88,7 +88,7 @@ prospects for&amp;nbsp;us?&amp;#8221;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Chapter 2 - Free, Freemium or&amp;nbsp;Demo&lt;/h2&gt;
+&lt;h2 id="chapter-2-free-freemium-or-demo"&gt;Chapter 2 - Free, Freemium or&amp;nbsp;Demo&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Use the &lt;span class="caps"&gt;MOAT&lt;/span&gt; framework to pick the right &lt;span class="caps"&gt;GTM&lt;/span&gt;&amp;nbsp;strategy:&lt;/p&gt;
@@ -137,7 +137,7 @@ cost than anyone else on the&amp;nbsp;market?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Chapter 3 - Red-Ocean or Blue-Ocean&amp;nbsp;markets?&lt;/h2&gt;
+&lt;h2 id="chapter-3-red-ocean-or-blue-ocean-markets"&gt;Chapter 3 - Red-Ocean or Blue-Ocean&amp;nbsp;markets?&lt;/h2&gt;
 &lt;p&gt;Red-ocean companies try to outperform their rivals in order to grab a larger
 share of the existing market. As the market gets crowded, opportunity for
 profit and growth reduces. Products become commodities. Cut-throat competition
@@ -152,7 +152,7 @@ sales-led in order to educate the customer enough. But if Time-To-Value (&lt;spa
 is short then &lt;span class="caps"&gt;PLG&lt;/span&gt; could be&amp;nbsp;great. &lt;/p&gt;
 &lt;p&gt;Red Oceans need big wide funnels in order to compete, and &lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategies
 work great. They&amp;#8217;re defensible, keep costs low and make sales cycles&amp;nbsp;short. &lt;/p&gt;
-&lt;h2&gt;Chapter 4 - Top-Down or Bottom-Up selling&amp;nbsp;strategy?&lt;/h2&gt;
+&lt;h2 id="chapter-4-top-down-or-bottom-up-selling-strategy"&gt;Chapter 4 - Top-Down or Bottom-Up selling&amp;nbsp;strategy?&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;span class="caps"&gt;PLG&lt;/span&gt; works for&amp;nbsp;bottom-up.&lt;/li&gt;
 &lt;li&gt;High touch sales-led strategies work for Top-Down enterprise sales strategies, where the product is super complex and the sales cyccle is very&amp;nbsp;long.&lt;/li&gt;
@@ -181,7 +181,7 @@ work great. They&amp;#8217;re defensible, keep costs low and make sales cycles&a
 &lt;li&gt;Freemium&lt;/li&gt;
 &lt;li&gt;Free-Trial&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Chapter 5 -&amp;nbsp;Time-to-Value&lt;/h2&gt;
+&lt;h2 id="chapter-5-time-to-value"&gt;Chapter 5 -&amp;nbsp;Time-to-Value&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;How much time until you deliver on your promise to&amp;nbsp;prospects?&lt;/li&gt;
 &lt;li&gt;How much time until the product sells&amp;nbsp;itself?&lt;/li&gt;
@@ -203,14 +203,14 @@ work great. They&amp;#8217;re defensible, keep costs low and make sales cycles&a
 &lt;li&gt;Is your product easy for your target audience to&amp;nbsp;use?&lt;/li&gt;
 &lt;li&gt;Can users experience the core value (magic moment?) without&amp;nbsp;hand-holding?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Part 2 - Build Your&amp;nbsp;Foundation&lt;/h1&gt;
-&lt;h2&gt;Chapter 7 - Build a product-led&amp;nbsp;foundation&lt;/h2&gt;
+&lt;h1 id="part-2-build-your-foundation"&gt;Part 2 - Build Your&amp;nbsp;Foundation&lt;/h1&gt;
+&lt;h2 id="chapter-7-build-a-product-led-foundation"&gt;Chapter 7 - Build a product-led&amp;nbsp;foundation&lt;/h2&gt;
 &lt;p&gt;A positive feedback loop:
 1. &lt;strong&gt;Understand&lt;/strong&gt; your value
 2. &lt;strong&gt;Communicate&lt;/strong&gt; it
 3. &lt;strong&gt;Deliver&lt;/strong&gt; on your promise
 4.&amp;nbsp;Repeat&lt;/p&gt;
-&lt;h2&gt;Chapter 8 - Understand your&amp;nbsp;value&lt;/h2&gt;
+&lt;h2 id="chapter-8-understand-your-value"&gt;Chapter 8 - Understand your&amp;nbsp;value&lt;/h2&gt;
 &lt;p&gt;If you&amp;#8217;re selling live-chat software, you&amp;#8217;re not really selling live-chat
 software, you are selling a new and better way to acquire&amp;nbsp;customers. &lt;/p&gt;
 &lt;p&gt;You are selling the outcome, the result, the&amp;nbsp;why.&lt;/p&gt;
@@ -270,7 +270,7 @@ Outcome based value metrics reduce church by an additional 40%.&amp;nbsp;Apparen
    best customers? Were they in the ideal audience? Why did they church? What
    did they do or not do that good customers&amp;nbsp;didn&amp;#8217;t?&lt;/li&gt;
 &lt;/ol&gt;</content><category term="Non-technical/Entrepreneurship"></category><category term="marketing"></category><category term="startups"></category></entry><entry><title>The Mom Test</title><link href="https://johnmathews.eu/mom-test.html" rel="alternate"></link><published>2020-12-04T16:07:00+01:00</published><updated>2020-12-04T16:07:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-04:/mom-test.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;The Mom Test&amp;#8221; by Rob&amp;nbsp;Fitzpatrick&lt;/p&gt;</summary><content type="html">&lt;p&gt;It&amp;#8217;s called the Mom Test because it leads to questions that even your mom couldn&amp;#8217;t lie to you&amp;nbsp;about&lt;/p&gt;
-&lt;h2&gt;Overview:&lt;/h2&gt;
+&lt;h2 id="overview"&gt;Overview:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Ask good&amp;nbsp;questions&lt;/li&gt;
 &lt;li&gt;Avoid bad&amp;nbsp;data&lt;/li&gt;
@@ -280,7 +280,7 @@ Outcome based value metrics reduce church by an additional 40%.&amp;nbsp;Apparen
 &lt;li&gt;Focus on the right, tight, customer&amp;nbsp;segment&lt;/li&gt;
 &lt;li&gt;Prep well, take good notes, review your&amp;nbsp;notes.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Chapter 1 - Opinions are worthless, you want objective facts about what happened in the&amp;nbsp;past&lt;/h2&gt;
+&lt;h2 id="chapter-1-opinions-are-worthless-you-want-objective-facts-about-what-happened-in-the-past"&gt;Chapter 1 - Opinions are worthless, you want objective facts about what happened in the&amp;nbsp;past&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Find out if people care about your idea by never mentioning&amp;nbsp;it.&lt;/li&gt;
 &lt;li&gt;Forcing yourself not to mention your idea will force you to ask better&amp;nbsp;questions&lt;/li&gt;
@@ -292,9 +292,9 @@ Outcome based value metrics reduce church by an additional 40%.&amp;nbsp;Apparen
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Rule of thumb: Anything involving the future is an overly optimistic&amp;nbsp;lie&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;Chapter 2 - Avoid bad data - Compliments, Fluff, Hypotheticals,&amp;nbsp;Ideas&lt;/h2&gt;
+&lt;h2 id="chapter-2-avoid-bad-data-compliments-fluff-hypotheticals-ideas"&gt;Chapter 2 - Avoid bad data - Compliments, Fluff, Hypotheticals,&amp;nbsp;Ideas&lt;/h2&gt;
 &lt;p&gt;You aren&amp;#8217;t allowed to tell them what their problem is, and they aren&amp;#8217;t allowed to tell you what to&amp;nbsp;build.&lt;/p&gt;
-&lt;h2&gt;Chapter 3 - Ask the Important Questions - You should be terrified of at least one of the questions you ask in each&amp;nbsp;conversation&lt;/h2&gt;
+&lt;h2 id="chapter-3-ask-the-important-questions-you-should-be-terrified-of-at-least-one-of-the-questions-you-ask-in-each-conversation"&gt;Chapter 3 - Ask the Important Questions - You should be terrified of at least one of the questions you ask in each&amp;nbsp;conversation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Search out the scary questions you&amp;#8217;ve been unintentionally avoiding. What&amp;#8217;s the worst thing a prospect could say?
 What&amp;#8217;s the scariest question you could&amp;nbsp;ask? &lt;/li&gt;
@@ -315,7 +315,7 @@ Lukewarm means they don&amp;#8217;t care enough to buy the first (worst) version
 &lt;/li&gt;
 &lt;li&gt;Pre-plan a list of the 3 most important questions (including a scary one) before every meeting or conversation. Be ready with these. They should change from week to week. As you get good quality answers to existing questions you can bring in new&amp;nbsp;questions.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Chapter 4 - Keep it casual, Structure: Problem -&amp;gt; Solution -&amp;gt;&amp;nbsp;Sales&lt;/h2&gt;
+&lt;h2 id="chapter-4-keep-it-casual-structure-problem-solution-sales"&gt;Chapter 4 - Keep it casual, Structure: Problem -&amp;gt; Solution -&amp;gt;&amp;nbsp;Sales&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Normally you would have 3 meetings with a client in order to make a big sale. This lets you do each stage really well without blurring the data:&lt;ol&gt;
 &lt;li&gt;Identify your prospect&amp;#8217;s&amp;nbsp;problem&lt;/li&gt;
@@ -328,7 +328,7 @@ faster. It works better as a&amp;nbsp;chat.&lt;/li&gt;
 &lt;li&gt;It take 5 minutes (max) to identify if a problem exists and is&amp;nbsp;important&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Give as little info as possible about your idea whilst still nudging the conversation&amp;nbsp;along&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;Chapter 5 - The currencies of conversation - Time, Reputation,&amp;nbsp;Money&lt;/h2&gt;
+&lt;h2 id="chapter-5-the-currencies-of-conversation-time-reputation-money"&gt;Chapter 5 - The currencies of conversation - Time, Reputation,&amp;nbsp;Money&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;In early stage sales, the main goal is learning. Money is a&amp;nbsp;side-effect.&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If someone is willing to risk reputation, or spend time or money on your idea, then you can believe that they&amp;#8217;re&amp;nbsp;interested.&lt;/li&gt;
@@ -349,7 +349,7 @@ faster. It works better as a&amp;nbsp;chat.&lt;/li&gt;
 &lt;li&gt;A crazy customer is the person reading you blog, searching for workarounds, when you haven&amp;#8217;t spent loads of marketing and lead&amp;nbsp;generation&lt;/li&gt;
 &lt;li&gt;Keep a crazy customer close - they&amp;#8217;ll stick with you when times are&amp;nbsp;tough.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Chapter 6 - Finding good conversations - Keep having conversations until you stop hearing new&amp;nbsp;stuff&lt;/h2&gt;
+&lt;h2 id="chapter-6-finding-good-conversations-keep-having-conversations-until-you-stop-hearing-new-stuff"&gt;Chapter 6 - Finding good conversations - Keep having conversations until you stop hearing new&amp;nbsp;stuff&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;If it&amp;#8217;s a topic you both care about, find an excuse. You&amp;#8217;ll both enjoy the chat. You don&amp;#8217;t need to mention your idea if it breaks the&amp;nbsp;premise.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Warm introductions are the ideal way to start a new conversation. 6 degrees of freedom in the world, so find someone who knows someone who knows&amp;nbsp;someone..&lt;/li&gt;
@@ -363,7 +363,7 @@ facilitating&amp;nbsp;it.&lt;/li&gt;
 &lt;li&gt;Speaking and teaching engagements - you get to have strong opinions, and you&amp;#8217;ll be&amp;nbsp;respected.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Vision -&amp;gt; Framing -&amp;gt; Weakness -&amp;gt; Pedestal -&amp;gt;&amp;nbsp;Ask&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;Chapter 7 - Choosing you&amp;nbsp;customers&lt;/h2&gt;
+&lt;h2 id="chapter-7-choosing-you-customers"&gt;Chapter 7 - Choosing you&amp;nbsp;customers&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Startups don&amp;#8217;t starve, they drown. In options, choices, ideas. You get&amp;nbsp;overwhelmed.&lt;/li&gt;
 &lt;li&gt;Choose a good customer segment, focus on it, and don&amp;#8217;t get&amp;nbsp;distracted. &lt;/li&gt;
@@ -389,7 +389,7 @@ facilitating&amp;nbsp;it.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Good segments are usually &amp;#8220;who-where&amp;#8221; pairs. If you don&amp;#8217;t know where to find your customers, keep slicing until you
 do. Make sure the segment is reachable, profitable, and personally&amp;nbsp;rewarding&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;Chapter 8 - Getting the most from the conversations by prepping and&amp;nbsp;reviewing&lt;/h2&gt;
+&lt;h2 id="chapter-8-getting-the-most-from-the-conversations-by-prepping-and-reviewing"&gt;Chapter 8 - Getting the most from the conversations by prepping and&amp;nbsp;reviewing&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Prepare well&lt;ol&gt;
 &lt;li&gt;Have you 3 big questions ready, including the scary&amp;nbsp;ones&lt;/li&gt;
@@ -414,7 +414,7 @@ do. Make sure the segment is reachable, profitable, and personally&amp;nbsp;rewa
 &lt;li&gt;What were the clear signals? What signals did you&amp;nbsp;miss?&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Non-technical/Entrepreneurship"></category></entry><entry><title>Obviously Awesome</title><link href="https://johnmathews.eu/obviously-awesome.html" rel="alternate"></link><published>2020-12-03T15:46:00+01:00</published><updated>2020-12-03T15:46:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-03:/obviously-awesome.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Obviously Awesome&amp;#8221; by April&amp;nbsp;Dunford&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Intro&lt;/h3&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Entrepreneurship"></category></entry><entry><title>Obviously Awesome</title><link href="https://johnmathews.eu/obviously-awesome.html" rel="alternate"></link><published>2020-12-03T15:46:00+01:00</published><updated>2020-12-03T15:46:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-03:/obviously-awesome.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Obviously Awesome&amp;#8221; by April&amp;nbsp;Dunford&lt;/p&gt;</summary><content type="html">&lt;h3 id="intro"&gt;Intro&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;In order to do better marketing, understand your value and differentiators&amp;nbsp;better&lt;/li&gt;
 &lt;li&gt;Understand what makes a best-fit&amp;nbsp;customer&lt;/li&gt;
@@ -436,8 +436,8 @@ do. Make sure the segment is reachable, profitable, and personally&amp;nbsp;rewa
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Part&amp;nbsp;1&lt;/h2&gt;
-&lt;h3&gt;Positioning as&amp;nbsp;context&lt;/h3&gt;
+&lt;h2 id="part-1"&gt;Part&amp;nbsp;1&lt;/h2&gt;
+&lt;h3 id="positioning-as-context"&gt;Positioning as&amp;nbsp;context&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Without positioning to guide us, we don&amp;#8217;t know how to understnad a&amp;nbsp;product&lt;/li&gt;
 &lt;li&gt;Positioning lets us make assumptions about&lt;ol&gt;
@@ -458,7 +458,7 @@ do. Make sure the segment is reachable, profitable, and personally&amp;nbsp;rewa
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Five (plus one) components of effective&amp;nbsp;positioning&lt;/h3&gt;
+&lt;h3 id="five-plus-one-components-of-effective-positioning"&gt;Five (plus one) components of effective&amp;nbsp;positioning&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Competitive Alternatives - if you didnt exist, what would your customers use instead?&lt;/strong&gt;&lt;ol&gt;
 &lt;li&gt;Its what your prospects would use to do the task if your product didnt exist. It could be excel, or pen and paper. It could be nothing, (in which case maybe you product doesnt solve a real pain&amp;nbsp;point.)&lt;/li&gt;
@@ -513,8 +513,8 @@ abstraction to wrap my head around, or one more &lt;span class="caps"&gt;API&lt;
 &lt;p&gt;Git was next, but I found this &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;amazing tutorial&lt;/a&gt; to help me learn. It made Git seem &lt;span class="caps"&gt;OK&lt;/span&gt;, and also helped &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; make more sense too.&amp;nbsp;Bonus!&lt;/p&gt;
 &lt;p&gt;I suddenly realized that great learning materials are crucial if I was going to keep momentum and keep on enjoying the thrill of seeing the computer do something I hadn&amp;#8217;t made it do&amp;nbsp;before.&lt;/p&gt;
 &lt;p&gt;So now I&amp;#8217;m now working on &lt;a href="https://codeschoolmeta.com"&gt;Code School: Meta&lt;/a&gt;. It&amp;#8217;s an online community to make it easier to teach yourself how to code - less confusion about how to get started or what to learn next, more encouragement, and lots of high quality&amp;nbsp;resources.&lt;/p&gt;
-&lt;p&gt;If you&amp;#8217;d like to know more, please &lt;a href="https://codeschoolmeta.com"&gt;check it out&lt;/a&gt; and sign up for&amp;nbsp;updates.&lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"></category><category term="learning"></category></entry><entry><title>The 1-Page Marketing Plan</title><link href="https://johnmathews.eu/1-page-marketing-plan.html" rel="alternate"></link><published>2020-11-19T15:50:00+01:00</published><updated>2020-11-19T15:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-11-19:/1-page-marketing-plan.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;The 1-Page Marketing Plan&amp;#8221; by Allan&amp;nbsp;Dib&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;h2&gt;Marketing has three&amp;nbsp;phases&lt;/h2&gt;
+&lt;p&gt;If you&amp;#8217;d like to know more, please &lt;a href="https://codeschoolmeta.com"&gt;check it out&lt;/a&gt; and sign up for&amp;nbsp;updates.&lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"></category><category term="learning"></category></entry><entry><title>The 1-Page Marketing Plan</title><link href="https://johnmathews.eu/1-page-marketing-plan.html" rel="alternate"></link><published>2020-11-19T15:50:00+01:00</published><updated>2020-11-19T15:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-11-19:/1-page-marketing-plan.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;The 1-Page Marketing Plan&amp;#8221; by Allan&amp;nbsp;Dib&lt;/p&gt;</summary><content type="html">&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;h2 id="marketing-has-three-phases"&gt;Marketing has three&amp;nbsp;phases&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Before (prospect) - get people to know you and indicate&amp;nbsp;interest&lt;/p&gt;
@@ -527,7 +527,7 @@ abstraction to wrap my head around, or one more &lt;span class="caps"&gt;API&lt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Marketing is &lt;em&gt;strategy&lt;/em&gt;, all the other things are &lt;em&gt;tactics&lt;/em&gt;&lt;/p&gt;
-&lt;h2&gt;Jargon free definition of&amp;nbsp;marketing&lt;/h2&gt;
+&lt;h2 id="jargon-free-definition-of-marketing"&gt;Jargon free definition of&amp;nbsp;marketing&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Advertising&lt;/strong&gt; - The circus is coming to town, you paint a sign saying &amp;#8220;Circus coming to town on&amp;nbsp;Saturday&amp;#8221;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Promotion&lt;/strong&gt; - Put the sign on the back of an elephant and walk it into&amp;nbsp;town&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Publicity&lt;/strong&gt; - Walk the elephant through the mayors flower beds and let a newspaper write about&amp;nbsp;it&lt;/p&gt;
@@ -576,7 +576,7 @@ tools, and I&amp;#8217;m going to learn marketing. I&amp;#8217;ve bought some bo
 &lt;li&gt;Product-led growth, by Wes&amp;nbsp;Bush&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I don&amp;#8217;t know if I&amp;#8217;ve covered 90% of the distance required or 50%. It&amp;#8217;s
-exhausting but I&amp;#8217;m here for the journey not the&amp;nbsp;destination.&lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"></category><category term="marketing"></category><category term="growth"></category></entry><entry><title>Pippip.Email</title><link href="https://johnmathews.eu/pippip.email.html" rel="alternate"></link><published>2020-10-28T13:37:00+01:00</published><updated>2020-10-28T13:37:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-10-28:/pippip.email.html</id><summary type="html"></summary><content type="html">&lt;h1&gt;&lt;a href="https://pippip.email"&gt;PipPip&lt;/a&gt;&lt;/h1&gt;
+exhausting but I&amp;#8217;m here for the journey not the&amp;nbsp;destination.&lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"></category><category term="marketing"></category><category term="growth"></category></entry><entry><title>Pippip.Email</title><link href="https://johnmathews.eu/pippip.email.html" rel="alternate"></link><published>2020-10-28T13:37:00+01:00</published><updated>2020-10-28T13:37:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-10-28:/pippip.email.html</id><summary type="html"></summary><content type="html">&lt;h1 id="pippip"&gt;&lt;a href="https://pippip.email"&gt;PipPip&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;6 weeks ago I had an idea for a product whilst reading a news&amp;nbsp;article. &lt;/p&gt;
 &lt;p&gt;It would be great if the writing and sending of important messages could be
 separated, so that I could write something long before I needed to send it, and
@@ -599,32 +599,32 @@ mechanism, so that messages could be sent if I disappeared or pass&amp;nbsp;away
 &lt;li&gt;&lt;span class="caps"&gt;VC&lt;/span&gt;&amp;#8217;s want an exit price of at least 100m, otherwise their business models don&amp;#8217;t work&amp;nbsp;out.&lt;/li&gt;
 &lt;li&gt;$10m can seem a lot for a founder with a 30% stake, but it&amp;#8217;s not enough to attract VCs, so aim&amp;nbsp;higher.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;How to&amp;nbsp;pitch&lt;/h2&gt;
+&lt;h2 id="how-to-pitch"&gt;How to&amp;nbsp;pitch&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Identify specific people with real&amp;nbsp;needs&lt;/li&gt;
 &lt;li&gt;Size of&amp;nbsp;market&lt;/li&gt;
 &lt;li&gt;Why&amp;nbsp;now?&lt;/li&gt;
 &lt;li&gt;What is your clear competitive advantage - why can no-one else do&amp;nbsp;this?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Market&lt;/h3&gt;
+&lt;h3 id="market"&gt;Market&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Find a large and attractive&amp;nbsp;market…&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Management&lt;/h3&gt;
+&lt;h3 id="management"&gt;Management&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Build a smart, skilled and cohesive&amp;nbsp;team&lt;/li&gt;
 &lt;li&gt;With a strong ability to deliver quickly and to learn&amp;nbsp;quickly&lt;/li&gt;
 &lt;li&gt;That is ready to go big whatever it&amp;nbsp;takes&lt;/li&gt;
 &lt;li&gt;With a unique vision and&amp;nbsp;project-fit&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Model&lt;/h3&gt;
+&lt;h3 id="model"&gt;Model&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Valuable and differentiated&amp;nbsp;products&lt;/li&gt;
 &lt;li&gt;Efficient go-to-market and growth&amp;nbsp;channels&lt;/li&gt;
 &lt;li&gt;Profitable monetisation&amp;nbsp;strategy&lt;/li&gt;
 &lt;li&gt;Scalability and&amp;nbsp;defensibility&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Momentum&lt;/h3&gt;
+&lt;h3 id="momentum"&gt;Momentum&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Show traction and that you&amp;#8217;ve cracked the important&amp;nbsp;problem&lt;/li&gt;
 &lt;li&gt;Show ambitous and credible growth&amp;nbsp;plans&lt;/li&gt;
@@ -653,7 +653,7 @@ mechanism, so that messages could be sent if I disappeared or pass&amp;nbsp;away
 &lt;li&gt;So be pragmatic about&amp;nbsp;risk.&lt;/li&gt;
 &lt;li&gt;Incorporate in London where the laws are good, even if you don&amp;#8217;t want to operate in the &lt;span class="caps"&gt;UK&lt;/span&gt;. It has a better designed system of corporate law. Estonia is also&amp;nbsp;good. &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Best European city for&amp;nbsp;founders&lt;/h2&gt;
+&lt;h2 id="best-european-city-for-founders"&gt;Best European city for&amp;nbsp;founders&lt;/h2&gt;
 &lt;p&gt;London, Paris,&amp;nbsp;Berlin..&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;There isn&amp;#8217;t a best city because none are&amp;nbsp;holistic&lt;/li&gt;
@@ -662,12 +662,12 @@ mechanism, so that messages could be sent if I disappeared or pass&amp;nbsp;away
 &lt;li&gt;Berlin has automation and execution, execution and&amp;nbsp;scaling&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;…You need to draw on all 3 of these cities, which when taken together can surpass Silicon&amp;nbsp;Valley.&lt;/p&gt;
-&lt;h2&gt;Anecdotes&lt;/h2&gt;
+&lt;h2 id="anecdotes"&gt;Anecdotes&lt;/h2&gt;
 &lt;p&gt;The founder of Slack lives in Vancouver with his wife and kids. He spends 1 day each week in California and everyone thinks Slack is Californian due to good marketing. Forget national pride, be pragmatic. Leverage the&amp;nbsp;internet. &lt;/p&gt;
 &lt;p&gt;The founders of Airbnb would fly from New York to California for 1 day each week. They were originally in California where AirBnB started, but decided that if they could make it work in New York then AirBnB would be a success, so they moved to New York and flew back for meetings , etc. If you ask Europeans to come to a meeting in London (which is not as far as California is from New York) people start complaining and deciding they can&amp;#8217;t be&amp;nbsp;bothered. &lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"></category><category term="LIS"></category><category term="Startup"></category><category term="FinTech"></category><category term="Europe"></category></entry><entry><title>The Lisbon Investment Summit</title><link href="https://johnmathews.eu/lis17.html" rel="alternate"></link><published>2017-06-09T17:53:00+02:00</published><updated>2017-06-09T17:53:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-06-09:/lis17.html</id><summary type="html">&lt;p&gt;The Lisbon investment Summit was full of Investors as well as Founders. The sessions were good enough but the real value was in the&amp;nbsp;conversations.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I attended the &lt;a href="http://www.lis-summit.com/"&gt;Lisbon Investment Summit&lt;/a&gt; on June 6 and 7 as part of the &lt;a href="http://www.oula.la"&gt;Oula.la&lt;/a&gt; InsurTech startup team with &lt;a href="https://twitter.com/jd_sullivan?lang=en-gb"&gt;John Sullivan&lt;/a&gt;. It was the first startup conference I&amp;#8217;d been to and I arrived hoping to have some useful conversations and understand more about the Fintech and startup spaces in Europe. As usual I wanted to focus on tech, finance and&amp;nbsp;blockchains.&lt;/p&gt;
-&lt;h2&gt;Who was&amp;nbsp;there&lt;/h2&gt;
+&lt;h2 id="who-was-there"&gt;Who was&amp;nbsp;there&lt;/h2&gt;
 &lt;p&gt;As well as some outstanding sessions there was a high ratio of investors to startups. This made talking to VCs, bankers and M&amp;amp;A lawyers really easy. I was happy to meet a London-based and Fintech-focussed &lt;span class="caps"&gt;VC&lt;/span&gt; when I sat down to have lunch, and thanks to interrupting a session to ask blockchain related questions on Day 1, a banker struck up a conversation with me over breakfast the next day. I met a lot of people across many relevant roles, and once I&amp;#8217;ve worked through my notes and my new collection of business cards I hope to have some great follow-up&amp;nbsp;meetings.&lt;/p&gt;
-&lt;h2&gt;Useful&amp;nbsp;Sessions&lt;/h2&gt;
+&lt;h2 id="useful-sessions"&gt;Useful&amp;nbsp;Sessions&lt;/h2&gt;
 &lt;p&gt;The most useful sessions for me&amp;nbsp;were:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -681,10 +681,10 @@ mechanism, so that messages could be sent if I disappeared or pass&amp;nbsp;away
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The blockchain session was valuable because it&amp;#8217;s unusual to meet people who have been working in the blockchain space for several years. I&amp;#8217;m always wary of being distracted by the hype and noise around developments in the blockchain space so I appreciated hearing some informed and level-headed&amp;nbsp;opinions.&lt;/p&gt;
-&lt;h2&gt;Political&amp;nbsp;Support&lt;/h2&gt;
+&lt;h2 id="political-support"&gt;Political&amp;nbsp;Support&lt;/h2&gt;
 &lt;p&gt;The opening session included a speech from the Mayor of Lisbon and the next day opened with a speech from the Secretary of Industry. Both speeches conveyed an open and progressive attitude to international cooperation aimed at promoting and supporting founders and startups in Portugal. The warm words were supported by practical measures including tax incentives and a state-backed scheme to match amounts contributed by private investors. It was really refreshing to hear a politician extol the virtues of multinational cooperation and bringing different cultures into Portugal. I wish Britain could do this&amp;nbsp;too.&lt;/p&gt;
 &lt;p&gt;On the topic of Brexit, which inevitably arose due to London&amp;#8217;s present role as a centre of finance and innovation, it seems Europe is still expecting the &lt;span class="caps"&gt;UK&lt;/span&gt; to come to its senses, and cannot understand why it&amp;#8217;s destroying its goodwill and reputation so&amp;nbsp;thoroughly.&lt;/p&gt;
-&lt;h2&gt;Overall&lt;/h2&gt;
+&lt;h2 id="overall"&gt;Overall&lt;/h2&gt;
 &lt;p&gt;The two days in Lisbon were full of useful and energetic conversations and it was a great experience pitching &lt;a href="http://www.oula.la"&gt;Oula.la&lt;/a&gt; multiple times and talking about what we&amp;#8217;re trying to do and how blockchains are a part of that. The opportunities to meet founders and investors are invaluable for making informed decisions. Lisbon is a beautiful city which I found easy to get around and always felt safe in. It&amp;#8217;s also refreshingly &lt;a href="https://johnmathews.eu/london.html"&gt;affordable!&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Panoramic street" src="https://johnmathews.eu/images/lis4.JPG"&gt;
 &lt;img alt="Google talks" src="https://johnmathews.eu/images/lis3.JPG"&gt;

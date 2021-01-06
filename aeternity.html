@@ -131,7 +131,7 @@
 <li>Different types of&nbsp;node</li>
 <li>Sharding</li>
 </ul>
-<h2>Smart Contracts in&nbsp;state-channels</h2>
+<h2 id="smart-contracts-in-state-channels">Smart Contracts in&nbsp;state-channels</h2>
 <ul>
 <li>A smart contract is a way to execute a contract without an intermediary (middle-man) and without&nbsp;conflict.</li>
 <li>The smart contract is a protocol which is stored and executed on a blockchain, executing transactions (outputs) based on specific inputs and programmable logic automatically. The logic often mirrors that contained in clauses of a written&nbsp;contract.</li>
@@ -141,13 +141,13 @@
 </ul>
 <p>This is because executing the smart-contracts off-chain makes them private and the code used to execute the smart contract won’t need to be broadcast to the primary blockchain. This should increase processing capacity by allowing contracts to execute in&nbsp;parallel.</p>
 <p>Disadvantages to the state-channel approach include reduced transparency, as running smart contracts in state channels requires more trust in both the contract creator and the node running&nbsp;it.</p>
-<h2>Oracles and prediction&nbsp;markets</h2>
+<h2 id="oracles-and-prediction-markets">Oracles and prediction&nbsp;markets</h2>
 <ul>
 <li>The Oracle functionality allows smart-contracts to interact with data outside the æternity blockchain. This is possible by checking on-chain prediction market results and rewarding users who made the correct prediction. Users are rewarded through automated payments and the immediate recording of transactions in the blockchain. This creates incentives to participate in prediction markets, which have  been shown to be&nbsp;effective. </li>
 <li>On-chain, rather than off-chain allows greater efficiency and&nbsp;integration</li>
 <li>The prediction market is expected to run using a native (on-chain) consensus procedure. The oracle mechanism is designed to use the same consensus&nbsp;infrastructure.</li>
 </ul>
-<h2>Governance by prediction&nbsp;markets</h2>
+<h2 id="governance-by-prediction-markets">Governance by prediction&nbsp;markets</h2>
 <ul>
 <li>Oracle functionality compliments prediction market&nbsp;functionality.</li>
 <li>Prediction markets are proposed to implement governance of the æternity blockchain. This is a new&nbsp;approach.</li>
@@ -157,13 +157,13 @@
 <li>The consensus developed by the prediction market will initially provide input to the development team’s&nbsp;decision-making.</li>
 <li>Later, a fully autonomous prediction market for governance is expected (a <span class="caps">DAO</span>)</li>
 </ul>
-<h2>Written in&nbsp;Erlang</h2>
+<h2 id="written-in-erlang">Written in&nbsp;Erlang</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)">Erlang</a> is normally used for large-scale systems that manage the allocation of scarce network resources (telecoms, banking, instant&nbsp;messaging)</li>
 <li>Could make it easier to run a lightning network and process many state-channels in&nbsp;parallel</li>
 <li>As far as I know, ÆTernity is the first blockchain project to be written in&nbsp;Erlang</li>
 </ul>
-<h2>Different types of&nbsp;node</h2>
+<h2 id="different-types-of-node">Different types of&nbsp;node</h2>
 <ul>
 <li>The æternity network will contain nodes with different functions. Each type of node will contribute towards the efficient functioning of particular aspects of the&nbsp;network</li>
 <li>Node types will&nbsp;include</li>
@@ -171,7 +171,7 @@
 <li>Exchanges - Trustless exchanges of assets offered by market makers. Profitable to market makers because of transaction&nbsp;fees.</li>
 <li>Presumably features such as consensus algorithms and prediction markets will also require their own dedicated node types. Users of the node will incur transaction fees to participate, providing an incentive to run a&nbsp;node.</li>
 </ul>
-<h2>Sharding</h2>
+<h2 id="sharding">Sharding</h2>
 <ul>
 <li>Allows a greater transaction volume, removing scalability problems that Bitcoin and Ethereum have&nbsp;experienced.</li>
 <li>Sharding works by splitting the space of possible accounts into subspaces (for example based on the first digit of a numerical&nbsp;address)</li>
@@ -197,7 +197,7 @@
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>

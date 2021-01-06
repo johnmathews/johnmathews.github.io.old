@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" Background It’s more of an art than a science: REpresentational State Transfer is an architectural style. SOAP (Simple Object Access Protocol) is a heavier style. GraphQL - doesnt overfetch. Graph... "/>
-      <meta name="twitter:description" content=" Background It’s more of an art than a science: REpresentational State Transfer is an architectural style. SOAP (Simple Object Access Protocol) is a heavier style. GraphQL - doesnt overfetch. Graph... "/>
-      <meta property="og:description" content=" Background It’s more of an art than a science: REpresentational State Transfer is an architectural style. SOAP (Simple Object Access Protocol) is a heavier style. GraphQL - doesnt overfetch. Graph... "/>
+      <meta name="description" content=" Some super brief notes I made about API design: Background It’s more of an art than a science RESTful (REpresentational State Transfer) API design is an architectural style. Alternative API... "/>
+      <meta name="twitter:description" content=" Some super brief notes I made about API design: Background It’s more of an art than a science RESTful (REpresentational State Transfer) API design is an architectural style. Alternative API... "/>
+      <meta property="og:description" content=" Some super brief notes I made about API design: Background It’s more of an art than a science RESTful (REpresentational State Transfer) API design is an architectural style. Alternative API... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/api-design.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/api-design.html"/>
@@ -118,18 +118,23 @@
       <main>
         <article>
           <div class="markdown dark:text-gray-200">
-            <h2>Background</h2>
+            <p>Some super brief notes I made about <span class="caps">API</span>&nbsp;design:</p>
+<h2 id="background">Background</h2>
 <ul>
-<li>It&#8217;s more of an art than a&nbsp;science:</li>
-<li>REpresentational State Transfer is an architectural style.<ul>
+<li>It&#8217;s more of an art than a&nbsp;science</li>
+<li>RESTful (REpresentational State Transfer) <span class="caps">API</span> design is an architectural&nbsp;style.</li>
+<li>Alternative <span class="caps">API</span> architectures:<ul>
 <li><span class="caps">SOAP</span> (Simple Object Access Protocol) is a heavier&nbsp;style.</li>
 <li><code>GraphQL</code> - doesnt overfetch. Graph query language made by&nbsp;Facebook.</li>
 </ul>
 </li>
-<li><code>Django</code> model managers are an&nbsp;api</li>
-<li>Exposes a databases to&nbsp;clients</li>
-<li>A <span class="caps">URL</span> route (endpoint) that returns <span class="caps">JSON</span> or <span class="caps">XML</span>.</li>
-<li><span class="caps">POST</span>, <span class="caps">GET</span>, <span class="caps">PUT</span>, <span class="caps">PATCH</span>, <span class="caps">DELETE</span> - <span class="caps">HTTP</span> methods. Correspond to <span class="caps">CRUD</span>, Create, Read, Update/Replace, Update/Modify,&nbsp;Delete</li>
+<li>APIs are everywhere (not just web APIs). They&#8217;re an <a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction">abstraction</a> that hides an implementation. <code>Django</code> model managers are an <span class="caps">API</span> (and also part of Django&#8217;s <span class="caps">ORM</span>), JavaScript is an <span class="caps">API</span>,&nbsp;etc.</li>
+</ul>
+<h2 id="restful-apis">RESTful&nbsp;APIs</h2>
+<ul>
+<li>Web APIs (all <span class="caps">REST</span> APIs?) expose a databases to&nbsp;clients</li>
+<li>A rest api is a <span class="caps">URL</span> route (endpoint) that returns <span class="caps">JSON</span> or <span class="caps">XML</span>.</li>
+<li><span class="caps">POST</span>, <span class="caps">GET</span>, <span class="caps">PUT</span>, <span class="caps">PATCH</span>, <span class="caps">DELETE</span>, corresponds to Create, Read, Update/Replace, Update/Modify, Delete (<span class="caps">HTTP</span> methods correspond to <span class="caps">CRUD</span>&nbsp;methods)</li>
 <li><span class="caps">HTTP</span> <span class="caps">METHODS</span>:<ul>
 <li><span class="caps">PUT</span> (create or update) is idempotent, <span class="caps">POST</span> is not idempotent (keep on creating,&nbsp;updating)</li>
 <li><span class="caps">PATCH</span> - partial&nbsp;update</li>
@@ -140,13 +145,14 @@
 </ul>
 </li>
 </ul>
-<h2>Advice</h2>
+<h2 id="qualitative-advice">Qualitative&nbsp;Advice</h2>
 <ul>
 <li>Use <span class="caps">HTTP</span> verbs to make requests more&nbsp;meaningful</li>
-<li>Use sensible resource names<ul>
+<li>Use sensible resource names. Naming things is hard, so think about this a bit
+    before starting.<ul>
 <li>Use identifiers in your URLs, not the query string.<ul>
-<li><code>Good</code>:&nbsp;/users/12345</li>
-<li><code>Poor</code>:&nbsp;/api?type=user&amp;id=23</li>
+<li><strong>Good</strong>: <code>/users/12345</code></li>
+<li><strong>Poor</strong>: <code>/api?type=user&amp;id=23</code></li>
 </ul>
 </li>
 </ul>
@@ -183,7 +189,7 @@
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>

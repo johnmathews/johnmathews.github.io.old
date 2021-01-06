@@ -122,17 +122,17 @@
               <p>My site is optimised for speed and clarity. I&#8217;ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in&nbsp;feeds.</p>
             </div>
           <div class="markdown dark:text-gray-200">
-            <h2>Design</h2>
+            <h2 id="design">Design</h2>
 <p>My approach to building my blog is to keep it as simple as possible, only adding features when they make a significant improvement to how the content is understood and used. Therefore I&#8217;ve done away with several features that would normally come baked into a WordPress theme. For example a footer full of links that would never be used, and a sidebar full of&nbsp;distractions. </p>
 <p>I opted for a single column design that hopefully presents text-heavy articles clearly and intuitively (please leave a comment and tell me what you&nbsp;think).</p>
-<h2>Plugins</h2>
+<h2 id="plugins">Plugins</h2>
 <p>My use of plugins to extend Pelican&#8217;s functionality reflects this, there is the <a href="https://github.com/getpelican/pelican-plugins/tree/master/neighbors">Neighbors</a> plugin so that the next or previous post can be accessed from the bottom of a post without going back to the index, and the <a href="https://github.com/getpelican/pelican-plugins/tree/master/tag_cloud">Tag Cloud</a> plugin to reflect which subjects are written about the most (and provide a link to all relevant&nbsp;articles).</p>
-<h2>Speed</h2>
+<h2 id="speed">Speed</h2>
 <p>The speed of the site is important because a faster site is more enjoyable to use. Therefore I&#8217;ve minified the <span class="caps">CSS</span> and the JavaScript using the <a href="https://github.com/getpelican/pelican-plugins/tree/master/assets">Assets</a> plugin. I&#8217;ve also set the <span class="caps">CSS</span> and JavaScript to load asynchronously. Images are optimised using the <a href="https://github.com/getpelican/pelican-plugins/tree/master/optimize_images">Optimize Images</a> plugin so that their file size is as small as possible and they download quickly. The site uses CloudFlare&#8217;s free <span class="caps">CDN</span> features so hopefully no matter when you view the site from you get a decent page&nbsp;speed.</p>
-<h2>Jinja&nbsp;templates</h2>
+<h2 id="jinja-templates">Jinja&nbsp;templates</h2>
 <p>I&#8217;ve also arranged the homepage so that posts are shown by their category and then by posting date. This may not work very well with a larger number of posts, but I&#8217;ll only consider that problem once it presents itself. Designing for hypotheticals or conditions that don&#8217;t yet exist is a waste of&nbsp;time. </p>
 <p>There are examples of how I&#8217;ve used Jinja templates below in the context of sharing my articles on Twitter and&nbsp;Facebook.</p>
-<h2>Plugin: Share&nbsp;Post</h2>
+<h2 id="plugin-share-post">Plugin: Share&nbsp;Post</h2>
 <p>I noticed that my posts were beginning to get tweeted about, so I thought it would be useful to have some sharing buttons at the bottom of each post for Twitter, Facebook and Email. Looking at the Pelican Plugins repo on Github showed there was (as usual) a plugin for this (called <a href="https://github.com/getpelican/pelican-plugins/tree/master/share_post">Share Post</a>), though I noted it hadn&#8217;t been updated for a couple of&nbsp;years.</p>
 <p>Installing and initial set-up was simple thanks to the readme on the git repo. You need to copy the plugin folder to the plugins directory, and add the name of the plugin to the list in pelicanconf.py. Then you need to copy paste some Jinja/<span class="caps">HTML</span> into the article.html template. That&#8217;s enough to make it&nbsp;work.</p>
 <p>I noted though that when I shared to Twitter the text to be tweeted was encapsulated in quotes and there was a &#8216;b&#8217; at the front. I realised this was due to using Python 3.x when the plugin (which hadn&#8217;t been updated for 2 years) was likely written for Python 2.x. A quick google and the obligatory trip to <span class="caps">SO</span> showed me how to convert a bytes string to a normal text&nbsp;string. </p>
@@ -154,7 +154,7 @@
 </pre></div>
 
 
-<h2>Using meta-data to specify tweet&nbsp;text</h2>
+<h2 id="using-meta-data-to-specify-tweet-text">Using meta-data to specify tweet&nbsp;text</h2>
 <p>I thought it would be cool to add some default text to a tweet, as I&#8217;ve enjoyed this feature on other blogs when I&#8217;ve found a post I wanted to share on Twitter. - A user may know they want to share an article but if they&#8217;re in a hurry it might be hard to find the right words, so why not provide a ready-made tweet. The text is editable so it&#8217;s only a&nbsp;suggestion.</p>
 <p>The text would be different for each post so it makes sense to specify it when writing the article. The article &#8216;summary&#8217; would be too long, and I know that Pelican supports arbitrary meta-data tags. I assumed that Jinja would pick up the data the same way it picks up the &#8216;standard&#8217; meta-data and added a function to&nbsp;share_post.py.</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">article_tweet</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
@@ -176,7 +176,7 @@
 
 
 <p>There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making <a href="https://johnmathews.eu/time-until.html">Time Until</a>.</p>
-<h2>Specifying the text and image in a Facebook&nbsp;share</h2>
+<h2 id="specifying-the-text-and-image-in-a-facebook-share">Specifying the text and image in a Facebook&nbsp;share</h2>
 <p>Sharing to Facebook worked without any formatting problems, but it bugged me that the opening text of the article was being used in the preview that was shared to Facebook when I had a summary already prepared and that would be much more useful to potential readers. For some articles I also had an article image that I wanted to see being&nbsp;used. </p>
 <p>Googling revealed that I needed to use particular meta tags in the webpage&#8217;s header if I wanted to control what Facebook would pickup. Facebook uses the &#8220;open graph&#8221; standards so I would need the headers in my article pages to include the&nbsp;following: </p>
 <div class="highlight"><pre><span></span>`<span class="c">&lt;!-- Open Graph data --&gt;</span>`
@@ -232,7 +232,7 @@
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>

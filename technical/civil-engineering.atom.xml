@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Civil Engineering</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/technical/civil-engineering.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2016-10-02T00:06:00+02:00</updated><entry><title>Silos: Introduction to my doctorate research</title><link href="https://johnmathews.eu/silos.html" rel="alternate"></link><published>2016-10-02T00:06:00+02:00</published><updated>2016-10-02T00:06:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-10-02:/silos.html</id><summary type="html">&lt;p&gt;In this post, I want to introduce my doctorate research without assuming any engineering&amp;nbsp;knowledge.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Background&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Civil Engineering</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/technical/civil-engineering.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2016-10-02T00:06:00+02:00</updated><entry><title>Silos: Introduction to my doctorate research</title><link href="https://johnmathews.eu/silos.html" rel="alternate"></link><published>2016-10-02T00:06:00+02:00</published><updated>2016-10-02T00:06:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-10-02:/silos.html</id><summary type="html">&lt;p&gt;In this post, I want to introduce my doctorate research without assuming any engineering&amp;nbsp;knowledge.&lt;/p&gt;</summary><content type="html">&lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;p&gt;From Spring 2010 until the Autumn of 2013, I was a PhD candidate living
 in Vienna, Austria and working at the University of Natural Resources
 and Life Sciences. Before working in Vienna, I completed my Masters
@@ -16,7 +16,7 @@ many different sizes and&amp;nbsp;varieties.&lt;/p&gt;
 &lt;p&gt;Silos are a common type of container for storing granular materials. You
 pour the granular material in from the top, store it for a while, and
 then dispense the material in controlled quantities from the&amp;nbsp;bottom.&lt;/p&gt;
-&lt;h2&gt;Research&amp;nbsp;focus&lt;/h2&gt;
+&lt;h2 id="research-focus"&gt;Research&amp;nbsp;focus&lt;/h2&gt;
 &lt;p&gt;My research focussed on quantifying how changes in gravity affected the
 material contained inside a silo, particularly whilst the silo was being
 emptied. This is pertinent because engineers and scientists do not yet
@@ -27,11 +27,11 @@ occur in a real system. Instead we use empirical methods
 (approximations, guesses, rules-of-thumb, and knowledge of what worked
 in previous similar situations). This isn&amp;#8217;t necessarily bad, but it is
 less efficient and less reliable than an analytical&amp;nbsp;approach.&lt;/p&gt;
-&lt;h2&gt;Research&amp;nbsp;techniques&lt;/h2&gt;
-&lt;h3&gt;Physical&amp;nbsp;modelling&lt;/h3&gt;
+&lt;h2 id="research-techniques"&gt;Research&amp;nbsp;techniques&lt;/h2&gt;
+&lt;h3 id="physical-modelling"&gt;Physical&amp;nbsp;modelling&lt;/h3&gt;
 &lt;p&gt;I built a small model silo (30cm tall) and put it into quite a large centrifuge (3 metre diameter). By rotating the model silo around the centre of the centrifuge at a constant speed I could simulate a higher gravity. I added high-speed cameras, pressure sensors and weighing
 scales so that I could measure how the material was moving once I opened the silo outlet and the silo began to empty. Photos of the experimental model I built can be seen&amp;nbsp;below. &lt;/p&gt;
-&lt;h3&gt;Numerical&amp;nbsp;modelling&lt;/h3&gt;
+&lt;h3 id="numerical-modelling"&gt;Numerical&amp;nbsp;modelling&lt;/h3&gt;
 &lt;p&gt;I also programmed a computer model (using the commercial &lt;span class="caps"&gt;PFC&lt;/span&gt; 3D software
 and working in the &lt;span class="caps"&gt;FISH&lt;/span&gt; scripting language) to simulate and investigate
 if the same behaviours could be observed numerically as&amp;nbsp;physically.&lt;/p&gt;
@@ -42,10 +42,10 @@ the two particle centres is less than the sum of their radiuses) then a
 force proportional to the overlap size repels the two spheres away from
 each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over &amp;#8220;continuum&amp;#8221; based techniques that model groups of grains as if they were all just one big particle with
 unusual properties. &lt;span class="caps"&gt;DEM&lt;/span&gt; has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, &lt;span class="caps"&gt;DEM&lt;/span&gt; will only be used for theoretical research and niche&amp;nbsp;applications.&lt;/p&gt;
-&lt;h2&gt;Results&lt;/h2&gt;
+&lt;h2 id="results"&gt;Results&lt;/h2&gt;
 &lt;p&gt;When gravity increases by a factor of &lt;span class="math"&gt;\(x\)&lt;/span&gt;, both the discharge rate and local velocities within the silo increase by  &lt;span class="math"&gt;\(\sqrt(x)\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
 &lt;p&gt;That&amp;#8217;s good to know if you&amp;#8217;re planning on storing stuff on the moon, but it&amp;#8217;s also a useful step towards explaining exactly why bulk granular materials behave the way they&amp;nbsp;do.&lt;/p&gt;
-&lt;h2&gt;More&amp;nbsp;Information&lt;/h2&gt;
+&lt;h2 id="more-information"&gt;More&amp;nbsp;Information&lt;/h2&gt;
 &lt;p&gt;An overview of my research, my doctorate thesis and published papers can
 be downloaded below. PDFs containing 3D models and movies require flash
 to render, and Adobe Reader Desktop must be used in order to view&amp;nbsp;them.&lt;/p&gt;

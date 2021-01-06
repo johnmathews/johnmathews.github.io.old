@@ -121,7 +121,7 @@
               <p>In this post, I want to introduce my doctorate research without assuming any engineering&nbsp;knowledge.</p>
             </div>
           <div class="markdown dark:text-gray-200">
-            <h2>Background</h2>
+            <h2 id="background">Background</h2>
 <p>From Spring 2010 until the Autumn of 2013, I was a PhD candidate living
 in Vienna, Austria and working at the University of Natural Resources
 and Life Sciences. Before working in Vienna, I completed my Masters
@@ -138,7 +138,7 @@ many different sizes and&nbsp;varieties.</p>
 <p>Silos are a common type of container for storing granular materials. You
 pour the granular material in from the top, store it for a while, and
 then dispense the material in controlled quantities from the&nbsp;bottom.</p>
-<h2>Research&nbsp;focus</h2>
+<h2 id="research-focus">Research&nbsp;focus</h2>
 <p>My research focussed on quantifying how changes in gravity affected the
 material contained inside a silo, particularly whilst the silo was being
 emptied. This is pertinent because engineers and scientists do not yet
@@ -149,11 +149,11 @@ occur in a real system. Instead we use empirical methods
 (approximations, guesses, rules-of-thumb, and knowledge of what worked
 in previous similar situations). This isn&#8217;t necessarily bad, but it is
 less efficient and less reliable than an analytical&nbsp;approach.</p>
-<h2>Research&nbsp;techniques</h2>
-<h3>Physical&nbsp;modelling</h3>
+<h2 id="research-techniques">Research&nbsp;techniques</h2>
+<h3 id="physical-modelling">Physical&nbsp;modelling</h3>
 <p>I built a small model silo (30cm tall) and put it into quite a large centrifuge (3 metre diameter). By rotating the model silo around the centre of the centrifuge at a constant speed I could simulate a higher gravity. I added high-speed cameras, pressure sensors and weighing
 scales so that I could measure how the material was moving once I opened the silo outlet and the silo began to empty. Photos of the experimental model I built can be seen&nbsp;below. </p>
-<h3>Numerical&nbsp;modelling</h3>
+<h3 id="numerical-modelling">Numerical&nbsp;modelling</h3>
 <p>I also programmed a computer model (using the commercial <span class="caps">PFC</span> 3D software
 and working in the <span class="caps">FISH</span> scripting language) to simulate and investigate
 if the same behaviours could be observed numerically as&nbsp;physically.</p>
@@ -164,10 +164,10 @@ the two particle centres is less than the sum of their radiuses) then a
 force proportional to the overlap size repels the two spheres away from
 each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over &#8220;continuum&#8221; based techniques that model groups of grains as if they were all just one big particle with
 unusual properties. <span class="caps">DEM</span> has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, <span class="caps">DEM</span> will only be used for theoretical research and niche&nbsp;applications.</p>
-<h2>Results</h2>
+<h2 id="results">Results</h2>
 <p>When gravity increases by a factor of <span class="math">\(x\)</span>, both the discharge rate and local velocities within the silo increase by  <span class="math">\(\sqrt(x)\)</span>&nbsp;.</p>
 <p>That&#8217;s good to know if you&#8217;re planning on storing stuff on the moon, but it&#8217;s also a useful step towards explaining exactly why bulk granular materials behave the way they&nbsp;do.</p>
-<h2>More&nbsp;Information</h2>
+<h2 id="more-information">More&nbsp;Information</h2>
 <p>An overview of my research, my doctorate thesis and published papers can
 be downloaded below. PDFs containing 3D models and movies require flash
 to render, and Adobe Reader Desktop must be used in order to view&nbsp;them.</p>
@@ -257,7 +257,7 @@ to render, and Adobe Reader Desktop must be used in order to view&nbsp;them.</p
         </div>
 
       <div class="text-left">
-        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-white dark:text-gray-700 transition-colors duration-150 bg-green-500 rounded-lg focus:shadow-outline hover:bg-gray-600 dark:hover:text-white">
+        <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
           <span>Subscribe</span>
           <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
         </button>
