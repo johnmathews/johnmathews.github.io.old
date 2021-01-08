@@ -123,7 +123,7 @@ Last summer I was building a web app using Django and began to break things
 unintentionally when adding new features. This soon led to lots of clicking
 around different pages to test if stuff was still working each time I made an update.</p>
 <p>This soon led to me thinking there must be a better way. Which brought
-my to Test Driven Development (<span class="caps">TDD</span>).</p>
+me to Test Driven Development (<span class="caps">TDD</span>).</p>
 <p>It should have just led me to writing tests, which it did. But googling
 whatever I googled got me down the <span class="caps">TDD</span> rabbit hole rather than just the “write
 some tests” rabbit hole. Write tests for your code before you write the code.
@@ -131,7 +131,7 @@ Write tests for bugs you’ve fixed to check they stay fixed. Write tests as a
 kind of documentation to show what stuff is supposed to be doing. Errr…</p>
 <p>Django was a big enough pile of abstractions as it was. Views, ORMs, mixins,
 serializers… Trying to add factories and fixtures into that took some getting
-used to. But eventually I made some progress, and now I quite enjoy running my
+used to. But eventually I made some progress, and now I quite enjoy running
 coverage reports to keep coverage <em>close</em> to 100%<sup id="sf-test-driven-development-1-back"><a href="#sf-test-driven-development-1" class="simple-footnote" title="Which is fun and all, but testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just written without ensuring that only the intended behaviours happen.">1</a></sup>.</p>
 <p>Some of the main things I’ve learnt about writing tests:</p>
 <ol>
