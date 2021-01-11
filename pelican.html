@@ -39,6 +39,8 @@
 
       <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
         <script>
           window.ga = window.ga || function () {
                       (ga.q = ga.q || []).push(arguments);
@@ -49,7 +51,7 @@
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>
 
-      <script async src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
       <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -80,22 +82,51 @@
           <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
         </button>
       </div>
-      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 -mb-2 md:mb-0 md:mt-0 border-t-2 border-blue-900 md:border-none">
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
-        <button class="pl-5 pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
+
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
+
+        <button class="pl-5 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
           <div id="day" class="modeIcon">
-            <img src="https://johnmathews.eu/theme/images/sun.svg" type="image/svg+xml" width="30" height="30" alt="light mode">
+            <img src="https://johnmathews.eu/theme/images/sun.svg" class="" type="image/svg+xml" width="30" height="30" alt="light mode">
           </div>
           <div id="night" class="modeIcon hidden">
             <img src="https://johnmathews.eu/theme/images/night.svg" type="image/svg+xml" width="25" height="25" alt="dark mode">
           </div>
         </button>
+
+        <button id="catChooser" class="">
+          <i class="md:pl-2 fas fa-paw fa-lg -mt-5"></i>
+        </button>
+
       </div>
     </nav>
 
     <main class="lg:mt-10 lg:pt-5">
-  <div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700">
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4">
+                <h3 class="text-lg leading-6 font-medium text-gray-900 pb-5" id="modal-headline">
+                  Choose which categories you want to see
+                </h3>
+                <div id="" class="flex items-center flex-col justify-center text-base my-auto text-gray-800" role="group">
+                  <button id="chooseBoth" class="mb-3 bg-none rounded-lg hover:text-gray-50 hover:bg-yellow-500 border-0 px-2 py-0 mx-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="mb-3 bg-none rounded-lg hover:text-gray-50 hover:bg-yellow-500 px-2 py-0 mx-0 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="bg-none rounded-lg hover:text-gray-50 hover:bg-yellow-500  px-2 py-0 mx-0 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  technical  ">
           <img class="lg:mx-auto" src="/images/get_pelican.jpg" alt="Pelican" />
 
       <div class="markdown text-center dark:text-gray-200">
@@ -250,6 +281,75 @@
         </script>
 
         <script>
+          if (window.location.pathname !== '/blog') {
+            $("#catChooser").toggleClass('hidden')
+          };
+          $( "#catChooser" ).click(function() {
+            $('#catModal').toggleClass('hidden');
+          });
+        </script>
+
+        <script async>
+          $( "#chooseBoth" ).click(function() {
+            window.localStorage.setItem('categoryChoice', 'all');
+            $('.technical').removeClass('hidden');
+            $('.nonTechnical').removeClass('hidden');
+
+            $('#chooseBoth').addClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#chooseTechnical" ).click(function() {
+            window.localStorage.setItem('categoryChoice', 'technical');
+            $('.technical').removeClass('hidden');
+            $('.nonTechnical').addClass('hidden');
+
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').addClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#chooseNonTechnical" ).click(function() {
+            window.localStorage.setItem('categoryChoice', 'nonTechnical');
+            $('.nonTechnical').removeClass('hidden');
+            $('.technical').addClass('hidden');
+
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').addClass('bg-yellow-500');
+
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#catModal" ).click(function() {
+            $('#catModal').toggleClass('hidden');
+          });
+          // check if a category choice has been made before
+          if (localStorage.getItem('categoryChoice') === "technical") {
+            $('.nonTechnical').addClass('hidden');
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').addClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+          } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+            $('.technical').addClass('hidden');
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').addClass('bg-yellow-500');
+
+          } else if (localStorage.getItem('categoryChoice') === "all") {
+            $('#chooseBoth').addClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+          }
+        </script>
+
+        <script>
           const light = "https://johnmathews.eu/theme/css/pygment-light.css"
           const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
 
@@ -291,9 +391,9 @@
               document.getElementById("day").classList.remove("hidden");
               document.getElementById("night").classList.add("hidden");
             }
-
           }
         </script>
+
         <script>
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
@@ -304,7 +404,7 @@
               document.getElementById("navbar").style.top = "-100px";
             }
             prevScrollPos = currentScrollPos;
-          } 
+          }
         </script>
 
   <script>
@@ -312,6 +412,27 @@
           $('#signupButton').removeClass('block').addClass('hidden')
           $('#subscribeBox').removeClass('hidden').addClass('block')
         });
+  </script>
+  <script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // check if a category choice has been made before
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
   </script>
     </div>
   </body>

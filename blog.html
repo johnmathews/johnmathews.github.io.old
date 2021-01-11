@@ -37,6 +37,8 @@
 
       <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
         <script>
           window.ga = window.ga || function () {
                       (ga.q = ga.q || []).push(arguments);
@@ -47,7 +49,7 @@
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>
 
-      <script async src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
       <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -70,26 +72,55 @@
           <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
         </button>
       </div>
-      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 -mb-2 md:mb-0 md:mt-0 border-t-2 border-blue-900 md:border-none">
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
-        <button class="pl-5 pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
+
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
+
+        <button class="pl-5 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
           <div id="day" class="modeIcon">
-            <img src="https://johnmathews.eu/theme/images/sun.svg" type="image/svg+xml" width="30" height="30" alt="light mode">
+            <img src="https://johnmathews.eu/theme/images/sun.svg" class="" type="image/svg+xml" width="30" height="30" alt="light mode">
           </div>
           <div id="night" class="modeIcon hidden">
             <img src="https://johnmathews.eu/theme/images/night.svg" type="image/svg+xml" width="25" height="25" alt="dark mode">
           </div>
         </button>
+
+        <button id="catChooser" class="">
+          <i class="md:pl-2 fas fa-paw fa-lg -mt-5"></i>
+        </button>
+
       </div>
     </nav>
 
     <main class="lg:mt-10 lg:pt-5">
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4">
+                <h3 class="text-lg leading-6 font-medium text-gray-900 pb-5" id="modal-headline">
+                  Choose which categories you want to see
+                </h3>
+                <div id="" class="flex items-center flex-col justify-center text-base my-auto text-gray-800" role="group">
+                  <button id="chooseBoth" class="mb-3 bg-none rounded-lg hover:text-gray-50 hover:bg-yellow-500 border-0 px-2 py-0 mx-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="mb-3 bg-none rounded-lg hover:text-gray-50 hover:bg-yellow-500 px-2 py-0 mx-0 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="bg-none rounded-lg hover:text-gray-50 hover:bg-yellow-500  px-2 py-0 mx-0 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <main class="bg-gray-100 dark:bg-gray-800 py-1">
     <div class="container mx-auto px-4">
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pb-1 text-2xl text-center md:text-left dark:text-gray-100">2021</h2>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/test-driven-development.html">Test Driven&nbsp;Development</a>
                 </div>
@@ -97,7 +128,7 @@
                   6 January
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/api-design.html">How To Design An <span class="caps">API</span></a>
                 </div>
@@ -105,7 +136,7 @@
                   4 January
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a>
                 </div>
@@ -113,7 +144,7 @@
                   4 January
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a>
                 </div>
@@ -121,7 +152,7 @@
                   4 January
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html">Using Unix Utilities To Analyse And Update Multiple Text&nbsp;Files</a>
                 </div>
@@ -132,7 +163,7 @@
         </div>
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pb-1 text-2xl text-center md:text-left dark:text-gray-100">2020</h2>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/a-new-blog-design.html">A New Blog&nbsp;Design</a>
                 </div>
@@ -140,7 +171,7 @@
                   18 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/product-led-growth.html">Product-Led&nbsp;Growth</a>
                 </div>
@@ -148,7 +179,7 @@
                   8 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/mom-test.html">The Mom&nbsp;Test</a>
                 </div>
@@ -156,7 +187,7 @@
                   4 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/obviously-awesome.html">Obviously&nbsp;Awesome</a>
                 </div>
@@ -164,7 +195,7 @@
                   3 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/How-I-learnt-to-code.html">How I learnt to&nbsp;code</a>
                 </div>
@@ -172,7 +203,7 @@
                   1 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a>
                 </div>
@@ -180,7 +211,7 @@
                   19 November
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/marketing-101.html">Learning to&nbsp;market</a>
                 </div>
@@ -188,7 +219,7 @@
                   19 November
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/pippip.email.html">Pippip.Email</a>
                 </div>
@@ -199,7 +230,7 @@
         </div>
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pb-1 text-2xl text-center md:text-left dark:text-gray-100">2019</h2>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/between-clients.html">Between&nbsp;Clients</a>
                 </div>
@@ -207,7 +238,7 @@
                   8 October
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/btc-fork-analysis.html">Analysis of the mean and median value of transactions on 5&nbsp;Blockchains</a>
                 </div>
@@ -215,7 +246,7 @@
                   2 September
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/shell.html">A faster&nbsp;shell</a>
                 </div>
@@ -223,7 +254,7 @@
                   14 February
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a>
                 </div>
@@ -234,7 +265,7 @@
         </div>
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pb-1 text-2xl text-center md:text-left dark:text-gray-100">2018</h2>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a>
                 </div>
@@ -242,7 +273,7 @@
                   13 October
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/bakkerij.html">Bakke-Rij</a>
                 </div>
@@ -250,7 +281,7 @@
                   11 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/prediction.html">Prediction&nbsp;Markets</a>
                 </div>
@@ -258,7 +289,7 @@
                   7 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/reading.html">What I&#8217;m&nbsp;reading</a>
                 </div>
@@ -266,7 +297,7 @@
                   4 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a>
                 </div>
@@ -274,7 +305,7 @@
                   1 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/neighbours.html">Neighbours</a>
                 </div>
@@ -285,7 +316,7 @@
         </div>
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pb-1 text-2xl text-center md:text-left dark:text-gray-100">2017</h2>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/buying-btc.html">How to buy&nbsp;Bitcoin</a>
                 </div>
@@ -293,7 +324,7 @@
                   7 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/ocean.html">Live near the&nbsp;ocean</a>
                 </div>
@@ -301,7 +332,7 @@
                   23 November
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/pangea.html">Pangea</a>
                 </div>
@@ -309,7 +340,7 @@
                   22 November
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a>
                 </div>
@@ -317,7 +348,7 @@
                   21 November
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/wallet.html">Hardware&nbsp;Wallets</a>
                 </div>
@@ -325,7 +356,7 @@
                   8 November
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/algo-trading.html">Trading digital&nbsp;assets</a>
                 </div>
@@ -333,7 +364,7 @@
                   28 October
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/chartered.html">I&#8217;m a chartered&nbsp;accountant</a>
                 </div>
@@ -341,7 +372,7 @@
                   19 October
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/coworking.html">Coworking in&nbsp;Dublin</a>
                 </div>
@@ -349,7 +380,7 @@
                   15 September
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/bitnation.html">Bitnation</a>
                 </div>
@@ -357,7 +388,7 @@
                   14 September
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a>
                 </div>
@@ -365,7 +396,7 @@
                   12 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/macro-btc.html">Macro analysis of the Bitcoin&nbsp;blockchain</a>
                 </div>
@@ -373,7 +404,7 @@
                   3 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/corporate.html">Corporate&nbsp;London</a>
                 </div>
@@ -381,7 +412,7 @@
                   10 July
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a>
                 </div>
@@ -389,7 +420,7 @@
                   8 July
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/move.html">Move</a>
                 </div>
@@ -397,7 +428,7 @@
                   8 July
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/flee.html">Flee</a>
                 </div>
@@ -405,7 +436,7 @@
                   4 July
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a>
                 </div>
@@ -413,7 +444,7 @@
                   9 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/ambitious.html">How to be an ambitious founder in&nbsp;Europe</a>
                 </div>
@@ -421,7 +452,7 @@
                   9 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/lis17.html">The Lisbon Investment&nbsp;Summit</a>
                 </div>
@@ -429,7 +460,7 @@
                   9 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a>
                 </div>
@@ -437,7 +468,7 @@
                   1 June
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a>
                 </div>
@@ -445,7 +476,7 @@
                   25 May
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/london.html">London Rent vs. London&nbsp;Salaries</a>
                 </div>
@@ -453,7 +484,7 @@
                   12 May
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a>
                 </div>
@@ -461,7 +492,7 @@
                   5 May
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a>
                 </div>
@@ -469,7 +500,7 @@
                   30 April
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/pelican.html">Blogging with&nbsp;Pelican</a>
                 </div>
@@ -477,7 +508,7 @@
                   28 April
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/books.html">Analysing a personal&nbsp;library</a>
                 </div>
@@ -485,7 +516,7 @@
                   1 February
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/fakegl.html">FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance</a>
                 </div>
@@ -493,7 +524,7 @@
                   6 January
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/reconciliation.html">Reconciliation of a trial balance to a general&nbsp;ledger</a>
                 </div>
@@ -504,7 +535,7 @@
         </div>
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pb-1 text-2xl text-center md:text-left dark:text-gray-100">2016</h2>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/spotify.html">Spotify song&nbsp;history</a>
                 </div>
@@ -512,7 +543,7 @@
                   22 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/vim.html">Vim!</a>
                 </div>
@@ -520,7 +551,7 @@
                   1 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a>
                 </div>
@@ -528,7 +559,7 @@
                   1 December
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/silos.html">Silos: Introduction to my doctorate&nbsp;research</a>
                 </div>
@@ -536,7 +567,7 @@
                   2 October
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/encryption.html">Encryption</a>
                 </div>
@@ -544,7 +575,7 @@
                   30 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a>
                 </div>
@@ -552,7 +583,7 @@
                   19 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/spare-time.html">Spare&nbsp;time</a>
                 </div>
@@ -560,7 +591,7 @@
                   13 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/time-until.html">Übersicht widget: Time&nbsp;Until</a>
                 </div>
@@ -568,7 +599,7 @@
                   7 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/how-to-wake-up-early.html">How to wake up&nbsp;early</a>
                 </div>
@@ -576,7 +607,7 @@
                   6 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a>
                 </div>
@@ -584,7 +615,7 @@
                   3 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a>
                 </div>
@@ -592,7 +623,7 @@
                   1 August
                 </div>
               </div>
-              <div class="flex justify-between text-xl py-2 md:py-1">
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a>
                 </div>
@@ -615,13 +646,82 @@
     </footer>
 
     <div>
-        <script>
+          <script>
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
             for (let i = 0; i < navToggle.length; i++) {
               navToggle.item(i).classList.toggle("hidden");
             }
           };
+        </script>
+
+        <script>
+          if (window.location.pathname !== '/blog') {
+            $("#catChooser").toggleClass('hidden')
+          };
+          $( "#catChooser" ).click(function() {
+            $('#catModal').toggleClass('hidden');
+          });
+        </script>
+
+        <script async>
+          $( "#chooseBoth" ).click(function() {
+            window.localStorage.setItem('categoryChoice', 'all');
+            $('.technical').removeClass('hidden');
+            $('.nonTechnical').removeClass('hidden');
+
+            $('#chooseBoth').addClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#chooseTechnical" ).click(function() {
+            window.localStorage.setItem('categoryChoice', 'technical');
+            $('.technical').removeClass('hidden');
+            $('.nonTechnical').addClass('hidden');
+
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').addClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#chooseNonTechnical" ).click(function() {
+            window.localStorage.setItem('categoryChoice', 'nonTechnical');
+            $('.nonTechnical').removeClass('hidden');
+            $('.technical').addClass('hidden');
+
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').addClass('bg-yellow-500');
+
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#catModal" ).click(function() {
+            $('#catModal').toggleClass('hidden');
+          });
+          // check if a category choice has been made before
+          if (localStorage.getItem('categoryChoice') === "technical") {
+            $('.nonTechnical').addClass('hidden');
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').addClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+          } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+            $('.technical').addClass('hidden');
+            $('#chooseBoth').removeClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').addClass('bg-yellow-500');
+
+          } else if (localStorage.getItem('categoryChoice') === "all") {
+            $('#chooseBoth').addClass('bg-yellow-500');
+            $('#chooseTechnical').removeClass('bg-yellow-500');
+            $('#chooseNonTechnical').removeClass('bg-yellow-500');
+          }
         </script>
 
         <script>
@@ -666,9 +766,9 @@
               document.getElementById("day").classList.remove("hidden");
               document.getElementById("night").classList.add("hidden");
             }
-
           }
         </script>
+
         <script>
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
@@ -679,8 +779,10 @@
               document.getElementById("navbar").style.top = "-100px";
             }
             prevScrollPos = currentScrollPos;
-          } 
+          }
         </script>
+
+
     </div>
   </body>
 
