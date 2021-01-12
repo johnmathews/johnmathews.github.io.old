@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 
+#darkMode:hover{
+	color:red;
+}
+
+#lightMode:hover{
+	color:red;
+}
+
+.far:hover, .fas:hover {
+	@apply text-gray-50;
+}
+
 .markdown .simple-footnotes {
 	@apply mt-10 py-3 pr-2 rounded-lg italic md:w-4/6 bg-yellow-500 dark:bg-green-800;
 }
