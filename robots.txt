@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /drafts/*
+Sitemap: https://johnmathews.eu/sitemap.xml

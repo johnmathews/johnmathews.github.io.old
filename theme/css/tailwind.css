@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+
+#darkMode:hover{
+	color:red;
+}
+
+#lightMode:hover{
+	color:red;
+}
+
+.far:hover, .fas:hover {
+	@apply text-gray-50;
+}
+
+.far, .fas {
+	@apply text-gray-700;
+}
+
+.markdown .simple-footnotes {
+	@apply mt-10 py-3 pr-2 rounded-lg italic md:w-4/6 bg-yellow-500 dark:bg-green-800;
+}
+
+/* make jupyter notebook cells and output scroll instead of overflow */
+.markdown .highlight {
+	overflow: scroll;
+  @apply dark:bg-gray-800 dark:text-gray-200;
+}
+
+.markdown .inner_cell {
+	overflow: scroll;
+}
+
+/* Override pygments style background color. */
+.markdown .highlight pre {
+  @apply bg-gray-100 dark:bg-gray-800 dark:text-gray-200 text-sm;
+	overflow: scroll;
+}
+
+.markdown .highlight pre span {
+	@apply border-0 leading-5;
+}
+
+.markdown .output_html {
+	overflow-x: scroll;
+  @apply dark:bg-gray-100 dark:text-gray-900;
+}
+
+.markdown .anchor-link {
+	visibility: hidden;
+}
+
+/* output_html rendered_html output_subarea output_execute_result */
+.markdown .output_execute_result {
+  @apply dark:text-gray-900;
+}
+
+.markdown .output_subarea {
+  @apply dark:bg-gray-100;
+}
+
+.markdown .output_stdout pre {
+  @apply dark:text-gray-700;
+}
+
+/* Additional vertical padding used by kbd tag. */
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.markdown {
+  @apply text-gray-900 text-lg leading-relaxed break-words;
+}
+
+.markdown p img {
+  @apply mx-auto my-2 border-solid border-2 rounded-sm border-gray-500;
+}
+
+.markdown p img:first-child {
+  @apply mt-10;
+}
+
+.markdown p img:last-child {
+  @apply mb-10;
+}
+
+.markdown p {
+  @apply mt-0 mb-4 font-light;
+}
+
+.markdown > * + * {
+  @apply mt-0 mb-4;
+}
+
+.markdown li + li {
+  @apply mt-1;
+}
+
+.markdown li > p + p {
+  @apply mt-6;
+}
+
+.markdown strong {
+  @apply font-semibold;
+}
+
+.markdown a {
+  @apply text-blue-600 dark:text-blue-300 font-semibold;
+}
+
+.markdown strong a {
+  @apply font-semibold;
+}
+
+.markdown h1 {
+  @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pt-2 pb-2;
+}
+
+.markdown h2 {
+  @apply leading-tight border-b text-2xl font-semibold mb-4 mt-10 pb-2;
+}
+
+.markdown h3 {
+  @apply leading-snug text-lg font-semibold mb-4 mt-6;
+}
+
+.markdown h4 {
+  @apply leading-none text-base font-semibold mb-4 mt-6;
+}
+
+.markdown h5 {
+  @apply leading-tight text-sm font-semibold mb-4 mt-6;
+}
+
+.markdown h6 {
+  @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
+}
+
+.markdown blockquote {
+  @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600 dark:text-gray-200;
+}
+
+.markdown code {
+  @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-05 dark:bg-gray-800;
+}
+
+.markdown pre {
+  @apply bg-gray-100 rounded p-4;
+}
+
+.markdown pre code {
+  @apply block bg-transparent p-0 overflow-visible rounded-none;
+}
+
+.markdown ul {
+  @apply text-base pl-8 list-disc;
+}
+
+.markdown ol {
+  @apply text-base pl-8 list-decimal;
+}
+
+.markdown kbd {
+  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+}
+
+.markdown table {
+  @apply text-base border-gray-600;
+}
+
+.markdown th {
+  @apply border py-1 px-3;
+}
+
+.markdown td {
+  @apply border py-1 px-3;
+}
+
+@tailwind utilities;
