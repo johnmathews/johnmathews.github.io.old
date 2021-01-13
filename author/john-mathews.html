@@ -22,8 +22,8 @@
       <meta name="twitter:description" content="John Mathews' personal blog"/>
       <meta property="og:description" content="John Mathews' personal blog"/>
 
-      <meta property="og:url" content=" https://johnmathews.eu "/>
-      <meta property="twitter:url" content=" https://johnmathews.eu "/>
+      <meta property="og:url" content=" .. "/>
+      <meta property="twitter:url" content=" .. "/>
 
       <meta name="twitter:image" content=""/>
       <meta property="og:image" content=""/>
@@ -33,30 +33,19 @@
 
       <meta property="og:type" content="website"/>
 
-      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
+      <link rel="icon" href="../extra/favicon.png" />
 
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="../None" />
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
-        <script>
-          window.ga = window.ga || function () {
-                      (ga.q = ga.q || []).push(arguments);
-                    };
-                    ga.l = +new Date();
-                    ga("create", "UA-82253540-1", "auto");
-                    ga("send", "pageview");
-        </script>
-        <script async src="https://www.google-analytics.com/analytics.js"></script>
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+      <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
-      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link async href="../theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link async id="PygmentCSS" href="../theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
-      <script async>
-        let theme = localStorage.getItem('theme');
-      </script>
+      <script async> let theme = localStorage.getItem('theme'); </script>
 
   </head>
 
@@ -64,7 +53,7 @@
     <a class="pt-20 mt-20 " name="top"></a>
     <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="../blog">JohnMathews.eu</a>
       </div>
       <div class="flex md:hidden">
         <button id="hamburger" aria-label="Menu" >
@@ -74,8 +63,8 @@
       </div>
       <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
 
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="../about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="../experience">Experience</a>
 
         <div class="flex justify-end px-3">
           <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
@@ -87,7 +76,7 @@
             </div>
           </button>
 
-          <button id="catChooser" class="md:mt-0">
+          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
               <i class="pl-2 fas fa-paw fa-lg"></i>
           </button>
         </div>
@@ -127,7 +116,7 @@
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2021</h2>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/test-driven-development.html">Test Driven&nbsp;Development</a>
+                  <a href="../test-driven-development.html">Test Driven&nbsp;Development</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   6 January
@@ -135,7 +124,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/why-even-start.html">Why Even&nbsp;Start</a>
+                  <a href="../why-even-start.html">Why Even&nbsp;Start</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   5 January
@@ -143,7 +132,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/api-design.html">How To Design An <span class="caps">API</span></a>
+                  <a href="../api-design.html">How To Design An <span class="caps">API</span></a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 January
@@ -151,7 +140,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a>
+                  <a href="../principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 January
@@ -159,7 +148,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a>
+                  <a href="../site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 January
@@ -167,7 +156,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html">Using Unix Utilities To Analyse And Update Multiple Text&nbsp;Files</a>
+                  <a href="../using-unix-utilities-to-analyse-and-update-multiple-files.html">Using Unix Utilities To Analyse And Update Multiple Text&nbsp;Files</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 January
@@ -178,7 +167,7 @@
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2020</h2>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/a-new-blog-design.html">A New Blog&nbsp;Design</a>
+                  <a href="../a-new-blog-design.html">A New Blog&nbsp;Design</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   18 December
@@ -186,7 +175,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/product-led-growth.html">Product-Led&nbsp;Growth</a>
+                  <a href="../product-led-growth.html">Product-Led&nbsp;Growth</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   8 December
@@ -194,7 +183,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/mom-test.html">The Mom&nbsp;Test</a>
+                  <a href="../mom-test.html">The Mom&nbsp;Test</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 December
@@ -202,7 +191,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/obviously-awesome.html">Obviously&nbsp;Awesome</a>
+                  <a href="../obviously-awesome.html">Obviously&nbsp;Awesome</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   3 December
@@ -210,7 +199,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/How-I-learnt-to-code.html">How I learnt to&nbsp;code</a>
+                  <a href="../How-I-learnt-to-code.html">How I learnt to&nbsp;code</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   1 December
@@ -218,7 +207,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a>
+                  <a href="../1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   19 November
@@ -226,7 +215,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/marketing-101.html">Learning to&nbsp;market</a>
+                  <a href="../marketing-101.html">Learning to&nbsp;market</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   19 November
@@ -234,7 +223,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/pippip.email.html">Pippip.Email</a>
+                  <a href="../pippip.email.html">Pippip.Email</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   28 October
@@ -245,7 +234,7 @@
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2019</h2>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/between-clients.html">Between&nbsp;Clients</a>
+                  <a href="../between-clients.html">Between&nbsp;Clients</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   8 October
@@ -253,15 +242,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/btc-fork-analysis.html">Analysis of the mean and median value of transactions on 5&nbsp;Blockchains</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  2 September
-                </div>
-              </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/shell.html">A faster&nbsp;shell</a>
+                  <a href="../shell.html">A faster&nbsp;shell</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   14 February
@@ -269,7 +250,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a>
+                  <a href="../bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   24 January
@@ -280,7 +261,7 @@
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2018</h2>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a>
+                  <a href="../sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   13 October
@@ -288,7 +269,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/bakkerij.html">Bakke-Rij</a>
+                  <a href="../bakkerij.html">Bakke-Rij</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   11 June
@@ -296,7 +277,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/prediction.html">Prediction&nbsp;Markets</a>
+                  <a href="../prediction.html">Prediction&nbsp;Markets</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   7 June
@@ -304,7 +285,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/reading.html">What I&#8217;m&nbsp;reading</a>
+                  <a href="../reading.html">What I&#8217;m&nbsp;reading</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 June
@@ -312,7 +293,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a>
+                  <a href="../rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   1 June
@@ -320,7 +301,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/neighbours.html">Neighbours</a>
+                  <a href="../neighbours.html">Neighbours</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   31 May
@@ -331,7 +312,7 @@
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2017</h2>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/buying-btc.html">How to buy&nbsp;Bitcoin</a>
+                  <a href="../buying-btc.html">How to buy&nbsp;Bitcoin</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   7 December
@@ -339,7 +320,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/ocean.html">Live near the&nbsp;ocean</a>
+                  <a href="../ocean.html">Live near the&nbsp;ocean</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   23 November
@@ -347,7 +328,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/pangea.html">Pangea</a>
+                  <a href="../pangea.html">Pangea</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   22 November
@@ -355,7 +336,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a>
+                  <a href="../bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   21 November
@@ -363,23 +344,15 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/wallet.html">Hardware&nbsp;Wallets</a>
+                  <a href="../wallet.html">Hardware&nbsp;Wallets</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   8 November
                 </div>
               </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/algo-trading.html">Trading digital&nbsp;assets</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  28 October
-                </div>
-              </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/chartered.html">I&#8217;m a chartered&nbsp;accountant</a>
+                  <a href="../chartered.html">I&#8217;m a chartered&nbsp;accountant</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   19 October
@@ -387,7 +360,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/coworking.html">Coworking in&nbsp;Dublin</a>
+                  <a href="../coworking.html">Coworking in&nbsp;Dublin</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   15 September
@@ -395,7 +368,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/bitnation.html">Bitnation</a>
+                  <a href="../bitnation.html">Bitnation</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   14 September
@@ -403,23 +376,15 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a>
+                  <a href="../ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   12 August
                 </div>
               </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/macro-btc.html">Macro analysis of the Bitcoin&nbsp;blockchain</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  3 August
-                </div>
-              </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/corporate.html">Corporate&nbsp;London</a>
+                  <a href="../corporate.html">Corporate&nbsp;London</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   10 July
@@ -427,7 +392,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a>
+                  <a href="../blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   8 July
@@ -435,7 +400,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/move.html">Move</a>
+                  <a href="../move.html">Move</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   8 July
@@ -443,7 +408,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/flee.html">Flee</a>
+                  <a href="../flee.html">Flee</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   4 July
@@ -451,7 +416,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a>
+                  <a href="../investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   9 June
@@ -459,7 +424,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/ambitious.html">How to be an ambitious founder in&nbsp;Europe</a>
+                  <a href="../ambitious.html">How to be an ambitious founder in&nbsp;Europe</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   9 June
@@ -467,7 +432,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/lis17.html">The Lisbon Investment&nbsp;Summit</a>
+                  <a href="../lis17.html">The Lisbon Investment&nbsp;Summit</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   9 June
@@ -475,7 +440,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a>
+                  <a href="../pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   1 June
@@ -483,7 +448,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a>
+                  <a href="../blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   25 May
@@ -491,7 +456,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/london.html">London Rent vs. London&nbsp;Salaries</a>
+                  <a href="../london.html">London Rent vs. London&nbsp;Salaries</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   12 May
@@ -499,7 +464,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a>
+                  <a href="../aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   5 May
@@ -507,7 +472,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a>
+                  <a href="../aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   30 April
@@ -515,34 +480,10 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/pelican.html">Blogging with&nbsp;Pelican</a>
+                  <a href="../pelican.html">Blogging with&nbsp;Pelican</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   28 April
-                </div>
-              </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/books.html">Analysing a personal&nbsp;library</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  1 February
-                </div>
-              </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/fakegl.html">FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  6 January
-                </div>
-              </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/reconciliation.html">Reconciliation of a trial balance to a general&nbsp;ledger</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  3 January
                 </div>
               </div>
         </div>
@@ -550,15 +491,7 @@
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2016</h2>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/spotify.html">Spotify song&nbsp;history</a>
-                </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
-                  22 December
-                </div>
-              </div>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/vim.html">Vim!</a>
+                  <a href="../vim.html">Vim!</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   1 December
@@ -566,7 +499,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a>
+                  <a href="../autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   1 December
@@ -574,7 +507,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/silos.html">Silos: Introduction to my doctorate&nbsp;research</a>
+                  <a href="../silos.html">Silos: Introduction to my doctorate&nbsp;research</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   2 October
@@ -582,7 +515,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/encryption.html">Encryption</a>
+                  <a href="../encryption.html">Encryption</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   30 August
@@ -590,7 +523,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a>
+                  <a href="../digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   19 August
@@ -598,7 +531,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/spare-time.html">Spare&nbsp;time</a>
+                  <a href="../spare-time.html">Spare&nbsp;time</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   13 August
@@ -606,7 +539,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/time-until.html">Übersicht widget: Time&nbsp;Until</a>
+                  <a href="../time-until.html">Übersicht widget: Time&nbsp;Until</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   7 August
@@ -614,7 +547,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/how-to-wake-up-early.html">How to wake up&nbsp;early</a>
+                  <a href="../how-to-wake-up-early.html">How to wake up&nbsp;early</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   6 August
@@ -622,7 +555,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a>
+                  <a href="../Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   3 August
@@ -630,7 +563,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a>
+                  <a href="../courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   1 August
@@ -638,7 +571,7 @@
               </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a>
+                  <a href="../ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a>
                 </div>
                 <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
                   30 July
@@ -651,16 +584,16 @@
 
     <footer class="footer">
       <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
-        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
+        <a href="../blog">Blog Posts</a> |
         <a href="#top">Back to top</a> |
-        <a href="https://johnmathews.eu/categories">Categories</a> |
+        <a href="../categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </footer>
 
     <div>
   
-        <script>
+        <script defer>
           // on small screens, collapse navbar into a menu
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
@@ -670,17 +603,17 @@
           };
         </script>
 
-        <script async>
+        <script defer>
           // only set article visibility based on the blog index view
           if (window.location.pathname !== '/blog') {
             $("#catChooser").toggleClass('hidden')
           };
         </script>
 
-        <script>
+        <script defer>
           // dark mode light mode switcheroo
-          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+          const light = "../theme/css/pygment-light.css"
+          const dark = "../theme/css/pygment-dark.css"
 
           // swap out pygment CSS files based on dark/light theme
           function changePygmentsCSS(existing, updated) {
@@ -721,7 +654,7 @@
           }
         </script>
 
-        <script>
+        <script defer>
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
