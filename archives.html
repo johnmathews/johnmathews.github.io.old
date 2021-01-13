@@ -22,8 +22,8 @@
       <meta name="twitter:description" content="John Mathews' personal blog"/>
       <meta property="og:description" content="John Mathews' personal blog"/>
 
-      <meta property="og:url" content=" . "/>
-      <meta property="twitter:url" content=" . "/>
+      <meta property="og:url" content=" https://johnmathews.eu "/>
+      <meta property="twitter:url" content=" https://johnmathews.eu "/>
 
       <meta name="twitter:image" content=""/>
       <meta property="og:image" content=""/>
@@ -33,26 +33,37 @@
 
       <meta property="og:type" content="website"/>
 
-      <link rel="icon" href="./extra/favicon.png" />
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
 
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
+        <script>
+          window.ga = window.ga || function () {
+                      (ga.q = ga.q || []).push(arguments);
+                    };
+                    ga.l = +new Date();
+                    ga("create", "UA-82253540-1", "auto");
+                    ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
 
-      <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-      <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-      <link async href="./theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
-      <link async id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
-      <script async> let theme = localStorage.getItem('theme'); </script>
+      <script async>
+        let theme = localStorage.getItem('theme');
+      </script>
   </head>
 
   <body class="dark:bg-gray-800">
     <a class="pt-20 mt-20 " name="top"></a>
     <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
       <div>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="./blog">JohnMathews.eu</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
       </div>
       <div class="flex md:hidden">
         <button id="hamburger" aria-label="Menu" >
@@ -62,8 +73,8 @@
       </div>
       <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
 
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="./about">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="./experience">Experience</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
 
         <div class="flex justify-end px-3">
           <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
@@ -113,132 +124,146 @@
 
 <dl>
     <dt>6 January</dt>
-    <dd><a href="./test-driven-development.html">Test Driven&nbsp;Development</a></dd>
+    <dd><a href="https://johnmathews.eu/test-driven-development.html">Test Driven&nbsp;Development</a></dd>
     <dt>5 January</dt>
-    <dd><a href="./why-even-start.html">Why Even&nbsp;Start</a></dd>
+    <dd><a href="https://johnmathews.eu/why-even-start.html">Why Even&nbsp;Start</a></dd>
     <dt>4 January</dt>
-    <dd><a href="./api-design.html">How To Design An <span class="caps">API</span></a></dd>
+    <dd><a href="https://johnmathews.eu/api-design.html">How To Design An <span class="caps">API</span></a></dd>
     <dt>4 January</dt>
-    <dd><a href="./principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a></dd>
+    <dd><a href="https://johnmathews.eu/principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a></dd>
     <dt>4 January</dt>
-    <dd><a href="./site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a></dd>
+    <dd><a href="https://johnmathews.eu/site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a></dd>
     <dt>4 January</dt>
-    <dd><a href="./using-unix-utilities-to-analyse-and-update-multiple-files.html">Using Unix Utilities To Analyse And Update Multiple Text&nbsp;Files</a></dd>
+    <dd><a href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html">Using Unix Utilities To Analyse And Update Multiple Text&nbsp;Files</a></dd>
     <dt>18 December</dt>
-    <dd><a href="./a-new-blog-design.html">A New Blog&nbsp;Design</a></dd>
+    <dd><a href="https://johnmathews.eu/a-new-blog-design.html">A New Blog&nbsp;Design</a></dd>
     <dt>8 December</dt>
-    <dd><a href="./product-led-growth.html">Product-Led&nbsp;Growth</a></dd>
+    <dd><a href="https://johnmathews.eu/product-led-growth.html">Product-Led&nbsp;Growth</a></dd>
     <dt>4 December</dt>
-    <dd><a href="./mom-test.html">The Mom&nbsp;Test</a></dd>
+    <dd><a href="https://johnmathews.eu/mom-test.html">The Mom&nbsp;Test</a></dd>
     <dt>3 December</dt>
-    <dd><a href="./obviously-awesome.html">Obviously&nbsp;Awesome</a></dd>
+    <dd><a href="https://johnmathews.eu/obviously-awesome.html">Obviously&nbsp;Awesome</a></dd>
     <dt>1 December</dt>
-    <dd><a href="./How-I-learnt-to-code.html">How I learnt to&nbsp;code</a></dd>
+    <dd><a href="https://johnmathews.eu/How-I-learnt-to-code.html">How I learnt to&nbsp;code</a></dd>
     <dt>19 November</dt>
-    <dd><a href="./1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a></dd>
+    <dd><a href="https://johnmathews.eu/1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a></dd>
     <dt>19 November</dt>
-    <dd><a href="./marketing-101.html">Learning to&nbsp;market</a></dd>
+    <dd><a href="https://johnmathews.eu/marketing-101.html">Learning to&nbsp;market</a></dd>
     <dt>28 October</dt>
-    <dd><a href="./pippip.email.html">Pippip.Email</a></dd>
+    <dd><a href="https://johnmathews.eu/pippip.email.html">Pippip.Email</a></dd>
     <dt>8 October</dt>
-    <dd><a href="./between-clients.html">Between&nbsp;Clients</a></dd>
+    <dd><a href="https://johnmathews.eu/between-clients.html">Between&nbsp;Clients</a></dd>
+    <dt>2 September</dt>
+    <dd><a href="https://johnmathews.eu/btc-fork-analysis.html">Analysis of the mean and median value of transactions on 5&nbsp;Blockchains</a></dd>
     <dt>14 February</dt>
-    <dd><a href="./shell.html">A faster&nbsp;shell</a></dd>
+    <dd><a href="https://johnmathews.eu/shell.html">A faster&nbsp;shell</a></dd>
     <dt>24 January</dt>
-    <dd><a href="./bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a></dd>
+    <dd><a href="https://johnmathews.eu/bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a></dd>
     <dt>13 October</dt>
-    <dd><a href="./sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a></dd>
+    <dd><a href="https://johnmathews.eu/sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a></dd>
     <dt>11 June</dt>
-    <dd><a href="./bakkerij.html">Bakke-Rij</a></dd>
+    <dd><a href="https://johnmathews.eu/bakkerij.html">Bakke-Rij</a></dd>
     <dt>7 June</dt>
-    <dd><a href="./prediction.html">Prediction&nbsp;Markets</a></dd>
+    <dd><a href="https://johnmathews.eu/prediction.html">Prediction&nbsp;Markets</a></dd>
     <dt>4 June</dt>
-    <dd><a href="./reading.html">What I&#8217;m&nbsp;reading</a></dd>
+    <dd><a href="https://johnmathews.eu/reading.html">What I&#8217;m&nbsp;reading</a></dd>
     <dt>1 June</dt>
-    <dd><a href="./rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a></dd>
+    <dd><a href="https://johnmathews.eu/rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a></dd>
     <dt>31 May</dt>
-    <dd><a href="./neighbours.html">Neighbours</a></dd>
+    <dd><a href="https://johnmathews.eu/neighbours.html">Neighbours</a></dd>
     <dt>7 December</dt>
-    <dd><a href="./buying-btc.html">How to buy&nbsp;Bitcoin</a></dd>
+    <dd><a href="https://johnmathews.eu/buying-btc.html">How to buy&nbsp;Bitcoin</a></dd>
     <dt>23 November</dt>
-    <dd><a href="./ocean.html">Live near the&nbsp;ocean</a></dd>
+    <dd><a href="https://johnmathews.eu/ocean.html">Live near the&nbsp;ocean</a></dd>
     <dt>22 November</dt>
-    <dd><a href="./pangea.html">Pangea</a></dd>
+    <dd><a href="https://johnmathews.eu/pangea.html">Pangea</a></dd>
     <dt>21 November</dt>
-    <dd><a href="./bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a></dd>
+    <dd><a href="https://johnmathews.eu/bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a></dd>
     <dt>8 November</dt>
-    <dd><a href="./wallet.html">Hardware&nbsp;Wallets</a></dd>
+    <dd><a href="https://johnmathews.eu/wallet.html">Hardware&nbsp;Wallets</a></dd>
+    <dt>28 October</dt>
+    <dd><a href="https://johnmathews.eu/algo-trading.html">Trading digital&nbsp;assets</a></dd>
     <dt>19 October</dt>
-    <dd><a href="./chartered.html">I&#8217;m a chartered&nbsp;accountant</a></dd>
+    <dd><a href="https://johnmathews.eu/chartered.html">I&#8217;m a chartered&nbsp;accountant</a></dd>
     <dt>15 September</dt>
-    <dd><a href="./coworking.html">Coworking in&nbsp;Dublin</a></dd>
+    <dd><a href="https://johnmathews.eu/coworking.html">Coworking in&nbsp;Dublin</a></dd>
     <dt>14 September</dt>
-    <dd><a href="./bitnation.html">Bitnation</a></dd>
+    <dd><a href="https://johnmathews.eu/bitnation.html">Bitnation</a></dd>
     <dt>12 August</dt>
-    <dd><a href="./ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a></dd>
-    <dt>10 July</dt>
-    <dd><a href="./corporate.html">Corporate&nbsp;London</a></dd>
-    <dt>8 July</dt>
-    <dd><a href="./blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a></dd>
-    <dt>8 July</dt>
-    <dd><a href="./move.html">Move</a></dd>
-    <dt>4 July</dt>
-    <dd><a href="./flee.html">Flee</a></dd>
-    <dt>9 June</dt>
-    <dd><a href="./investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a></dd>
-    <dt>9 June</dt>
-    <dd><a href="./ambitious.html">How to be an ambitious founder in&nbsp;Europe</a></dd>
-    <dt>9 June</dt>
-    <dd><a href="./lis17.html">The Lisbon Investment&nbsp;Summit</a></dd>
-    <dt>1 June</dt>
-    <dd><a href="./pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a></dd>
-    <dt>25 May</dt>
-    <dd><a href="./blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a></dd>
-    <dt>12 May</dt>
-    <dd><a href="./london.html">London Rent vs. London&nbsp;Salaries</a></dd>
-    <dt>5 May</dt>
-    <dd><a href="./aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a></dd>
-    <dt>30 April</dt>
-    <dd><a href="./aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a></dd>
-    <dt>28 April</dt>
-    <dd><a href="./pelican.html">Blogging with&nbsp;Pelican</a></dd>
-    <dt>1 December</dt>
-    <dd><a href="./vim.html">Vim!</a></dd>
-    <dt>1 December</dt>
-    <dd><a href="./autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a></dd>
-    <dt>2 October</dt>
-    <dd><a href="./silos.html">Silos: Introduction to my doctorate&nbsp;research</a></dd>
-    <dt>30 August</dt>
-    <dd><a href="./encryption.html">Encryption</a></dd>
-    <dt>19 August</dt>
-    <dd><a href="./digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a></dd>
-    <dt>13 August</dt>
-    <dd><a href="./spare-time.html">Spare&nbsp;time</a></dd>
-    <dt>7 August</dt>
-    <dd><a href="./time-until.html">Übersicht widget: Time&nbsp;Until</a></dd>
-    <dt>6 August</dt>
-    <dd><a href="./how-to-wake-up-early.html">How to wake up&nbsp;early</a></dd>
+    <dd><a href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a></dd>
     <dt>3 August</dt>
-    <dd><a href="./Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a></dd>
+    <dd><a href="https://johnmathews.eu/macro-btc.html">Macro analysis of the Bitcoin&nbsp;blockchain</a></dd>
+    <dt>10 July</dt>
+    <dd><a href="https://johnmathews.eu/corporate.html">Corporate&nbsp;London</a></dd>
+    <dt>8 July</dt>
+    <dd><a href="https://johnmathews.eu/blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a></dd>
+    <dt>8 July</dt>
+    <dd><a href="https://johnmathews.eu/move.html">Move</a></dd>
+    <dt>4 July</dt>
+    <dd><a href="https://johnmathews.eu/flee.html">Flee</a></dd>
+    <dt>9 June</dt>
+    <dd><a href="https://johnmathews.eu/investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a></dd>
+    <dt>9 June</dt>
+    <dd><a href="https://johnmathews.eu/ambitious.html">How to be an ambitious founder in&nbsp;Europe</a></dd>
+    <dt>9 June</dt>
+    <dd><a href="https://johnmathews.eu/lis17.html">The Lisbon Investment&nbsp;Summit</a></dd>
+    <dt>1 June</dt>
+    <dd><a href="https://johnmathews.eu/pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a></dd>
+    <dt>25 May</dt>
+    <dd><a href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a></dd>
+    <dt>12 May</dt>
+    <dd><a href="https://johnmathews.eu/london.html">London Rent vs. London&nbsp;Salaries</a></dd>
+    <dt>5 May</dt>
+    <dd><a href="https://johnmathews.eu/aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a></dd>
+    <dt>30 April</dt>
+    <dd><a href="https://johnmathews.eu/aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a></dd>
+    <dt>28 April</dt>
+    <dd><a href="https://johnmathews.eu/pelican.html">Blogging with&nbsp;Pelican</a></dd>
+    <dt>1 February</dt>
+    <dd><a href="https://johnmathews.eu/books.html">Analysing a personal&nbsp;library</a></dd>
+    <dt>6 January</dt>
+    <dd><a href="https://johnmathews.eu/fakegl.html">FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance</a></dd>
+    <dt>3 January</dt>
+    <dd><a href="https://johnmathews.eu/reconciliation.html">Reconciliation of a trial balance to a general&nbsp;ledger</a></dd>
+    <dt>22 December</dt>
+    <dd><a href="https://johnmathews.eu/spotify.html">Spotify song&nbsp;history</a></dd>
+    <dt>1 December</dt>
+    <dd><a href="https://johnmathews.eu/vim.html">Vim!</a></dd>
+    <dt>1 December</dt>
+    <dd><a href="https://johnmathews.eu/autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a></dd>
+    <dt>2 October</dt>
+    <dd><a href="https://johnmathews.eu/silos.html">Silos: Introduction to my doctorate&nbsp;research</a></dd>
+    <dt>30 August</dt>
+    <dd><a href="https://johnmathews.eu/encryption.html">Encryption</a></dd>
+    <dt>19 August</dt>
+    <dd><a href="https://johnmathews.eu/digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a></dd>
+    <dt>13 August</dt>
+    <dd><a href="https://johnmathews.eu/spare-time.html">Spare&nbsp;time</a></dd>
+    <dt>7 August</dt>
+    <dd><a href="https://johnmathews.eu/time-until.html">Übersicht widget: Time&nbsp;Until</a></dd>
+    <dt>6 August</dt>
+    <dd><a href="https://johnmathews.eu/how-to-wake-up-early.html">How to wake up&nbsp;early</a></dd>
+    <dt>3 August</dt>
+    <dd><a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a></dd>
     <dt>1 August</dt>
-    <dd><a href="./courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a></dd>
+    <dd><a href="https://johnmathews.eu/courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a></dd>
     <dt>30 July</dt>
-    <dd><a href="./ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a></dd>
+    <dd><a href="https://johnmathews.eu/ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a></dd>
 </dl>
     </main>
 
     <footer class="footer">
       <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
-        <a href="./blog">Blog Posts</a> |
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
         <a href="#top">Back to top</a> |
-        <a href="./categories">Categories</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
         <a href="feeds/all.atom.xml">RSS</a>
       </div>
     </footer>
 
     <div>
 
-        <script defer>
+        <script>
           // on small screens, collapse navbar into a menu
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
@@ -248,17 +273,17 @@
           };
         </script>
 
-        <script defer>
+        <script async>
           // only set article visibility based on the blog index view
           if (window.location.pathname !== '/blog') {
             $("#catChooser").toggleClass('hidden')
           };
         </script>
 
-        <script defer>
+        <script>
           // dark mode light mode switcheroo
-          const light = "./theme/css/pygment-light.css"
-          const dark = "./theme/css/pygment-dark.css"
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
 
           // swap out pygment CSS files based on dark/light theme
           function changePygmentsCSS(existing, updated) {
@@ -299,7 +324,7 @@
           }
         </script>
 
-        <script defer>
+        <script>
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
