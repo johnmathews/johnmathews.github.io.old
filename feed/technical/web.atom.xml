@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/web.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-14T14:17:00+01:00</updated><entry><title>Learning To Django</title><link href="https://johnmathews.eu/learning-to-django.html" rel="alternate"></link><published>2021-01-14T14:17:00+01:00</published><updated>2021-01-14T14:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/learning-to-django.html</id><summary type="html"></summary><content type="html">&lt;h2 id="in-the-beginning"&gt;In the&amp;nbsp;beginning&lt;/h2&gt;
-&lt;p&gt;I came to web development via business analytics. I was working as an accountant and Excel wasn&amp;#8217;t good enough anymore, so I looked around for a way to get started and came across &lt;a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html"&gt;Jupyter Notebooks&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Notebooks are said to be a kind of &amp;#8220;gateway drug&amp;#8221; to programming, and I think that&amp;#8217;s true. They&amp;#8217;re the easiest and fastest way to start programming that I&amp;#8217;ve come&amp;nbsp;across.&lt;/p&gt;
-&lt;p&gt;When you&amp;#8217;re working in a notebook, its easy to get data, wrangle it, and show some results. But as soon as you can create a chart or some summary table you inevitably wonder how you can show this to people more easily, and publishing the results to a website feels like the best most general and versatile&amp;nbsp;solution.&lt;/p&gt;
-&lt;p&gt;Unfortunately it&amp;#8217;s also the hardest, and so begins a long series of compromises and incremental progress. Learn to use a dashboarding &lt;span class="caps"&gt;API&lt;/span&gt;, and learn to create
+&lt;p&gt;I came to web development via business analytics. I was working as an
+accountant and Excel wasn&amp;#8217;t good enough anymore, so I looked around for a way
+to get started and came across &lt;a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html"&gt;Jupyter
+Notebooks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Notebooks are said to be a kind of &amp;#8220;gateway drug&amp;#8221; to programming, and I think
+that&amp;#8217;s true. They&amp;#8217;re the easiest and fastest way to start programming that I&amp;#8217;ve
+come&amp;nbsp;across.&lt;/p&gt;
+&lt;p&gt;When you&amp;#8217;re working in a notebook, its easy to get data, wrangle it, and show
+some results. But as soon as you can create a chart or some summary table you
+inevitably wonder how you can show this to people more easily, and publishing
+the results to a website feels like the best most general and versatile&amp;nbsp;solution.&lt;/p&gt;
+&lt;p&gt;Unfortunately it&amp;#8217;s also the hardest, and so begins a long series of compromises
+and incremental progress. Learn to use a dashboarding &lt;span class="caps"&gt;API&lt;/span&gt;, and learn to create
 static sites. But the end-goal, the ultimate solution, is a data driven web
-app, with authentication, saved user preferences, scalable performance, and automatically updated data&amp;nbsp;sources.&lt;/p&gt;
+app, with authentication, saved user preferences, scalable performance, and
+automatically updated data&amp;nbsp;sources.&lt;/p&gt;
 &lt;h2 id="a-personal-finances-dashboard"&gt;A personal finances&amp;nbsp;dashboard&lt;/h2&gt;
 &lt;p&gt;When I moved to the Netherlands, I wanted to use a personal finances dashboard
-to check weekly expenses. There wasn&amp;#8217;t a web-app that would do
-this (though there are a couple of apps that are trying) so I built my own
-dashboard. Then a few friends asked if they could use it too. They
-couldn&amp;#8217;t because it was just a dashboard and not a web app, but I thought this
-was a good reason to jump into web&amp;nbsp;development.&lt;/p&gt;
+to check weekly expenses. There wasn&amp;#8217;t a web-app that would do this (though
+there are a couple of apps that are trying) so I built my own dashboard. Then a
+few friends asked if they could use it too. They couldn&amp;#8217;t because it was just a
+dashboard and not a web app, but I thought this was a good reason to jump into
+web&amp;nbsp;development.&lt;/p&gt;
 &lt;p&gt;It was a much bigger task than I anticipated. (And that&amp;#8217;s &lt;span class="caps"&gt;OK&lt;/span&gt;.)&lt;/p&gt;
 &lt;p&gt;It took several attempts and was super frustrating, I would dabble for a few
 weeks, do a few tutorials, and then get completely lost when I tried to do
 something by myself. I&amp;#8217;d get disorientated working across many different files
 and trying to visualise which part of the Model-View-Controller model, or the
 request-response cycle I was currently working&amp;nbsp;on.&lt;/p&gt;
-&lt;p&gt;I came to realisea that the mental load seems so large at the beginning because  &amp;#8220;web-development&amp;#8221; is really a whole stack of technologies and abstractions combined (or stacked) together. Many of these have to be used together at the same time before you can see &lt;em&gt;any evidence of success at all&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I came to realisea that the mental load seems so large at the beginning because
+&amp;#8220;web-development&amp;#8221; is really a whole stack of technologies and abstractions
+combined (or stacked) together. Many of these have to be used together at the
+same time before you can see &lt;em&gt;any evidence of success at all&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id="learning-django"&gt;Learning&amp;nbsp;Django&lt;/h2&gt;
 &lt;p&gt;I think the hardest things about Django are not actually Django. You&amp;#8217;ll need to
 comfortable with classes and inheritance. You&amp;#8217;ll also need to be comfortable
@@ -31,12 +44,69 @@ line. Get familiar with stack traces&amp;nbsp;too.&lt;/p&gt;
 feel new, but ideally feels familiar and comfortable, then I think you&amp;#8217;ll make
 quite quick progress with&amp;nbsp;Django.&lt;/p&gt;
 &lt;p&gt;Django uses the Model-View-Controller model. Models are how django maps Python
-objects to items in your database (oh yeah, you need to be familiar with
-&lt;span class="caps"&gt;SQL&lt;/span&gt; too&amp;#8230;), Views are where requests are processed (also
-Middleware) and turned into Responses, which are then combined with templates
-(unless your building an &lt;span class="caps"&gt;API&lt;/span&gt;). You might notice I haven&amp;#8217;t mentioned what a
-Controller is - get used to information feeling incomplete whilst you&amp;#8217;re
-learning the ropes. It&amp;#8217;ll become clear soon&amp;nbsp;enough.&lt;/p&gt;</content><category term="Technical/Web"></category></entry><entry><title>Optimizing The Performance Of This Blog</title><link href="https://johnmathews.eu/site-performance.html" rel="alternate"></link><published>2021-01-04T16:05:00+01:00</published><updated>2021-01-04T16:05:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/site-performance.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;#8217;m coming to the end of redesigning this site. Now that the main changes have been
+objects to items in your database (oh yeah, you need to be familiar with &lt;span class="caps"&gt;SQL&lt;/span&gt;
+too&amp;#8230;), Views are where requests are processed (also Middleware) and turned
+into Responses, which are then combined with templates (unless your building an
+&lt;span class="caps"&gt;API&lt;/span&gt;). You might notice I haven&amp;#8217;t mentioned what a Controller is - get used to
+information feeling incomplete whilst you&amp;#8217;re learning the ropes. It&amp;#8217;ll become
+clear soon&amp;nbsp;enough.&lt;/p&gt;
+&lt;h2 id="the-best-moments"&gt;The best&amp;nbsp;moments&lt;/h2&gt;
+&lt;p&gt;The &amp;#8216;curse of knowledge&amp;#8217; states that once you&amp;#8217;ve learnt something you can&amp;#8217;t
+imagine or remember what it&amp;#8217;s like to not know it. Before that happens
+completely, I want to record some of the &amp;#8216;ahah!&amp;#8217; moments of &amp;#8216;learning&amp;nbsp;Django&amp;#8217;.&lt;/p&gt;
+&lt;p&gt;For context, I stopped working as a freelance data scientist in April and after
+a few weeks wondering if django and PostgreSQL and python was the way to go
+(yes it is. use boring technology), I began working full-time on what would
+become &lt;a href="https://moneybar.nl"&gt;MoneyBar.nl&lt;/a&gt;. I called it &amp;#8216;myeuros&amp;#8217; in the&amp;nbsp;beginning.&lt;/p&gt;
+&lt;p&gt;The learning curve felt steep. I wanted to do things &amp;#8220;right&amp;#8221; the first
+time because I wasn&amp;#8217;t building a toy, and although I felt that hindsight would
+show this to be a mistake in terms of efficiency, I did it anyway because I
+have a hunch that following my compulsions sometimes makes life harder in the
+short term and better in the long&amp;nbsp;term.&lt;/p&gt;
+&lt;p&gt;The best moments are usually preceded by the most&amp;nbsp;frustrating.&lt;/p&gt;
+&lt;h3 id="adding-a-unique-identifier-to-an-existing-authentication-model"&gt;Adding a unique identifier to an existing authentication&amp;nbsp;model&lt;/h3&gt;
+&lt;p&gt;I used pydanny&amp;#8217;s &lt;code&gt;cookiecutter-django&lt;/code&gt; template. Honestly, by the time I&amp;#8217;d gone
+through the quickstart process and googled the nouns in all the questions (what
+is &lt;code&gt;Sentry&lt;/code&gt;, what is &lt;code&gt;Celery&lt;/code&gt; and what is a &lt;code&gt;task que&lt;/code&gt;, what is &lt;code&gt;whitenoise&lt;/code&gt;,
+etc.) I was already tired. Play with it a few times and come back to&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;Anyway, I wanted to start with authentication, because the project template has
+that part kind of up and rnuning for you out of the box. &lt;code&gt;cookiecutter-django&lt;/code&gt;
+uses the &lt;code&gt;Django Allauth&lt;/code&gt; package, which is awesome, and reliable, and fully
+featured&amp;#8230; and extremely abstracted. Good luck looking at the module code and
+understanding it if youre not an&amp;nbsp;expert.&lt;/p&gt;
+&lt;p&gt;I wanted to give each user a unique &lt;span class="caps"&gt;ID&lt;/span&gt; - a &lt;code&gt;UUID&lt;/code&gt; when they signed up. This
+would be used in query strings instead of usernames or incremental keys. This
+was so hard the first time! And it turns out its not a trivial task, not if you
+already have a few users in your (test) database. Sure you can reset the
+database and start again, but experimenting like this is fairly complex.
+Understanding how the python model classes (the &lt;span class="caps"&gt;ORM&lt;/span&gt;) maps to the relations in
+the PostgreSQL databse was complex, and if I got confused, should I try to fix
+it by changing python Models, or editing migrations, or working on the database
+directly? Getting started is one of the hardest&amp;nbsp;things.&lt;/p&gt;
+&lt;p&gt;After I&amp;#8217;d figured out authentication, I started creating models for other
+simpler data (transactions and bank accounts I expect). This was much simpler
+and faster. I remember driving home one evening thinking that if I could get
+this far then success was&amp;nbsp;inevitable.&lt;/p&gt;
+&lt;h3 id="testing-code"&gt;Testing&amp;nbsp;code&lt;/h3&gt;
+&lt;p&gt;Before long, testing each part of the app by hand when I added or changed a
+feature was no longer trivial. I needed to find some way of automatically
+creating users and checking that they could log in and access&amp;nbsp;views.&lt;/p&gt;
+&lt;p&gt;I began working with &lt;code&gt;pytest&lt;/code&gt;, and really found it hard to wrap my head around
+the idea accessing different parts of the app not by requests and responses but
+by accessing class methods&amp;nbsp;directly. &lt;/p&gt;
+&lt;p&gt;I think its normal and good to code at the limit of your knowledge, where you
+know just enough to make a thing &amp;#8220;work&amp;#8221;. But this approach falters when you
+want to then test what you wrote. Or at least, the measure of &amp;#8220;just enough&amp;#8221;
+really changes when you require tests to be written. You don&amp;#8217;t just need to
+make it work, you need to understand why it works, so that you can write tests
+to assert that certain conditions pass and others&amp;nbsp;fail.&lt;/p&gt;
+&lt;p&gt;This feels really satisfying when it works, because you have proof that you
+really have grasped a bigger picture. There are far fewer (relevant) black
+boxes when you write tests. But it also makes learning slower, at least in the
+short term. It means you might have two get comfortable with a handful of
+abstractions, when you&amp;#8217;ve already solved the problem you started with. This is
+frustrating, and it takes discipline to slow down, take a deeper look at the
+solution, and not just race on to the next&amp;nbsp;feature.&lt;/p&gt;</content><category term="Technical/Web"></category></entry><entry><title>Optimizing The Performance Of This Blog</title><link href="https://johnmathews.eu/site-performance.html" rel="alternate"></link><published>2021-01-04T16:05:00+01:00</published><updated>2021-01-04T16:05:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/site-performance.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;#8217;m coming to the end of redesigning this site. Now that the main changes have been
 made its fun (and good practice) to optimize the site so that it loads quickly and
 is optimized for &lt;span class="caps"&gt;SEO&lt;/span&gt; and&amp;nbsp;accessibility.&lt;/p&gt;
 &lt;p&gt;Lighthouse is a utility built into Chrome that runs a technical audit on a
