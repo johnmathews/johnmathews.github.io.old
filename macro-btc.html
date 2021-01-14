@@ -1841,6 +1841,8 @@ valType:"boolean",dflt:!0},target:{valType:"string",strict:!0,noBlank:!0,arrayOk
       if (technical) {
         window.localStorage.setItem('categoryChoice', 'all');
       };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
     } else {
       // if user preference for article category hasn't been set, assign it using article type
       if (technical) {

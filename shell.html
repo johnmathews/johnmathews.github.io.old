@@ -366,6 +366,8 @@ loading</a> option decreased loading time by&nbsp;0.3s</p>
       if (technical) {
         window.localStorage.setItem('categoryChoice', 'all');
       };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
     } else {
       // if user preference for article category hasn't been set, assign it using article type
       if (technical) {

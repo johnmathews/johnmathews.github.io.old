@@ -452,6 +452,8 @@ to render, and Adobe Reader Desktop must be used in order to view&nbsp;them.</p
       if (technical) {
         window.localStorage.setItem('categoryChoice', 'all');
       };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
     } else {
       // if user preference for article category hasn't been set, assign it using article type
       if (technical) {

@@ -197,6 +197,10 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
           <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
           <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/api-design.html"> How To Design An <span class="caps">API</span></a>
         </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/larger-code-bases.html"> Data Science vs Web Development: Larger Code&nbsp;Bases</a>
+        </div>
     </div>
 
     <div class="text-left">
@@ -359,6 +363,8 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
       if (technical) {
         window.localStorage.setItem('categoryChoice', 'all');
       };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
     } else {
       // if user preference for article category hasn't been set, assign it using article type
       if (technical) {

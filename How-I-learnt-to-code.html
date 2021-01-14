@@ -342,6 +342,8 @@ abstraction to wrap my head around, or one more <span class="caps">API</span> to
       if (technical) {
         window.localStorage.setItem('categoryChoice', 'all');
       };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
     } else {
       // if user preference for article category hasn't been set, assign it using article type
       if (technical) {

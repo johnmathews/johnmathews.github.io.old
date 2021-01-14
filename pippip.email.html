@@ -342,6 +342,8 @@ mechanism, so that messages could be sent if I disappeared or pass&nbsp;away.</p
       if (technical) {
         window.localStorage.setItem('categoryChoice', 'all');
       };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
     } else {
       // if user preference for article category hasn't been set, assign it using article type
       if (technical) {

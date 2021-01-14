@@ -5,28 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-01-13T16:04:38-00:00</lastmod>
+<lastmod>2021-01-14T14:49:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-01-13T16:04:38-00:00</lastmod>
+<lastmod>2021-01-14T14:49:15-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-01-13T16:04:38-00:00</lastmod>
+<lastmod>2021-01-14T14:49:15-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-01-13T16:04:38-00:00</lastmod>
+<lastmod>2021-01-14T14:49:15-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/learning-to-django.html</loc>
+<lastmod>2021-01-14T14:17:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/larger-code-bases.html</loc>
+<lastmod>2021-01-14T13:40:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -39,7 +53,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://johnmathews.eu/why-even-start.html</loc>
+<loc>https://johnmathews.eu/faith-in-jesus.html</loc>
 <lastmod>2021-01-05T18:24:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -509,7 +523,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/technical.html</loc>
-<lastmod>2021-01-06T17:50:00+00:20</lastmod>
+<lastmod>2021-01-14T14:17:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -537,14 +551,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/technical/developer-tools.html</loc>
-<lastmod>2021-01-06T17:50:00+00:20</lastmod>
+<lastmod>2021-01-14T13:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/category/technical/web.html</loc>
-<lastmod>2021-01-04T16:05:00+00:20</lastmod>
+<lastmod>2021-01-14T14:17:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1461,7 +1475,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/author/john-mathews.html</loc>
-<lastmod>2021-01-06T17:50:00+00:20</lastmod>
+<lastmod>2021-01-14T14:17:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
