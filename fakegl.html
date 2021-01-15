@@ -1,0 +1,1125 @@
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+
+      <title>FakeGL: A Synthetic General Ledger and Trial Balance - JohnMathews.eu</title>
+      <meta name="title" content="FakeGL: A Synthetic General Ledger and Trial Balance -  JohnMathews.eu "/>
+      <meta property="og:title" content="FakeGL: A Synthetic General Ledger and Trial Balance"/>
+      <meta property="twitter:title" content="FakeGL: A Synthetic General Ledger and Trial Balance"/>
+
+      <meta name="keywords" content=" Accounting,Data Analysis,Finance,General Ledger,Journals,Python,Reconciliation,Trial Balance "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=" My work involves processing a lot of General Ledgers and I wanted to build and test various automation and analytical techniques to see how my workflow could be improved. In order to do that in a... "/>
+      <meta name="twitter:description" content=" My work involves processing a lot of General Ledgers and I wanted to build and test various automation and analytical techniques to see how my workflow could be improved. In order to do that in a... "/>
+      <meta property="og:description" content=" My work involves processing a lot of General Ledgers and I wanted to build and test various automation and analytical techniques to see how my workflow could be improved. In order to do that in a... "/>
+
+      <meta property="og:url" content="https://johnmathews.eu/fakegl.html"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/fakegl.html"/>
+
+      <meta name="twitter:image" content="https://johnmathews.eu/
+"/>
+      <meta property="og:image" content="https://johnmathews.eu/
+"/>
+
+      <meta property="twitter:card" content="  summary  "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <script>
+          window.ga = window.ga || function () {
+                      (ga.q = ga.q || []).push(arguments);
+                    };
+                    ga.l = +new Date();
+                    ga("create", "UA-82253540-1", "auto");
+                    ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script async>
+        let theme = localStorage.getItem('theme');
+      </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  </head>
+
+  <body class="dark:bg-gray-800">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+      <div>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
+      </div>
+      <div class="flex md:hidden">
+        <button id="hamburger" aria-label="Menu" >
+          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
+          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
+        </button>
+      </div>
+      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
+
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience">Experience</a>
+
+        <div class="flex justify-end px-3">
+          <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div id="day" class="modeIcon">
+              <i class="far fa-lightbulb fa-lg"></i>
+            </div>
+            <div id="night" class="modeIcon hidden">
+              <i class="far fa-moon fa-lg"></i>
+            </div>
+          </button>
+
+          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
+              <i class="pl-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <main class="lg:mt-10 lg:pt-5">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  technical  ">
+
+    <div class="markdown text-center dark:text-gray-200">
+      <h1> FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance </h1>
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      By John Mathews
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      Category:
+        <a href="https://johnmathews.eu/category/technical/data.html">Data</a>
+        
+    </div>
+
+    <div class="font-light text-gray-600 pb-5 text-center dark:text-gray-200">
+      January 2017
+    </div>
+
+    <main>
+      <article>
+          <div class="markdown dark:text-gray-200">
+            <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>My work involves processing a lot of General Ledgers and I wanted to build and test various automation and analytical techniques to see how my workflow could be improved. In order to do that in a free and fun way, I would need fake data, so I set out to build a process to generate a fake General Ledger (<span class="caps">GL</span>) and a corresponding Trial Balance (<span class="caps">TB</span>).</p>
+          </div>
+        <div class="markdown dark:text-gray-200">
+          <body><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>My work involves processing a lot of General Ledgers and I wanted to build and test various automation and analytical techniques to see how my workflow could be improved. In order to do that in a free and fun way, I would need fake data, so I set out to build a process to generate a fake General Ledger (<span class="caps">GL</span>) and a corresponding Trial Balance (<span class="caps">TB</span>).</p>
+<h2 id="Motivation-and-scope">Motivation and scope<a class="anchor-link" href="#Motivation-and-scope">&#182;</a></h2><p>Initially I didn&#8217;t know how comprehensive I needed the <span class="caps">GL</span> to be - modern systems are complex and store data for a wide variety of uses. I resolved to start with something simple and iterate for as long as I&nbsp;wanted.</p>
+<p>The journals produced below satisfy the following general accounting&nbsp;principles:</p>
+<ol>
+<li>Each journal contains equal debits and&nbsp;credits</li>
+<li>Opening and closing Trial Balances net to&nbsp;0</li>
+<li>Profit and Loss (P&amp;L) accounts start the year with 0 balance, Balance Sheet (<span class="caps">BS</span>) accounts do&nbsp;not.</li>
+<li>Each transaction hits both the P&amp;L and the <span class="caps">BS</span> (i.e. If an account on the P&amp;L is credited, then the other side of the transaction is a debit to the <span class="caps">BS</span>)</li>
+<li>Distinguish between manual and automatic&nbsp;journals </li>
+</ol>
+<p>The <span class="caps">GL</span>:</p>
+<ol>
+<li>Contains journals posted evenly throughout the year (this isnt realistic, but is a simple way to generate date&nbsp;data)</li>
+<li>Receives journals from&nbsp;subledgers</li>
+<li>Identifies if a journal is manual depending on which subledger it originated&nbsp;with</li>
+<li>Records which user posted the journal if the journal is&nbsp;manual</li>
+</ol>
+<p>The script below allows the user to&nbsp;specify:</p>
+<ol>
+<li>The number of accounts on the <span class="caps">GL</span>/<span class="caps">TB</span></li>
+<li>The number of journals in the <span class="caps">GL</span></li>
+<li>A mean and variance for the number of lines in each&nbsp;journal</li>
+<li>A mean and variance for the functional amounts posted to&nbsp;accounts</li>
+<li>How many different users post manual&nbsp;journals</li>
+<li>The beginning of the financial&nbsp;year</li>
+<li>The criteria for a manual journal, based on&nbsp;subledger</li>
+<li>The proportion of manuals which are&nbsp;manual</li>
+<li>The proportion of accounts which hit the P&amp;L or <span class="caps">BS</span></li>
+<li>An arbitrary list of&nbsp;subledgers</li>
+</ol>
+<p>The Jupyter Notebook below shows the annotated Python 3 code I&nbsp;wrote:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notebook-set-up">Notebook set-up<a class="anchor-link" href="#Notebook-set-up">&#182;</a></h2><p>Load the various libraries used to easily add the required features. Two libraries to&nbsp;note:</p>
+<ul>
+<li>Pandas is pythons ubiquitous data handling&nbsp;tool</li>
+<li>Faker is a useful tool to generate fake data, and is an easy way to bootstrap a&nbsp;database</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">gauss</span>
+<span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Factory</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">natsort</span> <span class="kn">import</span> <span class="n">natsorted</span><span class="p">,</span> <span class="n">ns</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Choose-parameters-and-values-for-the-GL-and-TB">Choose parameters and values for the <span class="caps">GL</span> and <span class="caps">TB</span><a class="anchor-link" href="#Choose-parameters-and-values-for-the-GL-and-TB">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ****** Number of different accounts in the GL *********</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">111</span> 
+
+
+<span class="c1"># ****** Number of journals in the GL *******************</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">15713</span>
+
+<span class="c1"># Setup posting date </span>
+<span class="n">d0</span> <span class="o">=</span> <span class="s1">&#39;20160101&#39;</span> <span class="c1"># first day, data generated over 1 year.</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d0</span><span class="p">,</span> <span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># ****** Distribution of lines per journals *************</span>
+<span class="n">jl_1</span> <span class="o">=</span> <span class="mi">21</span> <span class="c1"># mean</span>
+<span class="n">jl_2</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># variance</span>
+<span class="n">j_l</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">gauss</span><span class="p">(</span><span class="n">jl_1</span><span class="p">,</span><span class="n">jl_2</span><span class="p">)))</span>
+
+
+<span class="c1"># ****** Number of different users posting journals *****</span>
+<span class="n">fake</span> <span class="o">=</span> <span class="n">Factory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;en_GB&#39;</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">ul</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">U</span><span class="p">):</span> <span class="n">ul</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+
+<span class="c1"># ****** Functional amount values ***********************</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="mi">700</span> <span class="c1"># mean</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="mi">104</span> <span class="c1"># variance</span>
+<span class="k">def</span> <span class="nf">q</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="c1"># True implies </span>
+    <span class="k">if</span> <span class="n">p</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="n">out</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="nb">round</span><span class="p">(</span><span class="n">gauss</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="c1"># ****** Proportion of journals which are manual ********</span>
+<span class="n">Mp</span> <span class="o">=</span> <span class="mf">0.23</span>
+
+<span class="c1"># ****** Proportion of accounts that are P&amp;L accounts ***</span>
+<span class="n">Pp</span> <span class="o">=</span> <span class="mf">0.3</span>
+
+<span class="c1"># ****** Subledger names *********</span>
+<span class="n">source_feeds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sl1&#39;</span><span class="p">,</span><span class="s1">&#39;sl2&#39;</span><span class="p">,</span><span class="s1">&#39;sl3&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h2><p>Identify if an account feeds into the P&amp;L or <span class="caps">BS</span>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">isPandLaccount</span><span class="p">(</span><span class="n">element</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;P&#39;</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+<span class="k">def</span> <span class="nf">isBSaccount</span><span class="p">(</span><span class="n">element</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">element</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generate account&nbsp;codes:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_names</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">b_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">p_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">a_names</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="n">p</span> <span class="o">=</span> <span class="s1">&#39;ACP&#39;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;ACB&#39;</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">Pp</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">:</span> 
+            <span class="n">y</span> <span class="o">=</span> <span class="n">b</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">b_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">p_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">b_names</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="k">del</span> <span class="n">b_names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p_names</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="k">del</span> <span class="n">p_names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="n">a_names</span> <span class="o">=</span> <span class="n">b_names</span> <span class="o">+</span> <span class="n">p_names</span>
+        
+       
+    <span class="k">return</span><span class="p">(</span><span class="n">a_names</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generate journal names and&nbsp;lengths:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">journal_names</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+    <span class="n">d0</span> <span class="o">=</span> <span class="s1">&#39;20160101&#39;</span> <span class="c1"># first day, data generated over 1 year.</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">d0</span><span class="p">,</span> <span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">a_n</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>   
+        <span class="n">n</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">_&quot;</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;J_&#39;</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">d1</span> <span class="o">=</span> <span class="n">d1</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="o">/</span><span class="n">j</span><span class="p">)</span>
+        <span class="n">a_n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    
+    <span class="n">j_names</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">el</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span> <span class="n">j_l</span><span class="p">(</span><span class="n">jl_1</span><span class="p">,</span><span class="n">jl_2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">))</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">a_n</span><span class="p">)</span> <span class="c1"># determine how many lines are in each journal. </span>
+    <span class="k">return</span> <span class="n">j_names</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-the-list-of-journal-names-and-account-codes">Create the list of journal names and account codes<a class="anchor-link" href="#Create-the-list-of-journal-names-and-account-codes">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">j_names</span> <span class="o">=</span> <span class="n">journal_names</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> 
+<span class="n">a_names</span> <span class="o">=</span> <span class="n">account_names</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-the-fake-General-Ledger-and-save-it-to-a-text-file">Create the fake General Ledger and save it to a text file<a class="anchor-link" href="#Create-the-fake-General-Ledger-and-save-it-to-a-text-file">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output format</span>
+<span class="n">glf</span> <span class="o">=</span> <span class="s1">&#39;Journal_ID|Line|Type|Date|User|Account|Source|Functional_Currency|Functional_Amount&#39;</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gl.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">glf</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">natsorted</span><span class="p">(</span><span class="n">j_names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">lower</span><span class="p">()):</span>
+    <span class="n">line_no</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># Assign each journal a source feed</span>
+    <span class="n">source_id</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">source_feeds</span><span class="p">)</span>
+     
+    <span class="c1"># Assign each journal a posting date   </span>
+    <span class="n">posting_date</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">d1</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="o">/</span><span class="n">j</span><span class="p">)</span>
+      
+    <span class="c1"># Make journal either M or A, if M assign user</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">Mp</span> <span class="c1"># True implies </span>
+    <span class="n">p</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">triangular</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">U</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t</span><span class="p">:</span> 
+        <span class="n">man_ind</span> <span class="o">=</span> <span class="s1">&#39;M&#39;</span>
+        <span class="n">u_name</span> <span class="o">=</span> <span class="n">ul</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">)]</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="n">man_ind</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
+        <span class="n">u_name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    
+    <span class="c1"># Assign functional amount to each line</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j_names</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">line_no</span> <span class="o">=</span> <span class="n">line_no</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">line_no2</span> <span class="o">=</span> <span class="n">line_no</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">dr</span> <span class="o">=</span> <span class="n">q</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">)</span>
+        <span class="n">cr</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">dr</span>
+        
+        <span class="n">a_names_p</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">isPandLaccount</span><span class="p">,</span> <span class="n">a_names</span><span class="p">))</span>
+        <span class="n">a_names_b</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">isBSaccount</span><span class="p">,</span> <span class="n">a_names</span><span class="p">))</span>
+
+        <span class="n">an1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">a_names_p</span><span class="p">)</span>  
+        <span class="n">an2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">a_names_b</span><span class="p">)</span>
+        
+        <span class="n">l_1</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">line_no</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">man_ind</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">posting_date</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">u_name</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">an1</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">source_id</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;GBP&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dr</span><span class="p">)</span>
+        <span class="n">l_2</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">line_no2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span><span class="n">man_ind</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">posting_date</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">u_name</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">an2</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">source_id</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;GBP&#39;</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cr</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">l_1</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">l_2</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-the-Trial-Balance-and-save-it-to-a-text-file">Create the Trial Balance and save it to a text file<a class="anchor-link" href="#Create-the-Trial-Balance-and-save-it-to-a-text-file">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use gl to calc movement on each account</span>
+<span class="n">gl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gl.txt&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">tb</span> <span class="o">=</span> <span class="n">gl</span><span class="p">[[</span><span class="s1">&#39;Account&#39;</span><span class="p">,</span><span class="s1">&#39;Functional_Amount&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Calc net movement on each account</span>
+<span class="n">tb</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Account&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Account&#39;</span><span class="p">,</span><span class="s1">&#39;Movement&#39;</span><span class="p">]</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Account&#39;</span><span class="p">)</span>
+
+<span class="c1"># Assign account type</span>
+<span class="c1"># Set b/f balances to 0 for P&amp;L accounts</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tb</span><span class="o">.</span><span class="n">Account</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tb</span><span class="o">.</span><span class="n">Account</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;P&amp;L&#39;</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tb</span><span class="o">.</span><span class="n">Account</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;BS&#39;</span>
+<span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance dummy&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span>
+
+<span class="c1"># if b/f balance is != 0, generate a balance for that account</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tb</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Balance dummy&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gauss</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">bal</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gauss</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span><span class="n">q2</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bal</span>
+        <span class="n">tb</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">bal</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>    
+<span class="k">del</span> <span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance dummy&#39;</span><span class="p">]</span>
+
+<span class="c1"># create c/f field</span>
+<span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance c/f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Movement&#39;</span><span class="p">]</span> <span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># create &#39;date of balance&#39; column</span>
+<span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Arrange columns</span>
+<span class="n">tb</span> <span class="o">=</span> <span class="n">tb</span><span class="p">[[</span><span class="s1">&#39;Account&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Balance b/f&#39;</span> <span class="p">,</span> <span class="s1">&#39;Balance c/f&#39;</span><span class="p">,</span> <span class="s1">&#39;Balance date&#39;</span><span class="p">]]</span>
+
+<span class="c1"># print TB to file</span>
+<span class="n">tb</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;tb.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Load-the-text-files-back-in-and-display-their-top-10-rows">Load the text files back in and display their top 10 rows<a class="anchor-link" href="#Load-the-text-files-back-in-and-display-their-top-10-rows">&#182;</a></h2><p>Verify that the files have been produced correctly and that the <span class="caps">TB</span> balances as&nbsp;expected</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gl.txt&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">tb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;tb.txt&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tb</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Account</th>
+      <th>Type</th>
+      <th>Balance b/f</th>
+      <th>Balance c/f</th>
+      <th>Balance date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td><span class="caps">ACB00003</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>673.10</td>
+      <td>72348.68</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td><span class="caps">ACB00007</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>-673.10</td>
+      <td>20045.09</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td><span class="caps">ACB00010</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>748.16</td>
+      <td>-30340.79</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td><span class="caps">ACB00012</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>-748.16</td>
+      <td>188.39</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td><span class="caps">ACB00015</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>814.96</td>
+      <td>48294.11</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td><span class="caps">ACB00017</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>-814.96</td>
+      <td>10659.80</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td><span class="caps">ACB00021</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>835.56</td>
+      <td>18357.33</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td><span class="caps">ACB00032</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>-835.56</td>
+      <td>3406.80</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td><span class="caps">ACB00034</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>759.60</td>
+      <td>26505.40</td>
+      <td>20161231</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td><span class="caps">ACB00036</span></td>
+      <td><span class="caps">BS</span></td>
+      <td>-759.60</td>
+      <td>-39128.80</td>
+      <td>20161231</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gl</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Journal_ID</th>
+      <th>Line</th>
+      <th>Type</th>
+      <th>Date</th>
+      <th>User</th>
+      <th>Account</th>
+      <th>Source</th>
+      <th>Functional_Currency</th>
+      <th>Functional_Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>J_20160101_1</td>
+      <td>1</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACP00054</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>-587.49</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>J_20160101_1</td>
+      <td>2</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACB00064</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>587.49</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>J_20160101_1</td>
+      <td>3</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACP00022</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>816.17</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>J_20160101_1</td>
+      <td>4</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACB00017</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>-816.17</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>J_20160101_1</td>
+      <td>5</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACP00088</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>628.60</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>J_20160101_1</td>
+      <td>6</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACB00062</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>-628.60</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>J_20160101_1</td>
+      <td>7</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACP00079</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>-672.34</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>J_20160101_1</td>
+      <td>8</td>
+      <td>M</td>
+      <td>20160101</td>
+      <td>Iain Gardiner</td>
+      <td><span class="caps">ACB00017</span></td>
+      <td>sl2</td>
+      <td><span class="caps">GBP</span></td>
+      <td>672.34</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>J_20160101_2</td>
+      <td>1</td>
+      <td>A</td>
+      <td>20160101</td>
+      <td>NaN</td>
+      <td><span class="caps">ACP00005</span></td>
+      <td>sl1</td>
+      <td><span class="caps">GBP</span></td>
+      <td>-683.52</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>J_20160101_2</td>
+      <td>2</td>
+      <td>A</td>
+      <td>20160101</td>
+      <td>NaN</td>
+      <td><span class="caps">ACB00036</span></td>
+      <td>sl1</td>
+      <td><span class="caps">GBP</span></td>
+      <td>683.52</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net Opening TB:&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance b/f&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net Closing TB:&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">tb</span><span class="p">[</span><span class="s1">&#39;Balance c/f&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Net Opening TB: 0.00
+Net Closing TB: 0.00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+</body>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+        </div>
+      </article>
+    </main>
+
+    <div class="border border-gray-300 mt-10 mb-10"></div>
+
+    <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/reconciliation.html"> Reconciliation of a trial balance to a general&nbsp;ledger</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/books.html"> Analysing a personal&nbsp;library</a>
+        </div>
+    </div>
+
+    <div class="text-left">
+      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
+        <span>Subscribe</span>
+        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+      </button>
+    </div>
+
+    <div class="hidden" id="subscribeBox" >
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate dark:bg-gray-700" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group dark:text-gray-300">
+              <label for="mce-EMAIL">Email Address </label>
+              <input type="email" value="" name="EMAIL" class="required email dark:bg-gray-500" id="mce-EMAIL">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
+    </div>
+
+      <div class="mt-10" id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                var disqus_config = function () {
+                          this.page.url = "https://johnmathews.eu/fakegl.html";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "fakegl.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                          var d = document, s = d.createElement('script');
+                          s.src = 'https://johnmathews.disqus.com/embed.js';
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
+        <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
+        <a href="feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+    <div>
+  
+        <script>
+          // on small screens, collapse navbar into a menu
+          document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+              navToggle.item(i).classList.toggle("hidden");
+            }
+          };
+        </script>
+
+        <script async>
+          // only set article visibility based on the blog index view
+          if (window.location.pathname !== '/blog') {
+            $("#catChooser").toggleClass('hidden')
+          };
+        </script>
+
+        <script>
+          // dark mode light mode switcheroo
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          // swap out pygment CSS files based on dark/light theme
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
+          if (localStorage.getItem('theme') === "dark") {
+            document.getElementById("baz").classList.add("dark");
+            document.getElementById("day").classList.remove("hidden");
+            document.getElementById("night").classList.add("hidden");
+            changePygmentsCSS(light, dark);
+          } else {
+            document.getElementById("baz").classList.remove("dark");
+            window.localStorage.setItem('theme', 'light');
+            document.getElementById("day").classList.add("hidden");
+            document.getElementById("night").classList.remove("hidden");
+            changePygmentsCSS(dark, light);
+          }
+
+          function modeSwitcher() {
+            if (localStorage.getItem('theme') === "dark") {
+              window.localStorage.setItem('theme', 'light');
+              $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
+
+              document.getElementById("day").classList.add("hidden");
+              document.getElementById("night").classList.remove("hidden");
+            } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
+
+              document.getElementById("day").classList.remove("hidden");
+              document.getElementById("night").classList.add("hidden");
+            }
+          }
+        </script>
+
+        <script>
+          var prevScrollPos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+              document.getElementById("navbar").style.top = "0";
+            } else {
+              document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollPos = currentScrollPos;
+          }
+        </script>
+
+  <script>
+    // mailing list subscribe button
+    document.getElementById("signupButton").addEventListener("click", function(e) {
+      $('#signupButton').removeClass('block').addClass('hidden')
+      $('#subscribeBox').removeClass('hidden').addClass('block')
+    });
+  </script>
+
+  <script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+    </div>
+  </body>
+
+</html>

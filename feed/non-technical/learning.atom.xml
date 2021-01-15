@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Learning</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical/learning.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-14T16:52:00+01:00</updated><entry><title>Using RSS</title><link href="https://johnmathews.eu/using-rss.html" rel="alternate"></link><published>2021-01-14T16:52:00+01:00</published><updated>2021-01-14T16:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/using-rss.html</id><summary type="html"></summary><content type="html">&lt;h2 id="google-reader"&gt;Google&amp;nbsp;Reader&lt;/h2&gt;
+&lt;p&gt;Back in 2008, I used to use Google Reader to subscribe to &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. I was an
+aspiring photographer back then and I remember being subscribed to around 80
+blogs. Each day I&amp;#8217;d read articles from whoever had posted something new,
+without needing to visit their websites or remember who they are or that I&amp;#8217;d
+subscribed to their blog. &lt;span class="caps"&gt;RSS&lt;/span&gt; is a very effective way of having good quality
+information  come to&amp;nbsp;you.&lt;/p&gt;
+&lt;h2 id="social-media"&gt;Social&amp;nbsp;Media&lt;/h2&gt;
+&lt;p&gt;A few years later Google Reader was closed down, presumably because using &lt;span class="caps"&gt;RSS&lt;/span&gt;
+didn&amp;#8217;t fit with Googles advertising model. I was unaware of it at the time but
+I imaging it sent shockwaves  through blogging communities and probably upended
+many businesses. I mostly stopped reading&amp;nbsp;blogs.&lt;/p&gt;
+&lt;p&gt;Facebook was growing fast, Instagram felt new and exciting, and content was
+moving onto &amp;#8216;platforms&amp;#8217;, or into walled gardens. And as they kept on growing
+the average quality of the content&amp;nbsp;decreased.&lt;/p&gt;
+&lt;p&gt;Twitter is like this now I think. There are some real diamonds to be found from
+time to time, but there&amp;#8217;s a lot of mud too. Mostly its just mud, but the
+occasional diamond can have outsized&amp;nbsp;benefits.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; isn&amp;#8217;t like this. I choose the contents of my &amp;#8216;news feed&amp;#8217;, and
+each article can be much longer than a Tweet, or a caption to a photo, or a
+status update. It&amp;#8217;s hard to write well and to create an interesting or useful blog
+post, and that makes it harder to dilute quality with entertaining&amp;nbsp;distractions.&lt;/p&gt;
+&lt;h2 id="reeder5"&gt;Reeder5&lt;/h2&gt;
+&lt;p&gt;I used &lt;code&gt;netNewsWire&lt;/code&gt; for a few weeks, but it couldn&amp;#8217;t sync between my laptop
+and phone, so I bought &lt;code&gt;Reeder 5&lt;/code&gt;. It&amp;#8217;s got a few unusual design patterns, but
+ it works well and has all the features I want. I&amp;#8217;ve been unsubscribing from
+ email newsletters and subscribing to the &lt;span class="caps"&gt;RSS&lt;/span&gt; feed&amp;nbsp;instead.&lt;/p&gt;
+&lt;p&gt;It keeps my inbox quieter, and it feels good to have a &amp;#8216;separation of
+ concerns&amp;#8217;. It makes it easier to read interesting content without being&amp;nbsp;distracted.&lt;/p&gt;</content><category term="Non-technical/Learning"></category></entry><entry><title>Product-Led Growth</title><link href="https://johnmathews.eu/product-led-growth.html" rel="alternate"></link><published>2020-12-08T12:59:00+01:00</published><updated>2020-12-08T12:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-08:/product-led-growth.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Product-Led Growth&amp;#8221; by Wes&amp;nbsp;Bush&lt;/p&gt;</summary><content type="html">&lt;h1 id="part-1-design-your-strategy"&gt;Part 1: Design your&amp;nbsp;strategy&lt;/h1&gt;
+&lt;h2 id="chapter-1-why-is-product-led-growth-of-rising-importance"&gt;Chapter 1: Why is product-led growth of rising&amp;nbsp;importance?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Product-Led Growth is a go-to-market (&lt;span class="caps"&gt;GTM&lt;/span&gt;) strategy that relies on using
+   your product as the main vehicle to acquire, activate and retain&amp;nbsp;customers.&lt;/li&gt;
+&lt;li&gt;Product-Led Growth (&lt;span class="caps"&gt;PLG&lt;/span&gt;) means that every team influences the product:&lt;ul&gt;
+&lt;li&gt;Marketing - how can our products generate a demand&amp;nbsp;fly-wheel?&lt;/li&gt;
+&lt;li&gt;Sales - how can we use the product to qualify our prospects for&amp;nbsp;us?&lt;/li&gt;
+&lt;li&gt;Customer Success - how can we create a product that helps customers become
+  successful beyond our&amp;nbsp;dreams?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;By having every team focussed on the product, you create a culture that is
+   built around enduring customer&amp;nbsp;value&lt;/li&gt;
+&lt;li&gt;By leading with the product throughout the org, &lt;span class="caps"&gt;PL&lt;/span&gt; companies get&lt;ul&gt;
+&lt;li&gt;shorter sales&amp;nbsp;cycles&lt;/li&gt;
+&lt;li&gt;lower Customer Acquisition Costs&amp;nbsp;(CACs)&lt;/li&gt;
+&lt;li&gt;higher Revenue Per Employee (&lt;span class="caps"&gt;RPE&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy is an action plan that specifies how a company will reach
+   target customers and achieve a competitive&amp;nbsp;advantage&lt;/li&gt;
+&lt;li&gt;In order to select a &lt;span class="caps"&gt;GTM&lt;/span&gt;, you first need to understand:&lt;ul&gt;
+&lt;li&gt;market&amp;nbsp;conditions&lt;/li&gt;
+&lt;li&gt;competitive&amp;nbsp;positioning&lt;/li&gt;
+&lt;li&gt;ideal&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;product&amp;nbsp;offering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Knowing these elements will help you choose the correct &lt;span class="caps"&gt;GTM&lt;/span&gt; that will
+   acquire, retain and grow you customer base in the most capital-efficient&amp;nbsp;way &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="sales-led-go-to-market-strategies"&gt;Sales-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
+&lt;p&gt;Profit Centers: Sales, Marketing, Customer&amp;nbsp;Success&lt;/p&gt;
+&lt;p&gt;Cost Centers: Engineering,&amp;nbsp;Product&lt;/p&gt;
+&lt;p&gt;Advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Annual Contract Value (&lt;span class="caps"&gt;ACV&lt;/span&gt;) can be very&amp;nbsp;high&lt;/li&gt;
+&lt;li&gt;Enterprise first solutions that are very complex and therefore need a
+high-touch sales&amp;nbsp;model&lt;/li&gt;
+&lt;li&gt;If the Total Addressable Market (&lt;span class="caps"&gt;TAM&lt;/span&gt;) is very small, because your market
+is super niche, you can quite easily talk to almost all market
+participants. (&lt;span class="caps"&gt;PLG&lt;/span&gt; is built for large&amp;nbsp;TAMs)&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s great for new categories of product where education is required,
+because you need to change how people approach a problem. This takes time
+and requires education.
+This is turn requires that you understand your customers pain points,
+objections, core problems. If you jump to quickly a &lt;span class="caps"&gt;PLG&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy then
+you risk a high church rate because you haven&amp;#8217;t understood or educated
+your customers well&amp;nbsp;enough.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Disadvantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sales cycles are very&amp;nbsp;long&lt;/li&gt;
+&lt;li&gt;The Life Time Value (&lt;span class="caps"&gt;LTV&lt;/span&gt;) must be high enough to recoup the investment in
+  &lt;span class="caps"&gt;CAC&lt;/span&gt;. This often requires charging the customer a premium. This premium
+  price isn&amp;#8217;t because the product is amazing, or more valuable to the
+  customer, but because the customer acquisition model is more&amp;nbsp;expensive.&lt;/li&gt;
+&lt;li&gt;If you use a Sales-Led &lt;span class="caps"&gt;GTM&lt;/span&gt;, you need to watch out for competitors who can
+  sell more efficiently, or have a more efficient Customer Acquisition
+  Model. They can steal your market share by offering the same product with
+  at a lower&amp;nbsp;price.&lt;/li&gt;
+&lt;li&gt;Customer Acquisition methods are super leaky. Most marketing-qualified leads (MQLs) never result in a closed deal, this is partly because:&lt;ul&gt;
+&lt;li&gt;it encourages markets to gate content in order to hit their &lt;span class="caps"&gt;MQL&lt;/span&gt;&amp;nbsp;goals    &lt;/li&gt;
+&lt;li&gt;it focusses on content consumption as a leading indicator of intent.
+  (but reading a white-paper or brochure doesn&amp;#8217;t mean im going to buy
+  the&amp;nbsp;thing).&lt;/li&gt;
+&lt;li&gt;the entire process rewards creating friction in the buying&amp;nbsp;process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Consequently, there is often a disconnect between marketing and&amp;nbsp;sales &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="product-led-go-to-market-strategies"&gt;Product-Led Go-To-Market&amp;nbsp;Strategies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Switching from Sales-Led &lt;span class="caps"&gt;GTM&lt;/span&gt; to Product-Led &lt;span class="caps"&gt;GTM&lt;/span&gt; creates a defensive&amp;nbsp;moat &lt;/li&gt;
+&lt;li&gt;A product led marketing team asks &amp;#8220;How can we use the product to qualify our
+prospects for&amp;nbsp;us?&amp;#8221;&lt;/li&gt;
+&lt;li&gt;A product led customer success team asks &amp;#8220;How can we create a product that
+  helps customers be successful without our&amp;nbsp;help?&amp;#8221;&lt;/li&gt;
+&lt;li&gt;A product-led engineering team asks &amp;#8220;How can we create a product with a quick&amp;nbsp;time-to-value?&amp;#8221;&lt;/li&gt;
+&lt;li&gt;Growth is much faster, because:&lt;ul&gt;
+&lt;li&gt;you need fewer resources to&amp;nbsp;scale, &lt;/li&gt;
+&lt;li&gt;the top of the customer funnel is much&amp;nbsp;wider.&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;CAC&lt;/span&gt; is much&amp;nbsp;lower&lt;/li&gt;
+&lt;li&gt;Higher &lt;span class="caps"&gt;RPE&lt;/span&gt; (revenue per&amp;nbsp;employee)&lt;/li&gt;
+&lt;li&gt;User experience is&amp;nbsp;better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="chapter-2-free-freemium-or-demo"&gt;Chapter 2 - Free, Freemium or&amp;nbsp;Demo&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &lt;span class="caps"&gt;MOAT&lt;/span&gt; framework to pick the right &lt;span class="caps"&gt;GTM&lt;/span&gt;&amp;nbsp;strategy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;M&lt;/em&gt;&lt;/strong&gt;arket Strategy - Dominant? Disruptive?&amp;nbsp;Differentiated?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;O&lt;/strong&gt;cean Conditions - Blue or&amp;nbsp;Red?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;udience - Do you have a top-down or bottom-up marketing&amp;nbsp;strategy?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;ime to Value - How much time do you need for a customer to
+  experience the&amp;nbsp;value?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dominant - Do it better than the competition &lt;em&gt;and&lt;/em&gt; charge a lower&amp;nbsp;price&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is your &lt;span class="caps"&gt;TAM&lt;/span&gt; big&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;Does your product solve a specific job significantly better and at lower
+cost than anyone else on the&amp;nbsp;market?&lt;/li&gt;
+&lt;li&gt;Can the user realize significant ongoing value quickly with little or no&amp;nbsp;help?&lt;/li&gt;
+&lt;li&gt;Do you want to be the undisputed market&amp;nbsp;leader?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Differentiated - Pick and win a fight against an industry giant &lt;ul&gt;
+&lt;li&gt;Main line of defense against the giant is&amp;nbsp;specialization &lt;/li&gt;
+&lt;li&gt;Focus on an underserved&amp;nbsp;niche&lt;/li&gt;
+&lt;li&gt;Do a specific job better than the competition but charge significantly&amp;nbsp;more&lt;/li&gt;
+&lt;li&gt;This is not a one-size-fits-all&amp;nbsp;model.&lt;/li&gt;
+&lt;li&gt;Free trials and demos work well&amp;nbsp;here.&lt;/li&gt;
+&lt;li&gt;Because its specialized, combining freemium with quick time-to-value is&amp;nbsp;difficult&lt;/li&gt;
+&lt;li&gt;Main competitive advantage is how you solve your customers&amp;nbsp;problems&lt;/li&gt;
+&lt;li&gt;Does your market have underserved&amp;nbsp;customers?&lt;/li&gt;
+&lt;li&gt;Is the &lt;span class="caps"&gt;TAM&lt;/span&gt; big&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;is the &lt;span class="caps"&gt;ACV&lt;/span&gt; high&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;Could prospects experience a Magic Moment during a free&amp;nbsp;trial?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disruptive - Charge less for an inferior product (e.g. Canva, Google docs)&lt;ul&gt;
+&lt;li&gt;Build a simpler product that solves a specific pain point, and because
+  its simpler, its faster, you can charge less, and its more appropriate to
+  some over-served or priced-out&amp;nbsp;customers&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s a scaled-down&amp;nbsp;product&lt;/li&gt;
+&lt;li&gt;Costs must be&amp;nbsp;low&lt;/li&gt;
+&lt;li&gt;Product must be easy to&amp;nbsp;use&lt;/li&gt;
+&lt;li&gt;Is &lt;span class="caps"&gt;TAM&lt;/span&gt; large&amp;nbsp;enough?&lt;/li&gt;
+&lt;li&gt;Can on-boarding be completely&amp;nbsp;self-service?&lt;/li&gt;
+&lt;li&gt;Freemium model&amp;nbsp;thrives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="chapter-3-red-ocean-or-blue-ocean-markets"&gt;Chapter 3 - Red-Ocean or Blue-Ocean&amp;nbsp;markets?&lt;/h2&gt;
+&lt;p&gt;Red-ocean companies try to outperform their rivals in order to grab a larger
+share of the existing market. As the market gets crowded, opportunity for
+profit and growth reduces. Products become commodities. Cut-throat competition
+turns the waters&amp;nbsp;red.&lt;/p&gt;
+&lt;p&gt;Blue-ocean companies access untapped market space and create demand. They have
+opportunity for highly profitable growth. Competition is irrelevant. Create and
+capture new&amp;nbsp;demand.&lt;/p&gt;
+&lt;p&gt;Some markets will be red-ocean, but a particular niche within it will be blue&amp;nbsp;ocean.&lt;/p&gt;
+&lt;p&gt;Blue Oceans require educating the customer to create the demand. This is
+high-touch, and often a &lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy isn&amp;#8217;t going to work. It needs to be
+sales-led in order to educate the customer enough. But if Time-To-Value (&lt;span class="caps"&gt;TTV&lt;/span&gt;)
+is short then &lt;span class="caps"&gt;PLG&lt;/span&gt; could be&amp;nbsp;great. &lt;/p&gt;
+&lt;p&gt;Red Oceans need big wide funnels in order to compete, and &lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategies
+work great. They&amp;#8217;re defensible, keep costs low and make sales cycles&amp;nbsp;short. &lt;/p&gt;
+&lt;h2 id="chapter-4-top-down-or-bottom-up-selling-strategy"&gt;Chapter 4 - Top-Down or Bottom-Up selling&amp;nbsp;strategy?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PLG&lt;/span&gt; works for&amp;nbsp;bottom-up.&lt;/li&gt;
+&lt;li&gt;High touch sales-led strategies work for Top-Down enterprise sales strategies, where the product is super complex and the sales cyccle is very&amp;nbsp;long.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Top-Down (Sales team is the growth&amp;nbsp;engine):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High &lt;span class="caps"&gt;ACV&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Additional&amp;nbsp;Services&lt;/li&gt;
+&lt;li&gt;Lower customer&amp;nbsp;churn&lt;/li&gt;
+&lt;li&gt;Poor revenue&amp;nbsp;distribution&lt;/li&gt;
+&lt;li&gt;High &lt;span class="caps"&gt;CAC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Long sales&amp;nbsp;cycles&lt;/li&gt;
+&lt;li&gt;Free Trial sometimes&amp;nbsp;works&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bottom-Up (Product is the growth&amp;nbsp;engine):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wider&amp;nbsp;top-of-funnel&lt;/li&gt;
+&lt;li&gt;Low &lt;span class="caps"&gt;CAC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Predictable sales&amp;nbsp;figures&lt;/li&gt;
+&lt;li&gt;Revenue&amp;nbsp;diversity&lt;/li&gt;
+&lt;li&gt;Scalable&amp;nbsp;fast&lt;/li&gt;
+&lt;li&gt;Small contracts&amp;nbsp;only&lt;/li&gt;
+&lt;li&gt;non-paying&amp;nbsp;customers&lt;/li&gt;
+&lt;li&gt;expertise&amp;nbsp;shortage&lt;/li&gt;
+&lt;li&gt;upfront investment as non-paying customers drain&amp;nbsp;resources&lt;/li&gt;
+&lt;li&gt;Freemium&lt;/li&gt;
+&lt;li&gt;Free-Trial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="chapter-5-time-to-value"&gt;Chapter 5 -&amp;nbsp;Time-to-Value&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;How much time until you deliver on your promise to&amp;nbsp;prospects?&lt;/li&gt;
+&lt;li&gt;How much time until the product sells&amp;nbsp;itself?&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PL&lt;/span&gt; &lt;span class="caps"&gt;GTM&lt;/span&gt; strategies require fast&amp;nbsp;time-to-value.&lt;/li&gt;
+&lt;li&gt;Rank your uses across 2 dimensions and group into 4 quadrants. The
+   dimensions are Ability (low - high) and Motivation (low - high)&lt;ol&gt;
+&lt;li&gt;Low Motivation - Low Ability = Mission&amp;nbsp;Impossible&lt;/li&gt;
+&lt;li&gt;High Motivation - Low Ability =&amp;nbsp;Rookie&lt;/li&gt;
+&lt;li&gt;Low Motivation - High Ability =&amp;nbsp;Veteran&lt;/li&gt;
+&lt;li&gt;High Motivation - High Ability =&amp;nbsp;Spoiled&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Figure out your top two quadrants. Unless all your users are Spoiled, you
+   need to decrease&amp;nbsp;Time-To-Value.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How motivated are your&amp;nbsp;users?&lt;/li&gt;
+&lt;li&gt;Is your product easy for your target audience to&amp;nbsp;use?&lt;/li&gt;
+&lt;li&gt;Can users experience the core value (magic moment?) without&amp;nbsp;hand-holding?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="part-2-build-your-foundation"&gt;Part 2 - Build Your&amp;nbsp;Foundation&lt;/h1&gt;
+&lt;h2 id="chapter-7-build-a-product-led-foundation"&gt;Chapter 7 - Build a product-led&amp;nbsp;foundation&lt;/h2&gt;
+&lt;p&gt;A positive feedback loop:
+1. &lt;strong&gt;Understand&lt;/strong&gt; your value
+2. &lt;strong&gt;Communicate&lt;/strong&gt; it
+3. &lt;strong&gt;Deliver&lt;/strong&gt; on your promise
+4.&amp;nbsp;Repeat&lt;/p&gt;
+&lt;h2 id="chapter-8-understand-your-value"&gt;Chapter 8 - Understand your&amp;nbsp;value&lt;/h2&gt;
+&lt;p&gt;If you&amp;#8217;re selling live-chat software, you&amp;#8217;re not really selling live-chat
+software, you are selling a new and better way to acquire&amp;nbsp;customers. &lt;/p&gt;
+&lt;p&gt;You are selling the outcome, the result, the&amp;nbsp;why.&lt;/p&gt;
+&lt;p&gt;Pain makes us want to change so that we can avoid or prevent the pain&amp;nbsp;altogether. &lt;/p&gt;
+&lt;p&gt;Pain is product&amp;nbsp;agnostic.&lt;/p&gt;
+&lt;p&gt;There are three reasons why people buy a&amp;nbsp;product:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Functional Outcome - the core task that needs to get&amp;nbsp;done.&lt;/li&gt;
+&lt;li&gt;Emotional Outcome - how a customer wants to feel or avoid feeling as a
+result of the functional&amp;nbsp;outcome.&lt;/li&gt;
+&lt;li&gt;Social Outcome - how a customer wants to be perceived by others by using
+   your&amp;nbsp;product.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In every software, there are usage patterns that point towards to core outcomes
+that are most important to&amp;nbsp;customers.&lt;/p&gt;
+&lt;p&gt;One of the biggest differences between sales-led and product-led companies is
+that &lt;span class="caps"&gt;SL&lt;/span&gt; companies monitor usage patters to see if users are accomplishing
+meaningful outcomes. These outcomes are referred to as &lt;strong&gt;value-metrics&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A value-metric is the way you measure value exchange in your product&lt;/strong&gt;. They
+are the linchpin to successful execution of a product-led &lt;span class="caps"&gt;GTM&lt;/span&gt; strategy because
+you are aligning your revenue model directly with your customer acquisition
+model. Because your value metrics play a vital role in how you price your
+product, set up your monitoring, and build your&amp;nbsp;team.&lt;/p&gt;
+&lt;p&gt;Value metrics could&amp;nbsp;be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for vimeo, number of videos uploaded by the&amp;nbsp;user.&lt;/li&gt;
+&lt;li&gt;for slack, number of messages sent by the&amp;nbsp;user&lt;/li&gt;
+&lt;li&gt;for paypal, amount of revenue generated by the user&amp;nbsp;(processed?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are &lt;strong&gt;functional&lt;/strong&gt; and &lt;strong&gt;outcome based&lt;/strong&gt; value metrics. Functional value
+metrics are &amp;#8220;per user&amp;#8221; or &amp;#8220;per 100 videos&amp;#8221;. Pricing scales around functions of
+usage. Outcome based value metrics charge based on the outcome, e.g. how many
+views a video received, or how much money a customer made when using your
+payment process&amp;nbsp;method.&lt;/p&gt;
+&lt;p&gt;Many SaaS companies rely on feature differentiation as a way to justify higher
+prices, but this produces higher&amp;nbsp;churn. &lt;/p&gt;
+&lt;p&gt;Value metrics outperform feature differentiation with upto 75% less churn&amp;#8230;
+Outcome based value metrics reduce church by an additional 40%.&amp;nbsp;Apparently. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A good value metric is easy for a customer to understand. They need to immediately understand what they&amp;#8217;re paying for and where they fit in your packing/pricing structure. If you&amp;#8217;re in an established market, it makes senses to look at what the competition&amp;nbsp;charges.&lt;/li&gt;
+&lt;li&gt;A good value metric is aligned with the value that the customer receives through the product. Consider the low-level components of your high-level outcome. E.g. what low level actions are necessary to get the end result?  Sending lots of messages? Meeting lots of people? Finding lots of&amp;nbsp;things?&lt;/li&gt;
+&lt;li&gt;A good value metric grows with your customers usage of the valuable outcome.
+   If customers get incredible value from the product, charge them more because
+   the product is worth it. Also, if they aren&amp;#8217;t getting much value from the
+   product, charge them&amp;nbsp;less.&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t do user based pricing if you want to get lots of users - its a conflict
+   of&amp;nbsp;interests.&lt;/li&gt;
+&lt;li&gt;If you&amp;#8217;re small, you can try different pricing strategies and iterate to&amp;nbsp;success.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ask&amp;nbsp;yourself:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What do my best customers&amp;nbsp;do?&lt;/li&gt;
+&lt;li&gt;What do my best customers not&amp;nbsp;do?&lt;/li&gt;
+&lt;li&gt;What features did my best customers try first when they were&amp;nbsp;on-boarding?&lt;/li&gt;
+&lt;li&gt;What are the similarities along my best customers that led to&amp;nbsp;success?&lt;/li&gt;
+&lt;li&gt;For churned customers, what were the main differences between them and the
+   best customers? Were they in the ideal audience? Why did they church? What
+   did they do or not do that good customers&amp;nbsp;didn&amp;#8217;t?&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Learning"></category><category term="marketing"></category><category term="startups"></category></entry><entry><title>The Mom Test</title><link href="https://johnmathews.eu/mom-test.html" rel="alternate"></link><published>2020-12-04T16:07:00+01:00</published><updated>2020-12-04T16:07:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-04:/mom-test.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;The Mom Test&amp;#8221; by Rob&amp;nbsp;Fitzpatrick&lt;/p&gt;</summary><content type="html">&lt;p&gt;It&amp;#8217;s called the Mom Test because it leads to questions that even your mom couldn&amp;#8217;t lie to you&amp;nbsp;about&lt;/p&gt;
+&lt;h2 id="overview"&gt;Overview:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Ask good&amp;nbsp;questions&lt;/li&gt;
+&lt;li&gt;Avoid bad&amp;nbsp;data&lt;/li&gt;
+&lt;li&gt;Keep it&amp;nbsp;casual&lt;/li&gt;
+&lt;li&gt;Push for commitment and&amp;nbsp;advancement&lt;/li&gt;
+&lt;li&gt;Frame the meeting&amp;nbsp;well&lt;/li&gt;
+&lt;li&gt;Focus on the right, tight, customer&amp;nbsp;segment&lt;/li&gt;
+&lt;li&gt;Prep well, take good notes, review your&amp;nbsp;notes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="chapter-1-opinions-are-worthless-you-want-objective-facts-about-what"&gt;Chapter 1 - Opinions are worthless, you want objective facts about&amp;nbsp;what&lt;/h2&gt;
+&lt;p&gt;happened in the past
+1. Find out if people care about your idea by never mentioning it.
+2. Forcing yourself not to mention your idea will force you to ask better
+   questions
+3. Make sure your questions pass the mom test:
+    - Talk about their lives, not your idea Ask about specifics in the past,
+    - not hypotheticals Spend most of your time listening, not&amp;nbsp;talking&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rule of thumb: Anything involving the future is an overly optimistic&amp;nbsp;lie&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="chapter-2-avoid-bad-data-compliments-fluff-hypotheticals-ideas-you"&gt;Chapter 2 - Avoid bad data - Compliments, Fluff, Hypotheticals, Ideas&amp;nbsp;You&lt;/h2&gt;
+&lt;p&gt;aren&amp;#8217;t allowed to tell them what their problem is, and they aren&amp;#8217;t allowed to
+tell you what to&amp;nbsp;build.&lt;/p&gt;
+&lt;h2 id="chapter-3-ask-the-important-questions-you-should-be-terrified-of-at"&gt;Chapter 3 - Ask the Important Questions - You should be terrified of&amp;nbsp;at&lt;/h2&gt;
+&lt;p&gt;least one of the questions you ask in each conversation
+1. Search out the scary questions you&amp;#8217;ve been unintentionally avoiding. What&amp;#8217;s
+the worst thing a prospect could say? What&amp;#8217;s the scariest question you could
+ask? 
+2. A good way to find scary questions is to imagine that your company has
+failed and then to ask why.
+3. If you get an unexpected answer to one of your questions and it doesn&amp;#8217;t have
+any effect on what you&amp;#8217;re going to do, then was it really worth asking it?
+4. General advice for hard things including asking hard questions - imagine you
+were delegating the task, what would you tel the person to do? That&amp;#8217;s you.
+5. You can ask about money.
+6. Love bad news - if you find out that your idea is fundamentally flawed
+you&amp;#8217;ve just saved a tonne of time and energy and money. Move on. It&amp;#8217;s getting
+you closer to the truth.
+7. Bad news isn&amp;#8217;t the result of an opinion. No one knows if your idea will
+work, only the market knows. Opinions don&amp;#8217;t count.
+8. A lukewarm response to your idea can be a great conversation, because you
+realise that your idea isn&amp;#8217;t a great idea. Lukewarm means they don&amp;#8217;t care
+enough to buy the first (worst) version before it&amp;#8217;s ready.
+9. Look before you zoom. Don&amp;#8217;t focus on details too soon, you need to
+understand the big picture first. 
+10. You have &lt;strong&gt;product risk&lt;/strong&gt; and &lt;strong&gt;customer risk&lt;/strong&gt;:
+      11. &lt;strong&gt;Product risk&lt;/strong&gt; - can I build it and grow it?
+      12. &lt;strong&gt;Customer risk&lt;/strong&gt; - is there a big enough group of people who are
+      going to buy it?
+13. Pre-plan a list of the 3 most important questions (including a scary one)
+before every meeting or conversation. Be ready with these. They should change
+from week to week. As you get good quality answers to existing questions you
+can bring in new&amp;nbsp;questions.&lt;/p&gt;
+&lt;h2 id="chapter-4-keep-it-casual-structure-problem-solution-sales"&gt;Chapter 4 - Keep it casual, Structure: Problem -&amp;gt; Solution -&amp;gt;&amp;nbsp;Sales&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Normally you would have 3 meetings with a client in order to make a big
+sale. This lets you do each stage really well without blurring the data:&lt;ol&gt;
+&lt;li&gt;Identify your prospect&amp;#8217;s&amp;nbsp;problem&lt;/li&gt;
+&lt;li&gt;Explain your&amp;nbsp;solution&lt;/li&gt;
+&lt;li&gt;Sell the&amp;nbsp;solution&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Identifying a problem doesn&amp;#8217;t have to be a meeting, keep it casual and you
+will get more honest feedback much faster. It works better as a&amp;nbsp;chat.&lt;/li&gt;
+&lt;li&gt;It take 5 minutes (max) to identify if a problem exists and is&amp;nbsp;important&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Give as little info as possible about your idea whilst still nudging the
+conversation&amp;nbsp;along&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="chapter-5-the-currencies-of-conversation-time-reputation-money"&gt;Chapter 5 - The currencies of conversation - Time, Reputation,&amp;nbsp;Money&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;In early stage sales, the main goal is learning. Money is a&amp;nbsp;side-effect.&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If someone is willing to risk reputation, or spend time or money on your
+idea, then you can believe that they&amp;#8217;re&amp;nbsp;interested.&lt;/li&gt;
+&lt;li&gt;Hearing a compliment is still useful - it means they&amp;#8217;re trying to get rid of&amp;nbsp;you&lt;/li&gt;
+&lt;li&gt;If its a bad meeting, push for a commitment of some kind. Ask them to spend
+time, reputation or money and you&amp;#8217;ll see what they really&amp;nbsp;think.&lt;/li&gt;
+&lt;li&gt;If they aren&amp;#8217;t excited (not just interested, but in pain and excited for
+your solution) then you need to find that out &lt;span class="caps"&gt;ASAP&lt;/span&gt;. It&amp;#8217;s still a good meeting
+if you can discover&amp;nbsp;this.&lt;/li&gt;
+&lt;li&gt;A lead isn&amp;#8217;t a real lead until you&amp;#8217;ve given them a concrete chance to reject&amp;nbsp;you.&lt;/li&gt;
+&lt;li&gt;Ask learning questions by using the Mom Test, then confirm by selling&amp;nbsp;it. &lt;/li&gt;
+&lt;li&gt;You need &lt;strong&gt;crazy customers&lt;/strong&gt;:&lt;ol&gt;
+&lt;li&gt;They have a painful and expensive&amp;nbsp;problem&lt;/li&gt;
+&lt;li&gt;They know they have a painful and expensive&amp;nbsp;problem&lt;/li&gt;
+&lt;li&gt;They have the money to pay you to solve&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;They already have their own bad solution to this terrible problem, and
+  yours is clearly&amp;nbsp;better&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;A crazy customer doesn&amp;#8217;t say &amp;#8220;yeah that&amp;#8217;s great, I&amp;#8217;m really interested, let me
+know when its ready&amp;#8221;. They say &amp;#8220;&lt;span class="caps"&gt;AHHH&lt;/span&gt; &lt;span class="caps"&gt;THIS&lt;/span&gt; &lt;span class="caps"&gt;IS&lt;/span&gt; &lt;span class="caps"&gt;THE&lt;/span&gt; &lt;span class="caps"&gt;WORST&lt;/span&gt; &lt;span class="caps"&gt;PART&lt;/span&gt; &lt;span class="caps"&gt;OF&lt;/span&gt; &lt;span class="caps"&gt;MY&lt;/span&gt; &lt;span class="caps"&gt;LIFE&lt;/span&gt; &lt;span class="caps"&gt;AND&lt;/span&gt; I
+&lt;span class="caps"&gt;WILL&lt;/span&gt; &lt;span class="caps"&gt;PAY&lt;/span&gt; &lt;span class="caps"&gt;YOU&lt;/span&gt; &lt;span class="caps"&gt;RIGHT&lt;/span&gt; &lt;span class="caps"&gt;NOW&lt;/span&gt; &lt;span class="caps"&gt;TO&lt;/span&gt; &lt;span class="caps"&gt;FIX&lt;/span&gt; &lt;span class="caps"&gt;IT&lt;/span&gt;!&amp;#8221;&lt;/li&gt;
+&lt;li&gt;A crazy customer will front you the money when all you have is a prototype
+made of&amp;nbsp;duct-tape&lt;/li&gt;
+&lt;li&gt;A crazy customer is the person reading you blog, searching for workarounds,
+when you haven&amp;#8217;t spent loads of marketing and lead&amp;nbsp;generation&lt;/li&gt;
+&lt;li&gt;Keep a crazy customer close - they&amp;#8217;ll stick with you when times are&amp;nbsp;tough.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="chapter-6-finding-good-conversations-keep-having-conversations-until-you"&gt;Chapter 6 - Finding good conversations - Keep having conversations until&amp;nbsp;you&lt;/h2&gt;
+&lt;p&gt;stop hearing new&amp;nbsp;stuff&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;If it&amp;#8217;s a topic you both care about, find an excuse. You&amp;#8217;ll both enjoy the
+chat. You don&amp;#8217;t need to mention your idea if it breaks the&amp;nbsp;premise.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Warm introductions are the ideal way to start a new conversation. 6 degrees
+of freedom in the world, so find someone who knows someone who knows&amp;nbsp;someone..&lt;/li&gt;
+&lt;li&gt;Cold calls - LinkedIn,&amp;nbsp;maybe&lt;/li&gt;
+&lt;li&gt;Serendipity - be prepared, be&amp;nbsp;bold&lt;/li&gt;
+&lt;li&gt;Have a good excuse -&amp;nbsp;hustle&lt;/li&gt;
+&lt;li&gt;Landing pages so that googling the problems brings them to&amp;nbsp;you.&lt;/li&gt;
+&lt;li&gt;Organise an event - bring the businesses together for an event. You&amp;#8217;ll be
+considered an expert cos you&amp;#8217;re facilitating&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;Become a subject matter&amp;nbsp;expert&lt;/li&gt;
+&lt;li&gt;Speaking and teaching engagements - you get to have strong opinions, and
+you&amp;#8217;ll be&amp;nbsp;respected.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Vision -&amp;gt; Framing -&amp;gt; Weakness -&amp;gt; Pedestal -&amp;gt;&amp;nbsp;Ask&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="chapter-7-choosing-you-customers"&gt;Chapter 7 - Choosing you&amp;nbsp;customers&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Startups don&amp;#8217;t starve, they drown. In options, choices, ideas. You get&amp;nbsp;overwhelmed.&lt;/li&gt;
+&lt;li&gt;Choose a good customer segment, focus on it, and don&amp;#8217;t get&amp;nbsp;distracted. &lt;/li&gt;
+&lt;li&gt;In the beginning:&lt;ol&gt;
+&lt;li&gt;Google - PhD&amp;nbsp;students&lt;/li&gt;
+&lt;li&gt;PayPal -&amp;nbsp;eBay&lt;/li&gt;
+&lt;li&gt;Evernote  - Moms with recipes,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;It will look obvious with hindsight, probably not so obvious before you&amp;#8217;ve
+figured it out&amp;nbsp;though.&lt;/li&gt;
+&lt;li&gt;If you can&amp;#8217;t get a consistent answer to a question, maybe you&amp;#8217;re speaking to
+different&amp;nbsp;segments&lt;/li&gt;
+&lt;li&gt;If you aren&amp;#8217;t finding &lt;strong&gt;consistent problems and goals&lt;/strong&gt; then you don&amp;#8217;t have
+a specific enough customer segment&lt;ol&gt;
+&lt;li&gt;Within the group, which type of person would want it the&amp;nbsp;most?&lt;/li&gt;
+&lt;li&gt;Would everyone within the group want to buy/use it? Or only&amp;nbsp;some?&lt;/li&gt;
+&lt;li&gt;Why does the subset want&amp;nbsp;it?&lt;/li&gt;
+&lt;li&gt;Does everyone in the group have the same&amp;nbsp;motivation?&lt;/li&gt;
+&lt;li&gt;What other motivations are&amp;nbsp;there?&lt;/li&gt;
+&lt;li&gt;Who else (outside the group) have these&amp;nbsp;motivations?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Go for &lt;strong&gt;Who-Where&lt;/strong&gt; pairs of segments. &amp;#8220;Finance professionals who run&amp;nbsp;marathons&amp;#8221;..&lt;/li&gt;
+&lt;li&gt;You want customers who are reachable, profitable, and personally&amp;nbsp;rewarding.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Good segments are usually &amp;#8220;who-where&amp;#8221; pairs. If you don&amp;#8217;t know where to find
+your customers, keep slicing until you do. Make sure the segment is reachable,
+profitable, and personally&amp;nbsp;rewarding&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="chapter-8-getting-the-most-from-the-conversations-by-prepping-and"&gt;Chapter 8 - Getting the most from the conversations by prepping&amp;nbsp;and&lt;/h2&gt;
+&lt;p&gt;reviewing&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prepare well&lt;ol&gt;
+&lt;li&gt;Have you 3 big questions ready, including the scary&amp;nbsp;ones&lt;/li&gt;
+&lt;li&gt;Know who you are speaking&amp;nbsp;to&lt;/li&gt;
+&lt;li&gt;Know what commitment and next-steps you want to push&amp;nbsp;for&lt;/li&gt;
+&lt;li&gt;Spend up to an hour &lt;strong&gt;writing down your best guesses about what you
+  think they will say, what they care about and what they want.&lt;/strong&gt; If you
+  have a focussed segment, you&amp;#8217;ll only need to do this&amp;nbsp;occasionally.&lt;/li&gt;
+&lt;li&gt;Whilst prepping, if you come across a question which can be answered
+  using the internet, use the&amp;nbsp;internet.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Take good notes&lt;ol&gt;
+&lt;li&gt;Ask if you can record the&amp;nbsp;audio&lt;/li&gt;
+&lt;li&gt;Record emotions as well as words. Verbatim alone isn&amp;#8217;t always accurate
+  6 months&amp;nbsp;later&lt;/li&gt;
+&lt;li&gt;Use shorthand for follow up, happy, angry, meh,&amp;nbsp;etc&lt;/li&gt;
+&lt;li&gt;Pains and obstacles are a lot more important if someone is embarrassed
+  or angry when they&amp;#8217;re talking about&amp;nbsp;them.&lt;/li&gt;
+&lt;li&gt;Dig into the big emotions, find out what&amp;#8217;s causing them, or why its a
+  big&amp;nbsp;deal&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Review your notes&lt;ol&gt;
+&lt;li&gt;Meta - which questions went well or&amp;nbsp;not?&lt;/li&gt;
+&lt;li&gt;What were the answers to the scary&amp;nbsp;questions?&lt;/li&gt;
+&lt;li&gt;How can you do better next&amp;nbsp;time?&lt;/li&gt;
+&lt;li&gt;What were the clear signals? What signals did you&amp;nbsp;miss?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Learning"></category></entry><entry><title>Obviously Awesome</title><link href="https://johnmathews.eu/obviously-awesome.html" rel="alternate"></link><published>2020-12-03T15:46:00+01:00</published><updated>2020-12-03T15:46:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-03:/obviously-awesome.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;Obviously Awesome&amp;#8221; by April&amp;nbsp;Dunford&lt;/p&gt;</summary><content type="html">&lt;h3 id="intro"&gt;Intro&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In order to do better marketing, understand your value and differentiators&amp;nbsp;better&lt;/li&gt;
+&lt;li&gt;Understand what makes a best-fit&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;Positioning is a fundamental input to every business tactic you&amp;nbsp;use&lt;/li&gt;
+&lt;li&gt;If you fail at positioning, you fail at marketing and&amp;nbsp;sales&lt;/li&gt;
+&lt;li&gt;Positioning is &amp;#8220;conext setting&amp;#8221; for&amp;nbsp;products&lt;/li&gt;
+&lt;li&gt;Customers need to be able to easily understand&lt;ol&gt;
+&lt;li&gt;What your product&amp;nbsp;does&lt;/li&gt;
+&lt;li&gt;Why it is&amp;nbsp;special&lt;/li&gt;
+&lt;li&gt;Why it matters to&amp;nbsp;them&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;If your prospects can&amp;#8217;t figure out what your product does quickly, they will
+   invent a position for you. It might hide your key strengths or misunderstand
+   your&amp;nbsp;value.&lt;/li&gt;
+&lt;li&gt;Find people to demo your product to, then ask them to describe it back to
+   you. Do the same with existing customers. If they&amp;#8217;re not saying the same
+   thing then you have a positioning&amp;nbsp;problem.&lt;/li&gt;
+&lt;li&gt;Products with strong positioning:&lt;ol&gt;
+&lt;li&gt;Find the best kind of&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;Make the value&amp;nbsp;obvious&lt;/li&gt;
+&lt;li&gt;Sell&amp;nbsp;quickly&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="part-1"&gt;Part&amp;nbsp;1&lt;/h2&gt;
+&lt;h3 id="positioning-as-context"&gt;Positioning as&amp;nbsp;context&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Without positioning to guide us, we don&amp;#8217;t know how to understnad a&amp;nbsp;product&lt;/li&gt;
+&lt;li&gt;Positioning lets us make assumptions about&lt;ol&gt;
+&lt;li&gt;who a product is&amp;nbsp;for&lt;/li&gt;
+&lt;li&gt;what its main features&amp;nbsp;are&lt;/li&gt;
+&lt;li&gt;how much it&amp;nbsp;costs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Without it we would be paralyzed by choice, and we wouldnt be able to make
+   sense of all the products around&amp;nbsp;us. &lt;/li&gt;
+&lt;li&gt;The context and purpose of a product from the founders/engineers perspective
+   are often different to those of the&amp;nbsp;prospect&lt;/li&gt;
+&lt;li&gt;Products can be positioned in multiple ways, and often the best positioning
+   is not the default&amp;nbsp;positioning&lt;/li&gt;
+&lt;li&gt;Bad positioning makes it harder for prospects to figure out if your product
+   is worth thinking&amp;nbsp;about.&lt;/li&gt;
+&lt;li&gt;Positioning requires considering:&lt;ol&gt;
+&lt;li&gt;Customers point of view - what problem/pain does it&amp;nbsp;solve&lt;/li&gt;
+&lt;li&gt;The ways your product is uniquely&amp;nbsp;different&lt;/li&gt;
+&lt;li&gt;The characteristics of a potential&amp;nbsp;customer&lt;/li&gt;
+&lt;li&gt;The best market context to make your value uniquely&amp;nbsp;obvious&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="five-plus-one-components-of-effective-positioning"&gt;Five (plus one) components of effective&amp;nbsp;positioning&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Alternatives - if you didn&amp;#8217;t exist, what would your customers
+   use instead?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Its what your prospects would use to do the task if your product didn&amp;#8217;t
+   exist. It could be excel, or pen and paper. It could be nothing, (in
+   which case maybe you product doesn&amp;#8217;t solve a real pain&amp;nbsp;point.)&lt;/li&gt;
+&lt;li&gt;You probably know a lot more about your market, and problem, and
+   alternative solutions, than your prospects do. (&amp;#8220;Doing nothing&amp;#8221; could be
+   an opportunity, not a red&amp;nbsp;flag.)&lt;/li&gt;
+&lt;li&gt;Its important to understand what customers will compare your product
+   with, because this is how they will define &amp;#8220;better&amp;#8221;. Is it &amp;#8220;easier&amp;#8221; than
+   a pen and&amp;nbsp;paper?&lt;/li&gt;
+&lt;li&gt;Customers might never have purchased a solution like yours&amp;nbsp;before.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unique Attributes - What do you have that alternative do not?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Could be:&lt;ol&gt;
+&lt;li&gt;Delivery Model (online vs offline, installed on-site vs&amp;nbsp;not)&lt;/li&gt;
+&lt;li&gt;Business model (rental vs&amp;nbsp;purchase)&lt;/li&gt;
+&lt;li&gt;Specific expertise (data scientist with financial and back-end web
+   dev&amp;nbsp;expertise)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Value (and quantifiable objective proof) - What value do the attributes
+   enable for customers?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;If unique attributes are your secret sauce, the value is why someone
+   might care about your secret&amp;nbsp;sauce&lt;/li&gt;
+&lt;li&gt;Fact based, provable, demonstrable, quantifiable, objective. Third party
+   opinions are&amp;nbsp;relevant. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target market characteristics - Who cares a lot about that value?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Focus on customers who are most likely to purchase quickly, wont ask for
+   discounts, will tell their friends about&amp;nbsp;you.&lt;/li&gt;
+&lt;li&gt;You should clearly identify who these are&amp;nbsp;and &lt;/li&gt;
+&lt;li&gt;Identity what sets them apart from other groups of customers. Why are
+   they uniquely likely to buy from you when others wouldnt or would take
+   longer to consider and make a&amp;nbsp;purchase&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Market Category - What context makes your value obvious to the ideal
+   customer?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Declaring that your product exists in a certain market triggers a
+   powerful set of&amp;nbsp;assumptions&lt;/li&gt;
+&lt;li&gt;make these assumptions help you, not hinder&amp;nbsp;you. &lt;/li&gt;
+&lt;li&gt;When presented with your product, customers will try to use what they
+   already know to figure out what your product is all about and why its
+   special. You want them to be able to do this really quickly and&amp;nbsp;easily. &lt;/li&gt;
+&lt;li&gt;Make these assumptions work for you, not against you. You won&amp;#8217;t have to
+   list every feature, because most of them will be assumed by the context
+   of the market&amp;nbsp;category. &lt;/li&gt;
+&lt;li&gt;Get it right, and sales efforts (copy) wont be wasted battling those
+   assumptions, but can instead build off of them to show secret sauce and
+   value more&amp;nbsp;obviously.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(Bonus) Relevant Trends - what trends make your product relevant right
+   now?&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;Used carefully, trends can show prospoects why they should pay attention
+   to your product right now. Increases&amp;nbsp;urgency.&lt;/li&gt;
+&lt;li&gt;It can increase urgency, excitement, coolness,&amp;nbsp;credibility&lt;/li&gt;
+&lt;li&gt;but the trend must be directly relevant, practically and objectively&amp;nbsp;applicable. &lt;/li&gt;
+&lt;li&gt;Blockchains, &lt;span class="caps"&gt;AI&lt;/span&gt;, &lt;span class="caps"&gt;ML&lt;/span&gt; are trends - they are relevant to multiple&amp;nbsp;markets. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these components is relevant to the&amp;nbsp;others&lt;/p&gt;</content><category term="Non-technical/Learning"></category><category term="marketing"></category><category term="positioning"></category><category term="startups"></category><category term="book"></category></entry><entry><title>How I learnt to code</title><link href="https://johnmathews.eu/How-I-learnt-to-code.html" rel="alternate"></link><published>2020-12-01T13:51:00+01:00</published><updated>2020-12-01T13:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-01:/How-I-learnt-to-code.html</id><summary type="html"></summary><content type="html">&lt;p&gt;4 years ago I started learning how to code, and it was &lt;em&gt;really&lt;/em&gt; difficult! It&amp;#8217;s
+still difficult, but I now have a collection of tools and perspectives that
+make it less daunting (more on that below). Leveling up requires one more
+abstraction to wrap my head around, or one more &lt;span class="caps"&gt;API&lt;/span&gt; to understand. I can do&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;But I don&amp;#8217;t think it needed to be so difficult, so now I&amp;#8217;m building &lt;a href="https://codeschoolmeta.com"&gt;Code
+School Meta&lt;/a&gt; to make it easier to learn how to&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;Learning to code has been fun, ultimately successful, and life changing (hello
+job security!) but at the beginning it was sooo slow, and super&amp;nbsp;tricky.&lt;/p&gt;
+&lt;p&gt;I remember feeling like an imposter, and thinking that I was definitely not a
+real developer - I hadn&amp;#8217;t taken any classes in computer science. I felt like I
+knew almost nothing about&amp;nbsp;anything. &lt;/p&gt;
+&lt;p&gt;The process began with Pandas, a (&lt;em&gt;the&lt;/em&gt;) Python analytics library. Spreadsheets
+were slowing me down at work, and I was bored. I found this &lt;a href="https://youtu.be/5JnMutdy6Fw"&gt;great
+tutorial&lt;/a&gt; by Brandon Rhodes. From there I found
+out about Jupyter Notebooks, and then I found about Github pages and how to
+make a blog using &lt;a href="https://blog.getpelican.com/"&gt;pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That led to &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; (and also JavaScript, which I tried very hard to avoid
+for as long as possible). I felt like a monkey bashing a keyboard as I tried to
+make &lt;span class="caps"&gt;HTML&lt;/span&gt; elements do what I&amp;nbsp;wanted.&lt;/p&gt;
+&lt;p&gt;Git was next, but I found this &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;amazing tutorial&lt;/a&gt;
+to help me learn. It made Git seem &lt;span class="caps"&gt;OK&lt;/span&gt;, and also helped &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; make more
+sense too.&amp;nbsp;Bonus!&lt;/p&gt;
+&lt;p&gt;I suddenly realized that great learning materials are crucial if I was going to
+keep momentum and keep on enjoying the thrill of seeing the computer do
+something I hadn&amp;#8217;t made it do&amp;nbsp;before.&lt;/p&gt;
+&lt;p&gt;So now I&amp;#8217;m now working on &lt;a href="https://codeschoolmeta.com"&gt;Code School: Meta&lt;/a&gt;. It&amp;#8217;s
+an online community to make it easier to teach yourself how to code - less
+confusion about how to get started or what to learn next, more encouragement,
+and lots of high quality&amp;nbsp;resources.&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;d like to know more, please &lt;a href="https://codeschoolmeta.com"&gt;check it out&lt;/a&gt;
+and sign up for&amp;nbsp;updates.&lt;/p&gt;</content><category term="Non-technical/Learning"></category></entry><entry><title>The 1-Page Marketing Plan</title><link href="https://johnmathews.eu/1-page-marketing-plan.html" rel="alternate"></link><published>2020-11-19T15:50:00+01:00</published><updated>2020-11-19T15:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-11-19:/1-page-marketing-plan.html</id><summary type="html">&lt;p&gt;My notes on &amp;#8220;The 1-Page Marketing Plan&amp;#8221; by Allan&amp;nbsp;Dib&lt;/p&gt;</summary><content type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;h3 id="marketing-has-three-phases"&gt;Marketing has three&amp;nbsp;phases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Before (prospect) - get people to know you and indicate&amp;nbsp;interest&lt;/li&gt;
+&lt;li&gt;During (lead) - get the to like you and buy from you for the first&amp;nbsp;time&lt;/li&gt;
+&lt;li&gt;After (customer) - get them to trust you, buy from you regularly, and&amp;nbsp;refer&lt;/li&gt;
+&lt;li&gt;new&amp;nbsp;customers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Marketing is &lt;em&gt;strategy&lt;/em&gt;, all the other things are &lt;em&gt;tactics&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="jargon-free-definition-of-marketing"&gt;Jargon free definition of&amp;nbsp;marketing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Advertising&lt;/strong&gt; - The circus is coming to town, you paint a sign saying &amp;#8220;Circus
+coming to town on&amp;nbsp;Saturday&amp;#8221;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Promotion&lt;/strong&gt; - Put the sign on the back of an elephant and walk it into&amp;nbsp;town&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Publicity&lt;/strong&gt; - Walk the elephant through the mayors flower beds and let a
+newspaper write about&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Public relations&lt;/strong&gt; - Get the mayor to laugh about&amp;nbsp;it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sales&lt;/strong&gt; - the town people go to the circus, you explain how much fun the
+entertainment is, they buy some tickets, you answer their questions, they spend
+lots of money on food, games,&amp;nbsp;shows.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marketing&lt;/strong&gt; is the plan that made the whole thing&amp;nbsp;happen&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Non-technical/Learning"></category><category term="Marketing"></category></entry><entry><title>Learning to market</title><link href="https://johnmathews.eu/marketing-101.html" rel="alternate"></link><published>2020-11-19T12:40:00+01:00</published><updated>2020-11-19T12:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-11-19:/marketing-101.html</id><summary type="html">&lt;p&gt;I&amp;#8217;ve learnt many things this year by being a solo technical founder, but so far marketing isn&amp;#8217;t one of them. I&amp;#8217;m trying to change&amp;nbsp;that.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since April I&amp;#8217;ve been able to work full time as a solo founder. I&amp;#8217;ve challenged
+myself to build something useful enough that customers would want to pay for it
+and in the process of seeking that goal I&amp;#8217;ve become a much better and more
+rounded&amp;nbsp;developer.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been working solo for about 7 months now, and in that time I&amp;#8217;ve begun
+using test driven development, I&amp;#8217;ve built non-trivial data driven web apps
+using Django, and I&amp;#8217;ve learnt how to deploy and monitor those apps in
+production and make them&amp;nbsp;performant.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve made two main apps; &lt;a href="https://moneybar.nl"&gt;moneybar.nl&lt;/a&gt; and
+&lt;a href="https://pippip.email"&gt;pippip.email&lt;/a&gt;, and I&amp;#8217;ve learnt so&amp;nbsp;much. &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m realising though, that I still have much to learn in other spheres. Being a
+great developer is deeply meaningful to me. It&amp;#8217;s literally a bucket list item
+for me and I intend to be writing code as long as I live. But there is no point
+creating products if no one knows they&amp;nbsp;exist.&lt;/p&gt;
+&lt;p&gt;This is where marketing and positioning comes in. Right now it feels like I
+know nothing about how to get users, or validate an idea, or position a
+product. These are all super necessary and super&amp;nbsp;unknown.&lt;/p&gt;
+&lt;p&gt;On a more meta level, I&amp;#8217;m confronted with the lost benefits of working with
+co-founders, or of having friends doing similar things. I want to work faster
+and make progress more efficiently. I need to be part of a&amp;nbsp;community.&lt;/p&gt;
+&lt;p&gt;Working in isolation does have its advantages, though. I&amp;#8217;m self-taught and
+self-directed, figuring out the contours of uncharted territory and creating my
+own personal map. In my mind, I have a deep and almost personal relationship
+with the coding abstractions and tools I&amp;#8217;ve learnt to work with. Classes and
+functions, strings and floats, literally have (to me) their own textures,
+colors and weights when I think or dream about&amp;nbsp;them.&lt;/p&gt;
+&lt;p&gt;It feels like I can pick up these abstractions as if they were physical objects
+and turn them around to examine them. Place them next to each other and compare
+the differences. Run thought experiements. In my experience, this kind of
+relationship and affection simply doesn&amp;#8217;t happen when taking a class or
+following someone elses schedule. It&amp;#8217;s satisying to feel ownership of a skill
+like this, and it&amp;#8217;s one of the primary reasons I consider coding to be similar
+to a&amp;nbsp;craft.&lt;/p&gt;
+&lt;p&gt;Having said all that, now that I realise I need to validate my product,
+position it, and figure out marketing, I&amp;#8217;ve stopped writing code, put down my
+tools, and I&amp;#8217;m going to learn marketing. I&amp;#8217;ve bought some books. Maybe I&amp;#8217;ll
+post some reviews here&amp;nbsp;later.&lt;/p&gt;
+&lt;p&gt;In no particular order here is what I plan to&amp;nbsp;read:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The 1-Page marketing plan, by Allan Dib Obviously Awesome, by April&amp;nbsp;Dunford&lt;/li&gt;
+&lt;li&gt;Lean Analytics, Hooked, How to build habit-forming products, by Nir Eyal&amp;nbsp;The&lt;/li&gt;
+&lt;li&gt;Mom Test, by Rob&amp;nbsp;Fitzpatrick&lt;/li&gt;
+&lt;li&gt;This is marketing, by Seth&amp;nbsp;Godin&lt;/li&gt;
+&lt;li&gt;Product-led growth, by Wes&amp;nbsp;Bush&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I don&amp;#8217;t know if I&amp;#8217;ve covered 90% of the distance required or 50%. It&amp;#8217;s
+exhausting but I&amp;#8217;m here for the journey not the&amp;nbsp;destination.&lt;/p&gt;</content><category term="Non-technical/Learning"></category><category term="marketing"></category><category term="growth"></category></entry></feed>
