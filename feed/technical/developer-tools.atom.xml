@@ -1,5 +1,577 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-14T13:40:00+01:00</updated><entry><title>Data Science vs Web Development: Larger Code Bases</title><link href="https://johnmathews.eu/larger-code-bases.html" rel="alternate"></link><published>2021-01-14T13:40:00+01:00</published><updated>2021-01-14T13:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/larger-code-bases.html</id><summary type="html"></summary><content type="html">&lt;h2 id="code-structure"&gt;Code&amp;nbsp;Structure&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-15T15:02:00+01:00</updated><entry><title>Vim For Large Projects</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"></link><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I use Vim as my text editor and as my &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free and open
+source, and I like that I can customize&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m happy to invest some time and effort into learning how to make the most of vim and its plugins because I&amp;#8217;m
+confident that I&amp;#8217;ll still be using it twenty years from&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;Here are some of the plugins and features that I&amp;#8217;ve used over the past year.
+There&amp;#8217;s a copy of my &lt;code&gt;.vimrc&lt;/code&gt; at the&amp;nbsp;end.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;filetype plugins - if you want some settings to be active only for
+     particular filetypes, like .py (python) or .txt (text) then create a file in
+     &lt;code&gt;~/.vim/ftplugin/&amp;lt;filetype&amp;gt;.vim&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Vim will look in the file when it opens a buffer of the corresponding
+ filetype. Good for formatting options like line length, tab spaces, vim
+ commands that are language&amp;nbsp;specific. &lt;/p&gt;
+&lt;p&gt;You can&amp;#8217;t activate plugins in these files though. All the plugins have to be
+ activated in your &lt;code&gt;.vimrc&lt;/code&gt; in the usual&amp;nbsp;way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;janko-m/vim-test&lt;/code&gt; - this plugin lets you runs tests without leaving vim.
+   You can run the test that&amp;#8217;s nearest the cursor, or all the tests in the
+   current buffer. It&amp;#8217;s very customizable. I wish it could be a bit faster, but
+   I could probably improve that myself by changing some&amp;nbsp;settings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;dense-analysis/ale&lt;/code&gt; - The incredible Asyncronous Linting Engine (&lt;span class="caps"&gt;A.L.&lt;/span&gt;E)
+   applies fixers and linters to various filetypes, when you want and how you want.
+   Super useful for writing tidy code and catching mistakes before the code is&amp;nbsp;run.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;junegunn/fzf&lt;/code&gt; and &lt;code&gt;junegunn/fzf.vim&lt;/code&gt; - It took a little getting used to at
+   first, but now I can&amp;#8217;t imagine not using a tool like this (this could be
+   said about so many vim-related things). Use &lt;code&gt;fzf&lt;/code&gt; to switch between open
+   buffers, open a new file, search for files using the filename, or search
+   within all the files in the project for specific&amp;nbsp;text. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;majutsushi/tagbar&lt;/code&gt; - This plugin opens a sidebar which contains a list of
+   of functions and classes and methods (tags). You can use it to see which
+   methods a class contains, and jump to the part of the buffer where a tag
+   is&amp;nbsp;defined.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;quot; ========== Global ==========&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;nocompatible&lt;/span&gt;              &lt;span class="c"&gt;&amp;quot; always put it at the top of .vimrc. effects mappings, undo, etc.&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;encoding&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;utf&lt;span class="m"&gt;-8&lt;/span&gt;            &lt;span class="c"&gt;&amp;quot; utf-8 encoding&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; termguicolors
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;t_Co&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;256&lt;/span&gt;                  &lt;span class="c"&gt;&amp;quot; number of colors&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noerrorbells&lt;/span&gt; &lt;span class="nb"&gt;vb&lt;/span&gt; &lt;span class="nb"&gt;t_vb&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;     &lt;span class="c"&gt;&amp;quot; no error bells, yes screnflash.&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;linespace&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;scrolloff&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;               &lt;span class="c"&gt;&amp;quot; minimum number of screen lines above and below the cursor&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;shortmess&lt;/span&gt;&lt;span class="p"&gt;-=&lt;/span&gt;S              &lt;span class="c"&gt;&amp;quot; show how many times a search result occurs in current buffer, and index of current match&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;hidden&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="k"&gt;number&lt;/span&gt; &lt;span class="nb"&gt;relativenumber&lt;/span&gt;     &lt;span class="c"&gt;&amp;quot; Line numbers&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;splitbelow&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;splitright&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;undofile&lt;/span&gt;                  &lt;span class="c"&gt;&amp;quot; Maintain undo history between sessions&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;undodir&lt;/span&gt;&lt;span class="p"&gt;=~&lt;/span&gt;&lt;span class="sr"&gt;/.vim/&lt;/span&gt;undo       &lt;span class="c"&gt;&amp;quot; put all the undo files in this dir&lt;/span&gt;
+
+&lt;span class="k"&gt;filetype&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt;                   &lt;span class="c"&gt;&amp;quot; enables filetype detection&lt;/span&gt;
+&lt;span class="k"&gt;filetype&lt;/span&gt; plugin indent &lt;span class="k"&gt;on&lt;/span&gt;     &lt;span class="c"&gt;&amp;quot; detection on, plugin on, indent on. To see the current status, type: :filetype&lt;/span&gt;
+&lt;span class="nb"&gt;syntax&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt;                 &lt;span class="c"&gt;&amp;quot; syntax highlighting - try &amp;#39;syntax on/enable&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noesckeys&lt;/span&gt;           &lt;span class="c"&gt;&amp;quot; might break stuff, should make &amp;lt;ESC&amp;gt; delay smaller&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;timeoutlen&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;350&lt;/span&gt;            &lt;span class="c"&gt;&amp;quot; timeoutlen is used for mapping delays&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;ttimeoutlen&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;             &lt;span class="c"&gt;&amp;quot; ttimeoutlen is used for key code delays&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot;Search/Find/Highlight ======================================&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;incsearch&lt;/span&gt;  &lt;span class="nb"&gt;ignorecase&lt;/span&gt;  &lt;span class="nb"&gt;smartcase&lt;/span&gt;  &lt;span class="nb"&gt;hlsearch&lt;/span&gt;
+&lt;span class="nb"&gt;highlight&lt;/span&gt; Search guibg&lt;span class="p"&gt;=&lt;/span&gt;purple guifg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;NONE&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;highlight&lt;/span&gt; Search cterm&lt;span class="p"&gt;=&lt;/span&gt;none ctermbg&lt;span class="p"&gt;=&lt;/span&gt;green ctermfg&lt;span class="p"&gt;=&lt;/span&gt;black
+&lt;span class="nb"&gt;highlight&lt;/span&gt; CursorColumn guibg&lt;span class="p"&gt;=&lt;/span&gt;blue guifg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;red&lt;/span&gt;
+&lt;span class="nb"&gt;highlight&lt;/span&gt; CursorColumn ctermbg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;red&lt;/span&gt; ctermfg&lt;span class="p"&gt;=&lt;/span&gt;blue
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="sr"&gt;//&lt;/span&gt; :&lt;span class="k"&gt;nohlsearch&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; # #``
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; * *``
+
+&lt;span class="c"&gt;&amp;quot; close buffers properly go to previous buffer, then delete the buffer you were just in.&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;bd&lt;/span&gt; :&lt;span class="k"&gt;bp&lt;/span&gt;\&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="k"&gt;bd&lt;/span&gt; #&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;inoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;bd&lt;/span&gt; :&lt;span class="k"&gt;bp&lt;/span&gt;\&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="k"&gt;bd&lt;/span&gt; #&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Spell check ==============================================&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;spelllang&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;en&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;ss&lt;/span&gt; :&lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="k"&gt;spell&lt;/span&gt;&lt;span class="p"&gt;!&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;sf&lt;/span&gt; z&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; ========== Set leader and local leader ===================&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; mapleader&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\&amp;lt;Space&amp;gt;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; localleader&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\\&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; insert 1 space to the right, without leaving normal mode&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;localleader&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;space&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Space&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;Right&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Flash the cursor row (and column) colors are set after color scheme ========&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; nnoremap &amp;lt;leader&amp;gt;f :call Flash()&amp;lt;CR&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; function! Flash()&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;     &amp;quot; set cursorline cursorcolumn&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;     set cursorline&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;     redraw&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;     sleep 110m&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;     set nocursorline&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; endfunction&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Edit/Reload the .vimrc file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;ve&lt;/span&gt; :&lt;span class="k"&gt;e&lt;/span&gt; $MYVIMRC&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;vr :&lt;span class="k"&gt;so&lt;/span&gt; $MYVIMRC&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+augroup VimReload
+    autocmd&lt;span class="p"&gt;!&lt;/span&gt;
+    autocmd &lt;span class="nb"&gt;BufWritePost&lt;/span&gt; $MYVIMRC source $MYVIMRC
+augroup END
+
+&lt;span class="c"&gt;&amp;quot; Yank to clipboard&lt;/span&gt;
+&lt;span class="nb"&gt;vnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;c&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;quot;+y&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;clipboard&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;clipboard&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;unnamed &lt;span class="c"&gt;&amp;quot; copy to the system clipboard&lt;/span&gt;
+
+  &lt;span class="k"&gt;if&lt;/span&gt; has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unnamedplus&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;&amp;quot; X11 support&lt;/span&gt;
+    &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;clipboard&lt;/span&gt;&lt;span class="p"&gt;+=&lt;/span&gt;unnamedplus
+  &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endif&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Go into NORMAL mode&lt;/span&gt;
+&lt;span class="nb"&gt;inoremap&lt;/span&gt; jk &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; view working directory&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;pwd&lt;/span&gt; :&lt;span class="k"&gt;cd&lt;/span&gt; %:&lt;span class="k"&gt;p&lt;/span&gt;:&lt;span class="k"&gt;h&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; toggle line wrap&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;lw&lt;/span&gt; :&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;nowrap&lt;/span&gt;&lt;span class="p"&gt;!&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; toggle line numbers&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;ln :&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;relativenumber&lt;/span&gt;&lt;span class="p"&gt;!&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Insert current datetime&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;dt A &lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;hh&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;=strftime(&amp;quot;&lt;/span&gt;\%Y&lt;span class="p"&gt;-&lt;/span&gt;\%&lt;span class="k"&gt;m&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;\%&lt;span class="k"&gt;d&lt;/span&gt;&amp;quot;&lt;span class="p"&gt;)&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;gp&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; map w to `&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; ` &lt;span class="k"&gt;w&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Swap : and ;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; ; :
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; : ;
+&lt;span class="nb"&gt;vnoremap&lt;/span&gt; ; :
+&lt;span class="nb"&gt;vnoremap&lt;/span&gt; : ;
+
+&lt;span class="c"&gt;&amp;quot; Navigation &amp;amp; movemement&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; save buffer if it has been changed&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="nb"&gt;ww&lt;/span&gt; :&lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; close Vim, but not if there are unsaved changes&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="k"&gt;qa&lt;/span&gt; :&lt;span class="k"&gt;qa&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; save all changes&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="k"&gt;wa&lt;/span&gt; :&lt;span class="k"&gt;wa&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; close buffer&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; qq :&lt;span class="k"&gt;bp&lt;/span&gt;\&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="k"&gt;bd&lt;/span&gt; #&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="k"&gt;wq&lt;/span&gt; :&lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;:&lt;span class="k"&gt;bp&lt;/span&gt;\&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="k"&gt;bd&lt;/span&gt; #&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; switch buffers&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; :&lt;span class="k"&gt;bn&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; _ :&lt;span class="k"&gt;bp&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Split navigations&lt;/span&gt;
+nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;H&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;J&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;k&lt;/span&gt;  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;K&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;l&lt;/span&gt;  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;L&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;ww&lt;/span&gt;  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;wq&lt;/span&gt;  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;W&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;Q&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; split (pane) resize&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;k&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;resize&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;resize&lt;/span&gt; &lt;span class="m"&gt;-2&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;vertical&lt;/span&gt; &lt;span class="k"&gt;resize&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;l&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;vertical&lt;/span&gt; &lt;span class="k"&gt;resize&lt;/span&gt; &lt;span class="m"&gt;-2&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; open help in vertical split by default&lt;/span&gt;
+cabbrev vhelp &lt;span class="k"&gt;vert&lt;/span&gt; help
+
+&lt;span class="c"&gt;&amp;quot; Natural cursor movement over wrapped lines&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="k"&gt;j&lt;/span&gt; gj
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="k"&gt;k&lt;/span&gt; gk
+
+&lt;span class="c"&gt;&amp;quot; Insert blank lines in normal mode&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;o&lt;/span&gt; &lt;span class="k"&gt;o&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;k&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;O O&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;j&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot;*****************************&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;========== PLUGINS ==========&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;*****************************&lt;/span&gt;
+
+&lt;span class="k"&gt;call&lt;/span&gt; plug#begin&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;~/.vim/plugged&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; numbers as text objects&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;MisanthropicBit/vim-numbers&amp;#39;&lt;/span&gt;
+
+
+&lt;span class="c"&gt;&amp;quot;run shell commands async in vim8&amp;quot;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;skywind3000/asyncrun.vim&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:asyncrun_open &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; When using :python or :!python, access the packages in venv&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; :VirtualEnvList&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; :VirtualEnvActivate &amp;lt;tab&amp;gt;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;jmcantrell/vim-virtualenv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; force quickfix to be full widtth&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; qf &lt;span class="k"&gt;wincmd&lt;/span&gt; J
+
+&lt;span class="c"&gt;&amp;quot; testing - many languages and test runners&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;janko-m/vim-test&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; test#strategy &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;asyncrun_background&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; test#python#runner &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pytest&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; test#python#pytest#&lt;span class="k"&gt;options&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-x&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; test#&lt;span class="k"&gt;vim&lt;/span&gt;#term_position &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;belowright&amp;quot;&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;t&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;LEADER&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;n&lt;/span&gt; :TestNearest&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;t&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;LEADER&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;f&lt;/span&gt; :TestFile&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;t&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;LEADER&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;s :TestSuite&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;t&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;LEADER&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;l&lt;/span&gt; :TestLast&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;t&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;LEADER&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt; :TestVisit&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; toggle the quickfix window&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; ToggleQuickFix&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; empty&lt;span class="p"&gt;(&lt;/span&gt;filter&lt;span class="p"&gt;(&lt;/span&gt;getwininfo&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;v:val.quickfix&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="k"&gt;copen&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;
+    &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="nb"&gt;norelativenumber&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="k"&gt;cclose&lt;/span&gt;
+    &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;cc&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; ToggleQuickFix&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;cr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+
+&lt;span class="c"&gt;&amp;quot; generates an index (or tag) file of language objects found in source files&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; &amp;lt;C-]&amp;gt; jump to definition&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; &amp;lt;C-O&amp;gt; jump back&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; g] see a list of multiple matches&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; &amp;lt;C-t&amp;gt;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;universal-ctags/ctags&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; (re)generate tags file in the bg&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;ludovicchabant/vim-gutentags&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:gutentags_ctags_exclude &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s1"&gt;&amp;#39;.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;.mypy_cache/**&amp;#39;&lt;/span&gt;]
+
+&lt;span class="c"&gt;&amp;quot; sidebar that displays the ctags-generated tags of the current file, ordered by their scope&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;majutsushi/tagbar&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F2&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :TagbarToggle&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;F2&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :TagbarToggle&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; add python library code to tags file, goto def with &amp;lt;C-]&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; pyEnvLib &lt;span class="p"&gt;=&lt;/span&gt; $VIRTUAL_ENV
+&lt;span class="k"&gt;let&lt;/span&gt; pyEnvLib .&lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/lib/python3.8/&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Async linting engine&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;dense-analysis/ale&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ale_lint_on_enter &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ale_lint_on_save &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; ALE completion&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ale_completion_enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;omnifunc&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;ale#completion#OmniFunc
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ale_completion_autoimport &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;at :ALEToggle&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;af :ALEFix&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;aj :ALENext&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;cr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;ak :ALEPrevious&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;cr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; iSort&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;fisadev/vim-isort&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; track the snippets engine&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;sirver/ultisnips&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; Snippets are separated from the engine. Add this if you want them:&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;honza/vim-snippets&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; Trigger configuration. Do not use &amp;lt;tab&amp;gt; if you use https://github.com/Valloric/YouCompleteMe.&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:UltiSnipsExpandTrigger&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;c-a&amp;gt;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:UltiSnipsJumpForwardTrigger&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;c-b&amp;gt;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:UltiSnipsJumpBackwardTrigger&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;c-z&amp;gt;&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; If you want :UltiSnipsEdit to split your window.&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; let g:UltiSnipsEditSplit=&amp;quot;vertical&amp;quot;&lt;/span&gt;
+
+Plug &lt;span class="s1"&gt;&amp;#39;Valloric/YouCompleteMe&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;davidhalter/jedi&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;maksimr/vim-jsbeautify&amp;#39;&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;x&lt;/span&gt;  :YcmCompleter GoTo&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; the subcommands add entries to Vim&amp;#39;s &amp;#39;jumplist&amp;#39; so you can use&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; &amp;#39;CTRL-O&amp;#39; to jump back to where you were before invoking the command (and&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; &amp;#39;CTRL-I&amp;#39; to jump forward; see &amp;#39;:h jumplist&amp;#39; for details)&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_confirm_extra_conf &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_autoclose_preview_window_after_completion&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_collect_identifiers_from_tags_files &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_use_ultisnips_completer &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_seed_identifiers_with_syntax &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_complete_in_comments &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_complete_in_strings &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_collect_identifiers_from_tags_files &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+
+
+&lt;span class="c"&gt;&amp;quot; autoclose parens, brackets etc&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; Plug &amp;#39;townk/vim-autoclose&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; vim-tmux focus events&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tmux-plugins/vim-tmux-focus-events&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Code folding&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; Plug &amp;#39;konfekt/fastfold&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; match m of n https://vimawesome.com/plugin/indexedsearch&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; Plug &amp;#39;henrik/vim-indexed-search&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; adds vertical lines to easily show indent levels&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;yggdroot/indentline&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Fugitive&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tpope/vim-fugitive&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Marks&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;kshenoy/vim-signature&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Latex Vimtex&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;lervag/vimtex&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:tex_flavor &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;latex&amp;#39;&lt;/span&gt;
+autocmd Filetype tex &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;updatetime&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:livepreview_previewer &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;open -a Preview&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:tex_IgnoredWarnings &lt;span class="p"&gt;=&lt;/span&gt;
+    \&lt;span class="s1"&gt;&amp;#39;Underfull&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;Overfull&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;specifier changed to&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;You have requested&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;Missing number, treated as zero.&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;There were undefined references&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;Citation %.%# undefined&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;.
+    \&lt;span class="s1"&gt;&amp;#39;Double space found.&amp;#39;&lt;/span&gt;.&lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:Tex_IgnoreLevel &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;8&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Rainbow parenthesis&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; blacklist &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s1"&gt;&amp;#39;html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;md&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;wiki&amp;#39;&lt;/span&gt;]
+autocmd &lt;span class="nb"&gt;BufWritePre&lt;/span&gt; * &lt;span class="k"&gt;if&lt;/span&gt; index&lt;span class="p"&gt;(&lt;/span&gt;blacklist&lt;span class="p"&gt;,&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ft&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; Plug &lt;span class="s1"&gt;&amp;#39;luochen1990/rainbow&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:rainbow_active &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:rainbow_conf &lt;span class="p"&gt;=&lt;/span&gt; {
+    \&lt;span class="s1"&gt;&amp;#39;guifgs&amp;#39;&lt;/span&gt;: [&lt;span class="s1"&gt;&amp;#39;green&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;magenta1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;gold&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;deepskyblue&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+    \&lt;span class="s1"&gt;&amp;#39;guis&amp;#39;&lt;/span&gt;: [&lt;span class="s1"&gt;&amp;#39;bold&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;standout&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;undercurl&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;italic&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;strikethrough&amp;#39;&lt;/span&gt;]
+    \}
+
+&lt;span class="c"&gt;&amp;quot; Set color scheme.&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;background&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dark&lt;/span&gt;
+
+Plug &lt;span class="s1"&gt;&amp;#39;chriskempson/base16-vim&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; colorscheme base16-default-dark&lt;/span&gt;
+&lt;span class="k"&gt;colorscheme&lt;/span&gt; badwolf
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:badwolf_darkgutter &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:badwolf_html_link_underline &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:badwolf_css_props_highlight &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; colorscheme modifications&lt;/span&gt;
+&lt;span class="nb"&gt;highlight&lt;/span&gt; Comment ctermfg&lt;span class="p"&gt;=&lt;/span&gt;cyan guifg&lt;span class="p"&gt;=&lt;/span&gt;cyan
+&lt;span class="nb"&gt;highlight&lt;/span&gt; pythonComment ctermfg&lt;span class="p"&gt;=&lt;/span&gt;cyan guifg&lt;span class="p"&gt;=&lt;/span&gt;cyan
+&lt;span class="nb"&gt;highlight&lt;/span&gt; LineNr ctermfg&lt;span class="p"&gt;=&lt;/span&gt;cyan guifg&lt;span class="p"&gt;=&lt;/span&gt;cyan
+&lt;span class="k"&gt;hi&lt;/span&gt; nontext &lt;span class="nb"&gt;term&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;bold&lt;/span&gt; ctermfg&lt;span class="p"&gt;=&lt;/span&gt;Cyan guifg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mh"&gt;#80a0ff&lt;/span&gt; &lt;span class="k"&gt;gui&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;bold&lt;/span&gt;
+&lt;span class="k"&gt;hi&lt;/span&gt; vimLineComment &lt;span class="nb"&gt;term&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;bold&lt;/span&gt; ctermfg&lt;span class="p"&gt;=&lt;/span&gt;Cyan guifg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mh"&gt;#80a0ff&lt;/span&gt; &lt;span class="k"&gt;gui&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;bold&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; SpecialKey - use :set list to toggle visibility of EOL, CR, etc&lt;/span&gt;
+&lt;span class="k"&gt;hi&lt;/span&gt; specialKey &lt;span class="nb"&gt;term&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;bold&lt;/span&gt; ctermfg&lt;span class="p"&gt;=&lt;/span&gt;Cyan guifg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mh"&gt;#80a0ff&lt;/span&gt; &lt;span class="k"&gt;gui&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;bold&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; colors for flashing cursorline and cursorcolumn&lt;/span&gt;
+&lt;span class="k"&gt;hi&lt;/span&gt; CursorLine   cterm&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;NONE&lt;/span&gt; ctermbg&lt;span class="p"&gt;=&lt;/span&gt;green ctermfg&lt;span class="p"&gt;=&lt;/span&gt;black guibg&lt;span class="p"&gt;=&lt;/span&gt;green guifg&lt;span class="p"&gt;=&lt;/span&gt;black
+&lt;span class="k"&gt;hi&lt;/span&gt; CursorColumn cterm&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;NONE&lt;/span&gt; ctermbg&lt;span class="p"&gt;=&lt;/span&gt;green ctermfg&lt;span class="p"&gt;=&lt;/span&gt;black guibg&lt;span class="p"&gt;=&lt;/span&gt;green guifg&lt;span class="p"&gt;=&lt;/span&gt;black
+
+&lt;span class="c"&gt;&amp;quot; query what kind of syntax is this color? - wc&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="nb"&gt;wc&lt;/span&gt; :echo &lt;span class="s2"&gt;&amp;quot;hi&amp;lt;&amp;quot;&lt;/span&gt; . synIDattr&lt;span class="p"&gt;(&lt;/span&gt;synID&lt;span class="p"&gt;(&lt;/span&gt;line&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="k"&gt;col&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; . &lt;span class="s1"&gt;&amp;#39;&amp;gt; trans&amp;lt;&amp;#39;&lt;/span&gt; . synIDattr&lt;span class="p"&gt;(&lt;/span&gt;synID&lt;span class="p"&gt;(&lt;/span&gt;line&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="k"&gt;col&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; .&lt;span class="s2"&gt;&amp;quot;&amp;gt; lo&amp;lt;&amp;quot;&lt;/span&gt; . synIDattr&lt;span class="p"&gt;(&lt;/span&gt;synIDtrans&lt;span class="p"&gt;(&lt;/span&gt;synID&lt;span class="p"&gt;(&lt;/span&gt;line&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="k"&gt;col&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; . &lt;span class="s2"&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; fuzzy file, buffer, tag finder&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;rtp&lt;/span&gt;&lt;span class="p"&gt;+=&lt;/span&gt;&lt;span class="sr"&gt;/usr/&lt;/span&gt;local&lt;span class="sr"&gt;/opt/&lt;/span&gt;fzf
+
+&lt;span class="c"&gt;&amp;quot; ensure you have the latest version&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;junegunn/fzf&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; { &lt;span class="s1"&gt;&amp;#39;do&amp;#39;&lt;/span&gt;: { &lt;span class="p"&gt;-&amp;gt;&lt;/span&gt; fzf#install&lt;span class="p"&gt;()&lt;/span&gt; } }
+Plug &lt;span class="s1"&gt;&amp;#39;junegunn/fzf.vim&amp;#39;&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;e&lt;/span&gt; :Files&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;r&lt;/span&gt; :Buffers&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;t&lt;/span&gt; :Tags&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;ff&lt;/span&gt; :Rg&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; nnoremap &amp;lt;silent&amp;gt; &amp;lt;Leader&amp;gt;ff :Ag&amp;lt;CR&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;la&lt;/span&gt; :BLines&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;ll&lt;/span&gt; :Lines&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&amp;#39; :Marks&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;fh :Helptags&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;fs&lt;/span&gt; :Snippets&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;fc :Commits&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;fbc :BCommits&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;hh&lt;/span&gt; :History&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;: :History:&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;&lt;span class="sr"&gt;/ :History/&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; let $FZF_DEFAULT_COMMAND=&amp;quot;rg --files --hidden&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:fzf_buffers_jump &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:fzf_layout &lt;span class="p"&gt;=&lt;/span&gt; { &lt;span class="s1"&gt;&amp;#39;down&amp;#39;&lt;/span&gt;: &lt;span class="s1"&gt;&amp;#39;~50%&amp;#39;&lt;/span&gt; }
+&lt;span class="c"&gt;&amp;quot; let g:fzf_preview_window = &amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:fzf_preview_window &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;right:0%&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:copy_results&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;lines&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;let&lt;/span&gt; joined_lines &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt;:&lt;span class="nb"&gt;lines&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; len&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt;:&lt;span class="nb"&gt;lines&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; joined_lines .&lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;
+  &lt;span class="k"&gt;endif&lt;/span&gt;
+  &lt;span class="k"&gt;let&lt;/span&gt; @&lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; joined_lines
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:fzf_action &lt;span class="p"&gt;=&lt;/span&gt; {
+  \ &lt;span class="s1"&gt;&amp;#39;ctrl-t&amp;#39;&lt;/span&gt;: &lt;span class="s1"&gt;&amp;#39;tab split&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;ctrl-x&amp;#39;&lt;/span&gt;: &lt;span class="s1"&gt;&amp;#39;split&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;ctrl-v&amp;#39;&lt;/span&gt;: &lt;span class="s1"&gt;&amp;#39;vsplit&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;ctrl-o&amp;#39;&lt;/span&gt;: &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s:copy_results&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+  \ }
+
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:fzf_colors &lt;span class="p"&gt;=&lt;/span&gt;
+\ { &lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;:      [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Normal&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;bg&amp;#39;&lt;/span&gt;:      [&lt;span class="s1"&gt;&amp;#39;bg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Normal&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;hl&amp;#39;&lt;/span&gt;:      [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Comment&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;fg+&amp;#39;&lt;/span&gt;:     [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CursorLine&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CursorColumn&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Normal&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;bg+&amp;#39;&lt;/span&gt;:     [&lt;span class="s1"&gt;&amp;#39;bg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CursorLine&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CursorColumn&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;hl+&amp;#39;&lt;/span&gt;:     [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Statement&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;info&amp;#39;&lt;/span&gt;:    [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;PreProc&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;prompt&amp;#39;&lt;/span&gt;:  [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Conditional&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;pointer&amp;#39;&lt;/span&gt;: [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;marker&amp;#39;&lt;/span&gt;:  [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Keyword&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;spinner&amp;#39;&lt;/span&gt;: [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Label&amp;#39;&lt;/span&gt;]&lt;span class="p"&gt;,&lt;/span&gt;
+  \ &lt;span class="s1"&gt;&amp;#39;header&amp;#39;&lt;/span&gt;:  [&lt;span class="s1"&gt;&amp;#39;fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Comment&amp;#39;&lt;/span&gt;] }
+
+
+&lt;span class="c"&gt;&amp;quot; grep in vim - shows results in a split window&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;mileszs/ack.vim&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; session tracking&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tpope/vim-obsession&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; pairs of handy bracket mapping&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tpope/vim-unimpaired&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; https://vimawesome.com/plugin/surround-vim&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tpope/vim-surround&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; repeat commands from plugin mappings&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tpope/vim-repeat&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; vinegar&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;tpope/vim-vinegar&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:netrw_liststyle &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; CSV&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;chrisbra/csv.vim&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; nerdtree&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;scrooloose/nerdtree&amp;#39;&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;n&lt;/span&gt; :NERDTreeToggle&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:nerdtree_tabs_autoclose&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; NERDTreeAutoDeleteBuffer &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="c"&gt;&amp;quot; Automatically delete the buffer of the file you just deleted&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:nerdtree_tabs_open_on_gui_startup&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="c"&gt;&amp;quot; 2 - open nerdtree only if directory was given as startup argument&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:nerdtree_tabs_smart_startup_focus&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="c"&gt;&amp;quot; always focus file window after startup&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; NERDTreeShowHidden&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Status bars&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;vim-airline/vim-airline&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;vim-airline/vim-airline-themes&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline_powerline_fonts &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:hybrid_custom_term_colors &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:hybrid_reduced_contrast &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline_statusline_ontop&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline_section_y&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;&amp;quot; remove encoding status&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline_skip_empty_sections &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline_theme&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;badwolf&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#fugitiveline#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#tmuxline#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#gutentags#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#virtualenv#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#ale#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#csv#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#tagbar#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#vimtex#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#&lt;span class="nb"&gt;tabline&lt;/span&gt;#enabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:airline#extensions#&lt;span class="nb"&gt;tabline&lt;/span&gt;#formatter &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;unique_tail_improved&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; comments&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;scrooloose/nerdcommenter&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:NERDSpaceDelims &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:NERDCompactSexyComs &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:NERDDefaultAlign &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:NERDCommentEmptyLines &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:NERDTrimTrailingWhitespace &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; markdown. tabular is required&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;plasticboy/vim-markdown&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;godlygeek/tabular&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_fenced_languages &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s1"&gt;&amp;#39;python=py&amp;#39;&lt;/span&gt;]
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_follow_anchor &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_conceal_code_blocks &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_folding_disabled &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_conceal &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:tex_conceal &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_math &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_new_list_item_indent &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:vim_markdown_strikethrough &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; writing prose&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;reedes/vim-pencil&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;junegunn/goyo.vim&amp;#39;&lt;/span&gt;
+
+augroup pencil
+  autocmd&lt;span class="p"&gt;!&lt;/span&gt;
+  autocmd &lt;span class="nb"&gt;FileType&lt;/span&gt; wiki&lt;span class="p"&gt;,&lt;/span&gt;md&lt;span class="p"&gt;,&lt;/span&gt;txt &lt;span class="k"&gt;call&lt;/span&gt; pencil#init&lt;span class="p"&gt;()&lt;/span&gt;
+  autocmd &lt;span class="nb"&gt;FileType&lt;/span&gt; wiki&lt;span class="p"&gt;,&lt;/span&gt;md&lt;span class="p"&gt;,&lt;/span&gt;txt :PencilSoft
+augroup END
+
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:pencil#wrapModeDefault &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;soft&amp;#39;&lt;/span&gt; 
+
+autocmd&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nb"&gt;User&lt;/span&gt; GoyoEnter 
+autocmd&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nb"&gt;User&lt;/span&gt; GoyoLeave
+
+&lt;span class="c"&gt;&amp;quot; Ensure :q to quit even when Goyo is active&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:goyo_enter&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt;:quitting &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+  &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt;:quitting_bang &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+  autocmd &lt;span class="nb"&gt;QuitPre&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;buffer&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt;:quitting &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+  cabbrev &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;buffer&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;q&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt;:quitting_bang &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;bar&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;q&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
+  &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="nb"&gt;wrap&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; Quit Vim if this is the only remaining buffer&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:goyo_leave&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt;:quitting &amp;amp;&amp;amp; len&lt;span class="p"&gt;(&lt;/span&gt;filter&lt;span class="p"&gt;(&lt;/span&gt;range&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; bufnr&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;buflisted(v:val)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt;:quitting_bang
+      &lt;span class="k"&gt;qa&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+      &lt;span class="k"&gt;qa&lt;/span&gt;
+    &lt;span class="k"&gt;endif&lt;/span&gt;
+  &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+
+autocmd&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nb"&gt;User&lt;/span&gt; GoyoEnter &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SID&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;goyo_enter&lt;span class="p"&gt;()&lt;/span&gt;
+autocmd&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="nb"&gt;User&lt;/span&gt; GoyoLeave &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SID&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;goyo_leave&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt; :Goyo&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot; python linting&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; F7 checks flake8&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;nvie/vim-flake8&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;vim-scripts/pylint.vim&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;quot;Flagging Unnecessary Whitespace&lt;/span&gt;
+&lt;span class="nb"&gt;highlight&lt;/span&gt; BadWhitespace ctermbg&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;red&lt;/span&gt; guibg&lt;span class="p"&gt;=&lt;/span&gt;darkred
+
+Plug &lt;span class="s1"&gt;&amp;#39;sheerun/vim-polyglot&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:polyglot_disabled &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s1"&gt;&amp;#39;latex&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;html&amp;#39;&lt;/span&gt;]
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:python_highlight_all &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:graphql_javascript_tags &lt;span class="p"&gt;=&lt;/span&gt; []
+
+&lt;span class="c"&gt;&amp;quot; javaScript&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;pangloss/vim-javascript&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:javascript_plugin_jsdoc &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:javascript_plugin_flow &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; format .JSON files by using the jq cli tool&lt;/span&gt;
+&lt;span class="k"&gt;com&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; JQ %&lt;span class="p"&gt;!&lt;/span&gt;jq
+
+&lt;span class="c"&gt;&amp;quot; HTML/JINJA&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;glench/vim-jinja2-syntax&amp;#39;&lt;/span&gt;
+Plug &lt;span class="s1"&gt;&amp;#39;valloric/matchtagalways&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; Plug &amp;#39;alvan/vim-closetag&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:closetag_filenames &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;*.html, *.xhtml, *.phtml&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;call&lt;/span&gt; plug#&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Data Science vs Web Development: Larger Code Bases</title><link href="https://johnmathews.eu/larger-code-bases.html" rel="alternate"></link><published>2021-01-14T13:40:00+01:00</published><updated>2021-01-14T13:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/larger-code-bases.html</id><summary type="html"></summary><content type="html">&lt;h2 id="code-structure"&gt;Code&amp;nbsp;Structure&lt;/h2&gt;
 &lt;p&gt;One of the most immediate and basic differences between working as a data
 scientist or as a web developer is the number of files the codebase
 is spread across and the amount of code within each&amp;nbsp;file.&lt;/p&gt;
