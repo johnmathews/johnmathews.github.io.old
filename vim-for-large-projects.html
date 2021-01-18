@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. I’m happy to invest some time and effort into learning how to make the most of... "/>
-      <meta name="twitter:description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. I’m happy to invest some time and effort into learning how to make the most of... "/>
-      <meta property="og:description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. I’m happy to invest some time and effort into learning how to make the most of... "/>
+      <meta name="description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... "/>
+      <meta name="twitter:description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... "/>
+      <meta property="og:description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/vim-for-large-projects.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/vim-for-large-projects.html"/>
@@ -155,18 +155,19 @@
       <article>
         <div class="markdown dark:text-gray-200">
           <p>I use Vim as my text editor and as my <span class="caps">IDE</span>. I like that its free and open
-source, and I like that I can customize&nbsp;it. </p>
-<p>I&#8217;m happy to invest some time and effort into learning how to make the most of vim and its plugins because I&#8217;m
-confident that I&#8217;ll still be using it twenty years from&nbsp;now.</p>
-<p>Here are some of the plugins and features that I&#8217;ve used over the past year.
-There&#8217;s a copy of my <code>.vimrc</code> at the&nbsp;end.</p>
+source, and I like that I can customize it. This post is about the most useful
+plugins and features I&#8217;ve started using this year. There&#8217;s a copy of my
+<code>.vimrc</code> at the&nbsp;end.</p>
+<p>I&#8217;m happy to invest some time and effort into learning how to make the most of
+vim and its plugins because I&#8217;m confident that I&#8217;ll still be using it twenty
+years from&nbsp;now.</p>
 <ol>
 <li>
-<p>filetype plugins - if you want some settings to be active only for
-     particular filetypes, like .py (python) or .txt (text) then create a file in
+<p>Filetype plugins - if you want some settings to be active only for
+     particular filetypes, like <code>.py</code> (python) or <code>.txt</code> (text) then create a file in
      <code>~/.vim/ftplugin/&lt;filetype&gt;.vim</code>.</p>
-<p>Vim will look in the file when it opens a buffer of the corresponding
- filetype. Good for formatting options like line length, tab spaces, vim
+<p>Vim will look in this file when it opens a buffer of the corresponding
+ file type. Good for formatting options like line length, tab spaces, vim
  commands that are language&nbsp;specific. </p>
 <p>You can&#8217;t activate plugins in these files though. All the plugins have to be
  activated in your <code>.vimrc</code> in the usual&nbsp;way.</p>
@@ -738,6 +739,10 @@ Plug <span class="s1">&#39;valloric/matchtagalways&#39;</span>
           <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
           <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/larger-code-bases.html"> Data Science vs Web Development: Larger Code&nbsp;Bases</a>
         </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/becoming-a-better-python-developer.html"> Becoming A Better Python&nbsp;Developer</a>
+        </div>
     </div>
 
     <div class="text-left">
@@ -834,6 +839,7 @@ Plug <span class="s1">&#39;valloric/matchtagalways&#39;</span>
           }
 
 
+          // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
             document.getElementById("day").classList.remove("hidden");
@@ -847,6 +853,7 @@ Plug <span class="s1">&#39;valloric/matchtagalways&#39;</span>
             changePygmentsCSS(dark, light);
           }
 
+          // change theme if theme switcher button is clicked
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
@@ -867,15 +874,18 @@ Plug <span class="s1">&#39;valloric/matchtagalways&#39;</span>
         </script>
 
         <script>
+          // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-              document.getElementById("navbar").style.top = "0";
-            } else {
-              document.getElementById("navbar").style.top = "-100px";
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
             }
-            prevScrollPos = currentScrollPos;
           }
         </script>
 

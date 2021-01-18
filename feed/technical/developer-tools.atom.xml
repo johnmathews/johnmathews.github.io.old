@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-15T15:02:00+01:00</updated><entry><title>Vim For Large Projects</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"></link><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I use Vim as my text editor and as my &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free and open
-source, and I like that I can customize&amp;nbsp;it. &lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m happy to invest some time and effort into learning how to make the most of vim and its plugins because I&amp;#8217;m
-confident that I&amp;#8217;ll still be using it twenty years from&amp;nbsp;now.&lt;/p&gt;
-&lt;p&gt;Here are some of the plugins and features that I&amp;#8217;ve used over the past year.
-There&amp;#8217;s a copy of my &lt;code&gt;.vimrc&lt;/code&gt; at the&amp;nbsp;end.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-18T11:25:00+01:00</updated><entry><title>Becoming A Better Python Developer</title><link href="https://johnmathews.eu/becoming-a-better-python-developer.html" rel="alternate"></link><published>2021-01-18T11:25:00+01:00</published><updated>2021-01-18T11:25:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/becoming-a-better-python-developer.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;#8217;ve been subscribed to Aaron Maxwell&amp;#8217;s &amp;#8220;Powerful Python&amp;#8221; newsletter for over a
+year and I really like it. His emails are opinionated and candid, and
+singularly focussed. He seems passionate about what he does and I like&amp;nbsp;that.&lt;/p&gt;
+&lt;p&gt;Ultimately, the emails are designed to drive sign-ups for his courses which I
+suspect would be very good, but there is a lot of value in the free emails.
+Thanks Aaron. I realised that the emails are sequential and each subscriber
+gets the same sequence of messages regardless of when they signed up. There is
+the &amp;#8216;first&amp;#8217; message, and then the &amp;#8216;second&amp;#8217;, and they kind of progress and&amp;nbsp;flow.&lt;/p&gt;
+&lt;p&gt;This means that there are more benefits to paying attention than for usual
+email subscriptions. Even though the emails arrive when I&amp;#8217;m at a
+supermarket, or making dinner for my kids, it&amp;#8217;s good to try and read it
+properly&amp;nbsp;later.&lt;/p&gt;
+&lt;p&gt;After being subscribed for several months, I unsubscribed and resubscribed. Now
+that I know how reliable and high quality this advice is I&amp;#8217;m going to
+prioritise working through the examples and doing some of what I missed the
+first time. I&amp;#8217;ve gone back to the beginning to reinforce the parts I know and
+to try again with what eluded me the first&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;Three kinds of practice projects to become a better&amp;nbsp;developer:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A web app - use &lt;code&gt;Django&lt;/code&gt; if you don&amp;#8217;t know which framework to user. Done&amp;nbsp;this.&lt;/li&gt;
+&lt;li&gt;A command line tool - use the &lt;code&gt;argparse&lt;/code&gt; module, because it&amp;#8217;s in the standard
+   library. Haven&amp;#8217;t done this yet, I guess now is a good time to start. It
+   seems like the simplest and quickest of the three kinds of project, and I
+   can see how useful it could be - it lets you use the app in many different
+   contexts, outside the python eco-system and anywhere command line tools can
+   be used&amp;nbsp;(everywhere).&lt;/li&gt;
+&lt;li&gt;A machine learning model - I&amp;#8217;ve already studied this, from theory (&lt;code&gt;numpy&lt;/code&gt;)
+   to frameworks (&lt;code&gt;tensorflow&lt;/code&gt;). I&amp;#8217;m happy to see it&amp;#8217;s&amp;nbsp;included.&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Vim For Large Projects</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"></link><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I use Vim as my text editor and as my &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free and open
+source, and I like that I can customize it. This post is about the most useful
+plugins and features I&amp;#8217;ve started using this year. There&amp;#8217;s a copy of my
+&lt;code&gt;.vimrc&lt;/code&gt; at the&amp;nbsp;end.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m happy to invest some time and effort into learning how to make the most of
+vim and its plugins because I&amp;#8217;m confident that I&amp;#8217;ll still be using it twenty
+years from&amp;nbsp;now.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;filetype plugins - if you want some settings to be active only for
-     particular filetypes, like .py (python) or .txt (text) then create a file in
+&lt;p&gt;Filetype plugins - if you want some settings to be active only for
+     particular filetypes, like &lt;code&gt;.py&lt;/code&gt; (python) or &lt;code&gt;.txt&lt;/code&gt; (text) then create a file in
      &lt;code&gt;~/.vim/ftplugin/&amp;lt;filetype&amp;gt;.vim&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Vim will look in the file when it opens a buffer of the corresponding
- filetype. Good for formatting options like line length, tab spaces, vim
+&lt;p&gt;Vim will look in this file when it opens a buffer of the corresponding
+ file type. Good for formatting options like line length, tab spaces, vim
  commands that are language&amp;nbsp;specific. &lt;/p&gt;
 &lt;p&gt;You can&amp;#8217;t activate plugins in these files though. All the plugins have to be
  activated in your &lt;code&gt;.vimrc&lt;/code&gt; in the usual&amp;nbsp;way.&lt;/p&gt;

@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" Google Reader Back in 2008, I used to use Google Reader to subscribe to RSS feeds. I was an aspiring photographer back then and I remember being subscribed to around 80 blogs. Each day I’d read... "/>
-      <meta name="twitter:description" content=" Google Reader Back in 2008, I used to use Google Reader to subscribe to RSS feeds. I was an aspiring photographer back then and I remember being subscribed to around 80 blogs. Each day I’d read... "/>
-      <meta property="og:description" content=" Google Reader Back in 2008, I used to use Google Reader to subscribe to RSS feeds. I was an aspiring photographer back then and I remember being subscribed to around 80 blogs. Each day I’d read... "/>
+      <meta name="description" content=" Google Reader RSS is a very effective way of having good quality information come to you. Back in 2008, I used to use Google Reader to subscribe to RSS feeds. I was an aspiring photographer back... "/>
+      <meta name="twitter:description" content=" Google Reader RSS is a very effective way of having good quality information come to you. Back in 2008, I used to use Google Reader to subscribe to RSS feeds. I was an aspiring photographer back... "/>
+      <meta property="og:description" content=" Google Reader RSS is a very effective way of having good quality information come to you. Back in 2008, I used to use Google Reader to subscribe to RSS feeds. I was an aspiring photographer back... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/using-rss.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/using-rss.html"/>
@@ -155,12 +155,12 @@
       <article>
         <div class="markdown dark:text-gray-200">
           <h2 id="google-reader">Google&nbsp;Reader</h2>
-<p>Back in 2008, I used to use Google Reader to subscribe to <span class="caps">RSS</span> feeds. I was an
-aspiring photographer back then and I remember being subscribed to around 80
-blogs. Each day I&#8217;d read articles from whoever had posted something new,
-without needing to visit their websites or remember who they are or that I&#8217;d
-subscribed to their blog. <span class="caps">RSS</span> is a very effective way of having good quality
-information  come to&nbsp;you.</p>
+<p><span class="caps">RSS</span> is a very effective way of having good quality information
+come to you. Back in 2008, I used to use Google Reader to subscribe to <span class="caps">RSS</span>
+feeds. I was an aspiring photographer back then and I remember being subscribed
+to around 80 blogs. Each day I&#8217;d read articles from whoever had posted
+something new, without needing to visit their websites or remember who they are
+or that I&#8217;d subscribed to their&nbsp;blog.</p>
 <h2 id="social-media">Social&nbsp;Media</h2>
 <p>A few years later Google Reader was closed down, presumably because using <span class="caps">RSS</span>
 didn&#8217;t fit with Googles advertising model. I was unaware of it at the time but
@@ -175,7 +175,9 @@ occasional diamond can have outsized&nbsp;benefits.</p>
 <p><span class="caps">RSS</span> isn&#8217;t like this. I choose the contents of my &#8216;news feed&#8217;, and
 each article can be much longer than a Tweet, or a caption to a photo, or a
 status update. It&#8217;s hard to write well and to create an interesting or useful blog
-post, and that makes it harder to dilute quality with entertaining&nbsp;distractions.</p>
+post, and that makes it harder to dilute quality with entertaining
+distractions. I have complete control about what content I see, and I can
+change it whenever I want. The process is designed around&nbsp;me.</p>
 <h2 id="reeder5">Reeder5</h2>
 <p>I used <code>netNewsWire</code> for a few weeks, but it couldn&#8217;t sync between my laptop
 and phone, so I bought <code>Reeder 5</code>. It&#8217;s got a few unusual design patterns, but
@@ -193,6 +195,10 @@ and phone, so I bought <code>Reeder 5</code>. It&#8217;s got a few unusual desig
         <div class="flex flex-row">
           <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
           <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/product-led-growth.html"> Product-Led&nbsp;Growth</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/why-i-want-to-write-regularly.html"> Why I Want To Write&nbsp;Regularly</a>
         </div>
     </div>
 
@@ -290,6 +296,7 @@ and phone, so I bought <code>Reeder 5</code>. It&#8217;s got a few unusual desig
           }
 
 
+          // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
             document.getElementById("day").classList.remove("hidden");
@@ -303,6 +310,7 @@ and phone, so I bought <code>Reeder 5</code>. It&#8217;s got a few unusual desig
             changePygmentsCSS(dark, light);
           }
 
+          // change theme if theme switcher button is clicked
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
@@ -323,15 +331,18 @@ and phone, so I bought <code>Reeder 5</code>. It&#8217;s got a few unusual desig
         </script>
 
         <script>
+          // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-              document.getElementById("navbar").style.top = "0";
-            } else {
-              document.getElementById("navbar").style.top = "-100px";
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
             }
-            prevScrollPos = currentScrollPos;
           }
         </script>
 

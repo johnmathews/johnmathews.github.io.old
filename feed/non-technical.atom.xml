@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-14T16:52:00+01:00</updated><entry><title>Using RSS</title><link href="https://johnmathews.eu/using-rss.html" rel="alternate"></link><published>2021-01-14T16:52:00+01:00</published><updated>2021-01-14T16:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/using-rss.html</id><summary type="html"></summary><content type="html">&lt;h2 id="google-reader"&gt;Google&amp;nbsp;Reader&lt;/h2&gt;
-&lt;p&gt;Back in 2008, I used to use Google Reader to subscribe to &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds. I was an
-aspiring photographer back then and I remember being subscribed to around 80
-blogs. Each day I&amp;#8217;d read articles from whoever had posted something new,
-without needing to visit their websites or remember who they are or that I&amp;#8217;d
-subscribed to their blog. &lt;span class="caps"&gt;RSS&lt;/span&gt; is a very effective way of having good quality
-information  come to&amp;nbsp;you.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-18T11:51:00+01:00</updated><entry><title>Why I Want To Write Regularly</title><link href="https://johnmathews.eu/why-i-want-to-write-regularly.html" rel="alternate"></link><published>2021-01-18T11:51:00+01:00</published><updated>2021-01-18T11:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/why-i-want-to-write-regularly.html</id><summary type="html"></summary><content type="html">&lt;p&gt;As you can see, I’ve recently started writing more frequently. I want to do
+this because I often have thoughts which I’d like to explore and develop
+further, but rarely do. I find writing hard because it forces me to organise my
+thoughts and look at how substantial they really are, or aren’t.&lt;/p&gt;
+&lt;p&gt;There is truth in the saying that “to know a thing you need to be able to teach
+it &lt;sup id="sf-why-i-want-to-write-regularly-1-back"&gt;&lt;a href="#sf-why-i-want-to-write-regularly-1" class="simple-footnote" title="wikipedia article, and some extenal validation"&gt;1&lt;/a&gt;&lt;/sup&gt;
+“, and writing well has several similarities to teaching. Can I really copy a
+collection of thoughts from my head to yours?&lt;/p&gt;
+&lt;p&gt;I remember watching Inception and hearing that the most resilient parasite is
+an idea. I think that’s mostly true, and the older I get the more I believe
+that ideas matter&lt;sup id="sf-why-i-want-to-write-regularly-2-back"&gt;&lt;a href="#sf-why-i-want-to-write-regularly-2" class="simple-footnote" title="and also, that asking the right question is more important than finding the right answer. I guess asking the right question is always necessary, but finding the right answer is only sometimes sufficient. Sometimes you can get the answer a bit wrong if you asked the right question, and still get enough benefits to avoid the problem."&gt;2&lt;/a&gt;&lt;/sup&gt;. They have so many
+subtle consequences. They are the first
+&lt;a href="https://en.wikipedia.org/wiki/Domino_effect"&gt;dominos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I don’t expect writing regularly to become a permanent habit - it doesn’t need
+to be. But I do want to focus on it for a while so that I become significantly
+better. It’s a skill that has too many benefits to be ignored.&lt;/p&gt;
+&lt;p&gt;I realised that the blogs I remembered most were focussed and unapologetic
+about their priorities. Most of them have a lot of text and do not focus on
+design. They make it easy to read text, and don’t spend time or attention on
+header images or styling. &lt;/p&gt;
+&lt;p&gt;Before I redesigned this blog I had default settings that asked me to supply an
+image for each post, and for a summary, and a suggested tweet. None of it was
+necessary, and whilst they all tried to make the blog better they ended up
+making it worse because they added complexity and distracted from the main thing.&lt;/p&gt;
+&lt;p&gt;These features are still there if I want to use them, but they are not set up
+to be used by default anymore. They’ve been moved to the background, and if I
+forget they exist then that is &lt;span class="caps"&gt;OK&lt;/span&gt; - it just shows they weren’t as important in
+practice as I thought they’d be when I was &lt;a href="https://en.wiktionary.org/wiki/yak_shaving"&gt;Yak
+Shaving&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"&gt;You Ain’t Gonna Need
+It&lt;/a&gt;, mate.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-why-i-want-to-write-regularly-1"&gt;wikipedia
+&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching"&gt;article&lt;/a&gt;, and some
+&lt;a href="https://web.archive.org/web/20210118112910/https://digest.bps.org.uk/2018/05/04/learning-by-teaching-others-is-extremely-effective-a-new-study-tested-a-key-reason-why/"&gt;extenal
+validation&lt;/a&gt; &lt;a href="#sf-why-i-want-to-write-regularly-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-why-i-want-to-write-regularly-2"&gt;and also, that asking the right question is more
+important than finding the right answer. I guess asking the right question is
+always necessary, but finding the right answer is only sometimes &lt;a href="https://en.wikipedia.org/wiki/Necessity_and_sufficiency"&gt;sufficient&lt;/a&gt;.
+Sometimes you can get the answer a bit wrong if you asked the right question,
+and still get enough benefits to avoid the problem. &lt;a href="#sf-why-i-want-to-write-regularly-2-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"></category></entry><entry><title>Using RSS</title><link href="https://johnmathews.eu/using-rss.html" rel="alternate"></link><published>2021-01-14T16:52:00+01:00</published><updated>2021-01-14T16:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/using-rss.html</id><summary type="html"></summary><content type="html">&lt;h2 id="google-reader"&gt;Google&amp;nbsp;Reader&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; is a very effective way of having good quality information
+come to you. Back in 2008, I used to use Google Reader to subscribe to &lt;span class="caps"&gt;RSS&lt;/span&gt;
+feeds. I was an aspiring photographer back then and I remember being subscribed
+to around 80 blogs. Each day I&amp;#8217;d read articles from whoever had posted
+something new, without needing to visit their websites or remember who they are
+or that I&amp;#8217;d subscribed to their&amp;nbsp;blog.&lt;/p&gt;
 &lt;h2 id="social-media"&gt;Social&amp;nbsp;Media&lt;/h2&gt;
 &lt;p&gt;A few years later Google Reader was closed down, presumably because using &lt;span class="caps"&gt;RSS&lt;/span&gt;
 didn&amp;#8217;t fit with Googles advertising model. I was unaware of it at the time but
@@ -20,7 +57,9 @@ occasional diamond can have outsized&amp;nbsp;benefits.&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; isn&amp;#8217;t like this. I choose the contents of my &amp;#8216;news feed&amp;#8217;, and
 each article can be much longer than a Tweet, or a caption to a photo, or a
 status update. It&amp;#8217;s hard to write well and to create an interesting or useful blog
-post, and that makes it harder to dilute quality with entertaining&amp;nbsp;distractions.&lt;/p&gt;
+post, and that makes it harder to dilute quality with entertaining
+distractions. I have complete control about what content I see, and I can
+change it whenever I want. The process is designed around&amp;nbsp;me.&lt;/p&gt;
 &lt;h2 id="reeder5"&gt;Reeder5&lt;/h2&gt;
 &lt;p&gt;I used &lt;code&gt;netNewsWire&lt;/code&gt; for a few weeks, but it couldn&amp;#8217;t sync between my laptop
 and phone, so I bought &lt;code&gt;Reeder 5&lt;/code&gt;. It&amp;#8217;s got a few unusual design patterns, but

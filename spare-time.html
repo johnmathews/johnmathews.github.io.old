@@ -341,6 +341,7 @@ thinking differently if I read my bible more, but I don&#8217;t know what those 
           }
 
 
+          // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
             document.getElementById("day").classList.remove("hidden");
@@ -354,6 +355,7 @@ thinking differently if I read my bible more, but I don&#8217;t know what those 
             changePygmentsCSS(dark, light);
           }
 
+          // change theme if theme switcher button is clicked
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
@@ -374,15 +376,18 @@ thinking differently if I read my bible more, but I don&#8217;t know what those 
         </script>
 
         <script>
+          // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-              document.getElementById("navbar").style.top = "0";
-            } else {
-              document.getElementById("navbar").style.top = "-100px";
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
             }
-            prevScrollPos = currentScrollPos;
           }
         </script>
 

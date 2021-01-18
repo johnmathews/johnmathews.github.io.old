@@ -123,6 +123,10 @@
 <h1>Archives for JohnMathews.eu</h1>
 
 <dl>
+    <dt>18 January</dt>
+    <dd><a href="https://johnmathews.eu/why-i-want-to-write-regularly.html">Why I Want To Write&nbsp;Regularly</a></dd>
+    <dt>18 January</dt>
+    <dd><a href="https://johnmathews.eu/becoming-a-better-python-developer.html">Becoming A Better Python&nbsp;Developer</a></dd>
     <dt>15 January</dt>
     <dd><a href="https://johnmathews.eu/vim-for-large-projects.html">Vim For Large&nbsp;Projects</a></dd>
     <dt>14 January</dt>
@@ -300,6 +304,7 @@
           }
 
 
+          // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
             document.getElementById("day").classList.remove("hidden");
@@ -313,6 +318,7 @@
             changePygmentsCSS(dark, light);
           }
 
+          // change theme if theme switcher button is clicked
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
@@ -333,15 +339,18 @@
         </script>
 
         <script>
+          // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-              document.getElementById("navbar").style.top = "0";
-            } else {
-              document.getElementById("navbar").style.top = "-100px";
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
             }
-            prevScrollPos = currentScrollPos;
           }
         </script>
     </div>

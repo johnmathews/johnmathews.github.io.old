@@ -297,6 +297,7 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
           }
 
 
+          // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
             document.getElementById("day").classList.remove("hidden");
@@ -310,6 +311,7 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
             changePygmentsCSS(dark, light);
           }
 
+          // change theme if theme switcher button is clicked
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
@@ -330,15 +332,18 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
         </script>
 
         <script>
+          // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-              document.getElementById("navbar").style.top = "0";
-            } else {
-              document.getElementById("navbar").style.top = "-100px";
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
             }
-            prevScrollPos = currentScrollPos;
           }
         </script>
 

@@ -125,6 +125,22 @@
     <div class="container mx-auto px-4">
         <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
           <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2021</h2>
+            <div class="flex justify-between text-xl py-2 md:py-1   nonTechnical ">
+                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
+                  <a href="https://johnmathews.eu/why-i-want-to-write-regularly.html">Why I Want To Write&nbsp;Regularly</a>
+                </div>
+                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
+                  18 January
+                </div>
+              </div>
+            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
+                <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
+                  <a href="https://johnmathews.eu/becoming-a-better-python-developer.html">Becoming A Better Python&nbsp;Developer</a>
+                </div>
+                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
+                  18 January
+                </div>
+              </div>
             <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
                 <div class="w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
                   <a href="https://johnmathews.eu/vim-for-large-projects.html">Vim For Large&nbsp;Projects</a>
@@ -721,6 +737,7 @@
           }
 
 
+          // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
             document.getElementById("day").classList.remove("hidden");
@@ -734,6 +751,7 @@
             changePygmentsCSS(dark, light);
           }
 
+          // change theme if theme switcher button is clicked
           function modeSwitcher() {
             if (localStorage.getItem('theme') === "dark") {
               window.localStorage.setItem('theme', 'light');
@@ -754,15 +772,18 @@
         </script>
 
         <script>
+          // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos > currentScrollPos) {
-              document.getElementById("navbar").style.top = "0";
-            } else {
-              document.getElementById("navbar").style.top = "-100px";
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
             }
-            prevScrollPos = currentScrollPos;
           }
         </script>
 
