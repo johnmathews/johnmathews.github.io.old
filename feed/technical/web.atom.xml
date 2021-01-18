@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/web.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-18T13:00:00+01:00</updated><entry><title>The Hardest Type Of Problem</title><link href="https://johnmathews.eu/the-hardest-type-of-problem.html" rel="alternate"></link><published>2021-01-18T13:00:00+01:00</published><updated>2021-01-18T13:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/the-hardest-type-of-problem.html</id><summary type="html"></summary><content type="html">&lt;h2 id="three-categories-of-problem"&gt;Three categories of problem&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/web.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-18T13:00:00+01:00</updated><entry><title>Different Types Of Problems</title><link href="https://johnmathews.eu/different-types-of-problem.html" rel="alternate"></link><published>2021-01-18T13:00:00+01:00</published><updated>2021-01-18T13:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/different-types-of-problem.html</id><summary type="html"></summary><content type="html">&lt;h2 id="three-categories-of-problem"&gt;Three categories of problem&lt;/h2&gt;
 &lt;p&gt;Last year when I was creating &lt;a href="https://moneybar/nl"&gt;moneybar&lt;/a&gt; and
 &lt;a href="https://pippip.email"&gt;pippip&lt;/a&gt; there were a few problems that took much more
 effort to solve than all the others.&lt;/p&gt;
@@ -17,7 +17,7 @@ you’re asking the question you’re guaranteed to be successful and keeping
 morale high is necessary for success.&lt;/p&gt;
 &lt;h3 id="type-2"&gt;Type 2:&lt;/h3&gt;
 &lt;p&gt;Hopefully you can make good progress understanding the basics and internalizing
-the relevant abstractions, and your problems quickly&lt;sup id="sf-the-hardest-type-of-problem-1-back"&gt;&lt;a href="#sf-the-hardest-type-of-problem-1" class="simple-footnote" title="on which timescale? Life is long, does it really matter if it takes 1 week or 1 month to learn something meaningful? Momentum, and having fun, is important though."&gt;1&lt;/a&gt;&lt;/sup&gt;
+the relevant abstractions, and your problems quickly&lt;sup id="sf-different-types-of-problem-1-back"&gt;&lt;a href="#sf-different-types-of-problem-1" class="simple-footnote" title="on which timescale? Life is long, does it really matter if it takes 1 week or 1 month to learn something meaningful? Momentum, and having fun, is important though."&gt;1&lt;/a&gt;&lt;/sup&gt;
 become &lt;code&gt;type 2&lt;/code&gt; problems. They each take from 15 to 45 minutes to solve.&lt;/p&gt;
 &lt;p&gt;Maybe this is because you know enough to break some big general problem into
 smaller problems (you are developing domain expertise) and your intuitions for
@@ -27,17 +27,17 @@ likely to be correct, rather than your fifth or sixth. &lt;/p&gt;
 important skill, which requires intuiting how an English speaking expert would
 ask the question. This isn’t trivial but I don’t hear people discussing this often.&lt;/p&gt;
 &lt;p&gt;When most of my coding problems are &lt;code&gt;type 2&lt;/code&gt;, it feels like I’m learning most
-efficiently and when I’m most productive&lt;sup id="sf-the-hardest-type-of-problem-2-back"&gt;&lt;a href="#sf-the-hardest-type-of-problem-2" class="simple-footnote" title="from a personal growth point of view. I suppose from an employers point of view they want all problems solved fast, type 1 problems."&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+efficiently and when I’m most productive&lt;sup id="sf-different-types-of-problem-2-back"&gt;&lt;a href="#sf-different-types-of-problem-2" class="simple-footnote" title="from a personal growth point of view. I suppose from an employers point of view they want all problems solved fast, type 1 problems."&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;h3 id="type-1"&gt;Type 1:&lt;/h3&gt;
 &lt;p&gt;After a while, the problems that need to be solved become &lt;code&gt;type 1&lt;/code&gt; problems.
 They take less than 15 minutes to solve, because:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;All the big problems have been solved and now you’ve only got smaller problems left, and&lt;/li&gt;
 &lt;li&gt;Your intuitions are good and your expertise has increased and you know where to look for
-answers.&lt;sup id="sf-the-hardest-type-of-problem-3-back"&gt;&lt;a href="#sf-the-hardest-type-of-problem-3" class="simple-footnote" title="Open the right file, google the right query (and follow the link to stack overflow), make some changes, run your static type checker and linter, run your tests, and push. Done and on to the next item."&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+answers.&lt;sup id="sf-different-types-of-problem-3-back"&gt;&lt;a href="#sf-different-types-of-problem-3" class="simple-footnote" title="Open the right file, google the right query (and follow the link to stack overflow), make some changes, run your static type checker and linter, run your tests, and push. Done and on to the next item."&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="exceptional-problems"&gt;Exceptional problems:&lt;/h2&gt;
-&lt;p&gt;But there seems to be a consistent exception to this model.&lt;sup id="sf-the-hardest-type-of-problem-4-back"&gt;&lt;a href="#sf-the-hardest-type-of-problem-4" class="simple-footnote" title="which is totally fine. It’s just a mental model, and the map is not the territory"&gt;4&lt;/a&gt;&lt;/sup&gt; Let’s
+&lt;p&gt;But there seems to be a consistent exception to this model.&lt;sup id="sf-different-types-of-problem-4-back"&gt;&lt;a href="#sf-different-types-of-problem-4" class="simple-footnote" title="which is totally fine. It’s just a mental model, and the map is not the territory"&gt;4&lt;/a&gt;&lt;/sup&gt; Let’s
 be silly and call them &lt;code&gt;type W&lt;/code&gt; problems. These are the problems that eat up
 far too many hours, and are tiring to solve, even when you are (in most other
 respects) an expert.&lt;/p&gt;
@@ -95,14 +95,14 @@ difficult to solve:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;Having said all that, I think the best way to solve a problem is to prevent it
 from occurring in the first place, but I’m not good enough to figure out how to
-do that, yet.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-the-hardest-type-of-problem-1"&gt;on which timescale?
+do that, yet.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-different-types-of-problem-1"&gt;on which timescale?
 Life is long, does it really matter if it takes 1 week or 1 month to learn
-something meaningful? Momentum, and having fun, is important though. &lt;a href="#sf-the-hardest-type-of-problem-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-the-hardest-type-of-problem-2"&gt;from a personal growth point of
+something meaningful? Momentum, and having fun, is important though. &lt;a href="#sf-different-types-of-problem-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-different-types-of-problem-2"&gt;from a personal growth point of
 view. I suppose from an employers point of view they want all problems solved
-fast, &lt;code&gt;type 1&lt;/code&gt; problems. &lt;a href="#sf-the-hardest-type-of-problem-2-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-the-hardest-type-of-problem-3"&gt;Open the right file, google the right query (and follow the link to
+fast, &lt;code&gt;type 1&lt;/code&gt; problems. &lt;a href="#sf-different-types-of-problem-2-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-different-types-of-problem-3"&gt;Open the right file, google the right query (and follow the link to
 stack overflow), make some changes, run your static type checker and linter,
-run your tests, and push. Done and on to the next item. &lt;a href="#sf-the-hardest-type-of-problem-3-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-the-hardest-type-of-problem-4"&gt;which is totally
-fine. It’s just a mental model, and the map is not the territory &lt;a href="#sf-the-hardest-type-of-problem-4-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"></category></entry><entry><title>Learning To Django</title><link href="https://johnmathews.eu/learning-to-django.html" rel="alternate"></link><published>2021-01-14T14:17:00+01:00</published><updated>2021-01-14T14:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/learning-to-django.html</id><summary type="html"></summary><content type="html">&lt;h2 id="in-the-beginning"&gt;In the&amp;nbsp;beginning&lt;/h2&gt;
+run your tests, and push. Done and on to the next item. &lt;a href="#sf-different-types-of-problem-3-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-different-types-of-problem-4"&gt;which is totally
+fine. It’s just a mental model, and the map is not the territory &lt;a href="#sf-different-types-of-problem-4-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"></category></entry><entry><title>Learning To Django</title><link href="https://johnmathews.eu/learning-to-django.html" rel="alternate"></link><published>2021-01-14T14:17:00+01:00</published><updated>2021-01-14T14:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/learning-to-django.html</id><summary type="html"></summary><content type="html">&lt;h2 id="in-the-beginning"&gt;In the&amp;nbsp;beginning&lt;/h2&gt;
 &lt;p&gt;I came to web development via business analytics. I was working as an
 accountant and Excel wasn&amp;#8217;t good enough anymore, so I looked around for a way
 to get started and came across &lt;a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html"&gt;Jupyter
