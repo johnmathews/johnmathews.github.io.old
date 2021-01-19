@@ -9,21 +9,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
 
-      <title>Getters And Setters In Python - JohnMathews.eu</title>
-      <meta name="title" content="Getters And Setters In Python -  JohnMathews.eu "/>
-      <meta property="og:title" content="Getters And Setters In Python"/>
-      <meta property="twitter:title" content="Getters And Setters In Python"/>
+      <title>Debugging the more_categories Pelican plugin - JohnMathews.eu</title>
+      <meta name="title" content="Debugging the more_categories Pelican plugin -  JohnMathews.eu "/>
+      <meta property="og:title" content="Debugging the more_categories Pelican plugin"/>
+      <meta property="twitter:title" content="Debugging the more_categories Pelican plugin"/>
 
       <meta name="keywords" content="  "/>
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" I’ve realised that one of the plugins I use to make this blog is not working correctly. I use the "/>
-      <meta name="twitter:description" content=" I’ve realised that one of the plugins I use to make this blog is not working correctly. I use the "/>
-      <meta property="og:description" content=" I’ve realised that one of the plugins I use to make this blog is not working correctly. I use the "/>
+      <meta name="description" content=" I’ve realised that one of the plugins I use to make this blog is not working correctly. I use the more_categories plugin to: add subcategories assign multiple categories to articles. Subcategories... "/>
+      <meta name="twitter:description" content=" I’ve realised that one of the plugins I use to make this blog is not working correctly. I use the more_categories plugin to: add subcategories assign multiple categories to articles. Subcategories... "/>
+      <meta property="og:description" content=" I’ve realised that one of the plugins I use to make this blog is not working correctly. I use the more_categories plugin to: add subcategories assign multiple categories to articles. Subcategories... "/>
 
-      <meta property="og:url" content="https://johnmathews.eu/drafts/getters-and-setters-in-python.html"/>
-      <meta property="twitter:url" content="https://johnmathews.eu/drafts/getters-and-setters-in-python.html"/>
+      <meta property="og:url" content="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html"/>
 
       <meta name="twitter:image" content="https://johnmathews.eu/
 "/>
@@ -134,7 +134,7 @@
   <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  technical  ">
 
     <div class="markdown text-center dark:text-gray-200">
-      <h1> Getters And Setters In&nbsp;Python </h1>
+      <h1> Debugging the more_categories Pelican&nbsp;plugin </h1>
     </div>
 
     <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
@@ -154,8 +154,122 @@
     <main>
       <article>
         <div class="markdown dark:text-gray-200">
-          <p>I&#8217;ve realised that one of the plugins I use to make this blog is not working
-correctly. I use&nbsp;the </p>
+          <p>I’ve realised that one of the plugins I use to make this blog is not working
+correctly. I use the <code>more_categories</code> plugin to:</p>
+<ol>
+<li>add subcategories</li>
+<li>assign multiple categories to articles.</li>
+</ol>
+<p>Subcategories aren’t working and Pelican thinks each article just has
+categories than contain forward slashes.</p>
+<p>In his “powerful python” emails, Aaron Maxwell recommends looking at the source
+code for popular python libraries to see how really good Python is written, and
+how talented developers write code and solve problems.</p>
+<p>This is a good opportunity to look at the code that powers the plugin and see
+if if I can:</p>
+<ol>
+<li>Understand the source code</li>
+<li>Locate the source of the problem</li>
+<li>Fix the problem</li>
+</ol>
+<p>I don’t know if Pelican is amazingly good quality or not, I get the feeling it
+could do with more developer resources, but I’ve got a real reason and
+motivation to look at the underlying code so I’m going to give it a shot.</p>
+<p>The documentation is sparse which doesn’t help, I get the impression that
+whoever wrote it feels like Pelican is simple and it’s obvious what’s going on
+<sup id="sf-debugging-more-categories-pelican-plugin-1-back"><a href="#sf-debugging-more-categories-pelican-plugin-1" class="simple-footnote" title="I guess it’s the “curse of knowledge”">1</a></sup>. It’s not obvious to me.</p>
+<h2 id="pelican-plugins">Pelican Plugins</h2>
+<p>Every plugin has to have a <code>register()</code> function, here it is for the
+<code>more-categories</code> plugin:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="n">signals</span><span class="o">.</span><span class="n">article_generator_context</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">get_categories</span><span class="p">)</span>
+    <span class="n">signals</span><span class="o">.</span><span class="n">article_generator_finalized</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">create_categories</span><span class="p">)</span>
+</pre></div>
+
+
+<p>I understand the idea of signals from Django, and generators are discussed a
+bit in the <a href="https://docs.getpelican.com/en/latest/internals.html#how-to-implement-a-new-generator">documentation</a>. So what else is happening…</p>
+<p>As I write down my understanding of the plugin, I’m aware that my understanding
+is definitely incomplete and probably wrong. I hope that as I progress I will
+see the mistakes in what I’ve already written.</p>
+<p><code>get_categories()</code> is called first, and it takes two arguments, <code>generator</code> and
+<code>metadata</code>. The entire function is 3 lines so here it is:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_categories</span><span class="p">(</span><span class="n">generator</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="n">text_type</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'category'</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>
+    <span class="n">metadata</span><span class="p">[</span><span class="s1">'categories'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">Category</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">generator</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">categories</span><span class="p">]</span>
+    <span class="n">metadata</span><span class="p">[</span><span class="s1">'category'</span><span class="p">]</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">'categories'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+
+<p>It looks like it gets the category from the metadata for each article.
+Presumably by the time this function is called the articles have already been
+parsed and a <code>metadata</code> object has already been created and populated with
+metadata about the articles, including categories.</p>
+<p>The first row of <code>get_categories()</code> splits up the categories if multiple
+categories are listed. <code>metadata</code> must be a dictionary, and there must be a
+metadata dict for each article, otherwise you couldn’t just get get the value
+assoiciated with the dictionary key and then split the string on commas.</p>
+<p>This means that this function is called once for each article.</p>
+<p>I don’t know what <code>text_type</code> does yet. Maybe it ensures that the output is
+always a string. It’s imported from <code>six</code> which I remember seeing being a
+dependecy of some other packages.</p>
+<p>.. Having checked the
+<a href="https://six.readthedocs.io/#six.text_type">documentation</a> for <code>six</code> it looks like I was
+right - it represents unicode textual data in both <code>python2</code> and <code>python3</code>.
+Pelican was originally written in Python2 I guess.</p>
+<p>Next step is to write a new key-value pair to the metadata dictionary for each
+article. This plugin adds functionality to python by enabling <code>categories</code>
+and not just a <code>category</code> for each article. It seems clear that adding a
+<code>categories</code> key to the metadata dict is an obvious way to do this. The value
+for the <code>categories</code> key is a <code>list</code> where each item is an instance of the 
+<code>Category</code> class. This class is instantiated using two arguments, <code>name</code> which
+is the string from the previous row, and <code>generator.settings</code> which is
+currently not understood.</p>
+<p>.. printing the contents of <code>generator.settings</code> shows that its a dictionary of
+all the settings. Easily assumed and good to confirm.</p>
+<p>I’ll dig into the <code>Category</code> class in a moment, but first lets quickly cover
+the last row of the function. The <code>category</code> attribute of the articles metadata
+is simply updated with the first item in the categories list (<code>categories</code>
+must be a list because it can be indexed.)</p>
+<h2 id="class-category">class Category():</h2>
+<p>This class is the only class defined by the plugin (which is only 96 lines of
+code). It has 6 methods, 5 of them are decorated, and it has no constants.</p>
+<p>The decorators are <code>property</code> [3], <code>_name.setter</code> [1] and <code>URLWrapper.name.setter</code> [1].
+<code>URLWrapper</code> is imported from <code>pelican.urlwrappers</code> and I don’t know what that
+does beyond “wrapping URLs”.</p>
+<h3 id="property">@property</h3>
+<p>Decorators are functions that takes methods or functions as inputs. Using
+<code>property</code> along with <code>setter</code> decorators lets a class have a property assigned
+to it whilst ensuring that arbitrary conditions or logic is upheld. If the <code>@property</code>
+decorator is over a method called <code>foo</code>, then there would need to be a
+decorator called <code>foo.setter</code> on a method somewhere in the class.</p>
+<p>That doesn’t seem entirely right though, because in our <code>Category</code> class, we
+have a <code>@property</code> decorator over a <code>_name</code> method, and also a <code>@_name.setter</code>
+decorator over another method called <code>_name</code>. But the other methods with
+<code>@property</code> decorators (<code>slug</code> and <code>ancestors</code>) do not have any associated setter
+decorators or methods.</p>
+<p>The setter for <code>_name</code> seems to create parent categories if the string contains slashes:</p>
+<div class="highlight"><pre><span></span><span class="nd">@_name</span><span class="o">.</span><span class="n">setter</span>
+<span class="k">def</span> <span class="nf">_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">'/'</span> <span class="ow">in</span> <span class="n">val</span><span class="p">:</span>
+        <span class="n">parentname</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">parentname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">shortname</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Here, <code>self.parent</code> becomes an instance of the category class, that is
+instantiated using <code>parentname</code> and <code>self.settings</code>. This is recursive to
+however many levels of subcategories are specified.</p>
+<p>The <code>ancestors</code> and <code>as_dict</code> methods seem more confusing. <code>ancestors</code> isn’t
+called or mentioned within the class definition, but is called from the
+<code>create_categories</code> function which is called after the <code>get_categories</code>
+function returns. I don’t understand why it needs an <code>@property</code> decorator though.</p>
+<p>The class inherits from <code>URLWrapper</code> so that is probably the next best place to
+look… Indeed, looking at the definition of <code>URLWrapper</code> shows that the
+<code>as_dict</code> method is overriding the definition in the base class.</p><ol class="simple-footnotes"><li id="sf-debugging-more-categories-pelican-plugin-1">I guess it’s the “curse of knowledge” <a href="#sf-debugging-more-categories-pelican-plugin-1-back" class="simple-footnote-back">↩</a></li></ol>
         </div>
       </article>
     </main>
@@ -163,6 +277,10 @@ correctly. I use&nbsp;the </p>
     <div class="border border-gray-300 mt-10 mb-10"></div>
 
     <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/becoming-a-better-python-developer.html"> Becoming A Better Python&nbsp;Developer</a>
+        </div>
     </div>
 
     <div class="text-left">
@@ -204,8 +322,8 @@ correctly. I use&nbsp;the </p>
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
                 var disqus_config = function () {
-                          this.page.url = "https://johnmathews.eu/drafts/getters-and-setters-in-python.html";  // Replace PAGE_URL with your page's canonical URL variable
-                          this.page.identifier = "drafts/getters-and-setters-in-python.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                          this.page.url = "https://johnmathews.eu/debugging-more-categories-pelican-plugin.html";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "debugging-more-categories-pelican-plugin.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
                 (function() { // DON'T EDIT BELOW THIS LINE
                           var d = document, s = d.createElement('script');
