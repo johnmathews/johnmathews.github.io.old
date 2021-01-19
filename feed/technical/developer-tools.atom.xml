@@ -618,35 +618,35 @@ different roles within each industry. In web development you really need to be a
 &lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web&amp;nbsp;apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Test Driven Development</title><link href="https://johnmathews.eu/test-driven-development.html" rel="alternate"></link><published>2021-01-06T17:50:00+01:00</published><updated>2021-01-06T17:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-06:/test-driven-development.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Test Driven Development was mind-bending when I first grappled with it.
 Last summer I was building a web app using Django and began to break things
 unintentionally when adding new features. This soon led to lots of clicking
-around different pages to test if stuff was still working each time I made an&amp;nbsp;update.&lt;/p&gt;
+around different pages to test if stuff was still working each time I made an update.&lt;/p&gt;
 &lt;p&gt;This soon led to me thinking there must be a better way. Which brought
 me to Test Driven Development (&lt;span class="caps"&gt;TDD&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;It should have just led me to writing tests, which it did. But googling
-whatever I googled got me down the &lt;span class="caps"&gt;TDD&lt;/span&gt; rabbit hole rather than just the &amp;#8220;write
-some tests&amp;#8221; rabbit hole. Write tests for your code before you write the code.
-Write tests for bugs you&amp;#8217;ve fixed to check they stay fixed. Write tests as a
-kind of documentation to show what stuff is supposed to be doing.&amp;nbsp;Errr&amp;#8230;&lt;/p&gt;
+whatever I googled got me down the &lt;span class="caps"&gt;TDD&lt;/span&gt; rabbit hole rather than just the “write
+some tests” rabbit hole. Write tests for your code before you write the code.
+Write tests for bugs you’ve fixed to check they stay fixed. Write tests as a
+kind of documentation to show what stuff is supposed to be doing. Errr…&lt;/p&gt;
 &lt;p&gt;Django was a big enough pile of abstractions as it was. Views, ORMs, mixins,
-serializers&amp;#8230; Trying to add factories and fixtures into that took some getting
+serializers… Trying to add factories and fixtures into that took some getting
 used to. But eventually I made some progress, and now I quite enjoy running
-coverage reports to keep coverage &lt;em&gt;close&lt;/em&gt; to 100%[ref]Which is fun and all, but
-testing for the sake of it doesn&amp;#8217;t necessarily stop bad things happening. Its very possible to write a test that covers the code you&amp;#8217;ve just
-written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours&amp;nbsp;happen.[/ref].&lt;/p&gt;
-&lt;p&gt;Some of the main things I&amp;#8217;ve learnt about writing&amp;nbsp;tests:&lt;/p&gt;
+coverage reports to keep coverage &lt;em&gt;close&lt;/em&gt; to 100%&lt;sup id="sf-test-driven-development-1-back"&gt;&lt;a href="#sf-test-driven-development-1" class="simple-footnote" title="Which is fun and all, but testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just written without ensuring that only the intended behaviours happen."&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Some of the main things I’ve learnt about writing tests:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Use PyTest as much as possible rather than other testing libraries - its &lt;code&gt;assert&lt;/code&gt; statements are more intuitive than Django&amp;#8217;s own testing framework, and you can use it in any Python codebase, not just Django. It has lots of extensions and seems good at getting the job done fairly&amp;nbsp;easily.&lt;/li&gt;
-&lt;li&gt;Write tests as you go. I haven&amp;#8217;t (yet) reached the elevated level of writing
+&lt;li&gt;Use PyTest as much as possible rather than other testing libraries - its &lt;code&gt;assert&lt;/code&gt; statements are more intuitive than Django’s own testing framework, and you can use it in any Python codebase, not just Django. It has lots of extensions and seems good at getting the job done fairly easily.&lt;/li&gt;
+&lt;li&gt;Write tests as you go. I haven’t (yet) reached the elevated level of writing
    tests before I write the code to be tested, though I see why that would
    sometimes be useful. I do think writing tests sooner rather than later is
-   best though, ideally as soon as you&amp;#8217;ve got a basic version of your feature&amp;nbsp;working.&lt;/li&gt;
+   best though, ideally as soon as you’ve got a basic version of your feature working.&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;Coverage&lt;/code&gt; to show you which code is covered by your tests, and which
-   branches or edge cases are not. But be warned, it doesn&amp;#8217;t tell you if the
-   test is useful or not, only that it passes and which methods or functions it&amp;nbsp;uses.&lt;/li&gt;
+   branches or edge cases are not. But be warned, it doesn’t tell you if the
+   test is useful or not, only that it passes and which methods or functions it uses.&lt;/li&gt;
 &lt;li&gt;Fixtures are great for keeping tests fairly &lt;span class="caps"&gt;DRY&lt;/span&gt;. &lt;code&gt;Freezegun&lt;/code&gt; is great for
-   testing anything to do with dates and&amp;nbsp;times. &lt;/li&gt;
+   testing anything to do with dates and times. &lt;/li&gt;
 &lt;li&gt;Static type checkers, like &lt;code&gt;Mypy&lt;/code&gt;, get more attractive in proportion to
-   codebase complexity and&amp;nbsp;size.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>How To Design An API</title><link href="https://johnmathews.eu/api-design.html" rel="alternate"></link><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/api-design.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;design:&lt;/p&gt;
+   codebase complexity and size.&lt;/li&gt;
+&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-test-driven-development-1"&gt;Which is fun and all, but
+testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just
+written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours happen. &lt;a href="#sf-test-driven-development-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>How To Design An API</title><link href="https://johnmathews.eu/api-design.html" rel="alternate"></link><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/api-design.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;design:&lt;/p&gt;
 &lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;It&amp;#8217;s more of an art than a&amp;nbsp;science&lt;/li&gt;
@@ -702,58 +702,58 @@ written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours&
 &lt;li&gt;Use the &lt;span class="caps"&gt;HTTP&lt;/span&gt; location header to contain a link on resource creation, or for &lt;span class="caps"&gt;GET&lt;/span&gt; with pagination, use first, last, next,&amp;nbsp;prev.&lt;/li&gt;
 &lt;li&gt;Connectedness - return links in the response which link to useful resources. At minimum, a link to show how the data was received, or&amp;nbsp;posted.&lt;/li&gt;
 &lt;li&gt;Idempotence - clients making the same repeated requests create the same result on the server side. I.e. making repeated requests has the same result as making a similar request, server side. On the client side, a response code may change, of&amp;nbsp;course. &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Principles Of Object Orientated Programming</title><link href="https://johnmathews.eu/principles-of-oop.html" rel="alternate"></link><published>2021-01-04T16:27:00+01:00</published><updated>2021-01-04T16:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/principles-of-oop.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently interviewed for a lead developer role at &lt;a href="https://labdigital.nl/en/"&gt;Lab Digital&lt;/a&gt;[ref]Unfortunately, I didn&amp;#8217;t get the job. They wanted a senior Python developer with experience with &lt;code&gt;Infrastructure As Code&lt;/code&gt;, and also working at an agency. Can&amp;#8217;t win them all.[/ref] and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (&lt;span class="caps"&gt;OOP&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;You might think that&amp;#8217;s a unusual way to prepare for an interview, and you&amp;#8217;d be right. Nothing close to these notes arose during the interview, but I find this stuff interesting. If I&amp;#8217;m motivated enough to study it, then I think that&amp;#8217;s a good enough reason by itself, without a specific reason. These are some brief&amp;nbsp;notes.&lt;/p&gt;
-&lt;p&gt;Object Orientated Programming has four key&amp;nbsp;aspects:&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Principles Of Object Orientated Programming</title><link href="https://johnmathews.eu/principles-of-oop.html" rel="alternate"></link><published>2021-01-04T16:27:00+01:00</published><updated>2021-01-04T16:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/principles-of-oop.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently interviewed for a lead developer role at &lt;a href="https://labdigital.nl/en/"&gt;Lab Digital&lt;/a&gt;&lt;sup id="sf-principles-of-oop-1-back"&gt;&lt;a href="#sf-principles-of-oop-1" class="simple-footnote" title="Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with Infrastructure As Code, and also working at an agency. Can’t win them all."&gt;1&lt;/a&gt;&lt;/sup&gt; and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (&lt;span class="caps"&gt;OOP&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;You might think that’s a unusual way to prepare for an interview, and you’d be right. Nothing close to these notes arose during the interview, but I find this stuff interesting. If I’m motivated enough to study it, then I think that’s a good enough reason by itself, without a specific reason. These are some brief notes.&lt;/p&gt;
+&lt;p&gt;Object Orientated Programming has four key aspects:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Encapsulation (Hiding&amp;nbsp;information)&lt;/li&gt;
-&lt;li&gt;Abstraction (Hiding the&amp;nbsp;implementation)&lt;/li&gt;
+&lt;li&gt;Encapsulation (Hiding information)&lt;/li&gt;
+&lt;li&gt;Abstraction (Hiding the implementation)&lt;/li&gt;
 &lt;li&gt;Inheritance&lt;/li&gt;
 &lt;li&gt;Polymorphism&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="1-encapsulation"&gt;1.&amp;nbsp;Encapsulation&lt;/h2&gt;
+&lt;h2 id="1-encapsulation"&gt;1. Encapsulation&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Each object keeps its state private, inside a&amp;nbsp;class.&lt;/li&gt;
-&lt;li&gt;Instance variables/properties/attributes are kept private and accessor methods are made&amp;nbsp;public.&lt;/li&gt;
-&lt;li&gt;Other objects don’t have direct access to this state. They can only call a list of public functions&amp;nbsp;(methods).&lt;/li&gt;
-&lt;li&gt;The object manages its own state via methods, no other class can touch it unless explicitly (not default)&amp;nbsp;allowed.&lt;/li&gt;
-&lt;li&gt;Private&amp;nbsp;variables.&lt;/li&gt;
-&lt;li&gt;Public&amp;nbsp;methods.&lt;/li&gt;
-&lt;li&gt;You can define classes within classes, and functions within&amp;nbsp;functions.&lt;/li&gt;
+&lt;li&gt;Each object keeps its state private, inside a class.&lt;/li&gt;
+&lt;li&gt;Instance variables/properties/attributes are kept private and accessor methods are made public.&lt;/li&gt;
+&lt;li&gt;Other objects don’t have direct access to this state. They can only call a list of public functions (methods).&lt;/li&gt;
+&lt;li&gt;The object manages its own state via methods, no other class can touch it unless explicitly (not default) allowed.&lt;/li&gt;
+&lt;li&gt;Private variables.&lt;/li&gt;
+&lt;li&gt;Public methods.&lt;/li&gt;
+&lt;li&gt;You can define classes within classes, and functions within functions.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="2-abstraction"&gt;2.&amp;nbsp;Abstraction&lt;/h2&gt;
+&lt;h2 id="2-abstraction"&gt;2. Abstraction&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;A natural extension of&amp;nbsp;encapsulation&lt;/li&gt;
-&lt;li&gt;A concept or idea that is not associated with any particular&amp;nbsp;instance.&lt;/li&gt;
-&lt;li&gt;Expresses the intent of the class, rather than a specific&amp;nbsp;implementation.&lt;/li&gt;
-&lt;li&gt;Programs are often extremely large and separate objects communicate with each other a lot. This makes maintaining large programs difficult, and abstraction tries to solve&amp;nbsp;this.&lt;/li&gt;
+&lt;li&gt;A natural extension of encapsulation&lt;/li&gt;
+&lt;li&gt;A concept or idea that is not associated with any particular instance.&lt;/li&gt;
+&lt;li&gt;Expresses the intent of the class, rather than a specific implementation.&lt;/li&gt;
+&lt;li&gt;Programs are often extremely large and separate objects communicate with each other a lot. This makes maintaining large programs difficult, and abstraction tries to solve this.&lt;/li&gt;
 &lt;li&gt;Applying abstraction means that each object should only expose a high-level mechanism for using it.&lt;ul&gt;
-&lt;li&gt;This mechanism should hide internal implementation details. It should only reveal operations relevant for the other&amp;nbsp;objects.&lt;/li&gt;
-&lt;li&gt;This mechanism should be easy to use and should rarely change over&amp;nbsp;time. &lt;/li&gt;
+&lt;li&gt;This mechanism should hide internal implementation details. It should only reveal operations relevant for the other objects.&lt;/li&gt;
+&lt;li&gt;This mechanism should be easy to use and should rarely change over time. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Implementation changes — for example, a software update — rarely affect the abstraction you&amp;nbsp;use.&lt;/li&gt;
-&lt;li&gt;e.g. a coffee machine. It does a lot of stuff and makes quirky noises under the hood. But all you have to do is put in coffee and press a&amp;nbsp;button.&lt;/li&gt;
+&lt;li&gt;Implementation changes — for example, a software update — rarely affect the abstraction you use.&lt;/li&gt;
+&lt;li&gt;e.g. a coffee machine. It does a lot of stuff and makes quirky noises under the hood. But all you have to do is put in coffee and press a button.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="3-inheritance"&gt;3.&amp;nbsp;Inheritance&lt;/h2&gt;
+&lt;h2 id="3-inheritance"&gt;3. Inheritance&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;In &lt;span class="caps"&gt;OOP&lt;/span&gt;, objects are often similar, sharing similar logic. But they are not 100% the&amp;nbsp;same.&lt;/li&gt;
-&lt;li&gt;Create a (child) class by deriving from another (parent) class. This way, we form a&amp;nbsp;hierarchy.&lt;/li&gt;
-&lt;li&gt;child class reuses all fields and methods of the parent class (common part) and can implement its own unique part using method or attribute&amp;nbsp;overloading.&lt;/li&gt;
+&lt;li&gt;In &lt;span class="caps"&gt;OOP&lt;/span&gt;, objects are often similar, sharing similar logic. But they are not 100% the same.&lt;/li&gt;
+&lt;li&gt;Create a (child) class by deriving from another (parent) class. This way, we form a hierarchy.&lt;/li&gt;
+&lt;li&gt;child class reuses all fields and methods of the parent class (common part) and can implement its own unique part using method or attribute overloading.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="4-polymorphism"&gt;4.&amp;nbsp;Polymorphism&lt;/h2&gt;
+&lt;h2 id="4-polymorphism"&gt;4. Polymorphism&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Gives a way to use a class exactly like its parent so there’s no confusion with mixing types. But each child class keeps its own methods as they&amp;nbsp;are.&lt;/li&gt;
-&lt;li&gt;This typically happens by defining a (parent) interface to be reused. It outlines a bunch of common methods. Then, each child class implements its own version of these&amp;nbsp;methods.&lt;/li&gt;
-&lt;li&gt;Any time a collection (such as a list) or a method expects an instance of the parent (where common methods are outlined), the language takes care of evaluating the right implementation of the common method — regardless of which child is&amp;nbsp;passed.&lt;/li&gt;
+&lt;li&gt;Gives a way to use a class exactly like its parent so there’s no confusion with mixing types. But each child class keeps its own methods as they are.&lt;/li&gt;
+&lt;li&gt;This typically happens by defining a (parent) interface to be reused. It outlines a bunch of common methods. Then, each child class implements its own version of these methods.&lt;/li&gt;
+&lt;li&gt;Any time a collection (such as a list) or a method expects an instance of the parent (where common methods are outlined), the language takes care of evaluating the right implementation of the common method — regardless of which child is passed.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I&amp;#8217;d like to be so familiar with the following features that I can use them without referring to&amp;nbsp;notes:&lt;/p&gt;
+&lt;p&gt;I’d like to be so familiar with the following features that I can use them without referring to notes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Getters and&amp;nbsp;setters.&lt;/li&gt;
-&lt;li&gt;Instance methods compared to class&amp;nbsp;methods.&lt;/li&gt;
-&lt;li&gt;Inheritance, mixins, and&amp;nbsp;decorators.&lt;/li&gt;
-&lt;li&gt;The &amp;#8220;magic&amp;#8221; within the &lt;code&gt;Django&lt;/code&gt; source code that requires &lt;code&gt;mypy&lt;/code&gt; to use extensions in order to do its static type checking&amp;nbsp;correctly.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Using Unix Utilities To Analyse And Update Multiple Text Files</title><link href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" rel="alternate"></link><published>2021-01-04T13:02:00+01:00</published><updated>2021-01-04T13:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/using-unix-utilities-to-analyse-and-update-multiple-files.html</id><summary type="html"></summary><content type="html">&lt;p&gt;As part of the redesign of this blog I wanted to make an article&amp;#8217;s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple&amp;nbsp;categories.&lt;/p&gt;
+&lt;li&gt;Getters and setters.&lt;/li&gt;
+&lt;li&gt;Instance methods compared to class methods.&lt;/li&gt;
+&lt;li&gt;Inheritance, mixins, and decorators.&lt;/li&gt;
+&lt;li&gt;The “magic” within the &lt;code&gt;Django&lt;/code&gt; source code that requires &lt;code&gt;mypy&lt;/code&gt; to use extensions in order to do its static type checking correctly.&lt;/li&gt;
+&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-principles-of-oop-1"&gt;Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with &lt;code&gt;Infrastructure As Code&lt;/code&gt;, and also working at an agency. Can’t win them all. &lt;a href="#sf-principles-of-oop-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Using Unix Utilities To Analyse And Update Multiple Text Files</title><link href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" rel="alternate"></link><published>2021-01-04T13:02:00+01:00</published><updated>2021-01-04T13:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/using-unix-utilities-to-analyse-and-update-multiple-files.html</id><summary type="html"></summary><content type="html">&lt;p&gt;As part of the redesign of this blog I wanted to make an article&amp;#8217;s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple&amp;nbsp;categories.&lt;/p&gt;
 &lt;p&gt;Also, using nested categories seems like a good way of grouping similar content and allowing more nuanced filtering of&amp;nbsp;interests.&lt;/p&gt;
 &lt;p&gt;As I considered how to update the categories of existing articles, I realised this would be a good opportunity to practice analyzing and updating text files using unix&amp;nbsp;utilities.&lt;/p&gt;
 &lt;p&gt;Here is how I reviewed and updated the categories of my existing&amp;nbsp;articles:&lt;/p&gt;

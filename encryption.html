@@ -170,50 +170,50 @@
 <p>Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is&nbsp;required.</p>
 <h2 id="overview-of-the-rsa-algorithm">Overview of the <span class="caps">RSA</span>&nbsp;algorithm</h2>
 <p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a>, and <a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard">Leonard Adleman</a>), <span class="caps">RSA</span> was one of the first public-key encryption algorithms and is still widely&nbsp;used.</p>
-<p><span class="caps">RSA</span> (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number $n$ has been defined, if a number greater than $n$ is created the result simply loops around to 0 and begins counting from 0 again. i.e. if $n = 10$, then $7 + 5 = 12 - 10 = 2$. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. $12 / 10 = 1$ with $2$&nbsp;remaining.</p>
+<p><span class="caps">RSA</span> (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number <span class="math">\(n\)</span> has been defined, if a number greater than <span class="math">\(n\)</span> is created the result simply loops around to 0 and begins counting from 0 again. i.e. if <span class="math">\(n = 10\)</span>, then <span class="math">\(7 + 5 = 12 - 10 = 2\)</span>. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. <span class="math">\(12 / 10 = 1\)</span> with <span class="math">\(2\)</span>&nbsp;remaining.</p>
 <h2 id="generation-of-a-pair-of-rsa-keys">Generation of a pair of <span class="caps">RSA</span>&nbsp;keys:</h2>
 <h3 id="1-generate-the-rsa-module">1. Generate the <span class="caps">RSA</span>&nbsp;module</h3>
 <ul>
-<li>Select two large random prime numbers, $p$ and $q$. They need to be random because anyone who knows or guesses them will be able to decrypt the&nbsp;encryption.</li>
-<li>Calculate $n =&nbsp;pq$</li>
+<li>Select two large random prime numbers, <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. They need to be random because anyone who knows or guesses them will be able to decrypt the&nbsp;encryption.</li>
+<li>Calculate <span class="math">\(n =&nbsp;pq\)</span></li>
 </ul>
 <h3 id="2-find-derived-number-e">2. Find derived number&nbsp;(e)</h3>
 <ul>
-<li><em>e</em> must be greater than 1 and less than $( p - 1)( q -&nbsp;1)$.</li>
-<li>There must be no common factor for e and $( p - 1)( q - 1)$ except for 1. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
+<li><em>e</em> must be greater than 1 and less than <span class="math">\(( p - 1)( q - 1)\)</span>.</li>
+<li>There must be no common factor for e and <span class="math">\(( p - 1)( q - 1)\)</span> except for 1. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
 </ul>
 <h3 id="3-form-the-public-key">3. Form the public&nbsp;key</h3>
 <ul>
-<li>The pair of numbers $(n, e)$ form the public key and can be made&nbsp;public.</li>
-<li>Even though $n$ is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of <span class="caps">RSA</span> rests entirely on the difficulty of factoring $n$ into its two component prime&nbsp;numbers.</li>
+<li>The pair of numbers <span class="math">\((n, e)\)</span> form the public key and can be made&nbsp;public.</li>
+<li>Even though <span class="math">\(n\)</span> is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of <span class="caps">RSA</span> rests entirely on the difficulty of factoring <span class="math">\(n\)</span> into its two component prime&nbsp;numbers.</li>
 </ul>
 <h3 id="4-generate-the-private-key-d">4. Generate the private key&nbsp;(d)</h3>
 <ul>
-<li>The private key is generated from using $p$, $q$ and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer&nbsp;$d$.</li>
-<li>$d$ is the inverse of $e$ modulo $( p - 1)( q - 1 )$. This means that $d$ is the number less than $( p - 1 ) ( q - 1 )$ such that when it is multiplied by e, it is equal to $1$ modulo $( p - 1 ) ( q - 1&nbsp;)$.</li>
+<li>The private key is generated from using <span class="math">\(p\)</span>, <span class="math">\(q\)</span> and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer <span class="math">\(d\)</span>.</li>
+<li><span class="math">\(d\)</span> is the inverse of <span class="math">\(e\)</span> modulo <span class="math">\(( p - 1)( q - 1 )\)</span>. This means that <span class="math">\(d\)</span> is the number less than <span class="math">\(( p - 1 ) ( q - 1 )\)</span> such that when it is multiplied by e, it is equal to <span class="math">\(1\)</span> modulo <span class="math">\(( p - 1 ) ( q - 1 )\)</span>.</li>
 </ul>
 <h2 id="rsa-example"><span class="caps">RSA</span>&nbsp;example:</h2>
-<p><span class="caps">RSA</span> does not directly operate on strings as bits, it operates on numbers modulo (less than) $n$. and it is necessary to represent plain text as a series of numbers less than $n$. The dominant encoding on the internet is <a href="https://en.wikipedia.org/wiki/UTF-8"><span class="caps">UTF</span>-8</a>, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &#8220;<span class="caps">HELLO</span>&#8221; would become &#8220;$72, 69, 76, 76,&nbsp;79$&#8221;.</p>
-<p>The maximum number $n$ needs to be the product of the two prime numbers $p$ and $q$. For this example choose $p = 7$ and $q = 13$, so $n  = 91$  <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
-<p>The public key component <em>e</em> can be any number we choose,  as long as there is no number other than 1 which is a common factor of <em>e</em> and $( p - 1 ) ( q - 1 )$. In our example, this requires that there be no common factor between 72 and e other than 1, so let <em>e</em> $=&nbsp;5$.</p>
+<p><span class="caps">RSA</span> does not directly operate on strings as bits, it operates on numbers modulo (less than) <span class="math">\(n\)</span>. and it is necessary to represent plain text as a series of numbers less than <span class="math">\(n\)</span>. The dominant encoding on the internet is <a href="https://en.wikipedia.org/wiki/UTF-8"><span class="caps">UTF</span>-8</a>, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &#8220;<span class="caps">HELLO</span>&#8221; would become &#8220;<span class="math">\(72, 69, 76, 76, 79\)</span><span class="dquo">&#8220;</span>.</p>
+<p>The maximum number <span class="math">\(n\)</span> needs to be the product of the two prime numbers <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. For this example choose <span class="math">\(p = 7\)</span> and <span class="math">\(q = 13\)</span>, so <span class="math">\(n  = 91\)</span>  <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>The public key component <em>e</em> can be any number we choose,  as long as there is no number other than 1 which is a common factor of <em>e</em> and <span class="math">\(( p - 1 ) ( q - 1 )\)</span>. In our example, this requires that there be no common factor between 72 and e other than 1, so let <em>e</em> <span class="math">\(= 5\)</span>.</p>
 <p>Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime&nbsp;numbers.</p>
-<p>Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key $d$, which is&nbsp;29.</p>
+<p>Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key <span class="math">\(d\)</span>, which is&nbsp;29.</p>
 <p>Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional <span class="caps">RSA</span>&nbsp;system.</p>
 <h3 id="encoding">Encoding</h3>
-<p>To encode a letter H in a message (&#8216;H&#8217; is $72$ in <span class="caps">UTF</span>-8), we need to multiply it by itself $e$ times ($e = 5$), remembering to wrap around each time we pass our maximum value of $n =&nbsp;91$.</p>
-<p>$72 \times 72 = 5184, 5184 / 91 = 56$ with $88$ remaining, (i.e. $5184 = 91 \times 56 + 88$). Therefore:
-$72 \times 72 = 5184 = 88$
-$88 \times 72 = 6336 = 57$
-$57 \times 72 = 4104 = 9$
-$9 \times 72 = 648 =&nbsp;11$</p>
-<p>Therefore the encrypted value of &#8220;H&#8221; is&nbsp;&#8220;$11$&#8221;</p>
-<p>Using the method for each character in the message &#8220;<span class="caps">HELLO</span>&#8221; results in the encoded message&nbsp;&#8220;\$11,62,20,20,53\$&#8221;.</p>
-<p>To decrypt the message, we take each number and multiply it by itself $d$ times, ($d=29$) wrapping around each time we pass&nbsp;$91$.</p>
-<p>$11 \times 11 = 121 = 30$
-$30 \times 11 = 330 = 57$
+<p>To encode a letter H in a message (&#8216;H&#8217; is <span class="math">\(72\)</span> in <span class="caps">UTF</span>-8), we need to multiply it by itself <span class="math">\(e\)</span> times (<span class="math">\(e = 5\)</span>), remembering to wrap around each time we pass our maximum value of <span class="math">\(n = 91\)</span>.</p>
+<p><span class="math">\(72 \times 72 = 5184, 5184 / 91 = 56\)</span> with <span class="math">\(88\)</span> remaining, (i.e. <span class="math">\(5184 = 91 \times 56 + 88\)</span>). Therefore:
+<span class="math">\(72 \times 72 = 5184 = 88\)</span>
+<span class="math">\(88 \times 72 = 6336 = 57\)</span>
+<span class="math">\(57 \times 72 = 4104 = 9\)</span>
+<span class="math">\(9 \times 72 = 648 =&nbsp;11\)</span></p>
+<p>Therefore the encrypted value of &#8220;H&#8221; is &#8220;<span class="math">\(11\)</span><span class="dquo">&#8220;</span></p>
+<p>Using the method for each character in the message &#8220;<span class="caps">HELLO</span>&#8221; results in the encoded message &#8220;\<span class="math">\(11,62,20,20,53\\)</span><span class="dquo">&#8220;</span>.</p>
+<p>To decrypt the message, we take each number and multiply it by itself <span class="math">\(d\)</span> times, (<span class="math">\(d=29\)</span>) wrapping around each time we pass <span class="math">\(91\)</span>.</p>
+<p><span class="math">\(11 \times 11 = 121 = 30\)</span>
+<span class="math">\(30 \times 11 = 330 = 57\)</span>
 &#8230;
-$57 \times 11 = 627 = 81$
-$81 \times 11 = 891 =&nbsp;72$</p>
+<span class="math">\(57 \times 11 = 627 = 81\)</span>
+<span class="math">\(81 \times 11 = 891 =&nbsp;72\)</span></p>
 <p>And we&#8217;re back to our original&nbsp;encoding.</p>
 <h2 id="files">Files</h2>
 <p>The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded <a href="https://johnmathews.eu/RSA-Example.xlsx">here</a>.</p>
@@ -226,7 +226,7 @@ $81 \times 11 = 891 =&nbsp;72$</p>
 <p>I used the explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a lot.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>A simple example is $A=1, B=2$ etc&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>A simple example is <span class="math">\(A=1, B=2\)</span> etc&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving algorithm</a> which finds all the primes up to a given limit.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
@@ -239,6 +239,68 @@ $81 \times 11 = 891 =&nbsp;72$</p>
 </li>
 </ol>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
         </div>
       </article>
     </main>
@@ -246,6 +308,14 @@ $81 \times 11 = 891 =&nbsp;72$</p>
     <div class="border border-gray-300 mt-10 mb-10"></div>
 
     <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/digital-currencies-the-basics.html"> Digital currencies: the&nbsp;basics</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/aeternity-ico.html"> The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a>
+        </div>
     </div>
 
     <div class="text-left">

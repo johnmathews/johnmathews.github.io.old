@@ -201,7 +201,7 @@ force proportional to the overlap size repels the two spheres away from
 each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over &#8220;continuum&#8221; based techniques that model groups of grains as if they were all just one big particle with
 unusual properties. <span class="caps">DEM</span> has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, <span class="caps">DEM</span> will only be used for theoretical research and niche&nbsp;applications.</p>
 <h2 id="results">Results</h2>
-<p>When gravity increases by a factor of $x$, both the discharge rate and local velocities within the silo increase by  $\sqrt(x)$&nbsp;.</p>
+<p>When gravity increases by a factor of <span class="math">\(x\)</span>, both the discharge rate and local velocities within the silo increase by  <span class="math">\(\sqrt(x)\)</span>&nbsp;.</p>
 <p>That&#8217;s good to know if you&#8217;re planning on storing stuff on the moon, but it&#8217;s also a useful step towards explaining exactly why bulk granular materials behave the way they&nbsp;do.</p>
 <h2 id="more-information">More&nbsp;Information</h2>
 <p>An overview of my research, my doctorate thesis and published papers can
@@ -221,6 +221,68 @@ to render, and Adobe Reader Desktop must be used in order to view&nbsp;them.</p
 <img alt="Silo Model" src="https://johnmathews.eu/images/silos2/silo_render.jpeg">
 <img alt="Silo wall pressure mesasurements" src="https://johnmathews.eu/images/silos2/silo_pressure_pads.jpeg">
 <img alt="Particle Image Velocimetry result showing average flow velocities" src="https://johnmathews.eu/images/silos2/silo_piv.jpeg"></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
         </div>
       </article>
     </main>
