@@ -43,7 +43,7 @@ force proportional to the overlap size repels the two spheres away from
 each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over &amp;#8220;continuum&amp;#8221; based techniques that model groups of grains as if they were all just one big particle with
 unusual properties. &lt;span class="caps"&gt;DEM&lt;/span&gt; has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, &lt;span class="caps"&gt;DEM&lt;/span&gt; will only be used for theoretical research and niche&amp;nbsp;applications.&lt;/p&gt;
 &lt;h2 id="results"&gt;Results&lt;/h2&gt;
-&lt;p&gt;When gravity increases by a factor of &lt;span class="math"&gt;\(x\)&lt;/span&gt;, both the discharge rate and local velocities within the silo increase by  &lt;span class="math"&gt;\(\sqrt(x)\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;p&gt;When gravity increases by a factor of $x$, both the discharge rate and local velocities within the silo increase by  $\sqrt(x)$&amp;nbsp;.&lt;/p&gt;
 &lt;p&gt;That&amp;#8217;s good to know if you&amp;#8217;re planning on storing stuff on the moon, but it&amp;#8217;s also a useful step towards explaining exactly why bulk granular materials behave the way they&amp;nbsp;do.&lt;/p&gt;
 &lt;h2 id="more-information"&gt;More&amp;nbsp;Information&lt;/h2&gt;
 &lt;p&gt;An overview of my research, my doctorate thesis and published papers can
@@ -62,66 +62,4 @@ to render, and Adobe Reader Desktop must be used in order to view&amp;nbsp;them
 &lt;img alt="Centrifuge" src="https://johnmathews.eu/images/silos2/centrifuge.jpeg"&gt;
 &lt;img alt="Silo Model" src="https://johnmathews.eu/images/silos2/silo_render.jpeg"&gt;
 &lt;img alt="Silo wall pressure mesasurements" src="https://johnmathews.eu/images/silos2/silo_pressure_pads.jpeg"&gt;
-&lt;img alt="Particle Image Velocimetry result showing average flow velocities" src="https://johnmathews.eu/images/silos2/silo_piv.jpeg"&gt;&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="Technical/Civil Engineering"></category><category term="Doctorate"></category><category term="Granular Flow"></category><category term="Granular Materials"></category><category term="PhD"></category><category term="Research"></category><category term="Engineering"></category><category term="Silo"></category><category term="Thesis"></category><category term="Vienna"></category></entry></feed>
+&lt;img alt="Particle Image Velocimetry result showing average flow velocities" src="https://johnmathews.eu/images/silos2/silo_piv.jpeg"&gt;&lt;/p&gt;</content><category term="Technical/Civil Engineering"></category><category term="Doctorate"></category><category term="Granular Flow"></category><category term="Granular Materials"></category><category term="PhD"></category><category term="Research"></category><category term="Engineering"></category><category term="Silo"></category><category term="Thesis"></category><category term="Vienna"></category></entry></feed>

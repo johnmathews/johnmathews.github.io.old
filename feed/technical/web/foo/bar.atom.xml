@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Web/foo/bar</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/web/foo/bar.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-18T13:00:00+01:00</updated><entry><title>Different Types Of Problems</title><link href="https://johnmathews.eu/different-types-of-problem.html" rel="alternate"></link><published>2021-01-18T13:00:00+01:00</published><updated>2021-01-18T13:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/different-types-of-problem.html</id><summary type="html"></summary><content type="html">&lt;h2 id="three-categories-of-problem"&gt;Three categories of&amp;nbsp;problem&lt;/h2&gt;
+&lt;p&gt;Last year when I was creating &lt;a href="https://moneybar/nl"&gt;moneybar&lt;/a&gt; and
+&lt;a href="https://pippip.email"&gt;pippip&lt;/a&gt; there were a few problems that took much more
+effort to solve than all the&amp;nbsp;others.&lt;/p&gt;
+&lt;p&gt;I think I could group problems into 3 buckets, based on how much time they take
+to solve. &lt;code&gt;Type 1&lt;/code&gt; takes less than 15 minutes to solve, &lt;code&gt;type 2&lt;/code&gt; takes between
+15 and 45 minutes to solve, and &lt;code&gt;type 3&lt;/code&gt; takes more than 45 minutes (usualy
+&lt;em&gt;much&lt;/em&gt;&amp;nbsp;more).&lt;/p&gt;
+&lt;h3 id="type-3"&gt;Type&amp;nbsp;3:&lt;/h3&gt;
+&lt;p&gt;When I start learning a hard thing (like web development), almost everything is
+in the third bucket and it&amp;#8217;s exhausting. You need to set aside big chunks of
+time, you need to be focussed and undistracted, calm and wide awake, and you
+need to be prepared for a long arduous&amp;nbsp;journey.&lt;/p&gt;
+&lt;p&gt;Probably your criteria for success should be &amp;#8220;am I dead?&amp;#8221; because then if
+you&amp;#8217;re asking the question you&amp;#8217;re guaranteed to be successful and keeping
+morale high is necessary for&amp;nbsp;success.&lt;/p&gt;
+&lt;h3 id="type-2"&gt;Type&amp;nbsp;2:&lt;/h3&gt;
+&lt;p&gt;Hopefully you can make good progress understanding the basics and internalizing
+the relevant abstractions, and your problems quickly[ref]on which timescale?
+Life is long, does it really matter if it takes 1 week or 1 month to learn
+something meaningful? Momentum, and having fun, is important though.[/ref]
+become &lt;code&gt;type 2&lt;/code&gt; problems. They each take from 15 to 45 minutes to&amp;nbsp;solve.&lt;/p&gt;
+&lt;p&gt;Maybe this is because you know enough to break some big general problem into
+smaller problems (you are developing domain expertise) and your intuitions for
+how to solve the problem are becoming better so your first or second attempts are
+likely to be correct, rather than your fifth or&amp;nbsp;sixth. &lt;/p&gt;
+&lt;p&gt;Knowing how to google a problem so that you get the answer you need is also a really
+important skill, which requires intuiting how an English speaking expert would
+ask the question. This isn&amp;#8217;t trivial but I don&amp;#8217;t hear people discussing this&amp;nbsp;often.&lt;/p&gt;
+&lt;p&gt;When most of my coding problems are &lt;code&gt;type 2&lt;/code&gt;, it feels like I&amp;#8217;m learning most
+efficiently and when I&amp;#8217;m most productive[ref]from a personal growth point of
+view. I suppose from an employers point of view they want all problems solved
+fast, &lt;code&gt;type 1&lt;/code&gt; problems.[/ref].&lt;/p&gt;
+&lt;h3 id="type-1"&gt;Type&amp;nbsp;1:&lt;/h3&gt;
+&lt;p&gt;After a while, the problems that need to be solved become &lt;code&gt;type 1&lt;/code&gt; problems.
+They take less than 15 minutes to solve,&amp;nbsp;because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;All the big problems have been solved and now you&amp;#8217;ve only got smaller problems left,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;Your intuitions are good and your expertise has increased and you know where to look for
+answers.[ref]Open the right file, google the right query (and follow the link to
+stack overflow), make some changes, run your static type checker and linter,
+run your tests, and push. Done and on to the next&amp;nbsp;item.[/ref]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="exceptional-problems"&gt;Exceptional&amp;nbsp;problems:&lt;/h2&gt;
+&lt;p&gt;But there seems to be a consistent exception to this model.[ref]which is totally
+fine. It&amp;#8217;s just a mental model, and the map is not the territory[/ref] Let&amp;#8217;s
+be silly and call them &lt;code&gt;type W&lt;/code&gt; problems. These are the problems that eat up
+far too many hours, and are tiring to solve, even when you are (in most other
+respects) an&amp;nbsp;expert.&lt;/p&gt;
+&lt;p&gt;For me, these tend to relate to blob storage solutions for web apps deployed
+into production. I can think of several factors why this is so, and I&amp;#8217;ll
+describe the specifics before&amp;nbsp;generalising.&lt;/p&gt;
+&lt;p&gt;When a web app runs in production, the data is not stored on the web server
+because the things that make a web-server cheap and efficient are not the
+things that make a database or a file storage bucket cheap and&amp;nbsp;efficient.&lt;/p&gt;
+&lt;p&gt;Therefore they are stored somewhere else and you need some plumbing to join
+everything together. There are some abstractions involved to make this work
+easily and securely. However when developing locally, you are doing everything
+on your laptop. You have a web-server, relational database and file system all
+in the same&amp;nbsp;place.&lt;/p&gt;
+&lt;p&gt;This is a big, fundamental, architectural difference between your development
+environment and your production environment. As a general rule, these are
+supposed to be as similar as&amp;nbsp;possible.&lt;/p&gt;
+&lt;p&gt;These differences make it much easier to make something that works locally but
+doesn&amp;#8217;t work in production, and it&amp;#8217;s very hard to test if a thing will work in
+production without deploying it to your staging environment, which you are
+likely less familiar with than your local development&amp;nbsp;setup.&lt;/p&gt;
+&lt;p&gt;Deploying to staging and debugging on staging is slower and harder than doing
+the same thing locally. Logging (and filtering) will likely be more&amp;nbsp;important. &lt;/p&gt;
+&lt;h2 id="solving-exceptional-problems"&gt;Solving exceptional&amp;nbsp;problems&lt;/h2&gt;
+&lt;p&gt;So how do you solve these problems quickly and efficiently? What is it about
+this problem that makes it so hard? Let&amp;#8217;s examine what makes the problem
+difficult to&amp;nbsp;solve:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Iteration cycles are slow - I can&amp;#8217;t test locally, I have to deploy to
+     staging and this takes&amp;nbsp;time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The problem occurs in a &amp;#8216;high friction&amp;#8217; environment - its difficult to dig
+     around and figure out what&amp;#8217;s really going on when its hidden below 3
+     different layers of abstraction, on a remote machine that I have limited
+     access to via a web browser. I want to be able to dig and investigate
+     quickly and easily using the same tools I use for writing and testing code
+     locally. I&amp;#8217;ve taken great efforts to set up my local development
+     environment so that I can do this, and its stressful to switch to a
+     different and more limited set of&amp;nbsp;tools.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The problem is the result of several things interacting at once, and I can&amp;#8217;t
+     just test things one at a time. These things are probably very similar to
+     the&amp;nbsp;abstractions.&lt;/p&gt;
+&lt;p&gt;Thinking clearly, learning, buidling, solving problems, all rely on being
+ able to separate or untangle a seemingly complex situation into its
+ component parts so that you can figure out what causes what. If you can&amp;#8217;t
+ isolate individual concerns or components, you have a black box that is
+ keeping you&amp;nbsp;ignorant.&lt;/p&gt;
+&lt;p&gt;In web development, customized logging is usually a good way to being
+ isolating and exploring particular&amp;nbsp;components.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Having said all that, I think the best way to solve a problem is to prevent it
+from occurring in the first place, but I&amp;#8217;m not good enough to figure out how to
+do that,&amp;nbsp;yet.&lt;/p&gt;</content><category term="Technical/Web/foo/bar"></category></entry></feed>
