@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Career</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical/career.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2019-10-08T16:05:00+02:00</updated><entry><title>Between Clients</title><link href="https://johnmathews.eu/between-clients.html" rel="alternate"></link><published>2019-10-08T16:05:00+02:00</published><updated>2019-10-08T16:05:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-10-08:/between-clients.html</id><summary type="html">&lt;p&gt;As a freelance data scientist, I use time between client engagements to up-skill and pursue professional interests that I wouldn&amp;#8217;t otherwise be able&amp;nbsp;to.&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the end of the summer I had time between engagements to work on some side projects and grapple with some new (to me) libraries and&amp;nbsp;technologies. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Career</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical/career.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-19T14:57:00+01:00</updated><entry><title>Financial Doom And Gloom</title><link href="https://johnmathews.eu/financial-doom-and-gloom.html" rel="alternate"></link><published>2021-01-19T14:57:00+01:00</published><updated>2021-01-19T14:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/financial-doom-and-gloom.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Financial crises seem to happen fairly regularly, so they shouldn’t be unexpected.&lt;/p&gt;
+&lt;p&gt;But on the other hand, no-one seems particularly concerned about
+any particular aspect of our current financial system. At the moment our
+attention is controlled by other threats.&lt;/p&gt;
+&lt;p&gt;I am concerned that a lot of money has been injected into the money supply but
+we haven’t seen any inflation, and I am concerned that the price of stocks
+is no longer driven by the business fundamentals of the company, but by macro
+economics. It is a terrible time to be a value investor, and that is alarming.
+Value investing should &lt;em&gt;always&lt;/em&gt; be a decent way to make money, unless the
+markets are broken. If the price of something doesn’t represent its value, then a correction is inevitable.&lt;/p&gt;
+&lt;p&gt;Interest rates are really low at the moment, so if you have spare money and you
+want to make it work for you then where do you put it? Not into a bank account,
+because interest rates are low&lt;sup id="sf-financial-doom-and-gloom-1-back"&gt;&lt;a href="#sf-financial-doom-and-gloom-1" class="simple-footnote" title="Why are interest rates low? Because confidence in the economy is low, so central bankers have to lower interest rates to make it 1. Cheaper for a business to borrow money to invest in their business and therefore easier for a business investments to be profitable, and 2. So that its more attractive for investors to use their capital to invest in a business  (which grows the economy) relative to depositing spare cash in a bank account (which is safer but a less efficient way to deploy capital). Interest rates affect the relative risk-reward ratios of different investment strategies"&gt;1&lt;/a&gt;&lt;/sup&gt;, and not into government debt, because
+the yield is so low. It has to be stocks if you want the value of your
+investments to increase meaningfully.&lt;/p&gt;
+&lt;p&gt;But everyone is doing this which drives the price up, and because their price
+is increasing they excel even further.&lt;/p&gt;
+&lt;p&gt;I think that the main reason for concern is super low interest rates and
+massive increases in the money supply, but there are a couple of other factors
+that are also contributing.&lt;/p&gt;
+&lt;p&gt;It’s easier than ever for retail investors to participate in the stock market,
+and this seems like a good idea. Democratization. However if retail investors
+have influence to effect prices, and they themselves can be manipulated or
+influenced regarding what or when they buy or sell, then that is likely a new
+kind of threat to financial stability. We’ve never seen social media combined
+with quick, cheap investment services for amateurs before.&lt;/p&gt;
+&lt;p&gt;Index funds are also more popular than ever&lt;sup id="sf-financial-doom-and-gloom-2-back"&gt;&lt;a href="#sf-financial-doom-and-gloom-2" class="simple-footnote" title="Index Funds Are the New Kings of Wall Street"&gt;2&lt;/a&gt;&lt;/sup&gt; - the efficacy of index investing
+relative to traditional funds that use stock pickers is very high over medium
+or long time horizons because index funds are much cheaper. But if index
+funds become too large then they end up influencing the market in predictable
+and rigid ways.&lt;/p&gt;
+&lt;p&gt;Index funds cannot choose what they buy or how much they buy - they just track
+the index. If a company’s stock crosses certain thresholds, their stock has
+to be bought or sold. It seems like its possible to create feedback loops where
+funds have to buy more of a rising stock, which increases its scarcity and
+price, which then requires index funds to purchase more of the same stock.&lt;/p&gt;
+&lt;p&gt;The amount of euros in existence in 2019 was 90% more than in
+2010.&lt;sup id="sf-financial-doom-and-gloom-3-back"&gt;&lt;a href="#sf-financial-doom-and-gloom-3" class="simple-footnote" title="statista"&gt;3&lt;/a&gt;&lt;/sup&gt;
+But inflation between 2010 and 2020 is
+13%.&lt;sup id="sf-financial-doom-and-gloom-4-back"&gt;&lt;a href="#sf-financial-doom-and-gloom-4" class="simple-footnote" title="in2013dollars.com"&gt;4&lt;/a&gt;&lt;/sup&gt;
+Why is that?&lt;/p&gt;
+&lt;p&gt;If the price of something doesn’t represent its value, then a correction is inevitable.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-financial-doom-and-gloom-1"&gt;Why are interest rates low? Because
+confidence in the economy is low, so central bankers have to lower interest
+rates to make it 1. Cheaper for a business to borrow money to invest in their business and
+therefore easier for a business investments to be profitable, and 2. So that
+its more attractive for investors to use their capital to invest in a business 
+(which grows the economy) relative to depositing spare cash in a bank account (which is safer but a less efficient way to deploy capital). Interest rates affect the relative risk-reward ratios of
+different investment strategies &lt;a href="#sf-financial-doom-and-gloom-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-2"&gt;&lt;a href="https://web.archive.org/web/20210119144242/https://www.wsj.com/articles/index-funds-are-the-new-kings-of-wall-street-11568799004"&gt;Index Funds Are the New Kings of Wall Street&lt;/a&gt; &lt;a href="#sf-financial-doom-and-gloom-2-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-3"&gt;&lt;a href="https://www.statista.com/statistics/254220/value-of-euro-coins-in-circulation-since-2002/"&gt;statista&lt;/a&gt; &lt;a href="#sf-financial-doom-and-gloom-3-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-4"&gt;&lt;a href="https://www.in2013dollars.com/europe/inflation/2010"&gt;in2013dollars.com&lt;/a&gt; &lt;a href="#sf-financial-doom-and-gloom-4-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Career"></category></entry><entry><title>Between Clients</title><link href="https://johnmathews.eu/between-clients.html" rel="alternate"></link><published>2019-10-08T16:05:00+02:00</published><updated>2019-10-08T16:05:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-10-08:/between-clients.html</id><summary type="html">&lt;p&gt;As a freelance data scientist, I use time between client engagements to up-skill and pursue professional interests that I wouldn&amp;#8217;t otherwise be able&amp;nbsp;to.&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the end of the summer I had time between engagements to work on some side projects and grapple with some new (to me) libraries and&amp;nbsp;technologies. &lt;/p&gt;
 &lt;h3 id="during-august-and-september-2019-i"&gt;During August and September 2019,&amp;nbsp;I:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
