@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-21T14:55:00+01:00</updated><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes.html" rel="alternate"></link><published>2021-01-21T14:55:00+01:00</published><updated>2021-01-21T14:55:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/python-notes.html</id><summary type="html"></summary><content type="html">&lt;p&gt;The parts of Aaron Maxwell’s &lt;a href="https://twitter.com/powerfulpython"&gt;Power Python&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-21T16:22:00+01:00</updated><entry><title>Vim Notes: Mastering Vim Quickly</title><link href="https://johnmathews.eu/vim-notes-mastering-vim-quickly.html" rel="alternate"></link><published>2021-01-21T16:22:00+01:00</published><updated>2021-01-21T16:22:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/vim-notes-mastering-vim-quickly.html</id><summary type="html"></summary><content type="html">&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; - delete char under cursor and enter Insert&amp;nbsp;Mode.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; - replace char under&amp;nbsp;cursor.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g-&lt;/code&gt; and &lt;code&gt;g+&lt;/code&gt; - undo&amp;nbsp;branches.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g#&lt;/code&gt; or &lt;code&gt;g*&lt;/code&gt; for partial matches, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt; for exact&amp;nbsp;matches.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-O&amp;gt;&lt;/code&gt; in Insert Mode will jump you into Command Mode for one command only
+    and then put you back into Insert Mode&amp;nbsp;automatically.&lt;/li&gt;
+&lt;li&gt;Search for the word under the cursor, or similar:&lt;ol&gt;
+&lt;li&gt;Press &lt;code&gt;/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-r&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;C-W&amp;gt;&lt;/code&gt; - this will copy and paste the word under the cursor
+     into the search box. Edit it as&amp;nbsp;necessary.&lt;/li&gt;
+&lt;li&gt;After you&amp;#8217;ve done your search, &lt;code&gt;&amp;lt;C-o&amp;gt;&lt;/code&gt; to jump back to where your cursor
+     was&amp;nbsp;before.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Find and replace whole words only: &lt;code&gt;:s/&amp;lt;old_word\&amp;gt;/new/g&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Find and replace either old-word1 or old_word2: &lt;code&gt;:s/(old_word1\|old_word2\)/new/g&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes.html" rel="alternate"></link><published>2021-01-21T14:55:00+01:00</published><updated>2021-01-21T14:55:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/python-notes.html</id><summary type="html"></summary><content type="html">&lt;p&gt;The parts of Aaron Maxwell’s &lt;a href="https://twitter.com/powerfulpython"&gt;Power Python&lt;/a&gt;
 newsletter that I don’t want to forget:&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#emergent-abstractions"&gt;Emergent Abstractions&lt;/a&gt;&lt;/li&gt;
