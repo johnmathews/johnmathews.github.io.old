@@ -1,5 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-20T15:57:00+01:00</updated><entry><title>Vim Notes: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"></link><published>2021-01-20T15:57:00+01:00</published><updated>2021-01-20T15:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/vim-notes-goto-tag-definition.html</id><summary type="html"></summary><content type="html">&lt;p&gt;There are multiple ways of doing anything with vim, including using Tags or
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-21T14:55:00+01:00</updated><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes.html" rel="alternate"></link><published>2021-01-21T14:55:00+01:00</published><updated>2021-01-21T14:55:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/python-notes.html</id><summary type="html"></summary><content type="html">&lt;p&gt;The parts of Aaron Maxwell’s &lt;a href="https://twitter.com/powerfulpython"&gt;Power Python&lt;/a&gt;
+newsletter that I don’t want to forget:&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#emergent-abstractions"&gt;Emergent Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#practioner-engineer-scientist"&gt;Practioner, Engineer, Scientist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sentinel-values"&gt;Sentinel Values&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#levels-of-python-code"&gt;Levels of Python Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#read-peps"&gt;Read PEPs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="emergent-abstractions"&gt;Emergent Abstractions&lt;/h2&gt;
+&lt;p&gt;Get used to expecting and letting abstractions emerge from projects. If you
+find yourself repeatedly solving similar problems in similar ways, what can you
+do that will simplify the code and the implementation&lt;sup id="sf-python-notes-1-back"&gt;&lt;a href="#sf-python-notes-1" class="simple-footnote" title=" Abstraction as a principal of OOP"&gt;1&lt;/a&gt;&lt;/sup&gt;?&lt;/p&gt;
+&lt;p&gt;Is it a couple of convenience methods on some helper class?&lt;/p&gt;
+&lt;p&gt;The below code snippet gives you three ways of instantiating the twitter &lt;span class="caps"&gt;API&lt;/span&gt; client:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A generic “normal” way&lt;/li&gt;
+&lt;li&gt;A specialized way that looks for certain environment variables&lt;/li&gt;
+&lt;li&gt;A specialized way that looks for a configuration file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt; &lt;span class="c1"&gt;# so you can get the environment variables&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;twitter&lt;/span&gt; &lt;span class="c1"&gt;# https://pypi.org/project/python-twitter/&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ApiClient&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;consumer_key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;consumer_secret&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                 &lt;span class="n"&gt;access_token_key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;access_token_secret&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;twitter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;consumer_key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;consumer_secret&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;access_token_key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;access_token_secret&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@classmethod&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;from_environ&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;cls&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;cls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'TWITTER_CONSUMER_KEY'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'TWITTER_CONSUMER_SECRET'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'TWITTER_ACCESS_TOKEN_KEY'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'TWITTER_ACCESS_TOKEN_SECRET'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@classmethod&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;from_config_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;cls&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;config_file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;# ...&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;cls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# ...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="practioner-engineer-scientist"&gt;Practioner, Engineer, Scientist&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Practioner&lt;/strong&gt; - You can use a thing (a framework, a tool)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Engineer&lt;/strong&gt; - You can use a thing and if you needed to, you could recreate it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scientist&lt;/strong&gt; - You can create frameworks and paradigms that have never existed before&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Aim for the engineer level.&lt;/p&gt;
+&lt;h2 id="sentinel-values"&gt;Sentinel Values&lt;/h2&gt;
+&lt;p&gt;Instead of setting your sentinel value to something that is not quite
+impossible, like &lt;code&gt;None&lt;/code&gt; or &lt;code&gt;"None"&lt;/code&gt; set it to &lt;code&gt;object()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This is better because it creates a unique instance of the &lt;code&gt;object&lt;/code&gt; class and
+there can be no ambiguity about where it came from.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A sentinel value is a value you can set a variable to.&lt;/li&gt;
+&lt;li&gt;It’s special because it differs from all other legal or possible values that the variable could have.&lt;/li&gt;
+&lt;li&gt;It’s used as a signal or as a canary that something has happened.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="levels-of-python-code"&gt;Levels of Python Code&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Syntax&lt;/em&gt; - understand what indentation is important, sometimes you need
+    parenthesis, etc&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Idiom&lt;/em&gt; - the building blocks of a program. “Paragraphs” of code that
+    follow common patterns, like for loops, or context managers.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Design Pattern&lt;/em&gt; - Less well defined that Idioms, but more useful.
+        - Creational Patterns, like factories
+        - Structural Patterns, like Adapters or Proxies
+        - Behavioural Patterns, like &lt;code&gt;Visitor&lt;/code&gt; or &lt;code&gt;Strategy&lt;/code&gt;
+    These tend to be the same across different languages.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Architectural&lt;/em&gt; - the large-scale structure of your software system. The
+   language itself doesn’t make a lot of difference, an application would have
+   the same architecture whether it is written in Python or Java. The interface
+   between different components would be different, but the “organs” of the
+   body would essentially be the same.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="read-peps"&gt;Read PEPs&lt;/h2&gt;
+&lt;p&gt;A Python Enhancement Proposal is a document that’s written to propose a new
+feature of Python.&lt;/p&gt;
+&lt;p&gt;It fully details the proposed feature, the arguments for and against it, and
+lots of sample code.&lt;/p&gt;
+&lt;p&gt;If the &lt;span class="caps"&gt;PEP&lt;/span&gt; is accepted into a future version of Python, the &lt;span class="caps"&gt;PEP&lt;/span&gt; becomes
+the authoritative document for that feature and how to use it.&lt;/p&gt;
+&lt;p&gt;PEPs tend to be written by the best programmers in the world, so hang out with them.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-python-notes-1"&gt;
+&lt;a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction"&gt;Abstraction&lt;/a&gt; as a
+principal of &lt;span class="caps"&gt;OOP&lt;/span&gt; &lt;a href="#sf-python-notes-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Vim Notes: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"></link><published>2021-01-20T15:57:00+01:00</published><updated>2021-01-20T15:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/vim-notes-goto-tag-definition.html</id><summary type="html"></summary><content type="html">&lt;p&gt;There are multiple ways of doing anything with vim, including using Tags or
 going to where an something is defined. I usually need to do something at least
 3 times before I remember how to do it without breaking my focus or train of thought.&lt;/p&gt;
 &lt;p&gt;My memory is hazy but I remember spending a 1/2 day looking into this and
