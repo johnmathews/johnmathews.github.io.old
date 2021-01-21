@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-21T16:22:00+01:00</updated><entry><title>Vim Notes: Mastering Vim Quickly</title><link href="https://johnmathews.eu/vim-notes-mastering-vim-quickly.html" rel="alternate"></link><published>2021-01-21T16:22:00+01:00</published><updated>2021-01-21T16:22:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/vim-notes-mastering-vim-quickly.html</id><summary type="html"></summary><content type="html">&lt;ol&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-21T16:22:00+01:00</updated><entry><title>Vim Notes</title><link href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html" rel="alternate"></link><published>2021-01-21T16:22:00+01:00</published><updated>2021-01-21T16:22:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/notes-from-mastering-vim-quickly.html</id><summary type="html"></summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#verbs"&gt;Verbs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#registers"&gt;Registers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#searching"&gt;Searching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#undo"&gt;Undo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#splits"&gt;Splits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#macros"&gt;Macros&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#other"&gt;Other&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="verbs"&gt;Verbs&lt;/h2&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;s&lt;/code&gt; - delete char under cursor and enter Insert&amp;nbsp;Mode.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;r&lt;/code&gt; - replace char under&amp;nbsp;cursor.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g-&lt;/code&gt; and &lt;code&gt;g+&lt;/code&gt; - undo&amp;nbsp;branches.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g#&lt;/code&gt; or &lt;code&gt;g*&lt;/code&gt; for partial matches, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt; for exact&amp;nbsp;matches.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;C-O&amp;gt;&lt;/code&gt; in Insert Mode will jump you into Command Mode for one command only
-    and then put you back into Insert Mode&amp;nbsp;automatically.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c/hello&lt;/code&gt; - change until next occurrence of&amp;nbsp;&amp;#8216;hello&amp;#8217;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="registers"&gt;Registers&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;"ayy&lt;/code&gt; yank the entire row into register &lt;code&gt;a&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;"Ay&lt;/code&gt; yank to register A and append the new text to the existing contents of
+    the&amp;nbsp;register.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:registers&lt;/code&gt; - preview the contents of your&amp;nbsp;registers.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="searching"&gt;Searching&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;g#&lt;/code&gt; or &lt;code&gt;g*&lt;/code&gt; for partial matches, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt; for exact&amp;nbsp;matches. &lt;/li&gt;
 &lt;li&gt;Search for the word under the cursor, or similar:&lt;ol&gt;
 &lt;li&gt;Press &lt;code&gt;/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;C-r&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;C-W&amp;gt;&lt;/code&gt; - this will copy and paste the word under the cursor
+&lt;li&gt;&lt;code&gt;&amp;lt;C-R&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;C-W&amp;gt;&lt;/code&gt; - this will copy and paste the word under the cursor
      into the search box. Edit it as&amp;nbsp;necessary.&lt;/li&gt;
 &lt;li&gt;After you&amp;#8217;ve done your search, &lt;code&gt;&amp;lt;C-o&amp;gt;&lt;/code&gt; to jump back to where your cursor
      was&amp;nbsp;before.&lt;/li&gt;
@@ -16,6 +35,43 @@
 &lt;/li&gt;
 &lt;li&gt;Find and replace whole words only: &lt;code&gt;:s/&amp;lt;old_word\&amp;gt;/new/g&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Find and replace either old-word1 or old_word2: &lt;code&gt;:s/(old_word1\|old_word2\)/new/g&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g &amp;lt;C-G&amp;gt;&lt;/code&gt; - show some stats about current bugger - word count, line count,
+   char&amp;nbsp;count.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="undo"&gt;Undo&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;g-&lt;/code&gt; and &lt;code&gt;g+&lt;/code&gt; - undo&amp;nbsp;branches.&lt;/li&gt;
+&lt;li&gt;Under changes within a period of time:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:earlier 2d&lt;/code&gt; - undo changes in the last 2&amp;nbsp;days&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:later 5m&lt;/code&gt; - redo all changes in the last 5&amp;nbsp;minutes&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:earlier 3f&lt;/code&gt; - undo all changes in the last three buffer&amp;nbsp;writes&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; seconds, &lt;code&gt;m&lt;/code&gt; minutes, &lt;code&gt;h&lt;/code&gt; hours, &lt;code&gt;d&lt;/code&gt; days, &lt;code&gt;f&lt;/code&gt; saves&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:g/my_string/normal @a&lt;/code&gt; - Use the global command to execute macro &lt;code&gt;a&lt;/code&gt; on
+    all lines of the current buffer containing string&amp;nbsp;&amp;#8216;my_string&amp;#8217;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:g/good/s/bad/ugly/g&lt;/code&gt; - For every line containing “good” substitute all
+    “bad” with&amp;nbsp;“ugly”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="splits"&gt;Splits&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-W&amp;gt; r&lt;/code&gt; - rotate the splits from left to right but only if they are split
+    vertically. &lt;code&gt;&amp;lt;C-W&amp;gt; R&lt;/code&gt; - rotate the splits from right to left. &lt;code&gt;&amp;lt;C-W&amp;gt; H&lt;/code&gt; -
+    move the current split to the far left and make it full height. &lt;code&gt;&amp;lt;C-W&amp;gt; J&lt;/code&gt; -
+    move the current split to the bottom of the screen and use the full&amp;nbsp;width.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:only&lt;/code&gt; - close all splits except the current&amp;nbsp;split.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="macros"&gt;Macros&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;:g/pattern/norm @o&lt;/code&gt; - do the macro stored in buffer &lt;code&gt;O&lt;/code&gt; on all lines that
+    match the pattern&amp;nbsp;&amp;#8220;pattern&amp;#8221;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="other"&gt;Other&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-O&amp;gt;&lt;/code&gt; in Insert Mode will jump you into Command Mode for one command only
+    and then put you back into Insert Mode&amp;nbsp;automatically.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;.dot&lt;/code&gt; command only repeats commands that changes the buffer content. It
+    wont repeat navigation&amp;nbsp;commands.&lt;/li&gt;
 &lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes.html" rel="alternate"></link><published>2021-01-21T14:55:00+01:00</published><updated>2021-01-21T14:55:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/python-notes.html</id><summary type="html"></summary><content type="html">&lt;p&gt;The parts of Aaron Maxwell’s &lt;a href="https://twitter.com/powerfulpython"&gt;Power Python&lt;/a&gt;
 newsletter that I don’t want to forget:&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;

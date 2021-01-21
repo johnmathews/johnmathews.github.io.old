@@ -9,21 +9,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
 
-      <title>Vim Notes: Mastering Vim Quickly - JohnMathews.eu</title>
-      <meta name="title" content="Vim Notes: Mastering Vim Quickly -  JohnMathews.eu "/>
-      <meta property="og:title" content="Vim Notes: Mastering Vim Quickly"/>
-      <meta property="twitter:title" content="Vim Notes: Mastering Vim Quickly"/>
+      <title>Vim Notes - JohnMathews.eu</title>
+      <meta name="title" content="Vim Notes -  JohnMathews.eu "/>
+      <meta property="og:title" content="Vim Notes"/>
+      <meta property="twitter:title" content="Vim Notes"/>
 
       <meta name="keywords" content="  "/>
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" s - delete char under cursor and enter Insert Mode. r - replace char under cursor. g- and g+ - undo branches. g# or g* for partial matches, like # or * for exact matches. &lt;C-O&gt; in Insert Mode will... "/>
-      <meta name="twitter:description" content=" s - delete char under cursor and enter Insert Mode. r - replace char under cursor. g- and g+ - undo branches. g# or g* for partial matches, like # or * for exact matches. &lt;C-O&gt; in Insert Mode will... "/>
-      <meta property="og:description" content=" s - delete char under cursor and enter Insert Mode. r - replace char under cursor. g- and g+ - undo branches. g# or g* for partial matches, like # or * for exact matches. &lt;C-O&gt; in Insert Mode will... "/>
+      <meta name="description" content=" Table of Contents Verbs Registers Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace char under cursor. c/hello - change until next occurrence... "/>
+      <meta name="twitter:description" content=" Table of Contents Verbs Registers Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace char under cursor. c/hello - change until next occurrence... "/>
+      <meta property="og:description" content=" Table of Contents Verbs Registers Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace char under cursor. c/hello - change until next occurrence... "/>
 
-      <meta property="og:url" content="https://johnmathews.eu/vim-notes-mastering-vim-quickly.html"/>
-      <meta property="twitter:url" content="https://johnmathews.eu/vim-notes-mastering-vim-quickly.html"/>
+      <meta property="og:url" content="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"/>
 
       <meta name="twitter:image" content="https://johnmathews.eu/
 "/>
@@ -134,7 +134,7 @@
   <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  technical  ">
 
     <div class="markdown text-center dark:text-gray-200">
-      <h1> Vim Notes: Mastering Vim&nbsp;Quickly </h1>
+      <h1> Vim&nbsp;Notes </h1>
     </div>
 
     <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
@@ -154,16 +154,35 @@
     <main>
       <article>
         <div class="markdown dark:text-gray-200">
-          <ol>
+          <div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#verbs">Verbs</a></li>
+<li><a href="#registers">Registers</a></li>
+<li><a href="#searching">Searching</a></li>
+<li><a href="#undo">Undo</a></li>
+<li><a href="#splits">Splits</a></li>
+<li><a href="#macros">Macros</a></li>
+<li><a href="#other">Other</a></li>
+</ul>
+</div>
+<h2 id="verbs">Verbs</h2>
+<ol>
 <li><code>s</code> - delete char under cursor and enter Insert&nbsp;Mode.</li>
 <li><code>r</code> - replace char under&nbsp;cursor.</li>
-<li><code>g-</code> and <code>g+</code> - undo&nbsp;branches.</li>
-<li><code>g#</code> or <code>g*</code> for partial matches, like <code>#</code> or <code>*</code> for exact&nbsp;matches.</li>
-<li><code>&lt;C-O&gt;</code> in Insert Mode will jump you into Command Mode for one command only
-    and then put you back into Insert Mode&nbsp;automatically.</li>
+<li><code>c/hello</code> - change until next occurrence of&nbsp;&#8216;hello&#8217;</li>
+</ol>
+<h2 id="registers">Registers</h2>
+<ol>
+<li><code>"ayy</code> yank the entire row into register <code>a</code>.</li>
+<li><code>"Ay</code> yank to register A and append the new text to the existing contents of
+    the&nbsp;register.</li>
+<li><code>:registers</code> - preview the contents of your&nbsp;registers.</li>
+</ol>
+<h2 id="searching">Searching</h2>
+<ol>
+<li><code>g#</code> or <code>g*</code> for partial matches, like <code>#</code> or <code>*</code> for exact&nbsp;matches. </li>
 <li>Search for the word under the cursor, or similar:<ol>
 <li>Press <code>/</code></li>
-<li><code>&lt;C-r&gt;</code> <code>&lt;C-W&gt;</code> - this will copy and paste the word under the cursor
+<li><code>&lt;C-R&gt;</code> <code>&lt;C-W&gt;</code> - this will copy and paste the word under the cursor
      into the search box. Edit it as&nbsp;necessary.</li>
 <li>After you&#8217;ve done your search, <code>&lt;C-o&gt;</code> to jump back to where your cursor
      was&nbsp;before.</li>
@@ -171,6 +190,43 @@
 </li>
 <li>Find and replace whole words only: <code>:s/&lt;old_word\&gt;/new/g</code></li>
 <li>Find and replace either old-word1 or old_word2: <code>:s/(old_word1\|old_word2\)/new/g</code></li>
+<li><code>g &lt;C-G&gt;</code> - show some stats about current bugger - word count, line count,
+   char&nbsp;count.</li>
+</ol>
+<h2 id="undo">Undo</h2>
+<ol>
+<li><code>g-</code> and <code>g+</code> - undo&nbsp;branches.</li>
+<li>Under changes within a period of time:<ul>
+<li><code>:earlier 2d</code> - undo changes in the last 2&nbsp;days</li>
+<li><code>:later 5m</code> - redo all changes in the last 5&nbsp;minutes</li>
+<li><code>:earlier 3f</code> - undo all changes in the last three buffer&nbsp;writes</li>
+<li><code>s</code> seconds, <code>m</code> minutes, <code>h</code> hours, <code>d</code> days, <code>f</code> saves</li>
+</ul>
+</li>
+<li><code>:g/my_string/normal @a</code> - Use the global command to execute macro <code>a</code> on
+    all lines of the current buffer containing string&nbsp;&#8216;my_string&#8217;</li>
+<li><code>:g/good/s/bad/ugly/g</code> - For every line containing “good” substitute all
+    “bad” with&nbsp;“ugly”</li>
+</ol>
+<h2 id="splits">Splits</h2>
+<ol>
+<li><code>&lt;C-W&gt; r</code> - rotate the splits from left to right but only if they are split
+    vertically. <code>&lt;C-W&gt; R</code> - rotate the splits from right to left. <code>&lt;C-W&gt; H</code> -
+    move the current split to the far left and make it full height. <code>&lt;C-W&gt; J</code> -
+    move the current split to the bottom of the screen and use the full&nbsp;width.</li>
+<li><code>:only</code> - close all splits except the current&nbsp;split.</li>
+</ol>
+<h2 id="macros">Macros</h2>
+<ol>
+<li><code>:g/pattern/norm @o</code> - do the macro stored in buffer <code>O</code> on all lines that
+    match the pattern&nbsp;&#8220;pattern&#8221;</li>
+</ol>
+<h2 id="other">Other</h2>
+<ol>
+<li><code>&lt;C-O&gt;</code> in Insert Mode will jump you into Command Mode for one command only
+    and then put you back into Insert Mode&nbsp;automatically.</li>
+<li>The <code>.dot</code> command only repeats commands that changes the buffer content. It
+    wont repeat navigation&nbsp;commands.</li>
 </ol>
         </div>
       </article>
@@ -224,8 +280,8 @@
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
                 var disqus_config = function () {
-                          this.page.url = "https://johnmathews.eu/vim-notes-mastering-vim-quickly.html";  // Replace PAGE_URL with your page's canonical URL variable
-                          this.page.identifier = "vim-notes-mastering-vim-quickly.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                          this.page.url = "https://johnmathews.eu/notes-from-mastering-vim-quickly.html";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "notes-from-mastering-vim-quickly.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
                 (function() { // DON'T EDIT BELOW THIS LINE
                           var d = document, s = d.createElement('script');
