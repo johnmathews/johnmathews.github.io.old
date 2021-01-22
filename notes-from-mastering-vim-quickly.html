@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" Table of Contents Verbs Registers Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace char under cursor. c/hello - change until next occurrence... "/>
-      <meta name="twitter:description" content=" Table of Contents Verbs Registers Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace char under cursor. c/hello - change until next occurrence... "/>
-      <meta property="og:description" content=" Table of Contents Verbs Registers Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace char under cursor. c/hello - change until next occurrence... "/>
+      <meta name="description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace... "/>
+      <meta name="twitter:description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace... "/>
+      <meta property="og:description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"/>
@@ -157,6 +157,10 @@
           <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#verbs">Verbs</a></li>
 <li><a href="#registers">Registers</a></li>
+<li><a href="#insert-mode">Insert&nbsp;Mode</a></li>
+<li><a href="#normal-mode">Normal&nbsp;Mode</a></li>
+<li><a href="#visual-block-mode-ltc-vgt">Visual Block Mode&nbsp;&lt;C-V&gt;</a></li>
+<li><a href="#ranges">Ranges</a></li>
 <li><a href="#searching">Searching</a></li>
 <li><a href="#undo">Undo</a></li>
 <li><a href="#splits">Splits</a></li>
@@ -176,6 +180,31 @@
 <li><code>"Ay</code> yank to register A and append the new text to the existing contents of
     the&nbsp;register.</li>
 <li><code>:registers</code> - preview the contents of your&nbsp;registers.</li>
+</ol>
+<h2 id="insert-mode">Insert&nbsp;Mode</h2>
+<ol>
+<li><code>&lt;C-W&gt;</code> - delete back one&nbsp;word.</li>
+<li><code>&lt;C-U&gt;</code> - delete back to the start of the line or start of current&nbsp;insert.</li>
+<li><code>cgn</code> - if you are searching for a word (either by using <code>/</code> or <code>*</code> or <code>#</code>)
+   and you want to change each instance of the search result, use <code>&lt;verb&gt;gn</code> to
+   <em>change</em> or <em>delete</em> and then go to the next result. This will let you use
+   the <code>.dot</code> operator to repeat both the steps (moving and&nbsp;changing).</li>
+<li><code>&lt;C-R&gt; 0</code> - paste. <code>&lt;C-R&gt;&lt;C-P&gt;0</code> if there are new-line chars causing&nbsp;trouble.</li>
+</ol>
+<h2 id="normal-mode">Normal&nbsp;Mode</h2>
+<ol>
+<li><code>&lt;C-A&gt;</code> or <code>&lt;C-X</code> increase or decrease a&nbsp;number</li>
+</ol>
+<h2 id="visual-block-mode-ltc-vgt">Visual Block Mode <code>&lt;C-V&gt;</code></h2>
+<ol>
+<li>Select a column of numbers you want to increment, then <code>g&lt;C-A&gt;</code> will turn
+   them into an incremented&nbsp;list.</li>
+</ol>
+<h2 id="ranges">Ranges</h2>
+<ol>
+<li><code>:put =range(1,10)</code> - insert a list of ascending&nbsp;numbers</li>
+<li><code>:for i in range(1,100) | put ='192.168.1.'.i | endfor</code> - use a loop to
+   generate a long&nbsp;list</li>
 </ol>
 <h2 id="searching">Searching</h2>
 <ol>

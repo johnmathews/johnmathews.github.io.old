@@ -2,6 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/developer-tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-21T16:22:00+01:00</updated><entry><title>Vim Notes</title><link href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html" rel="alternate"></link><published>2021-01-21T16:22:00+01:00</published><updated>2021-01-21T16:22:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/notes-from-mastering-vim-quickly.html</id><summary type="html"></summary><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#verbs"&gt;Verbs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#registers"&gt;Registers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#insert-mode"&gt;Insert&amp;nbsp;Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#normal-mode"&gt;Normal&amp;nbsp;Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#visual-block-mode-ltc-vgt"&gt;Visual Block Mode&amp;nbsp;&amp;lt;C-V&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ranges"&gt;Ranges&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#searching"&gt;Searching&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#undo"&gt;Undo&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#splits"&gt;Splits&lt;/a&gt;&lt;/li&gt;
@@ -21,6 +25,31 @@
 &lt;li&gt;&lt;code&gt;"Ay&lt;/code&gt; yank to register A and append the new text to the existing contents of
     the&amp;nbsp;register.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:registers&lt;/code&gt; - preview the contents of your&amp;nbsp;registers.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="insert-mode"&gt;Insert&amp;nbsp;Mode&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-W&amp;gt;&lt;/code&gt; - delete back one&amp;nbsp;word.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-U&amp;gt;&lt;/code&gt; - delete back to the start of the line or start of current&amp;nbsp;insert.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cgn&lt;/code&gt; - if you are searching for a word (either by using &lt;code&gt;/&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt; or &lt;code&gt;#&lt;/code&gt;)
+   and you want to change each instance of the search result, use &lt;code&gt;&amp;lt;verb&amp;gt;gn&lt;/code&gt; to
+   &lt;em&gt;change&lt;/em&gt; or &lt;em&gt;delete&lt;/em&gt; and then go to the next result. This will let you use
+   the &lt;code&gt;.dot&lt;/code&gt; operator to repeat both the steps (moving and&amp;nbsp;changing).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-R&amp;gt; 0&lt;/code&gt; - paste. &lt;code&gt;&amp;lt;C-R&amp;gt;&amp;lt;C-P&amp;gt;0&lt;/code&gt; if there are new-line chars causing&amp;nbsp;trouble.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="normal-mode"&gt;Normal&amp;nbsp;Mode&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-A&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;C-X&lt;/code&gt; increase or decrease a&amp;nbsp;number&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="visual-block-mode-ltc-vgt"&gt;Visual Block Mode &lt;code&gt;&amp;lt;C-V&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Select a column of numbers you want to increment, then &lt;code&gt;g&amp;lt;C-A&amp;gt;&lt;/code&gt; will turn
+   them into an incremented&amp;nbsp;list.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="ranges"&gt;Ranges&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;:put =range(1,10)&lt;/code&gt; - insert a list of ascending&amp;nbsp;numbers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:for i in range(1,100) | put ='192.168.1.'.i | endfor&lt;/code&gt; - use a loop to
+   generate a long&amp;nbsp;list&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="searching"&gt;Searching&lt;/h2&gt;
 &lt;ol&gt;
@@ -1237,12 +1266,31 @@ loading&lt;/a&gt; option decreased loading time by&amp;nbsp;0.3s&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/chapter13.zip"&gt;end&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"></category><category term="Git"></category><category term="Rys"></category><category term="Tutorial"></category><category term="Ryan Hodson"></category></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"></link><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard shortcuts. It&amp;#8217;s based on the Vi text editor from the 1970&amp;#8217;s. It was first released in 1991 and is still being developed today. It comes pre-installed on Unix systems (including MacOS) and can be run from the&amp;nbsp;terminal.&lt;/p&gt;
-&lt;p&gt;Vim is famous in another way too - for being difficult to learn. I found some good and remarkably creative tools to begin learning its concepts and controls. This was necessary because there is no &lt;span class="caps"&gt;GUI&lt;/span&gt;. There is a &lt;em&gt;game&lt;/em&gt; &lt;a href="http://vim-adventures.com/"&gt;here&lt;/a&gt;, and there is &lt;a href="http://www.openvim.com/"&gt;this interactive tutorial&lt;/a&gt;. There&amp;#8217;s also a built-in vim tutorial - just type &amp;#8216;vimtutor&amp;#8217; into&amp;nbsp;Terminal.&lt;/p&gt;
-&lt;p&gt;Vim is designed so that you don&amp;#8217;t need to take your hands off your keyboard and use a mouse. It has the &amp;#8216;insert&amp;#8217; mode where you enter text as usual, and the &amp;#8216;command&amp;#8217; mode where you can make use of a comprehensive and flexible shortcut language to move around, edit and search the text. With no &lt;span class="caps"&gt;GUI&lt;/span&gt; or toolbar, it&amp;#8217;s a very different approach to text editing than I&amp;#8217;m used&amp;nbsp;to.&lt;/p&gt;
-&lt;p&gt;You can run Vim from the terminal, but there are also versions that run as apps. MacVim on MacOS has the option to show a tool bar of simple commands like a normal program, and lets the arrow keys move the cursor in addition to &lt;span class="caps"&gt;VIM&lt;/span&gt;&amp;#8217;s &amp;#8216;hjkl&amp;#8217; functionality. This makes getting started a little&amp;nbsp;simpler.&lt;/p&gt;
-&lt;p&gt;There are also a lot of plugins to extend Vim&amp;#8217;s functionality and turn it from a text editor into an &lt;span class="caps"&gt;IDE&lt;/span&gt;. &lt;a href="https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/"&gt;This post&lt;/a&gt; walks you through setting up Vim as a Python &lt;span class="caps"&gt;IDE&lt;/span&gt; and explains how to manage various&amp;nbsp;add-ons.&lt;/p&gt;
-&lt;p&gt;I recommend Daniel Mieslers &lt;a href="https://danielmiessler.com/study/vim/"&gt;blog post&lt;/a&gt; for a quick overview of how to use&amp;nbsp;Vim.&lt;/p&gt;</content><category term="Technical/Developer Tools"></category><category term="Vim"></category></entry><entry><title>Autumn, BIN and $PATH</title><link href="https://johnmathews.eu/autumn-bin-and-path.html" rel="alternate"></link><published>2016-12-01T21:53:00+01:00</published><updated>2016-12-01T21:53:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/autumn-bin-and-path.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Two small things have been learnt recently: the importance of &lt;span class="caps"&gt;PATH&lt;/span&gt; and
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"></category><category term="Git"></category><category term="Rys"></category><category term="Tutorial"></category><category term="Ryan Hodson"></category></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"></link><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
+shortcuts. It&amp;#8217;s based on the Vi text editor from the 1970&amp;#8217;s. It was first
+released in 1991 and is still being developed today. It comes pre-installed on
+Unix systems (including MacOS) and can be run from the&amp;nbsp;terminal.&lt;/p&gt;
+&lt;p&gt;Vim is famous in another way too - for being difficult to learn. I found some
+good and remarkably creative tools to begin learning its concepts and controls.
+This was necessary because there is no &lt;span class="caps"&gt;GUI&lt;/span&gt;. There is a
+&lt;em&gt;game&lt;/em&gt; &lt;a href="http://vim-adventures.com/"&gt;here&lt;/a&gt;, and there is &lt;a href="http://www.openvim.com/"&gt;this interactive
+tutorial&lt;/a&gt;. There&amp;#8217;s also a built-in vim tutorial - just
+type &amp;#8216;vimtutor&amp;#8217; into&amp;nbsp;Terminal.&lt;/p&gt;
+&lt;p&gt;Vim is designed so that you don&amp;#8217;t need to take your hands off your keyboard and
+use a mouse. It has the &amp;#8216;insert&amp;#8217; mode where you enter text as usual, and the
+&amp;#8216;command&amp;#8217; mode where you can make use of a comprehensive and flexible shortcut
+language to move around, edit and search the text. With no &lt;span class="caps"&gt;GUI&lt;/span&gt; or toolbar, it&amp;#8217;s
+a very different approach to text editing than I&amp;#8217;m used&amp;nbsp;to.&lt;/p&gt;
+&lt;p&gt;You can run Vim from the terminal, but there are also versions that run as
+apps. MacVim on MacOS has the option to show a tool bar of simple commands like
+a normal program, and lets the arrow keys move the cursor in addition to &lt;span class="caps"&gt;VIM&lt;/span&gt;&amp;#8217;s
+&amp;#8216;hjkl&amp;#8217; functionality. This makes getting started a little&amp;nbsp;simpler.&lt;/p&gt;
+&lt;p&gt;There are also a lot of plugins to extend Vim&amp;#8217;s functionality and turn it from
+a text editor into an &lt;span class="caps"&gt;IDE&lt;/span&gt;. &lt;a href="https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/"&gt;This
+post&lt;/a&gt; walks
+you through setting up Vim as a Python &lt;span class="caps"&gt;IDE&lt;/span&gt; and explains how to manage various&amp;nbsp;add-ons.&lt;/p&gt;
+&lt;p&gt;I recommend Daniel Mieslers &lt;a href="https://danielmiessler.com/study/vim/"&gt;blog post&lt;/a&gt;
+for a quick overview of how to use&amp;nbsp;Vim.&lt;/p&gt;</content><category term="Technical/Developer Tools"></category><category term="Vim"></category></entry><entry><title>Autumn, BIN and $PATH</title><link href="https://johnmathews.eu/autumn-bin-and-path.html" rel="alternate"></link><published>2016-12-01T21:53:00+01:00</published><updated>2016-12-01T21:53:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/autumn-bin-and-path.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Two small things have been learnt recently: the importance of &lt;span class="caps"&gt;PATH&lt;/span&gt; and
 the contents of various &lt;span class="caps"&gt;BIN&lt;/span&gt;&amp;nbsp;folders.&lt;/p&gt;
 &lt;p&gt;Autumn 2016 has not gone as planned. Whilst studying for a couple of
 exams plans were put on hold and hobbies were ceased. Now that life is
