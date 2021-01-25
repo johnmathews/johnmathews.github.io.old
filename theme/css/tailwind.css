@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 
+/* checkboxes in markdown */
+.markdown .checklist {
+  @apply list-none
+}
+
+.markdown .checklist input[type="checkbox"] {
+  @apply w-8 h-8 align-middle -mt-1 -ml-10
+}
 
 /* icons to toggle dark mode*/
 #darkMode:hover{

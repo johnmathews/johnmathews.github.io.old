@@ -154,30 +154,30 @@
     <main>
       <article>
         <div class="markdown dark:text-gray-200">
-          <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &#8220;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&#8221;&nbsp;widget.</p>
-<p>Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a pragmatic engineer, it seemed clear to me what the next widget should do: If my first widget calculated the time since an event, the next should calculate the time until an event. I set out to create the companion to &#8220;Time Since&#8221; and
+          <p>In a <a href="https://johnmathews.eu/ubersicht-widget-time-since.html">previous post</a> I described how I was introduced to CoffeeScript via <a href="http://tracesof.net/uebersicht/">Übersicht</a>, the desktop widget app for <span class="caps">OS</span> X, and eventually published the &ldquo;<a href="http://tracesof.net/uebersicht-widgets/#time_since">Time Since</a>&rdquo;&nbsp;widget.</p>
+<p>Seeing a few people download the widget was really satisfying, and I was soon wondering what else I could publish. As a pragmatic engineer, it seemed clear to me what the next widget should do: If my first widget calculated the time since an event, the next should calculate the time until an event. I set out to create the companion to &ldquo;Time Since&rdquo; and
 improve upon the underlying&nbsp;code.</p>
 <p>My first code design choice was to cut out the use of an Apple Script and calculated everything in one CoffeeScript file. It would be more efficient and easier to&nbsp;read.</p>
-<p>Unfortunately I soon began to realise why the original widget I&#8217;d based &#8220;Time Since&#8221; on had used AppleScript to calculate the time elapsed. Date-Times are fiddly to work with in many languages, and this is true in JavaScript&nbsp;also.</p>
+<p>Unfortunately I soon began to realise why the original widget I&rsquo;d based &ldquo;Time Since&rdquo; on had used AppleScript to calculate the time elapsed. Date-Times are fiddly to work with in many languages, and this is true in JavaScript&nbsp;also.</p>
 <p>My code began to look increasingly like spaghetti as I tried to achieve 6 key&nbsp;features:</p>
 <ol>
 <li>Calculate the number of months and days between two dates
     (complicated by the varying number of days in different&nbsp;months)</li>
 <li>Add the option to specify the level of detail in the output text (to
     the minute, to the hour, to the day,&nbsp;etc.)</li>
-<li>Remove any 0 amounts from the output (&#8220;2 Months and 5 Hours&#8221; not &#8220;2
-    Months, 0 Days and 5&nbsp;Hours&#8221;)</li>
-<li>Add the option to abbreviate times (&#8216;years&#8217; → &#8216;y&#8217;, &#8216;hours&#8217; → &#8216;h&#8217;,
-    &#8216;and&#8217; → &#8216;&amp;&#8217;,&nbsp;etc.)</li>
+<li>Remove any 0 amounts from the output (&ldquo;2 Months and 5 Hours&rdquo; not &ldquo;2
+    Months, 0 Days and 5&nbsp;Hours&rdquo;)</li>
+<li>Add the option to abbreviate times (&lsquo;years&rsquo; → &lsquo;y&rsquo;, &lsquo;hours&rsquo; → &lsquo;h&rsquo;,
+    &lsquo;and&rsquo; → &lsquo;&amp;&rsquo;,&nbsp;etc.)</li>
 <li>Output a grammatically correct sentence (correct pluralisation and
-    comma separated terms, with an &#8220;and&#8221; between the last two&nbsp;terms)</li>
+    comma separated terms, with an &ldquo;and&rdquo; between the last two&nbsp;terms)</li>
 <li>Prepend and append users defined&nbsp;strings</li>
 </ol>
 <p>After a few frustrating hours, it was clear that it would be a lot easier to modify the existing AppleScript rather than reinvent the wheel in JavaScript. I decided to use it instead of using only JavaScript as I knew the AppleScript file could correctly consider the number of days in
 the months between the 2 dates (feature 1), and it contains a function to pluralise the correct parts of the string (feature&nbsp;5).</p>
-<p>The remaining features were added by using a combination of if statements and arrays. The if statements simply ask if an amount is equal to zero. If not, then it&#8217;s appended to an array of terms to include in the output. At the end of this code chunk it&#8217;s possible to ask how many non-zero terms to include in the output. An array with length one less than the number of output terms is created and filled with commas with an &#8216;and&#8217; in the final&nbsp;position.</p>
+<p>The remaining features were added by using a combination of if statements and arrays. The if statements simply ask if an amount is equal to zero. If not, then it&rsquo;s appended to an array of terms to include in the output. At the end of this code chunk it&rsquo;s possible to ask how many non-zero terms to include in the output. An array with length one less than the number of output terms is created and filled with commas with an &lsquo;and&rsquo; in the final&nbsp;position.</p>
 <p>The two arrays are combined in the correct order by looping through the index of the longer array and appending each term to a final array. The final array is the&nbsp;output.</p>
-<p><em><span class="quo">&#8216;</span><a href="http://tracesof.net/uebersicht-widgets/#time_until">Time Until</a>&#8217;</em> can be downloaded from the <a href="http://tracesof.net/uebersicht/">Übersicht</a> <a href="http://tracesof.net/uebersicht-widgets/">widgets gallery</a>. I think another useful feature would be an option to specify the output only in terms of a chosen amount, such as weeks or days. Maybe I&#8217;ll do that in the&nbsp;future.</p>
+<p><em><span class="quo">&lsquo;</span><a href="http://tracesof.net/uebersicht-widgets/#time_until">Time Until</a>&lsquo;</em> can be downloaded from the <a href="http://tracesof.net/uebersicht/">Übersicht</a> <a href="http://tracesof.net/uebersicht-widgets/">widgets gallery</a>. I think another useful feature would be an option to specify the output only in terms of a chosen amount, such as weeks or days. Maybe I&rsquo;ll do that in the&nbsp;future.</p>
         </div>
       </article>
     </main>

@@ -161,7 +161,7 @@
           <p>Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a&nbsp;niggle.</p>
 <p>I wanted to find out which components were causing the most delay, so I used
 <code>time</code> to measure how long it took to launch a shell. Even though shells
-might appear to be part of the low level &#8216;guts&#8217; of a computer, each shell is
+might appear to be part of the low level &lsquo;guts&rsquo; of a computer, each shell is
 just an executable and can be treated as&nbsp;such.</p>
 <p>To measure the startup speed of your shell,&nbsp;do:</p>
 <div class="highlight"><pre><span></span><span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="m">10</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span> /usr/bin/time <span class="nv">$SHELL</span> -i -c exit<span class="p">;</span> <span class="k">done</span>
@@ -184,7 +184,7 @@ a summary of how much time each subproccess required to run, i.e. an order blind
 Now when I start <code>zsh</code> I see the&nbsp;following:</p>
 <p><img alt="zsh startup components" src="https://johnmathews.eu/images/zsh_order_blind_profiling.jpg"></p>
 <p>Next steps - make virtualenvwrapper run faster, or asyncronously, or
-not at&nbsp;all&#8230;</p>
+not at&nbsp;all&hellip;</p>
 <p>Update:
 <code>virtualenvwrapper</code> is the biggest cause of slow loading. Using the <a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">lazy
 loading</a> option decreased loading time by&nbsp;0.3s</p>

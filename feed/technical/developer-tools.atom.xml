@@ -17,7 +17,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;s&lt;/code&gt; - delete char under cursor and enter Insert&amp;nbsp;Mode.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;r&lt;/code&gt; - replace char under&amp;nbsp;cursor.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;c/hello&lt;/code&gt; - change until next occurrence of&amp;nbsp;&amp;#8216;hello&amp;#8217;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c/hello&lt;/code&gt; - change until next occurrence of&amp;nbsp;&amp;lsquo;hello&amp;rsquo;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="registers"&gt;Registers&lt;/h2&gt;
 &lt;ol&gt;
@@ -58,7 +58,7 @@
 &lt;li&gt;Press &lt;code&gt;/&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;C-R&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;C-W&amp;gt;&lt;/code&gt; - this will copy and paste the word under the cursor
      into the search box. Edit it as&amp;nbsp;necessary.&lt;/li&gt;
-&lt;li&gt;After you&amp;#8217;ve done your search, &lt;code&gt;&amp;lt;C-o&amp;gt;&lt;/code&gt; to jump back to where your cursor
+&lt;li&gt;After you&amp;rsquo;ve done your search, &lt;code&gt;&amp;lt;C-o&amp;gt;&lt;/code&gt; to jump back to where your cursor
      was&amp;nbsp;before.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
@@ -78,7 +78,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:g/my_string/normal @a&lt;/code&gt; - Use the global command to execute macro &lt;code&gt;a&lt;/code&gt; on
-    all lines of the current buffer containing string&amp;nbsp;&amp;#8216;my_string&amp;#8217;&lt;/li&gt;
+    all lines of the current buffer containing string&amp;nbsp;&amp;lsquo;my_string&amp;rsquo;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:g/good/s/bad/ugly/g&lt;/code&gt; - For every line containing “good” substitute all
     “bad” with&amp;nbsp;“ugly”&lt;/li&gt;
 &lt;/ol&gt;
@@ -93,7 +93,7 @@
 &lt;h2 id="macros"&gt;Macros&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;:g/pattern/norm @o&lt;/code&gt; - do the macro stored in buffer &lt;code&gt;O&lt;/code&gt; on all lines that
-    match the pattern&amp;nbsp;&amp;#8220;pattern&amp;#8221;&lt;/li&gt;
+    match the pattern&amp;nbsp;&amp;ldquo;pattern&amp;rdquo;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="other"&gt;Other&lt;/h2&gt;
 &lt;ol&gt;
@@ -353,40 +353,40 @@ called or mentioned within the class definition, but is called from the
 function returns. I don’t understand why it needs an &lt;code&gt;@property&lt;/code&gt; decorator though.&lt;/p&gt;
 &lt;p&gt;The class inherits from &lt;code&gt;URLWrapper&lt;/code&gt; so that is probably the next best place to
 look… Indeed, looking at the definition of &lt;code&gt;URLWrapper&lt;/code&gt; shows that the
-&lt;code&gt;as_dict&lt;/code&gt; method is overriding the definition in the base class.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-debugging-more-categories-pelican-plugin-1"&gt;I guess it’s the “curse of knowledge” &lt;a href="#sf-debugging-more-categories-pelican-plugin-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Becoming A Better Python Developer</title><link href="https://johnmathews.eu/becoming-a-better-python-developer.html" rel="alternate"></link><published>2021-01-18T11:25:00+01:00</published><updated>2021-01-18T11:25:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/becoming-a-better-python-developer.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;#8217;ve been subscribed to Aaron Maxwell&amp;#8217;s &amp;#8220;Powerful Python&amp;#8221; newsletter for over a
+&lt;code&gt;as_dict&lt;/code&gt; method is overriding the definition in the base class.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-debugging-more-categories-pelican-plugin-1"&gt;I guess it’s the “curse of knowledge” &lt;a href="#sf-debugging-more-categories-pelican-plugin-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Becoming A Better Python Developer</title><link href="https://johnmathews.eu/becoming-a-better-python-developer.html" rel="alternate"></link><published>2021-01-18T11:25:00+01:00</published><updated>2021-01-18T11:25:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/becoming-a-better-python-developer.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;rsquo;ve been subscribed to Aaron Maxwell&amp;rsquo;s &amp;ldquo;Powerful Python&amp;rdquo; newsletter for over a
 year and I really like it. His emails are opinionated and candid, and
 singularly focussed. He seems passionate about what he does and I like&amp;nbsp;that.&lt;/p&gt;
 &lt;p&gt;Ultimately, the emails are designed to drive sign-ups for his courses which I
 suspect would be very good, but there is a lot of value in the free emails.
 Thanks Aaron. I realised that the emails are sequential and each subscriber
 gets the same sequence of messages regardless of when they signed up. There is
-the &amp;#8216;first&amp;#8217; message, and then the &amp;#8216;second&amp;#8217;, and they kind of progress and&amp;nbsp;flow.&lt;/p&gt;
+the &amp;lsquo;first&amp;rsquo; message, and then the &amp;lsquo;second&amp;rsquo;, and they kind of progress and&amp;nbsp;flow.&lt;/p&gt;
 &lt;p&gt;This means that there are more benefits to paying attention than for usual
-email subscriptions. Even though the emails arrive when I&amp;#8217;m at a
-supermarket, or making dinner for my kids, it&amp;#8217;s good to try and read it
+email subscriptions. Even though the emails arrive when I&amp;rsquo;m at a
+supermarket, or making dinner for my kids, it&amp;rsquo;s good to try and read it
 properly&amp;nbsp;later.&lt;/p&gt;
 &lt;p&gt;After being subscribed for several months, I unsubscribed and resubscribed. Now
-that I know how reliable and high quality this advice is I&amp;#8217;m going to
+that I know how reliable and high quality this advice is I&amp;rsquo;m going to
 prioritise working through the examples and doing some of what I missed the
-first time. I&amp;#8217;ve gone back to the beginning to reinforce the parts I know and
+first time. I&amp;rsquo;ve gone back to the beginning to reinforce the parts I know and
 to try again with what eluded me the first&amp;nbsp;time.&lt;/p&gt;
 &lt;p&gt;Three kinds of practice projects to become a better&amp;nbsp;developer:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;A web app - use &lt;code&gt;Django&lt;/code&gt; if you don&amp;#8217;t know which framework to user. Done&amp;nbsp;this.&lt;/li&gt;
-&lt;li&gt;A command line tool - use the &lt;code&gt;argparse&lt;/code&gt; module, because it&amp;#8217;s in the standard
-   library. Haven&amp;#8217;t done this yet, I guess now is a good time to start. It
+&lt;li&gt;A web app - use &lt;code&gt;Django&lt;/code&gt; if you don&amp;rsquo;t know which framework to user. Done&amp;nbsp;this.&lt;/li&gt;
+&lt;li&gt;A command line tool - use the &lt;code&gt;argparse&lt;/code&gt; module, because it&amp;rsquo;s in the standard
+   library. Haven&amp;rsquo;t done this yet, I guess now is a good time to start. It
    seems like the simplest and quickest of the three kinds of project, and I
    can see how useful it could be - it lets you use the app in many different
    contexts, outside the python eco-system and anywhere command line tools can
    be used&amp;nbsp;(everywhere).&lt;/li&gt;
-&lt;li&gt;A machine learning model - I&amp;#8217;ve already studied this, from theory (&lt;code&gt;numpy&lt;/code&gt;)
-   to frameworks (&lt;code&gt;tensorflow&lt;/code&gt;). I&amp;#8217;m happy to see it&amp;#8217;s&amp;nbsp;included.&lt;/li&gt;
+&lt;li&gt;A machine learning model - I&amp;rsquo;ve already studied this, from theory (&lt;code&gt;numpy&lt;/code&gt;)
+   to frameworks (&lt;code&gt;tensorflow&lt;/code&gt;). I&amp;rsquo;m happy to see it&amp;rsquo;s&amp;nbsp;included.&lt;/li&gt;
 &lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Vim For Large Projects</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"></link><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I use Vim as my text editor and as my &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free and open
 source, and I like that I can customize it. This post is about the most useful
-plugins and features I&amp;#8217;ve started using this year. There&amp;#8217;s a copy of my
+plugins and features I&amp;rsquo;ve started using this year. There&amp;rsquo;s a copy of my
 &lt;code&gt;.vimrc&lt;/code&gt; at the&amp;nbsp;end.&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m happy to invest some time and effort into learning how to make the most of
-vim and its plugins because I&amp;#8217;m confident that I&amp;#8217;ll still be using it twenty
+&lt;p&gt;I&amp;rsquo;m happy to invest some time and effort into learning how to make the most of
+vim and its plugins because I&amp;rsquo;m confident that I&amp;rsquo;ll still be using it twenty
 years from&amp;nbsp;now.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -396,13 +396,13 @@ years from&amp;nbsp;now.&lt;/p&gt;
 &lt;p&gt;Vim will look in this file when it opens a buffer of the corresponding
  file type. Good for formatting options like line length, tab spaces, vim
  commands that are language&amp;nbsp;specific. &lt;/p&gt;
-&lt;p&gt;You can&amp;#8217;t activate plugins in these files though. All the plugins have to be
+&lt;p&gt;You can&amp;rsquo;t activate plugins in these files though. All the plugins have to be
  activated in your &lt;code&gt;.vimrc&lt;/code&gt; in the usual&amp;nbsp;way.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;janko-m/vim-test&lt;/code&gt; - this plugin lets you runs tests without leaving vim.
-   You can run the test that&amp;#8217;s nearest the cursor, or all the tests in the
-   current buffer. It&amp;#8217;s very customizable. I wish it could be a bit faster, but
+   You can run the test that&amp;rsquo;s nearest the cursor, or all the tests in the
+   current buffer. It&amp;rsquo;s very customizable. I wish it could be a bit faster, but
    I could probably improve that myself by changing some&amp;nbsp;settings.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -412,7 +412,7 @@ years from&amp;nbsp;now.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;junegunn/fzf&lt;/code&gt; and &lt;code&gt;junegunn/fzf.vim&lt;/code&gt; - It took a little getting used to at
-   first, but now I can&amp;#8217;t imagine not using a tool like this (this could be
+   first, but now I can&amp;rsquo;t imagine not using a tool like this (this could be
    said about so many vim-related things). Use &lt;code&gt;fzf&lt;/code&gt; to switch between open
    buffers, open a new file, search for files using the filename, or search
    within all the files in the project for specific&amp;nbsp;text. &lt;/p&gt;
@@ -967,7 +967,7 @@ modular code base architecture with the code broken down into testable&amp;nbsp;
 files spread across a tree of directories, and the average number of lines of code per file is significantly&amp;nbsp;lower.&lt;/p&gt;
 &lt;h2 id="ide-features"&gt;&lt;span class="caps"&gt;IDE&lt;/span&gt;&amp;nbsp;features&lt;/h2&gt;
 &lt;p&gt;These differences mean that code organization tools and &lt;span class="caps"&gt;IDE&lt;/span&gt; features play very
-different roles within each industry. In web development you really need to be able to jump between different files (or buffers) quickly, and search for text across multiple files. Writing idiomatically becomes more important, and writing code within discreet testable units becomes essential so that things don&amp;#8217;t break without being&amp;nbsp;noticed.&lt;/p&gt;
+different roles within each industry. In web development you really need to be able to jump between different files (or buffers) quickly, and search for text across multiple files. Writing idiomatically becomes more important, and writing code within discreet testable units becomes essential so that things don&amp;rsquo;t break without being&amp;nbsp;noticed.&lt;/p&gt;
 &lt;p&gt;In data science, linting feels more optional, and searching for text within  methods or functions outside the current module is&amp;nbsp;rarer.&lt;/p&gt;
 &lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web&amp;nbsp;apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Test Driven Development</title><link href="https://johnmathews.eu/test-driven-development.html" rel="alternate"></link><published>2021-01-06T17:50:00+01:00</published><updated>2021-01-06T17:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-06:/test-driven-development.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Test Driven Development was mind-bending when I first grappled with it.
 Last summer I was building a web app using Django and began to break things
@@ -1003,14 +1003,14 @@ testing for the sake of it doesn’t necessarily stop bad things happening. Its 
 written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours happen. &lt;a href="#sf-test-driven-development-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>How To Design An API</title><link href="https://johnmathews.eu/api-design.html" rel="alternate"></link><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/api-design.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;design:&lt;/p&gt;
 &lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;It&amp;#8217;s more of an art than a&amp;nbsp;science&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s more of an art than a&amp;nbsp;science&lt;/li&gt;
 &lt;li&gt;RESTful (REpresentational State Transfer) &lt;span class="caps"&gt;API&lt;/span&gt; design is an architectural&amp;nbsp;style.&lt;/li&gt;
 &lt;li&gt;Alternative &lt;span class="caps"&gt;API&lt;/span&gt; architectures:&lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;SOAP&lt;/span&gt; (Simple Object Access Protocol) is a heavier&amp;nbsp;style.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;GraphQL&lt;/code&gt; - doesnt overfetch. Graph query language made by&amp;nbsp;Facebook.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;APIs are everywhere (not just web APIs). They&amp;#8217;re an &lt;a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction"&gt;abstraction&lt;/a&gt; that hides an implementation. &lt;code&gt;Django&lt;/code&gt; model managers are an &lt;span class="caps"&gt;API&lt;/span&gt; (and also part of Django&amp;#8217;s &lt;span class="caps"&gt;ORM&lt;/span&gt;), JavaScript is an &lt;span class="caps"&gt;API&lt;/span&gt;,&amp;nbsp;etc.&lt;/li&gt;
+&lt;li&gt;APIs are everywhere (not just web APIs). They&amp;rsquo;re an &lt;a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction"&gt;abstraction&lt;/a&gt; that hides an implementation. &lt;code&gt;Django&lt;/code&gt; model managers are an &lt;span class="caps"&gt;API&lt;/span&gt; (and also part of Django&amp;rsquo;s &lt;span class="caps"&gt;ORM&lt;/span&gt;), JavaScript is an &lt;span class="caps"&gt;API&lt;/span&gt;,&amp;nbsp;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="restful-apis"&gt;RESTful&amp;nbsp;APIs&lt;/h2&gt;
 &lt;ul&gt;
@@ -1107,7 +1107,7 @@ written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours�
 &lt;li&gt;Instance methods compared to class methods.&lt;/li&gt;
 &lt;li&gt;Inheritance, mixins, and decorators.&lt;/li&gt;
 &lt;li&gt;The “magic” within the &lt;code&gt;Django&lt;/code&gt; source code that requires &lt;code&gt;mypy&lt;/code&gt; to use extensions in order to do its static type checking correctly.&lt;/li&gt;
-&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-principles-of-oop-1"&gt;Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with &lt;code&gt;Infrastructure As Code&lt;/code&gt;, and also working at an agency. Can’t win them all. &lt;a href="#sf-principles-of-oop-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Using Unix Utilities To Analyse And Update Multiple Text Files</title><link href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" rel="alternate"></link><published>2021-01-04T13:02:00+01:00</published><updated>2021-01-04T13:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/using-unix-utilities-to-analyse-and-update-multiple-files.html</id><summary type="html"></summary><content type="html">&lt;p&gt;As part of the redesign of this blog I wanted to make an article&amp;#8217;s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple&amp;nbsp;categories.&lt;/p&gt;
+&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-principles-of-oop-1"&gt;Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with &lt;code&gt;Infrastructure As Code&lt;/code&gt;, and also working at an agency. Can’t win them all. &lt;a href="#sf-principles-of-oop-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>Using Unix Utilities To Analyse And Update Multiple Text Files</title><link href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" rel="alternate"></link><published>2021-01-04T13:02:00+01:00</published><updated>2021-01-04T13:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/using-unix-utilities-to-analyse-and-update-multiple-files.html</id><summary type="html"></summary><content type="html">&lt;p&gt;As part of the redesign of this blog I wanted to make an article&amp;rsquo;s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple&amp;nbsp;categories.&lt;/p&gt;
 &lt;p&gt;Also, using nested categories seems like a good way of grouping similar content and allowing more nuanced filtering of&amp;nbsp;interests.&lt;/p&gt;
 &lt;p&gt;As I considered how to update the categories of existing articles, I realised this would be a good opportunity to practice analyzing and updating text files using unix&amp;nbsp;utilities.&lt;/p&gt;
 &lt;p&gt;Here is how I reviewed and updated the categories of my existing&amp;nbsp;articles:&lt;/p&gt;
@@ -1137,7 +1137,7 @@ so in order to make these the same, I needed to remove trailing&amp;nbsp;whitesp
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Category is repeated and isn&amp;#8217;t&amp;nbsp;needed:&lt;/p&gt;
+&lt;p&gt;Category is repeated and isn&amp;rsquo;t&amp;nbsp;needed:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;grep -h 'Category:' **/*.md | sed 's/[[:space:]]//g' | sort | uniq -c | sort |
 sed 's/Category://g'&lt;/code&gt;&lt;/li&gt;
@@ -1156,7 +1156,7 @@ sed 's/Category://g'&lt;/code&gt;&lt;/li&gt;
 
 &lt;h2 id="new-categories"&gt;New&amp;nbsp;Categories&lt;/h2&gt;
 &lt;p&gt;The next stage was to begin updating these categories with the new, nested
-categories. I&amp;#8217;ve decided to try splitting the categories into technical and
+categories. I&amp;rsquo;ve decided to try splitting the categories into technical and
 non-technical&amp;nbsp;groups.&lt;/p&gt;
 &lt;p&gt;I can imagine splitting &lt;code&gt;Technical &amp;gt; Data&lt;/code&gt; even more in
 future, perhaps having &lt;code&gt;Data Analytics&lt;/code&gt;, &lt;code&gt;Data Science&lt;/code&gt;, and &lt;code&gt;Data Engineering&lt;/code&gt; as
@@ -1195,7 +1195,7 @@ Tools&lt;/code&gt; I&amp;nbsp;did:&lt;/p&gt;
 &lt;/ul&gt;</content><category term="Technical/Developer Tools"></category></entry><entry><title>A faster shell</title><link href="https://johnmathews.eu/shell.html" rel="alternate"></link><published>2019-02-14T11:32:00+01:00</published><updated>2019-02-14T11:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-02-14:/shell.html</id><summary type="html">&lt;p&gt;zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&amp;nbsp;down&lt;/p&gt;</summary><content type="html">&lt;p&gt;Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a&amp;nbsp;niggle.&lt;/p&gt;
 &lt;p&gt;I wanted to find out which components were causing the most delay, so I used
 &lt;code&gt;time&lt;/code&gt; to measure how long it took to launch a shell. Even though shells
-might appear to be part of the low level &amp;#8216;guts&amp;#8217; of a computer, each shell is
+might appear to be part of the low level &amp;lsquo;guts&amp;rsquo; of a computer, each shell is
 just an executable and can be treated as&amp;nbsp;such.&lt;/p&gt;
 &lt;p&gt;To measure the startup speed of your shell,&amp;nbsp;do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="k"&gt;$(&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; /usr/bin/time &lt;span class="nv"&gt;$SHELL&lt;/span&gt; -i -c exit&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
@@ -1218,15 +1218,15 @@ a summary of how much time each subproccess required to run, i.e. an order blind
 Now when I start &lt;code&gt;zsh&lt;/code&gt; I see the&amp;nbsp;following:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="zsh startup components" src="https://johnmathews.eu/images/zsh_order_blind_profiling.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Next steps - make virtualenvwrapper run faster, or asyncronously, or
-not at&amp;nbsp;all&amp;#8230;&lt;/p&gt;
+not at&amp;nbsp;all&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Update:
 &lt;code&gt;virtualenvwrapper&lt;/code&gt; is the biggest cause of slow loading. Using the &lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html"&gt;lazy
 loading&lt;/a&gt; option decreased loading time by&amp;nbsp;0.3s&lt;/p&gt;
-&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"></category><category term="shell"></category><category term="unix"></category><category term="zsh"></category><category term="bash"></category><category term="profiling"></category></entry><entry><title>Ry’s Git Tutorial</title><link href="https://johnmathews.eu/rys-git-tutorial.html" rel="alternate"></link><published>2018-06-01T17:11:00+02:00</published><updated>2018-06-01T17:11:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-01:/rys-git-tutorial.html</id><summary type="html">&lt;p&gt;Ry&amp;#8217;s Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For tracking changes to a collection of files, Git is the ubiquitous solution. It&amp;#8217;s free, robust, comprehensive, and there is a plethora of resources that are easy to&amp;nbsp;find.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"></category><category term="shell"></category><category term="unix"></category><category term="zsh"></category><category term="bash"></category><category term="profiling"></category></entry><entry><title>Ry’s Git Tutorial</title><link href="https://johnmathews.eu/rys-git-tutorial.html" rel="alternate"></link><published>2018-06-01T17:11:00+02:00</published><updated>2018-06-01T17:11:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-01:/rys-git-tutorial.html</id><summary type="html">&lt;p&gt;Ry&amp;rsquo;s Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For tracking changes to a collection of files, Git is the ubiquitous solution. It&amp;rsquo;s free, robust, comprehensive, and there is a plethora of resources that are easy to&amp;nbsp;find.&lt;/p&gt;
 &lt;p&gt;I usually find the commands difficult to remember though, and the concepts which Git is built on often seem counter-intuitive to me. This means I spend a lot of time searching for answers and trying to remember how I can use Git to experiment with a project without fear of losing any hard won&amp;nbsp;progress.&lt;/p&gt;
-&lt;p&gt;Ry&amp;#8217;s Git Tutorial by Ryan Hodson is the best way to learn Git that I have come across. Its simple, practical, and clear. The reader learns how to use Git yy creating and maintaining a simple website. This gives the Git commands a meaningful context, which makes them a lot easier to remember and use in the&amp;nbsp;future.&lt;/p&gt;
-&lt;p&gt;The tutorial was first published in 2012 and the website which originally hosted the examples no longer exists. Each tutorial chapter starts with a link to download the project files up to that point, so the reader doesn&amp;#8217;t need to start at the beginning but can jump into any part of the guide. Unfortunately these links are dead&amp;nbsp;now.&lt;/p&gt;
-&lt;p&gt;Therefore I&amp;#8217;m hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I&amp;#8217;d like to keep this great resource available so that others can benefit from&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;Ry&amp;rsquo;s Git Tutorial by Ryan Hodson is the best way to learn Git that I have come across. Its simple, practical, and clear. The reader learns how to use Git yy creating and maintaining a simple website. This gives the Git commands a meaningful context, which makes them a lot easier to remember and use in the&amp;nbsp;future.&lt;/p&gt;
+&lt;p&gt;The tutorial was first published in 2012 and the website which originally hosted the examples no longer exists. Each tutorial chapter starts with a link to download the project files up to that point, so the reader doesn&amp;rsquo;t need to start at the beginning but can jump into any part of the guide. Unfortunately these links are dead&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;Therefore I&amp;rsquo;m hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I&amp;rsquo;d like to keep this great resource available so that others can benefit from&amp;nbsp;it.&lt;/p&gt;
 &lt;p&gt;Download the .epub file &lt;a href="https://johnmathews.eu/Ry’s Git Tutorial.epub"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Download the example files for each module&amp;nbsp;below:&lt;/p&gt;
 &lt;ul&gt;
@@ -1267,25 +1267,25 @@ loading&lt;/a&gt; option decreased loading time by&amp;nbsp;0.3s&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/chapter13.zip"&gt;end&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content><category term="Technical/Developer Tools"></category><category term="Git"></category><category term="Rys"></category><category term="Tutorial"></category><category term="Ryan Hodson"></category></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"></link><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
-shortcuts. It&amp;#8217;s based on the Vi text editor from the 1970&amp;#8217;s. It was first
+shortcuts. It&amp;rsquo;s based on the Vi text editor from the 1970&amp;rsquo;s. It was first
 released in 1991 and is still being developed today. It comes pre-installed on
 Unix systems (including MacOS) and can be run from the&amp;nbsp;terminal.&lt;/p&gt;
 &lt;p&gt;Vim is famous in another way too - for being difficult to learn. I found some
 good and remarkably creative tools to begin learning its concepts and controls.
 This was necessary because there is no &lt;span class="caps"&gt;GUI&lt;/span&gt;. There is a
 &lt;em&gt;game&lt;/em&gt; &lt;a href="http://vim-adventures.com/"&gt;here&lt;/a&gt;, and there is &lt;a href="http://www.openvim.com/"&gt;this interactive
-tutorial&lt;/a&gt;. There&amp;#8217;s also a built-in vim tutorial - just
-type &amp;#8216;vimtutor&amp;#8217; into&amp;nbsp;Terminal.&lt;/p&gt;
-&lt;p&gt;Vim is designed so that you don&amp;#8217;t need to take your hands off your keyboard and
-use a mouse. It has the &amp;#8216;insert&amp;#8217; mode where you enter text as usual, and the
-&amp;#8216;command&amp;#8217; mode where you can make use of a comprehensive and flexible shortcut
-language to move around, edit and search the text. With no &lt;span class="caps"&gt;GUI&lt;/span&gt; or toolbar, it&amp;#8217;s
-a very different approach to text editing than I&amp;#8217;m used&amp;nbsp;to.&lt;/p&gt;
+tutorial&lt;/a&gt;. There&amp;rsquo;s also a built-in vim tutorial - just
+type &amp;lsquo;vimtutor&amp;rsquo; into&amp;nbsp;Terminal.&lt;/p&gt;
+&lt;p&gt;Vim is designed so that you don&amp;rsquo;t need to take your hands off your keyboard and
+use a mouse. It has the &amp;lsquo;insert&amp;rsquo; mode where you enter text as usual, and the
+&amp;lsquo;command&amp;rsquo; mode where you can make use of a comprehensive and flexible shortcut
+language to move around, edit and search the text. With no &lt;span class="caps"&gt;GUI&lt;/span&gt; or toolbar, it&amp;rsquo;s
+a very different approach to text editing than I&amp;rsquo;m used&amp;nbsp;to.&lt;/p&gt;
 &lt;p&gt;You can run Vim from the terminal, but there are also versions that run as
 apps. MacVim on MacOS has the option to show a tool bar of simple commands like
-a normal program, and lets the arrow keys move the cursor in addition to &lt;span class="caps"&gt;VIM&lt;/span&gt;&amp;#8217;s
-&amp;#8216;hjkl&amp;#8217; functionality. This makes getting started a little&amp;nbsp;simpler.&lt;/p&gt;
-&lt;p&gt;There are also a lot of plugins to extend Vim&amp;#8217;s functionality and turn it from
+a normal program, and lets the arrow keys move the cursor in addition to &lt;span class="caps"&gt;VIM&lt;/span&gt;&amp;rsquo;s
+&amp;lsquo;hjkl&amp;rsquo; functionality. This makes getting started a little&amp;nbsp;simpler.&lt;/p&gt;
+&lt;p&gt;There are also a lot of plugins to extend Vim&amp;rsquo;s functionality and turn it from
 a text editor into an &lt;span class="caps"&gt;IDE&lt;/span&gt;. &lt;a href="https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/"&gt;This
 post&lt;/a&gt; walks
 you through setting up Vim as a Python &lt;span class="caps"&gt;IDE&lt;/span&gt; and explains how to manage various&amp;nbsp;add-ons.&lt;/p&gt;
@@ -1297,28 +1297,28 @@ exams plans were put on hold and hobbies were ceased. Now that life is
 returning to normal, I have opportunity to post&amp;nbsp;again.&lt;/p&gt;
 &lt;h2 id="path"&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;html&gt;&amp;#36;&lt;/html&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt; is a variable (string) which contains a series of folder
-locations separated by &amp;#8220;:&amp;#8221;. Each of these folders contains programmes.
+locations separated by &amp;ldquo;:&amp;rdquo;. Each of these folders contains programmes.
 When you type the name of a programme into terminal without specifying
 its location, the &lt;span class="caps"&gt;OS&lt;/span&gt; looks sequentially in each of the folder locations
 listed in &lt;html&gt;&amp;#36;&lt;/html&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt; to see if the programme is there, and then executes&amp;nbsp;it.&lt;/p&gt;
 &lt;h2 id="bin"&gt;&lt;span class="caps"&gt;BIN&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;Bin as in Binary, not Bin as in&amp;nbsp;Trash.&lt;/p&gt;
 &lt;p&gt;The bin folders contain binary files, which are programmes ready to be&amp;nbsp;run.&lt;/p&gt;
-&lt;p&gt;If I run &amp;#8220;echo &lt;html&gt;&amp;#36;&lt;/html&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&amp;#8221; from the Terminal, I see 9 folders called bin,
+&lt;p&gt;If I run &amp;ldquo;echo &lt;html&gt;&amp;#36;&lt;/html&gt;&lt;span class="caps"&gt;PATH&lt;/span&gt;&amp;rdquo; from the Terminal, I see 9 folders called bin,
 and its only by convention that they contain binaries. They are just
 normal folders, which the &lt;span class="caps"&gt;OS&lt;/span&gt; is set to look in when asked to run an&amp;nbsp;application.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;/Users/John/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/&lt;/span&gt;
 &lt;span class="err"&gt;3.5/bin:/Users/John/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/&lt;/span&gt;
 &lt;span class="err"&gt;Library/TeX/texbin&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"></category><category term="Unix"></category></entry><entry><title>Jupyter (iPython) notebooks + Pandas</title><link href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html" rel="alternate"></link><published>2016-08-03T13:04:00+02:00</published><updated>2016-08-03T13:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-03:/Jupyter-ipython-notebooks-pandas.html</id><summary type="html"></summary><content type="html">&lt;p&gt;When working with more data than can fit in an Excel file, or when you
-want to be sure the data won&amp;#8217;t be edited, you usually need to interact with
+want to be sure the data won&amp;rsquo;t be edited, you usually need to interact with
 the data by writing&amp;nbsp;scripts.&lt;/p&gt;
 &lt;p&gt;One of the biggest time sinks (for me) when working with these tools
 (&lt;span class="caps"&gt;ACL&lt;/span&gt;, &lt;span class="caps"&gt;SQL&lt;/span&gt;, Python) is debugging, and working out exactly where in the
 chain of individual commands something unexpected happened. Even with
 only a modest page of code, I can quickly find myself rerunning the
 entire script multiple times and commenting-out and uncommenting
-multiple lines in order to understand what&amp;#8217;s really going on. If you
+multiple lines in order to understand what&amp;rsquo;s really going on. If you
 have a time consuming task at the start of your script, such as a
 summarise and sort command, the extra time required can be even greater.
 This leads to interrupted flow and&amp;nbsp;concentration.&lt;/p&gt;
@@ -1328,8 +1328,8 @@ in chunks, and output the results of each chunk before continuing. You
 can re-run a previous chunk without returning to the beginning, and
 change the code as you go along. This is amazingly flexible and&amp;nbsp;intuitive.&lt;/p&gt;
 &lt;p&gt;I recently worked through an exceptionally good Pandas tutorial recorded
-at PyCon 2015. &amp;#8220;&lt;a href="https://youtu.be/5JnMutdy6Fw"&gt;Pandas from the ground
-up&lt;/a&gt;&amp;#8221; is well structured, clear, has good
+at PyCon 2015. &amp;ldquo;&lt;a href="https://youtu.be/5JnMutdy6Fw"&gt;Pandas from the ground
+up&lt;/a&gt;&amp;rdquo; is well structured, clear, has good
 scope and the resources are available to download from
 &lt;a href="https://github.com/brandon-rhodes/pycon-pandas-tutorial"&gt;github&lt;/a&gt;.
 Brandon Rhodes gives you a good working foundation for using Pandas and

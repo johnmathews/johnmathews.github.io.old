@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" This blog serves a variety of purposes. It’s partly a journal of how I’m teaching myself to be a developer and a data scientist, and its partly self-promotion. It’s also a personal blog, with... "/>
-      <meta name="twitter:description" content=" This blog serves a variety of purposes. It’s partly a journal of how I’m teaching myself to be a developer and a data scientist, and its partly self-promotion. It’s also a personal blog, with... "/>
-      <meta property="og:description" content=" This blog serves a variety of purposes. It’s partly a journal of how I’m teaching myself to be a developer and a data scientist, and its partly self-promotion. It’s also a personal blog, with... "/>
+      <meta name="description" content=" This blog serves a variety of purposes. It’s partly a journal of how I’m teaching myself to be a developer and a data scientist, and it’s also a personal blog, with articles about my interests and... "/>
+      <meta name="twitter:description" content=" This blog serves a variety of purposes. It’s partly a journal of how I’m teaching myself to be a developer and a data scientist, and it’s also a personal blog, with articles about my interests and... "/>
+      <meta property="og:description" content=" This blog serves a variety of purposes. It’s partly a journal of how I’m teaching myself to be a developer and a data scientist, and it’s also a personal blog, with articles about my interests and... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/different-views-for-different-users.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/different-views-for-different-users.html"/>
@@ -155,9 +155,9 @@
       <article>
         <div class="markdown dark:text-gray-200">
           <p>This blog serves a variety of purposes. It’s partly a journal of how I’m
-teaching myself to be a developer and a data scientist, and its partly
-self-promotion. It’s also a personal blog, with articles about my interests and experiences.</p>
-<p>It’s unlikely that anyone is interested in every types of article, and I’d
+teaching myself to be a developer and a data scientist, and it’s also a
+personal blog, with articles about my interests and experiences.</p>
+<p>It’s unlikely that anyone is interested in every type of article, and I’d
 like to make it easy for people to only read the content they’re interested in.
 Therefore I thought I would separate the articles into two broad groups,
 <code>technical</code> and <code>non-technical</code>.</p>
@@ -171,7 +171,29 @@ stack feels accessible and its fun working with tailwind and with jQuery.</p>
 <p>I think that playing (being curious, lighthearted, and unhurried and not being
 concerned with failure) is really important. Especially for adults who don’t
 usually do it much. Most of my successes or big opportunities have been the
-result of a process that started with playing around.</p><ol class="simple-footnotes"><li id="sf-different-views-for-different-users-1">It’s a paw because cat’s have paws and
+result of a process that started with playing around.</p>
+<p>Here is the list of requirements I used when adding the feature:</p>
+<p><strong>Requirements</strong>:</p>
+<ul class="checklist">
+<li><input type="checkbox" disabled checked> If user lands on a page and <span class="caps">DOESNT</span> have local setting - create local setting based on type of article being read</li>
+<li><input type="checkbox" disabled checked> If user lands lands on a page and <span class="caps">DOES</span> have local setting which is contradicted - reset local setting to “all”</li>
+<li><input type="checkbox" disabled checked> If user lands on index and <span class="caps">DOES</span> have local settings, only show articles that match the setting</li>
+</ul>
+<p><strong>Steps</strong>:</p>
+<ul class="checklist">
+<li><input type="checkbox" disabled checked> Index page: check if local storage option exists, print to console the result</li>
+<li><input type="checkbox" disabled checked> Index page: make button group</li>
+<li><input type="checkbox" disabled checked> Index page: make correct button active on page load by using localstorage</li>
+<li><input type="checkbox" disabled checked> Index page: update active button on page click</li>
+<li><input type="checkbox" disabled checked> Index page: filter/unfilter articles when button clicked</li>
+<li><input type="checkbox" disabled checked> Index page: if local storage does exist, respect it</li>
+<li><input type="checkbox" disabled checked> Index page: add 3 stage switch to hamburger menu</li>
+<li><input type="checkbox" disabled checked> Index page: make hamburger menu behave intuitively on small screens</li>
+<li><input type="checkbox" disabled checked> Index page: if local storage does not exist, pop up a modal asking for a choice</li>
+<li><input type="checkbox" disabled checked> Article page: check if local storage option exists, print to console the result</li>
+<li><input type="checkbox" disabled checked> Article page: if local storage doesn’t exist, create it according to article type</li>
+<li><input type="checkbox" disabled checked> Article page: if local storage does exist and is contradicted, update article type to all</li>
+</ul><ol class="simple-footnotes"><li id="sf-different-views-for-different-users-1">It’s a paw because cat’s have paws and
 cat is like category. I might change this to something more intuitive in
 future, like making the icon an <code>N</code> if the user is only seeing non-technical
 posts, <code>T</code> for technical, and <code>A</code> for all posts. <a href="#sf-different-views-for-different-users-1-back" class="simple-footnote-back">↩</a></li></ol>

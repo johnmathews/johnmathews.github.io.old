@@ -154,7 +154,7 @@
     <main>
       <article>
         <div class="markdown dark:text-gray-200">
-          <p>As part of the redesign of this blog I wanted to make an article&#8217;s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple&nbsp;categories.</p>
+          <p>As part of the redesign of this blog I wanted to make an article&rsquo;s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple&nbsp;categories.</p>
 <p>Also, using nested categories seems like a good way of grouping similar content and allowing more nuanced filtering of&nbsp;interests.</p>
 <p>As I considered how to update the categories of existing articles, I realised this would be a good opportunity to practice analyzing and updating text files using unix&nbsp;utilities.</p>
 <p>Here is how I reviewed and updated the categories of my existing&nbsp;articles:</p>
@@ -184,7 +184,7 @@ so in order to make these the same, I needed to remove trailing&nbsp;whitespace:
 </pre></div>
 
 
-<p>Category is repeated and isn&#8217;t&nbsp;needed:</p>
+<p>Category is repeated and isn&rsquo;t&nbsp;needed:</p>
 <ul>
 <li><code>grep -h 'Category:' **/*.md | sed 's/[[:space:]]//g' | sort | uniq -c | sort |
 sed 's/Category://g'</code></li>
@@ -203,7 +203,7 @@ sed 's/Category://g'</code></li>
 
 <h2 id="new-categories">New&nbsp;Categories</h2>
 <p>The next stage was to begin updating these categories with the new, nested
-categories. I&#8217;ve decided to try splitting the categories into technical and
+categories. I&rsquo;ve decided to try splitting the categories into technical and
 non-technical&nbsp;groups.</p>
 <p>I can imagine splitting <code>Technical &gt; Data</code> even more in
 future, perhaps having <code>Data Analytics</code>, <code>Data Science</code>, and <code>Data Engineering</code> as

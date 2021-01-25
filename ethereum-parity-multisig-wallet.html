@@ -155,11 +155,11 @@
     <main>
       <article>
           <div class="markdown dark:text-gray-200">
-            <p>Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet&#8217;s settings and view pending and past&nbsp;transactions</p>
+            <p>Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet&rsquo;s settings and view pending and past&nbsp;transactions</p>
           </div>
         <div class="markdown dark:text-gray-200">
-          <p>I recently set up a multi-sig Ethereum wallet and I couldn&#8217;t find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get&nbsp;started. </p>
-<p>You&#8217;ll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I&#8217;ve used Parity because I found it simple and&nbsp;quick. </p>
+          <p>I recently set up a multi-sig Ethereum wallet and I couldn&rsquo;t find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get&nbsp;started. </p>
+<p>You&rsquo;ll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I&rsquo;ve used Parity because I found it simple and&nbsp;quick. </p>
 <h2 id="ethereum-wallets">Ethereum&nbsp;Wallets</h2>
 <p>Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet with 3 signatories (for example) then you will need to have set up at least 1 of those 3 Ethereum accounts before creating the&nbsp;wallet. </p>
 <h2 id="parity">Parity</h2>
@@ -196,76 +196,76 @@
 <h2 id="add-or-create-accounts">Add or create&nbsp;accounts</h2>
 <p><img alt="Parity toolbar" src="https://johnmathews.eu/images/Parity-toolbar-accounts.jpeg"></p>
 <p><img alt="Parity toolbar" src="https://johnmathews.eu/images/parity-account-creation.jpeg"></p>
-<p>Select the Accounts tab from the top of the page and then select &#8220;<strong>+ Account</strong>&#8220;. Either create new accounts or import them using your preferred method. You don&#8217;t need to import all the accounts that will be part of the multi-sig wallet, but you will need to import or create the account that will own the wallet you are about to create. This account will need to have a large enough Ether balance to pay the transaction costs to deploy the multi-sig wallet onto the Blockchain. The costs are tiny, but they are greater than&nbsp;zero.</p>
+<p>Select the Accounts tab from the top of the page and then select &ldquo;<strong>+ Account</strong>&rdquo;. Either create new accounts or import them using your preferred method. You don&rsquo;t need to import all the accounts that will be part of the multi-sig wallet, but you will need to import or create the account that will own the wallet you are about to create. This account will need to have a large enough Ether balance to pay the transaction costs to deploy the multi-sig wallet onto the Blockchain. The costs are tiny, but they are greater than&nbsp;zero.</p>
 <h2 id="create-the-multi-sig-wallet">Create the multi-sig&nbsp;wallet</h2>
 <p><img alt="Parity toolbar" src="https://johnmathews.eu/images/Parity-toolbar-wallet.jpeg">
 <img alt="Wallet management" src="https://johnmathews.eu/images/parity-wallet-details.jpeg"></p>
 <ol>
 <li>
-<p>Once you&#8217;ve either created or imported the account which will deploy the wallet, select &#8220;<strong>+ Wallet</strong>&#8221; from the accounts tab and choose &#8220;<strong>Multi-Sig wallet</strong>&#8220;. Click&nbsp;next.</p>
+<p>Once you&rsquo;ve either created or imported the account which will deploy the wallet, select &ldquo;<strong>+ Wallet</strong>&rdquo; from the accounts tab and choose &ldquo;<strong>Multi-Sig wallet</strong>&rdquo;. Click&nbsp;next.</p>
 </li>
 <li>
 <p>Enter a <strong>name</strong> for the wallet, if you want you can add a local <strong>description</strong>. </p>
 </li>
 <li>
-<p>The &#8220;<strong>From account</strong>&#8221; will be the contract owner and this account&nbsp;will </p>
+<p>The &ldquo;<strong>From account</strong>&rdquo; will be the contract owner and this account&nbsp;will </p>
 <ol>
 <li>Be one of the&nbsp;signatories.</li>
 <li>Need to have enough Ether to pay for the execution of the contract on the&nbsp;blockchain.</li>
 </ol>
 </li>
 <li>
-<p>Click the &#8220;+&#8221; button under &#8220;<strong>Other wallet owners</strong>&#8221; to add the address of the other signatory accounts. You&#8217;ll need to add one line for each signatory and these accounts will also own the wallet once it is&nbsp;deployed.</p>
+<p>Click the &ldquo;+&rdquo; button under &ldquo;<strong>Other wallet owners</strong>&rdquo; to add the address of the other signatory accounts. You&rsquo;ll need to add one line for each signatory and these accounts will also own the wallet once it is&nbsp;deployed.</p>
 </li>
 <li>
-<p>In the &#8220;<strong>required owners</strong>&#8221; section, specify how many accounts will need to approve a transaction that is above the daily transaction&nbsp;limit.</p>
+<p>In the &ldquo;<strong>required owners</strong>&rdquo; section, specify how many accounts will need to approve a transaction that is above the daily transaction&nbsp;limit.</p>
 </li>
 <li>
-<p>Use the &#8220;<strong>wallet day limit</strong>&#8221; to set how much Ether can be spent by each account per day <em>without</em> needing another account to approve the transaction. Set an amount of 0 if you want all transactions to require approval, or turn the option off using the slider to the right (which just specifies a huge&nbsp;number).</p>
+<p>Use the &ldquo;<strong>wallet day limit</strong>&rdquo; to set how much Ether can be spent by each account per day <em>without</em> needing another account to approve the transaction. Set an amount of 0 if you want all transactions to require approval, or turn the option off using the slider to the right (which just specifies a huge&nbsp;number).</p>
 </li>
 <li>
-<p>Click &#8220;next&#8221; and you&#8217;ll be shown a pop-up window to approve the creation of the wallet. You will need to enter the password of the account which is creating the wallet, and once you click &#8220;Confirm request&#8221; the funds in the creators accounts will be used to deploy the contract on chain and create the multi-sig&nbsp;wallet.</p>
+<p>Click &ldquo;next&rdquo; and you&rsquo;ll be shown a pop-up window to approve the creation of the wallet. You will need to enter the password of the account which is creating the wallet, and once you click &ldquo;Confirm request&rdquo; the funds in the creators accounts will be used to deploy the contract on chain and create the multi-sig&nbsp;wallet.</p>
 <p><img alt="Wallet management" src="https://johnmathews.eu/images/parity-conf-box.jpeg"></p>
 </li>
 </ol>
 <h2 id="adding-an-existing-multi-sig-wallet">Adding an existing multi-sig&nbsp;wallet</h2>
-<p>Once your wallet is created and deployed, you&#8217;ll need to add it to other parity clients so that the other signatories can make or confirm transactions, and view the wallets balance. This is done by adding a watch&nbsp;wallet.</p>
+<p>Once your wallet is created and deployed, you&rsquo;ll need to add it to other parity clients so that the other signatories can make or confirm transactions, and view the wallets balance. This is done by adding a watch&nbsp;wallet.</p>
 <p>Process: Accounts tab &gt; + Wallet &gt; Watch wallet &gt; enter the address of the multi-sig&nbsp;wallet. </p>
-<p>The other signatories will now be able to view the wallet&#8217;s balance, get notifications about pending confirmations, and be able to make and monitor&nbsp;transactions.</p>
+<p>The other signatories will now be able to view the wallet&rsquo;s balance, get notifications about pending confirmations, and be able to make and monitor&nbsp;transactions.</p>
 <h2 id="managing-a-multi-sig-wallet">Managing a multi-sig&nbsp;wallet</h2>
 <ol>
 <li>
-<p>Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet&#8217;s&nbsp;address.</p>
+<p>Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet&rsquo;s&nbsp;address.</p>
 <p><img alt="select multisig wallet" src="https://johnmathews.eu/images/parity-select-multisig.jpeg">
 <img alt="select multisig wallet" src="https://johnmathews.eu/images/new-parity-wallet.jpeg"></p>
 </li>
 <li>
-<p>At the top of the page you click &#8220;<strong>Edit</strong>&#8221; to change the local name and description of the&nbsp;wallet.</p>
+<p>At the top of the page you click &ldquo;<strong>Edit</strong>&rdquo; to change the local name and description of the&nbsp;wallet.</p>
 </li>
 <li>
-<p><span class="dquo">&#8220;</span><strong>Settings</strong>&#8221; allows you add or remove owners (signatories) of the wallet and change the required number of approvals and the wallet day limit. If you change these settings then the changes will need to be executed on the blockchain and the account requesting the change will therefore need to pay the required funds. Depending on the settings being changed, other accounts will need to approve the changes before they are&nbsp;implemented.</p>
+<p><span class="dquo">&ldquo;</span><strong>Settings</strong>&rdquo; allows you add or remove owners (signatories) of the wallet and change the required number of approvals and the wallet day limit. If you change these settings then the changes will need to be executed on the blockchain and the account requesting the change will therefore need to pay the required funds. Depending on the settings being changed, other accounts will need to approve the changes before they are&nbsp;implemented.</p>
 </li>
 <li>
-<p><span class="dquo">&#8220;</span><strong>Forget</strong>&#8221; will remove the multi-sig wallet from your accounts&nbsp;tab.</p>
+<p><span class="dquo">&ldquo;</span><strong>Forget</strong>&rdquo; will remove the multi-sig wallet from your accounts&nbsp;tab.</p>
 </li>
 </ol>
 <h2 id="moving-funds-out-of-a-multi-sig-wallet">Moving funds out of a multi-sig&nbsp;wallet</h2>
 <ol>
 <li>
-<p>Click on &#8220;<strong>Transfer</strong>&#8221; in the wallet management window (pictured above) to begin withdrawing funds from the&nbsp;wallet. </p>
+<p>Click on &ldquo;<strong>Transfer</strong>&rdquo; in the wallet management window (pictured above) to begin withdrawing funds from the&nbsp;wallet. </p>
 </li>
 <li>
 <p>Select the token you want to transfer - Ethereum is the only default&nbsp;option.</p>
 </li>
-<li><span class="dquo">&#8220;</span><strong>Sender address</strong>&#8221; - specify which account wants to withdraw the funds from the multi-sig&nbsp;wallet.</li>
-<li><span class="dquo">&#8220;</span><strong>Recipient address</strong>&#8221; - specify which account will receive the&nbsp;funds.</li>
-<li><span class="dquo">&#8220;</span><strong>Amount to transfer</strong>&#8221; - specify how much you want to transfer. If the amount is greater than the remaining daily limit you will get a warning bar telling you the transaction will require confirmation from other wallet&nbsp;owners.</li>
-<li>If you want to specify the maximum transaction fee (a payment with a lower fee will be confirmed more slowly than usual) tick the &#8220;<strong>advanced sending options</strong>&#8221;&nbsp;box.</li>
-<li>Clicking &#8220;send&#8221; will bring you to the confirmation stage where you can enter the password for the account which is requesting the&nbsp;transfer.</li>
+<li><span class="dquo">&ldquo;</span><strong>Sender address</strong>&rdquo; - specify which account wants to withdraw the funds from the multi-sig&nbsp;wallet.</li>
+<li><span class="dquo">&ldquo;</span><strong>Recipient address</strong>&rdquo; - specify which account will receive the&nbsp;funds.</li>
+<li><span class="dquo">&ldquo;</span><strong>Amount to transfer</strong>&rdquo; - specify how much you want to transfer. If the amount is greater than the remaining daily limit you will get a warning bar telling you the transaction will require confirmation from other wallet&nbsp;owners.</li>
+<li>If you want to specify the maximum transaction fee (a payment with a lower fee will be confirmed more slowly than usual) tick the &ldquo;<strong>advanced sending options</strong>&rdquo;&nbsp;box.</li>
+<li>Clicking &ldquo;send&rdquo; will bring you to the confirmation stage where you can enter the password for the account which is requesting the&nbsp;transfer.</li>
 <li>If approval from other wallet owners is required and they are also using Parity, then they can see that their approval is required in two ways:<ul>
 <li>The signer tab will show there is a pending request.
     <img alt="Wallet management" src="https://johnmathews.eu/images/parity-signer-alert.jpeg"></li>
-<li>The wallet management window (accessed from the accounts tab) has a &#8220;pending transactions&#8221; section where any confirmation requests will be shown.
+<li>The wallet management window (accessed from the accounts tab) has a &ldquo;pending transactions&rdquo; section where any confirmation requests will be shown.
    <img alt="Wallet management" src="https://johnmathews.eu/images/parity-wallet-management.jpeg"></li>
 </ul>
 </li>
