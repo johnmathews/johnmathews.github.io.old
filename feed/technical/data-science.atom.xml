@@ -5,9 +5,8 @@ traffic lights. I&amp;rsquo;ve also created a page where the model can be querie
 results shown. This needed to be a custom page and not a typical blog article,
 so its hosted in the portfolio section
 &lt;a href="https://johnmathews.eu/traffic.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Take a look whilst I work out how to make this page redirect automatically. I
-think if I add a custom article tag I can include a meta tag that will
-automatically&amp;nbsp;redirect.&lt;/p&gt;</content><category term="Technical/Data Science"></category></entry><entry><title>Coursera’s “Data Science Specialisation”</title><link href="https://johnmathews.eu/courseras-data-science-specialisation.html" rel="alternate"></link><published>2016-08-01T13:30:00+02:00</published><updated>2016-08-01T13:30:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-01:/courseras-data-science-specialisation.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Last year I decided to learn the tools required to work as a data
+&lt;p&gt;This page will redirect automatically if you view it in a browser, but for
+those of you reading this using &lt;span class="caps"&gt;RSS&lt;/span&gt;, head on over and see the&amp;nbsp;results!&lt;/p&gt;</content><category term="Technical/Data Science"></category></entry><entry><title>Coursera’s “Data Science Specialisation”</title><link href="https://johnmathews.eu/courseras-data-science-specialisation.html" rel="alternate"></link><published>2016-08-01T13:30:00+02:00</published><updated>2016-08-01T13:30:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-01:/courseras-data-science-specialisation.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Last year I decided to learn the tools required to work as a data
 scientist. I was confident I already had the mathematical and analysis
 skills I needed, but I wasn&amp;rsquo;t familiar with the tools of the&amp;nbsp;trade.&lt;/p&gt;
 &lt;p&gt;Some googling brought me to Coursera, and the &lt;a href="https://www.coursera.org/specializations/jhu-data-science"&gt;Data Science
