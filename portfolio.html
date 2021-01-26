@@ -248,7 +248,7 @@
         </script>
 
         <script async>
-          // only set article visibility based on the blog index view
+          // the user can only choose article visibility settings on the index page
           if (window.location.pathname !== '/blog') {
             $("#catChooser").toggleClass('hidden')
           };
@@ -322,6 +322,20 @@
       $('#signupButton').removeClass('block').addClass('hidden')
       $('#subscribeBox').removeClass('hidden').addClass('block')
     });
+  </script>
+
+  <script>
+    // set or update user preference for article category if it hasnt been set
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      // pass
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      window.localStorage.setItem('categoryChoice', 'all');
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      window.localStorage.setItem('categoryChoice', 'technical');
+    };
   </script>
     </div>
   </body>
