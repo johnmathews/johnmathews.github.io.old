@@ -131,79 +131,155 @@
         </div>
       </div>
 
-  <div id="PageParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  ">
+  <div id="PageParent" class="-mt-5 bg-gray-100 dark:bg-gray-800">
+    <div class="container my-5 mx-auto px-4 md:px-12">
+      <div class="flex flex-wrap mx-2 lg:-mx-4 pt-10">
 
-    <div class="markdown text-center dark:text-gray-200">
-      <h1> Portfolio</h1>
-    </div>
-
-    <main>
-      <article>
-        <div class="markdown dark:text-gray-200">
-          <p>Projects which aren&rsquo;t covered by a non-disclosure agreements or that don&rsquo;t require access to proprietary&nbsp;data.</p>
-<h2 id="data-science">Data&nbsp;Science</h2>
-<p><a href="https://johnmathews.eu/traffic.html"><img alt="traffic light recognition" src="https://johnmathews.eu/images/traffic_lights/header.png"></a></p>
-<h3 id="image-recognition">Image&nbsp;Recognition</h3>
-<p><a href="https://johnmathews.eu/traffic.html">View&nbsp;Demo</a> </p>
-<ul>
-<li>Recognising and labelling traffic lights from dashcam&nbsp;images.</li>
-<li>An end-to-end&nbsp;proof-of-concept. </li>
-</ul>
-<h2 id="web-apps">Web&nbsp;Apps</h2>
-<ul>
-<li><a href="https://moneybar.nl">MoneyBar</a> - A personal finances dashboard.<ul>
-<li>Extract transactions from <span class="caps">PDF</span> bank statements from Bunq, <span class="caps">ABN</span> <span class="caps">AMRO</span>, <span class="caps">ING</span>, and&nbsp;Rabobank.</li>
-<li>Makes your transactions searchable and&nbsp;queryable.</li>
-<li>Aggregate transactions by time&nbsp;period.</li>
-<li>Calculates income, expenditure and transfers within a time&nbsp;period.</li>
-<li>Automatically categorizes&nbsp;transactions.</li>
-</ul>
-</li>
-<li><a href="https://pippip.email">PipPip</a> - Write an email now, send it if you die or disappear.<ul>
-<li>Send messages if a particular event&nbsp;occurs</li>
-<li>Or send a message on a specific date, even if its many years in the&nbsp;future</li>
-</ul>
-</li>
-</ul>
-				</div>
-
-      </article>
-    </main>
-
-    <div class="border border-gray-300 mt-10 mb-10"></div>
-
-    <div class="text-left">
-      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
-        <span>Subscribe</span>
-        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
-      </button>
-    </div>
-
-    <div class="hidden" id="subscribeBox" >
-      <!-- Begin Mailchimp Signup Form -->
-      <div id="mc_embed_signup">
-        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate dark:bg-gray-700" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-            <div class="mc-field-group dark:text-gray-300">
-              <label for="mce-EMAIL">Email Address </label>
-              <input type="email" value="" name="EMAIL" class="required email dark:bg-gray-500" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
-            </div>
-            <div class="clear">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://johnmathews.eu/traffic">
+              <article class="bg-green-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/traffic_lights/thumbnail.png alt=cars at traffic lights >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      Traffic Light Recognition
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    Identify and label traffic lights using the azure custom vision API. Upload your own test image.
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    Azure, Data Science, Deep Learning, Computer Vision
+                  </div>
+                </div>
+              </article>
+            </a>
           </div>
-        </form>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://pippip.email">
+              <article class="bg-blue-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/portfolio_thumbnails/pippip.png alt=PipPip messaging service >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      PipPip.Email
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    An email scheduling service to send messages if you disappear or die
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    Python, Wed Developement, Django, JavaScript
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://moneybar.nl">
+              <article class="bg-red-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/portfolio_thumbnails/moneybar.png alt=financial dashboard >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      MoneyBar.nl
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    A financial dashboard to aggregate and categorize transactions from multiple service providers.
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    Python, Wed Developement, Django, JavaScript
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://johnmathews.eu/blockchain-introduction">
+              <article class="bg-purple-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/portfolio_thumbnails/blockchain.png alt=introduction to blockchain tech >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      Blockchains 101
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    An introduction to the main components of a blockchain
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    Math, Cryptography, Transactions
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://johnmathews.eu/reconciliation">
+              <article class="bg-yellow-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/portfolio_thumbnails/coins.jpg alt=automated reconciliation of a general ledger and trial balance >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      Reconciliation of a General Ledger and Trial Balance
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    Reconcile a GL and TB automatically
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    Finance, Accounting, Transactions
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://johnmathews.eu/prediction">
+              <article class="bg-indigo-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/portfolio_thumbnails/prediction.jpg alt=introduction to Prediction Markets >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      Prediction Markets
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    An introduction to prediction markets
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    Math, Cryptography, Transactions
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105 my-2 px-1 w-full md:w-1/2 md:my-4 md:px-5 lg:w-1/3">
+            <a href="https://johnmathews.eu/silos">
+              <article class="bg-pink-100 text-gray-800 dark:text-gray-800 overflow-hidden border-2 border-gray-500 dark:border-gray-100 rounded-lg shadow-lg">
+                <img class="object-cover h-72 w-full" src=/images/portfolio_thumbnails/silo_piv.jpeg alt=Doctorate Research: Silos and Granular Flow >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-800">
+                      Doctorate Research: Silos and Granular Flow
+                    </div>
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
+                    An introduction to my work on silos and granular flow in increased gravities
+                  </div>
+                  <div class="clamp-1 font-semibold text-green-700 mx-2 mb-2">
+                    DEM, Centrifuge Modelling, Constituent Equations
+                  </div>
+                </div>
+              </article>
+            </a>
+          </div>
+
       </div>
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-      <!--End mc_embed_signup-->
     </div>
+
+    <div class="border border-gray-300 mt-10"></div>
 
       <div class="mt-10" id="disqus_thread"></div>
       <script>
@@ -316,13 +392,6 @@
           }
         </script>
 
-  <script>
-    // mailing list subscribe button
-    document.getElementById("signupButton").addEventListener("click", function(e) {
-      $('#signupButton').removeClass('block').addClass('hidden')
-      $('#subscribeBox').removeClass('hidden').addClass('block')
-    });
-  </script>
 
   <script>
     // set or update user preference for article category if it hasnt been set
