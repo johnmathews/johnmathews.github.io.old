@@ -4,6 +4,7 @@
 &lt;li&gt;&lt;a href="#registers"&gt;Registers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#insert-mode"&gt;Insert&amp;nbsp;Mode&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#normal-mode"&gt;Normal&amp;nbsp;Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#command-mode"&gt;Command&amp;nbsp;Mode&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#visual-block-mode-ltc-vgt"&gt;Visual Block Mode&amp;nbsp;&amp;lt;C-V&amp;gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ranges"&gt;Ranges&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#searching"&gt;Searching&lt;/a&gt;&lt;/li&gt;
@@ -38,7 +39,11 @@
 &lt;/ol&gt;
 &lt;h2 id="normal-mode"&gt;Normal&amp;nbsp;Mode&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;C-A&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;C-X&lt;/code&gt; increase or decrease a&amp;nbsp;number&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-A&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;C-X&lt;/code&gt; increase or decrease a&amp;nbsp;number.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="command-mode"&gt;Command&amp;nbsp;Mode&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;set ft?&lt;/code&gt; - find out which filetype is&amp;nbsp;loaded.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="visual-block-mode-ltc-vgt"&gt;Visual Block Mode &lt;code&gt;&amp;lt;C-V&amp;gt;&lt;/code&gt;&lt;/h2&gt;
 &lt;ol&gt;
@@ -47,15 +52,15 @@
 &lt;/ol&gt;
 &lt;h2 id="ranges"&gt;Ranges&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;:put =range(1,10)&lt;/code&gt; - insert a list of ascending&amp;nbsp;numbers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:put =range(1,10)&lt;/code&gt; - insert a list of ascending&amp;nbsp;numbers.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:for i in range(1,100) | put ='192.168.1.'.i | endfor&lt;/code&gt; - use a loop to
-   generate a long&amp;nbsp;list&lt;/li&gt;
+   generate a long&amp;nbsp;list.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="searching"&gt;Searching&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;g#&lt;/code&gt; or &lt;code&gt;g*&lt;/code&gt; for partial matches, like &lt;code&gt;#&lt;/code&gt; or &lt;code&gt;*&lt;/code&gt; for exact&amp;nbsp;matches. &lt;/li&gt;
 &lt;li&gt;Search for the word under the cursor, or similar:&lt;ol&gt;
-&lt;li&gt;Press &lt;code&gt;/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;/&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;C-R&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;C-W&amp;gt;&lt;/code&gt; - this will copy and paste the word under the cursor
      into the search box. Edit it as&amp;nbsp;necessary.&lt;/li&gt;
 &lt;li&gt;After you&amp;rsquo;ve done your search, &lt;code&gt;&amp;lt;C-o&amp;gt;&lt;/code&gt; to jump back to where your cursor

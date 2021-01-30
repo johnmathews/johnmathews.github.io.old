@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace... "/>
-      <meta name="twitter:description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace... "/>
-      <meta property="og:description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r - replace... "/>
+      <meta name="description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Command Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r... "/>
+      <meta name="twitter:description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Command Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r... "/>
+      <meta property="og:description" content=" Table of Contents Verbs Registers Insert Mode Normal Mode Command Mode Visual Block Mode &lt;C-V&gt; Ranges Searching Undo Splits Macros Other Verbs s - delete char under cursor and enter Insert Mode. r... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"/>
@@ -162,6 +162,7 @@
 <li><a href="#registers">Registers</a></li>
 <li><a href="#insert-mode">Insert&nbsp;Mode</a></li>
 <li><a href="#normal-mode">Normal&nbsp;Mode</a></li>
+<li><a href="#command-mode">Command&nbsp;Mode</a></li>
 <li><a href="#visual-block-mode-ltc-vgt">Visual Block Mode&nbsp;&lt;C-V&gt;</a></li>
 <li><a href="#ranges">Ranges</a></li>
 <li><a href="#searching">Searching</a></li>
@@ -196,7 +197,11 @@
 </ol>
 <h2 id="normal-mode">Normal&nbsp;Mode</h2>
 <ol>
-<li><code>&lt;C-A&gt;</code> or <code>&lt;C-X</code> increase or decrease a&nbsp;number</li>
+<li><code>&lt;C-A&gt;</code> or <code>&lt;C-X</code> increase or decrease a&nbsp;number.</li>
+</ol>
+<h2 id="command-mode">Command&nbsp;Mode</h2>
+<ol>
+<li><code>set ft?</code> - find out which filetype is&nbsp;loaded.</li>
 </ol>
 <h2 id="visual-block-mode-ltc-vgt">Visual Block Mode <code>&lt;C-V&gt;</code></h2>
 <ol>
@@ -205,15 +210,15 @@
 </ol>
 <h2 id="ranges">Ranges</h2>
 <ol>
-<li><code>:put =range(1,10)</code> - insert a list of ascending&nbsp;numbers</li>
+<li><code>:put =range(1,10)</code> - insert a list of ascending&nbsp;numbers.</li>
 <li><code>:for i in range(1,100) | put ='192.168.1.'.i | endfor</code> - use a loop to
-   generate a long&nbsp;list</li>
+   generate a long&nbsp;list.</li>
 </ol>
 <h2 id="searching">Searching</h2>
 <ol>
 <li><code>g#</code> or <code>g*</code> for partial matches, like <code>#</code> or <code>*</code> for exact&nbsp;matches. </li>
 <li>Search for the word under the cursor, or similar:<ol>
-<li>Press <code>/</code></li>
+<li>Press <code>/</code>.</li>
 <li><code>&lt;C-R&gt;</code> <code>&lt;C-W&gt;</code> - this will copy and paste the word under the cursor
      into the search box. Edit it as&nbsp;necessary.</li>
 <li>After you&rsquo;ve done your search, <code>&lt;C-o&gt;</code> to jump back to where your cursor
