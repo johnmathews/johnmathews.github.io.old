@@ -100,7 +100,7 @@
 }
 
 .markdown p {
-  @apply mt-0 mb-4 font-light;
+  @apply mt-4 mb-0 font-light;
 }
 
 .markdown > * + * {
