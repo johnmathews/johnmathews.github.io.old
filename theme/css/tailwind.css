@@ -107,6 +107,10 @@
   @apply mt-0 mb-4;
 }
 
+.markdown li {
+	@apply font-light;
+}
+
 .markdown li + li {
   @apply mt-1;
 }
