@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Career</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical/career.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-01-20T14:44:00+01:00</updated><entry><title>What’s So Different About Now</title><link href="https://johnmathews.eu/whats-so-different-about-now.html" rel="alternate"></link><published>2021-01-20T14:44:00+01:00</published><updated>2021-01-20T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/whats-so-different-about-now.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I think we are less aware of our ignorance than previous generations. It is
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Non-technical/Career</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/non-technical/career.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-02-01T22:17:00+01:00</updated><entry><title>Notes From An Interview With Geoffrey Hinton</title><link href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html" rel="alternate"></link><published>2021-02-01T22:17:00+01:00</published><updated>2021-02-01T22:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/notes-from-an-interview-with-geoffrey-hinton.html</id><summary type="html"></summary><content type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Read the literature but don&amp;rsquo;t read too much&lt;/strong&gt; of&amp;nbsp;it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Trust your intuitions&lt;/strong&gt;, because if you don&amp;rsquo;t trust them then there&amp;rsquo;s no&amp;nbsp;point&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="quo"&gt;&amp;lsquo;&lt;/span&gt;&lt;strong&gt;This person is either drunk or stupid&lt;/strong&gt;&amp;lsquo; - feedback on one of his papers that went on to become&amp;nbsp;significant &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For creative researchers; read a bit of the literature and notice something that you think everybody is doing wrong. (I guess &lt;span class="caps"&gt;GH&lt;/span&gt; is contrarian in this&amp;nbsp;sense)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Look for a problem that doesn&amp;rsquo;t feel &lt;em&gt;right&lt;/em&gt;. Then figure out how to do it&amp;nbsp;right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When people tell you that your (contrarian) approach is just no good, just keep at&amp;nbsp;it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Either your intuitions are good or they&amp;rsquo;re not. If they are good then you should follow them and you will eventually be successful. If they are bad then it doesn&amp;rsquo;t matter what you&amp;nbsp;do.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You might as well trust your&amp;nbsp;intutions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you try to replicate a published paper you discover all the little tricks needed to make it&amp;nbsp;work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Never stop&amp;nbsp;programming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you give a student something to do and they are a bad student then they&amp;rsquo;ll come back and say it didn&amp;rsquo;t work. They&amp;rsquo;ll say this because of some little decision they made which they didn&amp;rsquo;t realise was crucial. But if you give it to a good student, you can give them anything and they will come back and say it&amp;nbsp;works&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read enough so that you start developing intuitions, and then trust your intuitions and go for it! - Don&amp;rsquo;t be too worried if everybody else says its&amp;nbsp;nonsense.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you think it&amp;rsquo;s a really good idea, and others tell you its complete nonsense, then you know you are really onto&amp;nbsp;something!&lt;/p&gt;
+&lt;p&gt;One example of this is when Ramford and I first came up with variational methods, I sent a mail explaining it to a former student, who showed it to his colleagues. He told me that they said &amp;lsquo;Either this guy is drunk or he is just stupid&amp;rsquo;. They really really thought is was&amp;nbsp;nonsense.&lt;/p&gt;
+&lt;p&gt;Maybe that is partly because of how i explained it - I explained it in intuitive terms, but when you have what you think is a good idea and other people think it is complete rubbish, that is the sign of a really good&amp;nbsp;idea.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;See if you can find an advisor who has beliefs similar to your own, because if you work on stuff that your adviser feels deeply about, then you&amp;rsquo;ll get a lot of good advice and time from&amp;nbsp;them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read enough so that you can trust your&amp;nbsp;intuitions&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Career"></category></entry><entry><title>What’s So Different About Now</title><link href="https://johnmathews.eu/whats-so-different-about-now.html" rel="alternate"></link><published>2021-01-20T14:44:00+01:00</published><updated>2021-01-20T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/whats-so-different-about-now.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I think we are less aware of our ignorance than previous generations. It is
 easy to implicitly assume that all useful information is available to us, and
 that we are therefore more informed than we really&amp;nbsp;are.&lt;/p&gt;
 &lt;p&gt;I think this is because the internet has made information more accessible
