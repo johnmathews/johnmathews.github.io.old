@@ -67,6 +67,34 @@
       /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
   </style>
+
+  <style>
+    #spinner:not([hidden]) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #spinner::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border: 2px solid #f3f3f3;
+      border-top: 3px solid #f25a41;
+      border-radius: 100%;
+      will-change: transform;
+      animation: spin 1s infinite linear
+    }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+  </style>
   </head>
 
   <body class="dark:bg-gray-800">
@@ -166,6 +194,9 @@
                 <canvas id="canvas" class="absolute top-0 left-0" id="output_image" >
                   Your browser doesn't support canvas
                 </canvas>
+                  <div class="w-full flex">
+                    <div hidden class="z-50 mx-auto my-10" id="spinner"></div>
+                  </div>
               </div>
             </div>
             <div id="results">
@@ -173,7 +204,7 @@
         </div>
 
         <div class="markdown dark:text-gray-200">
-          <p>You can upload any image, I suggest googling <a href="https://www.google.com/search?tbm=isch&amp;as_q=dashcam+traffic+lights">dashcam traffic lights</a>, or use one of the images below. Images should be smaller than 4mb and should be <code>.jpeg</code>, <code>.bmp</code> or <code>.png</code>. I haven&rsquo;t added a loading spinner and the model takes a few seconds to return the&nbsp;results.</p>
+          <p>You can upload any image, I suggest googling <a href="https://www.google.com/search?tbm=isch&amp;as_q=dashcam+traffic+lights">dashcam traffic lights</a>, or use one of the images below. Images should be smaller than 4mb and should be <code>.jpeg</code>, <code>.bmp</code> or <code>.png</code>.</p>
 <h2 id="the-shortest-route-to-a-demo">The Shortest Route To A&nbsp;Demo</h2>
 <p>This demonstration was inspired by the job description for a freelance role I
 recently applied for. The project involved recognising faults with traffic
@@ -511,7 +542,9 @@ before&nbsp;uploading.</p>
     }
 
    // fetch azure customvision api results
+   const spinner = document.getElementById("spinner");
    const upload = (file) => {
+    spinner.removeAttribute('hidden');
     fetch('https://westeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/7990fc60-04ff-4b64-80ed-2080ab68b878/detect/iterations/Iteration1/image',
 		 {
       method: 'POST',
@@ -524,7 +557,10 @@ before&nbsp;uploading.</p>
 		).then(
      response => response.json()
     ).then(
-     (function(success){ printResults(success['predictions']) })
+      (function(success){
+        printResults(success['predictions'])
+        spinner.setAttribute('hidden', '');
+      })
     ).catch(
      error => console.log(error)
     );
