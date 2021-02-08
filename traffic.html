@@ -545,12 +545,12 @@ before&nbsp;uploading.</p>
    const spinner = document.getElementById("spinner");
    const upload = (file) => {
     spinner.removeAttribute('hidden');
-    fetch('https://westeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/7990fc60-04ff-4b64-80ed-2080ab68b878/detect/iterations/Iteration1/image',
+    fetch('https://traffic-lights-free-tier.cognitiveservices.azure.com/customvision/v3.0/Prediction/fee4a5ea-2cc5-4caf-8458-2ac1c934277b/detect/iterations/Iteration1/image',
 		 {
       method: 'POST',
       headers: {
        "Content-Type": "application/octet-stream",
-			 "Prediction-Key": "0591e2fc13e143c0a44c4fb22d2d7a2a"
+			 "Prediction-Key": "43e3d22785704f7c998130aab3a8ac14"
       },
       body: file
 		 }
