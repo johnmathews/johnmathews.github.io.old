@@ -1,0 +1,475 @@
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+
+      <title>Django: Learnings - JohnMathews.eu</title>
+      <meta name="title" content="Django: Learnings -  JohnMathews.eu "/>
+      <meta property="og:title" content="Django: Learnings"/>
+      <meta property="twitter:title" content="Django: Learnings"/>
+
+      <meta name="keywords" content="  "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=" Table of Contents In the beginning A personal finances dashboard Learning Django The best moments Adding a unique identifier to an existing authentication model Testing code In the beginning I... "/>
+      <meta name="twitter:description" content=" Table of Contents In the beginning A personal finances dashboard Learning Django The best moments Adding a unique identifier to an existing authentication model Testing code In the beginning I... "/>
+      <meta property="og:description" content=" Table of Contents In the beginning A personal finances dashboard Learning Django The best moments Adding a unique identifier to an existing authentication model Testing code In the beginning I... "/>
+
+      <meta property="og:url" content="https://johnmathews.eu/learning-to-django"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/learning-to-django"/>
+
+      <meta name="twitter:image" content="https://johnmathews.eu/
+"/>
+      <meta property="og:image" content="https://johnmathews.eu/
+"/>
+
+      <meta property="twitter:card" content="  summary  "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
+
+
+        <script>
+          window.ga = window.ga || function () {
+                      (ga.q = ga.q || []).push(arguments);
+                    };
+                    ga.l = +new Date();
+                    ga("create", "UA-82253540-1", "auto");
+                    ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script async>
+        let theme = localStorage.getItem('theme');
+      </script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  </head>
+
+  <body class="dark:bg-gray-800">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+      <div>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
+      </div>
+      <div class="flex md:hidden">
+        <button id="hamburger" aria-label="Menu" >
+          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
+          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
+        </button>
+      </div>
+      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
+
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about.html">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience.html">Experience</a>
+
+        <div class="flex justify-end px-3">
+          <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div id="day" class="modeIcon">
+              <i class="far fa-lightbulb fa-lg"></i>
+            </div>
+            <div id="night" class="modeIcon hidden">
+              <i class="far fa-moon fa-lg"></i>
+            </div>
+          </button>
+
+          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
+              <i class="pl-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <main class="lg:mt-10 lg:pt-5">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  technical  ">
+
+    <div class="markdown text-center dark:text-gray-200">
+      <h1> Django:&nbsp;Learnings </h1>
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      By John Mathews
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      Category:
+        <a href="https://johnmathews.eu/category/technical/web.html">Web</a>
+        
+    </div>
+
+    <div class="font-light text-gray-600 pb-5 text-center dark:text-gray-200">
+      January 2021
+    </div>
+
+    <main>
+      <article>
+        <div class="markdown dark:text-gray-200">
+          <div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#in-the-beginning">In the&nbsp;beginning</a></li>
+<li><a href="#a-personal-finances-dashboard">A personal finances&nbsp;dashboard</a></li>
+<li><a href="#learning-django">Learning&nbsp;Django</a></li>
+<li><a href="#the-best-moments">The best moments</a><ul>
+<li><a href="#adding-a-unique-identifier-to-an-existing-authentication-model">Adding a unique identifier to an existing authentication&nbsp;model</a></li>
+<li><a href="#testing-code">Testing&nbsp;code</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="in-the-beginning">In the&nbsp;beginning</h2>
+<p>I came to web development via business analytics. I was working as an
+accountant and Excel wasn&rsquo;t good enough anymore, so I looked around for a way
+to get started and came across <a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas">Jupyter
+Notebooks</a>.</p>
+<p>Notebooks are said to be a kind of &ldquo;gateway drug&rdquo; to programming, and I think
+that&rsquo;s true. They&rsquo;re the easiest and fastest way to start programming that I&rsquo;ve
+come&nbsp;across.</p>
+<p>When you&rsquo;re working in a notebook, its easy to get data, wrangle it, and show
+some results. But as soon as you can create a chart or some summary table you
+inevitably wonder how you can show this to people more easily, and publishing
+the results to a website feels like the best most general and versatile&nbsp;solution.</p>
+<p>Unfortunately it&rsquo;s also the hardest, and so begins a long series of compromises
+and incremental progress. Learn to use a dashboarding <span class="caps">API</span>, and learn to create
+static sites. But the end-goal, the ultimate solution, is a data driven web
+app, with authentication, saved user preferences, scalable performance, and
+automatically updated data&nbsp;sources.</p>
+<h2 id="a-personal-finances-dashboard">A personal finances&nbsp;dashboard</h2>
+<p>When I moved to the Netherlands, I wanted to use a personal finances dashboard
+to check weekly expenses. There wasn&rsquo;t a web-app that would do this (though
+there are a couple of apps that are trying) so I built my own dashboard. Then a
+few friends asked if they could use it too. They couldn&rsquo;t because it was just a
+dashboard and not a web app, but I thought this was a good reason to jump into
+web&nbsp;development.</p>
+<p>It was a much bigger task than I anticipated. (And that&rsquo;s <span class="caps">OK</span>.)</p>
+<p>It took several attempts and was super frustrating, I would dabble for a few
+weeks, do a few tutorials, and then get completely lost when I tried to do
+something by myself. I&rsquo;d get disorientated working across many different files
+and trying to visualise which part of the Model-View-Controller model, or the
+request-response cycle I was currently working&nbsp;on.</p>
+<p>I came to realisea that the mental load seems so large at the beginning because
+&ldquo;web-development&rdquo; is really a whole stack of technologies and abstractions
+combined (or stacked) together. Many of these have to be used together at the
+same time before you can see <em>any evidence of success at all</em>.</p>
+<h2 id="learning-django">Learning&nbsp;Django</h2>
+<p>I think the hardest things about Django are not actually Django. You&rsquo;ll need to
+comfortable with classes and inheritance. You&rsquo;ll also need to be comfortable
+with working across multiple files, and have some tools for searching across
+all you open buffers, or all the files in the project, at the same time. You&rsquo;ll
+also need to be comfortable with version control (Git) and using the command
+line. Get familiar with stack traces&nbsp;too.</p>
+<p>If you&rsquo;re familiar enough with all these things, so that using them doesn&rsquo;t
+feel new, but ideally feels familiar and comfortable, then I think you&rsquo;ll make
+quite quick progress with&nbsp;Django.</p>
+<p>Django uses the Model-View-Controller model. Models are how django maps Python
+objects to items in your database (oh yeah, you need to be familiar with <span class="caps">SQL</span>
+too&hellip;), Views are where requests are processed (also Middleware) and turned
+into Responses, which are then combined with templates (unless your building an
+<span class="caps">API</span>). You might notice I haven&rsquo;t mentioned what a Controller is - get used to
+information feeling incomplete whilst you&rsquo;re learning the ropes. It&rsquo;ll become
+clear soon&nbsp;enough.</p>
+<h2 id="the-best-moments">The best&nbsp;moments</h2>
+<p>The &lsquo;curse of knowledge&rsquo; states that once you&rsquo;ve learnt something you can&rsquo;t
+imagine or remember what it&rsquo;s like to not know it. Before that happens
+completely, I want to record some of the &lsquo;ahah!&rsquo; moments of &lsquo;learning&nbsp;Django&rsquo;.</p>
+<p>For context, I stopped working as a freelance data scientist in April and after
+a few weeks wondering if django and PostgreSQL and python was the way to go
+(yes it is. use boring technology), I began working full-time on what would
+become <a href="https://moneybar.nl">MoneyBar.nl</a>. I called it &lsquo;myeuros&rsquo; in the&nbsp;beginning.</p>
+<p>The learning curve felt steep. I wanted to do things &ldquo;right&rdquo; the first
+time because I wasn&rsquo;t building a toy, and although I felt that hindsight would
+show this to be a mistake in terms of efficiency, I did it anyway because I
+have a hunch that following my compulsions sometimes makes life harder in the
+short term and better in the long&nbsp;term.</p>
+<p>The best moments are usually preceded by the most&nbsp;frustrating.</p>
+<h3 id="adding-a-unique-identifier-to-an-existing-authentication-model">Adding a unique identifier to an existing authentication&nbsp;model</h3>
+<p>I used pydanny&rsquo;s <code>cookiecutter-django</code> template. Honestly, by the time I&rsquo;d gone
+through the quickstart process and googled the nouns in all the questions (what
+is <code>Sentry</code>, what is <code>Celery</code> and what is a <code>task que</code>, what is <code>whitenoise</code>,
+etc.) I was already tired. Play with it a few times and come back to&nbsp;it.</p>
+<p>Anyway, I wanted to start with authentication, because the project template has
+that part kind of up and rnuning for you out of the box. <code>cookiecutter-django</code>
+uses the <code>Django Allauth</code> package, which is awesome, and reliable, and fully
+featured&hellip; and extremely abstracted. Good luck looking at the module code and
+understanding it if youre not an&nbsp;expert.</p>
+<p>I wanted to give each user a unique <span class="caps">ID</span> - a <code>UUID</code> when they signed up. This
+would be used in query strings instead of usernames or incremental keys. This
+was so hard the first time! And it turns out its not a trivial task, not if you
+already have a few users in your (test) database. Sure you can reset the
+database and start again, but experimenting like this is fairly complex.
+Understanding how the python model classes (the <span class="caps">ORM</span>) maps to the relations in
+the PostgreSQL databse was complex, and if I got confused, should I try to fix
+it by changing python Models, or editing migrations, or working on the database
+directly? Getting started is one of the hardest&nbsp;things.</p>
+<p>After I&rsquo;d figured out authentication, I started creating models for other
+simpler data (transactions and bank accounts I expect). This was much simpler
+and faster. I remember driving home one evening thinking that if I could get
+this far then success was&nbsp;inevitable.</p>
+<h3 id="testing-code">Testing&nbsp;code</h3>
+<p>Before long, testing each part of the app by hand when I added or changed a
+feature was no longer trivial. I needed to find some way of automatically
+creating users and checking that they could log in and access&nbsp;views.</p>
+<p>I began working with <code>pytest</code>, and really found it hard to wrap my head around
+the idea accessing different parts of the app not by requests and responses but
+by accessing class methods&nbsp;directly.</p>
+<p>I think its normal and good to code at the limit of your knowledge, where you
+know just enough to make a thing &ldquo;work&rdquo;. But this approach falters when you
+want to then test what you wrote. Or at least, the measure of &ldquo;just enough&rdquo;
+really changes when you require tests to be written. You don&rsquo;t just need to
+make it work, you need to understand why it works, so that you can write tests
+to assert that certain conditions pass and others&nbsp;fail.</p>
+<p>This feels really satisfying when it works, because you have proof that you
+really have grasped a bigger picture. There are far fewer (relevant) black
+boxes when you write tests. But it also makes learning slower, at least in the
+short term. It means you might have two get comfortable with a handful of
+abstractions, when you&rsquo;ve already solved the problem you started with. This is
+frustrating, and it takes discipline to slow down, take a deeper look at the
+solution, and not just race on to the next&nbsp;feature.</p>
+        </div>
+      </article>
+    </main>
+
+    <div class="border border-gray-300 mt-10 mb-10"></div>
+
+    <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/site-performance"> Blog: Optimizing&nbsp;Performance</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/different-types-of-problem"> 3 Different Types Of Programming&nbsp;Problems</a>
+        </div>
+    </div>
+
+    <div class="text-left">
+      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
+        <span>Subscribe</span>
+        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+      </button>
+    </div>
+
+    <div class="hidden" id="subscribeBox" >
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate dark:bg-gray-700" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group dark:text-gray-300">
+              <label for="mce-EMAIL">Email Address </label>
+              <input type="email" value="" name="EMAIL" class="required email dark:bg-gray-500" id="mce-EMAIL">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
+    </div>
+
+      <div class="mt-10" id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                var disqus_config = function () {
+                          this.page.url = "https://johnmathews.eu/learning-to-django";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "learning-to-django"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                          var d = document, s = d.createElement('script');
+                          s.src = 'https://johnmathews.disqus.com/embed.js';
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
+        <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
+        <a href="feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+    <div>
+  
+        <script>
+          // on small screens, collapse navbar into a menu
+          document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+              navToggle.item(i).classList.toggle("hidden");
+            }
+          };
+        </script>
+
+        <script async>
+          // the user can only choose article visibility settings on the index page
+          if (window.location.pathname !== '/blog') {
+            $("#catChooser").toggleClass('hidden')
+          };
+        </script>
+
+        <script>
+          // dark mode light mode switcheroo
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          // swap out pygment CSS files based on dark/light theme
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
+          // set dark theme based on local storage settings
+          if (localStorage.getItem('theme') === "dark") {
+            document.getElementById("baz").classList.add("dark");
+            document.getElementById("day").classList.remove("hidden");
+            document.getElementById("night").classList.add("hidden");
+            changePygmentsCSS(light, dark);
+          } else {
+            document.getElementById("baz").classList.remove("dark");
+            window.localStorage.setItem('theme', 'light');
+            document.getElementById("day").classList.add("hidden");
+            document.getElementById("night").classList.remove("hidden");
+            changePygmentsCSS(dark, light);
+          }
+
+          // change theme if theme switcher button is clicked
+          function modeSwitcher() {
+            if (localStorage.getItem('theme') === "dark") {
+              window.localStorage.setItem('theme', 'light');
+              $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
+
+              document.getElementById("day").classList.add("hidden");
+              document.getElementById("night").classList.remove("hidden");
+            } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
+
+              document.getElementById("day").classList.remove("hidden");
+              document.getElementById("night").classList.add("hidden");
+            }
+          }
+        </script>
+
+        <script>
+          // navbar hide on scroll
+          var prevScrollPos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
+            }
+          }
+        </script>
+
+  <script>
+    // mailing list subscribe button
+    document.getElementById("signupButton").addEventListener("click", function(e) {
+      $('#signupButton').removeClass('block').addClass('hidden')
+      $('#subscribeBox').removeClass('hidden').addClass('block')
+    });
+  </script>
+
+  <script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+    </div>
+  </body>
+
+</html>

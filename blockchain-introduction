@@ -1,0 +1,463 @@
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+
+      <title>Blockchains from the ground up: Part 1 - JohnMathews.eu</title>
+      <meta name="title" content="Blockchains from the ground up: Part 1 -  JohnMathews.eu "/>
+      <meta property="og:title" content="Blockchains from the ground up: Part 1"/>
+      <meta property="twitter:title" content="Blockchains from the ground up: Part 1"/>
+
+      <meta name="keywords" content=" Blockchains,Digital Currencies,Distributed Ledger Technology,Public Key Cryptography "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=" Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains. "/>
+      <meta name="twitter:description" content=" Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains. "/>
+      <meta property="og:description" content=" Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of blockchains. "/>
+
+      <meta property="og:url" content="https://johnmathews.eu/blockchain-introduction"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/blockchain-introduction"/>
+
+      <meta name="twitter:image" content="https://johnmathews.eu/
+"/>
+      <meta property="og:image" content="https://johnmathews.eu/
+"/>
+
+      <meta property="twitter:card" content="  summary  "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
+
+
+        <script>
+          window.ga = window.ga || function () {
+                      (ga.q = ga.q || []).push(arguments);
+                    };
+                    ga.l = +new Date();
+                    ga("create", "UA-82253540-1", "auto");
+                    ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script async>
+        let theme = localStorage.getItem('theme');
+      </script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  </head>
+
+  <body class="dark:bg-gray-800">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+      <div>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
+      </div>
+      <div class="flex md:hidden">
+        <button id="hamburger" aria-label="Menu" >
+          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
+          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
+        </button>
+      </div>
+      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
+
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about.html">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience.html">Experience</a>
+
+        <div class="flex justify-end px-3">
+          <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div id="day" class="modeIcon">
+              <i class="far fa-lightbulb fa-lg"></i>
+            </div>
+            <div id="night" class="modeIcon hidden">
+              <i class="far fa-moon fa-lg"></i>
+            </div>
+          </button>
+
+          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
+              <i class="pl-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <main class="lg:mt-10 lg:pt-5">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700  technical  ">
+
+    <div class="markdown text-center dark:text-gray-200">
+      <h1> Blockchains from the ground up: Part&nbsp;1 </h1>
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      By John Mathews
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      Category:
+        <a href="https://johnmathews.eu/category/technical/cryptocurrencies.html">Cryptocurrencies</a>
+        
+    </div>
+
+    <div class="font-light text-gray-600 pb-5 text-center dark:text-gray-200">
+      May 2017
+    </div>
+
+    <main>
+      <article>
+          <div class="markdown dark:text-gray-200">
+            <p>Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&nbsp;blockchains.</p>
+          </div>
+        <div class="markdown dark:text-gray-200">
+          <h1 id="how-to-maintain-a-reliable-list-across-a-small-network-without-a-central-authority">How to maintain a reliable list across a small network without a central&nbsp;authority</h1>
+<p>This is part 1 of an introduction to the key features of a generalised blockchain. I haven&rsquo;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&nbsp;technology.</p>
+<h2 id="create-a-financial-document-that-cannot-be-forged-or-disputed">Create a financial document that cannot be forged or&nbsp;disputed</h2>
+<p>Let&rsquo;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&nbsp;receipt.</p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
+<span class="x">From: Lizzie</span>
+<span class="x">To: John    </span>
+<span class="x">What: 1 Orange  </span>
+<span class="x">Price: 1 Apple  </span>
+</pre></div>
+
+
+<p>So far, so good. The receipt is evidence of the transaction. The next day John wants an orange but doesn&rsquo;t have anything to exchange. He offers to write Lizzie a note saying he owes Lizzie 1 orange (an  <a href="https://en.wikipedia.org/wiki/IOU"><span class="caps">IOU</span></a>). They think about this and agree that John should sign the note so that Lizzie can prove that John owes her 1&nbsp;orange.</p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
+<span class="x">From: John</span>
+<span class="x">To: Lizzie</span>
+<span class="x">What: 1 Orange</span>
+<span class="x">Signed: John&#39;s signature, Lizzie&#39;s signature</span>
+</pre></div>
+
+
+<p>This <span class="caps">IOU</span> is a nice gesture, but it&rsquo;s simple to forge. Lizzie has the only copy of the <span class="caps">IOU</span> and once Lizzie has seen Johns signature, she could easily copy it and create more <span class="caps">IOU</span>&rsquo;s. She could also change this <span class="caps">IOU</span> from 1 orange to 11 oranges (for example) and John couldn&rsquo;t prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. It&rsquo;s one person&rsquo;s word against the&nbsp;other. </p>
+<p>Lizzie realises this and suggests an improvement - they will find a witness and make 3 copies of the <span class="caps">IOU</span>. Each copy will be signed by Lizzie, John and the Witness. Lets call this witness&nbsp;&ldquo;Walter&rdquo;. </p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234</span>
+<span class="x">From: John</span>
+<span class="x">To: Lizzie</span>
+<span class="x">What: 1 Orange</span>
+<span class="x">Witness: Walter</span>
+<span class="x">Signed: &quot;John&#39;s signature&quot;, &quot;Lizzie&#39;s signature&quot;, &quot;Walter&#39;s signature&quot;</span>
+</pre></div>
+
+
+<p>This is a much stronger document and is more difficult to forge. If Lizzie changes the &ldquo;What:&rdquo; to &ldquo;11 Oranges&rdquo;, both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie&rsquo;s 1. Lizzie will be laughed out of court.&nbsp;Hahaha. </p>
+<p>3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be&nbsp;ruined. </p>
+<p>This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. <span class="caps">E.G.</span> If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to&nbsp;be. </p>
+<p>The solution is <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public-key infrastructure</a> (which is introduced in my <a href="https://johnmathews.eu/encryption">previous post</a>). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&nbsp;briefly:</p>
+<p>A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it&rsquo;s a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data&nbsp;securely). </p>
+<p>Back to the fruit. If Lizzie wants to accept John&rsquo;s <span class="caps">IOU</span> she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the&nbsp;transaction.</p>
+<p>1] Create the <span class="caps">IOU</span> stating that John owes Lizzie 1&nbsp;orange.</p>
+<div class="highlight"><pre><span></span><span class="x">Date: 1234 From: John To: Lizzie What: 1 Orange</span>
+</pre></div>
+
+
+<p>2] John creates a public private key pair and encrypts the <span class="caps">IOU</span> using his private key. He adds an unencrypted &ldquo;From&rdquo;&nbsp;line.</p>
+<div class="highlight"><pre><span></span><span class="x">From: John </span>
+<span class="x">Date: 1234 To: Lizzie, What: 1 Orange &lt;- Signed and encrypted by John using his private key</span>
+</pre></div>
+
+
+<p>3] John makes his public key freely available to anyone who wants&nbsp;it.</p>
+<p>This will work because anybody (not just Lizzie) can check that John signed the <span class="caps">IOU</span>. The transaction can be verified by looking at the &ldquo;From&rdquo; part of that transaction, noticing that this transaction is supposedly from John and then using John&rsquo;s public key to decrypt the encoded &ldquo;signature&rdquo;&nbsp;line. </p>
+<p>The signature can only be decrypted using John&rsquo;s public key if his private key was used to encrypt it. Because John is the only person with his private key, that proves the transaction is valid, and Lizzie isn&rsquo;t dishonestly creating a debt for John to&nbsp;pay. </p>
+<p>Clearly if John discloses his private key (or its stolen) then he will make the system insecure, but this is a problem with John and his security protocols, not with public-key&nbsp;cryptography. </p>
+<h2 id="create-and-maintain-an-accurate-list-of-transactions">Create and maintain an accurate list of&nbsp;transactions</h2>
+<p>So far we&rsquo;ve seen how 1 <span class="caps">IOU</span> (for an orange) can be securely created, signed and verified. This process can extended to be used by more people to exchange more fruit.  For&nbsp;example.</p>
+<p>The original&nbsp;note:</p>
+<div class="highlight"><pre><span></span><span class="x">From: John</span>
+<span class="x">Date: 1234, To: Lizzie, What: 1 Orange &lt;- Signed and encrypted by John using his private key</span>
+</pre></div>
+
+
+<p>Then some additional&nbsp;transactions:</p>
+<div class="highlight"><pre><span></span><span class="x">From: Lizzie // Date: 1235, To: John, What: 2 Apples &lt;- Signed and encrypted by Lizzie using her private key</span>
+<span class="x">From: John // Date: 1236, To: Chris, What: 1 Banana &lt;- Signed and encrypted by John using his private key</span>
+<span class="x">From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas &lt;- Signed and encrypted by Chris using his private key</span>
+</pre></div>
+
+
+<p>After these 4 transactions, between John, Chris and&nbsp;Lizzie:</p>
+<ul>
+<li>John owes 1 orange to Lizzie and 1 banana to&nbsp;Chris</li>
+<li>Lizzie owes 2 apples to&nbsp;John</li>
+<li>Chris owes 2 bananas to&nbsp;Lizzie.</li>
+</ul>
+<p>This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called &ldquo;coins&rdquo; and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten&nbsp;as: </p>
+<div class="highlight"><pre><span></span><span class="x">From: John // Date: 1234, To: Lizzie, What: 2 coins &lt;- Signed and encrypted by John using his private key</span>
+<span class="x">From: Lizzie // Date: 1235, To: John, What: 2 coins &lt;- Signed and encrypted by Lizzie using her private key</span>
+<span class="x">From: John // Date: 1236, To: Chris, What: 2 coins &lt;- Signed and encrypted by John using his private key</span>
+<span class="x">From: Chris // Date: 1237, To: Lizzie, What: 4 coins &lt;- Signed and encrypted by Chris using his private key</span>
+</pre></div>
+
+
+<p>By going through the list of transactions we can see&nbsp;that:</p>
+<ul>
+<li>John owes Lizzie and Chris 2 coins each, and is owed 2 coins from Lizzie. His net amount is&nbsp;-2</li>
+<li>Lizzie owes John 2 coins but is owed 4 coins from Chris. Her net amount is&nbsp;+2</li>
+<li>Chris owes Lizzie 4 coins but is owed 2 coins from John. His net amount is&nbsp;-2</li>
+</ul>
+<p>So far Lizzie is the only person who appears to have any business&nbsp;skills.</p>
+<p>What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris&rsquo; promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie&rsquo;s transaction would look like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><span class="x">From: Lizzie // Date: 1235, To: John, What: ba781... &lt;- Signed and encrypted by Lizzie using her private key</span>
+</pre></div>
+
+
+<p>The &ldquo;What&rdquo; section contains a <a href="http://www.movable-type.co.uk/scripts/sha256.html">hash</a> of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie&rsquo;s transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie&rsquo;s private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another&nbsp;person.</p>
+<p>This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the &ldquo;What&rdquo; part of the transaction. If we make two other changes - removing the &ldquo;To&rdquo; part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would&nbsp;be:</p>
+<div class="highlight"><pre><span></span><span class="x">From: Chris // Date: 2345, What: &quot;A photo of me&quot; &lt;- Signed and encrypted by Chris using his private key </span>
+</pre></div>
+
+
+<p>This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris&rsquo; private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the&nbsp;photo. </p>
+<p>Another use for public-key cryptography arises if Chris were an employee in a bank, and the &ldquo;What&rdquo; contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer&rsquo;s true identity and documenting the evidence that&rsquo;s been collected to show that the bank knows who their customer really is. If the transaction included a new section called &ldquo;Customer <span class="caps">ID</span>&rdquo; (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind <span class="caps">KYC</span> on a&nbsp;blockchain. </p>
+<p>Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of &ldquo;coins&rdquo; will need to be controlled in order to maintain their value. In the example above, people can freely create &ldquo;coins&rdquo; and can also carry negative amounts of &ldquo;coins&rdquo;. This would result in the value of a &ldquo;coin&rdquo; plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable&nbsp;manner.</p>
+<p>Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&rsquo;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in <a href="https://johnmathews.eu/blockchain-networks">part 2</a>.</p>
+        </div>
+      </article>
+    </main>
+
+    <div class="border border-gray-300 mt-10 mb-10"></div>
+
+    <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/aeternity"> Introduction to the Æternity blockchain&nbsp;project</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/blockchain-networks"> Blockchains from the ground up: Part&nbsp;2</a>
+        </div>
+    </div>
+
+    <div class="text-left">
+      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
+        <span>Subscribe</span>
+        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+      </button>
+    </div>
+
+    <div class="hidden" id="subscribeBox" >
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate dark:bg-gray-700" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group dark:text-gray-300">
+              <label for="mce-EMAIL">Email Address </label>
+              <input type="email" value="" name="EMAIL" class="required email dark:bg-gray-500" id="mce-EMAIL">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
+    </div>
+
+      <div class="mt-10" id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                var disqus_config = function () {
+                          this.page.url = "https://johnmathews.eu/blockchain-introduction";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "blockchain-introduction"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                          var d = document, s = d.createElement('script');
+                          s.src = 'https://johnmathews.disqus.com/embed.js';
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
+        <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
+        <a href="feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+    <div>
+  
+        <script>
+          // on small screens, collapse navbar into a menu
+          document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+              navToggle.item(i).classList.toggle("hidden");
+            }
+          };
+        </script>
+
+        <script async>
+          // the user can only choose article visibility settings on the index page
+          if (window.location.pathname !== '/blog') {
+            $("#catChooser").toggleClass('hidden')
+          };
+        </script>
+
+        <script>
+          // dark mode light mode switcheroo
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          // swap out pygment CSS files based on dark/light theme
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
+          // set dark theme based on local storage settings
+          if (localStorage.getItem('theme') === "dark") {
+            document.getElementById("baz").classList.add("dark");
+            document.getElementById("day").classList.remove("hidden");
+            document.getElementById("night").classList.add("hidden");
+            changePygmentsCSS(light, dark);
+          } else {
+            document.getElementById("baz").classList.remove("dark");
+            window.localStorage.setItem('theme', 'light');
+            document.getElementById("day").classList.add("hidden");
+            document.getElementById("night").classList.remove("hidden");
+            changePygmentsCSS(dark, light);
+          }
+
+          // change theme if theme switcher button is clicked
+          function modeSwitcher() {
+            if (localStorage.getItem('theme') === "dark") {
+              window.localStorage.setItem('theme', 'light');
+              $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
+
+              document.getElementById("day").classList.add("hidden");
+              document.getElementById("night").classList.remove("hidden");
+            } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
+
+              document.getElementById("day").classList.remove("hidden");
+              document.getElementById("night").classList.add("hidden");
+            }
+          }
+        </script>
+
+        <script>
+          // navbar hide on scroll
+          var prevScrollPos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
+            }
+          }
+        </script>
+
+  <script>
+    // mailing list subscribe button
+    document.getElementById("signupButton").addEventListener("click", function(e) {
+      $('#signupButton').removeClass('block').addClass('hidden')
+      $('#subscribeBox').removeClass('hidden').addClass('block')
+    });
+  </script>
+
+  <script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+    </div>
+  </body>
+
+</html>

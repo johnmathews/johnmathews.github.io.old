@@ -1,0 +1,431 @@
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+
+      <title>Spare time - JohnMathews.eu</title>
+      <meta name="title" content="Spare time -  JohnMathews.eu "/>
+      <meta property="og:title" content="Spare time"/>
+      <meta property="twitter:title" content="Spare time"/>
+
+      <meta name="keywords" content=" Advice,Habits,Reflection "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=" This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I’d rather be doing instead. Some of these... "/>
+      <meta name="twitter:description" content=" This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I’d rather be doing instead. Some of these... "/>
+      <meta property="og:description" content=" This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I’d rather be doing instead. Some of these... "/>
+
+      <meta property="og:url" content="https://johnmathews.eu/spare-time"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/spare-time"/>
+
+      <meta name="twitter:image" content="https://johnmathews.eu/
+"/>
+      <meta property="og:image" content="https://johnmathews.eu/
+"/>
+
+      <meta property="twitter:card" content="  summary  "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
+
+
+        <script>
+          window.ga = window.ga || function () {
+                      (ga.q = ga.q || []).push(arguments);
+                    };
+                    ga.l = +new Date();
+                    ga("create", "UA-82253540-1", "auto");
+                    ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script async>
+        let theme = localStorage.getItem('theme');
+      </script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  </head>
+
+  <body class="dark:bg-gray-800">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
+      <div>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
+      </div>
+      <div class="flex md:hidden">
+        <button id="hamburger" aria-label="Menu" >
+          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
+          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
+        </button>
+      </div>
+      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
+
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about.html">About</a>
+        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience.html">Experience</a>
+
+        <div class="flex justify-end px-3">
+          <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div id="day" class="modeIcon">
+              <i class="far fa-lightbulb fa-lg"></i>
+            </div>
+            <div id="night" class="modeIcon hidden">
+              <i class="far fa-moon fa-lg"></i>
+            </div>
+          </button>
+
+          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
+              <i class="pl-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <main class="lg:mt-10 lg:pt-5">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div id="articleParent" class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:bg-gray-700   nonTechnical ">
+
+    <div class="markdown text-center dark:text-gray-200">
+      <h1> Spare&nbsp;time </h1>
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      By John Mathews
+    </div>
+
+    <div class="py-1 text-gray-700 font-bold text-center dark:text-gray-200">
+      Category:
+        <a href="https://johnmathews.eu/category/non-technical/family.html">Family</a>
+        
+    </div>
+
+    <div class="font-light text-gray-600 pb-5 text-center dark:text-gray-200">
+      August 2016
+    </div>
+
+    <main>
+      <article>
+        <div class="markdown dark:text-gray-200">
+          <p>This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I&rsquo;d rather be doing instead. Some of these interests are just me reacting to having no spare time for a few months, but others are decent goals and projects. Temporarily losing my spare time made me value it&nbsp;more.</p>
+<p><img alt="free-time" src="/images/spare_time.jpg"></p>
+<p>I wrote this post so that I could compare what I thought was important when I was busy to when I wasn&rsquo;t. Writing the list allowed me to move on without forgetting. Here&rsquo;s a break down of each&nbsp;item:</p>
+<ol>
+<li>
+<p><span class="dquo">&ldquo;</span>Run 10k in 50 minutes&rdquo; - This is easier than I imagined. When I wrote the list I could barely run 2k without stopping, but intended to go for a weekly run whilst studying. I&rsquo;ve struggled to stay energetic and healthy during previous exam phases, so now I have a rule that I must do some mild exercise even if I think I can&rsquo;t spare the time. I find running really lowers my stress levels, and increasing my heart rate and working up a sweat lets me sleep better
+    and concentrate for longer. After a few weeks of minimal running, I could run 5k easily. If I kept at it, 10k in 50 mins would be easy. But point&nbsp;2&hellip;</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Be Insanity strong&rdquo; - As in, do the Insanity workout programme. Again. I thought about it and decided to do P90x instead. Week 1 is going&nbsp;great.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Read the bible habitually&rdquo; - When I was 17 I found out about Jesus and became a Christian. In the months and years after that I&rsquo;d regularly read my bible almost every day and pray a lot. I wanted to understand, so I set a goal of 5 chapters each&nbsp;day.</p>
+<p>I read through the new testament repeatedly and read most of the old testament during this time. I knew the scriptures well enough that a lot of sermons became boring and obvious - I&rsquo;d already studied the bible passage being used. During this time I remember being aware that the way I thought was different to how it would have been otherwise. My perspectives were long-term and less me focused. I thought about what I was reading instead of the days&rsquo; headlines or social chatter. I remember enjoying the benefits and thinking that I should keep this habit. The reasons why I think Christianity is so wonderful are well summarised in <a href="http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders">this sermon</a>.</p>
+<p>It&rsquo;s now 10 years later, and whilst my convictions are strong, my knowledge of the bible is sadly pretty fuzzy. My thinking is clouded by the perspectives contained in the media I consume and the conversations I&rsquo;m part of. I strongly suspect I would be acting and
+thinking differently if I read my bible more, but I don&rsquo;t know what those differences would be. Trouble is, it&rsquo;s often not obvious what the immediate benefits of reading the bible are, you have to work for it a bit. Praying for help is effective. The books in the bible were written to last through the ages and across all cultures, so it&rsquo;s not surprising that they&rsquo;re not as easy to read as something written for an English speaker in a hurry. I should stop being in a hurry, and stop prioritising only quantifiable&nbsp;goals.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Think more&rdquo; - On a similar note to 3, but less supernatural. If I spent less time consuming content and a little more looking around me or walking, I reckon I&rsquo;d be more self-aware and make better decisions. This would probably lead to a happier, more satisfying&nbsp;life.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Pray more&rdquo; - I don&rsquo;t know why, but the creator of the universe wants me to talk and share my life with him. He cares about me. This makes no sense to me, at all. If I was God, I would not go out of my way to consider the views and concerns of a very flawed human. But
+    when I pray, my prayers are very often answered. I should ask him about&nbsp;this.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Amazon seller?&rdquo; - Amazon have this &ldquo;Fulfilled by Amazon&rdquo; service,
+    which means you don&rsquo;t even need to hold the stock you want to sell.
+    If I choose the right products, import them cheaply from China and
+    reselling  them on Amazon at a profit, I end up quids in for minimal
+    effort and manageable risk. Sounds&nbsp;intriguing.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Blog about interesting data&rdquo; - Here I am, blogging. I should stick
+    to the main topic and get technical. I was inspired by this
+    <a href="http://www.curiousgnu.com/">blog</a> in&nbsp;particular.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Finish Coursera&rdquo; - The data science specialization is great! It&rsquo;s in R, and I want to focus on Python, but I&rsquo;d still like to do it. I need to consider the opportunity cost of the time committed,&nbsp;though.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Read for fun, history, fiction&rdquo; - When I started my job, in April 2014, I was half way through <a href="https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4">Savage Continent</a>, which is an eye-opening and eye-watering history of Europe in the years after World War 2. I see Europe through different eyes because of it. However I only got half way though, and since April &lsquo;14 I never felt I had the free time or energy to pick it back up. This should change. When I was a researcher, and when I was a student, I had so much more opportunity to develop my own pursuits. Since entering the corporate world, I find myself fighting a war of attrition to exert my personality onto my lifestyle. </br> </br> Read for fiction&hellip; I&rsquo;m unconvinced. What do you have at the end of it? What can you do with it? Maybe I&rsquo;ve just been reading the wrong authors, but I&rsquo;m going to leave this for now. Sure, you could gain an appreciation of a different time or place, but that appreciation comes via the fictional characters and events, its secondary. What about abstract constructs, perspectives, morals&hellip; things that history books are ill-suited for? Great fiction would be essential for exploring these. But for now, I&rsquo;ll prioritise point 3.</br>  </br> <iframe style="max-width: 100%; float:middle" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;asin=B00796LLLK&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" width="336" height="550" frameborder="0" allowfullscreen="allowfullscreen"></iframe> </br> </br></p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Do a photography project&rdquo; - This I would love to do, but probably won&rsquo;t. It would be a luxury, and the opportunity cost would be too great right now. I&rsquo;d like to shoot a series of black and white portraits, and turn them into large prints. I think good portrait photography is uniquely impactful and moving, choosing B&amp;W removes distractions and leaves a subjects humanity more&nbsp;exposed.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Have a list of business/product ideas&rdquo; - There&rsquo;s no excuse for this
+    one, anyone can have several good ideas. It&rsquo;s turning them into
+    reality that takes skill. Need to have the ideas first,&nbsp;though.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Do a law <span class="caps">MOOC</span>&rdquo; - i.e Study particular areas of law, in my own time
+    and at my own pace. I studied a tiny bit of law during the <span class="caps">ACA</span>, and
+    realised employment law or contract law could be really useful.
+    (Same for the tax system - another surprise). We only had a brief
+    introduction though, so if I could find the time I&rsquo;d like to know&nbsp;more.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Do an InfoSec or Network Security <span class="caps">MOOC</span>&rdquo; - Its super interesting,
+    but not likely to be a good use of&nbsp;time.</p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Learn to fight - Krav Maga / <span class="caps">MMA</span>&rdquo; - Ever since watching The Bourne
+    Identity I&rsquo;ve wanted to learn Krav Maga, and <a href="https://youtu.be/LybrzdG96_8">Georges
+    St-Pierre</a> made me want to train
+    for <span class="caps">MMA</span>. For now though, I&rsquo;ll do P90x. I can reconsider in 90&nbsp;days.</p>
+<p><iframe class="mx-auto mt-5" width="560" height="315" src="https://www.youtube.com/embed/u0_8dzaNxhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe></p>
+</li>
+<li>
+<p><span class="dquo">&ldquo;</span>Get out of London&rdquo; - My contract ends in April 2017, next summer
+    will be a crossroads. I hate the commute, I hate being constantly
+    rushed. Living in other cities has been a lot more&nbsp;pleasant.</p>
+</li>
+</ol>
+        </div>
+      </article>
+    </main>
+
+    <div class="border border-gray-300 mt-10 mb-10"></div>
+
+    <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class=" dark:text-gray-200 px-1 hover:text-green-700 dark:hover:text-red-500" href="https://johnmathews.eu/how-to-wake-up-early"> How to wake up&nbsp;early</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="dark:text-gray-200 text-left px-1 hover:text-green-700 dark:hover:text-green-200" href="https://johnmathews.eu/london"> London Rent vs. London&nbsp;Salaries</a>
+        </div>
+    </div>
+
+    <div class="text-left">
+      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
+        <span>Subscribe</span>
+        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+      </button>
+    </div>
+
+    <div class="hidden" id="subscribeBox" >
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate dark:bg-gray-700" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group dark:text-gray-300">
+              <label for="mce-EMAIL">Email Address </label>
+              <input type="email" value="" name="EMAIL" class="required email dark:bg-gray-500" id="mce-EMAIL">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
+    </div>
+
+      <div class="mt-10" id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                var disqus_config = function () {
+                          this.page.url = "https://johnmathews.eu/spare-time";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "spare-time"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                          var d = document, s = d.createElement('script');
+                          s.src = 'https://johnmathews.disqus.com/embed.js';
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
+        <a href="#top">Back to top</a> |
+        <a href="https://johnmathews.eu/categories">Categories</a> |
+        <a href="feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+    <div>
+  
+        <script>
+          // on small screens, collapse navbar into a menu
+          document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+              navToggle.item(i).classList.toggle("hidden");
+            }
+          };
+        </script>
+
+        <script async>
+          // the user can only choose article visibility settings on the index page
+          if (window.location.pathname !== '/blog') {
+            $("#catChooser").toggleClass('hidden')
+          };
+        </script>
+
+        <script>
+          // dark mode light mode switcheroo
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          // swap out pygment CSS files based on dark/light theme
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
+          // set dark theme based on local storage settings
+          if (localStorage.getItem('theme') === "dark") {
+            document.getElementById("baz").classList.add("dark");
+            document.getElementById("day").classList.remove("hidden");
+            document.getElementById("night").classList.add("hidden");
+            changePygmentsCSS(light, dark);
+          } else {
+            document.getElementById("baz").classList.remove("dark");
+            window.localStorage.setItem('theme', 'light');
+            document.getElementById("day").classList.add("hidden");
+            document.getElementById("night").classList.remove("hidden");
+            changePygmentsCSS(dark, light);
+          }
+
+          // change theme if theme switcher button is clicked
+          function modeSwitcher() {
+            if (localStorage.getItem('theme') === "dark") {
+              window.localStorage.setItem('theme', 'light');
+              $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
+
+              document.getElementById("day").classList.add("hidden");
+              document.getElementById("night").classList.remove("hidden");
+            } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
+
+              document.getElementById("day").classList.remove("hidden");
+              document.getElementById("night").classList.add("hidden");
+            }
+          }
+        </script>
+
+        <script>
+          // navbar hide on scroll
+          var prevScrollPos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
+            }
+          }
+        </script>
+
+  <script>
+    // mailing list subscribe button
+    document.getElementById("signupButton").addEventListener("click", function(e) {
+      $('#signupButton').removeClass('block').addClass('hidden')
+      $('#subscribeBox').removeClass('hidden').addClass('block')
+    });
+  </script>
+
+  <script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+    </div>
+  </body>
+
+</html>
