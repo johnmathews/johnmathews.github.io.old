@@ -11,6 +11,7 @@
 }
 
 /* icons to toggle dark mode*/
+/* delete?? */
 #darkMode:hover{
 	color:red;
 }
@@ -21,41 +22,53 @@
 
 /* font awesome icon colors*/
 .far:hover, .fas:hover {
-	@apply text-gray-50;
+	@apply underline;
 }
 
 .far, .fas {
-	@apply text-gray-700;
+	@apply text-gray-700 dark:text-white;
 }
 
 /* footnotes */
 .markdown .simple-footnotes {
-	@apply mt-10 py-3 pr-2 rounded-lg italic md:w-4/6 bg-yellow-500 dark:bg-green-800;
+	@apply mt-10 py-3 text-xl;
 }
 
+/* codeblocks */
 /* jupyter notebook input and output cells - scroll instead of overflow */
 .markdown .highlight {
 	overflow: scroll;
-  @apply dark:bg-gray-800 dark:text-gray-200;
+  @apply mt-10 ;
 }
 
 .markdown .inner_cell {
 	overflow: scroll;
 }
 
-/* Override pygments style background color. */
+.prompt.input_prompt {
+	@apply hidden;
+}
+
+.prompt.output_prompt {
+	@apply hidden;
+}
+
+.plot-container.plotly{
+	@apply -mr-40
+}
+
+.user-select-none.svg-container{
+	@apply text-left;
+}
+
+/* code blocks */
 .markdown .highlight pre {
-  @apply bg-gray-100 dark:bg-gray-800 dark:text-gray-200 text-sm;
+  @apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
 	overflow: scroll;
 }
 
 .markdown .highlight pre span {
-	@apply border-0 leading-5;
-}
-
-.markdown .output_html {
-	overflow-x: scroll;
-  @apply dark:bg-gray-100 dark:text-gray-900;
+	@apply font-sans text-lg border-0 leading-normal;
 }
 
 .markdown .anchor-link {
@@ -63,12 +76,25 @@
 }
 
 /* output_html */
+.markdown .output_html {
+	overflow-x: scroll;
+  @apply dark:bg-gray-100 dark:text-gray-900 bg-white dark:bg-black;
+}
+
+.markdown .highlight hl-ipython3{
+	@apply mt-0;
+}
+
+.output_subarea.output_stream > pre{
+	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
+}
+
 .markdown .output_execute_result {
   @apply dark:text-gray-900;
 }
 
 .markdown .output_subarea {
-  @apply dark:bg-gray-100;
+  @apply dark:bg-black dark:text-gray-200 -mr-40;
 }
 
 .markdown .output_stdout pre {
@@ -81,14 +107,30 @@
   padding-bottom: 0.125rem;
 }
 
-
 /* normal markdown */
 .markdown {
-  @apply text-gray-900 text-lg leading-relaxed break-words;
+	@apply break-words font-serif text-xl leading-relaxed font-normal text-gray-700 dark:text-gray-300;
+}
+
+.markdown strong {
+  @apply font-semibold;
+}
+
+.markdown strong a {
+  @apply font-medium;
+}
+
+.markdown a {
+  @apply text-blue-600 dark:text-blue-300 font-medium;
+}
+
+
+.markdown p {
+  @apply mt-7 mb-0;
 }
 
 .markdown p img {
-  @apply mx-auto my-2 border-solid border-2 rounded-sm border-gray-500;
+  @apply mx-auto my-3 border-solid border-2 rounded-sm border-gray-500;
 }
 
 .markdown p img:first-child {
@@ -99,44 +141,36 @@
   @apply mb-10;
 }
 
-.markdown p {
-  @apply mt-4 mb-0 font-light;
+
+/* Lists.. */
+.markdown ul {
+  @apply pl-8 list-disc;
 }
 
-.markdown > * + * {
-  @apply mt-0 mb-4;
+.markdown ol {
+  @apply pl-8 list-decimal;
 }
 
-.markdown li {
-	@apply font-light;
+.markdown ol > li:first-child {
+  @apply mt-4;
 }
 
-.markdown li + li {
-  @apply mt-1;
+.markdown ul > li:first-child {
+  @apply mt-4;
 }
 
-.markdown li > p + p {
-  @apply mt-6;
+.markdown li > p  {
+  @apply mt-2;
 }
 
-.markdown strong {
-  @apply font-semibold;
-}
 
-.markdown a {
-  @apply text-blue-600 dark:text-blue-300 font-semibold;
-}
-
-.markdown strong a {
-  @apply font-semibold;
-}
-
+/* headings */
 .markdown h1 {
   @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pt-2 pb-2;
 }
 
 .markdown h2 {
-  @apply leading-tight border-b text-2xl font-semibold mb-4 mt-10 pb-2;
+  @apply leading-tight border-b border-gray-200 dark:border-gray-600 text-2xl font-semibold mb-4 mt-10 pb-2;
 }
 
 .markdown h3 {
@@ -155,12 +189,14 @@
   @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
 }
 
+
+/* code and quotes */
 .markdown blockquote {
   @apply border-l-4 border-gray-300 pl-4 pr-4 text-gray-600 dark:text-gray-200;
 }
 
 .markdown code {
-  @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-05 dark:bg-gray-800;
+  @apply leading-none font-sans text-lg font-medium rounded-xl border-2 border-gray-400 inline-block align-middle bg-pink-100 pb-1 px-2 dark:bg-green-800;
 }
 
 .markdown pre {
@@ -171,16 +207,9 @@
   @apply block bg-transparent p-0 overflow-visible rounded-none;
 }
 
-.markdown ul {
-  @apply pl-8 list-disc;
-}
-
-.markdown ol {
-  @apply pl-8 list-decimal;
-}
-
 .markdown kbd {
   @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+
 }
 
 .markdown table {

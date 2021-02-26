@@ -40,15 +40,19 @@
 
         <script>
           window.ga = window.ga || function () {
-                      (ga.q = ga.q || []).push(arguments);
-                    };
-                    ga.l = +new Date();
-                    ga("create", "UA-82253540-1", "auto");
-                    ga("send", "pageview");
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"> 
+
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
@@ -59,43 +63,58 @@
       </script>
   </head>
 
-  <body class="dark:bg-gray-800">
+  <body class="dark:bg-black">
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
-      <div>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
-      </div>
-      <div class="flex md:hidden">
-        <button id="hamburger" aria-label="Menu" >
-          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
-          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
-        </button>
-      </div>
-      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
-
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about.html">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience.html">Experience</a>
-
-        <div class="flex justify-end px-3">
-          <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
-            <div id="day" class="modeIcon">
-              <i class="far fa-lightbulb fa-lg"></i>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
             </div>
-            <div id="night" class="modeIcon hidden">
-              <i class="far fa-moon fa-lg"></i>
+            <div class="night modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
             </div>
           </button>
-
-          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
-              <i class="pl-2 fas fa-paw fa-lg"></i>
+          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
           </button>
         </div>
-
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
       </div>
     </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
 
-    <main class="lg:mt-10 lg:pt-5">
+    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
 
       <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
         <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
@@ -120,9 +139,38 @@
           </div>
         </div>
       </div>
-
-  <main class="bg-gray-100 dark:bg-gray-800 py-1">
-      <div class="mx-5 pt-4 pb-2 text-2xl dark:text-white">
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                  <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+                  </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="hidden night modeIcon">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div id="contentParent" class="container xl:w-5/6 xl:ml-20">
+  <main class="py-1 -mr-64">
+      <div class="font-serif mx-5 pt-4 pb-5 text-3xl dark:text-white">
         <a class="" href="https://johnmathews.eu/category/technical">Technical</a>
       </div>
     <div class="md:overflow-x-auto md:flex md:flex-column w-full px-0 md:px-4">
@@ -144,303 +192,303 @@
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-indigo-300 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/technical/civil-engineering">Civil Engineering</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/technical/civil-engineering.html">Civil Engineering</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/silos.html"><span class="bg-blue-300">Silos: Introduction to my doctorate&nbsp;research</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/silos.html"><span class=" bg-blue-300">Silos: Introduction to my doctorate&nbsp;research</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-red-500 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/technical/cryptocurrencies">Cryptocurrencies</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/technical/cryptocurrencies.html">Cryptocurrencies</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/bitcoin-lightning.html"><span class="bg-blue-300">Bitcoin&nbsp;Lightning</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/bitcoin-lightning.html"><span class=" bg-blue-300">Bitcoin&nbsp;Lightning</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/sync-bitcoin-core-node.html"><span class="bg-purple-400">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/sync-bitcoin-core-node.html"><span class=" bg-purple-400">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/prediction.html"><span class="bg-indigo-300">Prediction&nbsp;Markets</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/prediction.html"><span class=" bg-indigo-300">Prediction&nbsp;Markets</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/buying-btc.html"><span class="bg-green-500">How to buy&nbsp;Bitcoin</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/buying-btc.html"><span class=" bg-green-500">How to buy&nbsp;Bitcoin</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/pangea.html"><span class="bg-yellow-400">Pangea</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/pangea.html"><span class=" bg-yellow-400">Pangea</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/bitcoin-vs-gold.html"><span class="bg-red-500">Bitcoin compared to&nbsp;gold</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/bitcoin-vs-gold.html"><span class=" bg-red-500">Bitcoin compared to&nbsp;gold</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/wallet.html"><span class="bg-pink-300">Hardware&nbsp;Wallets</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/wallet.html"><span class=" bg-pink-300">Hardware&nbsp;Wallets</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/bitnation.html"><span class="bg-blue-300">Bitnation</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/bitnation.html"><span class=" bg-blue-300">Bitnation</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html"><span class="bg-indigo-300">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html"><span class=" bg-indigo-300">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/blockchain-networks.html"><span class="bg-red-500">Blockchains from the ground up: Part&nbsp;2</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/blockchain-networks.html"><span class=" bg-red-500">Blockchains from the ground up: Part&nbsp;2</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/blockchain-introduction.html"><span class="bg-green-500">Blockchains from the ground up: Part&nbsp;1</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/blockchain-introduction.html"><span class=" bg-green-500">Blockchains from the ground up: Part&nbsp;1</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/aeternity.html"><span class="bg-yellow-400">Introduction to the Æternity blockchain&nbsp;project</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/aeternity.html"><span class=" bg-yellow-400">Introduction to the Æternity blockchain&nbsp;project</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/aeternity-ico.html"><span class="bg-pink-300">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/aeternity-ico.html"><span class=" bg-pink-300">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/encryption.html"><span class="bg-blue-300">Encryption</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/encryption.html"><span class=" bg-blue-300">Encryption</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/digital-currencies-the-basics.html"><span class="bg-indigo-300">Digital currencies: the&nbsp;basics</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/digital-currencies-the-basics.html"><span class=" bg-indigo-300">Digital currencies: the&nbsp;basics</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-green-500 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/technical/data">Data</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/technical/data.html">Data</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/btc-fork-analysis.html"><span class="bg-blue-300">Analysis of the mean and median value of transactions on 5&nbsp;Blockchains</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/btc-fork-analysis.html"><span class=" bg-blue-300">Analysis of the mean and median value of transactions on 5&nbsp;Blockchains</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/algo-trading.html"><span class="bg-purple-400">Trading digital&nbsp;assets</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/algo-trading.html"><span class=" bg-purple-400">Trading digital&nbsp;assets</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/macro-btc.html"><span class="bg-indigo-300">Macro analysis of the Bitcoin&nbsp;blockchain</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/macro-btc.html"><span class=" bg-indigo-300">Macro analysis of the Bitcoin&nbsp;blockchain</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/books.html"><span class="bg-green-500">Analysing a personal&nbsp;library</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/books.html"><span class=" bg-green-500">Analysing a personal&nbsp;library</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/fakegl.html"><span class="bg-yellow-400">FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/fakegl.html"><span class=" bg-yellow-400">FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/reconciliation.html"><span class="bg-red-500">Reconciliation of a trial balance to a general&nbsp;ledger</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/reconciliation.html"><span class=" bg-red-500">Reconciliation of a trial balance to a general&nbsp;ledger</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/spotify.html"><span class="bg-pink-300">Spotify song&nbsp;history</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/spotify.html"><span class=" bg-pink-300">Spotify song&nbsp;history</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-yellow-400 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/technical/data-science">Data Science</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/technical/data-science.html">Data Science</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/portfolio-image-recognition.html"><span class="bg-blue-300">Portfolio: Image&nbsp;Recognition</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/portfolio-image-recognition.html"><span class=" bg-blue-300">Portfolio: Image&nbsp;Recognition</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/courseras-data-science-specialisation.html"><span class="bg-purple-400">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/courseras-data-science-specialisation.html"><span class=" bg-purple-400">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-indigo-400 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/technical/developer-tools">Developer Tools</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/microservices_events_docker.html"><span class="bg-blue-300">Microservices, Docker,&nbsp;Azure</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/microservices_events_docker.html"><span class=" bg-blue-300">Microservices, Docker,&nbsp;Azure</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"><span class="bg-purple-400">Vim Notes: From &#8220;Mastering Vim&nbsp;Quickly&#8221;</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html"><span class=" bg-purple-400">Vim Notes: From &#8220;Mastering Vim&nbsp;Quickly&#8221;</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/python-notes.html"><span class="bg-indigo-300">Python Notes: From &#8220;Powerful&nbsp;Python&#8221;</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/python-notes.html"><span class=" bg-indigo-300">Python Notes: From &#8220;Powerful&nbsp;Python&#8221;</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/vim-notes-goto-tag-definition.html"><span class="bg-green-500">Vim Notes: GoTo Tag&nbsp;Definition</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/vim-notes-goto-tag-definition.html"><span class=" bg-green-500">Vim Notes: GoTo Tag&nbsp;Definition</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html"><span class="bg-yellow-400">Pelican: Debugging the more_categories&nbsp;plugin</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html"><span class=" bg-yellow-400">Pelican: Debugging the more_categories&nbsp;plugin</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/becoming-a-better-python-developer.html"><span class="bg-red-500">Python: Becoming A Better Python&nbsp;Developer</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/becoming-a-better-python-developer.html"><span class=" bg-red-500">Python: Becoming A Better Python&nbsp;Developer</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/vim-for-large-projects.html"><span class="bg-pink-300">Vim: Large&nbsp;Projects</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/vim-for-large-projects.html"><span class=" bg-pink-300">Vim: Large&nbsp;Projects</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/larger-code-bases.html"><span class="bg-blue-300">Data Science vs Web Development: Larger Code&nbsp;Bases</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/larger-code-bases.html"><span class=" bg-blue-300">Data Science vs Web Development: Larger Code&nbsp;Bases</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/test-driven-development.html"><span class="bg-indigo-300"><span class="caps">TDD</span>: Test Driven&nbsp;Development</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/test-driven-development.html"><span class=" bg-indigo-300"><span class="caps">TDD</span>: Test Driven&nbsp;Development</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/api-design.html"><span class="bg-red-500"><span class="caps">API</span> Design&nbsp;Principles</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/api-design.html"><span class=" bg-red-500"><span class="caps">API</span> Design&nbsp;Principles</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/principles-of-oop.html"><span class="bg-green-500"><span class="caps">OOP</span>: Principles Of Object Orientated&nbsp;Programming</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/principles-of-oop.html"><span class=" bg-green-500"><span class="caps">OOP</span>: Principles Of Object Orientated&nbsp;Programming</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html"><span class="bg-yellow-400">Unix: Utilities To Analyse And Update Multiple Text&nbsp;Files</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html"><span class=" bg-yellow-400">Unix: Utilities To Analyse And Update Multiple Text&nbsp;Files</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/shell.html"><span class="bg-pink-300">A faster&nbsp;shell</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/shell.html"><span class=" bg-pink-300">A faster&nbsp;shell</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/rys-git-tutorial.html"><span class="bg-blue-300">Ry&#8217;s Git&nbsp;Tutorial</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/rys-git-tutorial.html"><span class=" bg-blue-300">Ry&#8217;s Git&nbsp;Tutorial</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/vim.html"><span class="bg-indigo-300">Vim!</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/vim.html"><span class=" bg-indigo-300">Vim!</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/autumn-bin-and-path.html"><span class="bg-red-500">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/autumn-bin-and-path.html"><span class=" bg-red-500">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html"><span class="">Jupyter (iPython) notebooks +&nbsp;Pandas</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html"><span class=" ">Jupyter (iPython) notebooks +&nbsp;Pandas</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-pink-300 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/technical/web">Web</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/technical/web.html">Web</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/different-views-for-different-users.html"><span class="bg-blue-300">Blog: Different Views For Different&nbsp;Users</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/different-views-for-different-users.html"><span class=" bg-blue-300">Blog: Different Views For Different&nbsp;Users</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/different-types-of-problem.html"><span class="bg-purple-400">3 Different Types Of Programming&nbsp;Problems</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/different-types-of-problem.html"><span class=" bg-purple-400">3 Different Types Of Programming&nbsp;Problems</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/learning-to-django.html"><span class="bg-indigo-300">Django:&nbsp;Learnings</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/learning-to-django.html"><span class=" bg-indigo-300">Django:&nbsp;Learnings</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/site-performance.html"><span class="bg-green-500">Blog: Optimizing&nbsp;Performance</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/site-performance.html"><span class=" bg-green-500">Blog: Optimizing&nbsp;Performance</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/a-new-blog-design.html"><span class="bg-yellow-400">A New Blog&nbsp;Design</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/a-new-blog-design.html"><span class=" bg-yellow-400">A New Blog&nbsp;Design</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/pelican2.html"><span class="bg-red-500">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/pelican2.html"><span class=" bg-red-500">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/pelican.html"><span class="bg-pink-300">Blogging with&nbsp;Pelican</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/pelican.html"><span class=" bg-pink-300">Blogging with&nbsp;Pelican</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/time-until.html"><span class="bg-blue-300">Übersicht widget: Time&nbsp;Until</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/time-until.html"><span class=" bg-blue-300">Übersicht widget: Time&nbsp;Until</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/ubersicht-widget-time-since.html"><span class="bg-indigo-300">Übersicht widget: Time&nbsp;Since</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/ubersicht-widget-time-since.html"><span class=" bg-indigo-300">Übersicht widget: Time&nbsp;Since</span></a>
                     </div>
                   </div>
               </div>
         </div>
     </div>
-      <div class="mx-5 pt-4 pb-2 text-2xl dark:text-white">
+      <div class="font-serif mx-5 pt-4 pb-5 text-3xl dark:text-white">
         <a class="" href="https://johnmathews.eu/category/non-technical">Non-Technical</a>
       </div>
     <div class="md:overflow-x-auto md:flex md:flex-column w-full px-0 md:px-4">
@@ -448,217 +496,217 @@
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-pink-300 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/non-technical/career">Career</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/non-technical/career.html">Career</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html"><span class="bg-blue-300">Notes From An Interview With Geoffrey&nbsp;Hinton</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html"><span class=" bg-blue-300">Notes From An Interview With Geoffrey&nbsp;Hinton</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/whats-so-different-about-now.html"><span class="bg-purple-400">What&#8217;s So Different About&nbsp;Now</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/whats-so-different-about-now.html"><span class=" bg-purple-400">What&#8217;s So Different About&nbsp;Now</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/what-happens-next.html"><span class="bg-indigo-300">Predicting the Future using Human Nature and&nbsp;Technology</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/what-happens-next.html"><span class=" bg-indigo-300">Predicting the Future using Human Nature and&nbsp;Technology</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/financial-doom-and-gloom.html"><span class="bg-green-500">Financial Doom And&nbsp;Gloom</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/financial-doom-and-gloom.html"><span class=" bg-green-500">Financial Doom And&nbsp;Gloom</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/between-clients.html"><span class="bg-yellow-400">Between&nbsp;Clients</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/between-clients.html"><span class=" bg-yellow-400">Between&nbsp;Clients</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/chartered.html"><span class="bg-red-500">I&#8217;m a chartered&nbsp;accountant</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/chartered.html"><span class=" bg-red-500">I&#8217;m a chartered&nbsp;accountant</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/coworking.html"><span class="bg-pink-300">Coworking in&nbsp;Dublin</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/coworking.html"><span class=" bg-pink-300">Coworking in&nbsp;Dublin</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-blue-300 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/non-technical/christianity">Christianity</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/non-technical/christianity.html">Christianity</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/faith-in-jesus.html"><span class="bg-blue-300">Why Start Talking About Faith In&nbsp;Jesus?</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/faith-in-jesus.html"><span class=" bg-blue-300">Why Start Talking About Faith In&nbsp;Jesus?</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-indigo-300 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/non-technical/entrepreneurship">Entrepreneurship</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/non-technical/entrepreneurship.html">Entrepreneurship</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/pippip.email.html"><span class="bg-blue-300">Pippip.Email</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/pippip.email.html"><span class=" bg-blue-300">Pippip.Email</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/bakkerij.html"><span class="bg-purple-400">Bakke-Rij</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/bakkerij.html"><span class=" bg-purple-400">Bakke-Rij</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/investment.html"><span class="bg-indigo-300">Understanding <span class="caps">VC</span>&nbsp;Investment</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/investment.html"><span class=" bg-indigo-300">Understanding <span class="caps">VC</span>&nbsp;Investment</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/ambitious.html"><span class="bg-green-500">How to be an ambitious founder in&nbsp;Europe</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/ambitious.html"><span class=" bg-green-500">How to be an ambitious founder in&nbsp;Europe</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/lis17.html"><span class="bg-yellow-400">The Lisbon Investment&nbsp;Summit</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/lis17.html"><span class=" bg-yellow-400">The Lisbon Investment&nbsp;Summit</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-red-500 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/non-technical/family">Family</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/non-technical/family.html">Family</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/regrets-of-the-dying.html"><span class="bg-blue-300">Regrets Of The&nbsp;Dying</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/regrets-of-the-dying.html"><span class=" bg-blue-300">Regrets Of The&nbsp;Dying</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/a-list-of-unconnected-thoughts-and-aphorisms.html"><span class="bg-purple-400">A List Of Unconnected Thoughts And&nbsp;Aphorisms</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/a-list-of-unconnected-thoughts-and-aphorisms.html"><span class=" bg-purple-400">A List Of Unconnected Thoughts And&nbsp;Aphorisms</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/questions.html"><span class="bg-indigo-300">Questions For Interesting&nbsp;Conversations</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/questions.html"><span class=" bg-indigo-300">Questions For Interesting&nbsp;Conversations</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/mental-models-i-used-to-use.html"><span class="bg-green-500">Mental Models I Used To&nbsp;Use</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/mental-models-i-used-to-use.html"><span class=" bg-green-500">Mental Models I Used To&nbsp;Use</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/reading.html"><span class="bg-yellow-400">What I&#8217;m&nbsp;reading</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/reading.html"><span class=" bg-yellow-400">What I&#8217;m&nbsp;reading</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/neighbours.html"><span class="bg-red-500">Neighbours</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/neighbours.html"><span class=" bg-red-500">Neighbours</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/ocean.html"><span class="bg-pink-300">Live near the&nbsp;ocean</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/ocean.html"><span class=" bg-pink-300">Live near the&nbsp;ocean</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/corporate.html"><span class="bg-blue-300">Corporate&nbsp;London</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/corporate.html"><span class=" bg-blue-300">Corporate&nbsp;London</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/move.html"><span class="bg-indigo-300">Move</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/move.html"><span class=" bg-indigo-300">Move</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/flee.html"><span class="bg-red-500">Flee</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/flee.html"><span class=" bg-red-500">Flee</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/london.html"><span class="bg-green-500">London Rent vs. London&nbsp;Salaries</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/london.html"><span class=" bg-green-500">London Rent vs. London&nbsp;Salaries</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/spare-time.html"><span class="bg-yellow-400">Spare&nbsp;time</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/spare-time.html"><span class=" bg-yellow-400">Spare&nbsp;time</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/how-to-wake-up-early.html"><span class="bg-pink-300">How to wake up&nbsp;early</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/how-to-wake-up-early.html"><span class=" bg-pink-300">How to wake up&nbsp;early</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-green-500 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/non-technical/learning">Learning</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/non-technical/learning.html">Learning</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/why-i-want-to-write-regularly.html"><span class="bg-blue-300">Why I Want To Write&nbsp;Regularly</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/why-i-want-to-write-regularly.html"><span class=" bg-blue-300">Why I Want To Write&nbsp;Regularly</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/using-rss.html"><span class="bg-purple-400">Using <span class="caps">RSS</span></span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/using-rss.html"><span class=" bg-purple-400">Using <span class="caps">RSS</span></span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/product-led-growth.html"><span class="bg-indigo-300">Product-Led&nbsp;Growth</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/product-led-growth.html"><span class=" bg-indigo-300">Product-Led&nbsp;Growth</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/mom-test.html"><span class="bg-green-500">The Mom&nbsp;Test</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/mom-test.html"><span class=" bg-green-500">The Mom&nbsp;Test</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/obviously-awesome.html"><span class="bg-yellow-400">Obviously&nbsp;Awesome</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/obviously-awesome.html"><span class=" bg-yellow-400">Obviously&nbsp;Awesome</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/How-I-learnt-to-code.html"><span class="bg-red-500">How I learnt to&nbsp;code</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/How-I-learnt-to-code.html"><span class=" bg-red-500">How I learnt to&nbsp;code</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/1-page-marketing-plan.html"><span class="bg-pink-300">The 1-Page Marketing&nbsp;Plan</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/1-page-marketing-plan.html"><span class=" bg-pink-300">The 1-Page Marketing&nbsp;Plan</span></a>
                     </div>
                   </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/marketing-101.html"><span class="bg-blue-300">Learning to&nbsp;market</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/marketing-101.html"><span class=" bg-blue-300">Learning to&nbsp;market</span></a>
                     </div>
                   </div>
               </div>
         </div>
         <div class="mb-2">
               <div class="rounded-lg mx-2 my-2 py-2 bg-yellow-400 md:flex-shrink-0 md:w-64">
-                <div class="font-bold pl-3 pb-1 text-xl md:text-base text-left ">
-                    <a class="" href="https://johnmathews.eu/category/non-technical/photography">Photography</a>
+                <div class="font-serif pl-3 pb-3 md:text-xl text-left ">
+                    <a class="" href="https://johnmathews.eu/category/non-technical/photography.html">Photography</a>
                 </div>
                   <div class="flex justify-between text-center text-xl md:text-left md:text-base py-2 md:py-1">
-                    <div class="px-3 mx-0 text-left md:mx-auto md:ml-0 ">
-                      <a href="https://johnmathews.eu/photographs.html"><span class="bg-blue-300">Photographs</span></a>
+                    <div class="font-serif text-lg px-3 mx-0 text-left">
+                      <a href="https://johnmathews.eu/photographs.html"><span class=" bg-blue-300">Photographs</span></a>
                     </div>
                   </div>
               </div>
@@ -679,14 +727,18 @@
         </div>
     </div>
   </main>
+          </div>
+        </div>
+      </div>
+
     </main>
 
-    <footer class="footer">
-      <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
-        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
-        <a href="#top">Back to top</a> |
-        <a href="https://johnmathews.eu/categories">Categories</a> |
-        <a href="feeds/all.atom.xml">RSS</a>
+    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="feeds/all.atom.xml">RSS</a>
       </div>
     </footer>
 
@@ -697,15 +749,9 @@
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
             for (let i = 0; i < navToggle.length; i++) {
+              console.log(navToggle.item(i));
               navToggle.item(i).classList.toggle("hidden");
             }
-          };
-        </script>
-
-        <script async>
-          // the user can only choose article visibility settings on the index page
-          if (window.location.pathname !== '/blog') {
-            $("#catChooser").toggleClass('hidden')
           };
         </script>
 
@@ -724,14 +770,18 @@
           // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
-            document.getElementById("day").classList.remove("hidden");
-            document.getElementById("night").classList.add("hidden");
+            document.getElementsByClassName("day")[0].classList.remove("hidden");
+            document.getElementsByClassName("night")[0].classList.add("hidden");
+            document.getElementsByClassName("day")[1].classList.remove("hidden");
+            document.getElementsByClassName("night")[1].classList.add("hidden");
             changePygmentsCSS(light, dark);
           } else {
             document.getElementById("baz").classList.remove("dark");
             window.localStorage.setItem('theme', 'light');
-            document.getElementById("day").classList.add("hidden");
-            document.getElementById("night").classList.remove("hidden");
+            document.getElementsByClassName("day")[0].classList.add("hidden");
+            document.getElementsByClassName("night")[0].classList.remove("hidden");
+            document.getElementsByClassName("day")[1].classList.add("hidden");
+            document.getElementsByClassName("night")[1].classList.remove("hidden");
             changePygmentsCSS(dark, light);
           }
 
@@ -742,15 +792,19 @@
               $( "#baz" ).removeClass( "dark" );
               changePygmentsCSS(dark, light);
 
-              document.getElementById("day").classList.add("hidden");
-              document.getElementById("night").classList.remove("hidden");
+              document.getElementsByClassName("day")[0].classList.add("hidden");
+              document.getElementsByClassName("night")[0].classList.remove("hidden");
+              document.getElementsByClassName("day")[1].classList.add("hidden");
+              document.getElementsByClassName("night")[1].classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
               changePygmentsCSS(light, dark);
 
-              document.getElementById("day").classList.remove("hidden");
-              document.getElementById("night").classList.add("hidden");
+              document.getElementsByClassName("day")[0].classList.remove("hidden");
+              document.getElementsByClassName("night")[0].classList.add("hidden");
+              document.getElementsByClassName("day")[1].classList.remove("hidden");
+              document.getElementsByClassName("night")[1].classList.add("hidden");
             }
           }
         </script>

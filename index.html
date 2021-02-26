@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html id="baz" class="" lang="en">
   <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -26,6 +26,13 @@
 
       <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feed/all.atom.xml" />
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
         <script>
           window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments); };
           ga.l = +new Date();
@@ -37,96 +44,52 @@
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" />
   </head>
 
-  <body class="mx-auto container min-h-screen bg-cover bg-gradient-to-br from-yellow-400 to-pink-400">
-    <div class="">
-      <!-- Headline-->
-      <div class="pt-5 md:pt-20 xl:pt-30 mx-0 md:mx-5 text-gray-700 text-5xl md:text-7xl leading-snug md:leading-normal font-normal text-center" >
-        John Mathews <br> is a <span class="bg-indigo-300 ">full-stack</span> <span class="bg-yellow-300 ">data scientist</span>
+  <body class="h-full bg-gray-100 dark:bg-black">
+    <a class="" name="top"></a>
+    <nav id="navbar" class="fixed mt-3 text-lg w-full flex flex-wrap items-left justify-left">
+      <div class="flex md:hidden">
+        <button id="hamburger" aria-label="Menu" >
+          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
+          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
+        </button>
       </div>
-
-      <div class="pt-10 md:pt-20 xl:pt-40 text-3xl  md:pb-10 xl:pb-20 mx-auto items-center w-5/6 md:max-w-full flex flex-wrap md:flex-row justify-center space-x-2 md:space-x-10">
-        <a class="" href="https://johnmathews.eu/blog.html">
-          <button class="inline-block px-4 my-2 py-2 text-center text-blue-700 font-medium uppercase transition bg-transparent border-2 border-blue-700 rounded hover:text-gray-50 hover:bg-gradient-to-tl hover:from-green-300 hover:to-indigo-400 hover:border-blue-700">
-            Blog
+      <div class="toggle hidden md:flex w-full md:w-auto text-left">
+        <div class="flex px-3">
+          <button class="pl-5 md:pl-0 inline-block pr-3" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
           </button>
-        </a>
-        <a class="" href="https://johnmathews.eu/portfolio.html">
-          <button class="inline-block px-4 my-2 py-2 text-center text-blue-700 font-medium uppercase transition bg-transparent border-2 border-blue-700 rounded hover:text-gray-50 hover:bg-gradient-to-tl hover:from-green-300 hover:to-indigo-400 hover:border-blue-700">
-            Portfolio
-          </button>
-        </a>
-        <a class="" href="https://johnmathews.eu/about.html">
-          <button class="inline-block px-4 my-2 py-2 text-center text-blue-700 font-medium uppercase transition bg-transparent border-2 border-blue-700 rounded hover:text-gray-50 hover:bg-gradient-to-tl hover:from-green-300 hover:to-indigo-400 hover:border-blue-700">
-            About
-          </button>
-        </a>
-        <a class="" href="https://johnmathews.eu/experience.html">
-          <button class="inline-block px-4 my-2 py-2 text-center text-blue-700 font-medium uppercase transition bg-transparent border-2 border-blue-700 rounded hover:text-gray-50 hover:bg-gradient-to-tl hover:from-green-300 hover:to-indigo-400 hover:border-blue-700">
-            Experience
-          </button>
-        </a>
+        </div>
       </div>
-
-      <div id="references" class="pt-10 md:pt-10 lg:pt-20 px-3 flex flex-wrap justify-center lg:space-x-10">
-        <div class="my-1 mx-2 bg-gray-100  rounded-lg">
-          <div class="max-w-md border border-t-8 border-green-600">
-            <div class="w-full p-5">
-              <h3 class="font-bold text-green-700 ">Principal Geoscientist, Multinational Oil & Gas Company</h3>
-              <p class="py-4 text-lg lg:text-xl text-gray-700">"John is a creative and conscientious software engineer, who understands business requirements well and translating those into applications under tight deadlines. Highly recommended."</p>
+    </nav>
+    <div class="w-full lg:w-11/12 mx-auto lg:flex lg:flex-row h-screen">
+        <div class="lg:w-1/3 lg:h-screen flex flex-col ">
+          <div class="mx-auto my-20 sm:my-40 lg:my-auto divide-x divide-light-blue-400">
+            <div class="font-serif text-3xl dark:text-gray-200 ml-10 sm:mx-auto flex content-center flex-wrap flex-row lg:flex-col lg:space-y-10 xl:pl-60">
+              <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/blog.html">Blog</a>
+              <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+              <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1 " href="https://johnmathews.eu/about.html">About</a>
+              <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/experience.html">Experience</a>
             </div>
           </div>
         </div>
-        <div class="my-1 mx-2 bg-gray-100 rounded-lg">
-          <div class="max-w-md h-full border border-t-8 border-green-600 ">
-            <div class="w-full p-5">
-              <h3 class="font-bold text-green-700 ">Sankari Nair, Lead Analytics Manager, Uber</h3>
-              <p class="py-4 text-lg lg:text-xl text-gray-700">"John played a big role helping my team get our biggest and most challenging analytics tool across the line. He ramped up quickly, communicated well and was always responsive."</p>
-            </div>
-          </div>
+        <div class="lg:w-2/3 lg:h-screen flex flex-col">
+          <img class="
+            border-2 border-gray-900 dark:border-black
+            mx-auto
+            md:my-auto
+            px-3 lg:px-0
+            w-72 md:w-96 md:w-full xl:w-3/4
+          " alt="bridges and gates" src="https://johnmathews.eu/theme/images/square.jpeg">
+
         </div>
-      </div>
-
-
-      <div class="pt-10 md:pt-10 lg:pt-20 md:pb-10 xl:pb-20  px-3 flex flex-wrap items-center justify-center lg:space-x-10">
-        <div class='m-2 pb-3 max-w-xs xl:max-w-md'><a href="https://pippip.email"><img class="rounded-lg h:10" src='https://johnmathews.eu/theme/logos/pippip.png' title='pippip' alt='pippip'></a></div>
-        <div class='m-2 pb-3 max-w-xs xl:max-w-md'><a href="https://moneybar.nl"><img class="rounded-lg h:10" src='https://johnmathews.eu/theme/logos/moneybar.png' title='moneybar' alt='moneybar'></a></div>
-      </div>
-
-      <div class="pt-10 md:pt-10 lg:pt-20 w-full xl:w-4/6 mx-auto">
-        <div class="my-5 md:my-10 grid place-items-center grid-cols-2 sm:grid-cols-4">
-          <div class='m-5 pb-3'><img class="h:20 md:h-40" src='https://johnmathews.eu/theme/logos/shell.png' title='shell' alt='shell'></div>
-          <div class='m-5 pb-3'><img class="h:20 md:h-40" src='https://johnmathews.eu/theme/logos/uber.png' title='uber' alt='uber'></div>
-          <div class='m-5 pb-3'><img class="h:20 md:h-40" src='https://johnmathews.eu/theme/logos/hsbc.png' title='hsbc' alt='hsbc'></div>
-          <div class='m-5 pb-3'><img class="h:20 md:h-40" src='https://johnmathews.eu/theme/logos/pwc.png' title='pwc' alt='pwc'></div>
-        </div>
-      </div>
-
-      <div class="mx-5 mb-5 mt-10 md:mt-20 lg:mt-40 border-b-2 border-gray-800 ..."></div>
-      <div class="mx-auto grid place-items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-        <div class='m-5 pb-3'><img class="h-12 h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/python.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/django.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/wagtail.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 h-20 rounded-lg py-2 " src='https://johnmathews.eu/theme/logos/tools/mypy.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/pytest.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/tensorflow.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/numpy.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/plotly.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/jam.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/bash.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg py-1 " src='https://johnmathews.eu/theme/logos/tools/postgres.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/aws.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/azure.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg py-4 " src='https://johnmathews.eu/theme/logos/tools/gcp.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/heroku.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg py-1 " src='https://johnmathews.eu/theme/logos/tools/jquery.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg p-1 " src='https://johnmathews.eu/theme/logos/tools/git.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg " src='https://johnmathews.eu/theme/logos/tools/vim.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg py-1 px-2" src='https://johnmathews.eu/theme/logos/tools/omz.png' title='' alt=''></div>
-        <div class='m-5 pb-3'><img class="h-12 md:h-20 rounded-lg px-2" src='https://johnmathews.eu/theme/logos/tools/jupyter.png' title='' alt=''></div>
-      </div>
-
     </div>
   </body>
+
   <script>
     // set or update user preference for article category if it hasnt been set
     if (localStorage.getItem('categoryChoice') === "technical") {
@@ -140,4 +103,46 @@
       window.localStorage.setItem('categoryChoice', 'technical');
     };
   </script>
+
+  <script>
+    // on small screens, collapse navbar into a menu
+    document.getElementById("hamburger").onclick = function toggleMenu() {
+      const navToggle = document.getElementsByClassName("toggle");
+      for (let i = 0; i < navToggle.length; i++) {
+        navToggle.item(i).classList.toggle("hidden");
+      }
+    };
+  </script>
+
+  <script>
+    // set dark theme based on local storage settings
+    if (localStorage.getItem('theme') === "dark") {
+      document.getElementById("baz").classList.add("dark");
+      document.getElementsByClassName("day")[0].classList.remove("hidden");
+      document.getElementsByClassName("night")[0].classList.add("hidden");
+    } else {
+      document.getElementById("baz").classList.remove("dark");
+      window.localStorage.setItem('theme', 'light');
+      document.getElementsByClassName("day")[0].classList.add("hidden");
+      document.getElementsByClassName("night")[0].classList.remove("hidden");
+    }
+
+    // change theme if theme switcher button is clicked
+    function modeSwitcher() {
+      if (localStorage.getItem('theme') === "dark") {
+        window.localStorage.setItem('theme', 'light');
+        $( "#baz" ).removeClass( "dark" );
+
+        document.getElementsByClassName("day")[0].classList.add("hidden");
+        document.getElementsByClassName("night")[0].classList.remove("hidden");
+      } else {
+        window.localStorage.setItem('theme', 'dark');
+        $( "#baz" ).addClass( "dark" );
+
+        document.getElementsByClassName("day")[0].classList.remove("hidden");
+        document.getElementsByClassName("night")[0].classList.add("hidden");
+      }
+    }
+  </script>
+
 </html>

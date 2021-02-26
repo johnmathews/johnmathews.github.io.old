@@ -40,15 +40,19 @@
 
         <script>
           window.ga = window.ga || function () {
-                      (ga.q = ga.q || []).push(arguments);
-                    };
-                    ga.l = +new Date();
-                    ga("create", "UA-82253540-1", "auto");
-                    ga("send", "pageview");
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"> 
+
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
@@ -60,43 +64,58 @@
 
   </head>
 
-  <body class="dark:bg-gray-800">
+  <body class="dark:bg-black">
     <a class="pt-20 mt-20 " name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 py-2 text-xl top-0 w-full lg:fixed flex flex-wrap items-center justify-between p-5 bg-gradient-to-r from-yellow-400 to-pink-400">
-      <div>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block md:inline-block px-3 py-1" href="https://johnmathews.eu/blog">JohnMathews.eu</a>
-      </div>
-      <div class="flex md:hidden">
-        <button id="hamburger" aria-label="Menu" >
-          <img class="toggle rounded-xl block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="open menu" />
-          <img class="toggle rounded-xl hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="close menu" />
-        </button>
-      </div>
-      <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold border-t-2 border-blue-900 md:border-none">
-
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/about.html">About</a>
-        <a class="prose prose-xl text-gray-700 hover:text-white font-semibold block my-auto md:inline-block px-3 py-1 border-b-2 border-blue-900 md:border-none" href="https://johnmathews.eu/experience.html">Experience</a>
-
-        <div class="flex justify-end px-3">
-          <button class="pl-5 md:pl-0 inline-block pr-3 py-3 md:pb-0 md:pt-1" id="theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
-            <div id="day" class="modeIcon">
-              <i class="far fa-lightbulb fa-lg"></i>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
             </div>
-            <div id="night" class="modeIcon hidden">
-              <i class="far fa-moon fa-lg"></i>
+            <div class="night modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
             </div>
           </button>
-
-          <button id="catChooser" class="md:mt-0" aria-label="Category chooser">
-              <i class="pl-2 fas fa-paw fa-lg"></i>
+          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
           </button>
         </div>
-
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
       </div>
     </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
 
-    <main class="lg:mt-10 lg:pt-5">
+    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
 
       <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
         <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
@@ -121,43 +140,94 @@
           </div>
         </div>
       </div>
-
-  <main class="bg-gray-200 dark:bg-gray-800 py-1">
-    <div class="container mx-auto px-4">
-        <div class="rounded-lg shadow bg-gray-100 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
-          <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2017</h2>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="flex w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <div class="invisible md:visible mt-1 mr-2 h-5 w-1 border-none rounded-xl  bg-yellow-400  "></div>
-                  <a class="" href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                    <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+                  </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="hidden night modeIcon">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
                 </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
+
+  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+  </div>
+  <div class="font-serif pt-20 -mr-5 text-lg font-extrabold dark:text-gray-300">
+    View categories:
+  </div>
+  <div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
+    <button id="sideBarChooseTechnical" class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline">Technical</button>
+  </div>
+  <div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
+    <button id="sideBarChooseNonTechnical" class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline">Non-Technical</button>
+  </div>
+  <div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
+    <button id="sideBarChooseBoth" class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline">All</button>
+  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div id="contentParent" class="container xl:w-5/6 xl:ml-20">
+  <div class="w-full py-1">
+    <div class="xl:ml-20">
+      <div class="font-serif text-8xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
+        Blog Posts
+      </div>
+      <div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
+      </div>
+        <div class="rounded-lg my-2 py-3">
+          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2017</h2>
+            <div class="flex justify-between py-2  technical  ">
+                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+                  <a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a>
+                </div>
+                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   25 May
                 </div>
               </div>
         </div>
-        <div class="rounded-lg shadow bg-gray-100 dark:bg-gray-700 lg:w-3/5 mx-auto my-5 py-3">
-          <h2 class="font-bold pl-3 pt-1 md:pt-0 py-1 text-2xl text-center md:text-left dark:text-gray-100">2016</h2>
-            <div class="flex justify-between text-xl py-2 md:py-1  technical  ">
-                <div class="flex w-fill md:w-4/5 px-5 mx-auto md:ml-0 text-center md:text-left dark:text-gray-100">
-                  <div class="invisible md:visible mt-1 mr-2 h-5 w-1 border-none rounded-xl  bg-yellow-400  "></div>
-                  <a class="" href="https://johnmathews.eu/encryption.html">Encryption</a>
+        <div class="rounded-lg my-2 py-3">
+          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2016</h2>
+            <div class="flex justify-between py-2  technical  ">
+                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+                  <a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/encryption.html">Encryption</a>
                 </div>
-                <div class="hidden md:block w-1/3 px-5 text-right dark:text-gray-100">
+                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   30 August
                 </div>
               </div>
         </div>
     </div>
-  </main>
+  </div>
+          </div>
+        </div>
+      </div>
+
     </main>
 
-    <footer class="footer">
-      <div class="text-center py-3 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
-        <a href="https://johnmathews.eu/blog">Blog Posts</a> |
-        <a href="#top">Back to top</a> |
-        <a href="https://johnmathews.eu/categories">Categories</a> |
-        <a href="feeds/all.atom.xml">RSS</a>
+    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="feeds/all.atom.xml">RSS</a>
       </div>
     </footer>
 
@@ -168,15 +238,9 @@
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
             for (let i = 0; i < navToggle.length; i++) {
+              console.log(navToggle.item(i));
               navToggle.item(i).classList.toggle("hidden");
             }
-          };
-        </script>
-
-        <script async>
-          // the user can only choose article visibility settings on the index page
-          if (window.location.pathname !== '/blog') {
-            $("#catChooser").toggleClass('hidden')
           };
         </script>
 
@@ -195,14 +259,18 @@
           // set dark theme based on local storage settings
           if (localStorage.getItem('theme') === "dark") {
             document.getElementById("baz").classList.add("dark");
-            document.getElementById("day").classList.remove("hidden");
-            document.getElementById("night").classList.add("hidden");
+            document.getElementsByClassName("day")[0].classList.remove("hidden");
+            document.getElementsByClassName("night")[0].classList.add("hidden");
+            document.getElementsByClassName("day")[1].classList.remove("hidden");
+            document.getElementsByClassName("night")[1].classList.add("hidden");
             changePygmentsCSS(light, dark);
           } else {
             document.getElementById("baz").classList.remove("dark");
             window.localStorage.setItem('theme', 'light');
-            document.getElementById("day").classList.add("hidden");
-            document.getElementById("night").classList.remove("hidden");
+            document.getElementsByClassName("day")[0].classList.add("hidden");
+            document.getElementsByClassName("night")[0].classList.remove("hidden");
+            document.getElementsByClassName("day")[1].classList.add("hidden");
+            document.getElementsByClassName("night")[1].classList.remove("hidden");
             changePygmentsCSS(dark, light);
           }
 
@@ -213,15 +281,19 @@
               $( "#baz" ).removeClass( "dark" );
               changePygmentsCSS(dark, light);
 
-              document.getElementById("day").classList.add("hidden");
-              document.getElementById("night").classList.remove("hidden");
+              document.getElementsByClassName("day")[0].classList.add("hidden");
+              document.getElementsByClassName("night")[0].classList.remove("hidden");
+              document.getElementsByClassName("day")[1].classList.add("hidden");
+              document.getElementsByClassName("night")[1].classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
               changePygmentsCSS(light, dark);
 
-              document.getElementById("day").classList.remove("hidden");
-              document.getElementById("night").classList.add("hidden");
+              document.getElementsByClassName("day")[0].classList.remove("hidden");
+              document.getElementsByClassName("night")[0].classList.add("hidden");
+              document.getElementsByClassName("day")[1].classList.remove("hidden");
+              document.getElementsByClassName("night")[1].classList.add("hidden");
             }
           }
         </script>
@@ -244,10 +316,18 @@
 
 
   <script>
-    // show category options window when cat icon is clicked
-    $( "#catChooser" ).click(function() {
+    // show catChoosr on blog index page
+    $( ".catChooser" ).removeClass('hidden')
+
+
+    // toggle cat modal view if catChooser icon is clicked
+    $( ".catChooser" ).click(function() {
       $('#catModal').toggleClass('hidden');
     });
+
+    $( "#sideBarChooseBoth" ).click(chooseBoth);
+    $( "#sideBarChooseTechnical" ).click(chooseTechnical);
+    $( "#sideBarChooseNonTechnical" ).click(chooseNonTechnical);
 
     // check if a category choice is present
     if (localStorage.getItem('categoryChoice') === "technical") {
@@ -269,7 +349,7 @@
     }
 
     // choosing which articles to make visible based on choice in cat modal
-    $( "#chooseBoth" ).click(function() {
+    function chooseBoth() {
       window.localStorage.setItem('categoryChoice', 'all');
       $('.technical').removeClass('hidden');
       $('.nonTechnical').removeClass('hidden');
@@ -278,10 +358,11 @@
       $('#chooseTechnical').removeClass('bg-yellow-500');
       $('#chooseNonTechnical').removeClass('bg-yellow-500');
 
-      $('#catModal').toggleClass('hidden');
-    });
+      $('#catModal').addClass('hidden');
+    }
 
-    $( "#chooseTechnical" ).click(function() {
+    function chooseTechnical(){
+      console.log('function choosetechnical');
       window.localStorage.setItem('categoryChoice', 'technical');
       $('.technical').removeClass('hidden');
       $('.nonTechnical').addClass('hidden');
@@ -290,10 +371,10 @@
       $('#chooseTechnical').addClass('bg-yellow-500');
       $('#chooseNonTechnical').removeClass('bg-yellow-500');
 
-      $('#catModal').toggleClass('hidden');
-    });
+      $('#catModal').addClass('hidden');
+    };
 
-    $( "#chooseNonTechnical" ).click(function() {
+    function chooseNonTechnical() {
       window.localStorage.setItem('categoryChoice', 'nonTechnical');
       $('.nonTechnical').removeClass('hidden');
       $('.technical').addClass('hidden');
@@ -302,10 +383,15 @@
       $('#chooseTechnical').removeClass('bg-yellow-500');
       $('#chooseNonTechnical').addClass('bg-yellow-500');
 
-      $('#catModal').toggleClass('hidden');
-    });
+      $('#catModal').addClass('hidden');
+    }
 
-    // toggle cat modal view
+    $( "#chooseBoth" ).click(chooseBoth);
+    $( "#chooseTechnical" ).click(chooseTechnical);
+    $( "#chooseNonTechnical" ).click(chooseNonTechnical);
+
+    // hide cat modal if its clicked.
+    // must be at bottom 
     $( "#catModal" ).click(function() {
       $('#catModal').toggleClass('hidden');
     });
