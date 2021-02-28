@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 
+
 /* checkboxes in markdown */
 .markdown .checklist {
   @apply list-none
@@ -223,5 +224,6 @@
 .markdown td {
   @apply border py-1 px-3;
 }
+
 
 @tailwind utilities;

@@ -25,10 +25,8 @@
       <meta property="og:url" content="https://johnmathews.eu/bitcoin-lightning.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/bitcoin-lightning.html"/>
 
-      <meta name="twitter:image" content=" 
-    https://johnmathews.eu//images/lightning_sticker.jpg"/>
-      <meta property="og:image" content=" 
-    https://johnmathews.eu//images/lightning_sticker.jpg"/>
+      <meta name="twitter:image" content="    https://johnmathews.eu//images/lightning_sticker.jpg"/>
+      <meta property="og:image" content="    https://johnmathews.eu//images/lightning_sticker.jpg"/>
 
       <meta property="twitter:card" content="  summary_large_image  "/>
       <meta name="twitter:domain" content="https://johnmathews.eu"/>
@@ -194,14 +192,25 @@
   <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
       <img class="xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" src="/images/lightning_sticker.jpg" alt="I got lightning working but all i got was this sticker" />
 
-    <div class="markdown leading-tight text-4xl sm:text-5xl lg:text-7xl text-left mt-24 -mr-30 mb-10 dark:text-gray-200">
-      Bitcoin&nbsp;Lightning
+    <div class="mb-10">
+      <div class="markdown break-words leading-tight text-left mt-24 -mr-30 text-6xl lg:text-7xl font-semibold lg:font-normal dark:text-gray-200">
+        Bitcoin&nbsp;Lightning
+      </div>
+
+      <div class="lg:hidden mt-10 font-serif font-bold text-gray-700 dark:text-gray-200">
+        Category:
+          <a href="https://johnmathews.eu/category/technical/cryptocurrencies.html">Cryptocurrencies</a>
+          
+      </div>
+
+      <div class="lg:hidden font-serif font-light text-gray-600 dark:text-gray-200">
+        January 2019
+      </div>
     </div>
 
     <main class="lg:w-4/6">
-      <article class="pt-5">
- <div class="markdown"> <p>I set up a  node on the Bitcoin Lightning network and sent a payment of \$0.005 which confirmed in a few&nbsp;seconds.</p> </div> 
-        <div class="markdown">
+      <article class="">
+ <div class="markdown"> <p>I set up a  node on the Bitcoin Lightning network and sent a payment of \$0.005 which confirmed in a few&nbsp;seconds.</p> </div>         <div class="markdown">
           <p>One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&nbsp;Mastercard.</p>
 <p>The most interesting solution to this problem is the <a href="https://lightning.network/">Lightning protocol</a> - a separate protocol that sits ontop of the Bitcoin protocol (a so-called &lsquo;Layer 2&rsquo; solution). Lightning uses hashed time locked contracts (HTLCs) to trustlessly and privately move transactions off-chain. This allows payments to be faster, cheaper and more frequent. It also has interesting implications for enhancing&nbsp;privacy.</p>
 <p>There are a lot of resources about what the Lightning network is, why it&rsquo;s neccesary and how it works. There are also several good guides available about how to set up and maintain a node. I used a Raspberry Pi with an external hdd. It took a few attempts, mostly because it&rsquo;s my first time working with an unix operating system and I tried to move a swap file to a disk that wasnt formmated as&nbsp;ext4&hellip;</p>
