@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2019-01-24T12:57:00+01:00</updated><entry><title>Bitcoin Lightning</title><link href="https://johnmathews.eu/bitcoin-lightning.html" rel="alternate"></link><published>2019-01-24T12:57:00+01:00</published><updated>2019-01-24T12:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-01-24:/bitcoin-lightning.html</id><summary type="html">&lt;p&gt;I set up a  node on the Bitcoin Lightning network and sent a payment of \$0.005 which confirmed in a few&amp;nbsp;seconds.&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&amp;nbsp;Mastercard.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feed/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-01T18:01:00+01:00</updated><entry><title>Running A Cardano Node</title><link href="https://johnmathews.eu/running-a-cardano-node.html" rel="alternate"></link><published>2021-03-01T18:01:00+01:00</published><updated>2021-03-01T18:01:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/running-a-cardano-node.html</id><summary type="html"></summary><content type="html">&lt;p&gt;As well as deploying a Polkadot node, I recently deployed a Cardano node on
+Google Cloud&amp;nbsp;Platform.&lt;/p&gt;
+&lt;p&gt;Helpfully, Cardano make it quite simple to get up and running if you are
+familiar with Docker-Compose, and know where to look (and what questions to&amp;nbsp;ask).&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;Cardano Wallet&lt;/a&gt; repo
+contains almost all you need to get started. The command to run&amp;nbsp;is:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This does a couple of things for&amp;nbsp;you:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates a Cardano node and begins syncing with the&amp;nbsp;network&lt;/li&gt;
+&lt;li&gt;Creates a Cardano Wallet&amp;nbsp;instance&lt;/li&gt;
+&lt;li&gt;Creates all the required data&amp;nbsp;volumes&lt;/li&gt;
+&lt;li&gt;Maps the ports required to make &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;calls.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once your containers are up and running, there is a simple and effective &lt;span class="caps"&gt;REST&lt;/span&gt;
+&lt;span class="caps"&gt;API&lt;/span&gt; that can monitor the node, make transactions, and watch&amp;nbsp;addresses.&lt;/p&gt;
+&lt;p&gt;For example, a good test to see if the node is really running is to&amp;nbsp;run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl http://localhost:8090/v2/network/information&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Addresses on Cardano need to be &lt;span class="caps"&gt;BIP39&lt;/span&gt; compliant, and before you can use the
+&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to create the address you will need to have already generated the keys
+and the mnemonic. This can be done using various other tools
+(&lt;a href="https://iancoleman.io/bip39/"&gt;web page&lt;/a&gt;, &lt;a href="https://github.com/trezor/python-mnemonic"&gt;python&lt;/a&gt;) and the results put into a &lt;span class="caps"&gt;JSON&lt;/span&gt; file
+according to the &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;spec.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Running A Polkadot Node</title><link href="https://johnmathews.eu/running-a-polkadot-node.html" rel="alternate"></link><published>2021-03-01T17:40:00+01:00</published><updated>2021-03-01T17:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/running-a-polkadot-node.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently set up a Polkadot node on Google Cloud Platform that could create
+addresses and make&amp;nbsp;transactions.&lt;/p&gt;
+&lt;p&gt;Instead of building from source I used Docker. After some troubleshooting, I
+found the command to run&amp;nbsp;is:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -it -p 30333:30333 -p 9944:9944 -p 80:9933 -v /mnt/polkadot:/polkadot/.local/share parity/polkadot:latest --rpc-external --rpc-cors=all --chain westend --ws-external&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This differs from the (current) documentation in two&amp;nbsp;ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The data volume needs to point to &lt;code&gt;/polkadot/.local/share&lt;/code&gt;. The symlink that
+     is supposed to exist for &lt;code&gt;/data&lt;/code&gt; appears to be broken in the current image.
+     See this GitHub &lt;a href="https://github.com/paritytech/polkadot/issues/2482"&gt;issue&lt;/a&gt; for&amp;nbsp;details.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Port 9944 needs to be&amp;nbsp;mapped.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One of the first &lt;span class="caps"&gt;API&lt;/span&gt; calls you are likely to make to check that things are
+    working as expected, particularly for WebSocket connections, is to
+    open to a &lt;span class="caps"&gt;WS&lt;/span&gt; connection to be notified when your node syncs a new block.
+    The node only does this once it has caught up with its piers. Whilst it is
+    still syncing it will only return the current highest block when you make
+    the initial &lt;span class="caps"&gt;API&lt;/span&gt; call. I ended up chatting to one of the Parity devs about
+    this issue on discord and then on &lt;a href="https://stackoverflow.com/questions/66358685/polkadot-websocket-api-doesnt-listen-for-new-blocks/66365716?noredirect=1#comment117342945_66365716"&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other than that, everything went as described in the&amp;nbsp;documentation.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Bitcoin Lightning</title><link href="https://johnmathews.eu/bitcoin-lightning.html" rel="alternate"></link><published>2019-01-24T12:57:00+01:00</published><updated>2019-01-24T12:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-01-24:/bitcoin-lightning.html</id><summary type="html">&lt;p&gt;I set up a  node on the Bitcoin Lightning network and sent a payment of \$0.005 which confirmed in a few&amp;nbsp;seconds.&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&amp;nbsp;Mastercard.&lt;/p&gt;
 &lt;p&gt;The most interesting solution to this problem is the &lt;a href="https://lightning.network/"&gt;Lightning protocol&lt;/a&gt; - a separate protocol that sits ontop of the Bitcoin protocol (a so-called &amp;lsquo;Layer 2&amp;rsquo; solution). Lightning uses hashed time locked contracts (HTLCs) to trustlessly and privately move transactions off-chain. This allows payments to be faster, cheaper and more frequent. It also has interesting implications for enhancing&amp;nbsp;privacy.&lt;/p&gt;
 &lt;p&gt;There are a lot of resources about what the Lightning network is, why it&amp;rsquo;s neccesary and how it works. There are also several good guides available about how to set up and maintain a node. I used a Raspberry Pi with an external hdd. It took a few attempts, mostly because it&amp;rsquo;s my first time working with an unix operating system and I tried to move a swap file to a disk that wasnt formmated as&amp;nbsp;ext4&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Anyway, I&amp;rsquo;ve opened and closed some channels, connected to peers, and made some transactions. I even bought some stickers using&amp;nbsp;Lightning!&lt;/p&gt;
