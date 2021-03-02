@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" /dev/null In Linux, everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files”... "/>
-      <meta name="twitter:description" content=" /dev/null In Linux, everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files”... "/>
-      <meta property="og:description" content=" /dev/null In Linux, everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files”... "/>
+      <meta name="description" content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... "/>
+      <meta name="twitter:description" content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... "/>
+      <meta property="og:description" content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/file-descriptors.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/file-descriptors.html"/>
@@ -213,10 +213,10 @@
       <article class="">
         <div class="markdown">
           <h2 id="devnull">/dev/null</h2>
-<p>In Linux, everything is a file, including virtual devices. Processes
+<p>In Linux everything is a file, including virtual devices. Processes
 (programmes) can request access to or from these&nbsp;devices.</p>
 <p>The only difference between these virtual device &ldquo;files&rdquo; and real files, is
-that for a virtual device, the <span class="caps">OS</span> generates the data that goes into the file,
+that for a virtual device the <span class="caps">OS</span> generates the data that goes into the file,
 instead of reading the data from&nbsp;storage.</p>
 <p><code>/dev/null</code> is a virtual device that looks like a file and is used to write
 output into a black hole that is discarded, lost forever and never seen. It
@@ -265,6 +265,22 @@ filter out all the <code>stdout</code> by redirecting the <code>stdout</code> me
 file descriptor 2 into file descriptor&nbsp;1.</p>
 <div class="highlight"><pre><span></span>$ grep -r hello /sys/ &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 </pre></div>
+
+
+<h2 id="read-input-from-a-file-instead-of-the-terminal">Read input from a file instead of the&nbsp;terminal</h2>
+<div class="highlight"><pre><span></span><span class="m">0</span>&lt;infile
+</pre></div>
+
+
+<h2 id="direct-stderr-to-append-to-a-particular-file">Direct stderr to append to a particular&nbsp;file</h2>
+<div class="highlight"><pre><span></span><span class="m">2</span>&gt;&gt;logfile
+</pre></div>
+
+
+<h2 id="combining-file-descriptors">Combining file&nbsp;descriptors</h2>
+<p><code>2&gt;&amp;1</code> means send <code>stderr</code> wherever <code>stdout</code> is going. This means that you&rsquo;ve
+combined <code>stdout</code> and <code>stderr</code> into one data stream and you can&rsquo;t separate them
+anymore. It also means you can pipe <code>stderr</code> the same as you can <code>stdout</code>.</p>
         </div>
       </article>
     </main>
@@ -373,6 +389,8 @@ file descriptor 2 into file descriptor&nbsp;1.</p>
             document.getElementsByClassName("night")[0].classList.add("hidden");
             document.getElementsByClassName("day")[1].classList.remove("hidden");
             document.getElementsByClassName("night")[1].classList.add("hidden");
+            document.getElementsByClassName("day")[2].classList.remove("hidden");
+            document.getElementsByClassName("night")[2].classList.add("hidden");
             changePygmentsCSS(light, dark);
           } else {
             document.getElementById("baz").classList.remove("dark");
@@ -381,6 +399,8 @@ file descriptor 2 into file descriptor&nbsp;1.</p>
             document.getElementsByClassName("night")[0].classList.remove("hidden");
             document.getElementsByClassName("day")[1].classList.add("hidden");
             document.getElementsByClassName("night")[1].classList.remove("hidden");
+            document.getElementsByClassName("day")[2].classList.add("hidden");
+            document.getElementsByClassName("night")[2].classList.remove("hidden");
             changePygmentsCSS(dark, light);
           }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-02T11:36:00+01:00</updated><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"></link><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"></summary><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
-&lt;p&gt;In Linux, everything is a file, including virtual devices. Processes
+&lt;p&gt;In Linux everything is a file, including virtual devices. Processes
 (programmes) can request access to or from these&amp;nbsp;devices.&lt;/p&gt;
 &lt;p&gt;The only difference between these virtual device &amp;ldquo;files&amp;rdquo; and real files, is
-that for a virtual device, the &lt;span class="caps"&gt;OS&lt;/span&gt; generates the data that goes into the file,
+that for a virtual device the &lt;span class="caps"&gt;OS&lt;/span&gt; generates the data that goes into the file,
 instead of reading the data from&amp;nbsp;storage.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;/dev/null&lt;/code&gt; is a virtual device that looks like a file and is used to write
 output into a black hole that is discarded, lost forever and never seen. It
@@ -51,4 +51,20 @@ filter out all the &lt;code&gt;stdout&lt;/code&gt; by redirecting the &lt;code&g
 (the default file descriptor is 1 if it isn&amp;rsquo;t specified) and then redirects
 file descriptor 2 into file descriptor&amp;nbsp;1.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &amp;gt; /dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Tools"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="read-input-from-a-file-instead-of-the-terminal"&gt;Read input from a file instead of the&amp;nbsp;terminal&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&amp;lt;infile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="direct-stderr-to-append-to-a-particular-file"&gt;Direct stderr to append to a particular&amp;nbsp;file&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&amp;gt;logfile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="combining-file-descriptors"&gt;Combining file&amp;nbsp;descriptors&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;2&amp;gt;&amp;amp;1&lt;/code&gt; means send &lt;code&gt;stderr&lt;/code&gt; wherever &lt;code&gt;stdout&lt;/code&gt; is going. This means that you&amp;rsquo;ve
+combined &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; into one data stream and you can&amp;rsquo;t separate them
+anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as you can &lt;code&gt;stdout&lt;/code&gt;.&lt;/p&gt;</content><category term="Technical/Tools"></category></entry></feed>
