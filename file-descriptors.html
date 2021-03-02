@@ -281,6 +281,11 @@ file descriptor 2 into file descriptor&nbsp;1.</p>
 <p><code>2&gt;&amp;1</code> means send <code>stderr</code> wherever <code>stdout</code> is going. This means that you&rsquo;ve
 combined <code>stdout</code> and <code>stderr</code> into one data stream and you can&rsquo;t separate them
 anymore. It also means you can pipe <code>stderr</code> the same as you can <code>stdout</code>.</p>
+<h1 id="input">Input</h1>
+<p>You can redirect <code>stdin</code> similarly. If you run <code>&lt;/dev/null</code> then if the program
+attempt to read from <code>stdin</code> then it will get&nbsp;end-of-file. </p>
+<p>The merge (or redirect) syntax (for example <code>&lt;&amp;2</code>) won&rsquo;t work, because you can
+only redirect in the same&nbsp;direction.</p>
         </div>
       </article>
     </main>
@@ -288,6 +293,10 @@ anymore. It also means you can pipe <code>stderr</code> the same as you can <cod
     <div class="border-t-2 border-double border-gray-300 mt-10 mb-10"></div>
 
     <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row mt-2">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/nohup-and-background-processes.html"> nohup and Background&nbsp;Processes</a>
+        </div>
     </div>
 
     <div class="text-left">

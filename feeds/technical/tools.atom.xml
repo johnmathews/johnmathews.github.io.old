@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-02T11:36:00+01:00</updated><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"></link><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"></summary><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-02T13:10:00+01:00</updated><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping-unexpectedly"&gt;Stop stuff from stopping&amp;nbsp;unexpectedly&lt;/h1&gt;
+&lt;p&gt;If you run a command in a terminal session and the terminal session is
+disconnected, the processes running in it will also be&amp;nbsp;terminated.&lt;/p&gt;
+&lt;p&gt;I discovered this last night when I was trying to download a ~500gb database
+overnight. I logged in this morning expecting to see a completed download, but
+realised I only had half the&amp;nbsp;file.&lt;/p&gt;
+&lt;h1 id="use-nohup-to-ignore-hup-signals"&gt;Use &lt;code&gt;nohup&lt;/code&gt; to ignore &lt;code&gt;HUP&lt;/code&gt; signals&lt;/h1&gt;
+&lt;p&gt;One solution to this seems to be to use &lt;code&gt;nohup&lt;/code&gt;, a command that
+ignores the &lt;code&gt;HUP&lt;/code&gt; signal. It stops your programme from stopping if the terminal
+session its running in is&amp;nbsp;stopped.&lt;/p&gt;
+&lt;p&gt;By convention, the &lt;code&gt;HUP&lt;/code&gt; signal is the method used by a terminal to warn
+dependent processes that it is about to&amp;nbsp;logout.&lt;/p&gt;
+&lt;p&gt;You probably want to run &lt;code&gt;nohup&lt;/code&gt; in the background. You might want to prevent
+it from creating &lt;code&gt;nohup.out&lt;/code&gt;. &lt;/p&gt;
+&lt;h1 id="close-or-redirect-fd0-fd2"&gt;Close or redirect fd0 -&amp;nbsp;fd2&lt;/h1&gt;
+&lt;p&gt;On Linux, if you run a command with &lt;code&gt;nohup&lt;/code&gt; then &lt;code&gt;nohup&lt;/code&gt; automatically closes
+&lt;code&gt;stdin&lt;/code&gt;. If you&amp;rsquo;re using MacOS or &lt;span class="caps"&gt;BSD&lt;/span&gt; this doesn&amp;rsquo;t automatically happen, so you
+might want to redirect it yourself. This is because if a background process
+tries to read anything from &lt;code&gt;stdin&lt;/code&gt; then it will pause itself and wait for you
+to bring it to the foreground &lt;code&gt;fg&lt;/code&gt; and type some input. This is probably a
+waste of&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;nohup&lt;/code&gt; detects that you have redirected &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; then it won&amp;rsquo;t
+create &lt;code&gt;nohup.out&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;As with all commands, if you put &lt;code&gt;&amp;amp;&lt;/code&gt; at the end of the command, it will run in
+the background. You can bring it to the foreground by running &lt;code&gt;fg&lt;/code&gt;, or see a
+list of jobs by running &lt;code&gt;jobs&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you redirect input to /dev/null by &lt;code&gt;&amp;lt;/dev/null&lt;/code&gt; you will stop the program
+from receiving keyboard (stdin) input, but you won&amp;rsquo;t prevent it from accessing
+the terminal directly. Also you haven&amp;rsquo;t removed the program from the shell&amp;rsquo;s
+process&amp;nbsp;group. &lt;/p&gt;
+&lt;h1 id="stopping-signals-using-disown"&gt;Stopping signals using &lt;code&gt;disown&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;If you want to remove a program from the shell&amp;rsquo;s process group, then
+immediately after you&amp;rsquo;ve run the command to start your programme, run &lt;code&gt;disown&lt;/code&gt;
+with no arguments. This will make the background process no longer associated
+with the shell job and it wont have any signals forwarded to it by the&amp;nbsp;shell.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;disown&lt;/code&gt;ed process gets nothing (no signals) sent to it by the shell. But
+without a &lt;code&gt;nohup&lt;/code&gt; it will still be sent a &lt;code&gt;HUP&lt;/code&gt; signal sent via other means,
+such as a manual &lt;code&gt;kill&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;nohup&lt;/code&gt;ed process will ignore any and all &lt;code&gt;HUP&lt;/code&gt; signal, no matter how they
+are&amp;nbsp;sent.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Tools"></category></entry><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"></link><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"></summary><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
 &lt;p&gt;In Linux everything is a file, including virtual devices. Processes
 (programmes) can request access to or from these&amp;nbsp;devices.&lt;/p&gt;
 &lt;p&gt;The only difference between these virtual device &amp;ldquo;files&amp;rdquo; and real files, is
@@ -67,4 +107,9 @@ file descriptor 2 into file descriptor&amp;nbsp;1.&lt;/p&gt;
 &lt;h2 id="combining-file-descriptors"&gt;Combining file&amp;nbsp;descriptors&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;2&amp;gt;&amp;amp;1&lt;/code&gt; means send &lt;code&gt;stderr&lt;/code&gt; wherever &lt;code&gt;stdout&lt;/code&gt; is going. This means that you&amp;rsquo;ve
 combined &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; into one data stream and you can&amp;rsquo;t separate them
-anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as you can &lt;code&gt;stdout&lt;/code&gt;.&lt;/p&gt;</content><category term="Technical/Tools"></category></entry></feed>
+anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as you can &lt;code&gt;stdout&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="input"&gt;Input&lt;/h1&gt;
+&lt;p&gt;You can redirect &lt;code&gt;stdin&lt;/code&gt; similarly. If you run &lt;code&gt;&amp;lt;/dev/null&lt;/code&gt; then if the program
+attempt to read from &lt;code&gt;stdin&lt;/code&gt; then it will get&amp;nbsp;end-of-file. &lt;/p&gt;
+&lt;p&gt;The merge (or redirect) syntax (for example &lt;code&gt;&amp;lt;&amp;amp;2&lt;/code&gt;) won&amp;rsquo;t work, because you can
+only redirect in the same&amp;nbsp;direction.&lt;/p&gt;</content><category term="Technical/Tools"></category></entry></feed>
