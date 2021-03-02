@@ -159,7 +159,7 @@
                     <div  class="day modeIcon">
                       <i class="far fa-lightbulb fa-lg"></i>
                     </div>
-                    <div class="hidden night modeIcon">
+                    <div class="night modeIcon hidden">
                       <i class="far fa-moon fa-lg"></i>
                     </div>
                   </button>
@@ -547,6 +547,8 @@
               document.getElementsByClassName("night")[0].classList.remove("hidden");
               document.getElementsByClassName("day")[1].classList.add("hidden");
               document.getElementsByClassName("night")[1].classList.remove("hidden");
+              document.getElementsByClassName("day")[2].classList.add("hidden");
+              document.getElementsByClassName("night")[2].classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
@@ -556,6 +558,8 @@
               document.getElementsByClassName("night")[0].classList.add("hidden");
               document.getElementsByClassName("day")[1].classList.remove("hidden");
               document.getElementsByClassName("night")[1].classList.add("hidden");
+              document.getElementsByClassName("day")[2].classList.remove("hidden");
+              document.getElementsByClassName("night")[2].classList.add("hidden");
             }
           }
         </script>

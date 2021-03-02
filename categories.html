@@ -159,7 +159,7 @@
                     <div  class="day modeIcon">
                       <i class="far fa-lightbulb fa-lg"></i>
                     </div>
-                    <div class="hidden night modeIcon">
+                    <div class="night modeIcon hidden">
                       <i class="far fa-moon fa-lg"></i>
                     </div>
                   </button>
@@ -174,8 +174,6 @@
         <a class="" href="https://johnmathews.eu/category/technical">Technical</a>
       </div>
       <div class="md:overflow-x-auto md:flex md:flex-column w-full">
-          <div class="mb-2">
-          </div>
           <div class="mb-2">
           </div>
           <div class="mb-2">
@@ -450,6 +448,18 @@
           <div class="mb-2">
                 <div class="rounded-lg mr-5 pr-3 md:pr-0 my-2 py-2 md:flex-shrink-0 w-screen md:w-64">
                   <div class="font-serif pb-3 text-3xl font-bold dark:text-gray-200 ">
+                      <a href="https://johnmathews.eu/category/technical/tools.html">Tools</a>
+                  </div>
+                    <div class="flex justify-between text-xl md:text-base py-2">
+                      <div class="font-serif text-xl dark:text-gray-200 leading-light">
+                        <a href="https://johnmathews.eu/file-descriptors.html">File Descriptors and&nbsp;/dev/null</a>
+                      </div>
+                    </div>
+                </div>
+          </div>
+          <div class="mb-2">
+                <div class="rounded-lg mr-5 pr-3 md:pr-0 my-2 py-2 md:flex-shrink-0 w-screen md:w-64">
+                  <div class="font-serif pb-3 text-3xl font-bold dark:text-gray-200 ">
                       <a href="https://johnmathews.eu/category/technical/web.html">Web</a>
                   </div>
                     <div class="flex justify-between text-xl md:text-base py-2">
@@ -504,8 +514,6 @@
         <a class="" href="https://johnmathews.eu/category/non-technical">Non-Technical</a>
       </div>
       <div class="md:overflow-x-auto md:flex md:flex-column w-full">
-          <div class="mb-2">
-          </div>
           <div class="mb-2">
           </div>
           <div class="mb-2">
@@ -739,6 +747,8 @@
           </div>
           <div class="mb-2">
           </div>
+          <div class="mb-2">
+          </div>
       </div>
   </main>
           </div>
@@ -810,6 +820,8 @@
               document.getElementsByClassName("night")[0].classList.remove("hidden");
               document.getElementsByClassName("day")[1].classList.add("hidden");
               document.getElementsByClassName("night")[1].classList.remove("hidden");
+              document.getElementsByClassName("day")[2].classList.add("hidden");
+              document.getElementsByClassName("night")[2].classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
@@ -819,6 +831,8 @@
               document.getElementsByClassName("night")[0].classList.add("hidden");
               document.getElementsByClassName("day")[1].classList.remove("hidden");
               document.getElementsByClassName("night")[1].classList.add("hidden");
+              document.getElementsByClassName("day")[2].classList.remove("hidden");
+              document.getElementsByClassName("night")[2].classList.add("hidden");
             }
           }
         </script>

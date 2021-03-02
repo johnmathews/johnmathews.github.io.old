@@ -170,7 +170,7 @@
                     <div  class="day modeIcon">
                       <i class="far fa-lightbulb fa-lg"></i>
                     </div>
-                    <div class="hidden night modeIcon">
+                    <div class="night modeIcon hidden">
                       <i class="far fa-moon fa-lg"></i>
                     </div>
                   </button>
@@ -196,8 +196,6 @@
     <div class="mb-10">
       <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
         Python Notes: From &#8220;Powerful&nbsp;Python&#8221;
-      </div>
-      <div class="hidden lg:block mt-20 mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
       </div>
 
       <div class="lg:hidden mt-10 font-serif font-bold text-gray-700 dark:text-gray-200">
@@ -447,6 +445,8 @@ principal of <span class="caps">OOP</span> <a href="#sf-python-notes-1-back" cla
               document.getElementsByClassName("night")[0].classList.remove("hidden");
               document.getElementsByClassName("day")[1].classList.add("hidden");
               document.getElementsByClassName("night")[1].classList.remove("hidden");
+              document.getElementsByClassName("day")[2].classList.add("hidden");
+              document.getElementsByClassName("night")[2].classList.remove("hidden");
             } else {
               window.localStorage.setItem('theme', 'dark');
               $( "#baz" ).addClass( "dark" );
@@ -456,6 +456,8 @@ principal of <span class="caps">OOP</span> <a href="#sf-python-notes-1-back" cla
               document.getElementsByClassName("night")[0].classList.add("hidden");
               document.getElementsByClassName("day")[1].classList.remove("hidden");
               document.getElementsByClassName("night")[1].classList.add("hidden");
+              document.getElementsByClassName("day")[2].classList.remove("hidden");
+              document.getElementsByClassName("night")[2].classList.add("hidden");
             }
           }
         </script>

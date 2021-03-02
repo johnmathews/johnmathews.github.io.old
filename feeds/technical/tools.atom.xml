@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-02T11:36:00+01:00</updated><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"></link><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"></summary><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
+&lt;p&gt;In Linux, everything is a file, including virtual devices. Processes
+(programmes) can request access to or from these&amp;nbsp;devices.&lt;/p&gt;
+&lt;p&gt;The only difference between these virtual device &amp;ldquo;files&amp;rdquo; and real files, is
+that for a virtual device, the &lt;span class="caps"&gt;OS&lt;/span&gt; generates the data that goes into the file,
+instead of reading the data from&amp;nbsp;storage.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/dev/null&lt;/code&gt; is a virtual device that looks like a file and is used to write
+output into a black hole that is discarded, lost forever and never seen. It
+isn&amp;rsquo;t written to the&amp;nbsp;terminal.&lt;/p&gt;
+&lt;h2 id="file-descriptors"&gt;File&amp;nbsp;Descriptors&lt;/h2&gt;
+&lt;p&gt;File descriptors are integer values assigned to a&amp;nbsp;file. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;stdin&lt;/strong&gt; has a file descriptor of&amp;nbsp;0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stdout&lt;/strong&gt; has a file descriptor of&amp;nbsp;1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stderr&lt;/strong&gt; has a file descriptor of&amp;nbsp;2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Two outputs are generated whenever a &lt;span class="caps"&gt;CLI&lt;/span&gt; is run &lt;code&gt;stdout&lt;/code&gt; and
+&lt;code&gt;stderr&lt;/code&gt;. By default, both these data streams are associated with the
+terminal. You can use file descriptors to redirect&amp;nbsp;them.&lt;/p&gt;
+&lt;p&gt;If a command exits successfully, the exit status is&amp;nbsp;0.&lt;/p&gt;
+&lt;p&gt;If it exits unsuccessfully, the exit status will be something&amp;nbsp;else.&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t specify which file descriptor you want to use, bash will use
+&lt;code&gt;stdout&lt;/code&gt; by&amp;nbsp;default.&lt;/p&gt;
+&lt;p&gt;The following redirects &lt;code&gt;stdout&lt;/code&gt; away from the terminal and into &lt;code&gt;/dev/null&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;echo&lt;/span&gt; “Hello World” &amp;gt; log.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will redirect &lt;code&gt;stderr&lt;/code&gt; into a&amp;nbsp;file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ asdfadsa &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt; error.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you run a command that generates lots of error messages along with &amp;ldquo;good&amp;rdquo;
+messages, you can redirect all the error messages (&lt;code&gt;stderr&lt;/code&gt;) into &lt;code&gt;/dev/null&lt;/code&gt;
+so that you can only see the useful &lt;code&gt;stdout&lt;/code&gt; messages.&amp;nbsp;e.g.:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you want to run a command and only see the errors, (&lt;code&gt;stderr&lt;/code&gt;) then you can
+filter out all the &lt;code&gt;stdout&lt;/code&gt; by redirecting the &lt;code&gt;stdout&lt;/code&gt; messages to
+&lt;code&gt;/dev/null&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ping google.com &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly"&gt;Redirect all output into /dev/null If you want a command to run&amp;nbsp;quietly,&lt;/h2&gt;
+&lt;p&gt;Redirect all the output. The command below redirects &lt;code&gt;stdout&lt;/code&gt; to &lt;code&gt;/dev/null&lt;/code&gt;
+(the default file descriptor is 1 if it isn&amp;rsquo;t specified) and then redirects
+file descriptor 2 into file descriptor&amp;nbsp;1.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &amp;gt; /dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Tools"></category></entry></feed>
