@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" I recently deployed a Cardano node on Google Cloud Platform and used its API to create and watch addresses, and make transactions. Helpfully, Cardano make it quite simple to get up and running if... "/>
-      <meta name="twitter:description" content=" I recently deployed a Cardano node on Google Cloud Platform and used its API to create and watch addresses, and make transactions. Helpfully, Cardano make it quite simple to get up and running if... "/>
-      <meta property="og:description" content=" I recently deployed a Cardano node on Google Cloud Platform and used its API to create and watch addresses, and make transactions. Helpfully, Cardano make it quite simple to get up and running if... "/>
+      <meta name="description" content=" I recently deployed a Cardano node on Google Cloud Platform and used its API to create and watch addresses, and make transactions. Helpfully, Cardano make it quite simple to get up and running if... "/>
+      <meta name="twitter:description" content=" I recently deployed a Cardano node on Google Cloud Platform and used its API to create and watch addresses, and make transactions. Helpfully, Cardano make it quite simple to get up and running if... "/>
+      <meta property="og:description" content=" I recently deployed a Cardano node on Google Cloud Platform and used its API to create and watch addresses, and make transactions. Helpfully, Cardano make it quite simple to get up and running if... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/cardano-node-api.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/cardano-node-api.html"/>
@@ -54,6 +54,7 @@
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"> 
 
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
@@ -194,7 +195,7 @@
   <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
 
     <div class="mb-10">
-      <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 2xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
+      <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
         <span style="word-break: unset;" class="break-all">
           Cardano: Running a full&nbsp;node
         </span>
@@ -210,33 +211,85 @@
         March 2021
       </div>
     </div>
+    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+    </div>
 
     <main class="lg:w-4/6">
       <article class="">
         <div class="markdown">
           <p>I recently deployed a Cardano node on Google Cloud Platform and used its <span class="caps">API</span> to
-create and watch addresses, and make&nbsp;transactions.</p>
+create and watch addresses, and make transactions.</p>
 <p>Helpfully, Cardano make it quite simple to get up and running if you are
-familiar with Docker-Compose, and know where to look (and what questions to&nbsp;ask).</p>
-<p>The <a href="https://github.com/input-output-hk/cardano-wallet">Cardano Wallet</a> repo
-contains almost all you need to get started. The command to run&nbsp;is:</p>
+familiar with Docker-Compose, and know where to look, and what questions to ask.</p>
+<div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#docker-compose">Docker Compose</a></li>
+<li><a href="#cardano-wallet">Cardano wallet</a></li>
+<li><a href="#cardano-cli">Cardano-<span class="caps">CLI</span></a></li>
+<li><a href="#rest-api"><span class="caps">REST</span> <span class="caps">API</span></a></li>
+<li><a href="#surprising-things">Surprising things</a></li>
+</ul>
+</div>
+<h1 id="docker-compose">Docker Compose</h1>
+<p>The <a href="https://github.com/input-output-hk/cardano-wallet">Cardano Wallet</a>
+repo<sup id="sf-cardano-node-api-1-back"><a href="#sf-cardano-node-api-1" class="simple-footnote" title="https://github.com/input-output-hk/cardano-wallet">1</a></sup>
+contains almost all you need to get started. The command to run is:</p>
 <p><code>NETWORK=testnet docker-compose up</code></p>
-<p>This does a couple of things for&nbsp;you:</p>
+<p>This does a couple of things for you:</p>
 <ol>
-<li>Creates a Cardano node and begins syncing with the&nbsp;network</li>
-<li>Creates a Cardano Wallet&nbsp;instance</li>
-<li>Creates all the required data&nbsp;volumes</li>
-<li>Maps the ports required to make <span class="caps">API</span>&nbsp;calls.</li>
+<li>Creates a Cardano node and begins syncing with the network</li>
+<li>Creates a Cardano Wallet instance</li>
+<li>Creates all the required data volumes</li>
+<li>Maps the ports required to make <span class="caps">API</span> calls.</li>
 </ol>
-<p>Once your containers are up and running, there is a simple and effective <span class="caps">REST</span>
-<span class="caps">API</span> that can monitor the node, make transactions, and watch&nbsp;addresses.</p>
-<p>For example, a good test to see if the node is really running is to&nbsp;run:</p>
-<p><code>curl http://localhost:8090/v2/network/information</code></p>
+<p>Running <code>docker ps</code> should show that two containers are running, <code>cardano-node</code>
+and <code>cardano-wallet</code>.</p>
+<h1 id="cardano-wallet">Cardano wallet</h1>
+<p>In order to run <code>cardano-wallet</code> commands (not using the <span class="caps">API</span>, but directly on
+the node) you’ll need to <code>docker exec</code> into the container like this:</p>
+<div class="highlight"><pre><span></span>sudo docker <span class="nb">exec</span> -it cardano-wallet_cardano-wallet_1 sh
+</pre></div>
+
+
+<p>Then you  can run commands like:</p>
+<div class="highlight"><pre><span></span>cardano-wallet network information
+</pre></div>
+
+
+<h1 id="cardano-cli">Cardano-<span class="caps">CLI</span></h1>
+<p>Similarly, if you want to use the <code>cardano-cli</code> programme, exec into the
+<code>cardano-wallet</code> container:</p>
+<div class="highlight"><pre><span></span>sudo docker <span class="nb">exec</span> -it cardano-wallet_cardano-node_1 sh 
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>cardano-cli —version
+</pre></div>
+
+
+<h1 id="rest-api"><span class="caps">REST</span> <span class="caps">API</span></h1>
+<p>Perhaps you wont need to do this though because once the containers are up and
+running and online, you can use the <span class="caps">REST</span> <span class="caps">API</span> to monitor the node, make
+transactions, and watch
+addresses.<sup id="sf-cardano-node-api-2-back"><a href="#sf-cardano-node-api-2" class="simple-footnote" title="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet">2</a></sup></p>
+<p>For example, a good test to see if the node is ok is to run </p>
+<div class="highlight"><pre><span></span>curl http://localhost:8090/v2/network/information
+</pre></div>
+
+
 <p>Addresses on Cardano need to be <span class="caps">BIP39</span> compliant, and before you can use the
 <span class="caps">REST</span> <span class="caps">API</span> to create the address you will need to have already generated the keys
 and the mnemonic. This can be done using various other tools
 (<a href="https://iancoleman.io/bip39/">web page</a>, <a href="https://github.com/trezor/python-mnemonic">python</a>) and the results put into a <span class="caps">JSON</span> file
-according to the <span class="caps">API</span>&nbsp;spec.</p>
+according to the <span class="caps">API</span> spec.</p>
+<h1 id="surprising-things">Surprising things</h1>
+<p>Cardano requires that addresses are created sequentially and instead of
+allowing the user to generate them <em>ad-hoc</em>, the node by default will manage
+the creation of addresses of each
+wallet.<sup id="sf-cardano-node-api-3-back"><a href="#sf-cardano-node-api-3" class="simple-footnote" title="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/">3</a></sup></p>
+<p>The value of <code>ADDRESS_POOL_GAP</code> sets the number of unused addresses in each
+wallet. By default this is 20. When an address is used, the node will
+automatically generate a new unused address for the wallet, so that there is
+always a pool of 20 unused addresses.</p><ol class="simple-footnotes"><li id="sf-cardano-node-api-1"><a href="https://github.com/input-output-hk/cardano-wallet">https://github.com/input-output-hk/cardano-wallet</a> <a href="#sf-cardano-node-api-1-back" class="simple-footnote-back">↩</a></li><li id="sf-cardano-node-api-2"><a href="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet">https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet</a> <a href="#sf-cardano-node-api-2-back" class="simple-footnote-back">↩</a></li><li id="sf-cardano-node-api-3"><a href="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/">https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/</a> <a href="#sf-cardano-node-api-3-back" class="simple-footnote-back">↩</a></li></ol>
         </div>
       </article>
     </main>
@@ -247,6 +300,10 @@ according to the <span class="caps">API</span>&nbsp;spec.</p>
         <div class="flex flex-row">
           <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
           <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/running-a-polkadot-node.html"> Polkadot: Running and interacting with a full&nbsp;node</a>
+        </div>
+        <div class="flex flex-row mt-2">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/binance-node-api.html"> Binance-Chain: Running a&nbsp;node</a>
         </div>
     </div>
 

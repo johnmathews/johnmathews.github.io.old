@@ -197,16 +197,16 @@
 }
 
 .markdown code {
-  @apply leading-none font-sans text-lg font-medium rounded-xl border-2 border-gray-400 inline-block align-middle bg-pink-100 pb-1 px-2 dark:bg-green-800;
+  @apply font-mono text-base p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
 }
 
 .markdown pre {
   @apply bg-gray-100 rounded p-4;
 }
 
-.markdown pre code {
-  @apply block bg-transparent p-0 overflow-visible rounded-none;
-}
+/* .markdown pre code { */
+/*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
+/* } */
 
 .markdown kbd {
   @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;

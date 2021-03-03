@@ -1,27 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-01T18:01:00+01:00</updated><entry><title>Cardano: Running a full node</title><link href="https://johnmathews.eu/cardano-node-api.html" rel="alternate"></link><published>2021-03-01T18:01:00+01:00</published><updated>2021-03-01T18:01:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/cardano-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently deployed a Cardano node on Google Cloud Platform and used its &lt;span class="caps"&gt;API&lt;/span&gt; to
-create and watch addresses, and make&amp;nbsp;transactions.&lt;/p&gt;
-&lt;p&gt;Helpfully, Cardano make it quite simple to get up and running if you are
-familiar with Docker-Compose, and know where to look (and what questions to&amp;nbsp;ask).&lt;/p&gt;
-&lt;p&gt;The &lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;Cardano Wallet&lt;/a&gt; repo
-contains almost all you need to get started. The command to run&amp;nbsp;is:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This does a couple of things for&amp;nbsp;you:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-03T15:28:00+01:00</updated><entry><title>Binance-Chain: Running a node</title><link href="https://johnmathews.eu/binance-node-api.html" rel="alternate"></link><published>2021-03-03T15:28:00+01:00</published><updated>2021-03-03T15:28:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/binance-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;This week I’ve been setting up a binance-chain node. Unlike Polkadot or
+Cardano, I’m not going to run it from a container until it’s working reliably.&lt;/p&gt;
+&lt;p&gt;The Binance &lt;a href="https://docs.binance.org/guides/node/install.html"&gt;docs&lt;/a&gt; show a
+couple of ways to install a node. I used the &lt;code&gt;install.sh&lt;/code&gt; script and went with
+default values as much as possible.&lt;/p&gt;
+&lt;h1 id="installation"&gt;Installation&lt;/h1&gt;
+&lt;p&gt;The easiest way to get up and running is to clone the
+&lt;a href="https://github.com/binance-chain/node-binary"&gt;node-binary&lt;/a&gt; repo, and then run
+&lt;code&gt;install.sh&lt;/code&gt; from there. This will put 4 apps in &lt;code&gt;/usr/local/bin&lt;/code&gt;.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Creates a Cardano node and begins syncing with the&amp;nbsp;network&lt;/li&gt;
-&lt;li&gt;Creates a Cardano Wallet&amp;nbsp;instance&lt;/li&gt;
-&lt;li&gt;Creates all the required data&amp;nbsp;volumes&lt;/li&gt;
-&lt;li&gt;Maps the ports required to make &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;calls.&lt;/li&gt;
+&lt;li&gt;The mainnet daemon.&lt;/li&gt;
+&lt;li&gt;The testnet daemon.&lt;/li&gt;
+&lt;li&gt;The &lt;span class="caps"&gt;CLI&lt;/span&gt; app for the mainnet.&lt;/li&gt;
+&lt;li&gt;The &lt;span class="caps"&gt;CLI&lt;/span&gt; app for the testnet.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Once your containers are up and running, there is a simple and effective &lt;span class="caps"&gt;REST&lt;/span&gt;
-&lt;span class="caps"&gt;API&lt;/span&gt; that can monitor the node, make transactions, and watch&amp;nbsp;addresses.&lt;/p&gt;
-&lt;p&gt;For example, a good test to see if the node is really running is to&amp;nbsp;run:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;curl http://localhost:8090/v2/network/information&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you make a mistake or want to start again for some reason, the following
+command will nuke everything and you can run &lt;code&gt;install.sh&lt;/code&gt; from the top.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rm -rf /home/&amp;lt;user-name&amp;gt;/.bnbchaind &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/bnbchaind &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/lightd &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/bnbcli &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/tbnbcli
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It took me awhile to realise that the documentation assumes that you have an
+environment variable called &lt;code&gt;BNCHOME&lt;/code&gt;. You can either create it using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;EXPORT &lt;span class="nv"&gt;BNCHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/.bnbchaind/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(like you would for any environment variable) or replace the environment
+variable in the start node command with the file path:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nohup bnbchaind start --home /path/to/.bnbchaind &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="syncing-the-node"&gt;Syncing the node&lt;/h1&gt;
+&lt;p&gt;There are &lt;a href="https://docs.binance.org/guides/node/synctypes.html"&gt;three ways&lt;/a&gt; to sync a node.&lt;/p&gt;
+&lt;p&gt;Fast-sync isn’t the fastest way to sync your node, hot-sync is. Using
+&lt;code&gt;install.sh&lt;/code&gt; &lt;em&gt;should&lt;/em&gt; put the correct default values in the
+&lt;code&gt;$BNCHOME/config/config.toml&lt;/code&gt; file, but I needed to adjust &lt;code&gt;ping_interval&lt;/code&gt; and
+&lt;code&gt;pong_timeout&lt;/code&gt; to the recommended values.&lt;/p&gt;
+&lt;h1 id="surprises"&gt;Surprises&lt;/h1&gt;
+&lt;p&gt;The documentation assumes you have familiarity with running tasks in the
+background of a terminal session, and that you’re familiar with &lt;code&gt;nohup&lt;/code&gt;. I
+wasn’t - I’d even forgotten what the &lt;code&gt;&amp;amp;&lt;/code&gt; symbol does&lt;sup id="sf-binance-node-api-1-back"&gt;&lt;a href="#sf-binance-node-api-1" class="simple-footnote" title="It starts a process in the background. You can move it to the foreground with fg or see a list of running jobs using jobs. You can move a running job to the background (like a vim session) using ctrl-z"&gt;1&lt;/a&gt;&lt;/sup&gt; so I did some research and wrote some
+&lt;a href="https://johnmathews.eu/nohup-and-background-processes.html"&gt;notes&lt;/a&gt;&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-binance-node-api-1"&gt;It starts a process in
+the background. You can move it to the foreground with &lt;code&gt;fg&lt;/code&gt; or see a list of
+running jobs using &lt;code&gt;jobs&lt;/code&gt;. You can move a running job to the background (like a
+vim session) using &lt;code&gt;ctrl-z&lt;/code&gt; &lt;a href="#sf-binance-node-api-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Cardano: Running a full node</title><link href="https://johnmathews.eu/cardano-node-api.html" rel="alternate"></link><published>2021-03-01T18:01:00+01:00</published><updated>2021-03-01T18:01:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/cardano-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently deployed a Cardano node on Google Cloud Platform and used its &lt;span class="caps"&gt;API&lt;/span&gt; to
+create and watch addresses, and make transactions.&lt;/p&gt;
+&lt;p&gt;Helpfully, Cardano make it quite simple to get up and running if you are
+familiar with Docker-Compose, and know where to look, and what questions to ask.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#docker-compose"&gt;Docker Compose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cardano-wallet"&gt;Cardano wallet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cardano-cli"&gt;Cardano-&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rest-api"&gt;&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#surprising-things"&gt;Surprising things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="docker-compose"&gt;Docker Compose&lt;/h1&gt;
+&lt;p&gt;The &lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;Cardano Wallet&lt;/a&gt;
+repo&lt;sup id="sf-cardano-node-api-1-back"&gt;&lt;a href="#sf-cardano-node-api-1" class="simple-footnote" title="https://github.com/input-output-hk/cardano-wallet"&gt;1&lt;/a&gt;&lt;/sup&gt;
+contains almost all you need to get started. The command to run is:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This does a couple of things for you:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates a Cardano node and begins syncing with the network&lt;/li&gt;
+&lt;li&gt;Creates a Cardano Wallet instance&lt;/li&gt;
+&lt;li&gt;Creates all the required data volumes&lt;/li&gt;
+&lt;li&gt;Maps the ports required to make &lt;span class="caps"&gt;API&lt;/span&gt; calls.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Running &lt;code&gt;docker ps&lt;/code&gt; should show that two containers are running, &lt;code&gt;cardano-node&lt;/code&gt;
+and &lt;code&gt;cardano-wallet&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="cardano-wallet"&gt;Cardano wallet&lt;/h1&gt;
+&lt;p&gt;In order to run &lt;code&gt;cardano-wallet&lt;/code&gt; commands (not using the &lt;span class="caps"&gt;API&lt;/span&gt;, but directly on
+the node) you’ll need to &lt;code&gt;docker exec&lt;/code&gt; into the container like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo docker &lt;span class="nb"&gt;exec&lt;/span&gt; -it cardano-wallet_cardano-wallet_1 sh
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you  can run commands like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cardano-wallet network information
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="cardano-cli"&gt;Cardano-&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Similarly, if you want to use the &lt;code&gt;cardano-cli&lt;/code&gt; programme, exec into the
+&lt;code&gt;cardano-wallet&lt;/code&gt; container:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo docker &lt;span class="nb"&gt;exec&lt;/span&gt; -it cardano-wallet_cardano-node_1 sh 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cardano-cli —version
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="rest-api"&gt;&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Perhaps you wont need to do this though because once the containers are up and
+running and online, you can use the &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to monitor the node, make
+transactions, and watch
+addresses.&lt;sup id="sf-cardano-node-api-2-back"&gt;&lt;a href="#sf-cardano-node-api-2" class="simple-footnote" title="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;For example, a good test to see if the node is ok is to run &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl http://localhost:8090/v2/network/information
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Addresses on Cardano need to be &lt;span class="caps"&gt;BIP39&lt;/span&gt; compliant, and before you can use the
 &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to create the address you will need to have already generated the keys
 and the mnemonic. This can be done using various other tools
 (&lt;a href="https://iancoleman.io/bip39/"&gt;web page&lt;/a&gt;, &lt;a href="https://github.com/trezor/python-mnemonic"&gt;python&lt;/a&gt;) and the results put into a &lt;span class="caps"&gt;JSON&lt;/span&gt; file
-according to the &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;spec.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Polkadot: Running and interacting with a full node</title><link href="https://johnmathews.eu/running-a-polkadot-node.html" rel="alternate"></link><published>2021-03-01T17:40:00+01:00</published><updated>2021-03-01T17:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/running-a-polkadot-node.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently set up a Polkadot node on Google Cloud Platform that could create
+according to the &lt;span class="caps"&gt;API&lt;/span&gt; spec.&lt;/p&gt;
+&lt;h1 id="surprising-things"&gt;Surprising things&lt;/h1&gt;
+&lt;p&gt;Cardano requires that addresses are created sequentially and instead of
+allowing the user to generate them &lt;em&gt;ad-hoc&lt;/em&gt;, the node by default will manage
+the creation of addresses of each
+wallet.&lt;sup id="sf-cardano-node-api-3-back"&gt;&lt;a href="#sf-cardano-node-api-3" class="simple-footnote" title="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The value of &lt;code&gt;ADDRESS_POOL_GAP&lt;/code&gt; sets the number of unused addresses in each
+wallet. By default this is 20. When an address is used, the node will
+automatically generate a new unused address for the wallet, so that there is
+always a pool of 20 unused addresses.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-cardano-node-api-1"&gt;&lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;https://github.com/input-output-hk/cardano-wallet&lt;/a&gt; &lt;a href="#sf-cardano-node-api-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-cardano-node-api-2"&gt;&lt;a href="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet"&gt;https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet&lt;/a&gt; &lt;a href="#sf-cardano-node-api-2-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-cardano-node-api-3"&gt;&lt;a href="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/"&gt;https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/&lt;/a&gt; &lt;a href="#sf-cardano-node-api-3-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Polkadot: Running and interacting with a full node</title><link href="https://johnmathews.eu/running-a-polkadot-node.html" rel="alternate"></link><published>2021-03-01T17:40:00+01:00</published><updated>2021-03-01T17:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/running-a-polkadot-node.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently set up a Polkadot node on Google Cloud Platform that could create
 addresses and make&amp;nbsp;transactions.&lt;/p&gt;
 &lt;p&gt;Instead of building from source I used Docker. After some troubleshooting, I
 found the command to run&amp;nbsp;is:&lt;/p&gt;

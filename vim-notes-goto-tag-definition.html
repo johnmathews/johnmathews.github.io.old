@@ -18,9 +18,9 @@
       <meta name="author" content="John Mathews"/>
       <meta name="twitter:creator" content="@johnmathews"/>
 
-      <meta name="description" content=" There are multiple ways of doing anything with vim, including using Tags or going to where an something is defined. I usually need to do something at least 3 times before I remember how to do it... "/>
-      <meta name="twitter:description" content=" There are multiple ways of doing anything with vim, including using Tags or going to where an something is defined. I usually need to do something at least 3 times before I remember how to do it... "/>
-      <meta property="og:description" content=" There are multiple ways of doing anything with vim, including using Tags or going to where an something is defined. I usually need to do something at least 3 times before I remember how to do it... "/>
+      <meta name="description" content=" There are multiple ways of doing anything with vim, including going to where a function or object is defined, and I usually need to do something at least 3 times before I can do it without... "/>
+      <meta name="twitter:description" content=" There are multiple ways of doing anything with vim, including going to where a function or object is defined, and I usually need to do something at least 3 times before I can do it without... "/>
+      <meta property="og:description" content=" There are multiple ways of doing anything with vim, including going to where a function or object is defined, and I usually need to do something at least 3 times before I can do it without... "/>
 
       <meta property="og:url" content="https://johnmathews.eu/vim-notes-goto-tag-definition.html"/>
       <meta property="twitter:url" content="https://johnmathews.eu/vim-notes-goto-tag-definition.html"/>
@@ -54,6 +54,7 @@
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"> 
 
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
@@ -194,7 +195,7 @@
   <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
 
     <div class="mb-10">
-      <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 2xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
+      <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
         <span style="word-break: unset;" class="break-all">
           Vim: GoTo Tag&nbsp;Definition
         </span>
@@ -210,17 +211,19 @@
         January 2021
       </div>
     </div>
+    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+    </div>
 
     <main class="lg:w-4/6">
       <article class="">
         <div class="markdown">
-          <p>There are multiple ways of doing anything with vim, including using Tags or
-going to where an something is defined. I usually need to do something at least
-3 times before I remember how to do it without breaking my focus or train of thought.</p>
+          <p>There are multiple ways of doing anything with vim, including going to where a
+function or object is defined, and I usually need to do something at least 3 times
+before I can do it without breaking my focus or train of thought.</p>
 <p>My memory is hazy but I remember spending a 1/2 day looking into this and
 considering which solution I wanted to commit to.<sup id="sf-vim-notes-goto-tag-definition-1-back"><a href="#sf-vim-notes-goto-tag-definition-1" class="simple-footnote" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do.">1</a></sup> My options seemed to be between
 <a href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a> and
-<a href="https://github.com/dense-analysis/ale"><span class="caps">ALE</span></a>.</p>
+<a href="https://github.com/dense-analysis/ale"><span class="caps">ALE</span></a>. [Update!<sup id="sf-vim-notes-goto-tag-definition-2-back"><a href="#sf-vim-notes-goto-tag-definition-2" class="simple-footnote" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim">2</a></sup>]</p>
 <p>I can’t remember everything I read and tried, but I trust my conclusions.
 Looking in my <code>.vimrc</code> I see that I have <code>&lt;leader&gt;x</code> mapped to <code>:YcmCompleter
 GoTo</code> and it works just fine, even when a module is imported from somewhere
@@ -234,7 +237,7 @@ command, whether its a declaration or a definition.</li>
 </ul>
 <h2 id="jump-lists-and-change-lists-if-youre-going-to-be-jumping-around-to-where">Jump Lists and Change Lists If you’re going to be jumping around to where</h2>
 <p>things are defined, you will need to know how to jump back again. It seems
-there are two lists you need to be aware of, the <em>jump list</em><sup id="sf-vim-notes-goto-tag-definition-2-back"><a href="#sf-vim-notes-goto-tag-definition-2" class="simple-footnote" title=":help jumplist">2</a></sup> and the <em>change list</em><sup id="sf-vim-notes-goto-tag-definition-3-back"><a href="#sf-vim-notes-goto-tag-definition-3" class="simple-footnote" title=":help changelist">3</a></sup>.</p>
+there are two lists you need to be aware of, the <em>jump list</em><sup id="sf-vim-notes-goto-tag-definition-3-back"><a href="#sf-vim-notes-goto-tag-definition-3" class="simple-footnote" title=":help jumplist">3</a></sup> and the <em>change list</em><sup id="sf-vim-notes-goto-tag-definition-4-back"><a href="#sf-vim-notes-goto-tag-definition-4" class="simple-footnote" title=":help changelist">4</a></sup>.</p>
 <h3 id="jump-list">Jump List</h3>
 <ul>
 <li>A list of locations that the cursor has jumped to. </li>
@@ -256,8 +259,12 @@ there are two lists you need to be aware of, the <em>jump list</em><sup id="sf-v
 <li><code>g;</code> and <code>g,</code>  will also move you up and down the <code>change list</code></li>
 </ul><ol class="simple-footnotes"><li id="sf-vim-notes-goto-tag-definition-1">The more powerful the
 tool, the more worthwhile it is to take a closer look at what it can and can’t
-do. <a href="#sf-vim-notes-goto-tag-definition-1-back" class="simple-footnote-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-2"><code>:help
-jumplist</code> <a href="#sf-vim-notes-goto-tag-definition-2-back" class="simple-footnote-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-3"><code>:help changelist</code> <a href="#sf-vim-notes-goto-tag-definition-3-back" class="simple-footnote-back">↩</a></li></ol>
+do. <a href="#sf-vim-notes-goto-tag-definition-1-back" class="simple-footnote-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-2"><span class="caps">YCM</span> and
+<span class="caps">ALE</span> work fine for goto definition and linting, but they don’t give me
+satisfactory autocompletion. <code>neoclide/coc.nvim</code> looks like it might offer some
+improvements.
+<a href="https://www.vimfromscratch.com/articles/vim-for-python/">neoclide/coc.nvim</a> <a href="#sf-vim-notes-goto-tag-definition-2-back" class="simple-footnote-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-3"><code>:help
+jumplist</code> <a href="#sf-vim-notes-goto-tag-definition-3-back" class="simple-footnote-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-4"><code>:help changelist</code> <a href="#sf-vim-notes-goto-tag-definition-4-back" class="simple-footnote-back">↩</a></li></ol>
         </div>
       </article>
     </main>
