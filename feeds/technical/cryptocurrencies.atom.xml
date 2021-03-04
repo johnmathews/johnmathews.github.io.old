@@ -5,33 +5,28 @@ Cardano, I’m not going to run it from a container until it’s working reliab
 couple of ways to install a node. I used the &lt;code&gt;install.sh&lt;/code&gt; script and went with
 default values as much as possible.&lt;/p&gt;
 &lt;h1 id="installation"&gt;Installation&lt;/h1&gt;
-&lt;p&gt;The easiest way to get up and running is to clone the
-&lt;a href="https://github.com/binance-chain/node-binary"&gt;node-binary&lt;/a&gt; repo, and then run
-&lt;code&gt;install.sh&lt;/code&gt; from there. This will put 4 apps in &lt;code&gt;/usr/local/bin&lt;/code&gt;.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;The mainnet daemon.&lt;/li&gt;
-&lt;li&gt;The testnet daemon.&lt;/li&gt;
-&lt;li&gt;The &lt;span class="caps"&gt;CLI&lt;/span&gt; app for the mainnet.&lt;/li&gt;
-&lt;li&gt;The &lt;span class="caps"&gt;CLI&lt;/span&gt; app for the testnet.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;If you make a mistake or want to start again for some reason, the following
-command will nuke everything and you can run &lt;code&gt;install.sh&lt;/code&gt; from the top.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rm -rf /home/&amp;lt;user-name&amp;gt;/.bnbchaind &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/bnbchaind &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/lightd &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/bnbcli &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo rm -f /usr/local/bin/tbnbcli
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;My first attempts to sync a full node used the &lt;code&gt;install.sh&lt;/code&gt; script, but
+the node wouldn’t sync completely, it would get stuck. I setup a new &lt;span class="caps"&gt;VM&lt;/span&gt; and did
+a manual install (“Option Two”) and so far the node has been syncing without
+any issues. You need to download the genesis file separately in this
+case. Also, be sure to download the &lt;code&gt;node-binary&lt;/code&gt; repo using &lt;code&gt;git lfs&lt;/code&gt; and not
+just &lt;code&gt;git&lt;/code&gt;. It will look like it worked but &lt;code&gt;bnbchaind&lt;/code&gt; wont have completely
+downloaded unless you use &lt;code&gt;lfs&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;It took me awhile to realise that the documentation assumes that you have an
 environment variable called &lt;code&gt;BNCHOME&lt;/code&gt;. You can either create it using&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;EXPORT &lt;span class="nv"&gt;BNCHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/.bnbchaind/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;BNCHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/.bnbchaind/
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;(like you would for any environment variable) or replace the environment
 variable in the start node command with the file path:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nohup bnbchaind start --home /path/to/.bnbchaind &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nohup bnbchaind start --home BNCHOME &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;Note: I’m not sure if the &lt;code&gt;bnbchaind&lt;/code&gt; needs the environment variable to be set
+or not. It doesn’t give errors if it isn’t set, but I seem to be having more
+success when &lt;code&gt;BNCHOME&lt;/code&gt; is defined.&lt;/p&gt;
 &lt;h1 id="syncing-the-node"&gt;Syncing the node&lt;/h1&gt;
 &lt;p&gt;There are &lt;a href="https://docs.binance.org/guides/node/synctypes.html"&gt;three ways&lt;/a&gt; to sync a node.&lt;/p&gt;
 &lt;p&gt;Fast-sync isn’t the fastest way to sync your node, hot-sync is. Using

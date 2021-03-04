@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-02T13:10:00+01:00</updated><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from&amp;nbsp;stopping&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-04T14:44:00+01:00</updated><entry><title>More VIM notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"></link><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;rsquo;ve been feeling very comfortable with my Vim + Tmux setup recently, and
+navigating around shells and files isn&amp;rsquo;t taking much mental effort anymore.&amp;nbsp;Wohoo!&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s taken about 2 years of working full time with vim to get to the stage
+where the commands are so intuitive&amp;nbsp;that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I pepper text files outside of vim (email, notes, etc) with vim keys
+     accidentally - &lt;code&gt;j&lt;/code&gt;  &lt;code&gt;k&lt;/code&gt;  &lt;code&gt;x&lt;/code&gt; etc&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I can&amp;rsquo;t remember what the command is to do something if I&amp;rsquo;m not actually
+     doing it. When I need to do an action, I do it from muscle
+     memory and I only pay attention to the underlying key press if something
+     goes&amp;nbsp;wrong.&lt;/p&gt;
+&lt;p&gt;This is noticeable when trying to find an unbound key combination for some
+ new action, or when reading an article about vim and thinking &amp;ldquo;that&amp;rsquo;s new&amp;rdquo;
+ when actually I&amp;rsquo;ve been doing it without&amp;nbsp;noticing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A pleasant surprise has been that it doesn&amp;rsquo;t take much effort to
+     rebind a single command and retrain myself to use it. This is presumably
+     because the mental effort for all the other commands has become negligible.
+     In the early days, retraining a key combination took a lot more effort
+     because I was already making an effort to get used to doing things in&amp;nbsp;Vim.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I can work even when my vision is blurry (and my speech slurred and my head
+     heavy) because I can use text objects and navigation commands to get to
+     where I know text is. I&amp;rsquo;m not saying I &lt;em&gt;should&lt;/em&gt; work when I&amp;rsquo;m that tired,
+     but I can, if I&amp;rsquo;m already familiar with the&amp;nbsp;code/file.. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With that in mind, I recently found a couple of really great&amp;nbsp;blogs:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
+I&amp;rsquo;ve either copied or was more or less doing&amp;nbsp;already.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has the following gems that I&amp;rsquo;d like to start&amp;nbsp;using.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the&amp;nbsp;cursor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the&amp;nbsp;cursor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; will indent a line. &lt;code&gt;.&lt;/code&gt; will repeat the operation, so &lt;code&gt;&amp;gt;&amp;gt;..&lt;/code&gt; would indent
+a line 3&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;You can use this along with a count, which will do the indention for &lt;code&gt;n&lt;/code&gt; number
+of lines (with the current line being the top line). &lt;code&gt;3&amp;gt;&amp;gt;..&lt;/code&gt; will indent 3
+lines 3 blocks to the&amp;nbsp;right.&lt;/p&gt;
+&lt;p&gt;To Be&amp;nbsp;Continued&amp;hellip;&lt;/p&gt;</content><category term="Technical/Tools"></category></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from&amp;nbsp;stopping&lt;/h1&gt;
 &lt;p&gt;If you run a command in a terminal session and the terminal session is
 disconnected, the processes running in it will also be&amp;nbsp;terminated.&lt;/p&gt;
 &lt;p&gt;I discovered this last night when I was trying to download a ~500gb database

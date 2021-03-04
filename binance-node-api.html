@@ -223,33 +223,28 @@ Cardano, I’m not going to run it from a container until it’s working reliab
 couple of ways to install a node. I used the <code>install.sh</code> script and went with
 default values as much as possible.</p>
 <h1 id="installation">Installation</h1>
-<p>The easiest way to get up and running is to clone the
-<a href="https://github.com/binance-chain/node-binary">node-binary</a> repo, and then run
-<code>install.sh</code> from there. This will put 4 apps in <code>/usr/local/bin</code>.</p>
-<ol>
-<li>The mainnet daemon.</li>
-<li>The testnet daemon.</li>
-<li>The <span class="caps">CLI</span> app for the mainnet.</li>
-<li>The <span class="caps">CLI</span> app for the testnet.</li>
-</ol>
-<p>If you make a mistake or want to start again for some reason, the following
-command will nuke everything and you can run <code>install.sh</code> from the top.</p>
-<div class="highlight"><pre><span></span>rm -rf /home/&lt;user-name&gt;/.bnbchaind <span class="o">&amp;&amp;</span> sudo rm -f /usr/local/bin/bnbchaind <span class="o">&amp;&amp;</span> sudo rm -f /usr/local/bin/lightd <span class="o">&amp;&amp;</span> sudo rm -f /usr/local/bin/bnbcli <span class="o">&amp;&amp;</span> sudo rm -f /usr/local/bin/tbnbcli
-</pre></div>
-
-
+<p>My first attempts to sync a full node used the <code>install.sh</code> script, but
+the node wouldn’t sync completely, it would get stuck. I setup a new <span class="caps">VM</span> and did
+a manual install (“Option Two”) and so far the node has been syncing without
+any issues. You need to download the genesis file separately in this
+case. Also, be sure to download the <code>node-binary</code> repo using <code>git lfs</code> and not
+just <code>git</code>. It will look like it worked but <code>bnbchaind</code> wont have completely
+downloaded unless you use <code>lfs</code></p>
 <p>It took me awhile to realise that the documentation assumes that you have an
 environment variable called <code>BNCHOME</code>. You can either create it using</p>
-<div class="highlight"><pre><span></span>EXPORT <span class="nv">BNCHOME</span><span class="o">=</span>/path/to/.bnbchaind/
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">BNCHOME</span><span class="o">=</span>/path/to/.bnbchaind/
 </pre></div>
 
 
 <p>(like you would for any environment variable) or replace the environment
 variable in the start node command with the file path:</p>
-<div class="highlight"><pre><span></span>nohup bnbchaind start --home /path/to/.bnbchaind <span class="p">&amp;</span>
+<div class="highlight"><pre><span></span>nohup bnbchaind start --home BNCHOME <span class="p">&amp;</span>
 </pre></div>
 
 
+<p>Note: I’m not sure if the <code>bnbchaind</code> needs the environment variable to be set
+or not. It doesn’t give errors if it isn’t set, but I seem to be having more
+success when <code>BNCHOME</code> is defined.</p>
 <h1 id="syncing-the-node">Syncing the node</h1>
 <p>There are <a href="https://docs.binance.org/guides/node/synctypes.html">three ways</a> to sync a node.</p>
 <p>Fast-sync isn’t the fastest way to sync your node, hot-sync is. Using
