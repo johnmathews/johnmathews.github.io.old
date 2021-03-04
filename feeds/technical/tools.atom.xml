@@ -36,14 +36,20 @@ where the commands are so intuitive&amp;nbsp;that:&lt;/p&gt;
 I&amp;rsquo;ve either copied or was more or less doing&amp;nbsp;already.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has the following gems that I&amp;rsquo;d like to start&amp;nbsp;using.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the&amp;nbsp;cursor&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the&amp;nbsp;cursor&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the&amp;nbsp;cursor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the&amp;nbsp;cursor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; will indent a line. &lt;code&gt;.&lt;/code&gt; will repeat the operation, so &lt;code&gt;&amp;gt;&amp;gt;..&lt;/code&gt; would indent
-a line 3&amp;nbsp;times.&lt;/p&gt;
+    a line 3&amp;nbsp;times.&lt;/p&gt;
 &lt;p&gt;You can use this along with a count, which will do the indention for &lt;code&gt;n&lt;/code&gt; number
 of lines (with the current line being the top line). &lt;code&gt;3&amp;gt;&amp;gt;..&lt;/code&gt; will indent 3
 lines 3 blocks to the&amp;nbsp;right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;To Be&amp;nbsp;Continued&amp;hellip;&lt;/p&gt;</content><category term="Technical/Tools"></category></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from&amp;nbsp;stopping&lt;/h1&gt;
 &lt;p&gt;If you run a command in a terminal session and the terminal session is
 disconnected, the processes running in it will also be&amp;nbsp;terminated.&lt;/p&gt;
