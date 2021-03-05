@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-03T15:28:00+01:00</updated><entry><title>Binance-Chain: Running a node</title><link href="https://johnmathews.eu/binance-node-api.html" rel="alternate"></link><published>2021-03-03T15:28:00+01:00</published><updated>2021-03-03T15:28:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/binance-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;This week I’ve been setting up a binance-chain node. Unlike Polkadot or
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-05T16:14:00+01:00</updated><entry><title>Cardano: Generating Addresses</title><link href="https://johnmathews.eu/cardano-generating-addresses.html" rel="alternate"></link><published>2021-03-05T16:14:00+01:00</published><updated>2021-03-05T16:14:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-05:/cardano-generating-addresses.html</id><summary type="html"></summary><content type="html">&lt;p&gt;If many different customers are to deposit or send &lt;span class="caps"&gt;ADA&lt;/span&gt; (The unit of currency on the
+Cardano blockchain) to a Cardano node, it will be necessary to determine which
+customer is responsible for each transaction so that the correct customer
+account can be&amp;nbsp;updated.&lt;/p&gt;
+&lt;p&gt;As with many things involving blockchains, this initially seemed like a simple
+requirement but involved several hours of&amp;nbsp;work. &lt;/p&gt;
+&lt;p&gt;Cardano wallets are generated using a parameter called ADDRESS_POOL_GAP. The
+default value is 20, and is the number of unused addresses that the node will
+generate and return to a client using the &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;. If one of the addresses is
+used, the node will automatically generate another so that there are always 20
+unused&amp;nbsp;addresses.&lt;/p&gt;
+&lt;p&gt;This is probably very convenient for personal use. If I want someone to send me
+some funds, I can make a simple api call using cURL and get a fresh address.
+But if you are running a service, weather its e-commerce or a financial
+service, its not really good enough. Some advice on the forums says to generate
+a wallet with a very large ADDRESS_POOL_GAP value such as 10,000 and just
+generate a new wallet when you run out of fresh addresses, but it still
+feels like a&amp;nbsp;compromise.&lt;/p&gt;
+&lt;p&gt;But lets explain our situation in more detail first. If a customer wants to
+send us some &lt;span class="caps"&gt;ADA&lt;/span&gt;, we want to give them a fresh address that&amp;rsquo;s never been used
+before and that only they have. Then we know that any funds that arrive to that
+address are from a particular customer. However we don&amp;rsquo;t know if the customer
+will actually use the address and transfer any funds. The address might remain
+unused or it might not. Nevertheless, that address is now reserved for them,
+and no one else can use&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;In this way, we might need to generate and maintain a list of thousands of
+addresses that are never used. Using ADDRESS_POOL_GAP for this seems like a bad&amp;nbsp;solution. &lt;/p&gt;
+&lt;p&gt;Fortunately, &lt;a href="https://github.com/input-output-hk/cardano-addresses"&gt;Cardano-Addresses&lt;/a&gt; has the answer, albeit in a fairly convoluted
+and obscured form. If you have the mnemonic that was used to generate a wallet
+originally, you can generate 2^31 unique addresses like&amp;nbsp;so:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the repo and build the docker&amp;nbsp;image&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+git clone https://github.com/input-output-hk/cardano-wallet 
+docker build -t cardano-address .&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get the mnemonic and generate a file containing a list of space separated
+    words on one&amp;nbsp;row.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the&amp;nbsp;following&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+export increment=0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;then:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+((increment=increment+1)) &amp;amp;&amp;amp; cat mnumonic.txt | docker run --rm -i cardano-address key from-recovery-phrase Shelley | docker run --rm -i cardano-address key child 1852H/1815H/0H/0/$increment | docker run --rm -i cardano-address key public --with-chain-code  | docker run --rm -i cardano-address address payment --network-tag testnet &amp;gt; payment.addr &amp;amp;&amp;amp; cat payment.addr ;echo&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Binance-Chain: Running a node</title><link href="https://johnmathews.eu/binance-node-api.html" rel="alternate"></link><published>2021-03-03T15:28:00+01:00</published><updated>2021-03-03T15:28:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/binance-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;This week I’ve been setting up a binance-chain node. Unlike Polkadot or
 Cardano, I’m not going to run it from a container until it’s working reliably.&lt;/p&gt;
 &lt;p&gt;The Binance &lt;a href="https://docs.binance.org/guides/node/install.html"&gt;docs&lt;/a&gt; show a
 couple of ways to install a node. I used the &lt;code&gt;install.sh&lt;/code&gt; script and went with
