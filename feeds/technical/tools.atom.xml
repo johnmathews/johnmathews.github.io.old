@@ -39,7 +39,38 @@ lines 3 blocks to the&amp;nbsp;right.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;C-b&amp;gt;&lt;/code&gt; - move screen up one page, with cursor at bottom of&amp;nbsp;screen&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Tools"></category></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from&amp;nbsp;stopping&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="Technical/Tools"></category></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"></link><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;rsquo;ve been feeling very comfortable with my Vim + Tmux setup recently.
+Navigating around shells and files isn&amp;rsquo;t taking much mental effort anymore.&amp;nbsp;Wohoo!&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s taken about 2 years of working full time with vim to get to the stage
+where the commands are so intuitive&amp;nbsp;that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I pepper text files outside of vim (email, notes, etc) with vim keys
+     accidentally - &lt;code&gt;j&lt;/code&gt;  &lt;code&gt;k&lt;/code&gt;  &lt;code&gt;x&lt;/code&gt; etc&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I can&amp;rsquo;t remember what the command is to do something if I&amp;rsquo;m not actually
+     doing it. When I need to do an action, I do it from muscle
+     memory and I only pay attention to the underlying key press if something
+     goes&amp;nbsp;wrong.&lt;/p&gt;
+&lt;p&gt;This is noticeable when trying to find an unbound key combination for some
+ new action, or when reading an article about vim and thinking &amp;ldquo;that&amp;rsquo;s new&amp;rdquo;
+ when actually I&amp;rsquo;ve been doing it without&amp;nbsp;noticing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A pleasant surprise has been that it doesn&amp;rsquo;t take much effort to
+     rebind a single command and retrain myself to use it. This is presumably
+     because the mental effort for all the other commands has become negligible.
+     In the early days, retraining a key combination took a lot more effort
+     because I was already making an effort to get used to doing things in&amp;nbsp;Vim.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I can work even when my vision is blurry (and my speech slurred and my head
+     heavy) because I can use text objects and navigation commands to get to
+     where I know text is. I&amp;rsquo;m not saying I &lt;em&gt;should&lt;/em&gt; work when I&amp;rsquo;m that tired,
+     but I can, if I&amp;rsquo;m already familiar with the&amp;nbsp;code/file.. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Tools"></category></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from&amp;nbsp;stopping&lt;/h1&gt;
 &lt;p&gt;If you run a command in a terminal session and the terminal session is
 disconnected, the processes running in it will also be&amp;nbsp;terminated.&lt;/p&gt;
 &lt;p&gt;I discovered this last night when I was trying to download a ~500gb database
