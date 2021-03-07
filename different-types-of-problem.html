@@ -58,6 +58,8 @@
 
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
+      <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+
       <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
       <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
@@ -152,7 +154,7 @@
         </div>
       </div>
       <div id="searchModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="mt-20 flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
           <div class="fixed inset-0 transition-opacity" aria-hidden="true">
             <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
           </div>
@@ -179,8 +181,8 @@
                   <div>
                     <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
                   </div>
-                  <div id="searchButton" class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block">
-                    Search
+                  <div id="searchButton" >
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:void()">Search</a>
                   </div>
                     <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
                     <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
@@ -490,6 +492,20 @@ fine. It’s just a mental model, and the map is not the territory <a href="#sf-
 
           $( "#searchModalBackground" ).click(function() {
             $('#searchModal').toggleClass('hidden');
+          });
+        </script>
+
+        <script type="text/javascript">
+          hotkeys('ctrl+k,cmd+k,/', function (event, handler){
+            switch (handler.key) {
+              case 'ctrl+k': $('#searchModal').toggleClass('hidden');
+                break;
+              case 'cmd+k': $('#searchModal').toggleClass('hidden');
+                break;
+              case '/': $('#searchModal').toggleClass('hidden');
+                break;
+              default: alert(event);
+            }
           });
         </script>
 
