@@ -51,12 +51,12 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"> 
-      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
 
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
       <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
       <script async>
@@ -140,6 +140,22 @@
           </div>
         </div>
       </div>
+      <div id="searchModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="mt-20 flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-top md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="py-2 px-2">
+                <input type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="demo" onkeyup="doSearch()">
+                <ul id="results" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="mx-auto w-full">
         <div class="flex flex-row">
           <div class="hidden xl:inline xl:w-32">
@@ -151,6 +167,9 @@
                   </div>
                   <div>
                     <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+                  </div>
+                  <div id="searchButton" class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block">
+                    Search
                   </div>
                     <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
                     <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
@@ -166,7 +185,7 @@
                   </button>
                 </div>
               </div>
-              </div>
+            </div>
             </div>
           </div>
           <div id="contentParent" class="container xl:w-5/6 xl:ml-20">
@@ -687,6 +706,72 @@
     </footer>
 
     <div>
+
+      <!-- Note the usage of `type=module` here as this is an ES6 module -->
+      <script type="module">
+        // Use ES module import syntax to import functionality from the module
+        // that we have compiled.
+        //
+        // Note that the `default` import is an initialization function which
+        // will "boot" the module and make it ready to use. Currently browsers
+        // don't support natively imported WebAssembly as an ES module, but
+        // eventually the manual initialization won't be required!
+        // import { search, default as init } from './tinysearch_engine.js';
+        import { search, default as init } from './tinysearch_engine.js';
+        window.search = search;
+
+        async function run() {
+          // First up we need to actually load the wasm file, so we use the
+          // default export to inform it where the wasm file is located on the
+          // server, and then we wait on the returned promise to wait for the
+          // wasm to be loaded.
+          //
+          // Note that instead of a string here you can also pass in an instance
+          // of `WebAssembly.Module` which allows you to compile your own module.
+          // Also note that the promise, when resolved, yields the wasm module's
+          // exports which is the same as importing the `*_bg` module in other
+          // modes
+          await init('./tinysearch_engine_bg.wasm');
+        }
+
+        run();
+      </script>
+
+  <script>
+    // And afterwards we can use all the functionality defined in wasm.
+    function doSearch() {
+      let value = document.getElementById("demo").value;
+      const arr = search(value, 10);
+      let ul = document.getElementById("results");
+      ul.innerHTML = "";
+
+      for (i = 0; i < arr.length; i++) {
+        var li = document.createElement("li");
+
+        let elem = arr[i];
+        let elemlink = document.createElement('a');
+        elemlink.innerHTML = elem[0];
+        elemlink.setAttribute('href', elem[1]);
+        li.appendChild(elemlink);
+
+        ul.appendChild(li);
+      }
+    }
+  </script>
+        <script>
+          // toggle cat modal view if catChooser icon is clicked
+          $( ".catChooser" ).click(function() {
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#searchButton" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
+
+          $( "#searchModalBackground" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
+        </script>
 
         <script>
           // on small screens, collapse navbar into a menu
