@@ -22,8 +22,8 @@
       <meta name="twitter:description" content="John Mathews' personal blog"/>
       <meta property="og:description" content="John Mathews' personal blog"/>
 
-      <meta property="og:url" content=" . "/>
-      <meta property="twitter:url" content=" . "/>
+      <meta property="og:url" content=" https://johnmathews.eu "/>
+      <meta property="twitter:url" content=" https://johnmathews.eu "/>
 
       <meta name="twitter:image" content=""/>
       <meta property="og:image" content=""/>
@@ -33,11 +33,20 @@
 
       <meta property="og:type" content="website"/>
 
-      <link rel="icon" href="./extra/favicon.png" />
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
 
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feeds/all.atom.xml" />
 
 
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
@@ -49,8 +58,8 @@
 
       <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
 
-      <link href="./theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
-      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
       <script async>
         let theme = localStorage.getItem('theme');
@@ -62,10 +71,11 @@
     <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
       <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
         <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
         </div>
         <div class="flex-none justify-end px-2 pt-2">
           <button class="inline-block theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
@@ -89,11 +99,11 @@
       </div>
     </nav>
       <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
-        <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
         <div class="px-3 pt-3 flex flex-row">
           <button class="mx-1 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
             <div class="day modeIcon">
@@ -157,17 +167,15 @@
             <div class="mt-20 fixed flex flex-col">
               <div class="lg:w-32">
                   <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
                   </div>
                   <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
                   </div>
-                  <div id="searchButton" >
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a>
-                  </div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
+                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
                 <div class="flex my-2">
                   <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
                     <div  class="day modeIcon">
@@ -185,122 +193,135 @@
           <div id="contentParent" class="container xl:w-5/6 xl:ml-20">
     <h1>Tags for JohnMathews.eu</h1>
     <ul>
-        <li><a href="./tag/aca.html">ACA</a> (1)</li>
-        <li><a href="./tag/accounting.html">Accounting</a> (1)</li>
-        <li><a href="./tag/advice.html">Advice</a> (1)</li>
-        <li><a href="./tag/aeternity.html">æternity</a> (2)</li>
-        <li><a href="./tag/applescript.html">AppleScript</a> (2)</li>
-        <li><a href="./tag/bash.html">bash</a> (1)</li>
-        <li><a href="./tag/betting.html">Betting</a> (1)</li>
-        <li><a href="./tag/bitcoin.html">Bitcoin</a> (7)</li>
-        <li><a href="./tag/bitnation.html">bitnation</a> (2)</li>
-        <li><a href="./tag/blockchain.html">Blockchain</a> (3)</li>
-        <li><a href="./tag/blockchains.html">Blockchains</a> (6)</li>
-        <li><a href="./tag/blog.html">Blog</a> (2)</li>
-        <li><a href="./tag/book.html">book</a> (1)</li>
-        <li><a href="./tag/brexit.html">Brexit</a> (1)</li>
-        <li><a href="./tag/btc-core.html">btc-core</a> (1)</li>
-        <li><a href="./tag/career.html">Career</a> (1)</li>
-        <li><a href="./tag/cocreate.html">CoCreate</a> (1)</li>
-        <li><a href="./tag/coffeescript.html">CoffeeScript</a> (2)</li>
-        <li><a href="./tag/consulting.html">Consulting</a> (1)</li>
-        <li><a href="./tag/corporate.html">Corporate</a> (1)</li>
-        <li><a href="./tag/coursera.html">Coursera</a> (1)</li>
-        <li><a href="./tag/coworking.html">coworking</a> (2)</li>
-        <li><a href="./tag/crypto.html">Crypto</a> (2)</li>
-        <li><a href="./tag/cryptocurrencies.html">Cryptocurrencies</a> (1)</li>
-        <li><a href="./tag/cryptography.html">Cryptography</a> (1)</li>
-        <li><a href="./tag/data.html">Data</a> (1)</li>
-        <li><a href="./tag/data-science.html">Data Science</a> (1)</li>
-        <li><a href="./tag/digital-currencies.html">Digital Currencies</a> (6)</li>
-        <li><a href="./tag/disintermediation.html">Disintermediation</a> (1)</li>
-        <li><a href="./tag/distributed-consensus.html">Distributed Consensus</a> (1)</li>
-        <li><a href="./tag/distributed-ledger-technology.html">Distributed Ledger Technology</a> (2)</li>
-        <li><a href="./tag/dlt.html">DLT</a> (3)</li>
-        <li><a href="./tag/doctorate.html">Doctorate</a> (1)</li>
-        <li><a href="./tag/dublin.html">Dublin</a> (1)</li>
-        <li><a href="./tag/element78.html">Element78</a> (1)</li>
-        <li><a href="./tag/encryption.html">Encryption</a> (1)</li>
-        <li><a href="./tag/engineering.html">Engineering</a> (1)</li>
-        <li><a href="./tag/equality.html">Equality</a> (1)</li>
-        <li><a href="./tag/ethereum.html">Ethereum</a> (1)</li>
-        <li><a href="./tag/europe.html">Europe</a> (2)</li>
-        <li><a href="./tag/facebook.html">Facebook</a> (1)</li>
-        <li><a href="./tag/finance.html">Finance</a> (4)</li>
-        <li><a href="./tag/fintech.html">Fintech</a> (6)</li>
-        <li><a href="./tag/founder.html">Founder</a> (1)</li>
-        <li><a href="./tag/freelance.html">Freelance</a> (2)</li>
-        <li><a href="./tag/git.html">Git</a> (1)</li>
-        <li><a href="./tag/glandore.html">Glandore</a> (1)</li>
-        <li><a href="./tag/gnosis.html">Gnosis</a> (1)</li>
-        <li><a href="./tag/gold.html">gold</a> (1)</li>
-        <li><a href="./tag/granular-flow.html">Granular Flow</a> (1)</li>
-        <li><a href="./tag/granular-materials.html">Granular Materials</a> (1)</li>
-        <li><a href="./tag/growth.html">growth</a> (1)</li>
-        <li><a href="./tag/haarlem.html">Haarlem</a> (1)</li>
-        <li><a href="./tag/habits.html">Habits</a> (1)</li>
-        <li><a href="./tag/icaew.html">ICAEW</a> (1)</li>
-        <li><a href="./tag/ico.html">ICO</a> (1)</li>
-        <li><a href="./tag/identity.html">Identity</a> (1)</li>
-        <li><a href="./tag/javascript.html">JavaScript</a> (2)</li>
-        <li><a href="./tag/jinja.html">Jinja</a> (1)</li>
-        <li><a href="./tag/jupyter-notebook.html">Jupyter Notebook</a> (1)</li>
-        <li><a href="./tag/lifestyle.html">Lifestyle</a> (1)</li>
-        <li><a href="./tag/lightning.html">Lightning</a> (1)</li>
-        <li><a href="./tag/lis.html">LIS</a> (3)</li>
-        <li><a href="./tag/london.html">London</a> (2)</li>
-        <li><a href="./tag/marketing.html">marketing</a> (4)</li>
-        <li><a href="./tag/markets.html">Markets</a> (1)</li>
-        <li><a href="./tag/multi-sig.html">Multi-Sig</a> (1)</li>
-        <li><a href="./tag/netherlands.html">Netherlands</a> (1)</li>
-        <li><a href="./tag/node.html">Node</a> (1)</li>
-        <li><a href="./tag/officesuites.html">OfficeSuites</a> (1)</li>
-        <li><a href="./tag/pandas.html">Pandas</a> (1)</li>
-        <li><a href="./tag/pangea.html">pangea</a> (1)</li>
-        <li><a href="./tag/parity.html">Parity</a> (1)</li>
-        <li><a href="./tag/pelican.html">Pelican</a> (2)</li>
-        <li><a href="./tag/phd.html">PhD</a> (1)</li>
-        <li><a href="./tag/pippip.html">PipPip</a> (1)</li>
-        <li><a href="./tag/poetry.html">Poetry</a> (1)</li>
-        <li><a href="./tag/politics.html">Politics</a> (1)</li>
-        <li><a href="./tag/positioning.html">positioning</a> (1)</li>
-        <li><a href="./tag/prediction.html">Prediction</a> (1)</li>
-        <li><a href="./tag/productivity.html">Productivity</a> (1)</li>
-        <li><a href="./tag/profiling.html">profiling</a> (1)</li>
-        <li><a href="./tag/public-key-cryptography.html">Public Key Cryptography</a> (2)</li>
-        <li><a href="./tag/python.html">Python</a> (3)</li>
-        <li><a href="./tag/r.html">R</a> (1)</li>
-        <li><a href="./tag/reading.html">Reading</a> (1)</li>
-        <li><a href="./tag/reflection.html">Reflection</a> (1)</li>
-        <li><a href="./tag/regus.html">Regus</a> (1)</li>
-        <li><a href="./tag/rent.html">Rent</a> (1)</li>
-        <li><a href="./tag/research.html">Research</a> (1)</li>
-        <li><a href="./tag/rsa.html">RSA</a> (1)</li>
-        <li><a href="./tag/ryan-hodson.html">Ryan Hodson</a> (1)</li>
-        <li><a href="./tag/rys.html">Rys</a> (1)</li>
-        <li><a href="./tag/safe-haven.html">safe haven</a> (1)</li>
-        <li><a href="./tag/shell.html">shell</a> (1)</li>
-        <li><a href="./tag/silo.html">Silo</a> (1)</li>
-        <li><a href="./tag/sleep.html">Sleep</a> (1)</li>
-        <li><a href="./tag/startup.html">Startup</a> (3)</li>
-        <li><a href="./tag/startups.html">startups</a> (2)</li>
-        <li><a href="./tag/static-site.html">Static Site</a> (2)</li>
-        <li><a href="./tag/studio9.html">Studio9</a> (1)</li>
-        <li><a href="./tag/sybil.html">Sybil</a> (1)</li>
-        <li><a href="./tag/tcube.html">tCube</a> (1)</li>
-        <li><a href="./tag/thesis.html">Thesis</a> (1)</li>
-        <li><a href="./tag/time-since.html">Time Since</a> (1)</li>
-        <li><a href="./tag/time-until.html">Time Until</a> (2)</li>
-        <li><a href="./tag/tutorial.html">Tutorial</a> (1)</li>
-        <li><a href="./tag/twitter.html">Twitter</a> (1)</li>
-        <li><a href="./tag/ubersicht.html">Übersicht</a> (2)</li>
-        <li><a href="./tag/unix.html">unix</a> (2)</li>
-        <li><a href="./tag/vienna.html">Vienna</a> (1)</li>
-        <li><a href="./tag/vim.html">Vim</a> (1)</li>
-        <li><a href="./tag/wallet.html">wallet</a> (2)</li>
-        <li><a href="./tag/water.html">water</a> (1)</li>
-        <li><a href="./tag/widgets.html">Widgets</a> (2)</li>
-        <li><a href="./tag/zsh.html">zsh</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/aca.html">ACA</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/accounting.html">Accounting</a> (3)</li>
+        <li><a href="https://johnmathews.eu/tag/advice.html">Advice</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/aeternity.html">æternity</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/applescript.html">AppleScript</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/bash.html">bash</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/betting.html">Betting</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/bitcoin.html">Bitcoin</a> (10)</li>
+        <li><a href="https://johnmathews.eu/tag/bitcoin-cash.html">Bitcoin Cash</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/bitcoin-sv.html">Bitcoin SV</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/bitnation.html">bitnation</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/blockchain.html">Blockchain</a> (5)</li>
+        <li><a href="https://johnmathews.eu/tag/blockchains.html">Blockchains</a> (6)</li>
+        <li><a href="https://johnmathews.eu/tag/blog.html">Blog</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/book.html">book</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/brexit.html">Brexit</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/btc-core.html">btc-core</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/career.html">Career</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/cocreate.html">CoCreate</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/coffeescript.html">CoffeeScript</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/consulting.html">Consulting</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/corporate.html">Corporate</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/coursera.html">Coursera</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/coworking.html">coworking</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/crypto.html">Crypto</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/cryptocurrencies.html">Cryptocurrencies</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/cryptography.html">Cryptography</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/data.html">Data</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/data-analysis.html">Data Analysis</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/data-science.html">Data Science</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/digital-currencies.html">Digital Currencies</a> (6)</li>
+        <li><a href="https://johnmathews.eu/tag/disintermediation.html">Disintermediation</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/distributed-applications.html">Distributed Applications</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/distributed-consensus.html">Distributed Consensus</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/distributed-ledger-technology.html">Distributed Ledger Technology</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/dlt.html">DLT</a> (3)</li>
+        <li><a href="https://johnmathews.eu/tag/doctorate.html">Doctorate</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/dogecoin.html">Dogecoin</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/dublin.html">Dublin</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/element78.html">Element78</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/encryption.html">Encryption</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/engineering.html">Engineering</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/equality.html">Equality</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/ethereum.html">Ethereum</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/europe.html">Europe</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/facebook.html">Facebook</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/finance.html">Finance</a> (9)</li>
+        <li><a href="https://johnmathews.eu/tag/fintech.html">Fintech</a> (6)</li>
+        <li><a href="https://johnmathews.eu/tag/founder.html">Founder</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/freelance.html">Freelance</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/general-ledger.html">General Ledger</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/git.html">Git</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/glandore.html">Glandore</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/gnosis.html">Gnosis</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/gold.html">gold</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/granular-flow.html">Granular Flow</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/granular-materials.html">Granular Materials</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/growth.html">growth</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/haarlem.html">Haarlem</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/habits.html">Habits</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/icaew.html">ICAEW</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/ico.html">ICO</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/identity.html">Identity</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/isbn.html">ISBN</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/javascript.html">JavaScript</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/jinja.html">Jinja</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/journals.html">Journals</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/jupyter-notebook.html">Jupyter Notebook</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/lifestyle.html">Lifestyle</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/lightning.html">Lightning</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/lis.html">LIS</a> (3)</li>
+        <li><a href="https://johnmathews.eu/tag/litecoin.html">Litecoin</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/london.html">London</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/marketing.html">marketing</a> (4)</li>
+        <li><a href="https://johnmathews.eu/tag/markets.html">Markets</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/multi-sig.html">Multi-Sig</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/music.html">Music</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/netherlands.html">Netherlands</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/node.html">Node</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/officesuites.html">OfficeSuites</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/pandas.html">Pandas</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/pangea.html">pangea</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/parity.html">Parity</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/pelican.html">Pelican</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/phd.html">PhD</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/pippip.html">PipPip</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/poetry.html">Poetry</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/politics.html">Politics</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/positioning.html">positioning</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/prediction.html">Prediction</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/productivity.html">Productivity</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/profiling.html">profiling</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/public-key-cryptography.html">Public Key Cryptography</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/python.html">Python</a> (6)</li>
+        <li><a href="https://johnmathews.eu/tag/r.html">R</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/reading.html">Reading</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/reconciliation.html">Reconciliation</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/reflection.html">Reflection</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/regus.html">Regus</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/rent.html">Rent</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/research.html">Research</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/rsa.html">RSA</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/ryan-hodson.html">Ryan Hodson</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/rys.html">Rys</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/safe-haven.html">safe haven</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/shell.html">shell</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/silo.html">Silo</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/sleep.html">Sleep</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/spotify.html">Spotify</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/startup.html">Startup</a> (3)</li>
+        <li><a href="https://johnmathews.eu/tag/startups.html">startups</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/static-site.html">Static Site</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/studio9.html">Studio9</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/sybil.html">Sybil</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/tcube.html">tCube</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/thesis.html">Thesis</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/time-since.html">Time Since</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/time-until.html">Time Until</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/trial-balance.html">Trial Balance</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/tutorial.html">Tutorial</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/twitter.html">Twitter</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/ubersicht.html">Übersicht</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/unix.html">unix</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/vienna.html">Vienna</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/vim.html">Vim</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/wallet.html">wallet</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/water.html">water</a> (1)</li>
+        <li><a href="https://johnmathews.eu/tag/widgets.html">Widgets</a> (2)</li>
+        <li><a href="https://johnmathews.eu/tag/zsh.html">zsh</a> (1)</li>
     </ul>
           </div>
         </div>
@@ -310,10 +331,10 @@
 
     <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
       <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-        <a class="px-3" href="./blog.html">Blog Posts</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="./categories.html">Categories</a> |
-        <a class="px-3" href="./feeds/all.atom.xml">RSS</a>
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
       </div>
     </footer>
 
@@ -329,7 +350,7 @@
         // don't support natively imported WebAssembly as an ES module, but
         // eventually the manual initialization won't be required!
         // import { search, default as init } from './tinysearch_engine.js';
-        import { search, default as init } from './tinysearch_engine.js';
+        import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
         window.search = search;
 
         async function run() {
@@ -343,7 +364,7 @@
           // Also note that the promise, when resolved, yields the wasm module's
           // exports which is the same as importing the `*_bg` module in other
           // modes
-          await init('./tinysearch_engine_bg.wasm');
+          await init('https://johnmathews.eu/tinysearch_engine_bg.wasm');
         }
 
         run();
@@ -379,6 +400,12 @@
           $( "#searchButton" ).click(function() {
             $('#searchModal').toggleClass('hidden');
           });
+          $( "#searchButton2" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
+          $( "#searchButton3" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
 
           $( "#searchModalBackground" ).click(function() {
             $('#searchModal').toggleClass('hidden');
@@ -412,8 +439,8 @@
 
         <script>
           // dark mode light mode switcheroo
-          const light = "./theme/css/pygment-light.css"
-          const dark = "./theme/css/pygment-dark.css"
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
 
           // swap out pygment CSS files based on dark/light theme
           function changePygmentsCSS(existing, updated) {

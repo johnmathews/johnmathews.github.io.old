@@ -22,8 +22,8 @@
       <meta name="twitter:description" content="John Mathews' personal blog"/>
       <meta property="og:description" content="John Mathews' personal blog"/>
 
-      <meta property="og:url" content=" .. "/>
-      <meta property="twitter:url" content=" .. "/>
+      <meta property="og:url" content=" https://johnmathews.eu "/>
+      <meta property="twitter:url" content=" https://johnmathews.eu "/>
 
       <meta name="twitter:image" content=""/>
       <meta property="og:image" content=""/>
@@ -33,11 +33,20 @@
 
       <meta property="og:type" content="website"/>
 
-      <link rel="icon" href="../extra/favicon.png" />
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
 
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="../None" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feeds/all.atom.xml" />
 
 
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
@@ -49,8 +58,8 @@
 
       <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
 
-      <link href="../theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
-      <link id="PygmentCSS" href="../theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
       <script async>
         let theme = localStorage.getItem('theme');
@@ -63,10 +72,11 @@
     <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
       <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
         <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../blog.html">Blog</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../experience.html">Experience</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
         </div>
         <div class="flex-none justify-end px-2 pt-2">
           <button class="inline-block theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
@@ -90,11 +100,11 @@
       </div>
     </nav>
       <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../blog.html">Blog</a>
-        <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../experience.html">Experience</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
         <div class="px-3 pt-3 flex flex-row">
           <button class="mx-1 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
             <div class="day modeIcon">
@@ -158,17 +168,15 @@
             <div class="mt-20 fixed flex flex-col">
               <div class="lg:w-32">
                     <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../index.html"><i class="far fa-md fa-star"></i></a>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
                   </div>
                   <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../blog.html">Blog</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
                   </div>
-                  <div id="searchButton" >
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a>
-                  </div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../portfolio.html">Portfolio</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../about.html">About</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../experience.html">Experience</a>
+                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
                 <div class="flex my-2">
                   <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
                     <div  class="day modeIcon">
@@ -210,7 +218,7 @@
           <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2016</h2>
             <div class="flex justify-between py-3 md:py-2   nonTechnical ">
                 <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../how-to-wake-up-early.html">How to wake up&nbsp;early</a>
+                  <a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/how-to-wake-up-early.html">How to wake up&nbsp;early</a>
                 </div>
                 <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   6 August
@@ -227,10 +235,10 @@
 
     <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
       <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-        <a class="px-3" href="../blog.html">Blog Posts</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="../categories.html">Categories</a> |
-        <a class="px-3" href="../feeds/all.atom.xml">RSS</a>
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
       </div>
     </footer>
 
@@ -246,7 +254,7 @@
         // don't support natively imported WebAssembly as an ES module, but
         // eventually the manual initialization won't be required!
         // import { search, default as init } from './tinysearch_engine.js';
-        import { search, default as init } from '../tinysearch_engine.js';
+        import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
         window.search = search;
 
         async function run() {
@@ -260,7 +268,7 @@
           // Also note that the promise, when resolved, yields the wasm module's
           // exports which is the same as importing the `*_bg` module in other
           // modes
-          await init('../tinysearch_engine_bg.wasm');
+          await init('https://johnmathews.eu/tinysearch_engine_bg.wasm');
         }
 
         run();
@@ -296,6 +304,12 @@
           $( "#searchButton" ).click(function() {
             $('#searchModal').toggleClass('hidden');
           });
+          $( "#searchButton2" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
+          $( "#searchButton3" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
 
           $( "#searchModalBackground" ).click(function() {
             $('#searchModal').toggleClass('hidden');
@@ -329,8 +343,8 @@
 
         <script>
           // dark mode light mode switcheroo
-          const light = "../theme/css/pygment-light.css"
-          const dark = "../theme/css/pygment-dark.css"
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
 
           // swap out pygment CSS files based on dark/light theme
           function changePygmentsCSS(existing, updated) {
