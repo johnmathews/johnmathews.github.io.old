@@ -161,7 +161,7 @@
             <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
           </div>
           <span class="hidden sm:inline-block sm:align-top md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="w-full lg:w-11/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+          <div class="w-full lg:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <div class="py-1 px-1">
                 <input type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="demo" onkeyup="doSearch()">
                 <ul id="results" class="results text-lg text-bold text-gray-600">
@@ -268,26 +268,17 @@ addresses that are never used. Using ADDRESS_POOL_GAP for this seems like a bad&
 <p>Fortunately, <a href="https://github.com/input-output-hk/cardano-addresses">Cardano-Addresses</a> has the answer, albeit in a fairly convoluted
 and obscured form. If you have the mnemonic that was used to generate a wallet
 originally, you can generate 2^31 unique addresses like&nbsp;so:</p>
-<ol>
-<li>
-<p>Clone the repo and build the docker&nbsp;image</p>
-<p><code>bash
-git clone https://github.com/input-output-hk/cardano-wallet 
-docker build -t cardano-address .</code></p>
-</li>
-<li>
-<p>Get the mnemonic and generate a file containing a list of space separated
-    words on one&nbsp;row.</p>
-</li>
-<li>
-<p>Run the&nbsp;following</p>
-<p><code>bash
-export increment=0</code></p>
-<p>then:</p>
-<p><code>bash
-((increment=increment+1)) &amp;&amp; cat mnumonic.txt | docker run --rm -i cardano-address key from-recovery-phrase Shelley | docker run --rm -i cardano-address key child 1852H/1815H/0H/0/$increment | docker run --rm -i cardano-address key public --with-chain-code  | docker run --rm -i cardano-address address payment --network-tag testnet &gt; payment.addr &amp;&amp; cat payment.addr ;echo</code></p>
-</li>
-</ol>
+<p>Clone the repo and build the docker&nbsp;image:</p>
+<div class="highlight"><pre><span></span>git clone https://github.com/input-output-hk/cardano-wallet 
+docker build -t cardano-address .
+</pre></div>
+
+
+<p>Get the mnemonic and generate a file containing a list of space separated words on one&nbsp;row.</p>
+<p>Run the&nbsp;following:</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">increment</span><span class="o">=</span><span class="m">0</span>
+<span class="o">((</span><span class="nv">increment</span><span class="o">=</span>increment+1<span class="o">))</span> <span class="o">&amp;&amp;</span> cat mnumonic.txt <span class="p">|</span> docker run --rm -i cardano-address key from-recovery-phrase Shelley <span class="p">|</span> docker run --rm -i cardano-address key child 1852H/1815H/0H/0/<span class="nv">$increment</span> <span class="p">|</span> docker run --rm -i cardano-address key public --with-chain-code  <span class="p">|</span> docker run --rm -i cardano-address address payment --network-tag testnet &gt; payment.addr <span class="o">&amp;&amp;</span> cat payment.addr <span class="p">;</span><span class="nb">echo</span> 
+</pre></div>
         </div>
       </article>
     </main>
