@@ -339,18 +339,19 @@
     </footer>
 
     <div>
+
   
-      <!-- Note the usage of `type=module` here as this is an ES6 module -->
-      <script type="module">
-        // Use ES module import syntax to import functionality from the module
-        // that we have compiled.
-        //
-        // Note that the `default` import is an initialization function which
-        // will "boot" the module and make it ready to use. Currently browsers
-        // don't support natively imported WebAssembly as an ES module, but
-        // eventually the manual initialization won't be required!
-        // import { search, default as init } from './tinysearch_engine.js';
-        import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
+        <!-- Note the usage of `type=module` here as this is an ES6 module -->
+        <script type="module">
+          // Use ES module import syntax to import functionality from the module
+          // that we have compiled.
+          //
+          // Note that the `default` import is an initialization function which
+          // will "boot" the module and make it ready to use. Currently browsers
+          // don't support natively imported WebAssembly as an ES module, but
+          // eventually the manual initialization won't be required!
+          // import { search, default as init } from './tinysearch_engine.js';
+          import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
         window.search = search;
 
         async function run() {
@@ -368,9 +369,9 @@
         }
 
         run();
-      </script>
+        </script>
 
-  <script>
+        <script>
     // And afterwards we can use all the functionality defined in wasm.
     function doSearch() {
       let value = document.getElementById("searchBox").value;
