@@ -1,0 +1,659 @@
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+
+      <title>Blogging with Pelican: Design, Plugins, Sharing - JohnMathews.eu</title>
+      <meta name="title" content="Blogging with Pelican: Design, Plugins, Sharing -  JohnMathews.eu "/>
+      <meta property="og:title" content="Blogging with Pelican: Design, Plugins, Sharing"/>
+      <meta property="twitter:title" content="Blogging with Pelican: Design, Plugins, Sharing"/>
+
+      <meta name="keywords" content=" Blog,Facebook,Jinja,Pelican,Python,Static Site,Twitter "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=" My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds. "/>
+      <meta name="twitter:description" content=" My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds. "/>
+      <meta property="og:description" content=" My site is optimised for speed and clarity. I’ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in feeds. "/>
+
+      <meta property="og:url" content="https://johnmathews.eu/pelican2.html"/>
+      <meta property="twitter:url" content="https://johnmathews.eu/pelican2.html"/>
+
+      <meta name="twitter:image" content="    https://johnmathews.eu//images/get_pelican.jpg"/>
+      <meta property="og:image" content="    https://johnmathews.eu//images/get_pelican.jpg"/>
+
+      <meta property="twitter:card" content="  summary_large_image  "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feeds/all.atom.xml" />
+
+
+        <script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+
+      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script async>
+        let theme = localStorage.getItem('theme');
+      </script>
+
+
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  </head>
+
+  <body class="dark:bg-black">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="searchModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-top md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="w-full lg:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="py-1 px-1">
+              <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" onkeyup="doSearch()">
+              <div class="flex">
+                <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                  ctrl-k
+                </div>
+                or
+                <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                 /
+                </div>
+              </div>
+              <ul id="results" class="results text-lg text-bold text-gray-600">
+              </ul>
+            </div>
+          </div>
+            </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                    <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+                  </div>
+                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+
+  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+  </div>
+  <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br> June 2017
+  </div>
+  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Category:<br>
+      <a href="https://johnmathews.eu/category/technical/web.html">Web</a>
+      
+  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="container xl:w-5/6 xl:ml-20">
+  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
+      <img class="xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" src="/images/get_pelican.jpg" alt="Pelican blogging platform" />
+
+    <div class="mb-10">
+      <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
+        <span style="word-break: unset;" class="break-all">
+          Blogging with Pelican: Design, Plugins,&nbsp;Sharing
+        </span>
+      </div>
+
+      <div class="lg:hidden mt-10 font-serif font-bold text-gray-700 dark:text-gray-200">
+        Category:
+          <a href="https://johnmathews.eu/category/technical/web.html">Web</a>
+          
+      </div>
+
+      <div class="lg:hidden font-serif font-light text-gray-600 dark:text-gray-200">
+        June 2017
+      </div>
+    </div>
+    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+    </div>
+
+    <main class="lg:w-4/6">
+      <article class="">
+ <div class="markdown"> <p>My site is optimised for speed and clarity. I&rsquo;ve added share buttons using a plugin which I modified and improved, and added meta tags to control how Twitter and Facebook show my articles in&nbsp;feeds.</p> </div>         <div class="markdown">
+          <h2 id="design">Design</h2>
+<p>My approach to building my blog is to keep it as simple as possible, only adding features when they make a significant improvement to how the content is understood and used. Therefore I&rsquo;ve done away with several features that would normally come baked into a WordPress theme. For example a footer full of links that would never be used, and a sidebar full of&nbsp;distractions. </p>
+<p>I opted for a single column design that hopefully presents text-heavy articles clearly and intuitively (please leave a comment and tell me what you&nbsp;think).</p>
+<h2 id="plugins">Plugins</h2>
+<p>My use of plugins to extend Pelican&rsquo;s functionality reflects this, there is the <a href="https://github.com/getpelican/pelican-plugins/tree/master/neighbors">Neighbors</a> plugin so that the next or previous post can be accessed from the bottom of a post without going back to the index, and the <a href="https://github.com/getpelican/pelican-plugins/tree/master/tag_cloud">Tag Cloud</a> plugin to reflect which subjects are written about the most (and provide a link to all relevant&nbsp;articles).</p>
+<h2 id="speed">Speed</h2>
+<p>The speed of the site is important because a faster site is more enjoyable to use. Therefore I&rsquo;ve minified the <span class="caps">CSS</span> and the JavaScript using the <a href="https://github.com/getpelican/pelican-plugins/tree/master/assets">Assets</a> plugin. I&rsquo;ve also set the <span class="caps">CSS</span> and JavaScript to load asynchronously. Images are optimised using the <a href="https://github.com/getpelican/pelican-plugins/tree/master/optimize_images">Optimize Images</a> plugin so that their file size is as small as possible and they download quickly. The site uses CloudFlare&rsquo;s free <span class="caps">CDN</span> features so hopefully no matter when you view the site from you get a decent page&nbsp;speed.</p>
+<h2 id="jinja-templates">Jinja&nbsp;templates</h2>
+<p>I&rsquo;ve also arranged the homepage so that posts are shown by their category and then by posting date. This may not work very well with a larger number of posts, but I&rsquo;ll only consider that problem once it presents itself. Designing for hypotheticals or conditions that don&rsquo;t yet exist is a waste of&nbsp;time. </p>
+<p>There are examples of how I&rsquo;ve used Jinja templates below in the context of sharing my articles on Twitter and&nbsp;Facebook.</p>
+<h2 id="plugin-share-post">Plugin: Share&nbsp;Post</h2>
+<p>I noticed that my posts were beginning to get tweeted about, so I thought it would be useful to have some sharing buttons at the bottom of each post for Twitter, Facebook and Email. Looking at the Pelican Plugins repo on Github showed there was (as usual) a plugin for this (called <a href="https://github.com/getpelican/pelican-plugins/tree/master/share_post">Share Post</a>), though I noted it hadn&rsquo;t been updated for a couple of&nbsp;years.</p>
+<p>Installing and initial set-up was simple thanks to the readme on the git repo. You need to copy the plugin folder to the plugins directory, and add the name of the plugin to the list in pelicanconf.py. Then you need to copy paste some Jinja/<span class="caps">HTML</span> into the article.html template. That&rsquo;s enough to make it&nbsp;work.</p>
+<p>I noted though that when I shared to Twitter the text to be tweeted was encapsulated in quotes and there was a &lsquo;b&rsquo; at the front. I realised this was due to using Python 3.x when the plugin (which hadn&rsquo;t been updated for 2 years) was likely written for Python 2.x. A quick google and the obligatory trip to <span class="caps">SO</span> showed me how to convert a bytes string to a normal text&nbsp;string. </p>
+<div class="highlight"><pre><span></span><span class="c1"># Python 2</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%s%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Python 3</span>
+<span class="n">tweet_as_byte</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%s%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet_as_byte</span><span class="p">,</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>I also found that an article couldn&rsquo;t be shared to twitter from a mobile device and this was due to the <span class="caps">URL</span> being incorrectly formatted. The new <span class="caps">URL</span> format required separate arguments for the <span class="caps">URL</span>, additional text and the twitter&nbsp;handle:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Incorrect</span>
+<span class="n">twitter_link</span> <span class="o">=</span> <span class="s1">&#39;http://twitter.com/home?status=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">tweet</span>
+
+<span class="c1"># Correnct</span>
+<span class="n">twitter_link</span> <span class="o">=</span> <span class="s1">&#39;http://twitter.com/share?url=</span><span class="si">%s</span><span class="s1">&amp;text=</span><span class="si">%s</span><span class="s1">&amp;via=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tweet</span><span class="p">,</span> <span class="n">t_handle</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="using-meta-data-to-specify-tweet-text">Using meta-data to specify tweet&nbsp;text</h2>
+<p>I thought it would be cool to add some default text to a tweet, as I&rsquo;ve enjoyed this feature on other blogs when I&rsquo;ve found a post I wanted to share on Twitter. - A user may know they want to share an article but if they&rsquo;re in a hurry it might be hard to find the right words, so why not provide a ready-made tweet. The text is editable so it&rsquo;s only a&nbsp;suggestion.</p>
+<p>The text would be different for each post so it makes sense to specify it when writing the article. The article &lsquo;summary&rsquo; would be too long, and I know that Pelican supports arbitrary meta-data tags. I assumed that Jinja would pick up the data the same way it picks up the &lsquo;standard&rsquo; meta-data and added a function to&nbsp;share_post.py.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">article_tweet</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;tweet&#39;</span><span class="p">):</span>
+        <span class="n">tweet</span> <span class="o">=</span>  <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">tweet</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">quote</span><span class="p">((</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tweet</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39; &#39;</span> 
+</pre></div>
+
+
+<p>Once this function was working it was simply a case of calling the function and assigning the output to a variable I called &ldquo;Tweet&rdquo;, and then adding &ldquo;Tweet&rdquo; to the text string to be included in a tweets&nbsp;text:</p>
+<div class="highlight"><pre><span></span>    <span class="n">tweet</span> <span class="o">=</span> <span class="n">article_tweet</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="n">tweet_as_byte</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tweet</span><span class="p">))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">tweet</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet_as_byte</span><span class="p">,</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">t_handle</span> <span class="o">=</span> <span class="n">twitter_handle</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There was a bit of fiddling around to make sure that the number of spaces between each part of the tweet was correct, but nothing as complicated as when making <a href="https://johnmathews.eu/time-until.html">Time Until</a>.</p>
+<h2 id="specifying-the-text-and-image-in-a-facebook-share">Specifying the text and image in a Facebook&nbsp;share</h2>
+<p>Sharing to Facebook worked without any formatting problems, but it bugged me that the opening text of the article was being used in the preview that was shared to Facebook when I had a summary already prepared and that would be much more useful to potential readers. For some articles I also had an article image that I wanted to see being&nbsp;used. </p>
+<p>Googling revealed that I needed to use particular meta tags in the webpage&rsquo;s header if I wanted to control what Facebook would pickup. Facebook uses the &ldquo;open graph&rdquo; standards so I would need the headers in my article pages to include the&nbsp;following: </p>
+<div class="highlight"><pre><span></span>`<span class="c">&lt;!-- Open Graph data --&gt;</span>`
+`<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Title Here&quot;</span> <span class="p">/&gt;</span>`
+`<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;article&quot;</span> <span class="p">/&gt;</span>`
+`<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:url&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;http://www.example.com/&quot;</span> <span class="p">/&gt;</span>`
+`<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;http://example.com/image.jpg&quot;</span> <span class="p">/&gt;</span>`
+`<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Description Here&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>I could see that I already had some meta tags being generated using the Jinja templates so I set about copy-pasting and modifying them to build the new tags. I had some issues with trailing white space or line breaks being included within the content string. This was solved like&nbsp;so:</p>
+<div class="highlight"><pre><span></span><span class="c">{# Adding &#39;-&#39; after and before the %&#39;s strips white space and line breaks #}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">description</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">if</span> <span class="nv">article.summary</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{{</span> <span class="nv">article.summary</span><span class="o">|</span><span class="nf">striptags</span><span class="o">|</span><span class="nf">truncate</span><span class="o">(</span><span class="m">200</span><span class="o">)|</span><span class="nf">e</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">else</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">        </span><span class="cp">{{</span> <span class="nv">article.content</span><span class="o">|</span><span class="nf">striptags</span><span class="o">|</span><span class="nf">truncate</span><span class="o">(</span><span class="m">200</span><span class="o">)|</span><span class="nf">e</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span>- <span class="k">endif</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">description</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p>I also needed to use some blocks more than once, because a description tag was already included but Facebook wants an &ldquo;og:description&rdquo;, and Twitter wants a &ldquo;Twitter:Description&rdquo; too. All three of these tags will include the same text (generated in the Jinja2 snippet above). If a block only needs to be used once then it&rsquo;s generated like&nbsp;this; </p>
+<div class="highlight"><pre><span></span><span class="x">&lt;meta name=&quot;description&quot; content=&quot;</span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">description</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="nv">description</span> <span class="cp">%}</span><span class="x">&quot;&gt;</span>
+</pre></div>
+
+
+<p>But If you call &ldquo;{% block description %}{% endblock description %}&rdquo; again Jinja will throw you an error. The documentation (and <span class="caps">SO</span>) reveal that the solution is to&nbsp;use:</p>
+<div class="highlight"><pre><span></span><span class="x">&lt;meta property=&quot;og:description&quot; content=&quot;</span><span class="cp">{{</span> <span class="nv">self.description</span><span class="o">()</span> <span class="cp">}}</span><span class="x">&quot;&gt;</span>
+</pre></div>
+
+
+<p>This allows you to reuse blocks multiple times and keep your templates&nbsp;tidy.</p>
+<p>Finally, when I was testing Facebook to see if the correct text or image was being picked up I was initially frustrated to see that the new tags were not having any effect. This is because Facebook crawls your site and saves what it finds. If you want it to take a fresh look at your page with its new meta tags, you need to tell Facebook to crawl the page again, using the <a href="https://developers.facebook.com/tools/debug/">Facebook linter/debugger</a>.  </p>
+<p>You can see the new sharing buttons below, please click them and see what&nbsp;happens!</p>
+<p>Note: My first article describing how I began to use Pelican is <a href="https://johnmathews.eu/pelican.html">here</a></p>
+        </div>
+      </article>
+    </main>
+
+    <div class="border-t-2 border-double border-gray-300 mt-10 mb-10"></div>
+
+    <div class="mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/pelican.html"> Blogging with&nbsp;Pelican</a>
+        </div>
+        <div class="flex flex-row mt-2">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/a-new-blog-design.html"> A New Blog&nbsp;Design</a>
+        </div>
+    </div>
+
+    <div class="text-left">
+      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
+        <span>Subscribe</span>
+        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+      </button>
+    </div>
+
+    <div class="hidden" id="subscribeBox" >
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate bg-white dark:bg-black" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group dark:text-gray-300">
+              <label class="font-serif font-semibold text-lg" for="mce-EMAIL">Email Address </label>
+              <input type="email" value="" name="EMAIL" class="required email dark:text-gray-800" id="mce-EMAIL">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
+    </div>
+
+      <div class="mt-10" id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                var disqus_config = function () {
+                          this.page.url = "https://johnmathews.eu/pelican2.html";  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = "pelican2.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                          var d = document, s = d.createElement('script');
+                          s.src = 'https://johnmathews.disqus.com/embed.js';
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+    <div>
+
+  
+        <!-- Note the usage of `type=module` here as this is an ES6 module -->
+        <script type="module">
+          // Use ES module import syntax to import functionality from the module
+          // that we have compiled.
+          //
+          // Note that the `default` import is an initialization function which
+          // will "boot" the module and make it ready to use. Currently browsers
+          // don't support natively imported WebAssembly as an ES module, but
+          // eventually the manual initialization won't be required!
+          // import { search, default as init } from './tinysearch_engine.js';
+          import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
+        window.search = search;
+
+        async function run() {
+          // First up we need to actually load the wasm file, so we use the
+          // default export to inform it where the wasm file is located on the
+          // server, and then we wait on the returned promise to wait for the
+          // wasm to be loaded.
+          //
+          // Note that instead of a string here you can also pass in an instance
+          // of `WebAssembly.Module` which allows you to compile your own module.
+          // Also note that the promise, when resolved, yields the wasm module's
+          // exports which is the same as importing the `*_bg` module in other
+          // modes
+          await init('https://johnmathews.eu/tinysearch_engine_bg.wasm');
+        }
+
+        run();
+        </script>
+
+        <script>
+    // And afterwards we can use all the functionality defined in wasm.
+    function doSearch() {
+      let value = document.getElementById("searchBox").value;
+      const arr = search(value, 10);
+      let ul = document.getElementById("results");
+      ul.innerHTML = "";
+
+      for (i = 0; i < arr.length; i++) {
+        var li = document.createElement("li");
+
+        let elem = arr[i];
+        let elemlink = document.createElement('a');
+        elemlink.innerHTML = elem[0];
+        elemlink.setAttribute('href', elem[1]);
+        li.appendChild(elemlink);
+
+        ul.appendChild(li);
+      }
+    }
+  </script>
+        <script>
+          // toggle cat modal view if catChooser icon is clicked
+          $( ".catChooser" ).click(function() {
+            $('#catModal').toggleClass('hidden');
+          });
+
+          $( "#searchButton" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
+          });
+          $( "#searchButton2" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
+          });
+          $( "#searchButton3" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
+          });
+
+          $( "#searchModalBackground" ).click(function() {
+            $('#searchModal').toggleClass('hidden');
+          });
+        </script>
+
+        <script>
+          hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
+            event.preventDefault();
+            switch (handler.key) {
+              case 'ctrl+k':
+                $('#searchModal').toggleClass('hidden');
+                $('#searchBox').focus();
+                break;
+              case 'command+k':
+                $('#searchModal').toggleClass('hidden');
+                $('#searchBox').focus();
+                break;
+              case '/':
+                $('#searchModal').toggleClass('hidden');
+                $('#searchBox').focus();
+                break;
+              case 'esc':
+                $('#searchModal').addClass('hidden');
+                break;
+              default: alert(event);
+            }
+          });
+
+          document.onkeydown = function(evt) {
+              evt = evt || window.event;
+              if (evt.keyCode == 27) {//27 is the code for escape
+                  document.getElementById("searchBox").blur();
+                  $('#searchModal').addClass('hidden');
+              }
+          };
+        </script>
+
+        <script>
+          // on small screens, collapse navbar into a menu
+          document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+              console.log(navToggle.item(i));
+              navToggle.item(i).classList.toggle("hidden");
+            }
+          };
+        </script>
+
+        <script>
+          // dark mode light mode switcheroo
+          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+
+          // swap out pygment CSS files based on dark/light theme
+          function changePygmentsCSS(existing, updated) {
+            var PygmentCSS = document.getElementById("PygmentCSS");
+            PygmentCSS.setAttribute("href", updated);
+          }
+
+
+          // set dark theme based on local storage settings
+          if (localStorage.getItem('theme') === "dark") {
+            document.getElementById("baz").classList.add("dark");
+            document.getElementsByClassName("day")[0].classList.remove("hidden");
+            document.getElementsByClassName("night")[0].classList.add("hidden");
+            document.getElementsByClassName("day")[1].classList.remove("hidden");
+            document.getElementsByClassName("night")[1].classList.add("hidden");
+            document.getElementsByClassName("day")[2].classList.remove("hidden");
+            document.getElementsByClassName("night")[2].classList.add("hidden");
+            changePygmentsCSS(light, dark);
+          } else {
+            document.getElementById("baz").classList.remove("dark");
+            window.localStorage.setItem('theme', 'light');
+            document.getElementsByClassName("day")[0].classList.add("hidden");
+            document.getElementsByClassName("night")[0].classList.remove("hidden");
+            document.getElementsByClassName("day")[1].classList.add("hidden");
+            document.getElementsByClassName("night")[1].classList.remove("hidden");
+            document.getElementsByClassName("day")[2].classList.add("hidden");
+            document.getElementsByClassName("night")[2].classList.remove("hidden");
+            changePygmentsCSS(dark, light);
+          }
+
+          // change theme if theme switcher button is clicked
+          function modeSwitcher() {
+            if (localStorage.getItem('theme') === "dark") {
+              window.localStorage.setItem('theme', 'light');
+              $( "#baz" ).removeClass( "dark" );
+              changePygmentsCSS(dark, light);
+
+              document.getElementsByClassName("day")[0].classList.add("hidden");
+              document.getElementsByClassName("night")[0].classList.remove("hidden");
+              document.getElementsByClassName("day")[1].classList.add("hidden");
+              document.getElementsByClassName("night")[1].classList.remove("hidden");
+              document.getElementsByClassName("day")[2].classList.add("hidden");
+              document.getElementsByClassName("night")[2].classList.remove("hidden");
+            } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
+              changePygmentsCSS(light, dark);
+
+              document.getElementsByClassName("day")[0].classList.remove("hidden");
+              document.getElementsByClassName("night")[0].classList.add("hidden");
+              document.getElementsByClassName("day")[1].classList.remove("hidden");
+              document.getElementsByClassName("night")[1].classList.add("hidden");
+              document.getElementsByClassName("day")[2].classList.remove("hidden");
+              document.getElementsByClassName("night")[2].classList.add("hidden");
+            }
+          }
+        </script>
+
+        <script>
+          // navbar hide on scroll
+          var prevScrollPos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos > 50) {
+              if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-100px";
+              }
+              prevScrollPos = currentScrollPos;
+            }
+          }
+        </script>
+
+  <script>
+    // mailing list subscribe button
+    document.getElementById("signupButton").addEventListener("click", function(e) {
+      $('#signupButton').removeClass('block').addClass('hidden')
+      $('#subscribeBox').removeClass('hidden').addClass('block')
+    });
+  </script>
+
+  <script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+    </div>
+  </body>
+
+</html>

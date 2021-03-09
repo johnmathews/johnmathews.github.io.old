@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-05T16:14:00+01:00</updated><entry><title>Cardano: Generating Addresses</title><link href="https://johnmathews.eu/cardano-generating-addresses.html" rel="alternate"></link><published>2021-03-05T16:14:00+01:00</published><updated>2021-03-05T16:14:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-05:/cardano-generating-addresses.html</id><summary type="html"></summary><content type="html">&lt;p&gt;If many different customers are to deposit or send &lt;span class="caps"&gt;ADA&lt;/span&gt; (The unit of currency on the
+Cardano blockchain) to a Cardano node, it will be necessary to determine which
+customer is responsible for each transaction so that the correct customer
+account can be&amp;nbsp;updated.&lt;/p&gt;
+&lt;p&gt;As with many things involving blockchains, this initially seemed like a simple
+requirement but involved several hours of&amp;nbsp;work. &lt;/p&gt;
+&lt;p&gt;Cardano wallets are generated using a parameter called ADDRESS_POOL_GAP. The
+default value is 20, and is the number of unused addresses that the node will
+generate and return to a client using the &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;. If one of the addresses is
+used, the node will automatically generate another so that there are always 20
+unused&amp;nbsp;addresses.&lt;/p&gt;
+&lt;p&gt;This is probably very convenient for personal use. If I want someone to send me
+some funds, I can make a simple api call using cURL and get a fresh address.
+But if you are running a service, weather its e-commerce or a financial
+service, its not really good enough. Some advice on the forums says to generate
+a wallet with a very large ADDRESS_POOL_GAP value such as 10,000 and just
+generate a new wallet when you run out of fresh addresses, but it still
+feels like a&amp;nbsp;compromise.&lt;/p&gt;
+&lt;p&gt;But lets explain our situation in more detail first. If a customer wants to
+send us some &lt;span class="caps"&gt;ADA&lt;/span&gt;, we want to give them a fresh address that&amp;rsquo;s never been used
+before and that only they have. Then we know that any funds that arrive to that
+address are from a particular customer. However we don&amp;rsquo;t know if the customer
+will actually use the address and transfer any funds. The address might remain
+unused or it might not. Nevertheless, that address is now reserved for them,
+and no one else can use&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;In this way, we might need to generate and maintain a list of thousands of
+addresses that are never used. Using ADDRESS_POOL_GAP for this seems like a bad&amp;nbsp;solution. &lt;/p&gt;
+&lt;p&gt;Fortunately, &lt;a href="https://github.com/input-output-hk/cardano-addresses"&gt;Cardano-Addresses&lt;/a&gt; has the answer, albeit in a fairly convoluted
+and obscured form. If you have the mnemonic that was used to generate a wallet
+originally, you can generate 2^31 unique addresses like&amp;nbsp;so:&lt;/p&gt;
+&lt;p&gt;Clone the repo and build the docker&amp;nbsp;image:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/input-output-hk/cardano-wallet 
+docker build -t cardano-address .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Get the mnemonic and generate a file containing a list of space separated words on one&amp;nbsp;row.&lt;/p&gt;
+&lt;p&gt;Run the&amp;nbsp;following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;increment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;increment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;increment+1&lt;span class="o"&gt;))&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat mnumonic.txt &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address key from-recovery-phrase Shelley &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address key child 1852H/1815H/0H/0/&lt;span class="nv"&gt;$increment&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address key public --with-chain-code  &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address address payment --network-tag testnet &amp;gt; payment.addr &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat payment.addr &lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Binance-Chain: Running a node</title><link href="https://johnmathews.eu/binance-node-api.html" rel="alternate"></link><published>2021-03-03T15:28:00+01:00</published><updated>2021-03-03T15:28:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/binance-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;This week I’ve been setting up a binance-chain node. Unlike Polkadot or
+Cardano, I’m not going to run it from a container until it’s working reliably.&lt;/p&gt;
+&lt;p&gt;The Binance &lt;a href="https://docs.binance.org/guides/node/install.html"&gt;docs&lt;/a&gt; show a
+couple of ways to install a node. I used the &lt;code&gt;install.sh&lt;/code&gt; script and went with
+default values as much as possible.&lt;/p&gt;
+&lt;h1 id="installation"&gt;Installation&lt;/h1&gt;
+&lt;p&gt;My first attempts to sync a full node used the &lt;code&gt;install.sh&lt;/code&gt; script, but
+the node wouldn’t sync completely, it would get stuck. I setup a new &lt;span class="caps"&gt;VM&lt;/span&gt; and did
+a manual install (“Option Two”) and so far the node has been syncing without
+any issues. You need to download the genesis file separately in this
+case. Also, be sure to download the &lt;code&gt;node-binary&lt;/code&gt; repo using &lt;code&gt;git lfs&lt;/code&gt; and not
+just &lt;code&gt;git&lt;/code&gt;. It will look like it worked but &lt;code&gt;bnbchaind&lt;/code&gt; wont have completely
+downloaded unless you use &lt;code&gt;lfs&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;It took me awhile to realise that the documentation assumes that you have an
+environment variable called &lt;code&gt;BNCHOME&lt;/code&gt;. You can either create it using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;BNCHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/.bnbchaind/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;(like you would for any environment variable) or replace the environment
+variable in the start node command with the file path:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nohup bnbchaind start --home BNCHOME &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note: I’m not sure if the &lt;code&gt;bnbchaind&lt;/code&gt; needs the environment variable to be set
+or not. It doesn’t give errors if it isn’t set, but I seem to be having more
+success when &lt;code&gt;BNCHOME&lt;/code&gt; is defined.&lt;/p&gt;
+&lt;h1 id="syncing-the-node"&gt;Syncing the node&lt;/h1&gt;
+&lt;p&gt;There are &lt;a href="https://docs.binance.org/guides/node/synctypes.html"&gt;three ways&lt;/a&gt; to sync a node.&lt;/p&gt;
+&lt;p&gt;Fast-sync isn’t the fastest way to sync your node, hot-sync is. Using
+&lt;code&gt;install.sh&lt;/code&gt; &lt;em&gt;should&lt;/em&gt; put the correct default values in the
+&lt;code&gt;$BNCHOME/config/config.toml&lt;/code&gt; file, but I needed to adjust &lt;code&gt;ping_interval&lt;/code&gt; and
+&lt;code&gt;pong_timeout&lt;/code&gt; to the recommended values.&lt;/p&gt;
+&lt;h1 id="surprises"&gt;Surprises&lt;/h1&gt;
+&lt;p&gt;The documentation assumes you have familiarity with running tasks in the
+background of a terminal session, and that you’re familiar with &lt;code&gt;nohup&lt;/code&gt;. I
+wasn’t - I’d even forgotten what the &lt;code&gt;&amp;amp;&lt;/code&gt; symbol does&lt;sup id="sf-binance-node-api-1-back"&gt;&lt;a href="#sf-binance-node-api-1" class="simple-footnote" title="It starts a process in the background. You can move it to the foreground with fg or see a list of running jobs using jobs. You can move a running job to the background (like a vim session) using ctrl-z"&gt;1&lt;/a&gt;&lt;/sup&gt; so I did some research and wrote some
+&lt;a href="https://johnmathews.eu/nohup-and-background-processes.html"&gt;notes&lt;/a&gt;&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-binance-node-api-1"&gt;It starts a process in
+the background. You can move it to the foreground with &lt;code&gt;fg&lt;/code&gt; or see a list of
+running jobs using &lt;code&gt;jobs&lt;/code&gt;. You can move a running job to the background (like a
+vim session) using &lt;code&gt;ctrl-z&lt;/code&gt; &lt;a href="#sf-binance-node-api-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Cardano: Running a full node</title><link href="https://johnmathews.eu/cardano-node-api.html" rel="alternate"></link><published>2021-03-01T18:01:00+01:00</published><updated>2021-03-01T18:01:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/cardano-node-api.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently deployed a Cardano node on Google Cloud Platform and used its &lt;span class="caps"&gt;API&lt;/span&gt; to
+create and watch addresses, and make transactions.&lt;/p&gt;
+&lt;p&gt;Helpfully, Cardano make it quite simple to get up and running if you are
+familiar with Docker-Compose, and know where to look, and what questions to ask.&lt;/p&gt;
+&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#docker-compose"&gt;Docker Compose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cardano-wallet"&gt;Cardano wallet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cardano-cli"&gt;Cardano-&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rest-api"&gt;&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#surprising-things"&gt;Surprising things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="docker-compose"&gt;Docker Compose&lt;/h1&gt;
+&lt;p&gt;The &lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;Cardano Wallet&lt;/a&gt;
+repo&lt;sup id="sf-cardano-node-api-1-back"&gt;&lt;a href="#sf-cardano-node-api-1" class="simple-footnote" title="https://github.com/input-output-hk/cardano-wallet"&gt;1&lt;/a&gt;&lt;/sup&gt;
+contains almost all you need to get started. The command to run is:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This does a couple of things for you:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates a Cardano node and begins syncing with the network&lt;/li&gt;
+&lt;li&gt;Creates a Cardano Wallet instance&lt;/li&gt;
+&lt;li&gt;Creates all the required data volumes&lt;/li&gt;
+&lt;li&gt;Maps the ports required to make &lt;span class="caps"&gt;API&lt;/span&gt; calls.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Running &lt;code&gt;docker ps&lt;/code&gt; should show that two containers are running, &lt;code&gt;cardano-node&lt;/code&gt;
+and &lt;code&gt;cardano-wallet&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="cardano-wallet"&gt;Cardano wallet&lt;/h1&gt;
+&lt;p&gt;In order to run &lt;code&gt;cardano-wallet&lt;/code&gt; commands (not using the &lt;span class="caps"&gt;API&lt;/span&gt;, but directly on
+the node) you’ll need to &lt;code&gt;docker exec&lt;/code&gt; into the container like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo docker &lt;span class="nb"&gt;exec&lt;/span&gt; -it cardano-wallet_cardano-wallet_1 sh
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you  can run commands like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cardano-wallet network information
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="cardano-cli"&gt;Cardano-&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Similarly, if you want to use the &lt;code&gt;cardano-cli&lt;/code&gt; programme, exec into the
+&lt;code&gt;cardano-wallet&lt;/code&gt; container:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo docker &lt;span class="nb"&gt;exec&lt;/span&gt; -it cardano-wallet_cardano-node_1 sh 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cardano-cli —version
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="rest-api"&gt;&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Perhaps you wont need to do this though because once the containers are up and
+running and online, you can use the &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to monitor the node, make
+transactions, and watch
+addresses.&lt;sup id="sf-cardano-node-api-2-back"&gt;&lt;a href="#sf-cardano-node-api-2" class="simple-footnote" title="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;For example, a good test to see if the node is ok is to run &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl http://localhost:8090/v2/network/information
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Addresses on Cardano need to be &lt;span class="caps"&gt;BIP39&lt;/span&gt; compliant, and before you can use the
+&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to create the address you will need to have already generated the keys
+and the mnemonic. This can be done using various other tools
+(&lt;a href="https://iancoleman.io/bip39/"&gt;web page&lt;/a&gt;, &lt;a href="https://github.com/trezor/python-mnemonic"&gt;python&lt;/a&gt;) and the results put into a &lt;span class="caps"&gt;JSON&lt;/span&gt; file
+according to the &lt;span class="caps"&gt;API&lt;/span&gt; spec.&lt;/p&gt;
+&lt;h1 id="surprising-things"&gt;Surprising things&lt;/h1&gt;
+&lt;p&gt;Cardano requires that addresses are created sequentially and instead of
+allowing the user to generate them &lt;em&gt;ad-hoc&lt;/em&gt;, the node by default will manage
+the creation of addresses of each
+wallet.&lt;sup id="sf-cardano-node-api-3-back"&gt;&lt;a href="#sf-cardano-node-api-3" class="simple-footnote" title="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The value of &lt;code&gt;ADDRESS_POOL_GAP&lt;/code&gt; sets the number of unused addresses in each
+wallet. By default this is 20. When an address is used, the node will
+automatically generate a new unused address for the wallet, so that there is
+always a pool of 20 unused addresses.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-cardano-node-api-1"&gt;&lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;https://github.com/input-output-hk/cardano-wallet&lt;/a&gt; &lt;a href="#sf-cardano-node-api-1-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-cardano-node-api-2"&gt;&lt;a href="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet"&gt;https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet&lt;/a&gt; &lt;a href="#sf-cardano-node-api-2-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-cardano-node-api-3"&gt;&lt;a href="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/"&gt;https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/&lt;/a&gt; &lt;a href="#sf-cardano-node-api-3-back" class="simple-footnote-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Polkadot: Running and interacting with a full node</title><link href="https://johnmathews.eu/running-a-polkadot-node.html" rel="alternate"></link><published>2021-03-01T17:40:00+01:00</published><updated>2021-03-01T17:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/running-a-polkadot-node.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I recently set up a Polkadot node on Google Cloud Platform that could create
+addresses and make&amp;nbsp;transactions.&lt;/p&gt;
+&lt;p&gt;Instead of building from source I used Docker. After some troubleshooting, I
+found the command to run&amp;nbsp;is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker run -it -p &lt;span class="m"&gt;30333&lt;/span&gt;:30333 -p &lt;span class="m"&gt;9944&lt;/span&gt;:9944 -p &lt;span class="m"&gt;80&lt;/span&gt;:9933 -v /mnt/polkadot:/polkadot/.local/share parity/polkadot:latest --rpc-external --rpc-cors&lt;span class="o"&gt;=&lt;/span&gt;all --chain westend --ws-external
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This differs from the (current) documentation in two&amp;nbsp;ways:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The data volume needs to point to &lt;code&gt;/polkadot/.local/share&lt;/code&gt;. The symlink that
+     is supposed to exist for &lt;code&gt;/data&lt;/code&gt; appears to be broken in the current image.
+     See this GitHub &lt;a href="https://github.com/paritytech/polkadot/issues/2482"&gt;issue&lt;/a&gt; for&amp;nbsp;details.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Port 9944 needs to be&amp;nbsp;mapped.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One of the first &lt;span class="caps"&gt;API&lt;/span&gt; calls you are likely to make to check that things are
+    working as expected, particularly for WebSocket connections, is to
+    open to a &lt;span class="caps"&gt;WS&lt;/span&gt; connection to be notified when your node syncs a new block.
+    The node only does this once it has caught up with its piers. Whilst it is
+    still syncing it will only return the current highest block when you make
+    the initial &lt;span class="caps"&gt;API&lt;/span&gt; call. I ended up chatting to one of the Parity devs about
+    this issue on discord and then on &lt;a href="https://stackoverflow.com/questions/66358685/polkadot-websocket-api-doesnt-listen-for-new-blocks/66365716?noredirect=1#comment117342945_66365716"&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other than that, everything went as described in the&amp;nbsp;documentation.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category></entry><entry><title>Bitcoin Lightning</title><link href="https://johnmathews.eu/bitcoin-lightning.html" rel="alternate"></link><published>2019-01-24T12:57:00+01:00</published><updated>2019-01-24T12:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-01-24:/bitcoin-lightning.html</id><summary type="html">&lt;p&gt;I set up a  node on the Bitcoin Lightning network and sent a payment of \$0.005 which confirmed in a few&amp;nbsp;seconds.&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the largest obstacles (second only to privacy in my opinion) to widespread adoption of Bitcoin is its limited volume. Bitcoin cannot faciliate payments fast enough such that it could compete with Visa or&amp;nbsp;Mastercard.&lt;/p&gt;
+&lt;p&gt;The most interesting solution to this problem is the &lt;a href="https://lightning.network/"&gt;Lightning protocol&lt;/a&gt; - a separate protocol that sits ontop of the Bitcoin protocol (a so-called &amp;lsquo;Layer 2&amp;rsquo; solution). Lightning uses hashed time locked contracts (HTLCs) to trustlessly and privately move transactions off-chain. This allows payments to be faster, cheaper and more frequent. It also has interesting implications for enhancing&amp;nbsp;privacy.&lt;/p&gt;
+&lt;p&gt;There are a lot of resources about what the Lightning network is, why it&amp;rsquo;s neccesary and how it works. There are also several good guides available about how to set up and maintain a node. I used a Raspberry Pi with an external hdd. It took a few attempts, mostly because it&amp;rsquo;s my first time working with an unix operating system and I tried to move a swap file to a disk that wasnt formmated as&amp;nbsp;ext4&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Anyway, I&amp;rsquo;ve opened and closed some channels, connected to peers, and made some transactions. I even bought some stickers using&amp;nbsp;Lightning!&lt;/p&gt;
+&lt;p&gt;You can find my node using these&amp;nbsp;details:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Alias: &lt;span class="s2"&gt;&amp;quot;johnmathews.eu&amp;quot;&lt;/span&gt;
+Public Key: &lt;span class="s2"&gt;&amp;quot;025469b50de125b4cd97457c0da67365519f0cd0f441c2ced0978fb6ae7802ae76&amp;quot;&lt;/span&gt;
+IP address: &lt;span class="m"&gt;85&lt;/span&gt;.145.183.145
+Port: &lt;span class="m"&gt;9735&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Some useful&amp;nbsp;resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://explorer.acinq.co/n/025469b50de125b4cd97457c0da67365519f0cd0f441c2ced0978fb6ae7802ae76"&gt;Lightning network&amp;nbsp;explorer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://1ml.com/node/025469b50de125b4cd97457c0da67365519f0cd0f441c2ced0978fb6ae7802ae76"&gt;Lightning node&amp;nbsp;information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://incoherency.co.uk/blog/stories/spelunking-ln.html"&gt;Interesting things to&amp;nbsp;do&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Bitcoin"></category><category term="Lightning"></category><category term="Crypto"></category></entry><entry><title>Sync a BTC node, quickly</title><link href="https://johnmathews.eu/sync-bitcoin-core-node.html" rel="alternate"></link><published>2018-10-13T20:34:00+02:00</published><updated>2018-10-13T20:34:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-10-13:/sync-bitcoin-core-node.html</id><summary type="html">&lt;p&gt;Sync a &lt;span class="caps"&gt;BTC&lt;/span&gt; node for the first time, quickly, on a spinning disk by moving chainstate to an &lt;span class="caps"&gt;SSD&lt;/span&gt; and symlinking to&amp;nbsp;it.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In order to run your own bitcoin node, or lightning node, you&amp;rsquo;ll need to
+download the entire bitcoin blockchain and then validate it. This takes ages on
+a magnetic disk due to the random access speed of the contents of the
+chainstate&amp;nbsp;directory.&lt;/p&gt;
+&lt;p&gt;To remove this bottleneck, move the chainstate directory to an &lt;span class="caps"&gt;SSD&lt;/span&gt; (its only
+a few &lt;span class="caps"&gt;GB&lt;/span&gt;) and symlink to it from the bitcoin data directory. More details are
+&lt;a href="https://en.bitcoin.it/wiki/Splitting_the_data_directory"&gt;on the Bitcoin wiki&lt;/a&gt;.
+When the sync is complete, replace the symlink with the actual chainstate&amp;nbsp;directory.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Bitcoin"></category><category term="btc-core"></category><category term="Blockchain"></category><category term="Node"></category></entry><entry><title>Prediction Markets</title><link href="https://johnmathews.eu/prediction.html" rel="alternate"></link><published>2018-06-07T12:29:00+02:00</published><updated>2018-06-07T12:29:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-07:/prediction.html</id><summary type="html">&lt;p&gt;Prediction markets can be more accurate than surveys, experts, and polls, and they&amp;rsquo;re becoming easier and cheaper to&amp;nbsp;create.&lt;/p&gt;</summary><content type="html">&lt;h1 id="predicting-port-traffic-using-prediction-markets"&gt;Predicting port traffic using prediction&amp;nbsp;markets&lt;/h1&gt;
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;A &lt;a href="https://en.wikipedia.org/wiki/Prediction_market"&gt;prediction market&lt;/a&gt; allows people to bet on an unknown future event. For example, &amp;ldquo;What will the Euro-Dollar exchange rate be on date&amp;nbsp;X?&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;In several common forecasting scenarios, prediction markets have been more accurate than polls, expert opinions, and statistical methods&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; and therefore prediction models are useful for observers (anybody who is interested in the     outcome) and not just the market&amp;rsquo;s participants. Prediction markets can be used for categorical events (a specific event that either does or doesn&amp;rsquo;t happen) or scalar events (when the outcome is between a range of values). The          predefined source of truth for the outcomes being predicted is called an&amp;nbsp;Oracle.&lt;/p&gt;
+&lt;p&gt;Prediction markets enables participants to purchase shares or tokens tied to the outcome of a specific future event. Once the event has occurred, holders of the tokens representing the actual outcome will receive a reward of predefined value. This creates an incentive to hold tokens corresponding to the correct outcome, and the market dynamics of supply and demand allow the price to reflect perceived probabilities of different outcomes. Helpfully, the price of each   type of token corresponds to the relative probability of each outcome occurring which allows for simple interpretation of the results. If the reward for holding a share corresponding to the correct outcome is $1, and the present price  of this share is 50 cents, then the market&amp;rsquo;s estimate of the likelihood of this outcome occurring is&amp;nbsp;50%.&lt;/p&gt;
+&lt;p&gt;Shares can be traded continuously. As trading occurs over time the probability of different outcomes will change as new information becomes known, and the changing price of the shares quantify&amp;nbsp;this.&lt;/p&gt;
+&lt;h2 id="an-example"&gt;An&amp;nbsp;example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s describe how this could work with an&amp;nbsp;example:&lt;/p&gt;
+&lt;p&gt;There is a large degree of uncertainty&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; around how Britain will continue to trade with the other European countries when it exits the &lt;span class="caps"&gt;EU&lt;/span&gt; on March 29, 2019. A prediction market will likely be a better predictor of the outcome than    any other&amp;nbsp;method.&lt;/p&gt;
+&lt;p&gt;If an adequate agreement isn&amp;rsquo;t achieved, Britain&amp;rsquo;s main port at &lt;a href="https://en.wikipedia.org/wiki/Port_of_Dover"&gt;Dover&lt;/a&gt; will certainly experience long delays and large traffic jams. Therefore a prediction market asking &amp;ldquo;How many vehicles  will be admitted into Britain at the port of Dover between 00:00 and 23:59 on March 29 2019?&amp;rdquo; will give a useful prediction about the outcome of Britain&amp;rsquo;s trade negotiations - a key component and sticking point in the Brexit&amp;nbsp;negotiations.&lt;/p&gt;
+&lt;p&gt;Each type of token in the prediction market will correspond to different quantities of vehicles entering the port&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt; - for example there could be four (or more) categories; Less than 8000, between 8000 and 11000, between 11000 and     14000, and more than 14000. The relative price of a share in each category will correspond to the relative probabilities of each possible&amp;nbsp;outcome.&lt;/p&gt;
+&lt;p&gt;If the number of vehicles is lower than would otherwise be expected, (around 12000) this would likely be due to the impact of Brexit and thus the market will serve as a useful proxy for predicting what kind of Brexit will&amp;nbsp;occur.&lt;/p&gt;
+&lt;h2 id="stakeholder-incentives-are-aligned"&gt;Stakeholder incentives are&amp;nbsp;aligned&lt;/h2&gt;
+&lt;p&gt;One reason that prediction markets work so well is because they aggregate information from disparate sources and the price shows not only an impartial assessment of the most likely outcome but the aggregated level of confidence that    the participants have. Since no one is obliged to participate, those that do believe they have valuable information which gives them a competitive advantage. This creates a mechanism that moves good quality information into the         prediction market, with the resulting prices reflecting the probability of a range of&amp;nbsp;outcomes.&lt;/p&gt;
+&lt;p&gt;In our example, people with relevant information would include port employees, business owners in the &lt;span class="caps"&gt;UK&lt;/span&gt; and in Europe, politicians, civil servants, business analysts, bankers, etc. Whilst it is clear that any of these roles may have   useful information or judgement about the outcome, it is not clear how useful each participants role is relative to the others. By allowing a participant to bid for as many shares in as many different categories as they want, each      participant&amp;rsquo;s confidence in their information can be&amp;nbsp;quantified.&lt;/p&gt;
+&lt;p&gt;In this way, prediction markets align the incentives of market participants and observers. If the market is large enough then it becomes prohibitively expensive to distort the market and promote poor quality information, including      information designed to create &lt;span class="caps"&gt;FUD&lt;/span&gt; (Fear, Uncertainty, Doubt), fake news, or alternative&amp;nbsp;facts.&lt;/p&gt;
+&lt;h2 id="market-providers"&gt;Market&amp;nbsp;providers&lt;/h2&gt;
+&lt;p&gt;Prediction markets are nothing new, with political betting being used to make predictions as early as the 1500s. However the adoption of the internet and decentralised networks now allow prediction markets to be used more widely and    cheaply than ever before. Gnosis is building a platform on the Ethereum blockchain on which others can build new applications which harness the power of prediction&amp;nbsp;markets.&lt;/p&gt;
+&lt;p&gt;By lowering the cost and complexity of creating a prediction market, observers can benefit from high quality and impartial predictive information about future events, and market participants are rewarded for accurate assessments of     likely outcomes. This will enable better decision making and empower observers with previously unobtainable insight. In our example, the market could be created and funded by any organisation that would benefit from knowing the results of the prediction market. This could be the port of Dover itself, news organisations, or market research firms. Any of these businesses would benefit from an accurate&amp;nbsp;prediction.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;span class="caps"&gt;K. J.&lt;/span&gt; Arrow, R. Forsythe, M. Gorham, R. Hahn, R. Hanson, &lt;span class="caps"&gt;J. O.&lt;/span&gt; Ledyard, S. Levmore, R. Litan, P. Milgrom, &lt;span class="caps"&gt;F. D.&lt;/span&gt; Nelson, &lt;span class="caps"&gt;G. R.&lt;/span&gt; Neumann, M. Ottaviani, &lt;span class="caps"&gt;T. C.&lt;/span&gt; Schelling, &lt;span class="caps"&gt;R. J.&lt;/span&gt; Shiller, &lt;span class="caps"&gt;V. L.&lt;/span&gt; Smith, E. Snowberg, &lt;span class="caps"&gt;C. R.&lt;/span&gt; Sunstein, &lt;span class="caps"&gt;P. C.&lt;/span&gt; Tetlock, &lt;span class="caps"&gt;P. E.&lt;/span&gt; Tetlock, &lt;span class="caps"&gt;H. R.&lt;/span&gt; Varian, J. Wolfers, and E. Zitzewitz. The promise of prediction markets. Science, 320(5878), 2008.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;For example https://www.nytimes.com/2018/06/03/world/europe/brexit-customs-union-dover-border.html&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Data from https://www.doverport.co.uk/about/performance/&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Gnosis"></category><category term="Prediction"></category><category term="Markets"></category><category term="Brexit"></category><category term="Betting"></category></entry><entry><title>How to buy Bitcoin</title><link href="https://johnmathews.eu/buying-btc.html" rel="alternate"></link><published>2017-12-07T09:56:00+01:00</published><updated>2017-12-07T09:56:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-12-07:/buying-btc.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Recently a few friends have asked me how they can buy Bitcoin. I&amp;rsquo;m not a financial advisor, but here are a few things that come to&amp;nbsp;mind:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t invest what you can&amp;rsquo;t afford to&amp;nbsp;lose.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the price falls 50%, you need to be able to wait whilst the price&amp;nbsp;recovers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write down the&amp;nbsp;following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How much can you afford to invest? Consider how much cash you will need over the next year, how long it would take to recover any losses,&amp;nbsp;etc.&lt;/li&gt;
+&lt;li&gt;How long do you want to invest&amp;nbsp;for?&lt;/li&gt;
+&lt;li&gt;How much profit do you want to make? Don&amp;rsquo;t have an open-ended&amp;nbsp;goal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will need to get good at identifying and ignoring the following, even from your&amp;nbsp;friends:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hype&lt;/li&gt;
+&lt;li&gt;Fake&amp;nbsp;news&lt;/li&gt;
+&lt;li&gt;Fear, Uncertainty, Doubt (&lt;span class="caps"&gt;FUD&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Don&amp;rsquo;t trust without&amp;nbsp;verifying.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The previous point is really important, and also&amp;nbsp;difficult.&lt;/p&gt;
+&lt;p&gt;By putting something you care about in a risky situation (it is risky) you
+will experience anxiety and excitement. You need to control your psychology
+and identity when other people are trying to manipulate you. This is useful
+in all areas of&amp;nbsp;life.&lt;/p&gt;
+&lt;p&gt;Investing is
+good mental exercise because money has an intensely psychological quality
+about it, and crypto currencies are the most intense trading experience
+there is right&amp;nbsp;now.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Almost no one has a clue what&amp;rsquo;s happening. Conventional economists and
+    traders certainly don&amp;rsquo;t. This is crypto-economics and the rules haven&amp;rsquo;t been
+    worked out yet. We&amp;rsquo;ve never had this tech before, and the internet has made
+    everything - communication and innovation - much quicker. This is a powerful
+    combination of factors and we haven&amp;rsquo;t seen them play out&amp;nbsp;before.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take some time to read about the fundamentals and understand the tech as
+    much as you can. Think about why people would behave in certain ways and
+    what makes bitcoin useful, or not. Get started on this today, it will take
+    some&amp;nbsp;time.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;YouTube has a tonne of videos, and these two sites are good and detailed:&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://lopp.net/bitcoin.html"&gt;lopp.net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://nakamotoinstitute.org/"&gt;namamotoinstitute.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Twitter has a lot of current and new information, but also a lot of bots and scammers spreading hype and &lt;span class="caps"&gt;FUD&lt;/span&gt; (see point&amp;nbsp;4).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you&amp;rsquo;re going to lose sleep over your investment, invest&amp;nbsp;less.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t buy at an all time high. Do your research, wait for the price to
+    correct.  &lt;em&gt;Prices fall.&lt;/em&gt; The
+    &lt;a href="https://uk.tradingview.com/x/TrL9SA7o/"&gt;chart&lt;/a&gt; at the top of the page
+    shows the 20 day and 55 day moving average compared to the daily price. My
+    opinion is that by early January the price will have returned to between
+    the 20 day and 55 day average before beginning to rise&amp;nbsp;again.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.coinbase.com"&gt;Coinbase&lt;/a&gt; is a user friendly and reputable
+    exchange, there are other good exchanges&amp;nbsp;too.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Don&amp;rsquo;t make financial decisions when you&amp;rsquo;re feeling rushed. Check your&amp;nbsp;psychology.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you&amp;rsquo;ve bought some Bitcoin or other cryptocurrencies, don&amp;rsquo;t store them
+    on an exchange. Transfer them to a wallet that you control. If you don&amp;rsquo;t
+    own your private key, you don&amp;rsquo;t own the asset. If you don&amp;rsquo;t know what
+    that means, google it (Point&amp;nbsp;8).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Leave a comment if you think I&amp;rsquo;ve missed something or if you&amp;nbsp;disagree.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Bitcoin"></category></entry><entry><title>Pangea</title><link href="https://johnmathews.eu/pangea.html" rel="alternate"></link><published>2017-11-22T16:49:00+01:00</published><updated>2017-11-22T16:49:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-22:/pangea.html</id><summary type="html">&lt;p&gt;Communities will always need to create reliable and enforceable agreements with each&amp;nbsp;other.&lt;/p&gt;</summary><content type="html">&lt;h2 id="the-problem"&gt;The&amp;nbsp;problem&lt;/h2&gt;
+&lt;p&gt;In many countries the ability to create legally binding agreements is not available to average citizens. Legal services are often unaffordable and opaque, or service providers are corrupt. Legal services are in need of&amp;nbsp;disruption.&lt;/p&gt;
+&lt;h2 id="the-solution"&gt;The&amp;nbsp;solution&lt;/h2&gt;
+&lt;h3 id="pangea"&gt;Pangea&lt;/h3&gt;
+&lt;p&gt;Bitnation (who I consult for) intends to address this problem by empowering people to self-organise and self-govern. We are building a platform called Pangea which allows users to create, notarise and arbitrate contracts according to a jurisdiction which each party joins voluntarily, irrespective of their geographical&amp;nbsp;location. &lt;/p&gt;
+&lt;p&gt;Pangea is a smart phone app that looks and feels like a chat app, the back-end (called Panthalassa) is an encrypted mesh network hooked up to the Ethereum&amp;nbsp;blockchain. &lt;/p&gt;
+&lt;h3 id="rewarded-for-doing-good-empowered-to-be-a-responsible-citizen"&gt;Rewarded for doing good, empowered to be a responsible&amp;nbsp;citizen&lt;/h3&gt;
+&lt;p&gt;On Pangea, people are incentivised to be good citizens by receiving rewards for doing good, rather than being coerced by the threat of punishment for bad&amp;nbsp;behaviour. &lt;/p&gt;
+&lt;p&gt;This platform would fulfil a vast and unmet need, particularly in countries whose legal systems function poorly. On Pangea, a user voluntarily chooses which jurisdiction to be a part of. Contracts are then notarised, executed and arbitrated according to that jurisdiction. Users voluntarily join a decentralised borderless voluntary nation (&lt;span class="caps"&gt;DBVN&lt;/span&gt;) and will receive tokens (Pangea Arbitration Tokens) as a reward for good behaviour. The tokens will be tradable and will be used as payment on Pangea for notarisation and arbitration&amp;nbsp;services.&lt;/p&gt;
+&lt;h3 id="combining-a-store-of-value-and-access-to-legal-services"&gt;Combining a store of value and access to legal&amp;nbsp;services&lt;/h3&gt;
+&lt;p&gt;Societies cannot escape their need to use currency as stores of value. They also cannot escape their need to create reliable and enforceable agreements (contracts) with each&amp;nbsp;other.&lt;/p&gt;
+&lt;p&gt;Generating Bitcoin through proof of work occurs because individuals believe that Bitcoin will be continuously used — that it will meet an ongoing need to transact using a decentralised and disintermediated&amp;nbsp;method. &lt;/p&gt;
+&lt;p&gt;Generating &lt;span class="caps"&gt;PAT&lt;/span&gt; by being a good citizen will occur because individuals believe that Pangea will be continuously used  — that it will meet an ongoing need to create enforceable agreements using a voluntary and geographically agnostic (and decentralised)&amp;nbsp;method.&lt;/p&gt;
+&lt;h3 id="comments"&gt;Comments&lt;/h3&gt;
+&lt;p&gt;There is much still to say about the Pangea platform and the mechanisms which will make it function. Please give feedback and ask questions in the comments. To find out more, visit the &lt;a href="http://bitnation.co"&gt;website&lt;/a&gt;.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="bitnation"></category><category term="pangea"></category></entry><entry><title>Bitcoin compared to gold</title><link href="https://johnmathews.eu/bitcoin-vs-gold.html" rel="alternate"></link><published>2017-11-21T17:35:00+01:00</published><updated>2017-11-21T17:35:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-21:/bitcoin-vs-gold.html</id><summary type="html">&lt;p&gt;Bitcoin will become a safe haven asset comparable to&amp;nbsp;gold&lt;/p&gt;</summary><content type="html">&lt;p&gt;A safe haven asset is something to buy during economic uncertainty. Historically, the safest asset you can buy has been gold. This is not because of anything inherently special about gold, but because that is what people believe to be the best long term method of storing&amp;nbsp;value. &lt;/p&gt;
+&lt;p&gt;People believe gold is special because they assume that in future other people will believe it&amp;rsquo;s&amp;nbsp;special.&lt;/p&gt;
+&lt;h3 id="criteria-for-a-safe-haven-asset"&gt;Criteria for a safe haven&amp;nbsp;asset&lt;/h3&gt;
+&lt;p&gt;A safe-haven asset must fulfil the following&amp;nbsp;criteria:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Price isn&amp;rsquo;t controlled by any single party, including a state or bank. The market is spread out beyond the reach of any one organisation. This is important because an asset which is issued, controlled or backed by an organisation has its value tied to the health of that&amp;nbsp;organisation.&lt;/li&gt;
+&lt;li&gt;Supply isn&amp;rsquo;t controlled by any single party, including a state, bank or anyone else - it exists naturally and the rate at which it&amp;rsquo;s produced or traded is beyond the control of any one&amp;nbsp;organisation. &lt;/li&gt;
+&lt;li&gt;Supply is limited. The effort required to create the asset naturally limits the&amp;nbsp;supply.&lt;/li&gt;
+&lt;li&gt;The asset doesn&amp;rsquo;t wear out or&amp;nbsp;expire.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s prohibitively expensive to&amp;nbsp;fake.&lt;/li&gt;
+&lt;li&gt;Almost everyone considers it to be precious and&amp;nbsp;valuable.&lt;/li&gt;
+&lt;li&gt;It can be stored and transported simply. It&amp;rsquo;s not delicate or&amp;nbsp;volatile.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For these reasons, and because of historical consensus, people have been happy to use gold as a store of value in times of economic uncertainty or for long durations. Other assets also meets these requirements to lesser&amp;nbsp;extents.&lt;/p&gt;
+&lt;h3 id="bitcoin-compared-to-gold"&gt;Bitcoin compared to&amp;nbsp;gold&lt;/h3&gt;
+&lt;p&gt;Consider why gold is so good as a safe haven asset and long term value store. For all the reasons above, bitcoin is better, except one: At present, not many people consider it to be precious and valuable, so the market is small. This will change as confidence and awareness increases, and the eco-system of services and applications&amp;nbsp;matures.&lt;/p&gt;
+&lt;p&gt;The fundamentals are already&amp;nbsp;established:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A decentralised network ensures that Bitcoin can&amp;rsquo;t be regulated or controlled by a single government or organisation. The network can&amp;rsquo;t be turned off or&amp;nbsp;controlled.&lt;/li&gt;
+&lt;li&gt;The present and future rate of supply is publicly available and inviolable. This increases market efficiency and creates more rational pricing than a market where the rate of supply is&amp;nbsp;unverifiable.&lt;/li&gt;
+&lt;li&gt;Supply is naturally (mathematically) limited using proof of work&amp;nbsp;algorithms. &lt;/li&gt;
+&lt;li&gt;Bitcoin doesn&amp;rsquo;t corrode or wear&amp;nbsp;out.&lt;/li&gt;
+&lt;li&gt;Bitcoin is impossible to&amp;nbsp;fake.&lt;/li&gt;
+&lt;li&gt;Bitcoin can be stored and transported more easily than gold. - If you can remember 24 words you can transport all your bitcoin effortlessly where ever you&amp;nbsp;go. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="read-more"&gt;Read&amp;nbsp;more&lt;/h3&gt;
+&lt;p&gt;This &lt;a href="http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/"&gt;article&lt;/a&gt;, published a week after I wrote this post, looks at different factors to consider when evaluating Bitcoin&amp;rsquo;s value. It goes into a lot of detail, relative to what I&amp;rsquo;ve seen in other&amp;nbsp;articles. &lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="bitcoin"></category><category term="gold"></category><category term="safe haven"></category></entry><entry><title>Hardware Wallets</title><link href="https://johnmathews.eu/wallet.html" rel="alternate"></link><published>2017-11-08T16:09:00+01:00</published><updated>2017-11-08T16:09:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-08:/wallet.html</id><summary type="html">&lt;p&gt;Current hardware wallets are technically good but are awkward to use. A good solution would solve the following&amp;nbsp;problems:&lt;/p&gt;</summary><content type="html">&lt;h2 id="what-is-a-hardware-wallet"&gt;What is a hardware&amp;nbsp;wallet&lt;/h2&gt;
+&lt;p&gt;A hardware wallet (&lt;span class="caps"&gt;HW&lt;/span&gt; wallet) is a physical device that stores the information required to access digital currency or assets. It is plugged into a computer via &lt;span class="caps"&gt;USB&lt;/span&gt; in order to initiate or confirm transactions on the Bitcoin, Ethereum or other digital asset blockchain&amp;nbsp;networks.&lt;/p&gt;
+&lt;p&gt;They are a secure method of storing cryptographic data. They are so secure that they can be used on a compromised computer. All that is needed to access funds using a &lt;span class="caps"&gt;HW&lt;/span&gt; wallet (in addition to the device itself) is a &lt;span class="caps"&gt;PIN&lt;/span&gt; code which the user chooses. A single &lt;span class="caps"&gt;HW&lt;/span&gt; wallet can store multiple currencies in multiple&amp;nbsp;accounts.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HW&lt;/span&gt; wallets are an easier solution than remembering a good password, and safer than storing the data in a file on my computer or&amp;nbsp;online.&lt;/p&gt;
+&lt;p&gt;The best known hardware wallet brands are &lt;a href="https://www.ledgerwallet.com/"&gt;Ledger&lt;/a&gt; and &lt;a href="https://trezor.io/"&gt;Trezor&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The&amp;nbsp;problem&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HW&lt;/span&gt; wallets are technically great, but their size and shape creates a bad user experience. A good hardware wallet should be convenient to use multiple times each day, like a credit card&amp;nbsp;is.&lt;/p&gt;
+&lt;p&gt;Current hardware wallets don&amp;rsquo;t fit into a (money) wallet and people don&amp;rsquo;t want to carry more any objects in their pockets. They are too big and are a bad&amp;nbsp;shape.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HW&lt;/span&gt; wallets look like they might belong on a keyring, but it&amp;rsquo;s inconvenient and insecure to attach a credit card to a keyring and the same is true for an &lt;span class="caps"&gt;HW&lt;/span&gt; wallet. I might store my keys on a hook by my door, but I would never leave my wallet there overnight. I often want to keep my keys and money separate because I need my keys when I’m near my house, where I don’t need to buy stuff, and I need my money when I’m away from my house where I don’t need to unlock&amp;nbsp;anything.&lt;/p&gt;
+&lt;p&gt;I want to keep my bank cards and cash together in one safe place, and I don’t want to carry around a dongle as well. It&amp;rsquo;s&amp;nbsp;inconvenient.&lt;/p&gt;
+&lt;p&gt;It’s easier to have a separate dongle lost or stolen than something that would fit next to my credit card in my wallet. The inconvenience is a barrier to enjoying the advantages of digital&amp;nbsp;currencies.&lt;/p&gt;
+&lt;h2 id="the-goal"&gt;The&amp;nbsp;goal&lt;/h2&gt;
+&lt;p&gt;Create a &lt;span class="caps"&gt;HW&lt;/span&gt; wallet that is the size and shape of a credit card, it could be 3 times thicker than a credit card and still fit in a normal wallet. It&amp;nbsp;needs&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;a display - it could be a low resolution b&amp;amp;w&amp;nbsp;display&lt;/li&gt;
+&lt;li&gt;two or more&amp;nbsp;buttons&lt;/li&gt;
+&lt;li&gt;to  plug into a &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;nbsp;port&lt;/li&gt;
+&lt;li&gt;securely sign transactions and create&amp;nbsp;addresses&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="wallet"></category><category term="crypto"></category><category term="blockchain"></category><category term="bitcoin"></category></entry><entry><title>Bitnation</title><link href="https://johnmathews.eu/bitnation.html" rel="alternate"></link><published>2017-09-14T11:25:00+02:00</published><updated>2017-09-14T11:25:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-09-14:/bitnation.html</id><summary type="html">&lt;p&gt;I&amp;rsquo;m about to begin consulting for &lt;a href="http://bitnation.co"&gt;Bitnation&lt;/a&gt; as their finance&amp;nbsp;officer.&lt;/p&gt;</summary><content type="html">&lt;h3 id="im-consulting"&gt;I&amp;rsquo;m&amp;nbsp;Consulting&lt;/h3&gt;
+&lt;p&gt;Next week I begin working with &lt;a href="http://bitnation.co"&gt;Bitnation&lt;/a&gt; as their finance officer. I&amp;rsquo;m excited about this because I get to work on a really ambitious project using new technology to do something innovative and&amp;nbsp;valuable. &lt;/p&gt;
+&lt;h3 id="bitnation"&gt;Bitnation&lt;/h3&gt;
+&lt;p&gt;Bitnation&amp;rsquo;s purpose is to offer the same services as governments do, in a way that delivers more benefit to&amp;nbsp;users. &lt;/p&gt;
+&lt;p&gt;In the West this may not immediately sound like a big deal. Our governments are fairly organised and the services are usually &amp;ldquo;good enough&amp;rdquo;. Most significantly, we are not used to thinking about &lt;span class="caps"&gt;ID&lt;/span&gt; services (passports, visa, drivers licences) or registration services (land registry, marriage certificates) as a service that we are customers of - like our internet service provider, or our electricity&amp;nbsp;supplier. &lt;/p&gt;
+&lt;p&gt;In many parts of the world dysfunctional or unjust governments represent a huge obstacle to improving everyday life, the progress and achievement that many people can hope to realise is limited because of&amp;nbsp;this. &lt;/p&gt;
+&lt;p&gt;If there was a viable alternative to a passport from a jurisdiction renowned for forgery, or a credit rating that acknowledged your land holdings despited your governments inability to maintain a credible database, then you could begin to travel, trade and enjoy the benefits that citizens of many western states take for&amp;nbsp;granted.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m excited that I get to use my skills in an innovative tech company that is aiming to do something really&amp;nbsp;positive.&lt;/p&gt;
+&lt;p&gt;Services include secure &lt;span class="caps"&gt;ID&lt;/span&gt; systems, asset registry and dispute resolution. Identification (in particular) is an area full of problems, and blockchain tech could offer some really significant improvements. Bitnation wants to create a platform where voluntary nations can be created and administered, and where people can choose what jurisdictional system they are part of. If this is widely implemented it will be&amp;nbsp;unprecedented. &lt;/p&gt;
+&lt;p&gt;Jurisdictions would offer their own services according to their own principles, and because they are easy to create and membership is voluntarily, jurisdictions would compete to attract citizens. This should lead to improvements for the users of each service, and is intended to provide an alternative to the slow, expensive and opaque processing methods commonly associated with services from geographically defined&amp;nbsp;nationstates. &lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Bitnation"></category><category term="Blockchain"></category><category term="Disintermediation"></category><category term="Identity"></category><category term="Consulting"></category><category term="Finance"></category></entry><entry><title>Create a Multi-Signature Ethereum wallet using Parity</title><link href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html" rel="alternate"></link><published>2017-08-12T22:28:00+02:00</published><updated>2017-08-12T22:28:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-08-12:/ethereum-parity-multisig-wallet.html</id><summary type="html">&lt;p&gt;Set up and use Parity to create and manage multi-signature Ethereum wallets, edit the wallet&amp;rsquo;s settings and view pending and past&amp;nbsp;transactions&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently set up a multi-sig Ethereum wallet and I couldn&amp;rsquo;t find clear instructions.  Here they are, I hope these instructions are useful for someone looking to get&amp;nbsp;started. &lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll need a way to interact with the Ethereum blockchain in order to deploy a wallet. There are several apps that you can use. I&amp;rsquo;ve used Parity because I found it simple and&amp;nbsp;quick. &lt;/p&gt;
+&lt;h2 id="ethereum-wallets"&gt;Ethereum&amp;nbsp;Wallets&lt;/h2&gt;
+&lt;p&gt;Wallets are a type of contract and there are two types of wallet, the Multi-Sig wallet and the Watch wallet. An Ethereum account is required to communicate with a contract so if you want a multi-sig wallet with 3 signatories (for example) then you will need to have set up at least 1 of those 3 Ethereum accounts before creating the&amp;nbsp;wallet. &lt;/p&gt;
+&lt;h2 id="parity"&gt;Parity&lt;/h2&gt;
+&lt;p&gt;From their&amp;nbsp;website:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Integrated directly into your Web browser, Parity is the fastest and most secure way of interacting with the Ethereum&amp;nbsp;network.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can do a bunch of stuff with Parity including mining Ether, manage accounts, interact with different dapps, send/receive from different accounts, and set up contracts. On the accounts tab, you can quickly set up Multi-Signature wallets. If you use the Chrome plugin you will also get handy notifications when transactions are confirmed or contracts&amp;nbsp;deployed.&lt;/p&gt;
+&lt;h2 id="download-and-open-parity"&gt;Download and open&amp;nbsp;Parity&lt;/h2&gt;
+&lt;p&gt;For MacOS you can download and install Parity by visiting the Parity site and downloading the &lt;a href="https://parity.io/parity.html"&gt;installer&lt;/a&gt;, or from the terminal using curl or&amp;nbsp;Homebrew.&lt;/p&gt;
+&lt;h3 id="simple-option"&gt;Simple&amp;nbsp;option&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   $ bash &amp;lt;&lt;span class="o"&gt;(&lt;/span&gt;curl https://get.parity.io -kL&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="homebrew"&gt;Homebrew&lt;/h3&gt;
+&lt;p&gt;Detailed instructions are &lt;a href="https://github.com/paritytech/homebrew-paritytech"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   brew tap paritytech/paritytech
+   brew install parity --stable
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you used the installer, then you open Parity opening the app and then using the logo in the&amp;nbsp;menubar. &lt;/p&gt;
+&lt;p&gt;If you used Brew, then start Parity with the following&amp;nbsp;command &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;parity&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and then go to the following address in your&amp;nbsp;browser:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;http://127.0.0.1:8180/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You should now see something similar to&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Parity home screen view" src="https://johnmathews.eu/images/parity-home.jpeg"&gt;&lt;/p&gt;
+&lt;h2 id="add-or-create-accounts"&gt;Add or create&amp;nbsp;accounts&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Parity toolbar" src="https://johnmathews.eu/images/Parity-toolbar-accounts.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Parity toolbar" src="https://johnmathews.eu/images/parity-account-creation.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;Select the Accounts tab from the top of the page and then select &amp;ldquo;&lt;strong&gt;+ Account&lt;/strong&gt;&amp;rdquo;. Either create new accounts or import them using your preferred method. You don&amp;rsquo;t need to import all the accounts that will be part of the multi-sig wallet, but you will need to import or create the account that will own the wallet you are about to create. This account will need to have a large enough Ether balance to pay the transaction costs to deploy the multi-sig wallet onto the Blockchain. The costs are tiny, but they are greater than&amp;nbsp;zero.&lt;/p&gt;
+&lt;h2 id="create-the-multi-sig-wallet"&gt;Create the multi-sig&amp;nbsp;wallet&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Parity toolbar" src="https://johnmathews.eu/images/Parity-toolbar-wallet.jpeg"&gt;
+&lt;img alt="Wallet management" src="https://johnmathews.eu/images/parity-wallet-details.jpeg"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Once you&amp;rsquo;ve either created or imported the account which will deploy the wallet, select &amp;ldquo;&lt;strong&gt;+ Wallet&lt;/strong&gt;&amp;rdquo; from the accounts tab and choose &amp;ldquo;&lt;strong&gt;Multi-Sig wallet&lt;/strong&gt;&amp;rdquo;. Click&amp;nbsp;next.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter a &lt;strong&gt;name&lt;/strong&gt; for the wallet, if you want you can add a local &lt;strong&gt;description&lt;/strong&gt;. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &amp;ldquo;&lt;strong&gt;From account&lt;/strong&gt;&amp;rdquo; will be the contract owner and this account&amp;nbsp;will &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Be one of the&amp;nbsp;signatories.&lt;/li&gt;
+&lt;li&gt;Need to have enough Ether to pay for the execution of the contract on the&amp;nbsp;blockchain.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click the &amp;ldquo;+&amp;rdquo; button under &amp;ldquo;&lt;strong&gt;Other wallet owners&lt;/strong&gt;&amp;rdquo; to add the address of the other signatory accounts. You&amp;rsquo;ll need to add one line for each signatory and these accounts will also own the wallet once it is&amp;nbsp;deployed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the &amp;ldquo;&lt;strong&gt;required owners&lt;/strong&gt;&amp;rdquo; section, specify how many accounts will need to approve a transaction that is above the daily transaction&amp;nbsp;limit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &amp;ldquo;&lt;strong&gt;wallet day limit&lt;/strong&gt;&amp;rdquo; to set how much Ether can be spent by each account per day &lt;em&gt;without&lt;/em&gt; needing another account to approve the transaction. Set an amount of 0 if you want all transactions to require approval, or turn the option off using the slider to the right (which just specifies a huge&amp;nbsp;number).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;ldquo;next&amp;rdquo; and you&amp;rsquo;ll be shown a pop-up window to approve the creation of the wallet. You will need to enter the password of the account which is creating the wallet, and once you click &amp;ldquo;Confirm request&amp;rdquo; the funds in the creators accounts will be used to deploy the contract on chain and create the multi-sig&amp;nbsp;wallet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Wallet management" src="https://johnmathews.eu/images/parity-conf-box.jpeg"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="adding-an-existing-multi-sig-wallet"&gt;Adding an existing multi-sig&amp;nbsp;wallet&lt;/h2&gt;
+&lt;p&gt;Once your wallet is created and deployed, you&amp;rsquo;ll need to add it to other parity clients so that the other signatories can make or confirm transactions, and view the wallets balance. This is done by adding a watch&amp;nbsp;wallet.&lt;/p&gt;
+&lt;p&gt;Process: Accounts tab &amp;gt; + Wallet &amp;gt; Watch wallet &amp;gt; enter the address of the multi-sig&amp;nbsp;wallet. &lt;/p&gt;
+&lt;p&gt;The other signatories will now be able to view the wallet&amp;rsquo;s balance, get notifications about pending confirmations, and be able to make and monitor&amp;nbsp;transactions.&lt;/p&gt;
+&lt;h2 id="managing-a-multi-sig-wallet"&gt;Managing a multi-sig&amp;nbsp;wallet&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Anyone can put funds into the wallet, just like a normal account. Just send Ether to the wallet&amp;rsquo;s&amp;nbsp;address.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="select multisig wallet" src="https://johnmathews.eu/images/parity-select-multisig.jpeg"&gt;
+&lt;img alt="select multisig wallet" src="https://johnmathews.eu/images/new-parity-wallet.jpeg"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At the top of the page you click &amp;ldquo;&lt;strong&gt;Edit&lt;/strong&gt;&amp;rdquo; to change the local name and description of the&amp;nbsp;wallet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;strong&gt;Settings&lt;/strong&gt;&amp;rdquo; allows you add or remove owners (signatories) of the wallet and change the required number of approvals and the wallet day limit. If you change these settings then the changes will need to be executed on the blockchain and the account requesting the change will therefore need to pay the required funds. Depending on the settings being changed, other accounts will need to approve the changes before they are&amp;nbsp;implemented.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;strong&gt;Forget&lt;/strong&gt;&amp;rdquo; will remove the multi-sig wallet from your accounts&amp;nbsp;tab.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="moving-funds-out-of-a-multi-sig-wallet"&gt;Moving funds out of a multi-sig&amp;nbsp;wallet&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &amp;ldquo;&lt;strong&gt;Transfer&lt;/strong&gt;&amp;rdquo; in the wallet management window (pictured above) to begin withdrawing funds from the&amp;nbsp;wallet. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the token you want to transfer - Ethereum is the only default&amp;nbsp;option.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;strong&gt;Sender address&lt;/strong&gt;&amp;rdquo; - specify which account wants to withdraw the funds from the multi-sig&amp;nbsp;wallet.&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;strong&gt;Recipient address&lt;/strong&gt;&amp;rdquo; - specify which account will receive the&amp;nbsp;funds.&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;strong&gt;Amount to transfer&lt;/strong&gt;&amp;rdquo; - specify how much you want to transfer. If the amount is greater than the remaining daily limit you will get a warning bar telling you the transaction will require confirmation from other wallet&amp;nbsp;owners.&lt;/li&gt;
+&lt;li&gt;If you want to specify the maximum transaction fee (a payment with a lower fee will be confirmed more slowly than usual) tick the &amp;ldquo;&lt;strong&gt;advanced sending options&lt;/strong&gt;&amp;rdquo;&amp;nbsp;box.&lt;/li&gt;
+&lt;li&gt;Clicking &amp;ldquo;send&amp;rdquo; will bring you to the confirmation stage where you can enter the password for the account which is requesting the&amp;nbsp;transfer.&lt;/li&gt;
+&lt;li&gt;If approval from other wallet owners is required and they are also using Parity, then they can see that their approval is required in two ways:&lt;ul&gt;
+&lt;li&gt;The signer tab will show there is a pending request.
+    &lt;img alt="Wallet management" src="https://johnmathews.eu/images/parity-signer-alert.jpeg"&gt;&lt;/li&gt;
+&lt;li&gt;The wallet management window (accessed from the accounts tab) has a &amp;ldquo;pending transactions&amp;rdquo; section where any confirmation requests will be shown.
+   &lt;img alt="Wallet management" src="https://johnmathews.eu/images/parity-wallet-management.jpeg"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Ethereum"></category><category term="Parity"></category><category term="Blockchains"></category><category term="Fintech"></category><category term="Multi-Sig"></category><category term="Wallet"></category></entry><entry><title>Blockchains from the ground up: Part 2</title><link href="https://johnmathews.eu/blockchain-networks.html" rel="alternate"></link><published>2017-07-08T13:52:00+02:00</published><updated>2017-07-08T13:52:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-08:/blockchain-networks.html</id><summary type="html">&lt;p&gt;An overview of the essential features of a blockchain, using proof-of-work for&amp;nbsp;consensus&lt;/p&gt;</summary><content type="html">&lt;h2 id="maintain-an-accurate-list-of-transactions-across-a-large-group-of-users-without-a-central-authority"&gt;Maintain an accurate list of transactions across a large group of users, without a central&amp;nbsp;authority&lt;/h2&gt;
+&lt;p&gt;This is part 2 of an introduction to the key features of a generalised blockchain. &lt;a href="https://johnmathews.eu/blockchain-introduction.html"&gt;Part 1&lt;/a&gt; introduced key features of immutable record creation between 2 parties using public key cryptography. Part 2 explores how a network of users can maintain the same (true) list of transactions and protect each other against&amp;nbsp;fraud. &lt;/p&gt;
+&lt;h2 id="broadcasting-transactions-to-the-network"&gt;Broadcasting transactions to the&amp;nbsp;network&lt;/h2&gt;
+&lt;p&gt;In  &lt;a href="https://johnmathews.eu/blockchain-introduction.html"&gt;Part 1&lt;/a&gt; we saw Lizzie, John and Chris exchanging coins. Lizzie also paid John with coins that were owed to her by Chris. These transactions were authenticated using &lt;span class="caps"&gt;PKI&lt;/span&gt;&amp;nbsp;which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ensured transaction&amp;nbsp;integrity&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Prevented participants claiming that they didn&amp;rsquo;t make a past&amp;nbsp;transaction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Prevents anyone creating a transaction on someone else&amp;rsquo;s behalf without their&amp;nbsp;consent. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As the number of people in the network grows, the transfer of coins from one user to another becomes harder to track. If every users ledger is not identical then the opportunity arises to use coins that have already been spent to pay someone who doesn&amp;rsquo;t know they&amp;rsquo;ve already been&amp;nbsp;used. &lt;/p&gt;
+&lt;p&gt;This is double spending, and is possible because the ledger that is shared amongst all members of the group only has &lt;em&gt;weak consistency&lt;/em&gt; - it is not necessarily correct all the time in all&amp;nbsp;locations. &lt;/p&gt;
+&lt;h3 id="weak-consistency"&gt;Weak&amp;nbsp;Consistency&lt;/h3&gt;
+&lt;p&gt;Weak consistency could be solved by requiring that everyone votes to accept a transaction before it is accepted into the ledger (Unanimous consensus), or to save time we could reduce the requirements so that only 50% of all users validate a transaction before it is accepted into the ledger (Quorum consensus). Either of these solutions is possible for a small local group with a list of all&amp;nbsp;users. &lt;/p&gt;
+&lt;p&gt;However Unanimous or Quorum Consensus doesn&amp;rsquo;t solve the weak consistency problem&amp;nbsp;if:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The group is&amp;nbsp;large&lt;/li&gt;
+&lt;li&gt;The group is small but spread across different locations or&amp;nbsp;timezones&lt;/li&gt;
+&lt;li&gt;It is not possible to know how many members there are and therefore what proportion of users are&amp;nbsp;participating.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;real&lt;/em&gt; identity of a user is&amp;nbsp;unknown&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In these cases a peer-to-peer network is required where transactions between users require approval by other users before being confirmed. This has not been trivial to solve, as some users would be incentivised to be dishonest, and some may make mistakes. This is the distributed consensus problem, which on &lt;a href="https://en.wikipedia.org/wiki/Consensus_(computer_science)"&gt;wikipedia&lt;/a&gt; is defined&amp;nbsp;as: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The consensus problem requires agreement among a number of agents for a single data value. Some of the processes (agents) may fail or be unreliable in other ways, so consensus protocols must be fault tolerant or resilient. The processes must somehow put forth their candidate values, communicate with one another, and agree on a single consensus&amp;nbsp;value.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="distributed-consensus"&gt;Distributed&amp;nbsp;Consensus&lt;/h2&gt;
+&lt;p&gt;When the number and identity of participants is known, distributed consensus is possible. Two types of protocol which allows all users in a distributed system to agree on a transaction are the &lt;a href="https://en.wikipedia.org/wiki/Paxos_(computer_science)"&gt;Paxos&lt;/a&gt; family of protocols and the &lt;a href="http://courses.cs.vt.edu/~cs5204/fall00/distributedDBMS/duckett/tpcp.html"&gt;Two-phase commit&lt;/a&gt; protocol. Both of these would require that at least 50% of all users reach agreement in order to add a new&amp;nbsp;transaction. &lt;/p&gt;
+&lt;p&gt;However in a public peer-to-peer network the total number of active users is not known - its  fast and cheap to create new user profiles, and existing user profiles may become dormant. This makes it impossible to know how many users 50% would be. Additionally, because its possible to cheaply create new user profiles (just generate a new public-private key pair), a single actor could generate and control many user accounts in order to have many votes and force incorrect transactions onto the ledger. An attack where one user subverts a network by creating many profiles is known as a &lt;a href="https://en.wikipedia.org/wiki/Sybil_attack"&gt;Sybil attack&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="proof-of-work"&gt;Proof of&amp;nbsp;Work&lt;/h3&gt;
+&lt;p&gt;The solution to the Sybil attack is to increase the cost of verifying a transaction such that the cost exceeds the reward. This is achieved through proof-of-work (PoW) algorithms, which are computationally expensive for a sender claiming to have verified a transaction, and computationally simple for the receiver to verify that the sender has validated the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;One possible Proof of Work approach is to require that the hash of a verification message begins with a certain set of characters. The chosen set of characters is called a &lt;em&gt;nonce&lt;/em&gt; and the only way to create a verification message with an acceptable hash is to try many slightly different messages. For example, a nonce may be 3 zeros. It&amp;rsquo;s arbitrary, but the longer the nonce is the more difficult it becomes to find a hash that fits the&amp;nbsp;requirements. &lt;/p&gt;
+&lt;p&gt;This is because a hash is a random list of characters, and altering even a single part of the data being hashed will result in a completely different hash value. Therefore there is no way to predict a hash value. The only way to generate a hash with the required none is to  repeatedly alter the data being hashed (even by just one character) until a hash with the required features is randomly achieved. This is computationally expensive to achieve, but computationally simple to&amp;nbsp;verify. &lt;/p&gt;
+&lt;p&gt;Using the method, a user who seeks to verify a transaction and broadcast the result must (once they&amp;rsquo;ve verified the transactions) repeatedly try different messages until they randomly find a message that meets the nonce requirements. It is simple for a user to check if a transaction verification message meets the nonce requirements, because it is simple to inspect a hash and compare it to the&amp;nbsp;nonce.&lt;/p&gt;
+&lt;p&gt;The effect of this requirement is a process that makes it expensive to claim that a transaction has been verified and cheap to check that verification claim. This removes the threat of a Sybil attack, but does not remove the distributed consensus problems created by not&amp;nbsp;knowing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The true identity of users in the&amp;nbsp;network&lt;/li&gt;
+&lt;li&gt;How many users&amp;nbsp;exist&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This problem cannot be completely solved, and the practical solution is to relax the requirements such that the probability of accepting a fraudulent transaction is lower than some user defined threshold. This is acceptable because a user would require a higher degree of confirmation for a high-value transaction than they would for a low-value transaction, and would therefore be willing to incur more time and cost to verify a high value transaction and reduce the probability of accepting an incorrect transaction below a&amp;nbsp;threshold. &lt;/p&gt;
+&lt;p&gt;If a user wishes to make fast or low-value transactions, or trusts the party they&amp;rsquo;re transacting with, then they may accept a transaction without any other users on the network verifying that the sender has the required funds&amp;nbsp;available.&lt;/p&gt;
+&lt;p&gt;However when the senders trustworthiness is not assured, verification is required. The more risky or valuable the transaction, the more users the receiver of the funds will ask to verify that the sender has access to the required funds. The higher the number of users, the higher the probability that a dishonest transaction will be identified before being&amp;nbsp;accepted.&lt;/p&gt;
+&lt;p&gt;An appropriate level of verification will depend on the amount being transferred and how well the receiver of the funds knows the&amp;nbsp;sender. &lt;/p&gt;
+&lt;h2 id="transaction-fees"&gt;Transaction&amp;nbsp;fees&lt;/h2&gt;
+&lt;p&gt;Asking peers on the network to verify transactions introduces a new problem. Verifying a transaction requires time and effort, and incurs a cost. This cost requires that network participants be rewarded for correctly verifying transactions between other&amp;nbsp;participants. &lt;/p&gt;
+&lt;p&gt;An attacker would only attack if the cost is less than the reward. Therefore the number and cost of verifications required should be just enough to make the cost of an attack more than the value of the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;This introduces the problem that it costs more to verify a transaction than the value of the transaction itself. It is also create the recursive problem where the users who verified the first transaction would need to verify that the payment they received was then also valid. Furthermore, a high proportion of the original transaction value is spent as a transaction fee (for verification) which is not&amp;nbsp;efficient.&lt;/p&gt;
+&lt;p&gt;These problems are avoided by combining multiple transactions and verifying them at the same time, broadcasting the successful verification of multiple transactions simultaneously by grouping the transactions together into a block of&amp;nbsp;transactions. &lt;/p&gt;
+&lt;p&gt;By confirming multiple transactions at once (and proving it using proof-of-work), transaction fees can be aggregated (allowing each individual fee to be much lower). Each block includes a list of verified transactions, a reference to the previous block, and a block &lt;span class="caps"&gt;ID&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id="incentivised-social-responsibility"&gt;Incentivised social&amp;nbsp;responsibility&lt;/h2&gt;
+&lt;p&gt;The transaction verification process outlined above is remarkable because it creates a demand for new participants to the network by creating a financial incentive to verify transactions. This makes the network more secure as increasing the number of participants makes a sybil attack more&amp;nbsp;difficult. &lt;/p&gt;
+&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Users generate new transactions and broadcast them on a peer-to-peer network for&amp;nbsp;verification&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An idle user listens for new transactions and collects them until the sum of all transactions&amp;rsquo; verification fees is greater than the cost the user will incur to verify them and meet the proof-of-work&amp;nbsp;requirements&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The idle user adds an extra transaction to their list of transactions that transfers the sum of the transaction fees to their own&amp;nbsp;address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The idle user generates the block of newly verified transactions, referencing the previously verified block so that transactions can be chronologically ordered and completing the proof-of-work challenge. This new block is then broadcast to the&amp;nbsp;network.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other users are listening for new block announcements. These users verify that the block is valid according to the proof-of-work requirements and the order of the&amp;nbsp;blocks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Users with unverified transactions look inside the verified block to see if their pending transactions have been&amp;nbsp;accepted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="competing-to-validate-blocks-of-transactions"&gt;Competing to validate blocks of&amp;nbsp;transactions&lt;/h2&gt;
+&lt;p&gt;Each user can choose which transactions they verify, and how many to verify before beginning the proof-of-work requirement and hopefully collecting the transaction fees. This lack of order around transaction verification is fine because the only way to increase the probability of being the first to claim the transaction fees associated with a collection of transactions (a block) is to spend more &lt;span class="caps"&gt;CPU&lt;/span&gt; power searching for the required partial hash&amp;nbsp;collision. &lt;/p&gt;
+&lt;p&gt;If two users complete a block at approximately the same time then the blockchain will look different in different parts of the network, as each completed block begins to propagate and other users accept the new block and add it to their ledger. This is ok if a rule is enforced that requires a user to always accept the longest chain of&amp;nbsp;blocks. &lt;/p&gt;
+&lt;p&gt;This works because if multiple blocks are created at the same time, the time it takes to create subsequent blocks will vary due to the random behaviour of the proof-of-work algorithm. Therefore chains of different length will always exist and one version of the block chain will be longer than the others, providing a clear candidate for which branch of the blockchain to use. If there are transactions in the discarded branch which are not present in the new (longest) blockchain then they are added back into the pool of transactions awaiting&amp;nbsp;verification. &lt;/p&gt;
+&lt;h2 id="a-block-of-transactions-in-never-absolutely-immutable"&gt;A block of transactions in never absolutely&amp;nbsp;immutable&lt;/h2&gt;
+&lt;p&gt;The above procedure for verifying transactions and adding new blocks onto the chain means that even if a user inspects a new block and sees that their transaction has been verified, its possible that in the future a longer chain will be discovered (which must be accepted) which doesn&amp;rsquo;t include their&amp;nbsp;transaction. &lt;/p&gt;
+&lt;p&gt;Therefore any block could potentially be removed, which means a transaction is never completely verified. However the probability of a block being removed decreases as the number of blocks after it increases. This means verification can be thought of in terms of the number of blocks that have been added to the chain &lt;em&gt;after&lt;/em&gt; the block containing the&amp;nbsp;transaction. &lt;/p&gt;
+&lt;p&gt;If you are willing to accept a high level of risk, or you trust the party you are transacting with you could opt for a small number of blocks to be added after the block containing your transaction. This has the benefit of increasing the speed of the transaction verification. If the transaction is risky or high-value, you might require a larger number of blocks to be added to the chain before accepting the transaction. This will increase the time required to verify the transaction, but reduce the probability that a longer chain will undo the block containing the transaction in&amp;nbsp;question. &lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Blockchains"></category><category term="Digital Currencies"></category><category term="Distributed Ledger Technology"></category><category term="Distributed Consensus"></category><category term="Sybil"></category></entry><entry><title>Blockchains from the ground up: Part 1</title><link href="https://johnmathews.eu/blockchain-introduction.html" rel="alternate"></link><published>2017-05-25T20:38:00+02:00</published><updated>2017-05-25T20:38:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-05-25:/blockchain-introduction.html</id><summary type="html">&lt;p&gt;Using a scenario that begins with the exchange of apples for oranges, understand the essential concepts and advantages of&amp;nbsp;blockchains.&lt;/p&gt;</summary><content type="html">&lt;h1 id="how-to-maintain-a-reliable-list-across-a-small-network-without-a-central-authority"&gt;How to maintain a reliable list across a small network without a central&amp;nbsp;authority&lt;/h1&gt;
+&lt;p&gt;This is part 1 of an introduction to the key features of a generalised blockchain. I haven&amp;rsquo;t included references to Bitcoin or any particular digital currencies or blockchain implementations. This is because a digital currency is just one application of blockchain&amp;nbsp;technology.&lt;/p&gt;
+&lt;h2 id="create-a-financial-document-that-cannot-be-forged-or-disputed"&gt;Create a financial document that cannot be forged or&amp;nbsp;disputed&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s imagine there is a village somewhere where people still trade by bartering. John has some apples whilst Lizzie has some oranges. John would like an orange, and offers Lizzie an apple in exchange. She accepts, and writes John a&amp;nbsp;receipt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;To: John    &lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange  &lt;/span&gt;
+&lt;span class="x"&gt;Price: 1 Apple  &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So far, so good. The receipt is evidence of the transaction. The next day John wants an orange but doesn&amp;rsquo;t have anything to exchange. He offers to write Lizzie a note saying he owes Lizzie 1 orange (an  &lt;a href="https://en.wikipedia.org/wiki/IOU"&gt;&lt;span class="caps"&gt;IOU&lt;/span&gt;&lt;/a&gt;). They think about this and agree that John should sign the note so that Lizzie can prove that John owes her 1&amp;nbsp;orange.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;To: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange&lt;/span&gt;
+&lt;span class="x"&gt;Signed: John&amp;#39;s signature, Lizzie&amp;#39;s signature&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This &lt;span class="caps"&gt;IOU&lt;/span&gt; is a nice gesture, but it&amp;rsquo;s simple to forge. Lizzie has the only copy of the &lt;span class="caps"&gt;IOU&lt;/span&gt; and once Lizzie has seen Johns signature, she could easily copy it and create more &lt;span class="caps"&gt;IOU&lt;/span&gt;&amp;rsquo;s. She could also change this &lt;span class="caps"&gt;IOU&lt;/span&gt; from 1 orange to 11 oranges (for example) and John couldn&amp;rsquo;t prove what the original amount was. If Lizzie and John disagreed over what was owed it would be impossible to know who was telling the truth. It&amp;rsquo;s one person&amp;rsquo;s word against the&amp;nbsp;other. &lt;/p&gt;
+&lt;p&gt;Lizzie realises this and suggests an improvement - they will find a witness and make 3 copies of the &lt;span class="caps"&gt;IOU&lt;/span&gt;. Each copy will be signed by Lizzie, John and the Witness. Lets call this witness&amp;nbsp;&amp;ldquo;Walter&amp;rdquo;. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234&lt;/span&gt;
+&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;To: Lizzie&lt;/span&gt;
+&lt;span class="x"&gt;What: 1 Orange&lt;/span&gt;
+&lt;span class="x"&gt;Witness: Walter&lt;/span&gt;
+&lt;span class="x"&gt;Signed: &amp;quot;John&amp;#39;s signature&amp;quot;, &amp;quot;Lizzie&amp;#39;s signature&amp;quot;, &amp;quot;Walter&amp;#39;s signature&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a much stronger document and is more difficult to forge. If Lizzie changes the &amp;ldquo;What:&amp;rdquo; to &amp;ldquo;11 Oranges&amp;rdquo;, both John and Walter will have copies of the original with her signature on it. It will be 2 pieces of evidence against Lizzie&amp;rsquo;s 1. Lizzie will be laughed out of court.&amp;nbsp;Hahaha. &lt;/p&gt;
+&lt;p&gt;3 Party transactions work pretty well, and this is how most transactions are recorded today. But there is a weakness: If Lizzie can bribe Walter then the transaction can be falsified! John would rely on Walter to verify his version of the transaction but would be let down by Walters lack of integrity. Lizzie and Walter could change 1 orange to 11 oranges and if Lizzie offered Walter some of the extra oranges this would give them both an incentive to forge the documentation. If Walter liked oranges enough, he might not care that his career as a witness will be&amp;nbsp;ruined. &lt;/p&gt;
+&lt;p&gt;This is a problem for modern financial systems and a great deal of time, money and regulation is devoted to trying to ensure that third parties are trustworthy. &lt;span class="caps"&gt;E.G.&lt;/span&gt; If I buy a car and my bank is in cahoots with the car dealership, I could be defrauded. Reducing this risk to an acceptably low level makes financial services slower and more expensive than they would otherwise need to&amp;nbsp;be. &lt;/p&gt;
+&lt;p&gt;The solution is &lt;a href="https://en.wikipedia.org/wiki/Public-key_cryptography"&gt;public-key infrastructure&lt;/a&gt; (which is introduced in my &lt;a href="https://johnmathews.eu/encryption.html"&gt;previous post&lt;/a&gt;). In this system, each individual generates their own public-private key pair. They keep their private key private and make their public key freely available. A detailed description of public-key cryptography is out of scope for this post, but&amp;nbsp;briefly:&lt;/p&gt;
+&lt;p&gt;A public key is derived from a private key, and this pair together have a set of unique mathematical properties. Either key can be used to encrypt a message but only the other key can be used to decrypt it. You cannot use the same key to encrypt and decrypt a message. If the private key is used to encrypt then anybody can decrypt (because the public key is publicly available) and whilst this is clearly a terrible way to keep a secret it&amp;rsquo;s a great way to verify who encrypted the message, because only one person has the private key. Because of this, using a private key to encrypt a message is effectively creating a digital signature which cannot be forged. (If the public key is used to encrypt a message then only the private key can be used to decrypt it, and this approach is used to transfer secret data&amp;nbsp;securely). &lt;/p&gt;
+&lt;p&gt;Back to the fruit. If Lizzie wants to accept John&amp;rsquo;s &lt;span class="caps"&gt;IOU&lt;/span&gt; she can use public-key cryptography and no-one needs to worry about Walter. There are 3 steps to the&amp;nbsp;transaction.&lt;/p&gt;
+&lt;p&gt;1] Create the &lt;span class="caps"&gt;IOU&lt;/span&gt; stating that John owes Lizzie 1&amp;nbsp;orange.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;Date: 1234 From: John To: Lizzie What: 1 Orange&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;2] John creates a public private key pair and encrypts the &lt;span class="caps"&gt;IOU&lt;/span&gt; using his private key. He adds an unencrypted &amp;ldquo;From&amp;rdquo;&amp;nbsp;line.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John &lt;/span&gt;
+&lt;span class="x"&gt;Date: 1234 To: Lizzie, What: 1 Orange &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3] John makes his public key freely available to anyone who wants&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;This will work because anybody (not just Lizzie) can check that John signed the &lt;span class="caps"&gt;IOU&lt;/span&gt;. The transaction can be verified by looking at the &amp;ldquo;From&amp;rdquo; part of that transaction, noticing that this transaction is supposedly from John and then using John&amp;rsquo;s public key to decrypt the encoded &amp;ldquo;signature&amp;rdquo;&amp;nbsp;line. &lt;/p&gt;
+&lt;p&gt;The signature can only be decrypted using John&amp;rsquo;s public key if his private key was used to encrypt it. Because John is the only person with his private key, that proves the transaction is valid, and Lizzie isn&amp;rsquo;t dishonestly creating a debt for John to&amp;nbsp;pay. &lt;/p&gt;
+&lt;p&gt;Clearly if John discloses his private key (or its stolen) then he will make the system insecure, but this is a problem with John and his security protocols, not with public-key&amp;nbsp;cryptography. &lt;/p&gt;
+&lt;h2 id="create-and-maintain-an-accurate-list-of-transactions"&gt;Create and maintain an accurate list of&amp;nbsp;transactions&lt;/h2&gt;
+&lt;p&gt;So far we&amp;rsquo;ve seen how 1 &lt;span class="caps"&gt;IOU&lt;/span&gt; (for an orange) can be securely created, signed and verified. This process can extended to be used by more people to exchange more fruit.  For&amp;nbsp;example.&lt;/p&gt;
+&lt;p&gt;The original&amp;nbsp;note:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John&lt;/span&gt;
+&lt;span class="x"&gt;Date: 1234, To: Lizzie, What: 1 Orange &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then some additional&amp;nbsp;transactions:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: 2 Apples &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;span class="x"&gt;From: John // Date: 1236, To: Chris, What: 1 Banana &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Chris // Date: 1237, To: Lizzie, What: 2 Bananas &amp;lt;- Signed and encrypted by Chris using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After these 4 transactions, between John, Chris and&amp;nbsp;Lizzie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John owes 1 orange to Lizzie and 1 banana to&amp;nbsp;Chris&lt;/li&gt;
+&lt;li&gt;Lizzie owes 2 apples to&amp;nbsp;John&lt;/li&gt;
+&lt;li&gt;Chris owes 2 bananas to&amp;nbsp;Lizzie.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is confusing, (and ridiculous). It is not possible to know who is the most in debt or who is the most wealthy. Lizzie owes 2 apples, but is owed 2 bananas and 1 apple. Does that mean her fruit business is losing money or making money? We cannot say. To be able to know we need to use the same unit of value for all the fruits. Lets say that an orange is worth 2 apples, and a banana is also worth 2 apples (therefore 1 banana = 1 orange.), also lets invent a currency called &amp;ldquo;coins&amp;rdquo; and say 1 apple is worth 1 coin. The 4 transactions can now be rewritten&amp;nbsp;as: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: John // Date: 1234, To: Lizzie, What: 2 coins &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: 2 coins &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;span class="x"&gt;From: John // Date: 1236, To: Chris, What: 2 coins &amp;lt;- Signed and encrypted by John using his private key&lt;/span&gt;
+&lt;span class="x"&gt;From: Chris // Date: 1237, To: Lizzie, What: 4 coins &amp;lt;- Signed and encrypted by Chris using his private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By going through the list of transactions we can see&amp;nbsp;that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;John owes Lizzie and Chris 2 coins each, and is owed 2 coins from Lizzie. His net amount is&amp;nbsp;-2&lt;/li&gt;
+&lt;li&gt;Lizzie owes John 2 coins but is owed 4 coins from Chris. Her net amount is&amp;nbsp;+2&lt;/li&gt;
+&lt;li&gt;Chris owes Lizzie 4 coins but is owed 2 coins from John. His net amount is&amp;nbsp;-2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So far Lizzie is the only person who appears to have any business&amp;nbsp;skills.&lt;/p&gt;
+&lt;p&gt;What if Lizzie wanted to use the 4 coins that she is owed by Chris to buy something from John? Could she use this system to transfer Chris&amp;rsquo; promise to pay her 4 coins so that Chris would pay John instead? The fact that everyone can be sure that the record of the transactions is accurate and authentic allows a debt to be used as payment. Lizzie&amp;rsquo;s transaction would look like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Lizzie // Date: 1235, To: John, What: ba781... &amp;lt;- Signed and encrypted by Lizzie using her private key&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &amp;ldquo;What&amp;rdquo; section contains a &lt;a href="http://www.movable-type.co.uk/scripts/sha256.html"&gt;hash&lt;/a&gt; of the original transaction (with Chris) that she wants to transfer to John. A hash is the signature for a file or some text and in this case it is the signature for Lizzie&amp;rsquo;s transaction with Chris. The signature is unique to each transaction and identifies which transaction is being used as payment. Because both transactions are signed using Lizzie&amp;rsquo;s private key, it is simple to verify that Lizzie has the right to use this previous transaction where she is owed (or paid) some coins as payment to another&amp;nbsp;person.&lt;/p&gt;
+&lt;p&gt;This shows how public-private key infrastructure can be used to securely record transactions and enable trade between a group of people, - under certain conditions. Blockchains can be used to transfer units of value like in this example, but we could just as easily put selfies or certificates of ownership (for houses, financial instruments, diamonds, etc) inside the &amp;ldquo;What&amp;rdquo; part of the transaction. If we make two other changes - removing the &amp;ldquo;To&amp;rdquo; part of the transaction, and including a hash of the transaction as part of the text which is signed using a private key. If we do this, then a record would&amp;nbsp;be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;From: Chris // Date: 2345, What: &amp;quot;A photo of me&amp;quot; &amp;lt;- Signed and encrypted by Chris using his private key &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This would create a reliable record of what Chris claims he looks like. He can confidently send anyone this record and if they have his public key then they can verify that it is Chris himself who signed it and is asserting that the photo is him. If somebody changed the photo then the data in the transaction would change and the transaction will have a new hash value. The new hash value will not match the hash value contained within the signature, and the text in the signature cannot be changed because it can only be encrypted using Chris&amp;rsquo; private key, which only Chris has. Therefore it will be simple to show that someone other than Chris is trying to change the&amp;nbsp;photo. &lt;/p&gt;
+&lt;p&gt;Another use for public-key cryptography arises if Chris were an employee in a bank, and the &amp;ldquo;What&amp;rdquo; contained documents about a customer the bank is providing financial services for. In this scenario, Chris (representing the bank) is effectively confirming the customer&amp;rsquo;s true identity and documenting the evidence that&amp;rsquo;s been collected to show that the bank knows who their customer really is. If the transaction included a new section called &amp;ldquo;Customer &lt;span class="caps"&gt;ID&lt;/span&gt;&amp;rdquo; (for example) then a database of all customers whose identity checks have been successfully completed can be made. This can be shared with other departments (or banks) easily and immutably. This is the concept behind &lt;span class="caps"&gt;KYC&lt;/span&gt; on a&amp;nbsp;blockchain. &lt;/p&gt;
+&lt;p&gt;Back to our fruit traders: At the moment a participant is allowed to carry a net negative balance. For this system to work in reality, the creation of &amp;ldquo;coins&amp;rdquo; will need to be controlled in order to maintain their value. In the example above, people can freely create &amp;ldquo;coins&amp;rdquo; and can also carry negative amounts of &amp;ldquo;coins&amp;rdquo;. This would result in the value of a &amp;ldquo;coin&amp;rdquo; plummeting. Therefore their creation (and conversion from fruit) must be controlled in a predictable&amp;nbsp;manner.&lt;/p&gt;
+&lt;p&gt;Our examples so far only include 3 people. If there are a lot of people in the network it wouldn&amp;rsquo;t be feasible to insist that everyone is present or online each time a new transaction is added to the list (the chain) of transactions. However if we allow transactions to be added whilst some people are offline we create an opportunity for fraud. The reasons why, and the solution to this and other problems will be described in &lt;a href="https://johnmathews.eu/blockchain-networks.html"&gt;part 2&lt;/a&gt;.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Blockchains"></category><category term="Digital Currencies"></category><category term="Distributed Ledger Technology"></category><category term="Public Key Cryptography"></category></entry><entry><title>Introduction to the Æternity blockchain project</title><link href="https://johnmathews.eu/aeternity.html" rel="alternate"></link><published>2017-05-05T21:04:00+02:00</published><updated>2017-05-05T21:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-05-05:/aeternity.html</id><summary type="html">&lt;p&gt;Æternity is a new blockchain project aiming to facilitate large volumes of smart-contracts which can interface with external data sources. This is accomplished using a decentralised oracle based on prediction&amp;nbsp;markets.&lt;/p&gt;</summary><content type="html">&lt;p&gt;These are my notes on the æternity blockchain project, I&amp;rsquo;m not affiliated with the æternity&amp;nbsp;team.&lt;/p&gt;
+&lt;p&gt;Æternity is a new blockchain project that is pre-launch. The headline goal is to securely facilitate large volumes of smart-contracts which interface with external data sources. This is made possible via a decentralised oracle based on prediction markets. These terms are explained below. The æternity project has proposed several notable technical&amp;nbsp;features: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Smart Contracts in&amp;nbsp;state-channels&lt;/li&gt;
+&lt;li&gt;Oracles and native prediction&amp;nbsp;markets&lt;/li&gt;
+&lt;li&gt;Governance by prediction&amp;nbsp;markets&lt;/li&gt;
+&lt;li&gt;Written in&amp;nbsp;Erlang&lt;/li&gt;
+&lt;li&gt;Different types of&amp;nbsp;node&lt;/li&gt;
+&lt;li&gt;Sharding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="smart-contracts-in-state-channels"&gt;Smart Contracts in&amp;nbsp;state-channels&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A smart contract is a way to execute a contract without an intermediary (middle-man) and without&amp;nbsp;conflict.&lt;/li&gt;
+&lt;li&gt;The smart contract is a protocol which is stored and executed on a blockchain, executing transactions (outputs) based on specific inputs and programmable logic automatically. The logic often mirrors that contained in clauses of a written&amp;nbsp;contract.&lt;/li&gt;
+&lt;li&gt;State channels are payment networks that exchange funds off-chain and periodically settle up accounts with the main blockchain. (The Bitcoin Lightning Network is creating a system for routing Bitcoin payments through state&amp;nbsp;channels.)&lt;/li&gt;
+&lt;li&gt;State channels increase scalability by making groups of transactions independent of each other. This allows them to be processed in&amp;nbsp;parallel.&lt;/li&gt;
+&lt;li&gt;æternity proposes executing smart-contracts in Turing-complete state channels (Turing complete means, colloquially, real-world and general purpose), which should allow greater volumes of transactions, and make the smart contracts more secure and easier to&amp;nbsp;analyse. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is because executing the smart-contracts off-chain makes them private and the code used to execute the smart contract won’t need to be broadcast to the primary blockchain. This should increase processing capacity by allowing contracts to execute in&amp;nbsp;parallel.&lt;/p&gt;
+&lt;p&gt;Disadvantages to the state-channel approach include reduced transparency, as running smart contracts in state channels requires more trust in both the contract creator and the node running&amp;nbsp;it.&lt;/p&gt;
+&lt;h2 id="oracles-and-prediction-markets"&gt;Oracles and prediction&amp;nbsp;markets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The Oracle functionality allows smart-contracts to interact with data outside the æternity blockchain. This is possible by checking on-chain prediction market results and rewarding users who made the correct prediction. Users are rewarded through automated payments and the immediate recording of transactions in the blockchain. This creates incentives to participate in prediction markets, which have  been shown to be&amp;nbsp;effective. &lt;/li&gt;
+&lt;li&gt;On-chain, rather than off-chain allows greater efficiency and&amp;nbsp;integration&lt;/li&gt;
+&lt;li&gt;The prediction market is expected to run using a native (on-chain) consensus procedure. The oracle mechanism is designed to use the same consensus&amp;nbsp;infrastructure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="governance-by-prediction-markets"&gt;Governance by prediction&amp;nbsp;markets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Oracle functionality compliments prediction market&amp;nbsp;functionality.&lt;/li&gt;
+&lt;li&gt;Prediction markets are proposed to implement governance of the æternity blockchain. This is a new&amp;nbsp;approach.&lt;/li&gt;
+&lt;li&gt;The æternity protocol would be governed by user input. A prediction market will exist where changes to features and protocols would result in a higher token&amp;nbsp;value.&lt;/li&gt;
+&lt;li&gt;The incentive to increase the value of a token (Æon) would allow the æternity community to decide efficiently which changes to&amp;nbsp;implement.&lt;/li&gt;
+&lt;li&gt;Low level protocol changes to variables like block times and block capacity could be&amp;nbsp;possible&lt;/li&gt;
+&lt;li&gt;The consensus developed by the prediction market will initially provide input to the development team’s&amp;nbsp;decision-making.&lt;/li&gt;
+&lt;li&gt;Later, a fully autonomous prediction market for governance is expected (a &lt;span class="caps"&gt;DAO&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="written-in-erlang"&gt;Written in&amp;nbsp;Erlang&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Erlang_(programming_language)"&gt;Erlang&lt;/a&gt; is normally used for large-scale systems that manage the allocation of scarce network resources (telecoms, banking, instant&amp;nbsp;messaging)&lt;/li&gt;
+&lt;li&gt;Could make it easier to run a lightning network and process many state-channels in&amp;nbsp;parallel&lt;/li&gt;
+&lt;li&gt;As far as I know, ÆTernity is the first blockchain project to be written in&amp;nbsp;Erlang&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="different-types-of-node"&gt;Different types of&amp;nbsp;node&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The æternity network will contain nodes with different functions. Each type of node will contribute towards the efficient functioning of particular aspects of the&amp;nbsp;network&lt;/li&gt;
+&lt;li&gt;Node types will&amp;nbsp;include&lt;/li&gt;
+&lt;li&gt;Liquidity - Lots of channels and lots of users. Open a channel to issue a contract, for a&amp;nbsp;fee.&lt;/li&gt;
+&lt;li&gt;Exchanges - Trustless exchanges of assets offered by market makers. Profitable to market makers because of transaction&amp;nbsp;fees.&lt;/li&gt;
+&lt;li&gt;Presumably features such as consensus algorithms and prediction markets will also require their own dedicated node types. Users of the node will incur transaction fees to participate, providing an incentive to run a&amp;nbsp;node.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="sharding"&gt;Sharding&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows a greater transaction volume, removing scalability problems that Bitcoin and Ethereum have&amp;nbsp;experienced.&lt;/li&gt;
+&lt;li&gt;Sharding works by splitting the space of possible accounts into subspaces (for example based on the first digit of a numerical&amp;nbsp;address)&lt;/li&gt;
+&lt;li&gt;Each shard gets a set of validators. Each validator validates 1 shard&amp;nbsp;only&lt;/li&gt;
+&lt;li&gt;Contracts and transactions within the same shard work as&amp;nbsp;normal&lt;/li&gt;
+&lt;li&gt;Contracts and transactions across shards require alternative techniques based on &amp;ldquo;transaction&amp;nbsp;receipts&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="æternity"></category><category term="DLT"></category><category term="Digital Currencies"></category><category term="Finance"></category><category term="Blockchains"></category></entry><entry><title>The Æternity ICO: My experience</title><link href="https://johnmathews.eu/aeternity-ico.html" rel="alternate"></link><published>2017-04-30T23:37:00+02:00</published><updated>2017-04-30T23:37:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-04-30:/aeternity-ico.html</id><summary type="html">&lt;p&gt;I participated in phase 1 of the Æternity &lt;span class="caps"&gt;ICO&lt;/span&gt; by converting Sterling to Æons via Ether. I tried several exchanges and chose the quickest, cheapest conversion&amp;nbsp;method.&lt;/p&gt;</summary><content type="html">&lt;p&gt;On April 3rd, I happened to be Googling digital currencies and blockchain innovations when I came across the &lt;a href="http://www.Æternity.com"&gt;Æternity website&lt;/a&gt; and skimmed their &lt;a href="https://blockchain.Æternity.com/%C3%A6ternity-blockchain-whitepaper.pdf"&gt;white paper&lt;/a&gt;. The project is ambitious, like many crypto projects, but seems well organised. The team is well known in the space. There is a clear plan to develop the project and create a blockchain technology that, if successful, could bring. A step change in the use of digital currencies for high volume low value transactions, and the viable implementation of smart&amp;nbsp;contracts. &lt;/p&gt;
+&lt;h2 id="the-ico"&gt;The &lt;span class="caps"&gt;ICO&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;To my surprise, I realised that phase 1 of the Initial Coin Offering (&lt;span class="caps"&gt;ICO&lt;/span&gt;) was about to begin, and if I wanted I could acquire the rights to Æons (the Æternity token). During phase 1, 1 &lt;span class="caps"&gt;ETH&lt;/span&gt; would purchase 1100 Æons. In early April 2017, 1 &lt;span class="caps"&gt;ETH&lt;/span&gt; was worth about&amp;nbsp;£38.&lt;/p&gt;
+&lt;p&gt;I was willing to make a small and risky investment, but in order to do that I would need to work out how to convert my conventional Sterling into Bitcoin or Ether, in order to then purchase Æons. The Æternity website made it super easy to set up an Etherium wallet, and to use that wallet to invest in the Æternity project, but buying Ether immediately and putting it in my new wallet proved to be&amp;nbsp;challenging. &lt;/p&gt;
+&lt;p&gt;Helpfully, the Æternity project had partnered with the Swiss firm &amp;lsquo;Bitcoin Suisse &lt;span class="caps"&gt;AG&lt;/span&gt;&amp;rsquo; who would directly convert to Æons from fiat currencies, cutting out the need to purchase an intermediate digital currency. However once I&amp;rsquo;d completed the identity checks and signed, scanned and sent the multiple forms, I realised I&amp;rsquo;d need to pay a &amp;lsquo;signing on&amp;rsquo; fee of about £70. To Bitcoin Suisse&amp;rsquo; credit though, they did manually approve my identification and contract within an&amp;nbsp;hour. &lt;/p&gt;
+&lt;p&gt;At the time, I thought the project would still be a good investment even with this extra cost, but I determined to exhaust all other possibilities first. I&amp;rsquo;m familiar with cryptocurrency wallets and public/private keys due to some &lt;a href="https://johnmathews.eu/encryption.html"&gt;previous research&lt;/a&gt;, so I was able to immediately begin trying to set up an account with an&amp;nbsp;exchange.&lt;/p&gt;
+&lt;h2 id="exchanges"&gt;Exchanges&lt;/h2&gt;
+&lt;p&gt;What followed was a fairly chaotic few hours where I would sign-up to several exchanges and see how close I could get to purchasing either Bitcoin or Ether immediately, before realising I either had to wait 48 hours for security clearances, or provide additional details, or wait for manual verification of my scanned identity&amp;nbsp;documents. &lt;/p&gt;
+&lt;p&gt;By the end of the evening I had a rough idea of which usernames, passwords and (small) sterling amounts had been submitted to each&amp;nbsp;exchange. &lt;/p&gt;
+&lt;p&gt;After a couple of false starts, I used a combination of the &lt;a href="https://www.coinbase.com"&gt;Coinbase&lt;/a&gt; desktop website and their iOS app to purchase &lt;span class="caps"&gt;ETH&lt;/span&gt; up to their weekly limit, and then used multiple cards to increase my holding of &lt;span class="caps"&gt;ETH&lt;/span&gt;. The Coinbase app would bug out when processing a debit card payment and verifying the card details with the bank. This had initially led me to try other exchanges, where I would hit other roadblocks and delays. &lt;span class="caps"&gt;CEX&lt;/span&gt;.&lt;span class="caps"&gt;IO&lt;/span&gt;, for example, doesn&amp;rsquo;t allow you to make trades in the first 48 hours (&lt;span class="caps"&gt;IIRC&lt;/span&gt;) after registering, which is reasonable enough unless you&amp;rsquo;re in a&amp;nbsp;hurry. &lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Once I had a few Ether to my name, the rest of the process was simple. I was delighted to visit &lt;a href="https://etherscan.io/"&gt;Etherscan.io&lt;/a&gt; and view the details of my Etherium - Æternity transactions almost immediately. This gave me a lot of confidence that I hadn&amp;rsquo;t sent money into a void, and was a nice contrast to my (successful) experience buying bitcoin in early&amp;nbsp;2014. &lt;/p&gt;
+&lt;p&gt;Finally, the simple tool to check your Æ balance at the bottom of Eternity&amp;rsquo;s &lt;a href="https://wallet.Æternity.com"&gt;contribution page&lt;/a&gt; assured me that I&amp;rsquo;d made my investment successfully. To me, the Æternity project stands as an exciting endeavor seeking to solve some widespread and highly valuable technical challenges, I hope they&amp;rsquo;re successful and wish them&amp;nbsp;well.    &lt;/p&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Fintech"></category><category term="Finance"></category><category term="Digital Currencies"></category><category term="Blockchains"></category><category term="DLT"></category><category term="Æternity"></category><category term="ICO"></category></entry><entry><title>Encryption</title><link href="https://johnmathews.eu/encryption.html" rel="alternate"></link><published>2016-08-30T23:04:00+02:00</published><updated>2016-08-30T23:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-30:/encryption.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Blockchains use Elliptical Curve Cryptography (&lt;span class="caps"&gt;ECC&lt;/span&gt;) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers &lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers back into the original&amp;nbsp;message.&lt;/p&gt;
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;The history of Cryptography can be split into classical and modern eras. Modern cryptography began in 1977 with the introduction of the &lt;span class="caps"&gt;RSA&lt;/span&gt; and Diffie-Hellman algorithms.  Until then, Cryptography required using a single key (the secret code) to encrypt and decrypt the message. This was transferred from sender to receiver secretly, but not cryptographically. In classical cryptography, the code is a &lt;em&gt;shared&lt;/em&gt;&amp;nbsp;secret.&lt;/p&gt;
+&lt;p&gt;The modern era removed the requirement for a shared secret and instead used number theory as a basis for quantifying the strength of an encryption method. The strength of a modern cryptographic technique is quantifiable and provable by reference to number theory, rather than a users ability to transport or transfer a secret&amp;nbsp;code.&lt;/p&gt;
+&lt;p&gt;Modern cryptography is defined by Public Key Cryptographic systems. They use one key (code) for encryption and another for decryption. The encryption key can be made public without any risk of the message being decrypted, and is therefore known as the public key. The key used to decrypt data is the private key, and must not be revealed. If a message is encrypted with the public key it can only be decrypted with the private&amp;nbsp;key.&lt;/p&gt;
+&lt;p&gt;Public Key Cryptographic (&lt;span class="caps"&gt;PKC&lt;/span&gt;) systems use algorithms that are easy to process in one direction but difficult to reverse, which are known as mathematical trap-door functions. A simple example of a trap-door function is the product of two prime numbers. If two random prime numbers are chosen, it is trivial to find their product. However if only the product of the two numbers is known, it is relatively difficult to find either of the factors used to create the number (this is factorisation). This was first noticed in 1874, when &lt;a href="https://en.wikipedia.org/wiki/William_Stanley_Jevons#Jevons.27_number"&gt;Jevons&lt;/a&gt;&amp;nbsp;remarked:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Can the reader say what two numbers multiplied together will produce the number 8,616,460,799? I think it unlikely that anyone but myself will ever&amp;nbsp;know.&amp;rdquo;*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This simple problem shows that finding the product of two (secret) prime numbers is computationally simple, but factorising the result is not. This type of problem is a key feature of modern cryptography. Factoring prime numbers is a super famous mathematical problem, it was studied by &lt;a href="https://en.wikipedia.org/wiki/Eratosthenes"&gt;Eratosthenes&lt;/a&gt; &lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt; in the 3rd century &lt;span class="caps"&gt;BC&lt;/span&gt; and more recently the &lt;a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; Factoring Challenge&lt;/a&gt; has intended to track state-of-the-art factorisation techniques by issues cash prizes for the factorisation of products of large&amp;nbsp;primes.&lt;/p&gt;
+&lt;p&gt;Generally, the bigger the difference in difficulty between executing the function and reversing it, the better the cryptographic&amp;nbsp;technique.&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;RSA&lt;/span&gt; algorithm below uses factorisation as the foundation of its security, but factorisation is not the hardest problem to solve relative to the size of the keys required. Algorithms have been developed to factor the products of large prime numbers, and are much more efficient than randomly guessing possible factors. The greater the size of the primes being factored, the more efficient these algorithms become, and therefore the difference in difficulty between executing the function (multiplying two large primes) and reversing it (factorisation) becomes smaller as the size of the cryptographic key length increases. This is a problem because as public key cryptography becomes more commonly used the resources available to factor products of primes increases, and consequently larger keys are&amp;nbsp;required.&lt;/p&gt;
+&lt;p&gt;Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is&amp;nbsp;required.&lt;/p&gt;
+&lt;h2 id="overview-of-the-rsa-algorithm"&gt;Overview of the &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;algorithm&lt;/h2&gt;
+&lt;p&gt;Named after its founders (&lt;a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest"&gt;Ron Rivest&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir"&gt;Adi Shamir&lt;/a&gt;, and &lt;a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard"&gt;Leonard Adleman&lt;/a&gt;), &lt;span class="caps"&gt;RSA&lt;/span&gt; was one of the first public-key encryption algorithms and is still widely&amp;nbsp;used.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number &lt;span class="math"&gt;\(n\)&lt;/span&gt; has been defined, if a number greater than &lt;span class="math"&gt;\(n\)&lt;/span&gt; is created the result simply loops around to 0 and begins counting from 0 again. i.e. if &lt;span class="math"&gt;\(n = 10\)&lt;/span&gt;, then &lt;span class="math"&gt;\(7 + 5 = 12 - 10 = 2\)&lt;/span&gt;. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. &lt;span class="math"&gt;\(12 / 10 = 1\)&lt;/span&gt; with &lt;span class="math"&gt;\(2\)&lt;/span&gt;&amp;nbsp;remaining.&lt;/p&gt;
+&lt;h2 id="generation-of-a-pair-of-rsa-keys"&gt;Generation of a pair of &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;keys:&lt;/h2&gt;
+&lt;h3 id="1-generate-the-rsa-module"&gt;1. Generate the &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;module&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Select two large random prime numbers, &lt;span class="math"&gt;\(p\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\)&lt;/span&gt;. They need to be random because anyone who knows or guesses them will be able to decrypt the&amp;nbsp;encryption.&lt;/li&gt;
+&lt;li&gt;Calculate &lt;span class="math"&gt;\(n =&amp;nbsp;pq\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-find-derived-number-e"&gt;2. Find derived number&amp;nbsp;(e)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;e&lt;/em&gt; must be greater than 1 and less than &lt;span class="math"&gt;\(( p - 1)( q - 1)\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;There must be no common factor for e and &lt;span class="math"&gt;\(( p - 1)( q - 1)\)&lt;/span&gt; except for 1. &lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-form-the-public-key"&gt;3. Form the public&amp;nbsp;key&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The pair of numbers &lt;span class="math"&gt;\((n, e)\)&lt;/span&gt; form the public key and can be made&amp;nbsp;public.&lt;/li&gt;
+&lt;li&gt;Even though &lt;span class="math"&gt;\(n\)&lt;/span&gt; is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of &lt;span class="caps"&gt;RSA&lt;/span&gt; rests entirely on the difficulty of factoring &lt;span class="math"&gt;\(n\)&lt;/span&gt; into its two component prime&amp;nbsp;numbers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-generate-the-private-key-d"&gt;4. Generate the private key&amp;nbsp;(d)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The private key is generated from using &lt;span class="math"&gt;\(p\)&lt;/span&gt;, &lt;span class="math"&gt;\(q\)&lt;/span&gt; and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer &lt;span class="math"&gt;\(d\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(d\)&lt;/span&gt; is the inverse of &lt;span class="math"&gt;\(e\)&lt;/span&gt; modulo &lt;span class="math"&gt;\(( p - 1)( q - 1 )\)&lt;/span&gt;. This means that &lt;span class="math"&gt;\(d\)&lt;/span&gt; is the number less than &lt;span class="math"&gt;\(( p - 1 ) ( q - 1 )\)&lt;/span&gt; such that when it is multiplied by e, it is equal to &lt;span class="math"&gt;\(1\)&lt;/span&gt; modulo &lt;span class="math"&gt;\(( p - 1 ) ( q - 1 )\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="rsa-example"&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;example:&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; does not directly operate on strings as bits, it operates on numbers modulo (less than) &lt;span class="math"&gt;\(n\)&lt;/span&gt;. and it is necessary to represent plain text as a series of numbers less than &lt;span class="math"&gt;\(n\)&lt;/span&gt;. The dominant encoding on the internet is &lt;a href="https://en.wikipedia.org/wiki/UTF-8"&gt;&lt;span class="caps"&gt;UTF&lt;/span&gt;-8&lt;/a&gt;, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &amp;ldquo;&lt;span class="caps"&gt;HELLO&lt;/span&gt;&amp;rdquo; would become &amp;ldquo;&lt;span class="math"&gt;\(72, 69, 76, 76, 79\)&lt;/span&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;The maximum number &lt;span class="math"&gt;\(n\)&lt;/span&gt; needs to be the product of the two prime numbers &lt;span class="math"&gt;\(p\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\)&lt;/span&gt;. For this example choose &lt;span class="math"&gt;\(p = 7\)&lt;/span&gt; and &lt;span class="math"&gt;\(q = 13\)&lt;/span&gt;, so &lt;span class="math"&gt;\(n  = 91\)&lt;/span&gt;  &lt;sup id="fnref:5"&gt;&lt;a class="footnote-ref" href="#fn:5"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The public key component &lt;em&gt;e&lt;/em&gt; can be any number we choose,  as long as there is no number other than 1 which is a common factor of &lt;em&gt;e&lt;/em&gt; and &lt;span class="math"&gt;\(( p - 1 ) ( q - 1 )\)&lt;/span&gt;. In our example, this requires that there be no common factor between 72 and e other than 1, so let &lt;em&gt;e&lt;/em&gt; &lt;span class="math"&gt;\(= 5\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime&amp;nbsp;numbers.&lt;/p&gt;
+&lt;p&gt;Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key &lt;span class="math"&gt;\(d\)&lt;/span&gt;, which is&amp;nbsp;29.&lt;/p&gt;
+&lt;p&gt;Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional &lt;span class="caps"&gt;RSA&lt;/span&gt;&amp;nbsp;system.&lt;/p&gt;
+&lt;h3 id="encoding"&gt;Encoding&lt;/h3&gt;
+&lt;p&gt;To encode a letter H in a message (&amp;lsquo;H&amp;rsquo; is &lt;span class="math"&gt;\(72\)&lt;/span&gt; in &lt;span class="caps"&gt;UTF&lt;/span&gt;-8), we need to multiply it by itself &lt;span class="math"&gt;\(e\)&lt;/span&gt; times (&lt;span class="math"&gt;\(e = 5\)&lt;/span&gt;), remembering to wrap around each time we pass our maximum value of &lt;span class="math"&gt;\(n = 91\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(72 \times 72 = 5184, 5184 / 91 = 56\)&lt;/span&gt; with &lt;span class="math"&gt;\(88\)&lt;/span&gt; remaining, (i.e. &lt;span class="math"&gt;\(5184 = 91 \times 56 + 88\)&lt;/span&gt;). Therefore:
+&lt;span class="math"&gt;\(72 \times 72 = 5184 = 88\)&lt;/span&gt;
+&lt;span class="math"&gt;\(88 \times 72 = 6336 = 57\)&lt;/span&gt;
+&lt;span class="math"&gt;\(57 \times 72 = 4104 = 9\)&lt;/span&gt;
+&lt;span class="math"&gt;\(9 \times 72 = 648 =&amp;nbsp;11\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Therefore the encrypted value of &amp;ldquo;H&amp;rdquo; is &amp;ldquo;&lt;span class="math"&gt;\(11\)&lt;/span&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Using the method for each character in the message &amp;ldquo;&lt;span class="caps"&gt;HELLO&lt;/span&gt;&amp;rdquo; results in the encoded message &amp;ldquo;\&lt;span class="math"&gt;\(11,62,20,20,53\\)&lt;/span&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;To decrypt the message, we take each number and multiply it by itself &lt;span class="math"&gt;\(d\)&lt;/span&gt; times, (&lt;span class="math"&gt;\(d=29\)&lt;/span&gt;) wrapping around each time we pass &lt;span class="math"&gt;\(91\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(11 \times 11 = 121 = 30\)&lt;/span&gt;
+&lt;span class="math"&gt;\(30 \times 11 = 330 = 57\)&lt;/span&gt;
+&amp;hellip;
+&lt;span class="math"&gt;\(57 \times 11 = 627 = 81\)&lt;/span&gt;
+&lt;span class="math"&gt;\(81 \times 11 = 891 =&amp;nbsp;72\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And we&amp;rsquo;re back to our original&amp;nbsp;encoding.&lt;/p&gt;
+&lt;h2 id="files"&gt;Files&lt;/h2&gt;
+&lt;p&gt;The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded &lt;a href="https://johnmathews.eu/RSA-Example.xlsx"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A simple python script to encrypt and decrypt a message is &lt;a href="https://johnmathews.eu/AES_Example.py"&gt;here&lt;/a&gt;. It uses the &lt;span class="caps"&gt;AES&lt;/span&gt; encryption&amp;nbsp;method.&lt;/p&gt;
+&lt;h3 id="footnotes"&gt;Footnotes&lt;/h3&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;I used the explanations &lt;a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm"&gt;here&lt;/a&gt; and &lt;a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/"&gt;here&lt;/a&gt; a lot.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;A simple example is &lt;span class="math"&gt;\(A=1, B=2\)&lt;/span&gt; etc&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Eratosthenes invented his famous &lt;a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"&gt;sieving algorithm&lt;/a&gt; which finds all the primes up to a given limit.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;If this is the case then e and ( p - 1) ( q - 1 ) are called &amp;ldquo;coprime&amp;rdquo;&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I&amp;rsquo;ve used the same numbers in the following example as in the tutorials &lt;a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm"&gt;here&lt;/a&gt; and &lt;a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/"&gt;here&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Encryption"></category><category term="RSA"></category><category term="DLT"></category><category term="Blockchains"></category><category term="Bitcoin"></category><category term="Digital Currencies"></category><category term="Public Key Cryptography"></category></entry><entry><title>Digital currencies: the basics</title><link href="https://johnmathews.eu/digital-currencies-the-basics.html" rel="alternate"></link><published>2016-08-19T21:02:00+02:00</published><updated>2016-08-19T21:02:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-19:/digital-currencies-the-basics.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Digital currencies are often discussed in the context of finance, technology and economics. The Blockchain - the technology which applications like Bitcoin are built on - is significant because it removes the need for trust or an intermediary between unrelated parties transacting with each other. So far, the most influential and famous digital currency is&amp;nbsp;Bitcoin.&lt;/p&gt;
+&lt;p&gt;This post is intended to introduce the basic concepts of digital currencies and the problems a distributed ledger system needs to&amp;nbsp;overcome.&lt;/p&gt;
+&lt;h2 id="what-is-a-digital-currency"&gt;What is a digital&amp;nbsp;currency?&lt;/h2&gt;
+&lt;p&gt;A digital currency is an internet based medium of exchange. Units of digital currency are not printed, are not physical, and represent nothing. A unit of currency is produced by running algorithms to solve complex mathematical problems. When a solution is found, a unit of currency (for example, 1 Bitcoin) is&amp;nbsp;generated.&lt;/p&gt;
+&lt;h2 id="if-the-currency-represents-nothing-why-is-it-valuable"&gt;If the currency represents nothing, why is it&amp;nbsp;valuable?&lt;/h2&gt;
+&lt;p&gt;Because people believe that in future, other people will believe it does, and because people are willing to trade real goods and services in exchange for&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;This is the same as for dollars, sterling and euros (fiat currencies) which also don&amp;rsquo;t represent anything physical. (Although these examples are  supported by laws or&amp;nbsp;regulation).&lt;/p&gt;
+&lt;p&gt;In the past, creating a new currency without the support of government hasn&amp;rsquo;t been practical&amp;nbsp;because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A central bank was required to control the physical creation of new currency (otherwise people would create counterfeit currency, decreasing scarcity and moving its value towards&amp;nbsp;zero)&lt;/li&gt;
+&lt;li&gt;An intermediary (a bank) was required for all large or remote transactions, to make sure that the amount of money each party owns is correctly recorded and updated in a ledger (preventing double spending of&amp;nbsp;funds)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The technological breakthrough was preventing double spending without requiring an intermediary. This is made possible by using cryptographic techniques developed over the last few decades, and cheap, powerful computers which have only recently become&amp;nbsp;available.&lt;/p&gt;
+&lt;h2 id="central-and-distributed-ledgers"&gt;Central and distributed&amp;nbsp;ledgers&lt;/h2&gt;
+&lt;p&gt;With conventional currencies everyone&amp;rsquo;s balance and transactions are recorded in one central ledger (a list showing how much money each account has) and each account holder only has access to their own balance and transactions. With digital currencies, a copy of the entire ledger (every transaction ever made by everyone) is held on each computer (or node), and anyone can see everyone&amp;rsquo;s&amp;nbsp;transactions.&lt;/p&gt;
+&lt;p&gt;Conventionally, if two parties wish to make a remote transaction then they need a bank to be the intermediary. The bank mediates by updating the central ledger to record the change in each parties funds as a result of the transaction. This is how one party knows if the counter-party is able to pay, and how payment is confirmed. If there is only one copy of the ledger, maintained by the bank, then the bank must be involved in every transaction between its account holders. This need for an intermediary increases the complexity and cost of doing&amp;nbsp;business.&lt;/p&gt;
+&lt;h2 id="sending-money"&gt;Sending&amp;nbsp;money&lt;/h2&gt;
+&lt;p&gt;To send money, a message is broadcast to the network that the amount in your account should decrease and the amount in another account should increase. Each computer in the network (a node) which receives this message will check its authenticity, make the changes, and pass the message along to other&amp;nbsp;nodes.&lt;/p&gt;
+&lt;h2 id="what-problems-does-blockchain-solve"&gt;What problems does blockchain&amp;nbsp;solve?&lt;/h2&gt;
+&lt;p&gt;For a transaction to be accepted and entered into the distributed ledger, its authenticity needs to be verified. Because the ledger is distributed, everyone can see everyone else&amp;rsquo;s transactions. Therefore user authentication and transaction authorisation needs to be possible without compromising a user&amp;rsquo;s ability to send secure payments in&amp;nbsp;future.&lt;/p&gt;
+&lt;p&gt;There is also the problem of double spending - because the currency is neither physical, printed or representative of anything, how do you prevent a user from spending their currency more than once, or simply creating as much new currency as they&amp;nbsp;want?&lt;/p&gt;
+&lt;p&gt;Another problem is the addition of new transactions to the ledger from many unrelated users. If each party has their own copy of the ledger, updating (or changing) it as they want, how would the ledgers completeness and accuracy be assured? How would you update your ledger to take account of transactions between third parties, and how would you know the order in which they occurred?&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; The blockchain is remarkable because it is the first technology to solve all of these problems. Future posts will consider each of these problems are&amp;nbsp;overcome.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;This is the Byzantine Generals problem, which is nicely described in the introduction of 
+&lt;a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf"&gt;this paper&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Technical/Cryptocurrencies"></category><category term="Bitcoin"></category><category term="Cryptocurrencies"></category><category term="Cryptography"></category><category term="Digital Currencies"></category><category term="Finance"></category><category term="Fintech"></category></entry></feed>
