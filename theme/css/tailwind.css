@@ -1,5 +1,4 @@
 @tailwind base;
-@tailwind components;
 
 
 /* search box results*/
@@ -85,10 +84,29 @@
 	visibility: hidden;
 }
 
+
+/* code and quotes */
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 pr-4 text-gray-600 dark:text-gray-200;
+}
+
+.markdown code {
+  @apply font-mono text-base p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
+}
+
+.markdown pre {
+  @apply rounded p-4;
+}
+
+/* .markdown pre code { */
+/*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
+/* } */
+
 /* output_html */
 .markdown .output_html {
 	overflow-x: scroll;
-  @apply dark:bg-gray-100 dark:text-gray-900 bg-white dark:bg-black;
+  @apply dark:text-gray-900;
+	@apply bg-white dark:bg-gray-800;
 }
 
 .markdown .highlight hl-ipython3{
@@ -107,8 +125,19 @@
   @apply dark:bg-black dark:text-gray-200 -mr-40;
 }
 
-.markdown .output_stdout pre {
-  @apply dark:text-gray-700;
+/* png images must have light bg cos tick marks are dark */
+.markdown .output_png.output_subarea {
+	@apply dark:bg-gray-100;
+}
+
+
+/* matplotlib images */
+.markdown .output_wrapper img[O]{
+	@apply dark:bg-gray-200;
+}
+/* matplotlib images overflow without making entire article scroll */
+.markdown .output_wrapper {
+	overflow-x: scroll;
 }
 
 /* Additional vertical padding used by kbd tag. */
@@ -199,23 +228,6 @@
   @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
 }
 
-
-/* code and quotes */
-.markdown blockquote {
-  @apply border-l-4 border-gray-300 pl-4 pr-4 text-gray-600 dark:text-gray-200;
-}
-
-.markdown code {
-  @apply font-mono text-base p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
-}
-
-.markdown pre {
-  @apply bg-gray-100 rounded p-4;
-}
-
-/* .markdown pre code { */
-/*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
-/* } */
 
 .markdown kbd {
   @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
