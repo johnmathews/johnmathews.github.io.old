@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Civil Engineering</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/civil-engineering.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2016-10-02T00:06:00+02:00</updated><entry><title>Silos: Introduction to my doctorate research</title><link href="https://johnmathews.eu/silos.html" rel="alternate"></link><published>2016-10-02T00:06:00+02:00</published><updated>2016-10-02T00:06:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-10-02:/silos.html</id><summary type="html">&lt;p&gt;In this post, I want to introduce my doctorate research without assuming any engineering&amp;nbsp;knowledge.&lt;/p&gt;</summary><content type="html">&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Civil Engineering</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/civil-engineering.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2016-10-02T00:06:00+02:00</updated><entry><title>Silos: Introduction to my doctorate research</title><link href="https://johnmathews.eu/silos.html" rel="alternate"/><published>2016-10-02T00:06:00+02:00</published><updated>2016-10-02T00:06:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-10-02:/silos.html</id><summary type="html">&lt;p&gt;In this post, I want to introduce my doctorate research without assuming any engineering&amp;nbsp;knowledge.&lt;/p&gt;</summary><content type="html">&lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;p&gt;From Spring 2010 until the Autumn of 2013, I was a PhD candidate living
 in Vienna, Austria and working at the University of Natural Resources
 and Life Sciences. Before working in Vienna, I completed my Masters
-degree in Civil and Environmental Engineering at the University of&amp;nbsp;Edinburgh.&lt;/p&gt;
+degree in Civil and Environmental Engineering at the University of Edinburgh.&lt;/p&gt;
 &lt;p&gt;My research quantified the effects of changing the amount of gravity
-acting on granular materials as they poured out of a&amp;nbsp;silo.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="4 silos" src="https://johnmathews.eu/images/silos1/4_silos.jpeg"&gt;
-&lt;img alt="granular materials" src="https://johnmathews.eu/images/silos1/granular_materials.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;My PhD thesis and the short presentation I used when I defended&amp;nbsp;it.&lt;/p&gt;
+acting on granular materials as they poured out of a silo.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="4 silos" src="https://johnmathews.eu/images/silos1/4_silos.jpeg"/&gt;
+&lt;img alt="granular materials" src="https://johnmathews.eu/images/silos1/granular_materials.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;My PhD thesis and the short presentation I used when I defended it.&lt;/p&gt;
 &lt;p&gt;Granular materials are a broard class of materials that are
 encountered everyday - salt, pills, breakfast cereal, sand, rice, soil,
 landslides, salt are all granular materials. They are ubiquitous and occur in
-many different sizes and&amp;nbsp;varieties.&lt;/p&gt;
+many different sizes and varieties.&lt;/p&gt;
 &lt;p&gt;Silos are a common type of container for storing granular materials. You
 pour the granular material in from the top, store it for a while, and
-then dispense the material in controlled quantities from the&amp;nbsp;bottom.&lt;/p&gt;
-&lt;h2 id="research-focus"&gt;Research&amp;nbsp;focus&lt;/h2&gt;
+then dispense the material in controlled quantities from the bottom.&lt;/p&gt;
+&lt;h2 id="research-focus"&gt;Research focus&lt;/h2&gt;
 &lt;p&gt;My research focussed on quantifying how changes in gravity affected the
 material contained inside a silo, particularly whilst the silo was being
 emptied. This is pertinent because engineers and scientists do not yet
 have a scientific understanding of how granular materials behave. Whilst
-gravity clearly affects a granular materials, we cannot say exactly&amp;nbsp;how.&lt;/p&gt;
-&lt;p&gt;This means we can&amp;rsquo;t use analytical methods to quantify the physics that
+gravity clearly affects a granular materials, we cannot say exactly how.&lt;/p&gt;
+&lt;p&gt;This means we can’t use analytical methods to quantify the physics that
 occur in a real system. Instead we use empirical methods
 (approximations, guesses, rules-of-thumb, and knowledge of what worked
-in previous similar situations). This isn&amp;rsquo;t necessarily bad, but it is
-less efficient and less reliable than an analytical&amp;nbsp;approach.&lt;/p&gt;
-&lt;h2 id="research-techniques"&gt;Research&amp;nbsp;techniques&lt;/h2&gt;
-&lt;h3 id="physical-modelling"&gt;Physical&amp;nbsp;modelling&lt;/h3&gt;
+in previous similar situations). This isn’t necessarily bad, but it is
+less efficient and less reliable than an analytical approach.&lt;/p&gt;
+&lt;h2 id="research-techniques"&gt;Research techniques&lt;/h2&gt;
+&lt;h3 id="physical-modelling"&gt;Physical modelling&lt;/h3&gt;
 &lt;p&gt;I built a small model silo (30cm tall) and put it into quite a large centrifuge (3 metre diameter). By rotating the model silo around the centre of the centrifuge at a constant speed I could simulate a higher gravity. I added high-speed cameras, pressure sensors and weighing
-scales so that I could measure how the material was moving once I opened the silo outlet and the silo began to empty. Photos of the experimental model I built can be seen&amp;nbsp;below. &lt;/p&gt;
-&lt;h3 id="numerical-modelling"&gt;Numerical&amp;nbsp;modelling&lt;/h3&gt;
+scales so that I could measure how the material was moving once I opened the silo outlet and the silo began to empty. Photos of the experimental model I built can be seen below. &lt;/p&gt;
+&lt;h3 id="numerical-modelling"&gt;Numerical modelling&lt;/h3&gt;
 &lt;p&gt;I also programmed a computer model (using the commercial &lt;span class="caps"&gt;PFC&lt;/span&gt; 3D software
 and working in the &lt;span class="caps"&gt;FISH&lt;/span&gt; scripting language) to simulate and investigate
-if the same behaviours could be observed numerically as&amp;nbsp;physically.&lt;/p&gt;
+if the same behaviours could be observed numerically as physically.&lt;/p&gt;
 &lt;p&gt;The class of computer model I used is known as &lt;span class="caps"&gt;DEM&lt;/span&gt; (Discrete Element
 Modelling). These models work by considering every grain of material individually, usually as a
 sphere. If one sphere overlaps with another (i.e. the distance between
 the two particle centres is less than the sum of their radiuses) then a
 force proportional to the overlap size repels the two spheres away from
-each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over &amp;ldquo;continuum&amp;rdquo; based techniques that model groups of grains as if they were all just one big particle with
-unusual properties. &lt;span class="caps"&gt;DEM&lt;/span&gt; has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, &lt;span class="caps"&gt;DEM&lt;/span&gt; will only be used for theoretical research and niche&amp;nbsp;applications.&lt;/p&gt;
+each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over “continuum” based techniques that model groups of grains as if they were all just one big particle with
+unusual properties. &lt;span class="caps"&gt;DEM&lt;/span&gt; has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, &lt;span class="caps"&gt;DEM&lt;/span&gt; will only be used for theoretical research and niche applications.&lt;/p&gt;
 &lt;h2 id="results"&gt;Results&lt;/h2&gt;
-&lt;p&gt;When gravity increases by a factor of &lt;span class="math"&gt;\(x\)&lt;/span&gt;, both the discharge rate and local velocities within the silo increase by  &lt;span class="math"&gt;\(\sqrt(x)\)&lt;/span&gt;&amp;nbsp;.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s good to know if you&amp;rsquo;re planning on storing stuff on the moon, but it&amp;rsquo;s also a useful step towards explaining exactly why bulk granular materials behave the way they&amp;nbsp;do.&lt;/p&gt;
-&lt;h2 id="more-information"&gt;More&amp;nbsp;Information&lt;/h2&gt;
+&lt;p&gt;When gravity increases by a factor of &lt;span class="math"&gt;\(x\)&lt;/span&gt;, both the discharge rate and local velocities within the silo increase by  &lt;span class="math"&gt;\(\sqrt(x)\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;That’s good to know if you’re planning on storing stuff on the moon, but it’s also a useful step towards explaining exactly why bulk granular materials behave the way they do.&lt;/p&gt;
+&lt;h2 id="more-information"&gt;More Information&lt;/h2&gt;
 &lt;p&gt;An overview of my research, my doctorate thesis and published papers can
 be downloaded below. PDFs containing 3D models and movies require flash
-to render, and Adobe Reader Desktop must be used in order to view&amp;nbsp;them.&lt;/p&gt;
+to render, and Adobe Reader Desktop must be used in order to view them.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews_J_2013_thesis.pdf"&gt;PhD Thesis&amp;nbsp;(2013)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews-Wu_2016_Model-tests-of-silo-discharge-in-a-geotechnical-centrifuge.pdf"&gt;Modeling silo discharge in a centrifuge (Powder&amp;nbsp;Technology)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews-etal_2013_Experimental-investigation-of-flow-and-segregation-behaviour-of-bulk-solids-in-silos-under-high-gravity-conditions.pdf"&gt;Experimental investigation of flow and segregation behaviour of bulk solids in silos under high gravity conditions (Particles 2013 conference&amp;nbsp;proceedings)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/Cabrera-et-al.pdf"&gt;Centrifugal modelling of granular flows (Eurofuge conference&amp;nbsp;proceedings)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews_J_2013_Defence_presentation.pdf"&gt;Overview of research (PhD defence,&amp;nbsp;2013)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews_J_2013_thesis.pdf"&gt;PhD Thesis (2013)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews-Wu_2016_Model-tests-of-silo-discharge-in-a-geotechnical-centrifuge.pdf"&gt;Modeling silo discharge in a centrifuge (Powder Technology)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews-etal_2013_Experimental-investigation-of-flow-and-segregation-behaviour-of-bulk-solids-in-silos-under-high-gravity-conditions.pdf"&gt;Experimental investigation of flow and segregation behaviour of bulk solids in silos under high gravity conditions (Particles 2013 conference proceedings)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Cabrera-et-al.pdf"&gt;Centrifugal modelling of granular flows (Eurofuge conference proceedings)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews_J_2013_Defence_presentation.pdf"&gt;Overview of research (PhD defence, 2013)&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="Model silo and camera" src="https://johnmathews.eu/images/silos2/model_silo_camera.jpeg"&gt;
-&lt;img alt="Model silo inside centrifuge" src="https://johnmathews.eu/images/silos2/model_silo_in_centrifuge.jpeg"&gt;
-&lt;img alt="Silo opening mechanism" src="https://johnmathews.eu/images/silos2/silo_open_mechanism.jpeg"&gt;
-&lt;img alt="Centrifuge" src="https://johnmathews.eu/images/silos2/centrifuge.jpeg"&gt;
-&lt;img alt="Silo Model" src="https://johnmathews.eu/images/silos2/silo_render.jpeg"&gt;
-&lt;img alt="Silo wall pressure mesasurements" src="https://johnmathews.eu/images/silos2/silo_pressure_pads.jpeg"&gt;
-&lt;img alt="Particle Image Velocimetry result showing average flow velocities" src="https://johnmathews.eu/images/silos2/silo_piv.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Model silo and camera" src="https://johnmathews.eu/images/silos2/model_silo_camera.jpeg"/&gt;
+&lt;img alt="Model silo inside centrifuge" src="https://johnmathews.eu/images/silos2/model_silo_in_centrifuge.jpeg"/&gt;
+&lt;img alt="Silo opening mechanism" src="https://johnmathews.eu/images/silos2/silo_open_mechanism.jpeg"/&gt;
+&lt;img alt="Centrifuge" src="https://johnmathews.eu/images/silos2/centrifuge.jpeg"/&gt;
+&lt;img alt="Silo Model" src="https://johnmathews.eu/images/silos2/silo_render.jpeg"/&gt;
+&lt;img alt="Silo wall pressure mesasurements" src="https://johnmathews.eu/images/silos2/silo_pressure_pads.jpeg"/&gt;
+&lt;img alt="Particle Image Velocimetry result showing average flow velocities" src="https://johnmathews.eu/images/silos2/silo_piv.jpeg"/&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -124,4 +124,4 @@ to render, and Adobe Reader Desktop must be used in order to view&amp;nbsp;them
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Technical/Civil Engineering"></category><category term="Doctorate"></category><category term="Granular Flow"></category><category term="Granular Materials"></category><category term="PhD"></category><category term="Research"></category><category term="Engineering"></category><category term="Silo"></category><category term="Thesis"></category><category term="Vienna"></category></entry></feed>
+&lt;/script&gt;</content><category term="Technical/Civil Engineering"/><category term="Doctorate"/><category term="Granular Flow"/><category term="Granular Materials"/><category term="PhD"/><category term="Research"/><category term="Engineering"/><category term="Silo"/><category term="Thesis"/><category term="Vienna"/></entry></feed>

@@ -1,46 +1,35 @@
-<!doctype html>
-<html id="baz" class="" lang="en">
-  <head>
-        <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!DOCTYPE html>
 
-      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-
-      <title>Analysing a personal library - JohnMathews.eu</title>
-      <meta name="title" content="Analysing a personal library -  JohnMathews.eu "/>
-      <meta property="og:title" content="Analysing a personal library"/>
-      <meta property="twitter:title" content="Analysing a personal library"/>
-
-      <meta name="keywords" content=" Data Analysis,ISBN,Python "/>
-      <meta name="author" content="John Mathews"/>
-      <meta name="twitter:creator" content="@johnmathews"/>
-
-      <meta name="description" content=" A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an ISBN database to fill in... "/>
-      <meta name="twitter:description" content=" A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an ISBN database to fill in... "/>
-      <meta property="og:description" content=" A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an ISBN database to fill in... "/>
-
-      <meta property="og:url" content="https://johnmathews.eu/books.html"/>
-      <meta property="twitter:url" content="https://johnmathews.eu/books.html"/>
-
-      <meta name="twitter:image" content="https://johnmathews.eu/
-"/>
-      <meta property="og:image" content="https://johnmathews.eu/
-"/>
-
-      <meta property="twitter:card" content="  summary  "/>
-      <meta name="twitter:domain" content="https://johnmathews.eu"/>
-
-      <meta property="og:type" content=" article "/>
-
-      <link rel="icon" href="https://johnmathews.eu/extra/favicon.png" />
-
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="https://johnmathews.eu/feeds/all.atom.xml" />
-
-
-        <script>
+<title>Analysing a personal library - JohnMathews.eu</title>
+<meta content="Analysing a personal library -  JohnMathews.eu " name="title"/>
+<meta content="Analysing a personal library" property="og:title"/>
+<meta content="Analysing a personal library" property="twitter:title"/>
+<meta content=" Data Analysis,ISBN,Python " name="keywords"/>
+<meta content="John Mathews" name="author"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content=" A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an ISBN database to fill in... " name="description"/>
+<meta content=" A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an ISBN database to fill in... " name="twitter:description"/>
+<meta content=" A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an ISBN database to fill in... " property="og:description"/>
+<meta content="https://johnmathews.eu/books.html" property="og:url"/>
+<meta content="https://johnmathews.eu/books.html" property="twitter:url"/>
+<meta content="https://johnmathews.eu/
+" name="twitter:image"/>
+<meta content="https://johnmathews.eu/
+" property="og:image"/>
+<meta content="  summary  " property="twitter:card"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content=" article " property="og:type"/>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script>
           window.ga = window.ga || function () {
             (ga.q = ga.q || []).push(arguments);
           };
@@ -48,255 +37,227 @@
           ga("create", "UA-82253540-1", "auto");
           ga("send", "pageview");
         </script>
-        <script async src="https://www.google-analytics.com/analytics.js"></script>
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
-      <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-
-      <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
-      <link id="PygmentCSS" href="https://johnmathews.eu/theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
-
-      <script async>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<link href="https://johnmathews.eu/theme/css/styles.css" media="print" onload="this.media='all'" rel="stylesheet">
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script async="">
         let theme = localStorage.getItem('theme');
       </script>
-
-
-
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
       #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
       /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
   </style>
-  </head>
-
-  <body class="dark:bg-black">
-    <a class="pt-20 mt-20 " name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
-      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-        <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
-        </div>
-        <div class="flex-none justify-end px-2 pt-2">
-          <button class="inline-block theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
-            <div class="day modeIcon">
-              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-            </div>
-          </button>
-          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
-            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-          </button>
-        </div>
-      </div>
-      <div class="flex-none md:hidden block md:inline-block">
-        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
-          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-        </button>
-      </div>
-    </nav>
-      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
-        <div class="px-3 pt-3 flex flex-row">
-          <button class="mx-1 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
-            <div class="day modeIcon">
-              <i class="far fa-lightbulb fa-2x"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="far fa-moon fa-2x"></i>
-            </div>
-          </button>
-          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
-            <i class="fas fa-paw fa-2x"></i>
-          </button>
-        </div>
-      </div>
-
-    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-
-      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-              <div class="text-center">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+</link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" onclick="modeSwitcher()">
+<div class="day modeIcon">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0" id="">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" onclick="modeSwitcher()">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5" id="">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
-                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
-                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
-                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
-                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="searchModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-top md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="w-full lg:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="py-1 px-1">
-              <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" onkeyup="doSearch()">
-              <div class="flex">
-                <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="searchModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75" id="searchModalBackground"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-top md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full lg:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" onkeyup="doSearch()" style="outline:0;" type="text"/>
+<div class="flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                   ctrl-k
                 </div>
                 or
                 <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                  /
                 </div>
-              </div>
-              <ul id="results" class="results text-lg text-bold text-gray-600">
-              </ul>
-            </div>
-          </div>
-            </div>
-        </div>
-      </div>
-      <div class="mx-auto w-full">
-        <div class="flex flex-row">
-          <div class="hidden xl:inline xl:w-32">
-            <div class="w-32">
-            <div class="mt-20 fixed flex flex-col">
-              <div class="lg:w-32">
-                    <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-                  </div>
-                  <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-                  </div>
-                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
-                <div class="flex my-2">
-                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" onclick="modeSwitcher()">
-                    <div  class="day modeIcon">
-                      <i class="far fa-lightbulb fa-lg"></i>
-                    </div>
-                    <div class="night modeIcon hidden">
-                      <i class="far fa-moon fa-lg"></i>
-                    </div>
-                  </button>
-                </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="results">
+</ul>
+</div>
+</div>
+</div>
+</div>
 
-  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" onclick="modeSwitcher()">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> February 2017
   </div>
-  <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br> February 2017
-  </div>
-  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Category:<br>
-      <a href="https://johnmathews.eu/category/technical/data.html">Data</a>
-      
-  </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div id="contentParent" class="container xl:w-5/6 xl:ml-20">
-  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
-
-    <div class="mb-10">
-      <div style=""  class="markdown leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
-        <span style="word-break: unset;" class="break-all">
-          Analysing a personal&nbsp;library
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Category:<br/>
+<a href="https://johnmathews.eu/category/technical/data.html">Data</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
+<div class="mb-10">
+<div class="markdown leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
+<span class="break-all" style="word-break: unset;">
+          Analysing a personal library
         </span>
-      </div>
-
-      <div class="lg:hidden mt-10 font-serif font-bold text-gray-700 dark:text-gray-200">
+</div>
+<div class="lg:hidden mt-10 font-serif font-bold text-gray-700 dark:text-gray-200">
         Category:
           <a href="https://johnmathews.eu/category/technical/data.html">Data</a>
-          
-      </div>
-
-      <div class="lg:hidden font-serif font-light text-gray-600 dark:text-gray-200">
+</div>
+<div class="lg:hidden font-serif font-light text-gray-600 dark:text-gray-200">
         February 2017
       </div>
-    </div>
-    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-    </div>
-
-    <main class="lg:w-4/6">
-      <article class="">
-        <div class="markdown">
-          <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an <span class="caps">ISBN</span> database to fill in some missing&nbsp;data.</p>
-
+<p>A friend of mine has collected books for many years and has recently begun to catalogue them. In this post, I show some simple analysis of the catalogue and then query an <span class="caps">ISBN</span> database to fill in some missing data.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">'''&lt;script&gt;</span>
 <span class="s1">code_show=false; </span>
 <span class="s1">function code_toggle() {</span>
 <span class="s1"> if (code_show){</span>
-<span class="s1"> $(&#39;div.input&#39;).hide();</span>
+<span class="s1"> $('div.input').hide();</span>
 <span class="s1"> } else {</span>
-<span class="s1"> $(&#39;div.input&#39;).show();</span>
+<span class="s1"> $('div.input').show();</span>
 <span class="s1"> }</span>
 <span class="s1"> code_show = !code_show</span>
 <span class="s1">} </span>
 <span class="s1">$( document ).ready(code_toggle);</span>
 <span class="s1">&lt;/script&gt;</span>
-<span class="s1">&lt;font color=#33cc33&gt;&lt;i&gt;To toggle the visibility of the code blocks, click &lt;a href=&quot;javascript:code_toggle()&quot;&gt;here&lt;/a&gt;.&lt;/i&gt;&lt;/font&gt;</span>
+<span class="s1">&lt;font color=#33cc33&gt;&lt;i&gt;To toggle the visibility of the code blocks, click &lt;a href="javascript:code_toggle()"&gt;here&lt;/a&gt;.&lt;/i&gt;&lt;/font&gt;</span>
 <span class="s1">&lt;script&gt;</span>
 <span class="s1">    window.onload = function(){</span>
 <span class="s1">        //time is set in milliseconds</span>
 <span class="s1">        setTimeout(code_toggle, 10000)</span>
 <span class="s1">    };</span>
 <span class="s1">&lt;/script&gt;</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="s1">'''</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
+<div class="prompt output_prompt">Out[1]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <script>
 code_show=true; 
@@ -310,34 +271,30 @@ function code_toggle() {
 } 
 $( document ).ready(code_toggle);
 </script>
-<font color=#33cc33><i>To toggle the visibility of the code blocks, click <a href="javascript:code_toggle()">here</a>.</i></font>
-</div>
-
-</div>
-
+<font color="#33cc33"><i>To toggle the visibility of the code blocks, click <a href="javascript:code_toggle()">here</a>.</i></font>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Set-up-and-data-preparation">Set-up and data preparation<a class="anchor-link" href="#Set-up-and-data-preparation">&#182;</a></h3><p>Set some settings and import some&nbsp;packages:</p>
-
+<h3 id="Set-up-and-data-preparation">Set-up and data preparation<a class="anchor-link" href="#Set-up-and-data-preparation">¶</a></h3><p>Set some settings and import some packages:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display plot results inline, not in a separate window</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Display plot results inline, not in a separate window</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="o">%</span><span class="k">pylab</span> inline
 
 <span class="c1"># Set the size of all figures</span>
-<span class="n">pylab</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">re</span>
@@ -346,219 +303,187 @@ $( document ).ready(code_toggle);
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Populating the interactive namespace from numpy and matplotlib
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Load the catalogue&nbsp;file:</p>
-
+<p>Load the catalogue file:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Library.xlsx&#39;</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'Library.xlsx'</span><span class="p">)</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9188</span><span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">table</span>
 <span class="n">orig_rows</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are </span><span class="si">%d</span><span class="s2"> rows in the catalogue&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"There are </span><span class="si">%d</span><span class="s2"> rows in the catalogue"</span> <span class="o">%</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>There are 9187 rows in the catalogue
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-formatting-and-tidying:">Data formatting and tidying:<a class="anchor-link" href="#Data-formatting-and-tidying:">&#182;</a></h3><p>View the top 5 rows to see how the data is arranged and how many cells are&nbsp;complete.</p>
-
+<h3 id="Data-formatting-and-tidying:">Data formatting and tidying:<a class="anchor-link" href="#Data-formatting-and-tidying:">¶</a></h3><p>View the top 5 rows to see how the data is arranged and how many cells are complete.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Location</th>
-      <th>Subject</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th><span class="caps">ISBN</span>?</th>
-      <th>Shelf</th>
-      <th>Pages</th>
-      <th>Price</th>
-      <th>Value</th>
-      <th>Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td><span class="caps">HR</span></td>
-      <td>Islam</td>
-      <td>The Islamic Invasion</td>
-      <td>R Morey</td>
-      <td>Harvest <span class="caps">HP</span> 1960</td>
-      <td>0 89081 983 1</td>
-      <td>17cm</td>
-      <td>221</td>
-      <td>3</td>
-      <td>8</td>
-      <td>2008-04-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td><span class="caps">HR</span></td>
-      <td>Word lists</td>
-      <td>New Testament Word Lists</td>
-      <td>Morrison <span class="amp">&amp;</span> Barnes</td>
-      <td>Erdmans 1975</td>
-      <td>0 8028 1141 8</td>
-      <td>NaN</td>
-      <td>125</td>
-      <td>3</td>
-      <td>NaN</td>
-      <td>2008-04-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td><span class="caps">HR</span></td>
-      <td>Theology: Salvation</td>
-      <td>The Triumph of the crucified</td>
-      <td>E Sauer</td>
-      <td>Paternoster 1952</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>207</td>
-      <td>3</td>
-      <td>10</td>
-      <td>2008-04-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td><span class="caps">HR</span></td>
-      <td>Early Fathers</td>
-      <td>Ante-Nicene Christian Library</td>
-      <td>Ed Menzies</td>
-      <td>T&amp;T Clark 1897</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>533</td>
-      <td>9</td>
-      <td>NaN</td>
-      <td>2010-03-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td><span class="caps">HR</span></td>
-      <td>Apologetics</td>
-      <td>Earth&#8217;s earliest ages</td>
-      <td><span class="caps">G.H.</span> Pember</td>
-      <td>H <span class="amp">&amp;</span> S 1895</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>494</td>
-      <td>3</td>
-      <td>NaN</td>
-      <td>2008-04-01 00:00:00</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Location</th>
+<th>Subject</th>
+<th>Title</th>
+<th>Author</th>
+<th>Publisher</th>
+<th><span class="caps">ISBN</span>?</th>
+<th>Shelf</th>
+<th>Pages</th>
+<th>Price</th>
+<th>Value</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td><span class="caps">HR</span></td>
+<td>Islam</td>
+<td>The Islamic Invasion</td>
+<td>R Morey</td>
+<td>Harvest <span class="caps">HP</span> 1960</td>
+<td>0 89081 983 1</td>
+<td>17cm</td>
+<td>221</td>
+<td>3</td>
+<td>8</td>
+<td>2008-04-01 00:00:00</td>
+</tr>
+<tr>
+<th>1</th>
+<td><span class="caps">HR</span></td>
+<td>Word lists</td>
+<td>New Testament Word Lists</td>
+<td>Morrison <span class="amp">&amp;</span> Barnes</td>
+<td>Erdmans 1975</td>
+<td>0 8028 1141 8</td>
+<td>NaN</td>
+<td>125</td>
+<td>3</td>
+<td>NaN</td>
+<td>2008-04-01 00:00:00</td>
+</tr>
+<tr>
+<th>2</th>
+<td><span class="caps">HR</span></td>
+<td>Theology: Salvation</td>
+<td>The Triumph of the crucified</td>
+<td>E Sauer</td>
+<td>Paternoster 1952</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>207</td>
+<td>3</td>
+<td>10</td>
+<td>2008-04-01 00:00:00</td>
+</tr>
+<tr>
+<th>3</th>
+<td><span class="caps">HR</span></td>
+<td>Early Fathers</td>
+<td>Ante-Nicene Christian Library</td>
+<td>Ed Menzies</td>
+<td>T&amp;T Clark 1897</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>533</td>
+<td>9</td>
+<td>NaN</td>
+<td>2010-03-01 00:00:00</td>
+</tr>
+<tr>
+<th>4</th>
+<td><span class="caps">HR</span></td>
+<td>Apologetics</td>
+<td>Earth’s earliest ages</td>
+<td><span class="caps">G.H.</span> Pember</td>
+<td>H <span class="amp">&amp;</span> S 1895</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>494</td>
+<td>3</td>
+<td>NaN</td>
+<td>2008-04-01 00:00:00</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Set float format to two decimal places (currency). Not all rows can become a&nbsp;float:</p>
-
+<p>Set float format to two decimal places (currency). Not all rows can become a float:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">'</span><span class="si">{:,.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span>
 
 <span class="k">def</span> <span class="nf">to_number</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> 
     <span class="k">try</span><span class="p">:</span>
@@ -570,85 +495,63 @@ $( document ).ready(code_toggle);
 <span class="n">df</span><span class="o">.</span><span class="n">Price</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Price</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="n">to_number</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>  
 <span class="n">df</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="n">to_number</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>  
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Find and remove blank&nbsp;rows:</p>
-
+<p>Find and remove blank rows:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many rows are all NaN values</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>              <span class="c1"># drop a row only if ALL columns are NaN</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> row removed &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">orig_rows</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># 1 row contained all NaN and has been removed</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># How many rows are all NaN values</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">'all'</span><span class="p">)</span>              <span class="c1"># drop a row only if ALL columns are NaN</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="si">%d</span><span class="s1"> row removed '</span> <span class="o">%</span> <span class="p">(</span><span class="n">orig_rows</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># 1 row contained all NaN and has been removed</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1 row removed 
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>List the number of rows in each column which are&nbsp;empty:</p>
-
+<p>List the number of rows in each column which are empty:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many rows in each column are NaN</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># How many rows in each column are NaN</span>
 <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>Location       29
 Title          34
@@ -663,247 +566,209 @@ Subject      6208
 Value        9179
 dtype: int64</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Based on these results, title and publisher are the most complete&nbsp;columns</em></p>
-<p>Split a column containing two types of&nbsp;data:</p>
-<p>The &#8220;Publisher&#8221; column contains both the publisher and the year it was published. This should be split into two&nbsp;columns.</p>
-
+<p><em>Based on these results, title and publisher are the most complete columns</em></p>
+<p>Split a column containing two types of data:</p>
+<p>The “Publisher” column contains both the publisher and the year it was published. This should be split into two columns.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># default=&#39;warn&#39;</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;PubYear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Publisher&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;(\d\d\d\d)&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>          <span class="c1"># regex is confusing</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Publisher&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Publisher&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;(((?!\d).)*)&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># default='warn'</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'PubYear'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Publisher'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">'(\d\d\d\d)'</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>          <span class="c1"># regex is confusing</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'Publisher'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Publisher'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">'(((?!\d).)*)'</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Improve the format of the &#8216;Date&#8217;&nbsp;column:</p>
-
+<p>Improve the format of the ‘Date’ column:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The data frame is now in the columns I want it to be in, and the top 5 rows&nbsp;are:</p>
-
+<p>The data frame is now in the columns I want it to be in, and the top 5 rows are:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Location</th>
-      <th>Subject</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th><span class="caps">ISBN</span>?</th>
-      <th>Shelf</th>
-      <th>Pages</th>
-      <th>Price</th>
-      <th>Value</th>
-      <th>Date</th>
-      <th>PubYear</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td><span class="caps">HR</span></td>
-      <td>Islam</td>
-      <td>The Islamic Invasion</td>
-      <td>R Morey</td>
-      <td>Harvest <span class="caps">HP</span></td>
-      <td>0 89081 983 1</td>
-      <td>17cm</td>
-      <td>221</td>
-      <td>3.00</td>
-      <td>8.00</td>
-      <td>2008-04-01</td>
-      <td>1960</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td><span class="caps">HR</span></td>
-      <td>Word lists</td>
-      <td>New Testament Word Lists</td>
-      <td>Morrison <span class="amp">&amp;</span> Barnes</td>
-      <td>Erdmans</td>
-      <td>0 8028 1141 8</td>
-      <td>NaN</td>
-      <td>125</td>
-      <td>3.00</td>
-      <td>NaN</td>
-      <td>2008-04-01</td>
-      <td>1975</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td><span class="caps">HR</span></td>
-      <td>Theology: Salvation</td>
-      <td>The Triumph of the crucified</td>
-      <td>E Sauer</td>
-      <td>Paternoster</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>207</td>
-      <td>3.00</td>
-      <td>10.00</td>
-      <td>2008-04-01</td>
-      <td>1952</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td><span class="caps">HR</span></td>
-      <td>Early Fathers</td>
-      <td>Ante-Nicene Christian Library</td>
-      <td>Ed Menzies</td>
-      <td>T&amp;T Clark</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>533</td>
-      <td>9.00</td>
-      <td>NaN</td>
-      <td>2010-03-01</td>
-      <td>1897</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td><span class="caps">HR</span></td>
-      <td>Apologetics</td>
-      <td>Earth&#8217;s earliest ages</td>
-      <td><span class="caps">G.H.</span> Pember</td>
-      <td>H <span class="amp">&amp;</span> S</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>494</td>
-      <td>3.00</td>
-      <td>NaN</td>
-      <td>2008-04-01</td>
-      <td>1895</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Location</th>
+<th>Subject</th>
+<th>Title</th>
+<th>Author</th>
+<th>Publisher</th>
+<th><span class="caps">ISBN</span>?</th>
+<th>Shelf</th>
+<th>Pages</th>
+<th>Price</th>
+<th>Value</th>
+<th>Date</th>
+<th>PubYear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td><span class="caps">HR</span></td>
+<td>Islam</td>
+<td>The Islamic Invasion</td>
+<td>R Morey</td>
+<td>Harvest <span class="caps">HP</span></td>
+<td>0 89081 983 1</td>
+<td>17cm</td>
+<td>221</td>
+<td>3.00</td>
+<td>8.00</td>
+<td>2008-04-01</td>
+<td>1960</td>
+</tr>
+<tr>
+<th>1</th>
+<td><span class="caps">HR</span></td>
+<td>Word lists</td>
+<td>New Testament Word Lists</td>
+<td>Morrison <span class="amp">&amp;</span> Barnes</td>
+<td>Erdmans</td>
+<td>0 8028 1141 8</td>
+<td>NaN</td>
+<td>125</td>
+<td>3.00</td>
+<td>NaN</td>
+<td>2008-04-01</td>
+<td>1975</td>
+</tr>
+<tr>
+<th>2</th>
+<td><span class="caps">HR</span></td>
+<td>Theology: Salvation</td>
+<td>The Triumph of the crucified</td>
+<td>E Sauer</td>
+<td>Paternoster</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>207</td>
+<td>3.00</td>
+<td>10.00</td>
+<td>2008-04-01</td>
+<td>1952</td>
+</tr>
+<tr>
+<th>3</th>
+<td><span class="caps">HR</span></td>
+<td>Early Fathers</td>
+<td>Ante-Nicene Christian Library</td>
+<td>Ed Menzies</td>
+<td>T&amp;T Clark</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>533</td>
+<td>9.00</td>
+<td>NaN</td>
+<td>2010-03-01</td>
+<td>1897</td>
+</tr>
+<tr>
+<th>4</th>
+<td><span class="caps">HR</span></td>
+<td>Apologetics</td>
+<td>Earth’s earliest ages</td>
+<td><span class="caps">G.H.</span> Pember</td>
+<td>H <span class="amp">&amp;</span> S</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>494</td>
+<td>3.00</td>
+<td>NaN</td>
+<td>2008-04-01</td>
+<td>1895</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Insights">Insights<a class="anchor-link" href="#Insights">&#182;</a></h3><p>Distribution of books by year&nbsp;published:</p>
-<p>The bar chart below shows how many books in the library were published in a given decade. The list below shows the 5 oldest&nbsp;books.</p>
-
+<h3 id="Insights">Insights<a class="anchor-link" href="#Insights">¶</a></h3><p>Distribution of books by year published:</p>
+<p>The bar chart below shows how many books in the library were published in a given decade. The list below shows the 5 oldest books.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
-<span class="n">df</span><span class="o">.</span><span class="n">PubYear</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">PubYear</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">PubYear</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">1000</span><span class="p">,</span><span class="mi">2016</span><span class="p">],</span> <span class="n">logy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Decade of Publication&quot;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Books&quot;</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">'</span><span class="si">{:,}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span>
+<span class="n">df</span><span class="o">.</span><span class="n">PubYear</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">PubYear</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">PubYear</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">1000</span><span class="p">,</span><span class="mi">2016</span><span class="p">],</span> <span class="n">logy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Decade of Publication"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Number of Books"</span><span class="p">)</span>
 <span class="n">fig</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10501f2b0&gt;</pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAFgCAYAAACBh1mpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XuYZHV97/v3Bwa2RhHBBDoblEEFAS8xKIOJRNobavYO
 sN0GNbq9JnnOwUQTPYmQG8N2R8RzjMZk45NsUTHREDSJimFzi3SiUQTk7gCOUS6ywyiK10Tl8j1/
@@ -1107,188 +972,162 @@ n+nF8x16zcLX+ta5LckJ3NcUfbyqPr549zZe1/3uq6qvJDkLuBb4Mr3D+vrX3yPJVcD3ua+hu19m
 Vd2Z5IXAn7Ym8d/oHXZ4GvA3beKHc4HvtcddDdzTDlV8H3BlX+ZG4D3teb9Hr7Ea6PVIkkYjVf6M
 lSRJkiTwEDtJkiRJupcNkiRJkiQ1NkiSJEmS1NggSZIkSVJjgyRJkiRJjQ2SJEmSJDU2SJIkSZLU
 2CBJkiRJUvP/AzMyEUEfAFpkAAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
-
+"/>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>View the 5 oldest&nbsp;titles:</p>
-
+<p>View the 5 oldest titles:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;PubYear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;PubYear&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;PubYear&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">]</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;PubYear&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'PubYear'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'PubYear'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'PubYear'</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">]</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'PubYear'</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
+<div class="prompt output_prompt">Out[12]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Location</th>
-      <th>Subject</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th><span class="caps">ISBN</span>?</th>
-      <th>Shelf</th>
-      <th>Pages</th>
-      <th>Price</th>
-      <th>Value</th>
-      <th>Date</th>
-      <th>PubYear</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>4753</th>
-      <td>Lib</td>
-      <td>NaN</td>
-      <td>In Christ&#8217;s own country</td>
-      <td>Dom Ernest Graf</td>
-      <td>Burns Oates</td>
-      <td>NaN</td>
-      <td>Sh.4.5</td>
-      <td>302</td>
-      <td>Gift</td>
-      <td>NaN</td>
-      <td>1999-07-30</td>
-      <td>1037</td>
-    </tr>
-    <tr>
-      <th>3043</th>
-      <td>StM</td>
-      <td>NaN</td>
-      <td>The First Epistle of Peter</td>
-      <td><span class="caps">C.E.B.</span> Cranfield</td>
-      <td><span class="caps">SCM</span> Press</td>
-      <td>interesting</td>
-      <td>Sh.5.5</td>
-      <td>128</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1050</td>
-    </tr>
-    <tr>
-      <th>4574</th>
-      <td>Lib</td>
-      <td>Music Score</td>
-      <td>Easy-Play Speed Music; waltz clas</td>
-      <td>NaN</td>
-      <td>Sight <span class="amp">&amp;</span> Sound</td>
-      <td>NaN</td>
-      <td>Sh.4.4</td>
-      <td>47</td>
-      <td>99P</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1076</td>
-    </tr>
-    <tr>
-      <th>7184</th>
-      <td>25A</td>
-      <td>NaN</td>
-      <td>The Noble Qur&#8217;an</td>
-      <td>transl Al-Hilali <span class="amp">&amp;</span> Khan</td>
-      <td>Madinah</td>
-      <td>NaN</td>
-      <td>Sh.3.6</td>
-      <td>956</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>2010-12-10</td>
-      <td>1417</td>
-    </tr>
-    <tr>
-      <th>3296</th>
-      <td>Lib</td>
-      <td>NaN</td>
-      <td>Chained Bible</td>
-      <td>NaN</td>
-      <td>Chris Barker</td>
-      <td>Very incomplete</td>
-      <td>Sh.1.1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1585</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Location</th>
+<th>Subject</th>
+<th>Title</th>
+<th>Author</th>
+<th>Publisher</th>
+<th><span class="caps">ISBN</span>?</th>
+<th>Shelf</th>
+<th>Pages</th>
+<th>Price</th>
+<th>Value</th>
+<th>Date</th>
+<th>PubYear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>4753</th>
+<td>Lib</td>
+<td>NaN</td>
+<td>In Christ’s own country</td>
+<td>Dom Ernest Graf</td>
+<td>Burns Oates</td>
+<td>NaN</td>
+<td>Sh.4.5</td>
+<td>302</td>
+<td>Gift</td>
+<td>NaN</td>
+<td>1999-07-30</td>
+<td>1037</td>
+</tr>
+<tr>
+<th>3043</th>
+<td>StM</td>
+<td>NaN</td>
+<td>The First Epistle of Peter</td>
+<td><span class="caps">C.E.B.</span> Cranfield</td>
+<td><span class="caps">SCM</span> Press</td>
+<td>interesting</td>
+<td>Sh.5.5</td>
+<td>128</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1050</td>
+</tr>
+<tr>
+<th>4574</th>
+<td>Lib</td>
+<td>Music Score</td>
+<td>Easy-Play Speed Music; waltz clas</td>
+<td>NaN</td>
+<td>Sight <span class="amp">&amp;</span> Sound</td>
+<td>NaN</td>
+<td>Sh.4.4</td>
+<td>47</td>
+<td>99P</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1076</td>
+</tr>
+<tr>
+<th>7184</th>
+<td>25A</td>
+<td>NaN</td>
+<td>The Noble Qur’an</td>
+<td>transl Al-Hilali <span class="amp">&amp;</span> Khan</td>
+<td>Madinah</td>
+<td>NaN</td>
+<td>Sh.3.6</td>
+<td>956</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>2010-12-10</td>
+<td>1417</td>
+</tr>
+<tr>
+<th>3296</th>
+<td>Lib</td>
+<td>NaN</td>
+<td>Chained Bible</td>
+<td>NaN</td>
+<td>Chris Barker</td>
+<td>Very incomplete</td>
+<td>Sh.1.1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1585</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>List the number of books in each&nbsp;location:</p>
-
+<p>List the number of books in each location:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">df</span>
-<span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">df3</span><span class="p">[</span><span class="s2">"Location"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s2">"Location"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">df3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df3</span><span class="o">.</span><span class="n">Location</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>Location
 25A      3411
@@ -1307,46 +1146,33 @@ CH          1
 :LIB        1
 dtype: int64</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Create a list of the differnet subjects, order the list by the most frequent&nbsp;subjects:</p>
-
+<p>Create a list of the differnet subjects, order the list by the most frequent subjects:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">df</span>
-<span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Subject&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;Subject&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">df4</span><span class="p">[</span><span class="s2">"Subject"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s2">"Subject"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 <span class="n">df4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df4</span><span class="o">.</span><span class="n">Subject</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[14]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>Subject
 NAN                            6208
@@ -1361,7 +1187,7 @@ NT COMMENTARY                    31
 HEBREW GRAMMAR                   30
 SACRED BOOKS OF THE EAST         30
 POETRY                           29
-CLARK&#39;S FOREIGN THEOL LIB        28
+CLARK'S FOREIGN THEOL LIB        28
 GENERAL EDIT ANTONIA FRAZER      25
 NOVEL                            24
 WRITERS AND THEIR WORK           24
@@ -1369,7 +1195,7 @@ CATALOGUE                        22
 AUTOBIOGRAPHY                    20
 OT COMMENTARY                    19
 GREEK                            19
-THE EXPOSITOR&#39;S BIBLE            18
+THE EXPOSITOR'S BIBLE            18
 SRIMAD BHAGAVATAM                18
 THE BABYLONIAN TALMUD            18
 PHOTOGRAPHS                      17
@@ -1382,7 +1208,7 @@ INTERNATIONAL CRITICAL COMM      13
 ARAMAIC                          13
 THE CLARENDON BIBLE              13
 FICTION - CADFAEL                13
-CLARK&#39;S FOREIGN THEOL LIB.       13
+CLARK'S FOREIGN THEOL LIB.       13
 APOLOGETICS                      12
 PSALMS                           12
 THE CAMBRIDGE BIBLE              12
@@ -1401,46 +1227,33 @@ DICTIONARY                       10
 HISTORY                          10
 dtype: int64</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Create a list of authors in the library. Order the list by number of&nbsp;books:</p>
-
+<p>Create a list of authors in the library. Order the list by number of books:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df5</span> <span class="o">=</span> <span class="n">df</span>
-<span class="n">df5</span><span class="p">[</span><span class="s2">&quot;Author&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df5</span><span class="p">[</span><span class="s2">&quot;Author&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1">#.str.slice(0,20)</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df5</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">df5</span><span class="p">[</span><span class="s2">"Author"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df5</span><span class="p">[</span><span class="s2">"Author"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1">#.str.slice(0,20)</span>
 <span class="n">df5</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df5</span><span class="o">.</span><span class="n">Author</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[15]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>Author
 NAN                     915
@@ -1474,7 +1287,7 @@ ED ANDREW LANG            8
 GEZA VERMES               8
 S.R. DRIVER               8
 EVELYN UNDERHILL          8
-&#34;                         8
+"                         8
 HENRY ALFORD              7
 ALDOUS HUXLEY             7
 ED JAMES HASTINGS         7
@@ -1495,72 +1308,52 @@ G. CAMPBELL MORGAN        6
 ALISTER MCGRATH           6
 dtype: int64</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Distribution of book length by number of&nbsp;pages:</p>
-
+<p>Distribution of book length by number of pages:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">blank_or_number</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> 
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">blank_or_number</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> 
     <span class="k">try</span><span class="p">:</span>
         <span class="n">s1</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">s1</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="s1">''</span>
     
     
 <span class="n">df</span><span class="o">.</span><span class="n">Pages</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="n">blank_or_number</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> 
-<span class="n">df6</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Pages</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Pages</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="n">df6</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Pages</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Pages</span> <span class="o">!=</span> <span class="s1">''</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">))</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">df6</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">])</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Number of Pages&quot;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Books&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Number of Pages"</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Number of Books"</span><span class="p">)</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;matplotlib.text.Text at 0x10585b3c8&gt;</pre>
 </div>
-
 </div>
-
 <div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0EAAAFHCAYAAABnO0ftAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XuYZXV95/v3FxpawUA3cehKRCkUvGU07QXMMxrpeEFN
 RjAc42jMxI6aM09M1CeajE1GB0jmCTTRZJxJnDleQoiDQ9DJCDoaEKXjOebIJXQD2oh4KSTELhwB
@@ -1777,508 +1570,471 @@ kiT107mn5l3Ab3asex9wSUTspilcuu2lyS7rAb5BU8D8GE1PzT9FxPuBeeC6dg/THUDPo7Zl5r6I
 0N7misy8odf3IUkavcjs9XdBkiR1iojDM/O+iHg48Fng1zNzz6RzSZIG554gSZJW570R8WSao8P9
 hQWQJE0f9wRJkiRJmikeGEGSJEnSTLEIkiRJkjRTLIIkSZIkzRSLIEmSJEkzxSJIkiRJ0kyxCJIk
 SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
-"
->
-</div>
-
-</div>
-
+"/>
 </div>
 </div>
-
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Query an <span class="caps">ISBN</span> database to find missing&nbsp;data:</p>
-<p>Lastly, I thought it would be a fun challenge to fill in gaps in the data. The table below shows rows with <span class="caps">ISBN</span> number but missing either Author, Title or&nbsp;Publisher.</p>
-<p>It turns out that there are only 10 rows that meet this criteria, and in all cases it is the publisher that is&nbsp;missing.</p>
-
+<p>Query an <span class="caps">ISBN</span> database to find missing data:</p>
+<p>Lastly, I thought it would be a fun challenge to fill in gaps in the data. The table below shows rows with <span class="caps">ISBN</span> number but missing either Author, Title or Publisher.</p>
+<p>It turns out that there are only 10 rows that meet this criteria, and in all cases it is the publisher that is missing.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df7</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ISBN?&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Author&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Publisher&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">))]</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df7</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">'ISBN?'</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">'Author'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">''</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Title'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">''</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Publisher'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">''</span><span class="p">))]</span>
 <span class="n">df7</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
+<div class="prompt output_prompt">Out[17]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Location</th>
-      <th>Subject</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th><span class="caps">ISBN</span>?</th>
-      <th>Shelf</th>
-      <th>Pages</th>
-      <th>Price</th>
-      <th>Value</th>
-      <th>Date</th>
-      <th>PubYear</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1430</th>
-      <td><span class="caps">ST9</span></td>
-      <td><span class="caps">BIOGRAPHY</span> <span class="caps">OF</span> <span class="caps">SCIENTIST</span></td>
-      <td>Longitude (John Harrison)</td>
-      <td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
-      <td></td>
-      <td>1 85702 571 7</td>
-      <td>Sh.1.2</td>
-      <td>184.0</td>
-      <td>5.99</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1998</td>
-    </tr>
-    <tr>
-      <th>2707</th>
-      <td><span class="caps">STM</span></td>
-      <td><span class="caps">DEVOTIONAL</span>!</td>
-      <td>Romans: Momentous News</td>
-      <td><span class="caps">DAVID</span> <span class="caps">COOK</span></td>
-      <td></td>
-      <td>978 1 906173241</td>
-      <td>Sh.3.4</td>
-      <td>55.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>2011-07-28</td>
-      <td>2011</td>
-    </tr>
-    <tr>
-      <th>3874</th>
-      <td><span class="caps">LIB</span></td>
-      <td><span class="caps">NAN</span></td>
-      <td>Annie&#8217;s Box - Darwin&#8217;s daughter</td>
-      <td><span class="caps">RANDAL</span> <span class="caps">KEYNES</span></td>
-      <td></td>
-      <td>1 84115 060 6</td>
-      <td>Sh.2.4</td>
-      <td>331.0</td>
-      <td>3.99</td>
-      <td>NaN</td>
-      <td>2002-07-20</td>
-      <td>2001</td>
-    </tr>
-    <tr>
-      <th>4705</th>
-      <td><span class="caps">LIB</span></td>
-      <td><span class="caps">HISTORICAL</span> <span class="caps">NOVEL</span></td>
-      <td>Galileo&#8217;s Daughter</td>
-      <td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
-      <td></td>
-      <td>1 85702 861 9</td>
-      <td>Sh.4.5</td>
-      <td>429.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2002-09-27</td>
-      <td>1999</td>
-    </tr>
-    <tr>
-      <th>5949</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Short Life Long Times of Mrs Beeton</td>
-      <td><span class="caps">KATHRYN</span> <span class="caps">HUGHES</span></td>
-      <td></td>
-      <td>1 84115 373 7</td>
-      <td>Sh.1.4</td>
-      <td>525.0</td>
-      <td>£2.50P</td>
-      <td>NaN</td>
-      <td>2012-02-09</td>
-      <td>2005</td>
-    </tr>
-    <tr>
-      <th>6008</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Signs in the Sky (Birth of a New Age</td>
-      <td><span class="caps">ADRIAN</span> <span class="caps">GILBERT</span></td>
-      <td></td>
-      <td>0 609 80793 5</td>
-      <td>Sh.1.5</td>
-      <td>329.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>2012-03-07</td>
-      <td>2001</td>
-    </tr>
-    <tr>
-      <th>6097</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Isaac Newton, the last Sorcerer</td>
-      <td><span class="caps">MICHAEL</span> <span class="caps">WHITE</span></td>
-      <td></td>
-      <td>1 85702 706 X</td>
-      <td>Sh.1.6</td>
-      <td>403.0</td>
-      <td>£1.50P</td>
-      <td>NaN</td>
-      <td>2012-02-09</td>
-      <td>1997</td>
-    </tr>
-    <tr>
-      <th>6663</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Live Wires - powerful stories of cha</td>
-      <td><span class="caps">D. J.</span> <span class="caps">CARSWELL</span></td>
-      <td></td>
-      <td>978 1 906173 13 5</td>
-      <td>Sh.2.7</td>
-      <td>124.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>2011-06-29</td>
-      <td>2010</td>
-    </tr>
-    <tr>
-      <th>8640</th>
-      <td>25A</td>
-      <td><span class="caps">KING</span> <span class="caps">ARTHUR</span> <span class="caps">QUINCENTENARY</span></td>
-      <td>One in Specyal</td>
-      <td><span class="caps">ED</span> <span class="caps">SIDNEY</span> <span class="caps">HART</span></td>
-      <td></td>
-      <td>0 948485 00 0</td>
-      <td>Sh.5.9</td>
-      <td>145.0</td>
-      <td>£2.49P</td>
-      <td>NaN</td>
-      <td>2003-06-28</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>8845</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>The Order of St John - a short history</td>
-      <td>E L <span class="caps">EDMONDS</span></td>
-      <td></td>
-      <td>0 947718 07 9</td>
-      <td>Sh.5.7b</td>
-      <td>35.0</td>
-      <td>£3.75P</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1986</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Location</th>
+<th>Subject</th>
+<th>Title</th>
+<th>Author</th>
+<th>Publisher</th>
+<th><span class="caps">ISBN</span>?</th>
+<th>Shelf</th>
+<th>Pages</th>
+<th>Price</th>
+<th>Value</th>
+<th>Date</th>
+<th>PubYear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1430</th>
+<td><span class="caps">ST9</span></td>
+<td><span class="caps">BIOGRAPHY</span> <span class="caps">OF</span> <span class="caps">SCIENTIST</span></td>
+<td>Longitude (John Harrison)</td>
+<td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
+<td></td>
+<td>1 85702 571 7</td>
+<td>Sh.1.2</td>
+<td>184.0</td>
+<td>5.99</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1998</td>
+</tr>
+<tr>
+<th>2707</th>
+<td><span class="caps">STM</span></td>
+<td><span class="caps">DEVOTIONAL</span>!</td>
+<td>Romans: Momentous News</td>
+<td><span class="caps">DAVID</span> <span class="caps">COOK</span></td>
+<td></td>
+<td>978 1 906173241</td>
+<td>Sh.3.4</td>
+<td>55.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>2011-07-28</td>
+<td>2011</td>
+</tr>
+<tr>
+<th>3874</th>
+<td><span class="caps">LIB</span></td>
+<td><span class="caps">NAN</span></td>
+<td>Annie’s Box - Darwin’s daughter</td>
+<td><span class="caps">RANDAL</span> <span class="caps">KEYNES</span></td>
+<td></td>
+<td>1 84115 060 6</td>
+<td>Sh.2.4</td>
+<td>331.0</td>
+<td>3.99</td>
+<td>NaN</td>
+<td>2002-07-20</td>
+<td>2001</td>
+</tr>
+<tr>
+<th>4705</th>
+<td><span class="caps">LIB</span></td>
+<td><span class="caps">HISTORICAL</span> <span class="caps">NOVEL</span></td>
+<td>Galileo’s Daughter</td>
+<td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
+<td></td>
+<td>1 85702 861 9</td>
+<td>Sh.4.5</td>
+<td>429.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>2002-09-27</td>
+<td>1999</td>
+</tr>
+<tr>
+<th>5949</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Short Life Long Times of Mrs Beeton</td>
+<td><span class="caps">KATHRYN</span> <span class="caps">HUGHES</span></td>
+<td></td>
+<td>1 84115 373 7</td>
+<td>Sh.1.4</td>
+<td>525.0</td>
+<td>£2.50P</td>
+<td>NaN</td>
+<td>2012-02-09</td>
+<td>2005</td>
+</tr>
+<tr>
+<th>6008</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Signs in the Sky (Birth of a New Age</td>
+<td><span class="caps">ADRIAN</span> <span class="caps">GILBERT</span></td>
+<td></td>
+<td>0 609 80793 5</td>
+<td>Sh.1.5</td>
+<td>329.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>2012-03-07</td>
+<td>2001</td>
+</tr>
+<tr>
+<th>6097</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Isaac Newton, the last Sorcerer</td>
+<td><span class="caps">MICHAEL</span> <span class="caps">WHITE</span></td>
+<td></td>
+<td>1 85702 706 X</td>
+<td>Sh.1.6</td>
+<td>403.0</td>
+<td>£1.50P</td>
+<td>NaN</td>
+<td>2012-02-09</td>
+<td>1997</td>
+</tr>
+<tr>
+<th>6663</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Live Wires - powerful stories of cha</td>
+<td><span class="caps">D. J.</span> <span class="caps">CARSWELL</span></td>
+<td></td>
+<td>978 1 906173 13 5</td>
+<td>Sh.2.7</td>
+<td>124.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>2011-06-29</td>
+<td>2010</td>
+</tr>
+<tr>
+<th>8640</th>
+<td>25A</td>
+<td><span class="caps">KING</span> <span class="caps">ARTHUR</span> <span class="caps">QUINCENTENARY</span></td>
+<td>One in Specyal</td>
+<td><span class="caps">ED</span> <span class="caps">SIDNEY</span> <span class="caps">HART</span></td>
+<td></td>
+<td>0 948485 00 0</td>
+<td>Sh.5.9</td>
+<td>145.0</td>
+<td>£2.49P</td>
+<td>NaN</td>
+<td>2003-06-28</td>
+<td>1985</td>
+</tr>
+<tr>
+<th>8845</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>The Order of St John - a short history</td>
+<td>E L <span class="caps">EDMONDS</span></td>
+<td></td>
+<td>0 947718 07 9</td>
+<td>Sh.5.7b</td>
+<td>35.0</td>
+<td>£3.75P</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1986</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">isbnlib</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">isbnlib</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">isbnlib.config</span> <span class="kn">import</span> <span class="o">*</span> 
 <span class="kn">from</span> <span class="nn">isbnlib.registry</span> <span class="kn">import</span> <span class="o">*</span> 
 <span class="kn">import</span> <span class="nn">bibtexparser</span>
 
 <span class="k">def</span> <span class="nf">has_isbn</span><span class="p">(</span><span class="n">isbn</span><span class="p">):</span>
-    <span class="n">SERVICE</span> <span class="o">=</span> <span class="s1">&#39;isbndb&#39;</span>
-    <span class="n">APIKEY</span> <span class="o">=</span> <span class="s1">&#39;IZXL3ESD&#39;</span>  <span class="c1"># YOUR key</span>
+    <span class="n">SERVICE</span> <span class="o">=</span> <span class="s1">'isbndb'</span>
+    <span class="n">APIKEY</span> <span class="o">=</span> <span class="s1">'IZXL3ESD'</span>  <span class="c1"># YOUR key</span>
     <span class="n">add_apikey</span><span class="p">(</span><span class="n">SERVICE</span><span class="p">,</span> <span class="n">APIKEY</span><span class="p">)</span> <span class="c1"># register your key</span>
-    <span class="n">bibtex</span> <span class="o">=</span> <span class="n">bibformatters</span><span class="p">[</span><span class="s1">&#39;bibtex&#39;</span><span class="p">]</span>
+    <span class="n">bibtex</span> <span class="o">=</span> <span class="n">bibformatters</span><span class="p">[</span><span class="s1">'bibtex'</span><span class="p">]</span>
     <span class="n">isbn</span> <span class="o">=</span> <span class="n">clean</span><span class="p">(</span><span class="n">isbn</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">bibtex</span><span class="p">(</span><span class="n">meta</span><span class="p">(</span><span class="n">EAN13</span><span class="p">(</span><span class="n">isbn</span><span class="p">),</span> <span class="n">SERVICE</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">a</span>
     <span class="k">except</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;isbn is invalid&#39;</span>
+        <span class="k">return</span> <span class="s1">'isbn is invalid'</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_pub</span><span class="p">(</span><span class="n">isbn</span><span class="p">):</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_pub</span><span class="p">(</span><span class="n">isbn</span><span class="p">):</span>
     <span class="n">bibtex_str</span> <span class="o">=</span> <span class="n">has_isbn</span><span class="p">(</span><span class="n">isbn</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">bib_db</span> <span class="o">=</span> <span class="n">bibtexparser</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">bibtex_str</span><span class="p">)</span>
         <span class="n">dic</span> <span class="o">=</span> <span class="n">bib_db</span><span class="o">.</span><span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">dic</span><span class="p">[</span><span class="s1">&#39;publisher&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">dic</span><span class="p">[</span><span class="s1">'publisher'</span><span class="p">]</span>
     <span class="k">except</span><span class="p">:</span>
         <span class="k">return</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df7</span><span class="p">[</span><span class="s1">&#39;ISBN?&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df7</span><span class="p">[</span><span class="s1">&#39;ISBN?&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="n">df7</span><span class="o">.</span><span class="n">Publisher</span> <span class="o">=</span> <span class="n">df7</span><span class="p">[</span><span class="s1">&#39;ISBN?&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="n">get_pub</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df7</span><span class="p">[</span><span class="s1">'ISBN?'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df7</span><span class="p">[</span><span class="s1">'ISBN?'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">df7</span><span class="o">.</span><span class="n">Publisher</span> <span class="o">=</span> <span class="n">df7</span><span class="p">[</span><span class="s1">'ISBN?'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="n">get_pub</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The table below shows the results of the isbnlib query. I thought it odd that all the &#8216;missing&#8217; publishers names began with a number. It turns out that the regex method I used to split publisher name and year of publication into separate columns doesnt work when there are numbers in the publishers name. Rather than go back and correct this, I&#8217;ll leave the script as it is to show how to use the isbnlib&nbsp;library.</p>
-
+<p>The table below shows the results of the isbnlib query. I thought it odd that all the ‘missing’ publishers names began with a number. It turns out that the regex method I used to split publisher name and year of publication into separate columns doesnt work when there are numbers in the publishers name. Rather than go back and correct this, I’ll leave the script as it is to show how to use the isbnlib library.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df7</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df7</span>
 </pre></div>
-
-    </div>
 </div>
 </div>
-
+</div>
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
+<div class="prompt output_prompt">Out[21]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Location</th>
-      <th>Subject</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Publisher</th>
-      <th><span class="caps">ISBN</span>?</th>
-      <th>Shelf</th>
-      <th>Pages</th>
-      <th>Price</th>
-      <th>Value</th>
-      <th>Date</th>
-      <th>PubYear</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1430</th>
-      <td><span class="caps">ST9</span></td>
-      <td><span class="caps">BIOGRAPHY</span> <span class="caps">OF</span> <span class="caps">SCIENTIST</span></td>
-      <td>Longitude (John Harrison)</td>
-      <td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
-      <td>Fourth Estate</td>
-      <td>1 85702 571 7</td>
-      <td>Sh.1.2</td>
-      <td>184.0</td>
-      <td>5.99</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1998</td>
-    </tr>
-    <tr>
-      <th>2707</th>
-      <td><span class="caps">STM</span></td>
-      <td><span class="caps">DEVOTIONAL</span>!</td>
-      <td>Romans: Momentous News</td>
-      <td><span class="caps">DAVID</span> <span class="caps">COOK</span></td>
-      <td>10Publishing</td>
-      <td>978 1 906173241</td>
-      <td>Sh.3.4</td>
-      <td>55.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>2011-07-28</td>
-      <td>2011</td>
-    </tr>
-    <tr>
-      <th>3874</th>
-      <td><span class="caps">LIB</span></td>
-      <td><span class="caps">NAN</span></td>
-      <td>Annie&#8217;s Box - Darwin&#8217;s daughter</td>
-      <td><span class="caps">RANDAL</span> <span class="caps">KEYNES</span></td>
-      <td>4th Estate</td>
-      <td>1 84115 060 6</td>
-      <td>Sh.2.4</td>
-      <td>331.0</td>
-      <td>3.99</td>
-      <td>NaN</td>
-      <td>2002-07-20</td>
-      <td>2001</td>
-    </tr>
-    <tr>
-      <th>4705</th>
-      <td><span class="caps">LIB</span></td>
-      <td><span class="caps">HISTORICAL</span> <span class="caps">NOVEL</span></td>
-      <td>Galileo&#8217;s Daughter</td>
-      <td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
-      <td>Fourth Estate</td>
-      <td>1 85702 861 9</td>
-      <td>Sh.4.5</td>
-      <td>429.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2002-09-27</td>
-      <td>1999</td>
-    </tr>
-    <tr>
-      <th>5949</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Short Life Long Times of Mrs Beeton</td>
-      <td><span class="caps">KATHRYN</span> <span class="caps">HUGHES</span></td>
-      <td>None</td>
-      <td>1 84115 373 7</td>
-      <td>Sh.1.4</td>
-      <td>525.0</td>
-      <td>£2.50P</td>
-      <td>NaN</td>
-      <td>2012-02-09</td>
-      <td>2005</td>
-    </tr>
-    <tr>
-      <th>6008</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Signs in the Sky (Birth of a New Age</td>
-      <td><span class="caps">ADRIAN</span> <span class="caps">GILBERT</span></td>
-      <td>Three Rivers Press</td>
-      <td>0 609 80793 5</td>
-      <td>Sh.1.5</td>
-      <td>329.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>2012-03-07</td>
-      <td>2001</td>
-    </tr>
-    <tr>
-      <th>6097</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Isaac Newton, the last Sorcerer</td>
-      <td><span class="caps">MICHAEL</span> <span class="caps">WHITE</span></td>
-      <td>Fourth Estate</td>
-      <td>1 85702 706 X</td>
-      <td>Sh.1.6</td>
-      <td>403.0</td>
-      <td>£1.50P</td>
-      <td>NaN</td>
-      <td>2012-02-09</td>
-      <td>1997</td>
-    </tr>
-    <tr>
-      <th>6663</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>Live Wires - powerful stories of cha</td>
-      <td><span class="caps">D. J.</span> <span class="caps">CARSWELL</span></td>
-      <td>None</td>
-      <td>978 1 906173 13 5</td>
-      <td>Sh.2.7</td>
-      <td>124.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>2011-06-29</td>
-      <td>2010</td>
-    </tr>
-    <tr>
-      <th>8640</th>
-      <td>25A</td>
-      <td><span class="caps">KING</span> <span class="caps">ARTHUR</span> <span class="caps">QUINCENTENARY</span></td>
-      <td>One in Specyal</td>
-      <td><span class="caps">ED</span> <span class="caps">SIDNEY</span> <span class="caps">HART</span></td>
-      <td>Three Golden Crowns</td>
-      <td>0 948485 00 0</td>
-      <td>Sh.5.9</td>
-      <td>145.0</td>
-      <td>£2.49P</td>
-      <td>NaN</td>
-      <td>2003-06-28</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>8845</th>
-      <td>25A</td>
-      <td><span class="caps">NAN</span></td>
-      <td>The Order of St John - a short history</td>
-      <td>E L <span class="caps">EDMONDS</span></td>
-      <td>s.n</td>
-      <td>0 947718 07 9</td>
-      <td>Sh.5.7b</td>
-      <td>35.0</td>
-      <td>£3.75P</td>
-      <td>NaN</td>
-      <td>NaT</td>
-      <td>1986</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Location</th>
+<th>Subject</th>
+<th>Title</th>
+<th>Author</th>
+<th>Publisher</th>
+<th><span class="caps">ISBN</span>?</th>
+<th>Shelf</th>
+<th>Pages</th>
+<th>Price</th>
+<th>Value</th>
+<th>Date</th>
+<th>PubYear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1430</th>
+<td><span class="caps">ST9</span></td>
+<td><span class="caps">BIOGRAPHY</span> <span class="caps">OF</span> <span class="caps">SCIENTIST</span></td>
+<td>Longitude (John Harrison)</td>
+<td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
+<td>Fourth Estate</td>
+<td>1 85702 571 7</td>
+<td>Sh.1.2</td>
+<td>184.0</td>
+<td>5.99</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1998</td>
+</tr>
+<tr>
+<th>2707</th>
+<td><span class="caps">STM</span></td>
+<td><span class="caps">DEVOTIONAL</span>!</td>
+<td>Romans: Momentous News</td>
+<td><span class="caps">DAVID</span> <span class="caps">COOK</span></td>
+<td>10Publishing</td>
+<td>978 1 906173241</td>
+<td>Sh.3.4</td>
+<td>55.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>2011-07-28</td>
+<td>2011</td>
+</tr>
+<tr>
+<th>3874</th>
+<td><span class="caps">LIB</span></td>
+<td><span class="caps">NAN</span></td>
+<td>Annie’s Box - Darwin’s daughter</td>
+<td><span class="caps">RANDAL</span> <span class="caps">KEYNES</span></td>
+<td>4th Estate</td>
+<td>1 84115 060 6</td>
+<td>Sh.2.4</td>
+<td>331.0</td>
+<td>3.99</td>
+<td>NaN</td>
+<td>2002-07-20</td>
+<td>2001</td>
+</tr>
+<tr>
+<th>4705</th>
+<td><span class="caps">LIB</span></td>
+<td><span class="caps">HISTORICAL</span> <span class="caps">NOVEL</span></td>
+<td>Galileo’s Daughter</td>
+<td><span class="caps">DAVA</span> <span class="caps">SOBEL</span></td>
+<td>Fourth Estate</td>
+<td>1 85702 861 9</td>
+<td>Sh.4.5</td>
+<td>429.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>2002-09-27</td>
+<td>1999</td>
+</tr>
+<tr>
+<th>5949</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Short Life Long Times of Mrs Beeton</td>
+<td><span class="caps">KATHRYN</span> <span class="caps">HUGHES</span></td>
+<td>None</td>
+<td>1 84115 373 7</td>
+<td>Sh.1.4</td>
+<td>525.0</td>
+<td>£2.50P</td>
+<td>NaN</td>
+<td>2012-02-09</td>
+<td>2005</td>
+</tr>
+<tr>
+<th>6008</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Signs in the Sky (Birth of a New Age</td>
+<td><span class="caps">ADRIAN</span> <span class="caps">GILBERT</span></td>
+<td>Three Rivers Press</td>
+<td>0 609 80793 5</td>
+<td>Sh.1.5</td>
+<td>329.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>2012-03-07</td>
+<td>2001</td>
+</tr>
+<tr>
+<th>6097</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Isaac Newton, the last Sorcerer</td>
+<td><span class="caps">MICHAEL</span> <span class="caps">WHITE</span></td>
+<td>Fourth Estate</td>
+<td>1 85702 706 X</td>
+<td>Sh.1.6</td>
+<td>403.0</td>
+<td>£1.50P</td>
+<td>NaN</td>
+<td>2012-02-09</td>
+<td>1997</td>
+</tr>
+<tr>
+<th>6663</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>Live Wires - powerful stories of cha</td>
+<td><span class="caps">D. J.</span> <span class="caps">CARSWELL</span></td>
+<td>None</td>
+<td>978 1 906173 13 5</td>
+<td>Sh.2.7</td>
+<td>124.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>2011-06-29</td>
+<td>2010</td>
+</tr>
+<tr>
+<th>8640</th>
+<td>25A</td>
+<td><span class="caps">KING</span> <span class="caps">ARTHUR</span> <span class="caps">QUINCENTENARY</span></td>
+<td>One in Specyal</td>
+<td><span class="caps">ED</span> <span class="caps">SIDNEY</span> <span class="caps">HART</span></td>
+<td>Three Golden Crowns</td>
+<td>0 948485 00 0</td>
+<td>Sh.5.9</td>
+<td>145.0</td>
+<td>£2.49P</td>
+<td>NaN</td>
+<td>2003-06-28</td>
+<td>1985</td>
+</tr>
+<tr>
+<th>8845</th>
+<td>25A</td>
+<td><span class="caps">NAN</span></td>
+<td>The Order of St John - a short history</td>
+<td>E L <span class="caps">EDMONDS</span></td>
+<td>s.n</td>
+<td>0 947718 07 9</td>
+<td>Sh.5.7b</td>
+<td>35.0</td>
+<td>£3.75P</td>
+<td>NaN</td>
+<td>NaT</td>
+<td>1986</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
-
-</div>
-
 </div>
 </div>
-
 </div>
- 
-
-
+</div>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -2307,59 +2063,53 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-
-        </div>
-      </article>
-    </main>
-
-    <div class="border-t-2 border-double border-gray-300 mt-10 mb-10"></div>
-
-    <div class="mb-10 text-lg dark:text-gray-200">
-        <div class="flex flex-row">
-          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
-          <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/fakegl.html"> FakeGL: A Synthetic General Ledger and Trial&nbsp;Balance</a>
-        </div>
-        <div class="flex flex-row mt-2">
-          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
-          <a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/macro-btc.html"> Macro analysis of the Bitcoin&nbsp;blockchain</a>
-        </div>
-    </div>
-
-    <div class="text-left">
-      <button id="signupButton" class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200">
-        <span>Subscribe</span>
-        <i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
-      </button>
-    </div>
-
-    <div class="hidden" id="subscribeBox" >
-      <!-- Begin Mailchimp Signup Form -->
-      <div id="mc_embed_signup">
-        <form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate bg-white dark:bg-black" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-            <div class="mc-field-group dark:text-gray-300">
-              <label class="font-serif font-semibold text-lg" for="mce-EMAIL">Email Address </label>
-              <input type="email" value="" name="EMAIL" class="required email dark:text-gray-800" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" value="">
-            </div>
-            <div class="clear">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-          </div>
-        </form>
-      </div>
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-      <!--End mc_embed_signup-->
-    </div>
-
-      <div class="mt-10" id="disqus_thread"></div>
-      <script>
+</div>
+</article>
+</main>
+<div class="border-t-2 border-double border-gray-300 mt-10 mb-10"></div>
+<div class="mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/fakegl.html"> FakeGL: A Synthetic General Ledger and Trial Balance</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/macro-btc.html"> Macro analysis of the Bitcoin blockchain</a>
+</div>
+</div>
+<div class="text-left">
+<button class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200" id="signupButton">
+<span>Subscribe</span>
+<i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+</button>
+</div>
+<div class="hidden" id="subscribeBox">
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" class="validate bg-white dark:bg-black" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group dark:text-gray-300">
+<label class="font-serif font-semibold text-lg" for="mce-EMAIL">Email Address </label>
+<input class="required email dark:text-gray-800" id="mce-EMAIL" name="EMAIL" type="email" value=""/>
+</div>
+<div class="clear" id="mce-responses">
+<div class="response" id="mce-error-response" style="display:none"></div>
+<div class="response" id="mce-success-response" style="display:none"></div>
+</div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<div aria-hidden="true" style="position: absolute; left: -5000px;">
+<input name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" type="text" value=""/>
+</div>
+<div class="clear">
+<input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"/>
+</div>
+</div>
+</form>
+</div>
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+</div>
+<div class="mt-10" id="disqus_thread"></div>
+<script>
         /**
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
@@ -2374,29 +2124,23 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
                           (d.head || d.body).appendChild(s);
                         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-
-          </div>
-        </div>
-      </div>
-
-    </main>
-
-    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
-      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
         <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
         <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
-      </div>
-    </footer>
-
-    <div>
-
-  
-        <!-- Note the usage of `type=module` here as this is an ES6 module -->
-        <script type="module">
+</div>
+</footer>
+<div>
+<!-- Note the usage of `type=module` here as this is an ES6 module -->
+<script type="module">
           // Use ES module import syntax to import functionality from the module
           // that we have compiled.
           //
@@ -2424,8 +2168,7 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
 
         run();
         </script>
-
-        <script>
+<script>
     // And afterwards we can use all the functionality defined in wasm.
     function doSearch() {
       let value = document.getElementById("searchBox").value;
@@ -2446,7 +2189,7 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
       }
     }
   </script>
-        <script>
+<script>
           // toggle cat modal view if catChooser icon is clicked
           $( ".catChooser" ).click(function() {
             $('#catModal').toggleClass('hidden');
@@ -2469,8 +2212,7 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
             $('#searchModal').toggleClass('hidden');
           });
         </script>
-
-        <script>
+<script>
           hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
             event.preventDefault();
             switch (handler.key) {
@@ -2501,8 +2243,7 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
               }
           };
         </script>
-
-        <script>
+<script>
           // on small screens, collapse navbar into a menu
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
@@ -2512,8 +2253,7 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
             }
           };
         </script>
-
-        <script>
+<script>
           // dark mode light mode switcheroo
           const light = "https://johnmathews.eu/theme/css/pygment-light.css"
           const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
@@ -2574,8 +2314,7 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
             }
           }
         </script>
-
-        <script>
+<script>
           // navbar hide on scroll
           var prevScrollPos = window.pageYOffset;
           window.onscroll = function() {
@@ -2590,16 +2329,14 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
             }
           }
         </script>
-
-  <script>
+<script>
     // mailing list subscribe button
     document.getElementById("signupButton").addEventListener("click", function(e) {
       $('#signupButton').removeClass('block').addClass('hidden')
       $('#subscribeBox').removeClass('hidden').addClass('block')
     });
   </script>
-
-  <script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -2623,7 +2360,6 @@ SZI0U/5/Fpw2hujbYZgAAAAASUVORK5CYII=
       };
     }
   </script>
-    </div>
-  </body>
-
+</div>
+</body>
 </html>
