@@ -163,12 +163,21 @@
           <span class="hidden sm:inline-block sm:align-top md:h-screen" aria-hidden="true">&#8203;</span>
           <div class="w-full lg:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <div class="py-1 px-1">
-                <input type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="demo" onkeyup="doSearch()">
-                <ul id="results" class="results text-lg text-bold text-gray-600">
-                </ul>
+              <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" onkeyup="doSearch()">
+              <div class="flex">
+                <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                  ctrl-k
+                </div>
+                or
+                <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                 /
+                </div>
               </div>
+              <ul id="results" class="results text-lg text-bold text-gray-600">
+              </ul>
             </div>
           </div>
+            </div>
         </div>
       </div>
       <div class="mx-auto w-full">
@@ -432,7 +441,7 @@ thinking differently if I read my bible more, but I don&rsquo;t know what those 
   <script>
     // And afterwards we can use all the functionality defined in wasm.
     function doSearch() {
-      let value = document.getElementById("demo").value;
+      let value = document.getElementById("searchBox").value;
       const arr = search(value, 10);
       let ul = document.getElementById("results");
       ul.innerHTML = "";
@@ -458,27 +467,34 @@ thinking differently if I read my bible more, but I don&rsquo;t know what those 
 
           $( "#searchButton" ).click(function() {
             $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
           });
           $( "#searchButton2" ).click(function() {
             $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
           });
           $( "#searchButton3" ).click(function() {
             $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
           });
 
           $( "#searchModalBackground" ).click(function() {
             $('#searchModal').toggleClass('hidden');
+            $("#searchBox").focus();
           });
         </script>
 
-        <script type="text/javascript">
-          hotkeys('ctrl+k,cmd+k,/', function (event, handler){
+        <script>
+          hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
+            event.preventDefault();
             switch (handler.key) {
               case 'ctrl+k': $('#searchModal').toggleClass('hidden');
                 break;
-              case 'cmd+k': $('#searchModal').toggleClass('hidden');
+              case 'command+k': $('#searchModal').toggleClass('hidden');
                 break;
               case '/': $('#searchModal').toggleClass('hidden');
+                break;
+              case 'esc': $('#searchModal').addClass('hidden');
                 break;
               default: alert(event);
             }
