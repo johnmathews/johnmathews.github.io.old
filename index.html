@@ -78,6 +78,31 @@
       </div>
     </div>
 
+    <div id="searchModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+      <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <span class="hidden sm:inline-block sm:align-top md:h-screen" aria-hidden="true">&#8203;</span>
+        <div class="w-full lg:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+          <div class="py-1 px-1">
+            <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" onkeyup="doSearch()">
+            <div class="flex">
+              <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                ctrl-k
+              </div>
+              or
+              <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                /
+              </div>
+            </div>
+            <ul id="results" class="results text-lg text-bold text-gray-600">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 
   <script>
     // set or update user preference for article category if it hasnt been set
@@ -93,16 +118,94 @@
     };
   </script>
 
+  <!-- Note the usage of `type=module` here as this is an ES6 module -->
+  <script defer type="module">
+    // Use ES module import syntax to import functionality from the module
+    // that we have compiled.
+    //
+    // Note that the `default` import is an initialization function which
+    // will "boot" the module and make it ready to use. Currently browsers
+    // don't support natively imported WebAssembly as an ES module, but
+    // eventually the manual initialization won't be required!
+    // import { search, default as init } from './tinysearch_engine.js';
+    import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
+    window.search = search;
 
+    async function run() {
+      // First up we need to actually load the wasm file, so we use the
+      // default export to inform it where the wasm file is located on the
+      // server, and then we wait on the returned promise to wait for the
+      // wasm to be loaded.
+      //
+      // Note that instead of a string here you can also pass in an instance
+      // of `WebAssembly.Module` which allows you to compile your own module.
+      // Also note that the promise, when resolved, yields the wasm module's
+      // exports which is the same as importing the `*_bg` module in other
+      // modes
+      await init('https://johnmathews.eu/tinysearch_engine_bg.wasm');
+    }
 
+    run();
+  </script>
 
+  <script>
+    // And afterwards we can use all the functionality defined in wasm.
+    function doSearch() {
+      let value = document.getElementById("searchBox").value;
+      const arr = search(value, 10);
+      let ul = document.getElementById("results");
+      ul.innerHTML = "";
 
+      for (i = 0; i < arr.length; i++) {
+        var li = document.createElement("li");
 
+        let elem = arr[i];
+        let elemlink = document.createElement('a');
+        elemlink.innerHTML = elem[0];
+        elemlink.setAttribute('href', elem[1]);
+        li.appendChild(elemlink);
 
+        ul.appendChild(li);
+      }
+    }
+  </script>
 
+  <script>
+    hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
+      event.preventDefault();
+      switch (handler.key) {
+        case 'ctrl+k':
+          $('#searchModal').toggleClass('hidden');
+          $('#searchBox').focus();
+          break;
+        case 'command+k':
+          $('#searchModal').toggleClass('hidden');
+          $('#searchBox').focus();
+          break;
+        case '/':
+          $('#searchModal').toggleClass('hidden');
+          $('#searchBox').focus();
+          break;
+        case 'esc':
+          $('#searchModal').addClass('hidden');
+          break;
+        default: alert(event);
+      }
+    });
 
+    $( "#searchModalBackground" ).click(function() {
+      $('#searchModal').toggleClass('hidden');
+    });
 
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27 || evt.keyCode == 17) {//27 is the code for escape
+            document.getElementById("searchBox").blur();
+            $('#searchModal').addClass('hidden');
+        }
+    };
 
+  </script>
 
   <script>
     // on small screens, collapse navbar into a menu
