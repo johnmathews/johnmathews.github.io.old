@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Tools</title><link href="https://johnmathews.eu/" rel="alternate"></link><link href="https://johnmathews.eu/feeds/technical/tools.atom.xml" rel="self"></link><id>https://johnmathews.eu/</id><updated>2021-03-04T14:44:00+01:00</updated><entry><title>More VIM notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"></link><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"></summary><content type="html">&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
+I&amp;rsquo;ve either copied or was more or less doing&amp;nbsp;already.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has the following gems that I&amp;rsquo;d like to start&amp;nbsp;using.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the&amp;nbsp;cursor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the&amp;nbsp;cursor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;[m&lt;/code&gt;, &lt;code&gt;]m&lt;/code&gt; - move to the start or end of a&amp;nbsp;method &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;@:&lt;/code&gt; - repeat the last&amp;nbsp;command&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:&amp;lt;C-f&amp;gt;&lt;/code&gt; - open command history&amp;nbsp;list&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; will indent a line. &lt;code&gt;.&lt;/code&gt; will repeat the operation, so &lt;code&gt;&amp;gt;&amp;gt;..&lt;/code&gt; would indent
+    a line 3&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;You can use this along with a count, which will do the indention for &lt;code&gt;n&lt;/code&gt; number
+of lines (with the current line being the top line). &lt;code&gt;3&amp;gt;&amp;gt;..&lt;/code&gt; will indent 3
+lines 3 blocks to the&amp;nbsp;right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;C-y&amp;gt;&lt;/code&gt; - moves screen up one line, and moves the cursor if it would go off
+    the&amp;nbsp;screen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;C-e&amp;gt;&lt;/code&gt; - moves the screen down one lines, and moves the cursor if the would
+    go off&amp;nbsp;screen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;C-f&amp;gt;&lt;/code&gt; - move screen down one page, with cursor at top of&amp;nbsp;screen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;C-b&amp;gt;&lt;/code&gt; - move screen up one page, with cursor at bottom of&amp;nbsp;screen&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Tools"></category></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"></link><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I&amp;rsquo;ve been feeling very comfortable with my Vim + Tmux setup recently.
+Navigating around shells and files isn&amp;rsquo;t taking much mental effort anymore.&amp;nbsp;Wohoo!&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s taken about 2 years of working full time with vim to get to the stage
+where the commands are so intuitive&amp;nbsp;that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I pepper text files outside of vim (email, notes, etc) with vim keys
+     accidentally - &lt;code&gt;j&lt;/code&gt;  &lt;code&gt;k&lt;/code&gt;  &lt;code&gt;x&lt;/code&gt; etc&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I can&amp;rsquo;t remember what the command is to do something if I&amp;rsquo;m not actually
+     doing it. When I need to do an action, I do it from muscle
+     memory and I only pay attention to the underlying key press if something
+     goes&amp;nbsp;wrong.&lt;/p&gt;
+&lt;p&gt;This is noticeable when trying to find an unbound key combination for some
+ new action, or when reading an article about vim and thinking &amp;ldquo;that&amp;rsquo;s new&amp;rdquo;
+ when actually I&amp;rsquo;ve been doing it without&amp;nbsp;noticing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A pleasant surprise has been that it doesn&amp;rsquo;t take much effort to
+     rebind a single command and retrain myself to use it. This is presumably
+     because the mental effort for all the other commands has become negligible.
+     In the early days, retraining a key combination took a lot more effort
+     because I was already making an effort to get used to doing things in&amp;nbsp;Vim.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I can work even when my vision is blurry (and my speech slurred and my head
+     heavy) because I can use text objects and navigation commands to get to
+     where I know text is. I&amp;rsquo;m not saying I &lt;em&gt;should&lt;/em&gt; work when I&amp;rsquo;m that tired,
+     but I can, if I&amp;rsquo;m already familiar with the&amp;nbsp;code/file.. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Tools"></category></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"></link><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"></summary><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from&amp;nbsp;stopping&lt;/h1&gt;
+&lt;p&gt;If you run a command in a terminal session and the terminal session is
+disconnected, the processes running in it will also be&amp;nbsp;terminated.&lt;/p&gt;
+&lt;p&gt;I discovered this last night when I was trying to download a ~500gb database
+overnight. I logged in this morning expecting to see a completed download, but
+realised I only had half the&amp;nbsp;file.&lt;/p&gt;
+&lt;h1 id="use-nohup-to-ignore-hup-signals"&gt;Use &lt;code&gt;nohup&lt;/code&gt; to ignore &lt;code&gt;HUP&lt;/code&gt; signals&lt;/h1&gt;
+&lt;p&gt;One solution to this seems to be to use &lt;code&gt;nohup&lt;/code&gt;, a command that
+ignores the &lt;code&gt;HUP&lt;/code&gt; signal. It stops your programme from stopping if the terminal
+session its running in is&amp;nbsp;stopped.&lt;/p&gt;
+&lt;p&gt;By convention, the &lt;code&gt;HUP&lt;/code&gt; signal is the method used by a terminal to warn
+dependent processes that it is about to&amp;nbsp;logout.&lt;/p&gt;
+&lt;p&gt;You probably want to run &lt;code&gt;nohup&lt;/code&gt; in the background. You might want to prevent
+it from creating &lt;code&gt;nohup.out&lt;/code&gt;. &lt;/p&gt;
+&lt;h1 id="close-or-redirect-fd0-fd2"&gt;Close or redirect fd0 -&amp;nbsp;fd2&lt;/h1&gt;
+&lt;p&gt;On Linux, if you run a command with &lt;code&gt;nohup&lt;/code&gt; then &lt;code&gt;nohup&lt;/code&gt; automatically closes
+&lt;code&gt;stdin&lt;/code&gt;. If you&amp;rsquo;re using MacOS or &lt;span class="caps"&gt;BSD&lt;/span&gt; this doesn&amp;rsquo;t automatically happen, so you
+might want to redirect it yourself. This is because if a background process
+tries to read anything from &lt;code&gt;stdin&lt;/code&gt; then it will pause itself and wait for you
+to bring it to the foreground &lt;code&gt;fg&lt;/code&gt; and type some input. This is probably a
+waste of&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;nohup&lt;/code&gt; detects that you have redirected &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; then it won&amp;rsquo;t
+create &lt;code&gt;nohup.out&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;As with all commands, if you put &lt;code&gt;&amp;amp;&lt;/code&gt; at the end of the command, it will run in
+the background. You can bring it to the foreground by running &lt;code&gt;fg&lt;/code&gt;, or see a
+list of jobs by running &lt;code&gt;jobs&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you redirect input to /dev/null by &lt;code&gt;&amp;lt;/dev/null&lt;/code&gt; you will stop the program
+from receiving keyboard (stdin) input, but you won&amp;rsquo;t prevent it from accessing
+the terminal directly. Also you haven&amp;rsquo;t removed the program from the shell&amp;rsquo;s
+process&amp;nbsp;group. &lt;/p&gt;
+&lt;h1 id="stopping-signals-using-disown"&gt;Stopping signals using &lt;code&gt;disown&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;If you want to remove a program from the shell&amp;rsquo;s process group, then
+immediately after you&amp;rsquo;ve run the command to start your programme, run &lt;code&gt;disown&lt;/code&gt;
+with no arguments. This will make the background process no longer associated
+with the shell job and it wont have any signals forwarded to it by the&amp;nbsp;shell.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;disown&lt;/code&gt;ed process gets nothing (no signals) sent to it by the shell. But
+without a &lt;code&gt;nohup&lt;/code&gt; it will still be sent a &lt;code&gt;HUP&lt;/code&gt; signal sent via other means,
+such as a manual &lt;code&gt;kill&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;nohup&lt;/code&gt;ed process will ignore any and all &lt;code&gt;HUP&lt;/code&gt; signal, no matter how they
+are&amp;nbsp;sent.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Tools"></category></entry><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"></link><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"></summary><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
+&lt;p&gt;In Linux everything is a file, including virtual devices. Processes
+(programmes) can request access to or from these&amp;nbsp;devices.&lt;/p&gt;
+&lt;p&gt;The only difference between these virtual device &amp;ldquo;files&amp;rdquo; and real files, is
+that for a virtual device the &lt;span class="caps"&gt;OS&lt;/span&gt; generates the data that goes into the file,
+instead of reading the data from&amp;nbsp;storage.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/dev/null&lt;/code&gt; is a virtual device that looks like a file and is used to write
+output into a black hole that is discarded, lost forever and never seen. It
+isn&amp;rsquo;t written to the&amp;nbsp;terminal.&lt;/p&gt;
+&lt;h2 id="file-descriptors"&gt;File&amp;nbsp;Descriptors&lt;/h2&gt;
+&lt;p&gt;File descriptors are integer values assigned to a&amp;nbsp;file. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;stdin&lt;/strong&gt; has a file descriptor of&amp;nbsp;0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stdout&lt;/strong&gt; has a file descriptor of&amp;nbsp;1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stderr&lt;/strong&gt; has a file descriptor of&amp;nbsp;2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Two outputs are generated whenever a &lt;span class="caps"&gt;CLI&lt;/span&gt; is run &lt;code&gt;stdout&lt;/code&gt; and
+&lt;code&gt;stderr&lt;/code&gt;. By default, both these data streams are associated with the
+terminal. You can use file descriptors to redirect&amp;nbsp;them.&lt;/p&gt;
+&lt;p&gt;If a command exits successfully, the exit status is&amp;nbsp;0.&lt;/p&gt;
+&lt;p&gt;If it exits unsuccessfully, the exit status will be something&amp;nbsp;else.&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t specify which file descriptor you want to use, bash will use
+&lt;code&gt;stdout&lt;/code&gt; by&amp;nbsp;default.&lt;/p&gt;
+&lt;p&gt;The following redirects &lt;code&gt;stdout&lt;/code&gt; away from the terminal and into &lt;code&gt;/dev/null&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;echo&lt;/span&gt; “Hello World” &amp;gt; log.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will redirect &lt;code&gt;stderr&lt;/code&gt; into a&amp;nbsp;file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ asdfadsa &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt; error.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you run a command that generates lots of error messages along with &amp;ldquo;good&amp;rdquo;
+messages, you can redirect all the error messages (&lt;code&gt;stderr&lt;/code&gt;) into &lt;code&gt;/dev/null&lt;/code&gt;
+so that you can only see the useful &lt;code&gt;stdout&lt;/code&gt; messages.&amp;nbsp;e.g.:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you want to run a command and only see the errors, (&lt;code&gt;stderr&lt;/code&gt;) then you can
+filter out all the &lt;code&gt;stdout&lt;/code&gt; by redirecting the &lt;code&gt;stdout&lt;/code&gt; messages to
+&lt;code&gt;/dev/null&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ping google.com &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly"&gt;Redirect all output into /dev/null If you want a command to run&amp;nbsp;quietly,&lt;/h2&gt;
+&lt;p&gt;Redirect all the output. The command below redirects &lt;code&gt;stdout&lt;/code&gt; to &lt;code&gt;/dev/null&lt;/code&gt;
+(the default file descriptor is 1 if it isn&amp;rsquo;t specified) and then redirects
+file descriptor 2 into file descriptor&amp;nbsp;1.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &amp;gt; /dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="read-input-from-a-file-instead-of-the-terminal"&gt;Read input from a file instead of the&amp;nbsp;terminal&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&amp;lt;infile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="direct-stderr-to-append-to-a-particular-file"&gt;Direct stderr to append to a particular&amp;nbsp;file&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&amp;gt;logfile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="combining-file-descriptors"&gt;Combining file&amp;nbsp;descriptors&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;2&amp;gt;&amp;amp;1&lt;/code&gt; means send &lt;code&gt;stderr&lt;/code&gt; wherever &lt;code&gt;stdout&lt;/code&gt; is going. This means that you&amp;rsquo;ve
+combined &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; into one data stream and you can&amp;rsquo;t separate them
+anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as you can &lt;code&gt;stdout&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="input"&gt;Input&lt;/h1&gt;
+&lt;p&gt;You can redirect &lt;code&gt;stdin&lt;/code&gt; similarly. If you run &lt;code&gt;&amp;lt;/dev/null&lt;/code&gt; then if the program
+attempt to read from &lt;code&gt;stdin&lt;/code&gt; then it will get&amp;nbsp;end-of-file. &lt;/p&gt;
+&lt;p&gt;The merge (or redirect) syntax (for example &lt;code&gt;&amp;lt;&amp;amp;2&lt;/code&gt;) won&amp;rsquo;t work, because you can
+only redirect in the same&amp;nbsp;direction.&lt;/p&gt;</content><category term="Technical/Tools"></category></entry></feed>
