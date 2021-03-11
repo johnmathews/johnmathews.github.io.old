@@ -1,6 +1,13 @@
 @tailwind base;
 
 
+/* embedded youtube */
+/* iframe { */
+/*   overflow: scroll; */
+/* } */
+
+
+
 /* search box results*/
 #results {
 	@apply border-2 border-white;
