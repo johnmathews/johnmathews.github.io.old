@@ -54,7 +54,7 @@
 </div>
 </div>
 <div class="lg:w-2/3 flex flex-col">
-<img alt="bridges and gates" class="image-process-large-photo mx-auto md:my-auto mx-3 lg:mx-0 md:w-5/6 xl:w-3/4" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="images/landing/derivatives/large-photo/800w/square.jpeg" srcset="images/landing/derivatives/large-photo/600w/square.jpeg 600w, images/landing/derivatives/large-photo/800w/square.jpeg 800w, images/landing/derivatives/large-photo/1600w/square.jpeg 1600w"/>
+<img alt="bridges and gates" class="image-process-large-photo mx-auto md:my-auto mx-3 lg:mx-0 md:w-5/6 xl:w-3/4" id="landingPhoto" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="derivatives/large-photo/800w/" srcset="derivatives/large-photo/600w/ 600w, derivatives/large-photo/800w/ 800w, derivatives/large-photo/1600w/ 1600w"/>
 </div>
 </div>
 <div class="hidden fixed z-10 inset-0 overflow-y-auto" id="searchModal">
@@ -219,5 +219,18 @@
         document.getElementsByClassName("night")[0].classList.add("hidden");
       }
     }
+  </script>
+<script>
+    images = [
+          'square.jpeg',
+          'bike.jpeg',
+          'roofs.jpeg',
+        ]
+    var image = images[Math.floor(Math.random() * images.length)];
+
+    newSrc = "images/landing/"+image.toString();
+
+    $('#landingPhoto').attr("src", newSrc.toString());
+    $('#landingPhoto').attr("srcset", newSrc.toString());
   </script>
 </html>

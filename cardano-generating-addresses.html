@@ -244,9 +244,11 @@ unused or it might not. Nevertheless, that address is now reserved for them,
 and no one else can use it. </p>
 <p>In this way, we might need to generate and maintain a list of thousands of
 addresses that are never used. Using ADDRESS_POOL_GAP for this seems like a bad solution. </p>
-<p>Fortunately, <a href="https://github.com/input-output-hk/cardano-addresses">Cardano-Addresses</a> has the answer, albeit in a fairly convoluted
-and obscured form. If you have the mnemonic that was used to generate a wallet
-originally, you can generate 2^31 unique addresses like so:</p>
+<p>Fortunately,
+<a href="https://github.com/input-output-hk/cardano-addresses">Cardano-Addresses</a> has
+the answer, albeit in a fairly convoluted and obscured form. If you have the
+mnemonic that was used to generate a wallet originally, you can generate 2^31
+unique addresses like so:</p>
 <p>Clone the repo and build the docker image:</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/input-output-hk/cardano-wallet 
 docker build -t cardano-address .
