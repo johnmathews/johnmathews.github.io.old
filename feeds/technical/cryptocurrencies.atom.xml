@@ -92,7 +92,7 @@ familiar with Docker-Compose, and know where to look, and what questions to ask
 &lt;p&gt;The &lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;Cardano Wallet&lt;/a&gt;
 repo&lt;sup id="sf-cardano-node-api-1-back"&gt;&lt;a class="simple-footnote" href="#sf-cardano-node-api-1" title="https://github.com/input-output-hk/cardano-wallet"&gt;1&lt;/a&gt;&lt;/sup&gt;
 contains almost all you need to get started. The command to run is:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up -d&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;This does a couple of things for you:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creates a Cardano node and begins syncing with the network&lt;/li&gt;
