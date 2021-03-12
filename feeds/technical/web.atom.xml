@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-01-19T10:32:00+01:00</updated><entry><title>Different Views For Different Users</title><link href="https://johnmathews.eu/different-views-for-different-users.html" rel="alternate"/><published>2021-01-19T10:32:00+01:00</published><updated>2021-01-19T10:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/different-views-for-different-users.html</id><summary type="html"/><content type="html">&lt;p&gt;This blog serves a variety of purposes. It’s partly a journal of how I’m
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-03-12T17:27:00+01:00</updated><entry><title>Adding Search</title><link href="https://johnmathews.eu/Adding-search.html" rel="alternate"/><published>2021-03-12T17:27:00+01:00</published><updated>2021-03-12T17:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-12:/Adding-search.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve added search to this blog. Results are generated as you type. Try it by
+typing &lt;code&gt;/&lt;/code&gt; or &lt;code&gt;ctrl-k&lt;/code&gt; or &lt;code&gt;cmd-k&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you look on the Pelican &lt;a href="https://github.com/pelican-plugins"&gt;plugins&lt;/a&gt; index
+you’ll see that &lt;a href="https://github.com/pelican-plugins/tipue-search"&gt;Tipue search&lt;/a&gt;
+is the only search tool with a ready-made Pelican plugin, but unfortunately the
+project seems to have died and the projects &lt;a href="https://tipue.com/"&gt;website&lt;/a&gt; is
+now something else.&lt;/p&gt;
+&lt;p&gt;But searching a static site must be quite a common need and googling for
+alternatives gave me a few choices. &lt;a href="https://lunrjs.com/"&gt;Lunr.js&lt;/a&gt; seems to be
+the most popular, but it also seemed fairly complicated and like it was
+probably more than I needed. I went with &lt;a href="https://github.com/tinysearch/tinysearch"&gt;Tiny
+Search&lt;/a&gt; because it seemed to do what
+I needed and was easy to setup. There’s even an example for
+Pelican blogs.&lt;/p&gt;
+&lt;p&gt;One hurdle to success was minimising the false positives. The default settings
+seem to prioritise keeping the size of the index small (tiny) over giving a
+good user experience. Maybe its because the amount of text on my site is
+significanly less, or more, than the typical use case. Either way, after
+checking the project’s issues on Github I found an issue that matched my
+problem perfectly. The solution is to increase the tiny_magic variable at build time.&lt;/p&gt;
+&lt;p&gt;According to the Readme, this requires using a container and building the index using &lt;code&gt;docker run...&lt;/code&gt;. Unfortunately
+the Dockerfile wouldn’t complete without errors. Checking the issues again and adding to the
+discussion resulted in an alternative Dockerfile being suggested, which works.
+Woohoo! I could then build the search index with a massive tiny_magic value (2048).&lt;/p&gt;
+&lt;p&gt;Then something weird happened. I write in Vim and I use &lt;code&gt;fzf&lt;/code&gt; to find and open
+files. I realised that &lt;code&gt;fzf&lt;/code&gt; had stopped working. After some investigating, I
+realised it was only not working in the blog project, and that &lt;code&gt;fzf.vim&lt;/code&gt; calls
+the &lt;code&gt;fzf&lt;/code&gt; &lt;span class="caps"&gt;CLI&lt;/span&gt; tool, which in turn calls the &lt;code&gt;ripgrep&lt;/code&gt; tool. The underlying
+issue was that &lt;code&gt;ripgrep&lt;/code&gt;  wasn’t working, and after a few hours (sob) of
+debugging, I found out that one of the things that makes &lt;code&gt;rg&lt;/code&gt; special is that
+it ignores stuff in your .gitignore file. Sneakily, and without me  noticing,
+the Docker image for constructing the tinysearch files had created a
+.gitignore file with a single entry. The entry was *, which selects
+everything. So &lt;code&gt;rg&lt;/code&gt; was ignoring everything, and giving no results. Which
+meant I couldn’t find and open files.&lt;/p&gt;
+&lt;p&gt;I still don’t know how (or which part of) the Dockerfile does this, so I’ve
+created a .gitignore-master file which contains the correct content, and
+after I generate a new search index I replace the new traitorous .gitignore
+with the contents of .gitignore-master. I’ll come back to it later
+when/if I have a better understanding of Dockerfile syntax, or Rust.&lt;/p&gt;
+&lt;p&gt;Adding search to the site made the content feel a lot closer and more
+accessible. Once it was working I immediately wanted to use some keyboard
+shortcuts to open the search box and select results. Kind of like
+&lt;a href="https://tailwindcss.com/"&gt;tailwindcss.com&lt;/a&gt; does it. It feels really fast and precise.&lt;/p&gt;
+&lt;p&gt;Googling for some jquery packages, and also some vanilla javaScript showed me
+enough to get things working. You can hit &lt;code&gt;/&lt;/code&gt; or &lt;code&gt;ctrl-k&lt;/code&gt; or &lt;code&gt;cmd-k&lt;/code&gt; and bring up a search box
+that populates results as you type!&lt;/p&gt;
+&lt;p&gt;Only whole words are matched unfortunately, but its still a super useful
+feature. The search index includes article content as well as article titles
+and categories. I’d like to tweak a few of the keyboard shortcut behaviours,
+and add the contents of various pages (which aren’t articles) to the search index.&lt;/p&gt;</content><category term="Technical/Web"/><category term="blog"/><category term="search"/><category term="tinysearch"/><category term="web"/></entry><entry><title>Different Views For Different Users</title><link href="https://johnmathews.eu/different-views-for-different-users.html" rel="alternate"/><published>2021-01-19T10:32:00+01:00</published><updated>2021-01-19T10:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/different-views-for-different-users.html</id><summary type="html"/><content type="html">&lt;p&gt;This blog serves a variety of purposes. It’s partly a journal of how I’m
 teaching myself to be a developer and a data scientist, and it’s also a
 personal blog, with articles about my interests and experiences.&lt;/p&gt;
 &lt;p&gt;It’s unlikely that anyone is interested in every type of article, and I’d
