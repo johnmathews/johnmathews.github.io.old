@@ -16,14 +16,21 @@
 <meta content=" summary_large_image " property="twitter:card"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content=" website " property="og:type"/>
-<link href="./extra/favicon.png" rel="icon"/>
-<link href="./None" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
 <link async="" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
 <link href="https://fonts.gstatic.com" rel="preconnect"/>
 <link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
 <script async="" crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script async="" src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-<link href="./theme/css/styles.css" rel="stylesheet">
+<script>
+          window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments); };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
 </link></head>
 <body class="h-screen bg-gray-100 dark:bg-black">
 <a class="" name="top"></a>
@@ -40,10 +47,10 @@
 <div class="lg:w-11/12 mx-auto lg:flex lg:flex-row lg:mt-10">
 <div class="lg:w-1/3 flex flex-wrap flex-col mx-auto my-10 md:my-20 lg:my-auto font-serif text-3xl leading-relaxed md:leading-normal dark:text-gray-200">
 <div class="lg:ml-10 flex flex-wrap lg:flex-col lg:space-y-10">
-<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="./blog.html">Blog</a>
-<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="./portfolio.html">Portfolio</a>
-<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="./about.html">About</a>
-<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="./experience.html">Experience</a>
+<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/experience.html">Experience</a>
 </div>
 </div>
 <div class="lg:w-2/3 flex flex-col">
@@ -98,7 +105,7 @@
     // don't support natively imported WebAssembly as an ES module, but
     // eventually the manual initialization won't be required!
     // import { search, default as init } from './tinysearch_engine.js';
-    import { search, default as init } from './tinysearch_engine.js';
+    import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
     window.search = search;
 
     async function run() {
@@ -112,7 +119,7 @@
       // Also note that the promise, when resolved, yields the wasm module's
       // exports which is the same as importing the `*_bg` module in other
       // modes
-      await init('./tinysearch_engine_bg.wasm');
+      await init('https://johnmathews.eu/tinysearch_engine_bg.wasm');
     }
 
     run();
@@ -138,86 +145,92 @@
       }
     }
   </script>
-<script defer="">
-    hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
-      event.preventDefault();
-      switch (handler.key) {
-        case 'ctrl+k':
-          $('#searchModal').toggleClass('hidden');
-          $('#searchBox').focus();
-          break;
-        case 'command+k':
-          $('#searchModal').toggleClass('hidden');
-          $('#searchBox').focus();
-          break;
-        case '/':
-          $('#searchModal').toggleClass('hidden');
-          $('#searchBox').focus();
-          break;
-        case 'esc':
-          $('#searchModal').addClass('hidden');
-          break;
-        default: alert(event);
-      }
-    });
+<script>
+    window.addEventListener('load', function() {
+          hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
+                event.preventDefault();
+                switch (handler.key) {
+                      case 'ctrl+k':
+                        $('#searchModal').toggleClass('hidden');
+                        $('#searchBox').focus();
+                        break;
+                      case 'command+k':
+                        $('#searchModal').toggleClass('hidden');
+                        $('#searchBox').focus();
+                        break;
+                      case '/':
+                        $('#searchModal').toggleClass('hidden');
+                        $('#searchBox').focus();
+                        break;
+                      case 'esc':
+                        $('#searchModal').addClass('hidden');
+                        break;
+                      default: alert(event);
+                    }
+              });
 
-    $( "#searchModalBackground" ).click(function() {
-      $('#searchModal').toggleClass('hidden');
-    });
+          $( "#searchModalBackground" ).click(function() {
+                $('#searchModal').toggleClass('hidden');
+              });
 
-    document.onkeydown = function(evt) {
-        evt = evt || window.event;
-        if (evt.keyCode == 27 || evt.keyCode == 17) {//27 is the code for escape
-            document.getElementById("searchBox").blur();
-            $('#searchModal').addClass('hidden');
-        }
-    };
+          document.onkeydown = function(evt) {
+                evt = evt || window.event;
+                if (evt.keyCode == 27 || evt.keyCode == 17) {//27 is the code for escape
+                      document.getElementById("searchBox").blur();
+                      $('#searchModal').addClass('hidden');
+                    }
+              };
 
+        });
   </script>
 <script>
-    // set dark theme based on local storage settings
-    if (localStorage.getItem('theme') === "dark") {
-      document.getElementById("baz").classList.add("dark");
-      document.getElementsByClassName("day")[0].classList.remove("hidden");
-      document.getElementsByClassName("night")[0].classList.add("hidden");
-    } else {
-      document.getElementById("baz").classList.remove("dark");
-      window.localStorage.setItem('theme', 'light');
-      document.getElementsByClassName("day")[0].classList.add("hidden");
-      document.getElementsByClassName("night")[0].classList.remove("hidden");
-    }
+    window.addEventListener('load', function() {
+          // set dark theme based on local storage settings
+          if (localStorage.getItem('theme') === "dark") {
+                document.getElementById("baz").classList.add("dark");
+                document.getElementsByClassName("day")[0].classList.remove("hidden");
+                document.getElementsByClassName("night")[0].classList.add("hidden");
+              } else {
+                    document.getElementById("baz").classList.remove("dark");
+                    window.localStorage.setItem('theme', 'light');
+                    document.getElementsByClassName("day")[0].classList.add("hidden");
+                    document.getElementsByClassName("night")[0].classList.remove("hidden");
+                  }
 
-    // change theme if theme switcher button is clicked
-    function modeSwitcher() {
-      if (localStorage.getItem('theme') === "dark") {
-        window.localStorage.setItem('theme', 'light');
-        $( "#baz" ).removeClass( "dark" );
+          // change theme if theme switcher button is clicked
+          function modeSwitcher() {
+                if (localStorage.getItem('theme') === "dark") {
+                      window.localStorage.setItem('theme', 'light');
+                      $( "#baz" ).removeClass( "dark" );
 
-        document.getElementsByClassName("day")[0].classList.add("hidden");
-        document.getElementsByClassName("night")[0].classList.remove("hidden");
-      } else {
-        window.localStorage.setItem('theme', 'dark');
-        $( "#baz" ).addClass( "dark" );
+                      document.getElementsByClassName("day")[0].classList.add("hidden");
+                      document.getElementsByClassName("night")[0].classList.remove("hidden");
+                    } else {
+                          window.localStorage.setItem('theme', 'dark');
+                          $( "#baz" ).addClass( "dark" );
 
-        document.getElementsByClassName("day")[0].classList.remove("hidden");
-        document.getElementsByClassName("night")[0].classList.add("hidden");
-      }
-    }
+                          document.getElementsByClassName("day")[0].classList.remove("hidden");
+                          document.getElementsByClassName("night")[0].classList.add("hidden");
+                        }
+              }
+        })
   </script>
 <script>
 
-    /* you need to keep this list in sync with the items in pages/landing-images.md*/
-    images = ['square', 'bike', 'roofs']
-    var imageName = images[Math.floor(Math.random() * images.length)];
+    window.addEventListener('load', function() {
+          /* you need to keep this list in sync with the items in pages/landing-images.md*/
+          images = ['square', 'bike', 'roofs']
+          var imageName = images[Math.floor(Math.random() * images.length)];
 
-    var srcSet = $('#landingPhoto').attr("srcset");
-    var src = $('#landingPhoto').attr("src");
+          var srcSet = $('#landingPhoto').attr("srcset");
+          var src = $('#landingPhoto').attr("src");
 
-    srcSet = srcSet.replaceAll('square', imageName)
-    src = src.replaceAll('square', imageName)
+          srcSet = srcSet.replaceAll('square', imageName)
+          src = src.replaceAll('square', imageName)
 
-    $('#landingPhoto').attr("srcset", srcSet);
-    $('#landingPhoto').attr("src", src);
+          $('#landingPhoto').attr("srcset", srcSet);
+          $('#landingPhoto').attr("src", src);
 
+        })
   </script>
 </html>
