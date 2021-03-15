@@ -54,7 +54,7 @@
 </div>
 </div>
 <div class="lg:w-2/3 flex flex-col">
-<img alt="random landing page image" class="image-process-large-photo mx-auto lg:mx-0 md:my-auto md:w-5/6 xl:w-3/4 2xl:w-2/3" id="landingPhoto" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/landing/derivatives/large-photo/800w/square.jpeg" srcset="/images/landing/derivatives/large-photo/600w/square.jpeg 600w, /images/landing/derivatives/large-photo/800w/square.jpeg 800w, /images/landing/derivatives/large-photo/1600w/square.jpeg 1600w"/>
+<img alt="random landing page image" class="image-process-large-photo mx-auto lg:mx-0 md:my-auto md:w-5/6 xl:w-3/4 2xl:w-2/3 hidden" id="landingPhoto" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/landing/derivatives/large-photo/800w/square.jpeg" srcset="/images/landing/derivatives/large-photo/600w/square.jpeg 600w, /images/landing/derivatives/large-photo/800w/square.jpeg 800w, /images/landing/derivatives/large-photo/1600w/square.jpeg 1600w"/>
 </div>
 </div>
 <div class="hidden fixed z-10 inset-0 overflow-y-auto" id="searchModal">
@@ -147,91 +147,88 @@
   </script>
 <script>
     window.addEventListener('load', function() {
-          hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
-                event.preventDefault();
-                switch (handler.key) {
-                      case 'ctrl+k':
-                        $('#searchModal').toggleClass('hidden');
-                        $('#searchBox').focus();
-                        break;
-                      case 'command+k':
-                        $('#searchModal').toggleClass('hidden');
-                        $('#searchBox').focus();
-                        break;
-                      case '/':
-                        $('#searchModal').toggleClass('hidden');
-                        $('#searchBox').focus();
-                        break;
-                      case 'esc':
-                        $('#searchModal').addClass('hidden');
-                        break;
-                      default: alert(event);
-                    }
-              });
+      hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
+        event.preventDefault();
+        switch (handler.key) {
+          case 'ctrl+k':
+            $('#searchModal').toggleClass('hidden');
+            $('#searchBox').focus();
+            break;
+          case 'command+k':
+            $('#searchModal').toggleClass('hidden');
+            $('#searchBox').focus();
+            break;
+          case '/':
+            $('#searchModal').toggleClass('hidden');
+            $('#searchBox').focus();
+            break;
+          case 'esc':
+            $('#searchModal').addClass('hidden');
+            break;
+          default: alert(event);
+        }
+      });
 
-          $( "#searchModalBackground" ).click(function() {
-                $('#searchModal').toggleClass('hidden');
-              });
+      $( "#searchModalBackground" ).click(function() {
+        $('#searchModal').toggleClass('hidden');
+      });
 
-          document.onkeydown = function(evt) {
-                evt = evt || window.event;
-                if (evt.keyCode == 27 || evt.keyCode == 17) {//27 is the code for escape
-                      document.getElementById("searchBox").blur();
-                      $('#searchModal').addClass('hidden');
-                    }
-              };
-
-        });
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27 || evt.keyCode == 17) {//27 is the code for escape
+              document.getElementById("searchBox").blur();
+              $('#searchModal').addClass('hidden');
+            }
+      };
+    });
   </script>
 <script>
     /* dark mode / light mode */
     // set dark theme based on local storage settings
     if (localStorage.getItem('theme') === "dark") {
-          console.log('theme is dark');
-          document.getElementById("baz").classList.add("dark");
-          document.getElementsByClassName("day")[0].classList.remove("hidden");
-          document.getElementsByClassName("night")[0].classList.add("hidden");
+      document.getElementById("baz").classList.add("dark");
+      document.getElementsByClassName("day")[0].classList.remove("hidden");
+      document.getElementsByClassName("night")[0].classList.add("hidden");
     } else {
-          console.log('theme is not dark (light)');
-          document.getElementById("baz").classList.remove("dark");
-          window.localStorage.setItem('theme', 'light');
-          document.getElementsByClassName("day")[0].classList.add("hidden");
-          document.getElementsByClassName("night")[0].classList.remove("hidden");
+      document.getElementById("baz").classList.remove("dark");
+      window.localStorage.setItem('theme', 'light');
+      document.getElementsByClassName("day")[0].classList.add("hidden");
+      document.getElementsByClassName("night")[0].classList.remove("hidden");
     }
 
     // change theme if theme switcher button is clicked
     function modeSwitcher() {
-          if (localStorage.getItem('theme') === "dark") {
-                window.localStorage.setItem('theme', 'light');
-                $( "#baz" ).removeClass( "dark" );
+      if (localStorage.getItem('theme') === "dark") {
+        window.localStorage.setItem('theme', 'light');
+        $( "#baz" ).removeClass( "dark" );
 
-                document.getElementsByClassName("day")[0].classList.add("hidden");
-                document.getElementsByClassName("night")[0].classList.remove("hidden");
-          } else {
-              window.localStorage.setItem('theme', 'dark');
-              $( "#baz" ).addClass( "dark" );
+        document.getElementsByClassName("day")[0].classList.add("hidden");
+        document.getElementsByClassName("night")[0].classList.remove("hidden");
+      } else {
+        window.localStorage.setItem('theme', 'dark');
+        $( "#baz" ).addClass( "dark" );
 
-              document.getElementsByClassName("day")[0].classList.remove("hidden");
-              document.getElementsByClassName("night")[0].classList.add("hidden");
-          }
+        document.getElementsByClassName("day")[0].classList.remove("hidden");
+        document.getElementsByClassName("night")[0].classList.add("hidden");
+      }
     }
   </script>
 <script>
     /* image */
     window.addEventListener('load', function() {
-          /* you need to keep this list in sync with the items in pages/landing-images.md*/
-          images = ['bike', 'square', 'roofs', 'roof-tower']
-          var imageName = images[Math.floor(Math.random() * images.length)];
+      /* you need to keep this list in sync with the items in pages/landing-images.md*/
+      images = ['bike', 'square', 'roofs', 'roof-tower']
+      var imageName = images[Math.floor(Math.random() * images.length)];
 
-          var srcSet = $('#landingPhoto').attr("srcset");
-          var src = $('#landingPhoto').attr("src");
+      var srcSet = $('#landingPhoto').attr("srcset");
+      var src = $('#landingPhoto').attr("src");
 
-          srcSet = srcSet.replaceAll('square', imageName)
-          src = src.replaceAll('square', imageName)
+      srcSet = srcSet.replaceAll('square', imageName)
+      src = src.replaceAll('square', imageName)
 
-          $('#landingPhoto').attr("srcset", srcSet);
-          $('#landingPhoto').attr("src", src);
-
-        })
+      $('#landingPhoto').attr("srcset", srcSet);
+      $('#landingPhoto').attr("src", src);
+      $('#landingPhoto').removeClass('hidden');
+    })
   </script>
 </html>
