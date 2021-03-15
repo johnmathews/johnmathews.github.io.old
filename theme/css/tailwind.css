@@ -224,7 +224,7 @@
 }
 
 .markdown h2 {
-  @apply leading-tight border-b border-gray-200 dark:border-gray-600 text-2xl font-semibold mb-4 mt-10 pb-2;
+  @apply leading-tight border-b border-gray-200 text-2xl font-semibold mb-4 mt-10 pb-2;
 }
 
 .markdown h3 {
