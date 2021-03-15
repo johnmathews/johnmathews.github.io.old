@@ -53,12 +53,12 @@
 /* codeblocks */
 /* jupyter notebook input and output cells - scroll instead of overflow */
 .markdown .highlight {
-	overflow: scroll;
+	overflow-x: auto;
   @apply mt-10 ;
 }
 
 .markdown .inner_cell {
-	overflow: scroll;
+	overflow: auto;
 }
 
 .prompt.input_prompt {
@@ -78,13 +78,23 @@
 }
 
 /* code blocks */
+
+.markdown pre {
+  @apply rounded p-4;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
 .markdown .highlight pre {
   @apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
-	overflow: scroll;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
 .markdown .highlight pre span {
 	@apply font-sans text-lg border-0 leading-normal;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
 .markdown .anchor-link {
@@ -101,17 +111,13 @@
   @apply font-mono text-base p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
 }
 
-.markdown pre {
-  @apply rounded p-4;
-}
-
 /* .markdown pre code { */
 /*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
 /* } */
 
 /* output_html */
 .markdown .output_html {
-	overflow-x: scroll;
+	overflow-x: auto;
   @apply dark:text-gray-900;
 	@apply bg-white dark:bg-gray-800;
 }
@@ -122,6 +128,8 @@
 
 .output_subarea.output_stream > pre{
 	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
 .markdown .output_execute_result {
@@ -144,7 +152,7 @@
 }
 /* matplotlib images overflow without making entire article scroll */
 .markdown .output_wrapper {
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 
 /* Additional vertical padding used by kbd tag. */

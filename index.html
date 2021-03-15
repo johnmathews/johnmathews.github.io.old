@@ -18,7 +18,7 @@
 <meta content=" website " property="og:type"/>
 <link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
 <link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
-<script src="https://use.fontawesome.com/d924bc9c60.js"></script>
+<link async="" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
 <link href="https://fonts.gstatic.com" rel="preconnect"/>
 <link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
 <script async="" crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -34,8 +34,8 @@
 </link></head>
 <body class="h-screen bg-gray-100 dark:bg-black">
 <a class="" name="top"></a>
-<div class="p-2">
-<button aria-label="themeToggle" class="" id="theme-toggle" onclick="modeSwitcher()">
+<div>
+<button aria-label="themeToggle" class="p-2" id="theme-toggle" onclick="modeSwitcher()">
 <div class="day modeIcon">
 <i class="far fa-lightbulb fa-lg"></i>
 </div>
@@ -44,8 +44,8 @@
 </div>
 </button>
 </div>
-<div class="lg:w-11/12 mx-auto lg:flex lg:flex-row lg:mt-10">
-<div class="lg:w-1/3 flex flex-wrap flex-col mx-auto my-10 md:my-20 lg:my-auto font-serif text-3xl leading-relaxed md:leading-normal dark:text-gray-200">
+<div class="lg:w-11/12 mx-auto lg:flex lg:flex-row lg:mt-10 2xl:mt-3">
+<div class="lg:w-1/3 flex flex-wrap flex-col mx-auto my-10 md:my-20 lg:my-auto 2xl:pl-20 font-serif text-3xl leading-relaxed md:leading-normal dark:text-gray-200">
 <div class="lg:ml-10 flex flex-wrap lg:flex-col lg:space-y-10">
 <a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/blog.html">Blog</a>
 <a class="mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
@@ -54,7 +54,7 @@
 </div>
 </div>
 <div class="lg:w-2/3 flex flex-col">
-<img alt="random landing page image" class="image-process-large-photo mx-auto lg:mx-0 md:my-auto md:w-5/6 xl:w-3/4" id="landingPhoto" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/landing/derivatives/large-photo/800w/square.jpeg" srcset="/images/landing/derivatives/large-photo/600w/square.jpeg 600w, /images/landing/derivatives/large-photo/800w/square.jpeg 800w, /images/landing/derivatives/large-photo/1600w/square.jpeg 1600w"/>
+<img alt="random landing page image" class="image-process-large-photo mx-auto lg:mx-0 md:my-auto md:w-5/6 xl:w-3/4 2xl:w-2/3" id="landingPhoto" sizes="(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw" src="/images/landing/derivatives/large-photo/800w/square.jpeg" srcset="/images/landing/derivatives/large-photo/600w/square.jpeg 600w, /images/landing/derivatives/large-photo/800w/square.jpeg 800w, /images/landing/derivatives/large-photo/1600w/square.jpeg 1600w"/>
 </div>
 </div>
 <div class="hidden fixed z-10 inset-0 overflow-y-auto" id="searchModal">
@@ -184,42 +184,43 @@
         });
   </script>
 <script>
-    window.addEventListener('load', function() {
-          // set dark theme based on local storage settings
+    /* dark mode / light mode */
+    // set dark theme based on local storage settings
+    if (localStorage.getItem('theme') === "dark") {
+          console.log('theme is dark');
+          document.getElementById("baz").classList.add("dark");
+          document.getElementsByClassName("day")[0].classList.remove("hidden");
+          document.getElementsByClassName("night")[0].classList.add("hidden");
+    } else {
+          console.log('theme is not dark (light)');
+          document.getElementById("baz").classList.remove("dark");
+          window.localStorage.setItem('theme', 'light');
+          document.getElementsByClassName("day")[0].classList.add("hidden");
+          document.getElementsByClassName("night")[0].classList.remove("hidden");
+    }
+
+    // change theme if theme switcher button is clicked
+    function modeSwitcher() {
           if (localStorage.getItem('theme') === "dark") {
-                document.getElementById("baz").classList.add("dark");
-                document.getElementsByClassName("day")[0].classList.remove("hidden");
-                document.getElementsByClassName("night")[0].classList.add("hidden");
-              } else {
-                    document.getElementById("baz").classList.remove("dark");
-                    window.localStorage.setItem('theme', 'light');
-                    document.getElementsByClassName("day")[0].classList.add("hidden");
-                    document.getElementsByClassName("night")[0].classList.remove("hidden");
-                  }
+                window.localStorage.setItem('theme', 'light');
+                $( "#baz" ).removeClass( "dark" );
 
-          // change theme if theme switcher button is clicked
-          function modeSwitcher() {
-                if (localStorage.getItem('theme') === "dark") {
-                      window.localStorage.setItem('theme', 'light');
-                      $( "#baz" ).removeClass( "dark" );
+                document.getElementsByClassName("day")[0].classList.add("hidden");
+                document.getElementsByClassName("night")[0].classList.remove("hidden");
+          } else {
+              window.localStorage.setItem('theme', 'dark');
+              $( "#baz" ).addClass( "dark" );
 
-                      document.getElementsByClassName("day")[0].classList.add("hidden");
-                      document.getElementsByClassName("night")[0].classList.remove("hidden");
-                    } else {
-                          window.localStorage.setItem('theme', 'dark');
-                          $( "#baz" ).addClass( "dark" );
-
-                          document.getElementsByClassName("day")[0].classList.remove("hidden");
-                          document.getElementsByClassName("night")[0].classList.add("hidden");
-                        }
-              }
-        })
+              document.getElementsByClassName("day")[0].classList.remove("hidden");
+              document.getElementsByClassName("night")[0].classList.add("hidden");
+          }
+    }
   </script>
 <script>
-
+    /* image */
     window.addEventListener('load', function() {
           /* you need to keep this list in sync with the items in pages/landing-images.md*/
-          images = ['square', 'bike', 'roofs', 'roof-tower']
+          images = ['bike', 'square', 'roofs', 'roof-tower']
           var imageName = images[Math.floor(Math.random() * images.length)];
 
           var srcSet = $('#landingPhoto').attr("srcset");
