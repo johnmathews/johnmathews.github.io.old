@@ -12,7 +12,7 @@
 <meta content="Python Notes -  JohnMathews.eu " name="title"/>
 <meta content="Python Notes" property="og:title"/>
 <meta content="Python Notes" property="twitter:title"/>
-<meta content="  " name="keywords"/>
+<meta content=" learning notes,python " name="keywords"/>
 <meta content="John Mathews" name="author"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content=" __call__() In Python, every time you call a function or method such as my_function() or my_class.my_method() the interpreter will replace the ( with .__call__( &gt;&gt;&gt; def my_function(x): &gt;&gt;&gt; return... " name="description"/>
@@ -233,7 +233,7 @@
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix</span> <span class="o">+</span> <span class="n">message</span>
 </pre></div>
-<p>Then use prefixer like this:</p>
+<p>Then use <em>prefixer</em> like this:</p>
 <div class="highlight"><pre><span></span>&gt;&gt;&gt; <span class="nv">simonsays</span> <span class="o">=</span> Prefixer<span class="o">(</span><span class="s2">"Simon says: "</span><span class="o">)</span>
 &gt;&gt;&gt; simonsays<span class="o">(</span><span class="s2">"jump up high!"</span><span class="o">)</span>
 <span class="s1">'Simon says: jump up high!'</span>
@@ -243,9 +243,11 @@
 <h1 id="there-should-be-one-and-preferably-only-one-obvious-way-to-do-something">There should be one, and preferably only one, obvious way to do something</h1>
 <p>It’s in the ‘zen of Python’, which is a set of guidelines that help make
 design decisions. It’s a choice that Python made, and other languages do it differently.</p>
-<p>It applies more to the idiom level than the design pattern level. It applies
-even less at the architectural level where there can be several equally good
-ways of organizing business logic and data representations.</p>
+<p>There are different
+<a href="https://johnmathews.eu/python-notes.html#levels-of-python-code">levels</a> to
+languages and this applies more to the idiom level than the design pattern
+level. It applies even less at the architectural level where there can be
+several equally good ways of organizing business logic and data representations.</p>
 <p>Perl has the “<span class="caps">TMTOWTDI</span>” (tim towtdi) principle - “There’s More Than One Way To Do
 It”. Perl’s philosophy is to give users more than one way to do something.</p>
 </div>
