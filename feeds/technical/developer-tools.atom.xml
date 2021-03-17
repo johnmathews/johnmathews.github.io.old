@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-03-04T14:44:00+01:00</updated><entry><title>More VIM notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-03-17T09:12:00+01:00</updated><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
+&lt;p&gt;In Python, every time you call a function or method such as &lt;code&gt;my_function()&lt;/code&gt; or
+&lt;code&gt;my_class.my_method()&lt;/code&gt; the interpreter will replace the &lt;code&gt;(&lt;/code&gt; with
+&lt;code&gt;.__call__(&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;my_function&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__call__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Prefixer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+       &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;prefix&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__call__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+       &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then use prefixer like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;&amp;gt;&amp;gt; &lt;span class="nv"&gt;simonsays&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Prefixer&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Simon says: "&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; simonsays&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"jump up high!"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="s1"&gt;'Simon says: jump up high!'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Every time you call a function or method, you’re really just calling a built in
+&lt;code&gt;__call__&lt;/code&gt; method.&lt;/p&gt;
+&lt;h1 id="there-should-be-one-and-preferably-only-one-obvious-way-to-do-something"&gt;There should be one, and preferably only one, obvious way to do something&lt;/h1&gt;
+&lt;p&gt;It’s in the ‘zen of Python’, which is a set of guidelines that help make
+design decisions. It’s a choice that Python made, and other languages do it differently.&lt;/p&gt;
+&lt;p&gt;It applies more to the idiom level than the design pattern level. It applies
+even less at the architectural level where there can be several equally good
+ways of organizing business logic and data representations.&lt;/p&gt;
+&lt;p&gt;Perl has the “&lt;span class="caps"&gt;TMTOWTDI&lt;/span&gt;” (tim towtdi) principle - “There’s More Than One Way To Do
+It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>More VIM notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
 I’ve either copied or was more or less doing already.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has the following gems that I’d like to start using.&lt;/p&gt;
 &lt;ul&gt;
