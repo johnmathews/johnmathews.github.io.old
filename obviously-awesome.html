@@ -47,6 +47,14 @@
 <script async="">
         let theme = localStorage.getItem('theme');
       </script>
+<script>
+        // dark mode light mode switcheroo
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+      </script>
+<script src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script src="https://johnmathews.eu/theme/js/themeChooser.js" type="text/javascript"></script>
+<script src="https://johnmathews.eu/theme/js/search.js" type="text/javascript"></script>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
       #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
@@ -66,7 +74,7 @@
 <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
 </div>
 <div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" onclick="modeSwitcher()">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1" onclick="">
 <div class="day modeIcon">
 <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
 </div>
@@ -93,7 +101,7 @@
 <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
 <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
 <div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" onclick="modeSwitcher()">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3" onclick="">
 <div class="day modeIcon">
 <i class="far fa-lightbulb fa-2x"></i>
 </div>
@@ -172,7 +180,7 @@
 <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
 <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
 <div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" onclick="modeSwitcher()">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2" onclick="">
 <div class="day modeIcon">
 <i class="far fa-lightbulb fa-lg"></i>
 </div>
@@ -426,81 +434,11 @@
         run();
         </script>
 <script>
-    // And afterwards we can use all the functionality defined in wasm.
-    function doSearch() {
-      let value = document.getElementById("searchBox").value;
-      const arr = search(value, 10);
-      let ul = document.getElementById("results");
-      ul.innerHTML = "";
-
-      for (i = 0; i < arr.length; i++) {
-        var li = document.createElement("li");
-
-        let elem = arr[i];
-        let elemlink = document.createElement('a');
-        elemlink.innerHTML = elem[0];
-        elemlink.setAttribute('href', elem[1]);
-        li.appendChild(elemlink);
-
-        ul.appendChild(li);
-      }
-    }
-  </script>
-<script>
           // toggle cat modal view if catChooser icon is clicked
           $( ".catChooser" ).click(function() {
             $('#catModal').toggleClass('hidden');
           });
 
-          $( "#searchButton" ).click(function() {
-            $('#searchModal').toggleClass('hidden');
-            $("#searchBox").focus();
-          });
-          $( "#searchButton2" ).click(function() {
-            $('#searchModal').toggleClass('hidden');
-            $("#searchBox").focus();
-          });
-          $( "#searchButton3" ).click(function() {
-            $('#searchModal').toggleClass('hidden');
-            $("#searchBox").focus();
-          });
-
-          $( "#searchModalBackground" ).click(function() {
-            $('#searchModal').toggleClass('hidden');
-          });
-        </script>
-<script>
-          hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
-            event.preventDefault();
-            switch (handler.key) {
-              case 'ctrl+k':
-                $('#searchModal').toggleClass('hidden');
-                $('#searchBox').focus();
-                break;
-              case 'command+k':
-                $('#searchModal').toggleClass('hidden');
-                $('#searchBox').focus();
-                break;
-              case '/':
-                $('#searchModal').toggleClass('hidden');
-                $('#searchBox').focus();
-                break;
-              case 'esc':
-                $('#searchModal').addClass('hidden');
-                break;
-              default: alert(event);
-            }
-          });
-
-          document.onkeydown = function(evt) {
-              evt = evt || window.event;
-              if (evt.keyCode == 27) {//27 is the code for escape
-                  document.getElementById("searchBox").blur();
-                  $('#searchModal').addClass('hidden');
-              }
-          };
-        </script>
-<script>
           // on small screens, collapse navbar into a menu
           document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
@@ -509,84 +447,6 @@
               navToggle.item(i).classList.toggle("hidden");
             }
           };
-        </script>
-<script>
-          // dark mode light mode switcheroo
-          const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-          const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-
-          // swap out pygment CSS files based on dark/light theme
-          function changePygmentsCSS(existing, updated) {
-            var PygmentCSS = document.getElementById("PygmentCSS");
-            PygmentCSS.setAttribute("href", updated);
-          }
-
-
-          // set dark theme based on local storage settings
-          if (localStorage.getItem('theme') === "dark") {
-            document.getElementById("baz").classList.add("dark");
-            document.getElementsByClassName("day")[0].classList.remove("hidden");
-            document.getElementsByClassName("night")[0].classList.add("hidden");
-            document.getElementsByClassName("day")[1].classList.remove("hidden");
-            document.getElementsByClassName("night")[1].classList.add("hidden");
-            document.getElementsByClassName("day")[2].classList.remove("hidden");
-            document.getElementsByClassName("night")[2].classList.add("hidden");
-            changePygmentsCSS(light, dark);
-          } else {
-            document.getElementById("baz").classList.remove("dark");
-            window.localStorage.setItem('theme', 'light');
-            document.getElementsByClassName("day")[0].classList.add("hidden");
-            document.getElementsByClassName("night")[0].classList.remove("hidden");
-            document.getElementsByClassName("day")[1].classList.add("hidden");
-            document.getElementsByClassName("night")[1].classList.remove("hidden");
-            document.getElementsByClassName("day")[2].classList.add("hidden");
-            document.getElementsByClassName("night")[2].classList.remove("hidden");
-            changePygmentsCSS(dark, light);
-          }
-
-          // change theme if theme switcher button is clicked
-          function modeSwitcher() {
-            if (localStorage.getItem('theme') === "dark") {
-              window.localStorage.setItem('theme', 'light');
-              $( "#baz" ).removeClass( "dark" );
-              changePygmentsCSS(dark, light);
-
-              document.getElementsByClassName("day")[0].classList.add("hidden");
-              document.getElementsByClassName("night")[0].classList.remove("hidden");
-              document.getElementsByClassName("day")[1].classList.add("hidden");
-              document.getElementsByClassName("night")[1].classList.remove("hidden");
-              document.getElementsByClassName("day")[2].classList.add("hidden");
-              document.getElementsByClassName("night")[2].classList.remove("hidden");
-            } else {
-              window.localStorage.setItem('theme', 'dark');
-              $( "#baz" ).addClass( "dark" );
-              changePygmentsCSS(light, dark);
-
-              document.getElementsByClassName("day")[0].classList.remove("hidden");
-              document.getElementsByClassName("night")[0].classList.add("hidden");
-              document.getElementsByClassName("day")[1].classList.remove("hidden");
-              document.getElementsByClassName("night")[1].classList.add("hidden");
-              document.getElementsByClassName("day")[2].classList.remove("hidden");
-              document.getElementsByClassName("night")[2].classList.add("hidden");
-            }
-
-            // TODO: close the hamburge menu after dark mode is clicked
-        }
-        </script>
-<script>
-          // navbar hide on scroll
-          var prevScrollPos = window.pageYOffset;
-          window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos > 50) {
-              if (prevScrollPos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-              } else {
-                document.getElementById("navbar").style.top = "-100px";
-              }
-              prevScrollPos = currentScrollPos;
-            }
-          }
         </script>
 <script>
     // mailing list subscribe button
