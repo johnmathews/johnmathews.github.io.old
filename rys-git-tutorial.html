@@ -357,21 +357,6 @@
         run();
         </script>
 <script>
-          // toggle cat modal view if catChooser icon is clicked
-          $( ".catChooser" ).click(function() {
-            $('#catModal').toggleClass('hidden');
-          });
-
-          // on small screens, collapse navbar into a menu
-          document.getElementById("hamburger").onclick = function toggleMenu() {
-            const navToggle = document.getElementsByClassName("toggle");
-            for (let i = 0; i < navToggle.length; i++) {
-              console.log(navToggle.item(i));
-              navToggle.item(i).classList.toggle("hidden");
-            }
-          };
-        </script>
-<script>
     // mailing list subscribe button
     document.getElementById("signupButton").addEventListener("click", function(e) {
       $('#signupButton').removeClass('block').addClass('hidden')

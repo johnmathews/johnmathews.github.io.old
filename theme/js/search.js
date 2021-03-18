@@ -66,4 +66,3 @@ function doSearch() {
 }
 
 $('#searchBox').on('keyup', doSearch);
-console.log('search.js is loaded!');

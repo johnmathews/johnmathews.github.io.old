@@ -15,7 +15,6 @@ $( document ).ready(function() {
         document.getElementById("hamburger").onclick = function toggleMenu() {
             const navToggle = document.getElementsByClassName("toggle");
             for (let i = 0; i < navToggle.length; i++) {
-                console.log(navToggle.item(i));
                 navToggle.item(i).classList.toggle("hidden");
             }
         };
@@ -29,14 +28,16 @@ $( document ).ready(function() {
         for (let i = 0; i < dayElement.length; i++) {
           dayElement.item(i).classList.remove("hidden");
         }
+
         const nightElement = document.getElementsByClassName("night");
         for (let i = 0; i < nightElement.length; i++) {
-          dayElement.item(i).classList.add("hidden");
+          nightElement.item(i).classList.add("hidden");
         }
 
         changePygmentsCSS(light, dark);
 
     } else {
+
         document.getElementById("baz").classList.remove("dark");
         window.localStorage.setItem('theme', 'light');
 
@@ -44,9 +45,10 @@ $( document ).ready(function() {
         for (let i = 0; i < dayElement.length; i++) {
           dayElement.item(i).classList.add("hidden");
         }
+
         const nightElement = document.getElementsByClassName("night");
         for (let i = 0; i < nightElement.length; i++) {
-          dayElement.item(i).classList.remove("hidden");
+          nightElement.item(i).classList.remove("hidden");
         }
 
         changePygmentsCSS(dark, light);
@@ -54,7 +56,6 @@ $( document ).ready(function() {
 
     // change theme if theme switcher button is clicked
     function modeSwitcher() {
-        console.log('called!');
         if (localStorage.getItem('theme') === "dark") {
             window.localStorage.setItem('theme', 'light');
             $( "#baz" ).removeClass( "dark" );
@@ -66,7 +67,7 @@ $( document ).ready(function() {
             }
             const nightElement = document.getElementsByClassName("night");
             for (let i = 0; i < nightElement.length; i++) {
-              dayElement.item(i).classList.remove("hidden");
+              nightElement.item(i).classList.remove("hidden");
             }
 
         } else {
@@ -80,7 +81,7 @@ $( document ).ready(function() {
             }
             const nightElement = document.getElementsByClassName("night");
             for (let i = 0; i < nightElement.length; i++) {
-              dayElement.item(i).classList.add("hidden");
+              nightElement.item(i).classList.add("hidden");
             }
         }
 
@@ -92,5 +93,4 @@ $( document ).ready(function() {
     $( "#modeSwitcher2" ).click(modeSwitcher);
     $( "#modeSwitcher3" ).click(modeSwitcher);
 
-    console.log( "ready!" );
 });
