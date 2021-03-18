@@ -11,3 +11,5 @@ window.onscroll = function () {
     prevScrollPos = currentScrollPos
   }
 }
+
+console.log('navbar.js is loaded!');

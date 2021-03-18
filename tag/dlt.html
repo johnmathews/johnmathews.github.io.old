@@ -55,6 +55,7 @@
 <script src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
 <script src="https://johnmathews.eu/theme/js/themeChooser.js" type="text/javascript"></script>
 <script src="https://johnmathews.eu/theme/js/search.js" type="text/javascript"></script>
+<script src="https://johnmathews.eu/theme/js/categoryChooser.js" type="text/javascript"></script>
 </link></link></head>
 <body class="dark:bg-black">
 <a class="pt-20 mt-20" name="top"></a>
@@ -298,80 +299,33 @@
             }
           };
         </script>
-<script>
-    // show catChoosr on blog index page
-    $( ".catChooser" ).removeClass('hidden')
+<script defer="" type="module">
+    // Use ES module import syntax to import functionality from the module
+    // that we have compiled.
+    //
+    // Note that the `default` import is an initialization function which
+    // will "boot" the module and make it ready to use. Currently browsers
+    // don't support natively imported WebAssembly as an ES module, but
+    // eventually the manual initialization won't be required!
+    // import { search, default as init } from './tinysearch_engine.js';
+    import { search, default as init } from 'https://johnmathews.eu/tinysearch_engine.js';
+    window.search = search;
 
-    $( "#sideBarChooseBoth" ).click(chooseBoth);
-    $( "#sideBarChooseTechnical" ).click(chooseTechnical);
-    $( "#sideBarChooseNonTechnical" ).click(chooseNonTechnical);
-
-    // check if a category choice is present
-    if (localStorage.getItem('categoryChoice') === "technical") {
-      $('.nonTechnical').addClass('hidden');
-      $('#chooseBoth').removeClass('bg-yellow-500');
-      $('#chooseTechnical').addClass('bg-yellow-500');
-      $('#chooseNonTechnical').removeClass('bg-yellow-500');
-
-    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
-      $('.technical').addClass('hidden');
-      $('#chooseBoth').removeClass('bg-yellow-500');
-      $('#chooseTechnical').removeClass('bg-yellow-500');
-      $('#chooseNonTechnical').addClass('bg-yellow-500');
-
-    } else if (localStorage.getItem('categoryChoice') === "all") {
-      $('#chooseBoth').addClass('bg-yellow-500');
-      $('#chooseTechnical').removeClass('bg-yellow-500');
-      $('#chooseNonTechnical').removeClass('bg-yellow-500');
+    async function run() {
+      // First up we need to actually load the wasm file, so we use the
+      // default export to inform it where the wasm file is located on the
+      // server, and then we wait on the returned promise to wait for the
+      // wasm to be loaded.
+      //
+      // Note that instead of a string here you can also pass in an instance
+      // of `WebAssembly.Module` which allows you to compile your own module.
+      // Also note that the promise, when resolved, yields the wasm module's
+      // exports which is the same as importing the `*_bg` module in other
+      // modes
+      await init('https://johnmathews.eu/tinysearch_engine_bg.wasm');
     }
 
-    // choosing which articles to make visible based on choice in cat modal
-    function chooseBoth() {
-      window.localStorage.setItem('categoryChoice', 'all');
-      $('.technical').removeClass('hidden');
-      $('.nonTechnical').removeClass('hidden');
-
-      $('#chooseBoth').addClass('bg-yellow-500');
-      $('#chooseTechnical').removeClass('bg-yellow-500');
-      $('#chooseNonTechnical').removeClass('bg-yellow-500');
-
-      $('#catModal').addClass('hidden');
-    }
-
-    function chooseTechnical(){
-      console.log('function choosetechnical');
-      window.localStorage.setItem('categoryChoice', 'technical');
-      $('.technical').removeClass('hidden');
-      $('.nonTechnical').addClass('hidden');
-
-      $('#chooseBoth').removeClass('bg-yellow-500');
-      $('#chooseTechnical').addClass('bg-yellow-500');
-      $('#chooseNonTechnical').removeClass('bg-yellow-500');
-
-      $('#catModal').addClass('hidden');
-    };
-
-    function chooseNonTechnical() {
-      window.localStorage.setItem('categoryChoice', 'nonTechnical');
-      $('.nonTechnical').removeClass('hidden');
-      $('.technical').addClass('hidden');
-
-      $('#chooseBoth').removeClass('bg-yellow-500');
-      $('#chooseTechnical').removeClass('bg-yellow-500');
-      $('#chooseNonTechnical').addClass('bg-yellow-500');
-
-      $('#catModal').addClass('hidden');
-    }
-
-    $( "#chooseBoth" ).click(chooseBoth);
-    $( "#chooseTechnical" ).click(chooseTechnical);
-    $( "#chooseNonTechnical" ).click(chooseNonTechnical);
-
-    // hide cat modal if its clicked.
-    // must be at bottom
-    $( "#catModal" ).click(function() {
-      $('#catModal').toggleClass('hidden');
-    });
+    run();
   </script>
 </div>
 </body>
