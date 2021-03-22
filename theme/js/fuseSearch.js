@@ -7,6 +7,9 @@ async function get() {
 
 var searchIndex;
 
+var resultsLength = 0;
+window.focussedResult = -1;
+
 (async () => {
   searchIndex = await get()
   const options = {
@@ -31,6 +34,7 @@ $( document ).ready(function() {
 
   // show search modal if link is clicked
   function showFuseSearch() {
+    window.focussedResult = -1;
     $('#fuseModal').toggleClass('hidden');
     $('#searchBox').focus();
   }
@@ -45,18 +49,21 @@ $( document ).ready(function() {
     $('#fuseModal').toggleClass('hidden');
   });
 
-  hotkeys('ctrl+k,command+k,/,esc', function (event, handler){
+  hotkeys('ctrl+k,command+k,/,esc,return', function (event, handler){
     event.preventDefault();
     switch (handler.key) {
       case 'ctrl+k':
+        window.focussedResult = -1;
         $('#fuseModal').toggleClass('hidden');
         $('#searchBox').focus();
         break;
       case 'command+k':
+        window.focussedResult = -1;
         $('#fuseModal').toggleClass('hidden');
         $('#searchBox').focus();
         break;
       case '/':
+        window.focussedResult = -1;
         $('#fuseModal').toggleClass('hidden');
         $('#searchBox').focus();
         break;
@@ -64,9 +71,33 @@ $( document ).ready(function() {
         document.getElementById("searchBox").blur();
         $('#fuseModal').addClass('hidden');
         break;
-      default: alert(event);
     }
   });
+
+  function incrementFocus(b){
+    if (!$('#fuseModal').hasClass('hidden') && resultsLength > 0) {
+      if (b == true){
+        if (window.focussedResult < resultsLength - 1) {
+          window.focussedResult++ ;
+        } else {
+          window.focussedResult = 0;
+        };
+      } else if (b == false){
+        if (window.focussedResult > 0) {
+          window.focussedResult-- ;
+        } else {
+          window.focussedResult = resultsLength - 1 ;
+        };
+      }
+    }
+  };
+
+  function focussResult (n) {
+    // searchbox can be open with no results, check if there are results
+    if (resultsLength > 0){
+      $("#results > li").eq(n).find("div").attr("id", "selected");
+    }
+  };
 
   // need this in addition to hotkeys if the search box is in focus
   document.onkeydown = function(evt) {
@@ -74,33 +105,45 @@ $( document ).ready(function() {
     if (evt.keyCode == 27) { //27 is the code for escape
       document.getElementById("searchBox").blur();
       $('#fuseModal').addClass('hidden');
-    }
+    };
+    if (evt.keyCode == 40) { // down arrow
+      incrementFocus(true);
+    };
+    if (evt.keyCode == 38) { // up arrow
+      incrementFocus(false);
+    };
+    if (evt.keyCode == 13) { // return
+      if (window.focussedResult >= 0){
+        $("#selected").trigger("click");
+      };
+    };
   };
-
 
   // whenever a key is pressed with searchbox in focus, do a search
   function doSearch(fuse) {
     let value = document.getElementById("searchBox").value;
     const results = fuse.search(value);
-    window.resultsLength = results.length;
-    window.focussedResult = 0;
+    resultsLength = results.length;
 
     let ul = document.getElementById("results");
     ul.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      let item = results[i].item;
+      let item = results[i].item ;
 
       let li = document.createElement("li");
-      li.setAttribute('onClick', item['url']);
 
       let link = document.createElement('a');
       link.setAttribute('href', item['url']);
-      link.innerHTML = `<div class='w-100'>${item['title']}</div>`;
+      link.innerHTML = `<div class="w-100">${item["title"]}</div>`;
 
       li.appendChild(link);
       ul.appendChild(li);
     }
+
+    if (window.focussedResult >= 0){
+      focussResult(window.focussedResult);
+    };
   }
 
   $( "#searchBox" ).keyup(function(){
