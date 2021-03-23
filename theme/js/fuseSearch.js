@@ -1,4 +1,5 @@
-import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.esm.js'
+import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.esm.min.js'
+// import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.basic.esm.min.js'
 
 async function get() {
   let obj = await (await fetch(indexURL)).json();
