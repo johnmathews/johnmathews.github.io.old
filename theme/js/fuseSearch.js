@@ -1,5 +1,4 @@
-import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.esm.min.js'
-// import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.basic.esm.min.js'
+import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.esm.js'
 
 async function get() {
   let obj = await (await fetch(indexURL)).json();
@@ -29,13 +28,17 @@ window.focussedResult = -1;
   window.fuse = new Fuse(searchIndex, options);
 })()
 
+
+
 $( document ).ready(function() {
+
   // show search modal if link is clicked
   function showFuseSearch() {
     window.focussedResult = -1;
     $('#fuseModal').toggleClass('hidden');
     $('#searchBox').focus();
   }
+
 
   $( "#fuseSearch" ).click(showFuseSearch);
   $( "#searchButton" ).click(showFuseSearch);
