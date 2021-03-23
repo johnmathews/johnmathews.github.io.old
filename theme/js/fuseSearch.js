@@ -29,17 +29,13 @@ window.focussedResult = -1;
   window.fuse = new Fuse(searchIndex, options);
 })()
 
-
-
 $( document ).ready(function() {
-
   // show search modal if link is clicked
   function showFuseSearch() {
     window.focussedResult = -1;
     $('#fuseModal').toggleClass('hidden');
     $('#searchBox').focus();
   }
-
 
   $( "#fuseSearch" ).click(showFuseSearch);
   $( "#searchButton" ).click(showFuseSearch);
