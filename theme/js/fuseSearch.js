@@ -17,10 +17,10 @@ window.focussedResult = -1;
     includeScore: false,
     isCaseSensite: false,
     minMatchCharLength: 3,
-    findAllMatches: false,
+    findAllMatches: true,
     threshold: 0.4, // 0 is perfect, 1 is anything
-    useExtendedSearch: false, // https://fusejs.io/examples.html#extended-search
     ignoreLocation: true, // it doesn't matter where the text is in the article
+    useExtendedSearch: false, // https://fusejs.io/examples.html#extended-search
     // distance: 8000, //  how close the match can be from the expected location
     // location: 0, // where in the text is the match expected
     // threshold: 1, // match anything within `distance` of `location`
