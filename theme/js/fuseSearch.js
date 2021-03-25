@@ -14,12 +14,15 @@ window.focussedResult = -1;
   searchIndex = await get()
   const options = {
     shouldSort: true,
+    includeScore: false,
+    isCaseSensite: false,
     threshold: 0.4, // 0 is perfect, 1 is anything
-    useExtendedSearch: true, // https://fusejs.io/examples.html#extended-search
+    useExtendedSearch: false, // https://fusejs.io/examples.html#extended-search
+    ignoreLocation: true, // it doesn't matter where the text is in the article
     keys: [
       {name: "title", weight: 0.9},
       {name: "tags", weight: 0.7},
-      {name: "body", weight: 0.4},
+      {name: "body", weight: 0.6},
       {name: "category", weight: 0.3},
       {name: "url", weight: 0.3},
     ]
@@ -122,8 +125,11 @@ $( document ).ready(function() {
   // whenever a key is pressed with searchbox in focus, do a search
   function doSearch(fuse) {
     let value = document.getElementById("searchBox").value;
-    const results = fuse.search(value);
+    let results = fuse.search(value); //.reverse(); // results are sorted, make the best at the top
+    // results = results.reverse()
     resultsLength = results.length;
+
+    console.log('results: ', results);
 
     let ul = document.getElementById("results");
     ul.innerHTML = "";
