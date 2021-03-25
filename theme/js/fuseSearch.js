@@ -23,7 +23,7 @@ window.focussedResult = -1;
     ignoreLocation: false, // it doesn't matter where the text is in the article
     distance: 1000, //  how close the match can be from the expected location
     location: 0, // where in the text is the match expected
-    threshold: 0.5, // match anything within `distance` of `location`
+    threshold: 1, // match anything within `distance` of `location`
     keys: [
       {name: "title", weight: 0.9},
       {name: "tags", weight: 0.7},
