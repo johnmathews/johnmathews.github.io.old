@@ -16,15 +16,20 @@ window.focussedResult = -1;
     shouldSort: true,
     includeScore: false,
     isCaseSensite: false,
+    minMatchCharLength: 3,
+    findAllMatches: false,
     threshold: 0.4, // 0 is perfect, 1 is anything
     useExtendedSearch: false, // https://fusejs.io/examples.html#extended-search
-    ignoreLocation: true, // it doesn't matter where the text is in the article
+    ignoreLocation: false, // it doesn't matter where the text is in the article
+    distance: 1000, //  how close the match can be from the expected location
+    location: 0, // where in the text is the match expected
+    threshold: 0.5, // match anything within `distance` of `location`
     keys: [
       {name: "title", weight: 0.9},
       {name: "tags", weight: 0.7},
       {name: "body", weight: 0.6},
-      {name: "category", weight: 0.3},
-      {name: "url", weight: 0.3},
+      // {name: "category", weight: 0.3},
+      // {name: "url", weight: 0.3},
     ]
   };
 
@@ -128,8 +133,6 @@ $( document ).ready(function() {
     let results = fuse.search(value); //.reverse(); // results are sorted, make the best at the top
     // results = results.reverse()
     resultsLength = results.length;
-
-    console.log('results: ', results);
 
     let ul = document.getElementById("results");
     ul.innerHTML = "";
