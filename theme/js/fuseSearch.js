@@ -167,6 +167,6 @@ $( document ).ready(function() {
 
   $('#searchBox').keyup(delay(function (e) {
     doSearch(window.fuse);
-  }, 200));
+  }, 100));
 })
 
