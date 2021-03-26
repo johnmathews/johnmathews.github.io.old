@@ -123,6 +123,8 @@ $( document ).ready(function() {
     if (evt.keyCode == 13) { // return
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
+      } else {
+        $("#doSearch").trigger("click");
       };
     };
   };
@@ -155,8 +157,16 @@ $( document ).ready(function() {
     };
   }
 
-  $( "#searchBox" ).keyup(function(){
-    doSearch(window.fuse)
-  });
+  function delay(fn, ms) {
+    let timer = 0
+    return function(...args) {
+      clearTimeout(timer)
+      timer = setTimeout(fn.bind(this, ...args), ms || 0)
+    }
+  }
+
+  $('#searchBox').keyup(delay(function (e) {
+    doSearch(window.fuse);
+  }, 500));
 })
 
