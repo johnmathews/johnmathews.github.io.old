@@ -9,6 +9,10 @@
 	@apply mx-0 px-2 py-3 my-2 lg:my-5 text-gray-800 text-xl font-semibold border-2 border-gray-500 bg-gray-100 rounded-lg;
 }
 
+#results li div:hover {
+	@apply bg-blue-200 border-blue-500 !important;
+}
+
 #selected {
 	@apply border-blue-500 bg-blue-200 !important;
 }

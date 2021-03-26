@@ -113,18 +113,15 @@ $( document ).ready(function() {
     if (evt.keyCode == 27) { //27 is the code for escape
       document.getElementById("searchBox").blur();
       $('#fuseModal').addClass('hidden');
-    };
-    if (evt.keyCode == 40) { // down arrow
+    } else if (evt.keyCode == 40) { // down arrow
       incrementFocus(true);
-    };
-    if (evt.keyCode == 38) { // up arrow
+    } else if (evt.keyCode == 38) { // up arrow
       incrementFocus(false);
-    };
-    if (evt.keyCode == 13) { // return
+    } else if (evt.keyCode == 13) { // return
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
       };
-    };
+    }
   };
 
   // whenever a key is pressed with searchbox in focus, do a search
