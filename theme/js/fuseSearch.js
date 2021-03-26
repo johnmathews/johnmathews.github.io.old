@@ -123,8 +123,6 @@ $( document ).ready(function() {
     if (evt.keyCode == 13) { // return
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
-      } else {
-        $("#doSearch").trigger("click");
       };
     };
   };
@@ -165,10 +163,11 @@ $( document ).ready(function() {
     }
   }
 
-  $('#searchBox').keyup(delay(function (e) {
-    doSearch(window.fuse);
-    console.log('waited 300ms');
-  }, 300));
+  $('#searchBox').keyup(
+    delay(function(e){
+      doSearch(window.fuse);
+    }, 300)
+  );
 
 })
 
