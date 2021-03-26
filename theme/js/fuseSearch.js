@@ -167,6 +167,8 @@ $( document ).ready(function() {
 
   $('#searchBox').keyup(delay(function (e) {
     doSearch(window.fuse);
-  }, 100));
+    console.log('waited 300ms');
+  }, 300));
+
 })
 
