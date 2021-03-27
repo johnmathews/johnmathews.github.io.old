@@ -1,4 +1,6 @@
 import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.esm.js'
+import _ from './underscore.js'
+import './hotkeys.min.js'
 
 async function get() {
   let obj = await (await fetch(indexURL)).json();
@@ -7,7 +9,7 @@ async function get() {
 
 var searchIndex;
 
-var resultsLength = 0;
+window.resultsLength = 0;
 window.focussedResult = -1;
 
 (async () => {
@@ -83,9 +85,9 @@ $( document ).ready(function() {
   });
 
   function incrementFocus(b){
-    if (!$('#fuseModal').hasClass('hidden') && resultsLength > 0) {
+    if (!$('#fuseModal').hasClass('hidden') && window.resultsLength > 0) {
       if (b == true){
-        if (window.focussedResult < resultsLength - 1) {
+        if (window.focussedResult < window.resultsLength - 1) {
           window.focussedResult++ ;
         } else {
           window.focussedResult = 0;
@@ -94,42 +96,29 @@ $( document ).ready(function() {
         if (window.focussedResult > 0) {
           window.focussedResult-- ;
         } else {
-          window.focussedResult = resultsLength - 1 ;
+          window.focussedResult = window.resultsLength - 1 ;
         };
       }
     }
   };
 
-  function focussResult (n) {
-    // searchbox can be open with no results, check if there are results
-    if (resultsLength > 0){
-      $("#results > li").eq(n).find("div").attr("id", "selected");
+  function focussResult(n) {
+    if (window.resultsLength > 0){
+      for (var i = 0; i < window.resultsLength; i++) {
+        if ( i == n ) {
+          $("#results > li").eq(i).find("div").attr("id", "selected");
+        } else {
+          $("#results > li").eq(i).find("div").attr("id", "notSelected");
+        }
+      }
     }
-  };
-
-  // need this in addition to hotkeys if the search box is in focus
-  document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) { // escape
-      document.getElementById("searchBox").blur();
-      $('#fuseModal').addClass('hidden');
-    } else if (evt.keyCode == 40) { // down arrow
-      incrementFocus(true);
-    } else if (evt.keyCode == 38) { // up arrow
-      incrementFocus(false);
-    } else if (evt.keyCode == 13) { // return key
-      if (window.focussedResult >= 0){
-        $("#selected").trigger("click");
-      };
-    };
   };
 
   // whenever a key is pressed with searchbox in focus, do a search
   function doSearch(fuse) {
     let value = document.getElementById("searchBox").value;
-    let results = fuse.search(value); //.reverse(); // results are sorted, make the best at the top
-    // results = results.reverse()
-    resultsLength = results.length;
+    let results = fuse.search(value);
+    window.resultsLength = results.length;
 
     let ul = document.getElementById("results");
     ul.innerHTML = "";
@@ -152,19 +141,25 @@ $( document ).ready(function() {
     };
   }
 
-  function delay(fn, ms) {
-    let timer = 0
-    return function(...args) {
-      clearTimeout(timer)
-      timer = setTimeout(fn.bind(this, ...args), ms || 0)
-    }
-  }
+  var lazySearch = _.debounce(function(){
+    doSearch(window.fuse);
+  }, 300);
 
-  $('#searchBox').keyup(
-    delay(function(e){
-      doSearch(window.fuse);
-    }, 300)
-  );
+  $('#searchBox').on('keydown', function(event) {
+    if (event.which == 40) {
+      incrementFocus(true);
+      focussResult(window.focussedResult);
+    } else if (event.which == 38) {
+      incrementFocus(false);
+      focussResult(window.focussedResult);
+    } else if (event.keyCode == 13) { // return key
+      if (window.focussedResult >= 0){
+        $("#selected").trigger("click");
+      };
+    } else {
+      lazySearch();
+    }
+  });
 
 })
 
