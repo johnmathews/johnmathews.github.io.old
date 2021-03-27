@@ -142,8 +142,6 @@ $( document ).ready(function() {
   }, 300);
 
   $('#searchBox').on('keydown', function(event) {
-    console.log('keycode: ', event.which);
-    // 27 is escape
     if (event.which == 40) {
       incrementFocus(true);
       focussResult(window.focussedResult);
