@@ -77,10 +77,6 @@ $( document ).ready(function() {
         $('#fuseModal').toggleClass('hidden');
         $('#searchBox').focus();
         break;
-      case 'esc':
-        document.getElementById("searchBox").blur();
-        $('#fuseModal').addClass('hidden');
-        break;
     }
   });
 
@@ -159,7 +155,8 @@ $( document ).ready(function() {
         $("#selected").trigger("click");
       };
     } else if (event.keyCode == 27) { // escape key
-      // close the search modal
+      document.getElementById("searchBox").blur();
+      $('#fuseModal').addClass('hidden');
     } else {
       lazySearch();
     }
