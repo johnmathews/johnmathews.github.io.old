@@ -20,8 +20,8 @@
 <meta content=" I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn HTML, CSS, Jinja templates and Git. " property="og:description"/>
 <meta content="https://johnmathews.eu/pelican.html" property="og:url"/>
 <meta content="https://johnmathews.eu/pelican.html" property="twitter:url"/>
-<meta content="    https://johnmathews.eu//images/get_pelican.jpg" name="twitter:image"/>
-<meta content="    https://johnmathews.eu//images/get_pelican.jpg" property="og:image"/>
+<meta content="    https://johnmathews.eu//images/get_pelican.png" name="twitter:image"/>
+<meta content="    https://johnmathews.eu//images/get_pelican.png" property="og:image"/>
 <meta content="  summary_large_image  " property="twitter:card"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content=" article " property="og:type"/>
@@ -207,7 +207,7 @@
 </div>
 <div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
 <div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
-<img alt="Pelican" class="xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" src="/images/get_pelican.jpg"/>
+<img alt="Pelican" class="image-process-article-leading-image xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" sizes="(min-width: 1535x) 1200px, (min-width: 1280px) 900px, (min-width: 1024px) 1000px, (min-width: 768px) 800px, (min-width: 640px) 720px, 100vw" src="/images/derivatives/article-leading-image/900w/get_pelican.png" srcset="/images/derivatives/article-leading-image/1200w/get_pelican.png 1200w, /images/derivatives/article-leading-image/1000w/get_pelican.png 1000w, /images/derivatives/article-leading-image/900w/get_pelican.png 900w, /images/derivatives/article-leading-image/800w/get_pelican.png 800w, /images/derivatives/article-leading-image/720w/get_pelican.png 720w"/>
 <div class="mb-10">
 <div class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
 <span class="break-all" style="word-break: unset;">
@@ -227,7 +227,7 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown"> <p>I switched to Pelican from Wordpress so that I could design the blog I wanted. Creating a blog in Pelican is a great way to learn <span class="caps">HTML</span>, <span class="caps">CSS</span>, Jinja templates and Git.</p> </div> <div class="markdown">
-<p>When I began blogging in 2016, I became more aware of how blogs are designed. Many of my favorting blogs had simple designs which made it easier to focus on the content, and they loaded really fast. (E.g.  <a href="https://unwiredcouch.com">unwiredcouch.com</a> and <a href="https://www.curiousgnu.com">CuriousGnu</a>). I wanted this for my blog, too. I’d used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on its design and functionality. I wanted to have control over my blog’s features. </p>
+<p>When I began blogging in 2016, I became more aware of how blogs are designed. Many of my favorting blogs had simple designs which made it easier to focus on the content, and they loaded really fast. (E.g.  <a href="https://unwiredcouch.com">unwiredcouch.com</a> and <a href="https://www.curiousgnu.com">CuriousGnu</a>). I wanted this for my blog, too. I’d used Wordpress to build and publish my blog which was a great way to begin, but I felt I was compromising on its design and functionality. I wanted to have control over my blog’s features.</p>
 <p>This led me to static sites which contain only fixed content and are faster to load and easier to design than one built using a dynamic blogging platform such as Wordpress. Because I was already familiar with Python I chose <a href="https://blog.getpelican.com/">Pelican</a> rather than another static site generator such as Jekyll.</p>
 <p>There are plenty of sites to tell you how to start blogging in Pelican, so here I will focus on my experience after the initial set-up. When I was learning how to begin, I found <a href="http://mathamy.com/migrating-to-github-pages-using-pelican.html">Amy Hanlons</a> blog particularly useful and clear.</p>
 <h2 id="the-learning-curve">The learning curve</h2>
@@ -240,17 +240,17 @@
 <h3 id="jinja-templates">Jinja templates</h3>
 <p>Jinja is a tool written in Python to create <span class="caps">HTML</span> pages. It doesn’t look intuitive to me, but I’ve been able to get enough done by copy-pasting similar snippets from other parts of the theme I started with (<a href="https://github.com/molivier/nest">Thanks Molivier!</a>) to make the changes I wanted. I’d like to learn more as it seems really powerful.</p>
 <h3 id="pelican">Pelican</h3>
-<p>To build a website using Pelican, you need to run commands from the terminal. There are various commands but I found myself using only a few regularly. “Pelican-quickstart” will generate a project skeleton to get you started. “make devserver” will initialise a local server and generate output files so that I can view changes locally before uploading (its opposite is “make stopserver”). Finally “pelican content -s publishconf.py” generates the html and css for remote hosting. Some of the plugins I use such as “Assets” which minifies the <span class="caps">CSS</span> only work when publshconf.py is called, which confused me initially as I didn’t think it was working when I was only using “make devserver”. </p>
+<p>To build a website using Pelican, you need to run commands from the terminal. There are various commands but I found myself using only a few regularly. “Pelican-quickstart” will generate a project skeleton to get you started. “make devserver” will initialise a local server and generate output files so that I can view changes locally before uploading (its opposite is “make stopserver”). Finally “pelican content -s publishconf.py” generates the html and css for remote hosting. Some of the plugins I use such as “Assets” which minifies the <span class="caps">CSS</span> only work when publshconf.py is called, which confused me initially as I didn’t think it was working when I was only using “make devserver”.</p>
 <h3 id="git">Git</h3>
-<p>This really challenged me, and I still don’t feel like I know what I’m doing. Git is far more powerful than I need it to be, when all I want to do is undo some erroneous edits and upload a new version of the site to Github. </p>
-<p>I can stage and commit files, I can create local and remote repo’s from the command line. I can change a remote’s <span class="caps">URL</span>, reset a repo and force a push or a pull. That’s all. I haven’t tried to merge or to create a test branch, and if some part of the process goes wrong it usually takes hours to make it right again. </p>
-<p>This is one tool for which the awesome <span class="caps">SO</span> and Google cannot magic up the exact right answer immediatly, unfortunately. </p>
-<p>For example, there is still an output folder in the source repo that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an “@” in its name. I don’t know how it got there. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal commands. </p>
-<p>I find git’s commands the least intuitive of all the tools I use, with its preceeding single dashes and double dashes, and random words thrown into the middle of otherwise reasonable commands. </p>
-<p>But Git is ubiquitous and Github is awesome, so I will learn it. </p>
+<p>This really challenged me, and I still don’t feel like I know what I’m doing. Git is far more powerful than I need it to be, when all I want to do is undo some erroneous edits and upload a new version of the site to Github.</p>
+<p>I can stage and commit files, I can create local and remote repo’s from the command line. I can change a remote’s <span class="caps">URL</span>, reset a repo and force a push or a pull. That’s all. I haven’t tried to merge or to create a test branch, and if some part of the process goes wrong it usually takes hours to make it right again.</p>
+<p>This is one tool for which the awesome <span class="caps">SO</span> and Google cannot magic up the exact right answer immediatly, unfortunately.</p>
+<p>For example, there is still an output folder in the source repo that is… mysterious to me. Its not the real output, its a version frozen in time from a few weeks ago, and it has an “@” in its name. I don’t know how it got there. It was created one afternoon in a blur of frustrated google queries and copy/paste/hope terminal commands.</p>
+<p>I find git’s commands the least intuitive of all the tools I use, with its preceeding single dashes and double dashes, and random words thrown into the middle of otherwise reasonable commands.</p>
+<p>But Git is ubiquitous and Github is awesome, so I will learn it.</p>
 <h2 id="github-pages-with-an-external-url">Github pages with an external <span class="caps">URL</span></h2>
 <p>You’ll need to add a file called <span class="caps">CNAME</span> to the repo containing the output. <span class="caps">CNAME</span> should contain the address of your site in lowercase. Simple.</p>
-<p>You’ll also need to update the <span class="caps">DNS</span> records of your domain name to point the name at Github’s servers. For Github, you need two “A Records” with host type “@” and values “192.30.252.153” and “192.30.252.154” respectively. You also need a <span class="caps">CNAME</span> record with host type “www” and the value equal to “username.github.io”. It took about 12 hours for the changes to propagate, and during that time I had variable success loading the site. </p>
+<p>You’ll also need to update the <span class="caps">DNS</span> records of your domain name to point the name at Github’s servers. For Github, you need two “A Records” with host type “@” and values “192.30.252.153” and “192.30.252.154” respectively. You also need a <span class="caps">CNAME</span> record with host type “www” and the value equal to “username.github.io”. It took about 12 hours for the changes to propagate, and during that time I had variable success loading the site.</p>
 <h2 id="plugins">Plugins</h2>
 <p>One thing I didn’t want when moving away from Wordpress was a site bloated with features that didn’t make the content easier to read. However I found I still needed a few plugins to optimise my site and provide some basic functionality that doesn’t come with the vanilla Pelican.</p>
 <h3 id="ipython-notebooks">iPython notebooks</h3>
@@ -260,9 +260,9 @@
 <h3 id="optimise-images">Optimise images</h3>
 <p>Make those images as small as possible to help make the site as fast as possible. Add the plugin, update pelicanconf.py, and thats all.</p>
 <h3 id="assets">Assets</h3>
-<p>Before I started working with Pelican, minifying css and JavaScript would have been too advanced. But once <a href="https://tools.pingdom.com/">Pingdom</a> and Google <a href="https://developers.google.com/speed/pagespeed/insights/">Pagespeed</a> started criticising me for my multiple .css files, I accepted the challenge. </p>
+<p>Before I started working with Pelican, minifying css and JavaScript would have been too advanced. But once <a href="https://tools.pingdom.com/">Pingdom</a> and Google <a href="https://developers.google.com/speed/pagespeed/insights/">Pagespeed</a> started criticising me for my multiple .css files, I accepted the challenge.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>I’m super happy wth the websites design and speed. It’s designed the way I want it, and I’ve learnt a ton of useful stuff along the way. </p>
+<p>I’m super happy wth the websites design and speed. It’s designed the way I want it, and I’ve learnt a ton of useful stuff along the way.</p>
 <p>Update: My second post about blogging in Pelican is <a href="https://johnmathews.eu/pelican2.html">here</a>.</p>
 </div>
 </article>
