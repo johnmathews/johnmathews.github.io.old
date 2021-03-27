@@ -147,6 +147,7 @@ $( document ).ready(function() {
 
   $('#searchBox').on('keydown', function(event) {
     console.log('keycode: ', event.which);
+    // 27 is escape
     if (event.which == 40) {
       incrementFocus(true);
       focussResult(window.focussedResult);
@@ -157,6 +158,8 @@ $( document ).ready(function() {
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
       };
+    } else if (event.keyCode == 27) { // escape key
+      // close the search modal
     } else {
       lazySearch();
     }
