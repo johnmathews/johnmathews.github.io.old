@@ -110,18 +110,18 @@ $( document ).ready(function() {
   // need this in addition to hotkeys if the search box is in focus
   document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode == 27) { //27 is the code for escape
+    if (evt.keyCode == 27) { // escape
       document.getElementById("searchBox").blur();
       $('#fuseModal').addClass('hidden');
     } else if (evt.keyCode == 40) { // down arrow
       incrementFocus(true);
     } else if (evt.keyCode == 38) { // up arrow
       incrementFocus(false);
-    } else if (evt.keyCode == 13) { // return
+    } else if (evt.keyCode == 13) { // return key
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
       };
-    }
+    };
   };
 
   // whenever a key is pressed with searchbox in focus, do a search
