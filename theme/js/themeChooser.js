@@ -1,23 +1,28 @@
 $( document ).ready(function() {
+    function toggleMenu(){
+        const navToggle = document.getElementsByClassName("toggle");
+        for (let i = 0; i < navToggle.length; i++) {
+            navToggle.item(i).classList.toggle("hidden");
+        }
+    };
 
     if (document.getElementById('PygmentCSS') !=null) {
         // swap out pygment CSS files based on dark/light theme
-        function changePygmentsCSS(existing, updated) {
+        function changePygmentsCSS(updated) {
             var PygmentCSS = document.getElementById("PygmentCSS");
             PygmentCSS.setAttribute("href", updated);
         }
     } else {
-        function changePygmentsCSS(a, b) {}
+        // need to define the function to avoid errors
+        function changePygmentsCSS(b) {}
     };
 
 
     if (document.getElementById('hamburger') !=null) {
-        document.getElementById("hamburger").onclick = function toggleMenu() {
-            const navToggle = document.getElementsByClassName("toggle");
-            for (let i = 0; i < navToggle.length; i++) {
-                navToggle.item(i).classList.toggle("hidden");
-            }
-        };
+        $(".fa-bars").click(function() {
+            window.hamburgerUsed = true;
+        });
+        document.getElementById("hamburger").onclick = toggleMenu;
     };
 
     // set dark theme based on local storage settings
@@ -34,7 +39,7 @@ $( document ).ready(function() {
           nightElement.item(i).classList.add("hidden");
         }
 
-        changePygmentsCSS(light, dark);
+        changePygmentsCSS(dark);
 
     } else {
 
@@ -51,7 +56,7 @@ $( document ).ready(function() {
           nightElement.item(i).classList.remove("hidden");
         }
 
-        changePygmentsCSS(dark, light);
+        changePygmentsCSS(light);
     }
 
     // change theme if theme switcher button is clicked
@@ -59,7 +64,7 @@ $( document ).ready(function() {
         if (localStorage.getItem('theme') === "dark") {
             window.localStorage.setItem('theme', 'light');
             $( "#baz" ).removeClass( "dark" );
-            changePygmentsCSS(dark, light);
+            changePygmentsCSS(light);
 
             const dayElement = document.getElementsByClassName("day");
             for (let i = 0; i < dayElement.length; i++) {
@@ -73,7 +78,7 @@ $( document ).ready(function() {
         } else {
             window.localStorage.setItem('theme', 'dark');
             $( "#baz" ).addClass( "dark" );
-            changePygmentsCSS(light, dark);
+            changePygmentsCSS(dark);
 
             const dayElement = document.getElementsByClassName("day");
             for (let i = 0; i < dayElement.length; i++) {
@@ -85,7 +90,10 @@ $( document ).ready(function() {
             }
         }
 
-        // TODO: close the hamburge menu after dark mode is clicked
+        if (window.hamburgerUsed === true){
+            toggleMenu();
+            window.toggleMenu = false // reset
+        };
     }
 
     $( "#theme-toggle" ).click(modeSwitcher);
