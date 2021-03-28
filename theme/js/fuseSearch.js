@@ -1,4 +1,4 @@
-import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.esm.js'
+import Fuse from './fuse.esm.js'
 import _ from './underscore.js'
 import './hotkeys.min.js'
 
