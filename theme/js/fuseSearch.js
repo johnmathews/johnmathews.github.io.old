@@ -102,9 +102,9 @@ $( document ).ready(function() {
     if (window.resultsLength > 0){
       for (var i = 0; i < window.resultsLength; i++) {
         if ( i == n ) {
-          $("#results > li").eq(i).find("div").attr("id", "selected");
+          $("#searchResults > li").eq(i).find("div").attr("id", "selected");
         } else {
-          $("#results > li").eq(i).find("div").attr("id", "notSelected");
+          $("#searchResults > li").eq(i).find("div").attr("id", "notSelected");
         }
       }
     }
@@ -116,7 +116,7 @@ $( document ).ready(function() {
     let results = fuse.search(value);
     window.resultsLength = results.length;
 
-    let ul = document.getElementById("results");
+    let ul = document.getElementById("searchResults");
     ul.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
@@ -139,7 +139,7 @@ $( document ).ready(function() {
 
   var lazySearch = _.debounce(function(){
     doSearch(window.fuse);
-  }, 300);
+  }, 200);
 
   $('#searchBox').on('keydown', function(event) {
     if (event.which == 40) {
