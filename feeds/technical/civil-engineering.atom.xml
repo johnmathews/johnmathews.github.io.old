@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JohnMathews.eu - Technical/Civil Engineering</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/civil-engineering.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2016-10-02T00:06:00+02:00</updated><entry><title>Introduction to my doctorate research - Silos</title><link href="https://johnmathews.eu/silos.html" rel="alternate"/><published>2016-10-02T00:06:00+02:00</published><updated>2016-10-02T00:06:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-10-02:/silos.html</id><summary type="html">&lt;p&gt;In this post, I want to introduce my doctorate research without assuming any engineering&amp;nbsp;knowledge.&lt;/p&gt;</summary><content type="html">&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;From Spring 2010 until the Autumn of 2013, I was a PhD candidate living
+in Vienna, Austria and working at the University of Natural Resources
+and Life Sciences. Before working in Vienna, I completed my Masters
+degree in Civil and Environmental Engineering at the University of Edinburgh.&lt;/p&gt;
+&lt;p&gt;My research quantified the effects of changing the amount of gravity
+acting on granular materials as they poured out of a silo.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="4 silos" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos1/derivatives/article-inline-image/800w/4_silos.jpeg" srcset="https://johnmathews.eu/images/silos1/derivatives/article-inline-image/300w/4_silos.jpeg 300w, https://johnmathews.eu/images/silos1/derivatives/article-inline-image/600w/4_silos.jpeg 600w, https://johnmathews.eu/images/silos1/derivatives/article-inline-image/800w/4_silos.jpeg 800w, https://johnmathews.eu/images/silos1/derivatives/article-inline-image/1600w/4_silos.jpeg 1600w"/&gt;
+&lt;img alt="granular materials" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos1/derivatives/article-inline-image/800w/granular_materials.jpeg" srcset="https://johnmathews.eu/images/silos1/derivatives/article-inline-image/300w/granular_materials.jpeg 300w, https://johnmathews.eu/images/silos1/derivatives/article-inline-image/600w/granular_materials.jpeg 600w, https://johnmathews.eu/images/silos1/derivatives/article-inline-image/800w/granular_materials.jpeg 800w, https://johnmathews.eu/images/silos1/derivatives/article-inline-image/1600w/granular_materials.jpeg 1600w"/&gt;&lt;/p&gt;
+&lt;p&gt;My PhD thesis and the short presentation I used when I defended it.&lt;/p&gt;
+&lt;p&gt;Granular materials are a broard class of materials that are
+encountered everyday - salt, pills, breakfast cereal, sand, rice, soil,
+landslides, salt are all granular materials. They are ubiquitous and occur in
+many different sizes and varieties.&lt;/p&gt;
+&lt;p&gt;Silos are a common type of container for storing granular materials. You
+pour the granular material in from the top, store it for a while, and
+then dispense the material in controlled quantities from the bottom.&lt;/p&gt;
+&lt;h2 id="research-focus"&gt;Research focus&lt;/h2&gt;
+&lt;p&gt;My research focussed on quantifying how changes in gravity affected the
+material contained inside a silo, particularly whilst the silo was being
+emptied. This is pertinent because engineers and scientists do not yet
+have a scientific understanding of how granular materials behave. Whilst
+gravity clearly affects a granular materials, we cannot say exactly how.&lt;/p&gt;
+&lt;p&gt;This means we can’t use analytical methods to quantify the physics that
+occur in a real system. Instead we use empirical methods
+(approximations, guesses, rules-of-thumb, and knowledge of what worked
+in previous similar situations). This isn’t necessarily bad, but it is
+less efficient and less reliable than an analytical approach.&lt;/p&gt;
+&lt;h2 id="research-techniques"&gt;Research techniques&lt;/h2&gt;
+&lt;h3 id="physical-modelling"&gt;Physical modelling&lt;/h3&gt;
+&lt;p&gt;I built a small model silo (30cm tall) and put it into quite a large centrifuge (3 metre diameter). By rotating the model silo around the centre of the centrifuge at a constant speed I could simulate a higher gravity. I added high-speed cameras, pressure sensors and weighing
+scales so that I could measure how the material was moving once I opened the silo outlet and the silo began to empty. Photos of the experimental model I built can be seen below. &lt;/p&gt;
+&lt;h3 id="numerical-modelling"&gt;Numerical modelling&lt;/h3&gt;
+&lt;p&gt;I also programmed a computer model (using the commercial &lt;span class="caps"&gt;PFC&lt;/span&gt; 3D software
+and working in the &lt;span class="caps"&gt;FISH&lt;/span&gt; scripting language) to simulate and investigate
+if the same behaviours could be observed numerically as physically.&lt;/p&gt;
+&lt;p&gt;The class of computer model I used is known as &lt;span class="caps"&gt;DEM&lt;/span&gt; (Discrete Element
+Modelling). These models work by considering every grain of material individually, usually as a
+sphere. If one sphere overlaps with another (i.e. the distance between
+the two particle centres is less than the sum of their radiuses) then a
+force proportional to the overlap size repels the two spheres away from
+each other. This simple approach is repeated over every grain or particle in the model, and produces life like behaviour in many situations. It has many advantages over “continuum” based techniques that model groups of grains as if they were all just one big particle with
+unusual properties. &lt;span class="caps"&gt;DEM&lt;/span&gt; has one massive limitation, though. It requires huge amounts of computational resources - and this limits its use in industrial scenarios outside. Until computers become much, much more powerful, &lt;span class="caps"&gt;DEM&lt;/span&gt; will only be used for theoretical research and niche applications.&lt;/p&gt;
+&lt;h2 id="results"&gt;Results&lt;/h2&gt;
+&lt;p&gt;When gravity increases by a factor of &lt;span class="math"&gt;\(x\)&lt;/span&gt;, both the discharge rate and local velocities within the silo increase by  &lt;span class="math"&gt;\(\sqrt(x)\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;That’s good to know if you’re planning on storing stuff on the moon, but it’s also a useful step towards explaining exactly why bulk granular materials behave the way they do.&lt;/p&gt;
+&lt;h2 id="more-information"&gt;More Information&lt;/h2&gt;
+&lt;p&gt;An overview of my research, my doctorate thesis and published papers can
+be downloaded below. PDFs containing 3D models and movies require flash
+to render, and Adobe Reader Desktop must be used in order to view them.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews_J_2013_thesis.pdf"&gt;PhD Thesis (2013)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews-Wu_2016_Model-tests-of-silo-discharge-in-a-geotechnical-centrifuge.pdf"&gt;Modeling silo discharge in a centrifuge (Powder Technology)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews-etal_2013_Experimental-investigation-of-flow-and-segregation-behaviour-of-bulk-solids-in-silos-under-high-gravity-conditions.pdf"&gt;Experimental investigation of flow and segregation behaviour of bulk solids in silos under high gravity conditions (Particles 2013 conference proceedings)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Cabrera-et-al.pdf"&gt;Centrifugal modelling of granular flows (Eurofuge conference proceedings)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Mathews_J_2013_Defence_presentation.pdf"&gt;Overview of research (PhD defence, 2013)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="Model silo and camera" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/model_silo_camera.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/model_silo_camera.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/model_silo_camera.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/model_silo_camera.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/model_silo_camera.jpeg 1600w"/&gt;
+&lt;img alt="Model silo inside centrifuge" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/model_silo_in_centrifuge.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/model_silo_in_centrifuge.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/model_silo_in_centrifuge.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/model_silo_in_centrifuge.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/model_silo_in_centrifuge.jpeg 1600w"/&gt;
+&lt;img alt="Silo opening mechanism" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_open_mechanism.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/silo_open_mechanism.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/silo_open_mechanism.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_open_mechanism.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/silo_open_mechanism.jpeg 1600w"/&gt;
+&lt;img alt="Centrifuge" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/centrifuge.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/centrifuge.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/centrifuge.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/centrifuge.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/centrifuge.jpeg 1600w"/&gt;
+&lt;img alt="Silo Model" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_render.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/silo_render.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/silo_render.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_render.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/silo_render.jpeg 1600w"/&gt;
+&lt;img alt="Silo wall pressure mesasurements" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_pressure_pads.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/silo_pressure_pads.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/silo_pressure_pads.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_pressure_pads.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/silo_pressure_pads.jpeg 1600w"/&gt;
+&lt;img alt="Particle Image Velocimetry result showing average flow velocities" class="image-process-article-inline-image" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_piv.jpeg" srcset="https://johnmathews.eu/images/silos2/derivatives/article-inline-image/300w/silo_piv.jpeg 300w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/600w/silo_piv.jpeg 600w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/800w/silo_piv.jpeg 800w, https://johnmathews.eu/images/silos2/derivatives/article-inline-image/1600w/silo_piv.jpeg 1600w"/&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Technical/Civil Engineering"/><category term="Doctorate"/><category term="Granular Flow"/><category term="Granular Materials"/><category term="PhD"/><category term="Research"/><category term="Engineering"/><category term="Silo"/><category term="Thesis"/><category term="Vienna"/></entry></feed>

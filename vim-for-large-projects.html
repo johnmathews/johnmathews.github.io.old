@@ -1,256 +1,230 @@
-<!doctype html>
-<html id="baz" class="" lang="en">
-  <head>
-        <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!DOCTYPE html>
 
-      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-
-      <title>Managing Large Projects with Vim - JohnMathews.eu</title>
-      <meta name="title" content="Managing Large Projects with Vim -  JohnMathews.eu "/>
-      <meta property="og:title" content="Managing Large Projects with Vim"/>
-      <meta property="twitter:title" content="Managing Large Projects with Vim"/>
-
-      <meta name="keywords" content="  "/>
-      <meta name="author" content="John Mathews"/>
-      <meta name="twitter:creator" content="@johnmathews"/>
-
-      <meta name="description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... "/>
-      <meta name="twitter:description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... "/>
-      <meta property="og:description" content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... "/>
-
-      <meta property="og:url" content="./vim-for-large-projects.html"/>
-      <meta property="twitter:url" content="./vim-for-large-projects.html"/>
-
-      <meta name="twitter:image" content="./
-"/>
-      <meta property="og:image" content="./
-"/>
-
-      <meta property="twitter:card" content="  summary  "/>
-      <meta name="twitter:domain" content="https://johnmathews.eu"/>
-
-      <meta property="og:type" content=" article "/>
-
-      <link rel="icon" href="./extra/favicon.png" />
-
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
-
-
-
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
-      <link href="./theme/css/styles.css" rel="stylesheet" media="print" onload="this.media='all'"/>
-      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
-
-      <script async>
+<title>Managing Large Projects with Vim - JohnMathews.eu</title>
+<meta content="Managing Large Projects with Vim -  JohnMathews.eu " name="title"/>
+<meta content="Managing Large Projects with Vim" property="og:title"/>
+<meta content="Managing Large Projects with Vim" property="twitter:title"/>
+<meta content="  " name="keywords"/>
+<meta content="John Mathews" name="author"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... " name="description"/>
+<meta content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... " name="twitter:description"/>
+<meta content=" I use Vim as my text editor and as my IDE. I like that its free and open source, and I like that I can customize it. This post is about the most useful plugins and features I’ve started using this... " property="og:description"/>
+<meta content="https://johnmathews.eu/vim-for-large-projects.html" property="og:url"/>
+<meta content="https://johnmathews.eu/vim-for-large-projects.html" property="twitter:url"/>
+<meta content="https://johnmathews.eu/
+" name="twitter:image"/>
+<meta content="https://johnmathews.eu/
+" property="og:image"/>
+<meta content="  summary  " property="twitter:card"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content=" article " property="og:type"/>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<link href="https://johnmathews.eu/theme/css/styles.css" media="print" onload="this.media='all'" rel="stylesheet">
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script async="">
         let theme = localStorage.getItem('theme');
       </script>
-
-      <script>
+<script>
         // dark mode light mode switcheroo
-        const light = "./theme/css/pygment-light.css"
-        const dark = "./theme/css/pygment-dark.css"
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
       </script>
-
-      <script type="text/javascript" src="./theme/js/navbar.js"></script>
-      <script type="text/javascript" src="./theme/js/themeChooser.js"></script>
-
-
-
-
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-  </head>
-
-  <body class="dark:bg-black">
-    <a class="pt-20 mt-20 " name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="z-50 pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black">
-      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-        <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
-          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
-        </div>
-        <div class="flex-none justify-end px-2 pt-2">
-          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1" onclick="">
-            <div class="day modeIcon">
-              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-            </div>
-          </button>
-          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
-            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-          </button>
-        </div>
-      </div>
-      <div class="flex-none md:hidden block md:inline-block">
-        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
-          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-        </button>
-      </div>
-    </nav>
-      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
-        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
-        <div class="px-3 pt-3 flex flex-row">
-          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3" onclick="">
-            <div class="day modeIcon">
-              <i class="far fa-lightbulb fa-2x"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="far fa-moon fa-2x"></i>
-            </div>
-          </button>
-          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
-            <i class="fas fa-paw fa-2x"></i>
-          </button>
-        </div>
-      </div>
-
-    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-
-      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-              <div class="text-center">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+<script src="https://johnmathews.eu/theme/js/themeChooser.js" type="text/javascript"></script>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
+</link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="z-50 fixed pt-2 text-xl top-0 w-full lg:fixed flex flex-row justify-between bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1" onclick="">
+<div class="day modeIcon">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0" id="">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3" onclick="">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5" id="">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
-                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
-                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
-                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
-                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <div class="absolute inset-x-0 w-screen px-3">
-            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-              <div class="py-1 px-1">
-                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
-                <div class="hidden lg:inline-flex flex">
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75" id="searchModalBackground"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     ctrl-k
                   </div>
                   or
                   <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
-                </div>
-                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="mx-auto w-full">
-        <div class="flex flex-row">
-          <div class="hidden xl:inline xl:w-32">
-            <div class="w-32">
-            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
-              <div class="lg:w-32">
-                    <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
-                  </div>
-                  <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
-                  </div>
-                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
-                <div class="flex my-2">
-                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2" onclick="">
-                    <div  class="day modeIcon">
-                      <i class="far fa-lightbulb fa-lg"></i>
-                    </div>
-                    <div class="night modeIcon hidden">
-                      <i class="far fa-moon fa-lg"></i>
-                    </div>
-                  </button>
-                </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2" onclick="">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> January 2021
   </div>
-  <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br> January 2021
-  </div>
-  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Category:<br>
-      <a href="./category/technical/developer-tools.html">Developer Tools</a>
-      
-  </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
-  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
-
-    <div class="mb-10">
-      <div style=""  class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
-        <span style="word-break: unset;" class="break-all">
-          Managing Large Projects with&nbsp;Vim
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Category:<br/>
+<a href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
+<div class="mb-10">
+<div class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
+<span class="break-all" style="word-break: unset;">
+          Managing Large Projects with Vim
         </span>
-      </div>
-
-      <div class="lg:hidden mt-20 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
+</div>
+<div class="lg:hidden mt-20 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
         Category:
-          <a href="./category/technical/developer-tools.html">Developer Tools</a>
-          
-      </div>
-
-      <div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
+          <a href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
+</div>
+<div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
         January 2021
       </div>
-    </div>
-
-    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-    </div>
-
-    <main class="lg:w-4/6">
-      <article class="">
-        <div class="markdown">
-          <p>I use Vim as my text editor and as my <span class="caps">IDE</span>. I like that its free and open
+</div>
+<div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown">
+<p>I use Vim as my text editor and as my <span class="caps">IDE</span>. I like that its free and open
 source, and I like that I can customize it. This post is about the most useful
-plugins and features I&rsquo;ve started using this year. There&rsquo;s a copy of my
-<code>.vimrc</code> at the&nbsp;end.</p>
-<p>I&rsquo;m happy to invest some time and effort into learning how to make the most of
-vim and its plugins because I&rsquo;m confident that I&rsquo;ll still be using it twenty
-years from&nbsp;now.</p>
+plugins and features I’ve started using this year. There’s a copy of my
+<code>.vimrc</code> at the end.</p>
+<p>I’m happy to invest some time and effort into learning how to make the most of
+vim and its plugins because I’m confident that I’ll still be using it twenty
+years from now.</p>
 <ol>
 <li>
 <p>Filetype plugins - if you want some settings to be active only for
@@ -258,62 +232,62 @@ years from&nbsp;now.</p>
      <code>~/.vim/ftplugin/&lt;filetype&gt;.vim</code>.</p>
 <p>Vim will look in this file when it opens a buffer of the corresponding
  file type. Good for formatting options like line length, tab spaces, vim
- commands that are language&nbsp;specific. </p>
-<p>You can&rsquo;t activate plugins in these files though. All the plugins have to be
- activated in your <code>.vimrc</code> in the usual&nbsp;way.</p>
+ commands that are language specific. </p>
+<p>You can’t activate plugins in these files though. All the plugins have to be
+ activated in your <code>.vimrc</code> in the usual way.</p>
 </li>
 <li>
 <p><code>janko-m/vim-test</code> - this plugin lets you runs tests without leaving vim.
-   You can run the test that&rsquo;s nearest the cursor, or all the tests in the
-   current buffer. It&rsquo;s very customizable. I wish it could be a bit faster, but
-   I could probably improve that myself by changing some&nbsp;settings.</p>
+   You can run the test that’s nearest the cursor, or all the tests in the
+   current buffer. It’s very customizable. I wish it could be a bit faster, but
+   I could probably improve that myself by changing some settings.</p>
 </li>
 <li>
 <p><code>dense-analysis/ale</code> - The incredible Asyncronous Linting Engine (<span class="caps">A.L.</span>E)
    applies fixers and linters to various filetypes, when you want and how you want.
-   Super useful for writing tidy code and catching mistakes before the code is&nbsp;run.</p>
+   Super useful for writing tidy code and catching mistakes before the code is run.</p>
 </li>
 <li>
 <p><code>junegunn/fzf</code> and <code>junegunn/fzf.vim</code> - It took a little getting used to at
-   first, but now I can&rsquo;t imagine not using a tool like this (this could be
+   first, but now I can’t imagine not using a tool like this (this could be
    said about so many vim-related things). Use <code>fzf</code> to switch between open
    buffers, open a new file, search for files using the filename, or search
-   within all the files in the project for specific&nbsp;text. </p>
+   within all the files in the project for specific text. </p>
 </li>
 <li>
 <p><code>majutsushi/tagbar</code> - This plugin opens a sidebar which contains a list of
    of functions and classes and methods (tags). You can use it to see which
    methods a class contains, and jump to the part of the buffer where a tag
-   is&nbsp;defined.</p>
+   is defined.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><span class="c">&quot; ========== Global ==========</span>
-<span class="k">set</span> <span class="nb">nocompatible</span>              <span class="c">&quot; always put it at the top of .vimrc. effects mappings, undo, etc.</span>
-<span class="k">set</span> <span class="nb">encoding</span><span class="p">=</span>utf<span class="m">-8</span>            <span class="c">&quot; utf-8 encoding</span>
+<div class="highlight"><pre><span></span><span class="c">" ========== Global ==========</span>
+<span class="k">set</span> <span class="nb">nocompatible</span>              <span class="c">" always put it at the top of .vimrc. effects mappings, undo, etc.</span>
+<span class="k">set</span> <span class="nb">encoding</span><span class="p">=</span>utf<span class="m">-8</span>            <span class="c">" utf-8 encoding</span>
 <span class="k">set</span> termguicolors
-<span class="k">set</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>                  <span class="c">&quot; number of colors</span>
-<span class="k">set</span> <span class="nb">noerrorbells</span> <span class="nb">vb</span> <span class="nb">t_vb</span><span class="p">=</span>     <span class="c">&quot; no error bells, yes screnflash.</span>
+<span class="k">set</span> <span class="nb">t_Co</span><span class="p">=</span><span class="m">256</span>                  <span class="c">" number of colors</span>
+<span class="k">set</span> <span class="nb">noerrorbells</span> <span class="nb">vb</span> <span class="nb">t_vb</span><span class="p">=</span>     <span class="c">" no error bells, yes screnflash.</span>
 <span class="k">set</span> <span class="nb">linespace</span><span class="p">=</span><span class="m">8</span>
-<span class="k">set</span> <span class="nb">scrolloff</span><span class="p">=</span><span class="m">2</span>               <span class="c">&quot; minimum number of screen lines above and below the cursor</span>
-<span class="k">set</span> <span class="nb">shortmess</span><span class="p">-=</span>S              <span class="c">&quot; show how many times a search result occurs in current buffer, and index of current match</span>
+<span class="k">set</span> <span class="nb">scrolloff</span><span class="p">=</span><span class="m">2</span>               <span class="c">" minimum number of screen lines above and below the cursor</span>
+<span class="k">set</span> <span class="nb">shortmess</span><span class="p">-=</span>S              <span class="c">" show how many times a search result occurs in current buffer, and index of current match</span>
 <span class="k">set</span> <span class="nb">hidden</span>
-<span class="k">set</span> <span class="k">number</span> <span class="nb">relativenumber</span>     <span class="c">&quot; Line numbers</span>
+<span class="k">set</span> <span class="k">number</span> <span class="nb">relativenumber</span>     <span class="c">" Line numbers</span>
 <span class="k">set</span> <span class="nb">splitbelow</span>
 <span class="k">set</span> <span class="nb">splitright</span>
-<span class="c">&quot; set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab</span>
-<span class="k">set</span> <span class="nb">undofile</span>                  <span class="c">&quot; Maintain undo history between sessions</span>
-<span class="k">set</span> <span class="nb">undodir</span><span class="p">=~</span><span class="sr">/.vim/</span>undo       <span class="c">&quot; put all the undo files in this dir</span>
+<span class="c">" set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab</span>
+<span class="k">set</span> <span class="nb">undofile</span>                  <span class="c">" Maintain undo history between sessions</span>
+<span class="k">set</span> <span class="nb">undodir</span><span class="p">=~</span><span class="sr">/.vim/</span>undo       <span class="c">" put all the undo files in this dir</span>
 
-<span class="k">filetype</span> <span class="k">on</span>                   <span class="c">&quot; enables filetype detection</span>
-<span class="k">filetype</span> plugin indent <span class="k">on</span>     <span class="c">&quot; detection on, plugin on, indent on. To see the current status, type: :filetype</span>
-<span class="nb">syntax</span> <span class="k">on</span>                 <span class="c">&quot; syntax highlighting - try &#39;syntax on/enable&#39;</span>
-<span class="k">set</span> <span class="nb">noesckeys</span>           <span class="c">&quot; might break stuff, should make &lt;ESC&gt; delay smaller</span>
-<span class="k">set</span> <span class="nb">timeoutlen</span><span class="p">=</span><span class="m">350</span>            <span class="c">&quot; timeoutlen is used for mapping delays</span>
-<span class="k">set</span> <span class="nb">ttimeoutlen</span><span class="p">=</span><span class="m">10</span>             <span class="c">&quot; ttimeoutlen is used for key code delays</span>
+<span class="k">filetype</span> <span class="k">on</span>                   <span class="c">" enables filetype detection</span>
+<span class="k">filetype</span> plugin indent <span class="k">on</span>     <span class="c">" detection on, plugin on, indent on. To see the current status, type: :filetype</span>
+<span class="nb">syntax</span> <span class="k">on</span>                 <span class="c">" syntax highlighting - try 'syntax on/enable'</span>
+<span class="k">set</span> <span class="nb">noesckeys</span>           <span class="c">" might break stuff, should make &lt;ESC&gt; delay smaller</span>
+<span class="k">set</span> <span class="nb">timeoutlen</span><span class="p">=</span><span class="m">350</span>            <span class="c">" timeoutlen is used for mapping delays</span>
+<span class="k">set</span> <span class="nb">ttimeoutlen</span><span class="p">=</span><span class="m">10</span>             <span class="c">" ttimeoutlen is used for key code delays</span>
 
-<span class="c">&quot;Search/Find/Highlight ======================================</span>
+<span class="c">"Search/Find/Highlight ======================================</span>
 <span class="k">set</span> <span class="nb">incsearch</span>  <span class="nb">ignorecase</span>  <span class="nb">smartcase</span>  <span class="nb">hlsearch</span>
-<span class="nb">highlight</span> Search guibg<span class="p">=</span>purple guifg<span class="p">=</span><span class="s1">&#39;NONE&#39;</span>
+<span class="nb">highlight</span> Search guibg<span class="p">=</span>purple guifg<span class="p">=</span><span class="s1">'NONE'</span>
 <span class="nb">highlight</span> Search cterm<span class="p">=</span>none ctermbg<span class="p">=</span>green ctermfg<span class="p">=</span>black
 <span class="nb">highlight</span> CursorColumn guibg<span class="p">=</span>blue guifg<span class="p">=</span><span class="k">red</span>
 <span class="nb">highlight</span> CursorColumn ctermbg<span class="p">=</span><span class="k">red</span> ctermfg<span class="p">=</span>blue
@@ -321,33 +295,33 @@ years from&nbsp;now.</p>
 <span class="nb">nnoremap</span> # #``
 <span class="nb">nnoremap</span> * *``
 
-<span class="c">&quot; close buffers properly go to previous buffer, then delete the buffer you were just in.</span>
+<span class="c">" close buffers properly go to previous buffer, then delete the buffer you were just in.</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">bd</span> :<span class="k">bp</span>\<span class="p">|</span><span class="k">bd</span> #<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">inoremap</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">bd</span> :<span class="k">bp</span>\<span class="p">|</span><span class="k">bd</span> #<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; Spell check ==============================================</span>
+<span class="c">" Spell check ==============================================</span>
 <span class="k">set</span> <span class="nb">spelllang</span><span class="p">=</span><span class="k">en</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="nb">ss</span> :<span class="k">setlocal</span> <span class="k">spell</span><span class="p">!&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">sf</span> z<span class="p">=</span><span class="m">1</span><span class="p">&lt;</span>CR<span class="p">&gt;&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; ========== Set leader and local leader ===================</span>
-<span class="k">let</span> mapleader<span class="p">=</span><span class="s2">&quot;\&lt;Space&gt;&quot;</span>
-<span class="k">let</span> localleader<span class="p">=</span><span class="s2">&quot;\\&quot;</span>
+<span class="c">" ========== Set leader and local leader ===================</span>
+<span class="k">let</span> mapleader<span class="p">=</span><span class="s2">"\&lt;Space&gt;"</span>
+<span class="k">let</span> localleader<span class="p">=</span><span class="s2">"\\"</span>
 
-<span class="c">&quot; insert 1 space to the right, without leaving normal mode</span>
+<span class="c">" insert 1 space to the right, without leaving normal mode</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>localleader<span class="p">&gt;&lt;</span>space<span class="p">&gt;</span> <span class="k">i</span><span class="p">&lt;</span>Space<span class="p">&gt;&lt;</span>Right<span class="p">&gt;&lt;</span>ESC<span class="p">&gt;</span>
 
-<span class="c">&quot; Flash the cursor row (and column) colors are set after color scheme ========</span>
-<span class="c">&quot; nnoremap &lt;leader&gt;f :call Flash()&lt;CR&gt;</span>
-<span class="c">&quot; function! Flash()</span>
-<span class="c">&quot;     &quot; set cursorline cursorcolumn</span>
-<span class="c">&quot;     set cursorline</span>
-<span class="c">&quot;     redraw</span>
-<span class="c">&quot;     sleep 110m</span>
-<span class="c">&quot;     set nocursorline</span>
-<span class="c">&quot; endfunction</span>
+<span class="c">" Flash the cursor row (and column) colors are set after color scheme ========</span>
+<span class="c">" nnoremap &lt;leader&gt;f :call Flash()&lt;CR&gt;</span>
+<span class="c">" function! Flash()</span>
+<span class="c">"     " set cursorline cursorcolumn</span>
+<span class="c">"     set cursorline</span>
+<span class="c">"     redraw</span>
+<span class="c">"     sleep 110m</span>
+<span class="c">"     set nocursorline</span>
+<span class="c">" endfunction</span>
 
-<span class="c">&quot; Edit/Reload the .vimrc file</span>
+<span class="c">" Edit/Reload the .vimrc file</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">ve</span> :<span class="k">e</span> $MYVIMRC<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>vr :<span class="k">so</span> $MYVIMRC<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
@@ -356,55 +330,55 @@ augroup VimReload
     autocmd <span class="nb">BufWritePost</span> $MYVIMRC source $MYVIMRC
 augroup END
 
-<span class="c">&quot; Yank to clipboard</span>
-<span class="nb">vnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">c</span><span class="p">&gt;</span> <span class="c">&quot;+y</span>
-<span class="k">if</span> has<span class="p">(</span><span class="s2">&quot;clipboard&quot;</span><span class="p">)</span>
-  <span class="k">set</span> <span class="nb">clipboard</span><span class="p">=</span>unnamed <span class="c">&quot; copy to the system clipboard</span>
+<span class="c">" Yank to clipboard</span>
+<span class="nb">vnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">c</span><span class="p">&gt;</span> <span class="c">"+y</span>
+<span class="k">if</span> has<span class="p">(</span><span class="s2">"clipboard"</span><span class="p">)</span>
+  <span class="k">set</span> <span class="nb">clipboard</span><span class="p">=</span>unnamed <span class="c">" copy to the system clipboard</span>
 
-  <span class="k">if</span> has<span class="p">(</span><span class="s2">&quot;unnamedplus&quot;</span><span class="p">)</span> <span class="c">&quot; X11 support</span>
+  <span class="k">if</span> has<span class="p">(</span><span class="s2">"unnamedplus"</span><span class="p">)</span> <span class="c">" X11 support</span>
     <span class="k">set</span> <span class="nb">clipboard</span><span class="p">+=</span>unnamedplus
   <span class="k">endif</span>
 <span class="k">endif</span>
 
-<span class="c">&quot; Go into NORMAL mode</span>
+<span class="c">" Go into NORMAL mode</span>
 <span class="nb">inoremap</span> jk <span class="p">&lt;</span>ESC<span class="p">&gt;</span>
 
-<span class="c">&quot; view working directory</span>
+<span class="c">" view working directory</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">pwd</span> :<span class="k">cd</span> %:<span class="k">p</span>:<span class="k">h</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; toggle line wrap</span>
+<span class="c">" toggle line wrap</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">lw</span> :<span class="k">set</span> <span class="nb">nowrap</span><span class="p">!&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; toggle line numbers</span>
+<span class="c">" toggle line numbers</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>ln :<span class="k">set</span> <span class="nb">relativenumber</span><span class="p">!&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; Insert current datetime</span>
-<span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>dt A <span class="p">()&lt;</span>ESC<span class="p">&gt;</span><span class="nb">hh</span> <span class="s2">&quot;=strftime(&quot;</span>\%Y<span class="p">-</span>\%<span class="k">m</span><span class="p">-</span>\%<span class="k">d</span>&quot;<span class="p">)&lt;</span>CR<span class="p">&gt;</span><span class="nb">gp</span>
+<span class="c">" Insert current datetime</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>dt A <span class="p">()&lt;</span>ESC<span class="p">&gt;</span><span class="nb">hh</span> <span class="s2">"=strftime("</span>\%Y<span class="p">-</span>\%<span class="k">m</span><span class="p">-</span>\%<span class="k">d</span>"<span class="p">)&lt;</span>CR<span class="p">&gt;</span><span class="nb">gp</span>
 
-<span class="c">&quot; map w to `</span>
+<span class="c">" map w to `</span>
 <span class="nb">nnoremap</span> ` <span class="k">w</span>
 
-<span class="c">&quot; Swap : and ;</span>
+<span class="c">" Swap : and ;</span>
 <span class="nb">nnoremap</span> ; :
 <span class="nb">nnoremap</span> : ;
 <span class="nb">vnoremap</span> ; :
 <span class="nb">vnoremap</span> : ;
 
-<span class="c">&quot; Navigation &amp; movemement</span>
-<span class="c">&quot; save buffer if it has been changed</span>
+<span class="c">" Navigation &amp; movemement</span>
+<span class="c">" save buffer if it has been changed</span>
 <span class="nb">nnoremap</span> <span class="nb">ww</span> :<span class="k">update</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">&quot; close Vim, but not if there are unsaved changes</span>
+<span class="c">" close Vim, but not if there are unsaved changes</span>
 <span class="nb">nnoremap</span> <span class="k">qa</span> :<span class="k">qa</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">&quot; save all changes</span>
+<span class="c">" save all changes</span>
 <span class="nb">nnoremap</span> <span class="k">wa</span> :<span class="k">wa</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">&quot; close buffer</span>
+<span class="c">" close buffer</span>
 <span class="nb">nnoremap</span> qq :<span class="k">bp</span>\<span class="p">|</span><span class="k">bd</span> #<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="k">wq</span> :<span class="k">update</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>:<span class="k">bp</span>\<span class="p">|</span><span class="k">bd</span> #<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">&quot; switch buffers</span>
+<span class="c">" switch buffers</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">+</span> :<span class="k">bn</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> _ :<span class="k">bp</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; Split navigations</span>
+<span class="c">" Split navigations</span>
 nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">h</span>  <span class="p">&lt;</span>C<span class="p">-</span>W<span class="p">&gt;&lt;</span>C<span class="p">-</span>H<span class="p">&gt;</span>
 nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">j</span>  <span class="p">&lt;</span>C<span class="p">-</span>W<span class="p">&gt;&lt;</span>C<span class="p">-</span>J<span class="p">&gt;</span>
 nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">k</span>  <span class="p">&lt;</span>C<span class="p">-</span>W<span class="p">&gt;&lt;</span>C<span class="p">-</span>K<span class="p">&gt;</span>
@@ -412,51 +386,51 @@ nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k"
 nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="nb">ww</span>  <span class="p">&lt;</span>C<span class="p">-</span>W<span class="p">&gt;&lt;</span>C<span class="p">-</span>W<span class="p">&gt;</span>
 nmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">wq</span>  <span class="p">&lt;</span>C<span class="p">-</span>W<span class="p">&gt;&lt;</span>C<span class="p">-</span>Q<span class="p">&gt;</span>
 
-<span class="c">&quot; split (pane) resize</span>
+<span class="c">" split (pane) resize</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> :<span class="k">resize</span> <span class="p">+</span><span class="m">2</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> :<span class="k">resize</span> <span class="m">-2</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> :<span class="k">vertical</span> <span class="k">resize</span> <span class="p">+</span><span class="m">2</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span> :<span class="k">vertical</span> <span class="k">resize</span> <span class="m">-2</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; open help in vertical split by default</span>
+<span class="c">" open help in vertical split by default</span>
 cabbrev vhelp <span class="k">vert</span> help
 
-<span class="c">&quot; Natural cursor movement over wrapped lines</span>
+<span class="c">" Natural cursor movement over wrapped lines</span>
 <span class="nb">nnoremap</span> <span class="k">j</span> gj
 <span class="nb">nnoremap</span> <span class="k">k</span> gk
 
-<span class="c">&quot; Insert blank lines in normal mode</span>
+<span class="c">" Insert blank lines in normal mode</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">o</span> <span class="k">o</span><span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">k</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>O O<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">j</span>
 
-<span class="c">&quot;*****************************</span>
-<span class="c">&quot;========== PLUGINS ==========</span>
-<span class="c">&quot;*****************************</span>
+<span class="c">"*****************************</span>
+<span class="c">"========== PLUGINS ==========</span>
+<span class="c">"*****************************</span>
 
-<span class="k">call</span> plug#begin<span class="p">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="p">)</span>
+<span class="k">call</span> plug#begin<span class="p">(</span><span class="s1">'~/.vim/plugged'</span><span class="p">)</span>
 
-<span class="c">&quot; numbers as text objects</span>
-Plug <span class="s1">&#39;MisanthropicBit/vim-numbers&#39;</span>
+<span class="c">" numbers as text objects</span>
+Plug <span class="s1">'MisanthropicBit/vim-numbers'</span>
 
 
-<span class="c">&quot;run shell commands async in vim8&quot;</span>
-Plug <span class="s1">&#39;skywind3000/asyncrun.vim&#39;</span>
+<span class="c">"run shell commands async in vim8"</span>
+Plug <span class="s1">'skywind3000/asyncrun.vim'</span>
 <span class="k">let</span> <span class="k">g</span>:asyncrun_open <span class="p">=</span> <span class="m">10</span>
 
-<span class="c">&quot; When using :python or :!python, access the packages in venv</span>
-<span class="c">&quot; :VirtualEnvList</span>
-<span class="c">&quot; :VirtualEnvActivate &lt;tab&gt;</span>
-Plug <span class="s1">&#39;jmcantrell/vim-virtualenv&#39;</span>
+<span class="c">" When using :python or :!python, access the packages in venv</span>
+<span class="c">" :VirtualEnvList</span>
+<span class="c">" :VirtualEnvActivate &lt;tab&gt;</span>
+Plug <span class="s1">'jmcantrell/vim-virtualenv'</span>
 
-<span class="c">&quot; force quickfix to be full widtth</span>
+<span class="c">" force quickfix to be full widtth</span>
 <span class="k">au</span> <span class="nb">FileType</span> qf <span class="k">wincmd</span> J
 
-<span class="c">&quot; testing - many languages and test runners</span>
-Plug <span class="s1">&#39;janko-m/vim-test&#39;</span>
-<span class="k">let</span> test#strategy <span class="p">=</span> <span class="s2">&quot;asyncrun_background&quot;</span>
-<span class="k">let</span> test#python#runner <span class="p">=</span> <span class="s1">&#39;pytest&#39;</span>
-<span class="k">let</span> test#python#pytest#<span class="k">options</span> <span class="p">=</span> <span class="s1">&#39;-x&#39;</span>
-<span class="k">let</span> test#<span class="k">vim</span>#term_position <span class="p">=</span> <span class="s2">&quot;belowright&quot;</span>
+<span class="c">" testing - many languages and test runners</span>
+Plug <span class="s1">'janko-m/vim-test'</span>
+<span class="k">let</span> test#strategy <span class="p">=</span> <span class="s2">"asyncrun_background"</span>
+<span class="k">let</span> test#python#runner <span class="p">=</span> <span class="s1">'pytest'</span>
+<span class="k">let</span> test#python#pytest#<span class="k">options</span> <span class="p">=</span> <span class="s1">'-x'</span>
+<span class="k">let</span> test#<span class="k">vim</span>#term_position <span class="p">=</span> <span class="s2">"belowright"</span>
 
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="k">t</span><span class="p">&lt;</span>LEADER<span class="p">&gt;</span><span class="k">n</span> :TestNearest<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="k">t</span><span class="p">&lt;</span>LEADER<span class="p">&gt;</span><span class="k">f</span> :TestFile<span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -464,9 +438,9 @@ Plug <span class="s1">&#39;janko-m/vim-test&#39;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="k">t</span><span class="p">&lt;</span>LEADER<span class="p">&gt;</span><span class="k">l</span> :TestLast<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="k">t</span><span class="p">&lt;</span>LEADER<span class="p">&gt;</span><span class="k">g</span> :TestVisit<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; toggle the quickfix window</span>
+<span class="c">" toggle the quickfix window</span>
 <span class="k">function</span><span class="p">!</span> ToggleQuickFix<span class="p">()</span>
-    <span class="k">if</span> empty<span class="p">(</span>filter<span class="p">(</span>getwininfo<span class="p">(),</span> <span class="s1">&#39;v:val.quickfix&#39;</span><span class="p">))</span>
+    <span class="k">if</span> empty<span class="p">(</span>filter<span class="p">(</span>getwininfo<span class="p">(),</span> <span class="s1">'v:val.quickfix'</span><span class="p">))</span>
         <span class="k">copen</span> <span class="m">15</span>
     <span class="k">setlocal</span> <span class="nb">norelativenumber</span>
     <span class="k">else</span>
@@ -477,32 +451,32 @@ Plug <span class="s1">&#39;janko-m/vim-test&#39;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="k">cc</span> :<span class="k">call</span> ToggleQuickFix<span class="p">()&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
 
 
-<span class="c">&quot; generates an index (or tag) file of language objects found in source files</span>
-<span class="c">&quot; &lt;C-]&gt; jump to definition</span>
-<span class="c">&quot; &lt;C-O&gt; jump back</span>
-<span class="c">&quot; g] see a list of multiple matches</span>
-<span class="c">&quot; &lt;C-t&gt;</span>
-Plug <span class="s1">&#39;universal-ctags/ctags&#39;</span>
+<span class="c">" generates an index (or tag) file of language objects found in source files</span>
+<span class="c">" &lt;C-]&gt; jump to definition</span>
+<span class="c">" &lt;C-O&gt; jump back</span>
+<span class="c">" g] see a list of multiple matches</span>
+<span class="c">" &lt;C-t&gt;</span>
+Plug <span class="s1">'universal-ctags/ctags'</span>
 
-<span class="c">&quot; (re)generate tags file in the bg</span>
-Plug <span class="s1">&#39;ludovicchabant/vim-gutentags&#39;</span>
-<span class="k">let</span> <span class="k">g</span>:gutentags_ctags_exclude <span class="p">=</span> [<span class="s1">&#39;.json&#39;</span><span class="p">,</span> <span class="s1">&#39;.mypy_cache/**&#39;</span>]
+<span class="c">" (re)generate tags file in the bg</span>
+Plug <span class="s1">'ludovicchabant/vim-gutentags'</span>
+<span class="k">let</span> <span class="k">g</span>:gutentags_ctags_exclude <span class="p">=</span> [<span class="s1">'.json'</span><span class="p">,</span> <span class="s1">'.mypy_cache/**'</span>]
 
-<span class="c">&quot; sidebar that displays the ctags-generated tags of the current file, ordered by their scope</span>
-Plug <span class="s1">&#39;majutsushi/tagbar&#39;</span>
+<span class="c">" sidebar that displays the ctags-generated tags of the current file, ordered by their scope</span>
+Plug <span class="s1">'majutsushi/tagbar'</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>F2<span class="p">&gt;</span> :TagbarToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>F2<span class="p">&gt;</span> :TagbarToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; add python library code to tags file, goto def with &lt;C-]&gt;</span>
+<span class="c">" add python library code to tags file, goto def with &lt;C-]&gt;</span>
 <span class="k">let</span> pyEnvLib <span class="p">=</span> $VIRTUAL_ENV
-<span class="k">let</span> pyEnvLib .<span class="p">=</span> <span class="s1">&#39;/lib/python3.8/&#39;</span>
+<span class="k">let</span> pyEnvLib .<span class="p">=</span> <span class="s1">'/lib/python3.8/'</span>
 
-<span class="c">&quot; Async linting engine</span>
-Plug <span class="s1">&#39;dense-analysis/ale&#39;</span>
+<span class="c">" Async linting engine</span>
+Plug <span class="s1">'dense-analysis/ale'</span>
 <span class="k">let</span> <span class="k">g</span>:ale_lint_on_enter <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:ale_lint_on_save <span class="p">=</span> <span class="m">0</span>
 
-<span class="c">&quot; ALE completion</span>
+<span class="c">" ALE completion</span>
 <span class="k">let</span> <span class="k">g</span>:ale_completion_enabled <span class="p">=</span> <span class="m">0</span>
 <span class="k">set</span> <span class="nb">omnifunc</span><span class="p">=</span>ale#completion#OmniFunc
 <span class="k">let</span> <span class="k">g</span>:ale_completion_autoimport <span class="p">=</span> <span class="m">1</span>
@@ -512,27 +486,27 @@ Plug <span class="s1">&#39;dense-analysis/ale&#39;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>aj :ALENext<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>ak :ALEPrevious<span class="p">&lt;</span><span class="k">cr</span><span class="p">&gt;</span>
 
-<span class="c">&quot; iSort</span>
-Plug <span class="s1">&#39;fisadev/vim-isort&#39;</span>
-<span class="c">&quot; track the snippets engine</span>
-Plug <span class="s1">&#39;sirver/ultisnips&#39;</span>
-<span class="c">&quot; Snippets are separated from the engine. Add this if you want them:</span>
-Plug <span class="s1">&#39;honza/vim-snippets&#39;</span>
-<span class="c">&quot; Trigger configuration. Do not use &lt;tab&gt; if you use https://github.com/Valloric/YouCompleteMe.</span>
-<span class="k">let</span> <span class="k">g</span>:UltiSnipsExpandTrigger<span class="p">=</span><span class="s2">&quot;&lt;c-a&gt;&quot;</span>
-<span class="k">let</span> <span class="k">g</span>:UltiSnipsJumpForwardTrigger<span class="p">=</span><span class="s2">&quot;&lt;c-b&gt;&quot;</span>
-<span class="k">let</span> <span class="k">g</span>:UltiSnipsJumpBackwardTrigger<span class="p">=</span><span class="s2">&quot;&lt;c-z&gt;&quot;</span>
-<span class="c">&quot; If you want :UltiSnipsEdit to split your window.</span>
-<span class="c">&quot; let g:UltiSnipsEditSplit=&quot;vertical&quot;</span>
+<span class="c">" iSort</span>
+Plug <span class="s1">'fisadev/vim-isort'</span>
+<span class="c">" track the snippets engine</span>
+Plug <span class="s1">'sirver/ultisnips'</span>
+<span class="c">" Snippets are separated from the engine. Add this if you want them:</span>
+Plug <span class="s1">'honza/vim-snippets'</span>
+<span class="c">" Trigger configuration. Do not use &lt;tab&gt; if you use https://github.com/Valloric/YouCompleteMe.</span>
+<span class="k">let</span> <span class="k">g</span>:UltiSnipsExpandTrigger<span class="p">=</span><span class="s2">"&lt;c-a&gt;"</span>
+<span class="k">let</span> <span class="k">g</span>:UltiSnipsJumpForwardTrigger<span class="p">=</span><span class="s2">"&lt;c-b&gt;"</span>
+<span class="k">let</span> <span class="k">g</span>:UltiSnipsJumpBackwardTrigger<span class="p">=</span><span class="s2">"&lt;c-z&gt;"</span>
+<span class="c">" If you want :UltiSnipsEdit to split your window.</span>
+<span class="c">" let g:UltiSnipsEditSplit="vertical"</span>
 
-Plug <span class="s1">&#39;Valloric/YouCompleteMe&#39;</span>
-Plug <span class="s1">&#39;davidhalter/jedi&#39;</span>
-Plug <span class="s1">&#39;maksimr/vim-jsbeautify&#39;</span>
+Plug <span class="s1">'Valloric/YouCompleteMe'</span>
+Plug <span class="s1">'davidhalter/jedi'</span>
+Plug <span class="s1">'maksimr/vim-jsbeautify'</span>
 
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">x</span>  :YcmCompleter GoTo<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">&quot; the subcommands add entries to Vim&#39;s &#39;jumplist&#39; so you can use</span>
-<span class="c">&quot; &#39;CTRL-O&#39; to jump back to where you were before invoking the command (and</span>
-<span class="c">&quot; &#39;CTRL-I&#39; to jump forward; see &#39;:h jumplist&#39; for details)</span>
+<span class="c">" the subcommands add entries to Vim's 'jumplist' so you can use</span>
+<span class="c">" 'CTRL-O' to jump back to where you were before invoking the command (and</span>
+<span class="c">" 'CTRL-I' to jump forward; see ':h jumplist' for details)</span>
 <span class="k">let</span> <span class="k">g</span>:ycm_confirm_extra_conf <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:ycm_autoclose_preview_window_after_completion<span class="p">=</span><span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:ycm_collect_identifiers_from_tags_files <span class="p">=</span> <span class="m">1</span>
@@ -543,93 +517,93 @@ Plug <span class="s1">&#39;maksimr/vim-jsbeautify&#39;</span>
 <span class="k">let</span> <span class="k">g</span>:ycm_collect_identifiers_from_tags_files <span class="p">=</span> <span class="m">1</span>
 
 
-<span class="c">&quot; autoclose parens, brackets etc</span>
-<span class="c">&quot; Plug &#39;townk/vim-autoclose&#39;</span>
+<span class="c">" autoclose parens, brackets etc</span>
+<span class="c">" Plug 'townk/vim-autoclose'</span>
 
-<span class="c">&quot; vim-tmux focus events</span>
-Plug <span class="s1">&#39;tmux-plugins/vim-tmux-focus-events&#39;</span>
+<span class="c">" vim-tmux focus events</span>
+Plug <span class="s1">'tmux-plugins/vim-tmux-focus-events'</span>
 
-<span class="c">&quot; Code folding</span>
-<span class="c">&quot; Plug &#39;konfekt/fastfold&#39;</span>
+<span class="c">" Code folding</span>
+<span class="c">" Plug 'konfekt/fastfold'</span>
 
-<span class="c">&quot; match m of n https://vimawesome.com/plugin/indexedsearch</span>
-<span class="c">&quot; Plug &#39;henrik/vim-indexed-search&#39;</span>
+<span class="c">" match m of n https://vimawesome.com/plugin/indexedsearch</span>
+<span class="c">" Plug 'henrik/vim-indexed-search'</span>
 
-<span class="c">&quot; adds vertical lines to easily show indent levels</span>
-Plug <span class="s1">&#39;yggdroot/indentline&#39;</span>
+<span class="c">" adds vertical lines to easily show indent levels</span>
+Plug <span class="s1">'yggdroot/indentline'</span>
 
-<span class="c">&quot; Fugitive</span>
-Plug <span class="s1">&#39;tpope/vim-fugitive&#39;</span>
+<span class="c">" Fugitive</span>
+Plug <span class="s1">'tpope/vim-fugitive'</span>
 
-<span class="c">&quot; Marks</span>
-Plug <span class="s1">&#39;kshenoy/vim-signature&#39;</span>
+<span class="c">" Marks</span>
+Plug <span class="s1">'kshenoy/vim-signature'</span>
 
-<span class="c">&quot; Latex Vimtex</span>
-Plug <span class="s1">&#39;lervag/vimtex&#39;</span>
-<span class="k">let</span> <span class="k">g</span>:tex_flavor <span class="p">=</span> <span class="s1">&#39;latex&#39;</span>
+<span class="c">" Latex Vimtex</span>
+Plug <span class="s1">'lervag/vimtex'</span>
+<span class="k">let</span> <span class="k">g</span>:tex_flavor <span class="p">=</span> <span class="s1">'latex'</span>
 autocmd Filetype tex <span class="k">set</span> <span class="nb">updatetime</span><span class="p">=</span><span class="m">1</span>
-<span class="k">let</span> <span class="k">g</span>:livepreview_previewer <span class="p">=</span> <span class="s1">&#39;open -a Preview&#39;</span>
+<span class="k">let</span> <span class="k">g</span>:livepreview_previewer <span class="p">=</span> <span class="s1">'open -a Preview'</span>
 <span class="k">let</span> <span class="k">g</span>:tex_IgnoredWarnings <span class="p">=</span>
-    \<span class="s1">&#39;Underfull&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;Overfull&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;specifier changed to&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;You have requested&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;Missing number, treated as zero.&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;There were undefined references&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;Citation %.%# undefined&#39;</span>.<span class="s2">&quot;\n&quot;</span>.
-    \<span class="s1">&#39;Double space found.&#39;</span>.<span class="s2">&quot;\n&quot;</span>
+    \<span class="s1">'Underfull'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'Overfull'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'specifier changed to'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'You have requested'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'Missing number, treated as zero.'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'There were undefined references'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'Citation %.%# undefined'</span>.<span class="s2">"\n"</span>.
+    \<span class="s1">'Double space found.'</span>.<span class="s2">"\n"</span>
 <span class="k">let</span> <span class="k">g</span>:Tex_IgnoreLevel <span class="p">=</span> <span class="m">8</span>
 
-<span class="c">&quot; Rainbow parenthesis</span>
-<span class="k">let</span> blacklist <span class="p">=</span> [<span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;md&#39;</span><span class="p">,</span> <span class="s1">&#39;wiki&#39;</span>]
-autocmd <span class="nb">BufWritePre</span> * <span class="k">if</span> index<span class="p">(</span>blacklist<span class="p">,</span> &amp;<span class="nb">ft</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">|</span> Plug <span class="s1">&#39;luochen1990/rainbow&#39;</span>
+<span class="c">" Rainbow parenthesis</span>
+<span class="k">let</span> blacklist <span class="p">=</span> [<span class="s1">'html'</span><span class="p">,</span> <span class="s1">'md'</span><span class="p">,</span> <span class="s1">'wiki'</span>]
+autocmd <span class="nb">BufWritePre</span> * <span class="k">if</span> index<span class="p">(</span>blacklist<span class="p">,</span> &amp;<span class="nb">ft</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span> <span class="p">|</span> Plug <span class="s1">'luochen1990/rainbow'</span>
 <span class="k">let</span> <span class="k">g</span>:rainbow_active <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:rainbow_conf <span class="p">=</span> {
-    \<span class="s1">&#39;guifgs&#39;</span>: [<span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;magenta1&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;deepskyblue&#39;</span>]<span class="p">,</span>
-    \<span class="s1">&#39;guis&#39;</span>: [<span class="s1">&#39;bold&#39;</span><span class="p">,</span><span class="s1">&#39;standout&#39;</span><span class="p">,</span><span class="s1">&#39;undercurl&#39;</span><span class="p">,</span><span class="s1">&#39;italic&#39;</span><span class="p">,</span><span class="s1">&#39;strikethrough&#39;</span>]
+    \<span class="s1">'guifgs'</span>: [<span class="s1">'green'</span><span class="p">,</span> <span class="s1">'magenta1'</span><span class="p">,</span> <span class="s1">'gold'</span><span class="p">,</span> <span class="s1">'red'</span><span class="p">,</span> <span class="s1">'deepskyblue'</span>]<span class="p">,</span>
+    \<span class="s1">'guis'</span>: [<span class="s1">'bold'</span><span class="p">,</span><span class="s1">'standout'</span><span class="p">,</span><span class="s1">'undercurl'</span><span class="p">,</span><span class="s1">'italic'</span><span class="p">,</span><span class="s1">'strikethrough'</span>]
     \}
 
-<span class="c">&quot; Set color scheme.</span>
+<span class="c">" Set color scheme.</span>
 <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
 
-Plug <span class="s1">&#39;chriskempson/base16-vim&#39;</span>
-<span class="c">&quot; colorscheme base16-default-dark</span>
+Plug <span class="s1">'chriskempson/base16-vim'</span>
+<span class="c">" colorscheme base16-default-dark</span>
 <span class="k">colorscheme</span> badwolf
 <span class="k">let</span> <span class="k">g</span>:badwolf_darkgutter <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:badwolf_html_link_underline <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:badwolf_css_props_highlight <span class="p">=</span> <span class="m">1</span>
 
-<span class="c">&quot; colorscheme modifications</span>
+<span class="c">" colorscheme modifications</span>
 <span class="nb">highlight</span> Comment ctermfg<span class="p">=</span>cyan guifg<span class="p">=</span>cyan
 <span class="nb">highlight</span> pythonComment ctermfg<span class="p">=</span>cyan guifg<span class="p">=</span>cyan
 <span class="nb">highlight</span> LineNr ctermfg<span class="p">=</span>cyan guifg<span class="p">=</span>cyan
 <span class="k">hi</span> nontext <span class="nb">term</span><span class="p">=</span><span class="nb">bold</span> ctermfg<span class="p">=</span>Cyan guifg<span class="p">=</span><span class="mh">#80a0ff</span> <span class="k">gui</span><span class="p">=</span><span class="nb">bold</span>
 <span class="k">hi</span> vimLineComment <span class="nb">term</span><span class="p">=</span><span class="nb">bold</span> ctermfg<span class="p">=</span>Cyan guifg<span class="p">=</span><span class="mh">#80a0ff</span> <span class="k">gui</span><span class="p">=</span><span class="nb">bold</span>
-<span class="c">&quot; SpecialKey - use :set list to toggle visibility of EOL, CR, etc</span>
+<span class="c">" SpecialKey - use :set list to toggle visibility of EOL, CR, etc</span>
 <span class="k">hi</span> specialKey <span class="nb">term</span><span class="p">=</span><span class="nb">bold</span> ctermfg<span class="p">=</span>Cyan guifg<span class="p">=</span><span class="mh">#80a0ff</span> <span class="k">gui</span><span class="p">=</span><span class="nb">bold</span>
 
-<span class="c">&quot; colors for flashing cursorline and cursorcolumn</span>
+<span class="c">" colors for flashing cursorline and cursorcolumn</span>
 <span class="k">hi</span> CursorLine   cterm<span class="p">=</span><span class="nb">NONE</span> ctermbg<span class="p">=</span>green ctermfg<span class="p">=</span>black guibg<span class="p">=</span>green guifg<span class="p">=</span>black
 <span class="k">hi</span> CursorColumn cterm<span class="p">=</span><span class="nb">NONE</span> ctermbg<span class="p">=</span>green ctermfg<span class="p">=</span>black guibg<span class="p">=</span>green guifg<span class="p">=</span>black
 
-<span class="c">&quot; query what kind of syntax is this color? - wc</span>
-<span class="nb">nnoremap</span> <span class="nb">wc</span> :echo <span class="s2">&quot;hi&lt;&quot;</span> . synIDattr<span class="p">(</span>synID<span class="p">(</span>line<span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span><span class="k">col</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span><span class="m">1</span><span class="p">),</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> . <span class="s1">&#39;&gt; trans&lt;&#39;</span> . synIDattr<span class="p">(</span>synID<span class="p">(</span>line<span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span><span class="k">col</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span><span class="m">0</span><span class="p">),</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> .<span class="s2">&quot;&gt; lo&lt;&quot;</span> . synIDattr<span class="p">(</span>synIDtrans<span class="p">(</span>synID<span class="p">(</span>line<span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span><span class="k">col</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span><span class="m">1</span><span class="p">)),</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> . <span class="s2">&quot;&gt;&quot;</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">" query what kind of syntax is this color? - wc</span>
+<span class="nb">nnoremap</span> <span class="nb">wc</span> :echo <span class="s2">"hi&lt;"</span> . synIDattr<span class="p">(</span>synID<span class="p">(</span>line<span class="p">(</span><span class="s2">"."</span><span class="p">),</span><span class="k">col</span><span class="p">(</span><span class="s2">"."</span><span class="p">),</span><span class="m">1</span><span class="p">),</span><span class="s2">"name"</span><span class="p">)</span> . <span class="s1">'&gt; trans&lt;'</span> . synIDattr<span class="p">(</span>synID<span class="p">(</span>line<span class="p">(</span><span class="s2">"."</span><span class="p">),</span><span class="k">col</span><span class="p">(</span><span class="s2">"."</span><span class="p">),</span><span class="m">0</span><span class="p">),</span><span class="s2">"name"</span><span class="p">)</span> .<span class="s2">"&gt; lo&lt;"</span> . synIDattr<span class="p">(</span>synIDtrans<span class="p">(</span>synID<span class="p">(</span>line<span class="p">(</span><span class="s2">"."</span><span class="p">),</span><span class="k">col</span><span class="p">(</span><span class="s2">"."</span><span class="p">),</span><span class="m">1</span><span class="p">)),</span><span class="s2">"name"</span><span class="p">)</span> . <span class="s2">"&gt;"</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; fuzzy file, buffer, tag finder</span>
+<span class="c">" fuzzy file, buffer, tag finder</span>
 <span class="k">set</span> <span class="nb">rtp</span><span class="p">+=</span><span class="sr">/usr/</span>local<span class="sr">/opt/</span>fzf
 
-<span class="c">&quot; ensure you have the latest version</span>
-Plug <span class="s1">&#39;junegunn/fzf&#39;</span><span class="p">,</span> { <span class="s1">&#39;do&#39;</span>: { <span class="p">-&gt;</span> fzf#install<span class="p">()</span> } }
-Plug <span class="s1">&#39;junegunn/fzf.vim&#39;</span>
+<span class="c">" ensure you have the latest version</span>
+Plug <span class="s1">'junegunn/fzf'</span><span class="p">,</span> { <span class="s1">'do'</span>: { <span class="p">-&gt;</span> fzf#install<span class="p">()</span> } }
+Plug <span class="s1">'junegunn/fzf.vim'</span>
 
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">e</span> :Files<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">r</span> :Buffers<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">t</span> :Tags<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="nb">ff</span> :Rg<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="c">&quot; nnoremap &lt;silent&gt; &lt;Leader&gt;ff :Ag&lt;CR&gt;</span>
+<span class="c">" nnoremap &lt;silent&gt; &lt;Leader&gt;ff :Ag&lt;CR&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">la</span> :BLines<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">ll</span> :Lines<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-<span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>&#39; :Marks<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>' :Marks<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>fh :Helptags<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="nb">fs</span> :Snippets<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>fc :Commits<span class="p">&lt;</span>CR<span class="p">&gt;</span>
@@ -638,86 +612,86 @@ Plug <span class="s1">&#39;junegunn/fzf.vim&#39;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">h</span>: :History:<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">h</span><span class="sr">/ :History/</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; let $FZF_DEFAULT_OPTS = &#39;--layout=reverse --info=inline&#39;</span>
-<span class="c">&quot; let $FZF_DEFAULT_COMMAND=&quot;rg --files --hidden&quot;</span>
+<span class="c">" let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'</span>
+<span class="c">" let $FZF_DEFAULT_COMMAND="rg --files --hidden"</span>
 
 <span class="k">let</span> <span class="k">g</span>:fzf_buffers_jump <span class="p">=</span> <span class="m">0</span>
-<span class="k">let</span> <span class="k">g</span>:fzf_layout <span class="p">=</span> { <span class="s1">&#39;down&#39;</span>: <span class="s1">&#39;~50%&#39;</span> }
-<span class="c">&quot; let g:fzf_preview_window = &#39;&#39;</span>
-<span class="k">let</span> <span class="k">g</span>:fzf_preview_window <span class="p">=</span> <span class="s1">&#39;right:0%&#39;</span>
+<span class="k">let</span> <span class="k">g</span>:fzf_layout <span class="p">=</span> { <span class="s1">'down'</span>: <span class="s1">'~50%'</span> }
+<span class="c">" let g:fzf_preview_window = ''</span>
+<span class="k">let</span> <span class="k">g</span>:fzf_preview_window <span class="p">=</span> <span class="s1">'right:0%'</span>
 
 <span class="k">function</span><span class="p">!</span> s:copy_results<span class="p">(</span><span class="nb">lines</span><span class="p">)</span>
-  <span class="k">let</span> joined_lines <span class="p">=</span> <span class="k">join</span><span class="p">(</span><span class="k">a</span>:<span class="nb">lines</span><span class="p">,</span> <span class="s2">&quot;\n&quot;</span><span class="p">)</span>
+  <span class="k">let</span> joined_lines <span class="p">=</span> <span class="k">join</span><span class="p">(</span><span class="k">a</span>:<span class="nb">lines</span><span class="p">,</span> <span class="s2">"\n"</span><span class="p">)</span>
   <span class="k">if</span> len<span class="p">(</span><span class="k">a</span>:<span class="nb">lines</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span>
-    <span class="k">let</span> joined_lines .<span class="p">=</span> <span class="s2">&quot;\n&quot;</span>
+    <span class="k">let</span> joined_lines .<span class="p">=</span> <span class="s2">"\n"</span>
   <span class="k">endif</span>
   <span class="k">let</span> @<span class="p">+</span> <span class="p">=</span> joined_lines
 <span class="k">endfunction</span>
 
 <span class="k">let</span> <span class="k">g</span>:fzf_action <span class="p">=</span> {
-  \ <span class="s1">&#39;ctrl-t&#39;</span>: <span class="s1">&#39;tab split&#39;</span><span class="p">,</span>
-  \ <span class="s1">&#39;ctrl-x&#39;</span>: <span class="s1">&#39;split&#39;</span><span class="p">,</span>
-  \ <span class="s1">&#39;ctrl-v&#39;</span>: <span class="s1">&#39;vsplit&#39;</span><span class="p">,</span>
-  \ <span class="s1">&#39;ctrl-o&#39;</span>: <span class="k">function</span><span class="p">(</span><span class="s1">&#39;s:copy_results&#39;</span><span class="p">),</span>
+  \ <span class="s1">'ctrl-t'</span>: <span class="s1">'tab split'</span><span class="p">,</span>
+  \ <span class="s1">'ctrl-x'</span>: <span class="s1">'split'</span><span class="p">,</span>
+  \ <span class="s1">'ctrl-v'</span>: <span class="s1">'vsplit'</span><span class="p">,</span>
+  \ <span class="s1">'ctrl-o'</span>: <span class="k">function</span><span class="p">(</span><span class="s1">'s:copy_results'</span><span class="p">),</span>
   \ }
 
 <span class="k">let</span> <span class="k">g</span>:fzf_colors <span class="p">=</span>
-\ { <span class="s1">&#39;fg&#39;</span>:      [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;bg&#39;</span>:      [<span class="s1">&#39;bg&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;hl&#39;</span>:      [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Comment&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;fg+&#39;</span>:     [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;CursorLine&#39;</span><span class="p">,</span> <span class="s1">&#39;CursorColumn&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;bg+&#39;</span>:     [<span class="s1">&#39;bg&#39;</span><span class="p">,</span> <span class="s1">&#39;CursorLine&#39;</span><span class="p">,</span> <span class="s1">&#39;CursorColumn&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;hl+&#39;</span>:     [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Statement&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;info&#39;</span>:    [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;PreProc&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;prompt&#39;</span>:  [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Conditional&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;pointer&#39;</span>: [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Exception&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;marker&#39;</span>:  [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Keyword&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;spinner&#39;</span>: [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Label&#39;</span>]<span class="p">,</span>
-  \ <span class="s1">&#39;header&#39;</span>:  [<span class="s1">&#39;fg&#39;</span><span class="p">,</span> <span class="s1">&#39;Comment&#39;</span>] }
+\ { <span class="s1">'fg'</span>:      [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Normal'</span>]<span class="p">,</span>
+  \ <span class="s1">'bg'</span>:      [<span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'Normal'</span>]<span class="p">,</span>
+  \ <span class="s1">'hl'</span>:      [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Comment'</span>]<span class="p">,</span>
+  \ <span class="s1">'fg+'</span>:     [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'CursorLine'</span><span class="p">,</span> <span class="s1">'CursorColumn'</span><span class="p">,</span> <span class="s1">'Normal'</span>]<span class="p">,</span>
+  \ <span class="s1">'bg+'</span>:     [<span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'CursorLine'</span><span class="p">,</span> <span class="s1">'CursorColumn'</span>]<span class="p">,</span>
+  \ <span class="s1">'hl+'</span>:     [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Statement'</span>]<span class="p">,</span>
+  \ <span class="s1">'info'</span>:    [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'PreProc'</span>]<span class="p">,</span>
+  \ <span class="s1">'prompt'</span>:  [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Conditional'</span>]<span class="p">,</span>
+  \ <span class="s1">'pointer'</span>: [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Exception'</span>]<span class="p">,</span>
+  \ <span class="s1">'marker'</span>:  [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Keyword'</span>]<span class="p">,</span>
+  \ <span class="s1">'spinner'</span>: [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Label'</span>]<span class="p">,</span>
+  \ <span class="s1">'header'</span>:  [<span class="s1">'fg'</span><span class="p">,</span> <span class="s1">'Comment'</span>] }
 
 
-<span class="c">&quot; grep in vim - shows results in a split window</span>
-Plug <span class="s1">&#39;mileszs/ack.vim&#39;</span>
+<span class="c">" grep in vim - shows results in a split window</span>
+Plug <span class="s1">'mileszs/ack.vim'</span>
 
-<span class="c">&quot; session tracking</span>
-Plug <span class="s1">&#39;tpope/vim-obsession&#39;</span>
+<span class="c">" session tracking</span>
+Plug <span class="s1">'tpope/vim-obsession'</span>
 
-<span class="c">&quot; pairs of handy bracket mapping</span>
-Plug <span class="s1">&#39;tpope/vim-unimpaired&#39;</span>
+<span class="c">" pairs of handy bracket mapping</span>
+Plug <span class="s1">'tpope/vim-unimpaired'</span>
 
-<span class="c">&quot; https://vimawesome.com/plugin/surround-vim</span>
-Plug <span class="s1">&#39;tpope/vim-surround&#39;</span>
+<span class="c">" https://vimawesome.com/plugin/surround-vim</span>
+Plug <span class="s1">'tpope/vim-surround'</span>
 
-<span class="c">&quot; repeat commands from plugin mappings</span>
-Plug <span class="s1">&#39;tpope/vim-repeat&#39;</span>
+<span class="c">" repeat commands from plugin mappings</span>
+Plug <span class="s1">'tpope/vim-repeat'</span>
 
-<span class="c">&quot; vinegar</span>
-Plug <span class="s1">&#39;tpope/vim-vinegar&#39;</span>
+<span class="c">" vinegar</span>
+Plug <span class="s1">'tpope/vim-vinegar'</span>
 <span class="k">let</span> <span class="k">g</span>:netrw_liststyle <span class="p">=</span> <span class="m">3</span>
 
-<span class="c">&quot; CSV</span>
-Plug <span class="s1">&#39;chrisbra/csv.vim&#39;</span>
+<span class="c">" CSV</span>
+Plug <span class="s1">'chrisbra/csv.vim'</span>
 
-<span class="c">&quot; nerdtree</span>
-Plug <span class="s1">&#39;scrooloose/nerdtree&#39;</span>
+<span class="c">" nerdtree</span>
+Plug <span class="s1">'scrooloose/nerdtree'</span>
 
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">n</span> :NERDTreeToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 <span class="k">let</span> <span class="k">g</span>:nerdtree_tabs_autoclose<span class="p">=</span><span class="m">1</span>
-<span class="k">let</span> NERDTreeAutoDeleteBuffer <span class="p">=</span> <span class="m">1</span> <span class="c">&quot; Automatically delete the buffer of the file you just deleted</span>
-<span class="k">let</span> <span class="k">g</span>:nerdtree_tabs_open_on_gui_startup<span class="p">=</span><span class="m">2</span> <span class="c">&quot; 2 - open nerdtree only if directory was given as startup argument</span>
-<span class="k">let</span> <span class="k">g</span>:nerdtree_tabs_smart_startup_focus<span class="p">=</span><span class="m">2</span> <span class="c">&quot; always focus file window after startup</span>
+<span class="k">let</span> NERDTreeAutoDeleteBuffer <span class="p">=</span> <span class="m">1</span> <span class="c">" Automatically delete the buffer of the file you just deleted</span>
+<span class="k">let</span> <span class="k">g</span>:nerdtree_tabs_open_on_gui_startup<span class="p">=</span><span class="m">2</span> <span class="c">" 2 - open nerdtree only if directory was given as startup argument</span>
+<span class="k">let</span> <span class="k">g</span>:nerdtree_tabs_smart_startup_focus<span class="p">=</span><span class="m">2</span> <span class="c">" always focus file window after startup</span>
 <span class="k">let</span> NERDTreeShowHidden<span class="p">=</span><span class="m">0</span>
 
-<span class="c">&quot; Status bars</span>
-Plug <span class="s1">&#39;vim-airline/vim-airline&#39;</span>
-Plug <span class="s1">&#39;vim-airline/vim-airline-themes&#39;</span>
+<span class="c">" Status bars</span>
+Plug <span class="s1">'vim-airline/vim-airline'</span>
+Plug <span class="s1">'vim-airline/vim-airline-themes'</span>
 <span class="k">let</span> <span class="k">g</span>:airline_powerline_fonts <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:hybrid_custom_term_colors <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:hybrid_reduced_contrast <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:airline_statusline_ontop<span class="p">=</span><span class="m">0</span>
-<span class="k">let</span> <span class="k">g</span>:airline_section_y<span class="p">=</span><span class="s1">&#39;&#39;</span> <span class="c">&quot; remove encoding status</span>
+<span class="k">let</span> <span class="k">g</span>:airline_section_y<span class="p">=</span><span class="s1">''</span> <span class="c">" remove encoding status</span>
 <span class="k">let</span> <span class="k">g</span>:airline_skip_empty_sections <span class="p">=</span> <span class="m">1</span>
-<span class="k">let</span> <span class="k">g</span>:airline_theme<span class="p">=</span><span class="s1">&#39;badwolf&#39;</span>
+<span class="k">let</span> <span class="k">g</span>:airline_theme<span class="p">=</span><span class="s1">'badwolf'</span>
 <span class="k">let</span> <span class="k">g</span>:airline#extensions#fugitiveline#enabled <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:airline#extensions#tmuxline#enabled <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:airline#extensions#gutentags#enabled <span class="p">=</span> <span class="m">1</span>
@@ -727,32 +701,32 @@ Plug <span class="s1">&#39;vim-airline/vim-airline-themes&#39;</span>
 <span class="k">let</span> <span class="k">g</span>:airline#extensions#tagbar#enabled <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:airline#extensions#vimtex#enabled <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#enabled <span class="p">=</span> <span class="m">0</span>
-<span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#formatter <span class="p">=</span> <span class="s1">&#39;unique_tail_improved&#39;</span>
+<span class="k">let</span> <span class="k">g</span>:airline#extensions#<span class="nb">tabline</span>#formatter <span class="p">=</span> <span class="s1">'unique_tail_improved'</span>
 
-<span class="c">&quot; comments</span>
-Plug <span class="s1">&#39;scrooloose/nerdcommenter&#39;</span>
+<span class="c">" comments</span>
+Plug <span class="s1">'scrooloose/nerdcommenter'</span>
 <span class="k">let</span> <span class="k">g</span>:NERDSpaceDelims <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:NERDCompactSexyComs <span class="p">=</span> <span class="m">1</span>
-<span class="k">let</span> <span class="k">g</span>:NERDDefaultAlign <span class="p">=</span> <span class="s1">&#39;left&#39;</span>
+<span class="k">let</span> <span class="k">g</span>:NERDDefaultAlign <span class="p">=</span> <span class="s1">'left'</span>
 <span class="k">let</span> <span class="k">g</span>:NERDCommentEmptyLines <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:NERDTrimTrailingWhitespace <span class="p">=</span> <span class="m">1</span>
 
-<span class="c">&quot; markdown. tabular is required</span>
-Plug <span class="s1">&#39;plasticboy/vim-markdown&#39;</span>
-Plug <span class="s1">&#39;godlygeek/tabular&#39;</span>
-<span class="k">let</span> <span class="k">g</span>:vim_markdown_fenced_languages <span class="p">=</span> [<span class="s1">&#39;python=py&#39;</span>]
+<span class="c">" markdown. tabular is required</span>
+Plug <span class="s1">'plasticboy/vim-markdown'</span>
+Plug <span class="s1">'godlygeek/tabular'</span>
+<span class="k">let</span> <span class="k">g</span>:vim_markdown_fenced_languages <span class="p">=</span> [<span class="s1">'python=py'</span>]
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_follow_anchor <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_conceal_code_blocks <span class="p">=</span> <span class="m">0</span>
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_folding_disabled <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_conceal <span class="p">=</span> <span class="m">0</span>
-<span class="k">let</span> <span class="k">g</span>:tex_conceal <span class="p">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">let</span> <span class="k">g</span>:tex_conceal <span class="p">=</span> <span class="s2">""</span>
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_math <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_new_list_item_indent <span class="p">=</span> <span class="m">4</span>
 <span class="k">let</span> <span class="k">g</span>:vim_markdown_strikethrough <span class="p">=</span> <span class="m">1</span>
 
-<span class="c">&quot; writing prose</span>
-Plug <span class="s1">&#39;reedes/vim-pencil&#39;</span>
-Plug <span class="s1">&#39;junegunn/goyo.vim&#39;</span>
+<span class="c">" writing prose</span>
+Plug <span class="s1">'reedes/vim-pencil'</span>
+Plug <span class="s1">'junegunn/goyo.vim'</span>
 
 augroup pencil
   autocmd<span class="p">!</span>
@@ -760,12 +734,12 @@ augroup pencil
   autocmd <span class="nb">FileType</span> wiki<span class="p">,</span>md<span class="p">,</span>txt :PencilSoft
 augroup END
 
-<span class="k">let</span> <span class="k">g</span>:pencil#wrapModeDefault <span class="p">=</span> <span class="s1">&#39;soft&#39;</span> 
+<span class="k">let</span> <span class="k">g</span>:pencil#wrapModeDefault <span class="p">=</span> <span class="s1">'soft'</span> 
 
 autocmd<span class="p">!</span> <span class="nb">User</span> GoyoEnter 
 autocmd<span class="p">!</span> <span class="nb">User</span> GoyoLeave
 
-<span class="c">&quot; Ensure :q to quit even when Goyo is active</span>
+<span class="c">" Ensure :q to quit even when Goyo is active</span>
 <span class="k">function</span><span class="p">!</span> s:goyo_enter<span class="p">()</span>
   <span class="k">let</span> <span class="k">b</span>:quitting <span class="p">=</span> <span class="m">0</span>
   <span class="k">let</span> <span class="k">b</span>:quitting_bang <span class="p">=</span> <span class="m">0</span>
@@ -774,9 +748,9 @@ autocmd<span class="p">!</span> <span class="nb">User</span> GoyoLeave
   <span class="k">setlocal</span> <span class="nb">wrap</span>
 <span class="k">endfunction</span>
 
-<span class="c">&quot; Quit Vim if this is the only remaining buffer</span>
+<span class="c">" Quit Vim if this is the only remaining buffer</span>
 <span class="k">function</span><span class="p">!</span> s:goyo_leave<span class="p">()</span>
-  <span class="k">if</span> <span class="k">b</span>:quitting &amp;&amp; len<span class="p">(</span>filter<span class="p">(</span>range<span class="p">(</span><span class="m">1</span><span class="p">,</span> bufnr<span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">)),</span> <span class="s1">&#39;buflisted(v:val)&#39;</span><span class="p">))</span> <span class="p">==</span> <span class="m">1</span>
+  <span class="k">if</span> <span class="k">b</span>:quitting &amp;&amp; len<span class="p">(</span>filter<span class="p">(</span>range<span class="p">(</span><span class="m">1</span><span class="p">,</span> bufnr<span class="p">(</span><span class="s1">'$'</span><span class="p">)),</span> <span class="s1">'buflisted(v:val)'</span><span class="p">))</span> <span class="p">==</span> <span class="m">1</span>
     <span class="k">if</span> <span class="k">b</span>:quitting_bang
       <span class="k">qa</span><span class="p">!</span>
     <span class="k">else</span>
@@ -790,75 +764,71 @@ autocmd<span class="p">!</span> <span class="nb">User</span> GoyoLeave <span cla
 
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">g</span> :Goyo<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 
-<span class="c">&quot; python linting</span>
-<span class="c">&quot; F7 checks flake8</span>
-Plug <span class="s1">&#39;nvie/vim-flake8&#39;</span>
-Plug <span class="s1">&#39;vim-scripts/pylint.vim&#39;</span>
+<span class="c">" python linting</span>
+<span class="c">" F7 checks flake8</span>
+Plug <span class="s1">'nvie/vim-flake8'</span>
+Plug <span class="s1">'vim-scripts/pylint.vim'</span>
 
-<span class="c">&quot;Flagging Unnecessary Whitespace</span>
+<span class="c">"Flagging Unnecessary Whitespace</span>
 <span class="nb">highlight</span> BadWhitespace ctermbg<span class="p">=</span><span class="k">red</span> guibg<span class="p">=</span>darkred
 
-Plug <span class="s1">&#39;sheerun/vim-polyglot&#39;</span>
-<span class="k">let</span> <span class="k">g</span>:polyglot_disabled <span class="p">=</span> [<span class="s1">&#39;latex&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span>]
+Plug <span class="s1">'sheerun/vim-polyglot'</span>
+<span class="k">let</span> <span class="k">g</span>:polyglot_disabled <span class="p">=</span> [<span class="s1">'latex'</span><span class="p">,</span> <span class="s1">'html'</span>]
 <span class="k">let</span> <span class="k">g</span>:python_highlight_all <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:graphql_javascript_tags <span class="p">=</span> []
 
-<span class="c">&quot; javaScript</span>
-Plug <span class="s1">&#39;pangloss/vim-javascript&#39;</span>
+<span class="c">" javaScript</span>
+Plug <span class="s1">'pangloss/vim-javascript'</span>
 <span class="k">let</span> <span class="k">g</span>:javascript_plugin_jsdoc <span class="p">=</span> <span class="m">1</span>
 <span class="k">let</span> <span class="k">g</span>:javascript_plugin_flow <span class="p">=</span> <span class="m">1</span>
-<span class="c">&quot; format .JSON files by using the jq cli tool</span>
+<span class="c">" format .JSON files by using the jq cli tool</span>
 <span class="k">com</span><span class="p">!</span> JQ %<span class="p">!</span>jq
 
-<span class="c">&quot; HTML/JINJA</span>
-Plug <span class="s1">&#39;glench/vim-jinja2-syntax&#39;</span>
-Plug <span class="s1">&#39;valloric/matchtagalways&#39;</span>
-<span class="c">&quot; Plug &#39;alvan/vim-closetag&#39;</span>
-<span class="k">let</span> <span class="k">g</span>:closetag_filenames <span class="p">=</span> <span class="s2">&quot;*.html, *.xhtml, *.phtml&quot;</span>
+<span class="c">" HTML/JINJA</span>
+Plug <span class="s1">'glench/vim-jinja2-syntax'</span>
+Plug <span class="s1">'valloric/matchtagalways'</span>
+<span class="c">" Plug 'alvan/vim-closetag'</span>
+<span class="k">let</span> <span class="k">g</span>:closetag_filenames <span class="p">=</span> <span class="s2">"*.html, *.xhtml, *.phtml"</span>
 
 <span class="k">call</span> plug#<span class="k">end</span><span class="p">()</span>
 </pre></div>
-        </div>
-      </article>
-    </main>
-
-
-    <div class="mt-20 mb-10 text-lg dark:text-gray-200">
-        <div class="flex flex-row">
-          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
-          <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./larger-code-bases.html"> Data Science vs Web Development: Larger Code&nbsp;Bases</a>
-        </div>
-        <div class="flex flex-row mt-2">
-          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
-          <a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./becoming-a-better-python-developer.html"> Python: Becoming A Better Python&nbsp;Developer</a>
-        </div>
-    </div>
-
-
-  </div>
-
-          </div>
-        </div>
-      </div>
-
-    </main>
-
-    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
-      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-        <a class="px-3" href="./blog.html">Blog Posts</a> |
+</div>
+</article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/larger-code-bases.html"> Data Science vs Web Development: Larger Code Bases</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/becoming-a-better-python-developer.html"> Python: Becoming A Better Python Developer</a>
+</div>
+<div class="mt-2 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+<div class="">
+<a class="text-blue-600 dark:text-blue-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/developer-tools.html">Other articles in this category</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="./categories.html">Categories</a> |
-        <a class="px-3" href="./feeds/all.atom.xml">RSS</a>
-      </div>
-    </footer>
-
-        <script>
-        const indexURL = './fuse.html';
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
+</div>
+</footer>
+<script src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script>
+        const indexURL = 'https://johnmathews.eu/fuse.html';
       </script>
-      <script defer type="module" src="./theme/js/fuseSearch.js"></script>
-
-
-  <script>
+<script defer="" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -882,6 +852,5 @@ Plug <span class="s1">&#39;valloric/matchtagalways&#39;</span>
       };
     }
   </script>
-  </body>
-
+</body>
 </html>
