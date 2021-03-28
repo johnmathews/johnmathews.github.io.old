@@ -92,7 +92,7 @@ $( document ).ready(function() {
 
         if (window.hamburgerUsed === true){
             toggleMenu();
-            window.toggleMenu = false // reset
+            window.hamburgerUsed = false // reset
         };
     }
 
