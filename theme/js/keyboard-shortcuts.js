@@ -1,6 +1,4 @@
 import './mouseTrap.js'
-import './themeChooser.js'
-import './categoryChooser.js'
 
 $(document).ready(function () {
   Mousetrap.bind('j', function () {

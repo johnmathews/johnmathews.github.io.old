@@ -1,3 +1,40 @@
+// choosing which articles to make visible based on choice in cat modal
+function chooseBoth() {
+  window.localStorage.setItem('categoryChoice', 'all');
+  $('.technical').removeClass('hidden');
+  $('.nonTechnical').removeClass('hidden');
+
+  $('#chooseBoth').addClass('bg-yellow-500');
+  $('#chooseTechnical').removeClass('bg-yellow-500');
+  $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+  $('#catModal').addClass('hidden');
+}
+
+function chooseTechnical(){
+  window.localStorage.setItem('categoryChoice', 'technical');
+  $('.technical').removeClass('hidden');
+  $('.nonTechnical').addClass('hidden');
+
+  $('#chooseBoth').removeClass('bg-yellow-500');
+  $('#chooseTechnical').addClass('bg-yellow-500');
+  $('#chooseNonTechnical').removeClass('bg-yellow-500');
+
+  $('#catModal').addClass('hidden');
+};
+
+function chooseNonTechnical() {
+  window.localStorage.setItem('categoryChoice', 'nonTechnical');
+  $('.nonTechnical').removeClass('hidden');
+  $('.technical').addClass('hidden');
+
+  $('#chooseBoth').removeClass('bg-yellow-500');
+  $('#chooseTechnical').removeClass('bg-yellow-500');
+  $('#chooseNonTechnical').addClass('bg-yellow-500');
+
+  $('#catModal').addClass('hidden');
+}
+
 $( document ).ready(function() {
   // show catChoosr on blog index page
   $( ".catChooser" ).removeClass('hidden')
@@ -48,41 +85,3 @@ $( document ).ready(function() {
     }
   };
 })
-
-
-// choosing which articles to make visible based on choice in cat modal
-function chooseBoth() {
-  window.localStorage.setItem('categoryChoice', 'all');
-  $('.technical').removeClass('hidden');
-  $('.nonTechnical').removeClass('hidden');
-
-  $('#chooseBoth').addClass('bg-yellow-500');
-  $('#chooseTechnical').removeClass('bg-yellow-500');
-  $('#chooseNonTechnical').removeClass('bg-yellow-500');
-
-  $('#catModal').addClass('hidden');
-}
-
-function chooseTechnical(){
-  window.localStorage.setItem('categoryChoice', 'technical');
-  $('.technical').removeClass('hidden');
-  $('.nonTechnical').addClass('hidden');
-
-  $('#chooseBoth').removeClass('bg-yellow-500');
-  $('#chooseTechnical').addClass('bg-yellow-500');
-  $('#chooseNonTechnical').removeClass('bg-yellow-500');
-
-  $('#catModal').addClass('hidden');
-};
-
-function chooseNonTechnical() {
-  window.localStorage.setItem('categoryChoice', 'nonTechnical');
-  $('.nonTechnical').removeClass('hidden');
-  $('.technical').addClass('hidden');
-
-  $('#chooseBoth').removeClass('bg-yellow-500');
-  $('#chooseTechnical').removeClass('bg-yellow-500');
-  $('#chooseNonTechnical').addClass('bg-yellow-500');
-
-  $('#catModal').addClass('hidden');
-}
