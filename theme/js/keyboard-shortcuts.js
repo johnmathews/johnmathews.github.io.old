@@ -16,8 +16,14 @@ $( document ).ready(function() {
   Mousetrap.bind('g a', function() {
     console.log('go to about');
   });
+  Mousetrap.bind('g o', function() {
+    console.log('go to portfolio');
+  });
   Mousetrap.bind('g e', function() {
     console.log('go to experience');
+  });
+  Mousetrap.bind('g l', function() {
+    console.log('go to landing page');
   });
   Mousetrap.bind('t t', function() {
     console.log('toggle theme');
@@ -30,6 +36,9 @@ $( document ).ready(function() {
   });
   Mousetrap.bind('c a', function() {
     console.log('show all articles regardless of category');
+  });
+  Mousetrap.bind('g p', function() {
+    console.log('go to portfolio');
   });
   Mousetrap.bind('?', function() {
     console.log('show a modal');
