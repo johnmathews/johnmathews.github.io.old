@@ -21,15 +21,21 @@ $(document).ready(function () {
   })
   Mousetrap.bind('g n', function () {
     // console.log('go to next article');
-    $('#nextArticleInCategory')[0].click()
+    if ($( "#nextArticleInCategory").length ) {
+      $('#nextArticleInCategory')[0].click()
+    }
   })
   Mousetrap.bind('g p', function () {
     // console.log('go to previous article');
-    $('#previousArticleInCategory')[0].click()
+    if ($( "#previousArticleInCategory").length ) {
+      $('#previousArticleInCategory')[0].click()
+    }
   })
   Mousetrap.bind('g c', function () {
     // console.log('go to category page');
-    $('#otherArticlesInCategory')[0].click()
+    if ($( "#otherArticlesInCategory").length ) {
+      $('#otherArticlesInCategory')[0].click()
+    }
   })
   Mousetrap.bind('g a', function () {
     // console.log('go to about');
