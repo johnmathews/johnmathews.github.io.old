@@ -274,11 +274,11 @@ and add the contents of various pages (which aren’t articles) to the search i
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/different-views-for-different-users.html"> Different Views For Different Users</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/different-views-for-different-users.html" id="previousArticleInCategory"> Different Views For Different Users</a>
 </div>
 <div class="mt-2 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
 <div class="">
-<a class="text-blue-600 dark:text-blue-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/web.html">Other articles in this category</a>
+<a class="text-blue-600 dark:text-blue-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/web.html" id="otherArticlesInCategory">Other articles in this category</a>
 </div>
 </div>
 </div>
@@ -295,8 +295,11 @@ and add the contents of various pages (which aren’t articles) to the search i
         <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
 </div>
 </footer>
+<script>
+        const indexURL = 'https://johnmathews.eu/fuse.html';
+        const siteURL = 'https://johnmathews.eu';
+      </script>
 <script src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script>const indexURL = 'https://johnmathews.eu/fuse.html'</script>
 <script defer="" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
 <script defer="" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
 <script>

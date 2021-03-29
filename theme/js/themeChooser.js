@@ -6,17 +6,6 @@ $( document ).ready(function() {
         }
     };
 
-    if (document.getElementById('PygmentCSS') !=null) {
-        // swap out pygment CSS files based on dark/light theme
-        function changePygmentsCSS(updated) {
-            var PygmentCSS = document.getElementById("PygmentCSS");
-            PygmentCSS.setAttribute("href", updated);
-        }
-    } else {
-        // need to define the function to avoid errors
-        function changePygmentsCSS(b) {}
-    };
-
 
     if (document.getElementById('hamburger') !=null) {
         $(".fa-bars").click(function() {
@@ -60,45 +49,58 @@ $( document ).ready(function() {
     }
 
     // change theme if theme switcher button is clicked
-    function modeSwitcher() {
-        if (localStorage.getItem('theme') === "dark") {
-            window.localStorage.setItem('theme', 'light');
-            $( "#baz" ).removeClass( "dark" );
-            changePygmentsCSS(light);
-
-            const dayElement = document.getElementsByClassName("day");
-            for (let i = 0; i < dayElement.length; i++) {
-              dayElement.item(i).classList.add("hidden");
-            }
-            const nightElement = document.getElementsByClassName("night");
-            for (let i = 0; i < nightElement.length; i++) {
-              nightElement.item(i).classList.remove("hidden");
-            }
-
-        } else {
-            window.localStorage.setItem('theme', 'dark');
-            $( "#baz" ).addClass( "dark" );
-            changePygmentsCSS(dark);
-
-            const dayElement = document.getElementsByClassName("day");
-            for (let i = 0; i < dayElement.length; i++) {
-              dayElement.item(i).classList.remove("hidden");
-            }
-            const nightElement = document.getElementsByClassName("night");
-            for (let i = 0; i < nightElement.length; i++) {
-              nightElement.item(i).classList.add("hidden");
-            }
-        }
-
-        if (window.hamburgerUsed === true){
-            toggleMenu();
-            window.hamburgerUsed = false // reset
-        };
-    }
-
     $( "#theme-toggle" ).click(modeSwitcher);
     $( "#modeSwitcher1" ).click(modeSwitcher);
     $( "#modeSwitcher2" ).click(modeSwitcher);
     $( "#modeSwitcher3" ).click(modeSwitcher);
 
 });
+
+
+function modeSwitcher() {
+    if (localStorage.getItem('theme') === "dark") {
+        window.localStorage.setItem('theme', 'light');
+        $( "#baz" ).removeClass( "dark" );
+        changePygmentsCSS(light);
+
+        const dayElement = document.getElementsByClassName("day");
+        for (let i = 0; i < dayElement.length; i++) {
+            dayElement.item(i).classList.add("hidden");
+        }
+        const nightElement = document.getElementsByClassName("night");
+        for (let i = 0; i < nightElement.length; i++) {
+            nightElement.item(i).classList.remove("hidden");
+        }
+
+    } else {
+        window.localStorage.setItem('theme', 'dark');
+        $( "#baz" ).addClass( "dark" );
+        changePygmentsCSS(dark);
+
+        const dayElement = document.getElementsByClassName("day");
+        for (let i = 0; i < dayElement.length; i++) {
+            dayElement.item(i).classList.remove("hidden");
+        }
+        const nightElement = document.getElementsByClassName("night");
+        for (let i = 0; i < nightElement.length; i++) {
+            nightElement.item(i).classList.add("hidden");
+        }
+    }
+
+    if (window.hamburgerUsed === true){
+        toggleMenu();
+        window.hamburgerUsed = false // reset
+    };
+}
+
+if (document.getElementById('PygmentCSS') !=null) {
+    // swap out pygment CSS files based on dark/light theme
+    function changePygmentsCSS(updated) {
+        var PygmentCSS = document.getElementById("PygmentCSS");
+        PygmentCSS.setAttribute("href", updated);
+    }
+} else {
+    // need to define the function to avoid errors
+    function changePygmentsCSS(b) {}
+};
+
