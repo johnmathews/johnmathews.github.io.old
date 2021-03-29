@@ -70,4 +70,13 @@ $(document).ready(function () {
   Mousetrap.bind('?', function () {
     $('#keyboardShortcuts').toggleClass('hidden')
   })
+  Mousetrap.bind('esc', function () {
+    document.getElementById("searchBox").blur();
+    if ($("#fuseModal").hasClass('hidden') === false) {
+      document.getElementById("searchBox").blur();
+      $('#fuseModal').addClass('hidden');
+    } else if ($("#keyboardShortcuts").hasClass('hidden') === false) {
+      $('#keyboardShortcuts').addClass('hidden');
+    }
+  })
 })

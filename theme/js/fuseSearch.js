@@ -151,6 +151,10 @@ $( document ).ready(function() {
     } else if (event.keyCode == 13) { // return key
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
+      } else {
+        console.log('smoke')
+        focussResult(0)
+        $("#selected").trigger("click");
       };
     } else if (event.keyCode == 27) { // escape key
       document.getElementById("searchBox").blur();
