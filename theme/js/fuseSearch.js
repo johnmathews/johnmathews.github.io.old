@@ -13,7 +13,7 @@ window.resultsLength = 0;
 window.focussedResult = -1;
 
 (async () => {
-  searchIndex = await get()
+  searchIndex = await get() // get isnt a built in, its defined up stairs
   const options = {
     shouldSort: true,
     includeScore: false,
@@ -152,7 +152,6 @@ $( document ).ready(function() {
       if (window.focussedResult >= 0){
         $("#selected").trigger("click");
       } else {
-        console.log('smoke')
         focussResult(0)
         $("#selected").trigger("click");
       };

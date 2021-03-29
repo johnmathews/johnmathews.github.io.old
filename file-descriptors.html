@@ -1,360 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<html class="" id="baz" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>File Descriptors and /dev/null - JohnMathews.eu</title>
-<meta content="File Descriptors and /dev/null -  JohnMathews.eu " name="title"/>
-<meta content="File Descriptors and /dev/null" property="og:title"/>
-<meta content="File Descriptors and /dev/null" property="twitter:title"/>
-<meta content="  " name="keywords"/>
-<meta content="John Mathews" name="author"/>
-<meta content="@johnmathews" name="twitter:creator"/>
-<meta content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... " name="description"/>
-<meta content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... " name="twitter:description"/>
-<meta content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... " property="og:description"/>
-<meta content="https://johnmathews.eu/file-descriptors.html" property="og:url"/>
-<meta content="https://johnmathews.eu/file-descriptors.html" property="twitter:url"/>
-<meta content="https://johnmathews.eu/
-" name="twitter:image"/>
-<meta content="https://johnmathews.eu/
-" property="og:image"/>
-<meta content="  summary  " property="twitter:card"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content=" article " property="og:type"/>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
-<script>
-          window.ga = window.ga || function () {
-            (ga.q = ga.q || []).push(arguments);
-          };
-          ga.l = +new Date();
-          ga("create", "UA-82253540-1", "auto");
-          ga("send", "pageview");
-        </script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
-<link href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
-<script>
+
+      <title>File Descriptors and /dev/null - JohnMathews.eu</title>
+      <meta name="title" content="File Descriptors and /dev/null -  JohnMathews.eu "/>
+      <meta property="og:title" content="File Descriptors and /dev/null"/>
+      <meta property="twitter:title" content="File Descriptors and /dev/null"/>
+
+      <meta name="keywords" content="  "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... "/>
+      <meta name="twitter:description" content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... "/>
+      <meta property="og:description" content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... "/>
+
+      <meta property="og:url" content="./file-descriptors.html"/>
+      <meta property="twitter:url" content="./file-descriptors.html"/>
+
+      <meta name="twitter:image" content="./
+"/>
+      <meta property="og:image" content="./
+"/>
+
+      <meta property="twitter:card" content="  summary  "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="./extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
+
+
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <link href="./theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script>
         let theme = localStorage.getItem('theme');
       </script>
-<script>
+
+      <script>
         // dark mode light mode switcheroo
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="text/javascript"></script>
-</link></link></head>
-<body class="dark:bg-black">
-<a class="pt-20 mt-20" name="top"></a>
-<nav class="d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
-<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-<div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
-</div>
-<div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
-<div class="day modeIcon">
-<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0" id="">
-<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-</button>
-</div>
-</div>
-<div class="flex-none md:hidden block md:inline-block">
-<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
-<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-</button>
-</div>
-</nav>
-<div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
-<div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-2x"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-2x"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5" id="">
-<i class="fas fa-paw fa-2x"></i>
-</button>
-</div>
-</div>
-<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-<div class="text-center">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+
+      <script type="text/javascript" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
+
+
+
+  </head>
+
+  <body class="dark:bg-black">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class=" d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
+            <div class="day modeIcon">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
-<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
-<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="px-5 py-5">
-<div class="">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboardShortcuts" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="px-5 py-5">
+              <div class="">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-<hr class=""/>
-<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
-<ul>
-<li>? - toggle shortcut descriptions</li>
-<li>j - scroll down</li>
-<li>k - scroll up</li>
-<li>tt  - toggle dark theme</li>
-<li>gi  - go to blog index page</li>
-<li>gn  - go to next article</li>
-<li>gp  - go to previous article</li>
-<li>gb  - go to previous page</li>
-<li>gf  - go forwards</li>
-<li>gc  - go to categories page</li>
-<li>gcc  - go to articles category page</li>
-<li>ga  - go to about page</li>
-<li>ge  - go to experience page</li>
-<li>go  - go to portfolio page</li>
-<li>gl  - go to landing page</li>
-<li>ct - show only technical articles on index page</li>
-<li>cn - show only non-technical articles on index page</li>
-<li>ca - show articles from all categories on index page</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
-<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75" id="searchModalBackground"></div>
-</div>
-<div class="absolute inset-x-0 w-screen px-3">
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="py-1 px-1">
-<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
-<div class="hidden lg:inline-flex flex">
-<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                <hr class="">
+                <div id="" class="flex flex-row space-x-4 text-base text-gray-700" role="group">
+                  <ul>
+                    <li>? - toggle shortcut descriptions</li>
+                    <li>j - scroll down</li>
+                    <li>k - scroll up</li>
+                    <li>tt  - toggle dark theme</li>
+                    <li>gi  - go to blog index page</li>
+                    <li>gn  - go to next article</li>
+                    <li>gp  - go to previous article</li>
+                    <li>gb  - go to previous page</li>
+                    <li>gf  - go forwards</li>
+                    <li>gc  - go to categories page</li>
+                    <li>gcc  - go to articles category page</li>
+                    <li>ga  - go to about page</li>
+                    <li>ge  - go to experience page</li>
+                    <li>go  - go to portfolio page</li>
+                    <li>gl  - go to landing page</li>
+                    <li>ct - show only technical articles on index page</li>
+                    <li>cn - show only non-technical articles on index page</li>
+                    <li>ca - show articles from all categories on index page</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <div class="absolute inset-x-0 w-screen px-3">
+            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="py-1 px-1">
+                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
+                <div class="hidden lg:inline-flex flex">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     ctrl-k
                   </div>
                   or
                   <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
-</div>
-<ul class="results text-lg text-bold text-gray-600" id="searchResults">
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mx-auto w-full">
-<div class="flex flex-row">
-<div class="hidden xl:inline xl:w-32">
-<div class="w-32">
-<div class="mt-5 2xl:mt-20 fixed flex flex-col">
-<div class="lg:w-32">
-<div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-</div>
-<div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-</div>
-<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
-<div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-lg"></i>
-</div>
-</button>
-</div>
-<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
-</div>
-<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br/> March 2021
+                </div>
+                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                    <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                  </div>
+                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+
+  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
   </div>
-<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Category:<br/>
-<a href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
-<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
-<div class="mb-10">
-<div class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
-<span class="break-all" style="word-break: unset;">
-          File Descriptors and /dev/null
+  <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br> March 2021
+  </div>
+  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Category:<br>
+      <a href="./category/technical/developer-tools.html">Developer Tools</a>
+      
+  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
+  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
+
+    <div class="mb-10">
+      <div style=""  class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200">
+        <span style="word-break: unset;" class="break-all">
+          File Descriptors and&nbsp;/dev/null
         </span>
-</div>
-<div class="lg:hidden mt-20 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
+      </div>
+
+      <div class="lg:hidden mt-20 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
         Category:
-          <a href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
-</div>
-<div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
+          <a href="./category/technical/developer-tools.html">Developer Tools</a>
+          
+      </div>
+
+      <div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
         March 2021
       </div>
-</div>
-<div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-</div>
-<main class="lg:w-4/6">
-<article class="">
-<div class="markdown">
-<h2 id="devnull">/dev/null</h2>
+    </div>
+
+    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+    </div>
+
+    <main class="lg:w-4/6">
+      <article class="">
+        <div class="markdown">
+          <h2 id="devnull">/dev/null</h2>
 <p>In Linux everything is a file, including virtual devices. Processes
-(programmes) can request access to or from these devices.</p>
-<p>The only difference between these virtual device “files” and real files, is
+(programmes) can request access to or from these&nbsp;devices.</p>
+<p>The only difference between these virtual device &ldquo;files&rdquo; and real files, is
 that for a virtual device the <span class="caps">OS</span> generates the data that goes into the file,
-instead of reading the data from storage.</p>
+instead of reading the data from&nbsp;storage.</p>
 <p><code>/dev/null</code> is a virtual device that looks like a file and is used to write
 output into a black hole that is discarded, lost forever and never seen. It
-isn’t written to the terminal.</p>
-<h2 id="file-descriptors">File Descriptors</h2>
-<p>File descriptors are integer values assigned to a file. </p>
+isn&rsquo;t written to the&nbsp;terminal.</p>
+<h2 id="file-descriptors">File&nbsp;Descriptors</h2>
+<p>File descriptors are integer values assigned to a&nbsp;file. </p>
 <ul>
-<li><strong>stdin</strong> has a file descriptor of 0</li>
-<li><strong>stdout</strong> has a file descriptor of 1</li>
-<li><strong>stderr</strong> has a file descriptor of 2</li>
+<li><strong>stdin</strong> has a file descriptor of&nbsp;0</li>
+<li><strong>stdout</strong> has a file descriptor of&nbsp;1</li>
+<li><strong>stderr</strong> has a file descriptor of&nbsp;2</li>
 </ul>
 <p>Two outputs are generated whenever a <span class="caps">CLI</span> is run <code>stdout</code> and
 <code>stderr</code>. By default, both these data streams are associated with the
-terminal. You can use file descriptors to redirect them.</p>
-<p>If a command exits successfully, the exit status is 0.</p>
-<p>If it exits unsuccessfully, the exit status will be something else.</p>
-<p>If you don’t specify which file descriptor you want to use, bash will use
-<code>stdout</code> by default.</p>
+terminal. You can use file descriptors to redirect&nbsp;them.</p>
+<p>If a command exits successfully, the exit status is&nbsp;0.</p>
+<p>If it exits unsuccessfully, the exit status will be something&nbsp;else.</p>
+<p>If you don&rsquo;t specify which file descriptor you want to use, bash will use
+<code>stdout</code> by&nbsp;default.</p>
 <p>The following redirects <code>stdout</code> away from the terminal and into <code>/dev/null</code>.</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">echo</span> “Hello World” &gt; log.txt
 </pre></div>
-<p>This will redirect <code>stderr</code> into a file:</p>
+
+
+<p>This will redirect <code>stderr</code> into a&nbsp;file:</p>
 <div class="highlight"><pre><span></span>$ asdfadsa <span class="m">2</span>&gt; error.txt
 </pre></div>
-<p>If you run a command that generates lots of error messages along with “good”
+
+
+<p>If you run a command that generates lots of error messages along with &ldquo;good&rdquo;
 messages, you can redirect all the error messages (<code>stderr</code>) into <code>/dev/null</code>
-so that you can only see the useful <code>stdout</code> messages. e.g.:</p>
+so that you can only see the useful <code>stdout</code> messages.&nbsp;e.g.:</p>
 <div class="highlight"><pre><span></span>$ grep -r hello /sys/ <span class="m">2</span>&gt; /dev/null
 </pre></div>
+
+
 <p>If you want to run a command and only see the errors, (<code>stderr</code>) then you can
 filter out all the <code>stdout</code> by redirecting the <code>stdout</code> messages to
 <code>/dev/null</code>:</p>
 <div class="highlight"><pre><span></span>$ ping google.com <span class="m">1</span>&gt; /dev/null
 </pre></div>
-<h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly">Redirect all output into /dev/null If you want a command to run quietly,</h2>
+
+
+<h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly">Redirect all output into /dev/null If you want a command to run&nbsp;quietly,</h2>
 <p>Redirect all the output. The command below redirects <code>stdout</code> to <code>/dev/null</code>
-(the default file descriptor is 1 if it isn’t specified) and then redirects
-file descriptor 2 into file descriptor 1.</p>
+(the default file descriptor is 1 if it isn&rsquo;t specified) and then redirects
+file descriptor 2 into file descriptor&nbsp;1.</p>
 <div class="highlight"><pre><span></span>$ grep -r hello /sys/ &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 </pre></div>
-<h2 id="read-input-from-a-file-instead-of-the-terminal">Read input from a file instead of the terminal</h2>
+
+
+<h2 id="read-input-from-a-file-instead-of-the-terminal">Read input from a file instead of the&nbsp;terminal</h2>
 <div class="highlight"><pre><span></span><span class="m">0</span>&lt;infile
 </pre></div>
-<h2 id="direct-stderr-to-append-to-a-particular-file">Direct stderr to append to a particular file</h2>
+
+
+<h2 id="direct-stderr-to-append-to-a-particular-file">Direct stderr to append to a particular&nbsp;file</h2>
 <div class="highlight"><pre><span></span><span class="m">2</span>&gt;&gt;logfile
 </pre></div>
-<h2 id="combining-file-descriptors">Combining file descriptors</h2>
-<p><code>2&gt;&amp;1</code> means send <code>stderr</code> wherever <code>stdout</code> is going. This means that you’ve
-combined <code>stdout</code> and <code>stderr</code> into one data stream and you can’t separate them
+
+
+<h2 id="combining-file-descriptors">Combining file&nbsp;descriptors</h2>
+<p><code>2&gt;&amp;1</code> means send <code>stderr</code> wherever <code>stdout</code> is going. This means that you&rsquo;ve
+combined <code>stdout</code> and <code>stderr</code> into one data stream and you can&rsquo;t separate them
 anymore. It also means you can pipe <code>stderr</code> the same as you can <code>stdout</code>.</p>
 <h1 id="input">Input</h1>
 <p>You can redirect <code>stdin</code> similarly. If you run <code>&lt;/dev/null</code> then if the program
-attempt to read from <code>stdin</code> then it will get end-of-file. </p>
-<p>The merge (or redirect) syntax (for example <code>&lt;&amp;2</code>) won’t work, because you can
-only redirect in the same direction.</p>
-</div>
-</article>
-</main>
-<div class="mt-20 mb-10 text-lg dark:text-gray-200">
-<div class="flex flex-row">
-<div class="text-red-500 dark:text-red-500"> ←  </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/microservices_events_docker.html" id="previousArticleInCategory"> Microservices, Docker, Azure</a>
-</div>
-<div class="flex flex-row mt-2">
-<div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/nohup-and-background-processes.html" id="nextArticleInCategory"> nohup and Background Processes</a>
-</div>
-<div class="mt-2 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-<div class="">
-<a class="text-blue-600 dark:text-blue-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/developer-tools.html" id="otherArticlesInCategory">Other articles in this category</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
-<div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+attempt to read from <code>stdin</code> then it will get&nbsp;end-of-file. </p>
+<p>The merge (or redirect) syntax (for example <code>&lt;&amp;2</code>) won&rsquo;t work, because you can
+only redirect in the same&nbsp;direction.</p>
+        </div>
+      </article>
+    </main>
+
+
+    <div class="mt-20 mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
+          <a id="previousArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./microservices_events_docker.html"> Microservices, Docker,&nbsp;Azure</a>
+        </div>
+        <div class="flex flex-row mt-2">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a id="nextArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./nohup-and-background-processes.html"> nohup and Background&nbsp;Processes</a>
+        </div>
+        <div class="mt-2 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+            <div class="">
+              <a id="otherArticlesInCategory" class="text-blue-600 dark:text-blue-300 font-serif text-lg font-bold " href="./category/technical/developer-tools.html">Other articles in this category</a>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+        <a class="px-3" href="./blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
-</div>
-</footer>
-<script>
-        const indexURL = 'https://johnmathews.eu/fuse.html';
-        const siteURL = 'https://johnmathews.eu';
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+        <script>
+        const indexURL = 'http://localhost:8000/fuse.html';
+        const siteURL = '.';
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script>
+      <script type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
+
+
+  <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -378,5 +428,6 @@ only redirect in the same direction.</p>
       };
     }
   </script>
-</body>
+  </body>
+
 </html>

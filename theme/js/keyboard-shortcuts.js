@@ -34,7 +34,7 @@ $(document).ready(function () {
   Mousetrap.bind('g a', function () {
     window.location.href = `${siteURL}/about.html`
   })
-  Mousetrap.bind('g c c', function () {
+  Mousetrap.bind('g g', function () {
     window.location.href = `${siteURL}/categories.html`
   })
   Mousetrap.bind('g o', function () {

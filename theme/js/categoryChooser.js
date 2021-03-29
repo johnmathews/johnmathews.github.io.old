@@ -75,6 +75,10 @@ $( document ).ready(function() {
   // toggle cat modal view if catChooser icon is clicked
   $( ".catChooser" ).click(function() {
     $('#catModal').toggleClass('hidden');
+    if (window.hamburgerUsed === true) {
+        toggleMenu()
+        window.hamburgerUsed = false // reset
+    };
   });
 
   // on small screens, collapse navbar into a menu

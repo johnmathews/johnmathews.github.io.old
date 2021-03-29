@@ -1,412 +1,463 @@
-<!DOCTYPE html>
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<html class="" id="baz" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>Portfolio - JohnMathews.eu</title>
-<meta content="Portfolio -  JohnMathews.eu " name="title"/>
-<meta content="Portfolio" property="og:title"/>
-<meta content="Portfolio" property="twitter:title"/>
-<meta content="  " name="keywords"/>
-<meta content="John Mathews" name="author"/>
-<meta content="@johnmathews" name="twitter:creator"/>
-<meta content="" name="description"/>
-<meta content="" name="twitter:description"/>
-<meta content="" property="og:description"/>
-<meta content="https://johnmathews.eu/portfolio.html" property="og:url"/>
-<meta content="https://johnmathews.eu/portfolio.html" property="twitter:url"/>
-<meta content="https://johnmathews.eu/
-" name="twitter:image"/>
-<meta content="https://johnmathews.eu/
-" property="og:image"/>
-<meta content=" " property="twitter:card"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content=" article " property="og:type"/>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
-<script>
-          window.ga = window.ga || function () {
-            (ga.q = ga.q || []).push(arguments);
-          };
-          ga.l = +new Date();
-          ga("create", "UA-82253540-1", "auto");
-          ga("send", "pageview");
-        </script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
-<link href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
-<script>
+
+      <title>Portfolio - JohnMathews.eu</title>
+      <meta name="title" content="Portfolio -  JohnMathews.eu "/>
+      <meta property="og:title" content="Portfolio"/>
+      <meta property="twitter:title" content="Portfolio"/>
+
+      <meta name="keywords" content="  "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="twitter:creator" content="@johnmathews"/>
+
+      <meta name="description" content=""/>
+      <meta name="twitter:description" content=""/>
+      <meta property="og:description" content=""/>
+
+      <meta property="og:url" content="./portfolio.html"/>
+      <meta property="twitter:url" content="./portfolio.html"/>
+
+      <meta name="twitter:image" content="./
+"/>
+      <meta property="og:image" content="./
+"/>
+
+      <meta property="twitter:card" content=" "/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+
+      <meta property="og:type" content=" article "/>
+
+      <link rel="icon" href="./extra/favicon.png" />
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
+
+
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+      <link href="./theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script>
         let theme = localStorage.getItem('theme');
       </script>
-<script>
+
+      <script>
         // dark mode light mode switcheroo
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="text/javascript"></script>
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
-<style type="text/css">
+
+      <script type="text/javascript" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
+
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
       #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
       /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
   </style>
-</link></link></head>
-<body class="dark:bg-black">
-<a class="pt-20 mt-20" name="top"></a>
-<nav class="d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
-<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-<div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
-</div>
-<div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
-<div class="day modeIcon">
-<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0" id="">
-<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-</button>
-</div>
-</div>
-<div class="flex-none md:hidden block md:inline-block">
-<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
-<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-</button>
-</div>
-</nav>
-<div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
-<div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-2x"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-2x"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5" id="">
-<i class="fas fa-paw fa-2x"></i>
-</button>
-</div>
-</div>
-<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-<div class="text-center">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+  </head>
+
+  <body class="dark:bg-black">
+    <a class="pt-20 mt-20 " name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class=" d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
+            <div class="day modeIcon">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
-<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
-<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="px-5 py-5">
-<div class="">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboardShortcuts" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="px-5 py-5">
+              <div class="">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-<hr class=""/>
-<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
-<ul>
-<li>? - toggle shortcut descriptions</li>
-<li>j - scroll down</li>
-<li>k - scroll up</li>
-<li>tt  - toggle dark theme</li>
-<li>gi  - go to blog index page</li>
-<li>gn  - go to next article</li>
-<li>gp  - go to previous article</li>
-<li>gb  - go to previous page</li>
-<li>gf  - go forwards</li>
-<li>gc  - go to categories page</li>
-<li>gcc  - go to articles category page</li>
-<li>ga  - go to about page</li>
-<li>ge  - go to experience page</li>
-<li>go  - go to portfolio page</li>
-<li>gl  - go to landing page</li>
-<li>ct - show only technical articles on index page</li>
-<li>cn - show only non-technical articles on index page</li>
-<li>ca - show articles from all categories on index page</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
-<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75" id="searchModalBackground"></div>
-</div>
-<div class="absolute inset-x-0 w-screen px-3">
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="py-1 px-1">
-<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
-<div class="hidden lg:inline-flex flex">
-<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                <hr class="">
+                <div id="" class="flex flex-row space-x-4 text-base text-gray-700" role="group">
+                  <ul>
+                    <li>? - toggle shortcut descriptions</li>
+                    <li>j - scroll down</li>
+                    <li>k - scroll up</li>
+                    <li>tt  - toggle dark theme</li>
+                    <li>gi  - go to blog index page</li>
+                    <li>gn  - go to next article</li>
+                    <li>gp  - go to previous article</li>
+                    <li>gb  - go to previous page</li>
+                    <li>gf  - go forwards</li>
+                    <li>gc  - go to categories page</li>
+                    <li>gcc  - go to articles category page</li>
+                    <li>ga  - go to about page</li>
+                    <li>ge  - go to experience page</li>
+                    <li>go  - go to portfolio page</li>
+                    <li>gl  - go to landing page</li>
+                    <li>ct - show only technical articles on index page</li>
+                    <li>cn - show only non-technical articles on index page</li>
+                    <li>ca - show articles from all categories on index page</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <div class="absolute inset-x-0 w-screen px-3">
+            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="py-1 px-1">
+                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
+                <div class="hidden lg:inline-flex flex">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     ctrl-k
                   </div>
                   or
                   <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
-</div>
-<ul class="results text-lg text-bold text-gray-600" id="searchResults">
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mx-auto w-full">
-<div class="flex flex-row">
-<div class="hidden xl:inline xl:w-32">
-<div class="w-32">
-<div class="mt-5 2xl:mt-20 fixed flex flex-col">
-<div class="lg:w-32">
-<div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-</div>
-<div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-</div>
-<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
-<div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-lg"></i>
-</div>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
-<div class="w-full mb-20" id="PageParent">
-<div class="xl:ml-20">
-<div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl mx-3 lg:mx-0 mt-10 md:mt-24 dark:text-gray-50">
+                </div>
+                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                  <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                  </div>
+                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
+  <div id="PageParent" class="w-full mb-20">
+    <div class="xl:ml-20">
+      <div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl mx-3 lg:mx-0 mt-10 md:mt-24  dark:text-gray-50">
         Portfolio
       </div>
-<div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
-</div>
-<div class="my-5">
-<div class="flex flex-wrap">
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://johnmathews.eu/traffic.html">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img alt="cars" at="" class="object-cover h-72 w-full image-process-grid-image" lights="" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/traffic_lights/derivatives/grid-image/400w/thumbnail.png" srcset="/images/traffic_lights/derivatives/grid-image/300w/thumbnail.png 300w, /images/traffic_lights/derivatives/grid-image/320w/thumbnail.png 320w, /images/traffic_lights/derivatives/grid-image/380w/thumbnail.png 380w, /images/traffic_lights/derivatives/grid-image/400w/thumbnail.png 400w, /images/traffic_lights/derivatives/grid-image/650w/thumbnail.png 650w" traffic=""/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+      <div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
+      </div>
+    <div class="my-5">
+      <div class="flex flex-wrap">
+
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="./traffic.html">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/traffic_lights/thumbnail.png alt=cars at traffic lights >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       Traffic Light Recognition
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     An image recognition app to identify and label traffic lights using the azure custom vision API. Upload your own test image.
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: Azure, Data Science, Deep Learning, Computer Vision
                   </div>
-</div>
-</article>
-</a>
-</div>
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://pippip.email">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img alt="PipPip" class="object-cover h-72 w-full image-process-grid-image" messaging="" service="" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/portfolio_thumbnails/derivatives/grid-image/400w/pippip.png" srcset="/images/portfolio_thumbnails/derivatives/grid-image/300w/pippip.png 300w, /images/portfolio_thumbnails/derivatives/grid-image/320w/pippip.png 320w, /images/portfolio_thumbnails/derivatives/grid-image/380w/pippip.png 380w, /images/portfolio_thumbnails/derivatives/grid-image/400w/pippip.png 400w, /images/portfolio_thumbnails/derivatives/grid-image/650w/pippip.png 650w"/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="https://pippip.email">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/portfolio_thumbnails/pippip.png alt=PipPip messaging service >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       PipPip.Email
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     An email scheduling service to send messages if you disappear or die
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: Python, Wed Developement, Django, JavaScript
                   </div>
-</div>
-</article>
-</a>
-</div>
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://moneybar.nl">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img alt="financial" class="object-cover h-72 w-full image-process-grid-image" dashboard="" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/portfolio_thumbnails/derivatives/grid-image/400w/moneybar.png" srcset="/images/portfolio_thumbnails/derivatives/grid-image/300w/moneybar.png 300w, /images/portfolio_thumbnails/derivatives/grid-image/320w/moneybar.png 320w, /images/portfolio_thumbnails/derivatives/grid-image/380w/moneybar.png 380w, /images/portfolio_thumbnails/derivatives/grid-image/400w/moneybar.png 400w, /images/portfolio_thumbnails/derivatives/grid-image/650w/moneybar.png 650w"/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="https://moneybar.nl">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/portfolio_thumbnails/moneybar.png alt=financial dashboard >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       MoneyBar.nl
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     A financial dashboard to aggregate and categorize transactions from multiple service providers.
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: Python, Wed Developement, Django, JavaScript
                   </div>
-</div>
-</article>
-</a>
-</div>
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://johnmathews.eu/btc-fork-analysis.html">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img 5="" alt="Analysis" and="" blockchains="" class="object-cover h-72 w-full image-process-grid-image" mean="" median="" of="" on="" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/portfolio_thumbnails/derivatives/grid-image/400w/btc-analysis.png" srcset="/images/portfolio_thumbnails/derivatives/grid-image/300w/btc-analysis.png 300w, /images/portfolio_thumbnails/derivatives/grid-image/320w/btc-analysis.png 320w, /images/portfolio_thumbnails/derivatives/grid-image/380w/btc-analysis.png 380w, /images/portfolio_thumbnails/derivatives/grid-image/400w/btc-analysis.png 400w, /images/portfolio_thumbnails/derivatives/grid-image/650w/btc-analysis.png 650w" the="" transactions="" value=""/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="./btc-fork-analysis.html">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/portfolio_thumbnails/btc-analysis.png alt=Analysis of the mean and median value of transactions on 5 Blockchains >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       Analysis of Five Cryptocurrencies
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     Comparing the daily mean and median value of on-chain transactions gives an indication of the extent of organic blockchain use. Comparing the mean-median ratio (MMR) across different Bitcoin forks shows that Bitcoin (BTC) is the least influenced by “whales”.
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: Bitcoin, Finance, Trading, Cryptography,
                   </div>
-</div>
-</article>
-</a>
-</div>
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://johnmathews.eu/blockchain-introduction.html">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img alt="introduction" blockchain="" class="object-cover h-72 w-full image-process-grid-image" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/portfolio_thumbnails/derivatives/grid-image/400w/blockchain.png" srcset="/images/portfolio_thumbnails/derivatives/grid-image/300w/blockchain.png 300w, /images/portfolio_thumbnails/derivatives/grid-image/320w/blockchain.png 320w, /images/portfolio_thumbnails/derivatives/grid-image/380w/blockchain.png 380w, /images/portfolio_thumbnails/derivatives/grid-image/400w/blockchain.png 400w, /images/portfolio_thumbnails/derivatives/grid-image/650w/blockchain.png 650w" tech="" to=""/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="./blockchain-introduction.html">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/portfolio_thumbnails/blockchain.png alt=introduction to blockchain tech >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       Blockchains 101
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     An introduction to the main components of a blockchain with examples
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: Math, Cryptography, Transactions
                   </div>
-</div>
-</article>
-</a>
-</div>
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://johnmathews.eu/reconciliation.html">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img a="" alt="automated" and="" balance="" class="object-cover h-72 w-full image-process-grid-image" general="" ledger="" of="" reconciliation="" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/portfolio_thumbnails/derivatives/grid-image/400w/coins.jpg" srcset="/images/portfolio_thumbnails/derivatives/grid-image/300w/coins.jpg 300w, /images/portfolio_thumbnails/derivatives/grid-image/320w/coins.jpg 320w, /images/portfolio_thumbnails/derivatives/grid-image/380w/coins.jpg 380w, /images/portfolio_thumbnails/derivatives/grid-image/400w/coins.jpg 400w, /images/portfolio_thumbnails/derivatives/grid-image/650w/coins.jpg 650w" trial=""/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="./reconciliation.html">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/portfolio_thumbnails/coins.jpg alt=automated reconciliation of a general ledger and trial balance >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       Automated Reconciliation of a General Ledger and Trial Balance
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     A script to reconcile a GL and TB automatically. The
         example uses mocked data.
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: Finance, Accounting, Transactions
                   </div>
-</div>
-</article>
-</a>
-</div>
-<div class="transform transition duration-500 hover:scale-105 mx-auto w-5/6 md:w-1/2 2xl:w-1/3 my-2 md:my-4 px-1 md:px-5">
-<a href="https://johnmathews.eu/silos.html">
-<article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
-<img alt="Doctorate" and="" class="object-cover h-72 w-full image-process-grid-image" flow="" granular="" research:="" silos="" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="/images/portfolio_thumbnails/derivatives/grid-image/400w/silo_piv.jpeg" srcset="/images/portfolio_thumbnails/derivatives/grid-image/300w/silo_piv.jpeg 300w, /images/portfolio_thumbnails/derivatives/grid-image/320w/silo_piv.jpeg 320w, /images/portfolio_thumbnails/derivatives/grid-image/380w/silo_piv.jpeg 380w, /images/portfolio_thumbnails/derivatives/grid-image/400w/silo_piv.jpeg 400w, /images/portfolio_thumbnails/derivatives/grid-image/650w/silo_piv.jpeg 650w"/>
-<div class="h-32">
-<div class="flex items-center justify-between leading-tight p-2">
-<div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="transform transition duration-500 hover:scale-105
+                      mx-auto
+                       w-5/6 md:w-1/2 2xl:w-1/3
+                       my-2 md:my-4
+                       px-1 md:px-5">
+            <a href="./silos.html">
+              <article class="bg-white dark:bg-black text-gray-800 dark:text-gray-200 overflow-hidden border-0 border-gray-500 dark:border-gray-100 rounded-sm shadow-lg">
+                <img class="object-cover h-72 w-full image-process-grid-image" src=/images/portfolio_thumbnails/silo_piv.jpeg alt=Doctorate Research: Silos and Granular Flow >
+                <div class="h-32">
+                  <div class="flex items-center justify-between leading-tight p-2">
+                    <div class="font-bold text-lg no-underline hover:underline text-gray-800 dark:text-gray-200">
                       Doctorate Research: Silos and Granular Flow
                     </div>
-</div>
-<div class="clamp-2 mx-2 mb-2">
+                  </div>
+                  <div class="clamp-2 mx-2 mb-2">
                     A very brief overview of my work on silos and granular flows in increased gravities
                   </div>
-<div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
+                  <div class="clamp-1 font-semibold text-gray-700 dark:text-gray-200 mx-2 mb-2">
                     Tags: DEM, Centrifuge Modelling, Constituent Equations
                   </div>
-</div>
-</article>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
-<div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+                </div>
+              </article>
+            </a>
+          </div>
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+        <a class="px-3" href="./blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
-</div>
-</footer>
-<script>
-        const indexURL = 'https://johnmathews.eu/fuse.html';
-        const siteURL = 'https://johnmathews.eu';
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a>
+      </div>
+    </footer>
+
+        <script>
+        const indexURL = 'http://localhost:8000/fuse.html';
+        const siteURL = '.';
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script>
+      <script type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
+
+
+  <script>
     // set or update user preference for article category if it hasnt been set
     if (localStorage.getItem('categoryChoice') === "technical") {
       // pass
@@ -419,5 +470,6 @@
       window.localStorage.setItem('categoryChoice', 'technical');
     };
   </script>
-</body>
+  </body>
+
 </html>
