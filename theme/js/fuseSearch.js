@@ -38,8 +38,6 @@ window.focussedResult = -1;
   window.fuse = new Fuse(searchIndex, options);
 })()
 
-
-
 $( document ).ready(function() {
 
   // show search modal if link is clicked

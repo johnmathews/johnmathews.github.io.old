@@ -1,1021 +1,1058 @@
-<!doctype html>
-<html id="baz" class="" lang="en">
-  <head>
-        <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!DOCTYPE html>
 
-      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-
-      <title>JohnMathews.eu - Articles by John Mathews</title>
-      <meta name="title" content=" JohnMathews.eu "/>
-      <meta property="og:title" content=" JohnMathews.eu "/>
-      <meta property="twitter:title" content=" JohnMathews.eu "/>
-
-      <meta name="keywords" content=" blog, john mathews, tech, programming, bitcoin, data science, python "/>
-      <meta name="author" content="John Mathews"/>
-      <meta name="twitter:creator" content="@johnmathews"/>
-
-      <meta name="description" content="John Mathews' personal blog"/>
-      <meta name="twitter:description" content="John Mathews' personal blog"/>
-      <meta property="og:description" content="John Mathews' personal blog"/>
-
-      <meta property="og:url" content=" .. "/>
-      <meta property="twitter:url" content=" .. "/>
-
-      <meta name="twitter:image" content=""/>
-      <meta property="og:image" content=""/>
-
-      <meta property="twitter:card" content=" summary_large_image "/>
-      <meta name="twitter:domain" content="https://johnmathews.eu"/>
-
-      <meta property="og:type" content="website"/>
-
-      <link rel="icon" href="../extra/favicon.png" />
-
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="../None" />
-
-
-
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
-      <link href="../theme/css/styles.css" rel="stylesheet"/>
-      <link id="PygmentCSS" href="../theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
-
-      <script>
+<title>JohnMathews.eu - Articles by John Mathews</title>
+<meta content=" JohnMathews.eu " name="title"/>
+<meta content=" JohnMathews.eu " property="og:title"/>
+<meta content=" JohnMathews.eu " property="twitter:title"/>
+<meta content=" blog, john mathews, tech, programming, bitcoin, data science, python " name="keywords"/>
+<meta content="John Mathews" name="author"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="John Mathews' personal blog" name="description"/>
+<meta content="John Mathews' personal blog" name="twitter:description"/>
+<meta content="John Mathews' personal blog" property="og:description"/>
+<meta content=" https://johnmathews.eu " property="og:url"/>
+<meta content=" https://johnmathews.eu " property="twitter:url"/>
+<meta content="" name="twitter:image"/>
+<meta content="" property="og:image"/>
+<meta content=" summary_large_image " property="twitter:card"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="website" property="og:type"/>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script>
         let theme = localStorage.getItem('theme');
       </script>
-
-      <script>
+<script>
         // dark mode light mode switcheroo
-        const light = "../theme/css/pygment-light.css"
-        const dark = "../theme/css/pygment-dark.css"
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
       </script>
-
-      <script type="text/javascript" src="../theme/js/themeChooser.js" crossorigin="anonymous"></script>
-
-  <script type="text/javascript" crossorigin="anonymous" src="../theme/js/categoryChooser.js"></script>
-  </head>
-
-  <body class="dark:bg-black">
-    <a class="pt-20 mt-20 " name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class=" d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black">
-      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-        <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../blog.html">Blog</a>
-          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="../experience.html">Experience</a>
-        </div>
-        <div class="flex-none justify-end px-2 pt-2">
-          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
-            <div class="day modeIcon">
-              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-            </div>
-          </button>
-          <button id="" class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
-            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-          </button>
-        </div>
-      </div>
-      <div class="flex-none md:hidden block md:inline-block">
-        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
-          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-        </button>
-      </div>
-    </nav>
-      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../blog.html">Blog</a>
-        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="../experience.html">Experience</a>
-        <div class="px-3 pt-3 flex flex-row">
-          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
-            <div class="day modeIcon">
-              <i class="far fa-lightbulb fa-2x"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="far fa-moon fa-2x"></i>
-            </div>
-          </button>
-          <button id="" class="catChooser hidden ml-5" aria-label="Category chooser">
-            <i class="fas fa-paw fa-2x"></i>
-          </button>
-        </div>
-      </div>
-
-    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-
-      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-              <div class="text-center">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="text/javascript"></script>
+</link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0" id="">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5" id="">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
-                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
-                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
-                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
-                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="keyboardShortcuts" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="px-5 py-5">
-              <div class="">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-                <hr class="">
-                <div id="" class="flex flex-row space-x-4 text-base text-gray-700" role="group">
-                  <ul>
-                    <li>? - toggle shortcut descriptions</li>
-                    <li>j - scroll down</li>
-                    <li>k - scroll up</li>
-                    <li>tt  - toggle dark theme</li>
-                    <li>gi  - go to blog index page</li>
-                    <li>gn  - go to next article</li>
-                    <li>gp  - go to previous article</li>
-                    <li>gb  - go to previous page</li>
-                    <li>gf  - go forwards</li>
-                    <li>gc  - go to categories page</li>
-                    <li>gcc  - go to articles category page</li>
-                    <li>ga  - go to about page</li>
-                    <li>ge  - go to experience page</li>
-                    <li>go  - go to portfolio page</li>
-                    <li>gl  - go to landing page</li>
-                    <li>ct - show only technical articles on index page</li>
-                    <li>cn - show only non-technical articles on index page</li>
-                    <li>ca - show articles from all categories on index page</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div id="searchModalBackground" class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <div class="absolute inset-x-0 w-screen px-3">
-            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-              <div class="py-1 px-1">
-                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
-                <div class="hidden lg:inline-flex flex">
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+<hr class=""/>
+<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
+<ul>
+<li>? - toggle shortcut descriptions</li>
+<li>j - scroll down</li>
+<li>k - scroll up</li>
+<li>tt  - toggle dark theme</li>
+<li>gi  - go to blog index page</li>
+<li>gn  - go to next article</li>
+<li>gp  - go to previous article</li>
+<li>gb  - go to previous page</li>
+<li>gf  - go forwards</li>
+<li>gc  - go to categories page</li>
+<li>gcc  - go to articles category page</li>
+<li>ga  - go to about page</li>
+<li>ge  - go to experience page</li>
+<li>go  - go to portfolio page</li>
+<li>gl  - go to landing page</li>
+<li>ct - show only technical articles on index page</li>
+<li>cn - show only non-technical articles on index page</li>
+<li>ca - show articles from all categories on index page</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75" id="searchModalBackground"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     ctrl-k
                   </div>
                   or
                   <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
-                </div>
-                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mx-auto w-full">
-        <div class="flex flex-row">
-          <div class="hidden xl:inline xl:w-32">
-            <div class="w-32">
-            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
-              <div class="lg:w-32">
-                    <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../index.html"><i class="far fa-md fa-star"></i></a>
-                  </div>
-                  <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../blog.html">Blog</a>
-                  </div>
-                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../portfolio.html">Portfolio</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../about.html">About</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="../experience.html">Experience</a>
-                <div class="flex my-2">
-                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
-                    <div  class="day modeIcon">
-                      <i class="far fa-lightbulb fa-lg"></i>
-                    </div>
-                    <div class="night modeIcon hidden">
-                      <i class="far fa-moon fa-lg"></i>
-                    </div>
-                  </button>
-                </div>
-
-  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
-  </div>
-  <div class="font-serif pt-20 -mr-5 text-lg font-extrabold dark:text-gray-300">
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="font-serif pt-20 -mr-5 text-lg font-extrabold dark:text-gray-300">
     View categories:
   </div>
-  <div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
-    <button id="sideBarChooseTechnical" class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline">Technical</button>
-  </div>
-  <div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
-    <button id="sideBarChooseNonTechnical" class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline">Non-Technical</button>
-  </div>
-  <div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
-    <button id="sideBarChooseBoth" class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline">All</button>
-  </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
-  <div class="w-full">
-    <div class="xl:ml-20">
-      <div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
+<div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
+<button class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline" id="sideBarChooseTechnical">Technical</button>
+</div>
+<div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
+<button class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline" id="sideBarChooseNonTechnical">Non-Technical</button>
+</div>
+<div class="font-serif pt-2 text-lg text-gray-700 font-normal dark:text-gray-300">
+<button class="dark:hover:text-gray-50 hover:underline border-0 outline-none focus:shadow-outline" id="sideBarChooseBoth">All</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="w-full">
+<div class="xl:ml-20">
+<div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
         Blog Posts
       </div>
-      <div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
-      </div>
-        <div class="my-2 py-3">
-          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2021</h2>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../python-notes-2.html">Python&nbsp;Notes</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+<div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<div class="my-2 py-3">
+<h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2021</h2>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/python-notes-2.html">Python Notes</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   17 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../Adding-search.html">Adding&nbsp;Search</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/Adding-search.html">Adding Search</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   12 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../cardano-generating-addresses.html">Cardano: Generating&nbsp;Addresses</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/cardano-generating-addresses.html">Cardano: Generating Addresses</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   5 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../more-vim-notes.html">More <span class="caps">VIM</span>&nbsp;notes</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/more-vim-notes.html">More <span class="caps">VIM</span> notes</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../two-years-of-vim.html">Two Years Of&nbsp;Vim</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/two-years-of-vim.html">Two Years Of Vim</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../binance-node-api.html">Binance-Chain: Running a&nbsp;node</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/binance-node-api.html">Binance-Chain: Running a node</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   3 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../nohup-and-background-processes.html">nohup and Background&nbsp;Processes</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/nohup-and-background-processes.html">nohup and Background Processes</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   2 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../file-descriptors.html">File Descriptors and&nbsp;/dev/null</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/file-descriptors.html">File Descriptors and /dev/null</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   2 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../cardano-node-api.html">Cardano: Running a full&nbsp;node</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/cardano-node-api.html">Cardano: Running a full node</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../running-a-polkadot-node.html">Polkadot: Running and interacting with a full&nbsp;node</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/running-a-polkadot-node.html">Polkadot: Running and interacting with a full node</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 March
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../microservices_events_docker.html">Microservices, Docker,&nbsp;Azure</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/microservices_events_docker.html">Microservices, Docker, Azure</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   2 February
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../regrets-of-the-dying.html">Regrets Of The&nbsp;Dying</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/regrets-of-the-dying.html">Regrets Of The Dying</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 February
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../a-list-of-unconnected-thoughts-and-aphorisms.html">A List Of Unconnected Thoughts And&nbsp;Aphorisms</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/a-list-of-unconnected-thoughts-and-aphorisms.html">A List Of Unconnected Thoughts And Aphorisms</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 February
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../notes-from-an-interview-with-geoffrey-hinton.html">Notes From An Interview With Geoffrey&nbsp;Hinton</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html">Notes From An Interview With Geoffrey Hinton</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 February
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../questions.html">Questions For Interesting&nbsp;Conversations</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/questions.html">Questions For Interesting Conversations</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 February
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../portfolio-image-recognition.html">Portfolio: Image&nbsp;Recognition</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/portfolio-image-recognition.html">Portfolio: Image Recognition</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   26 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../photographs.html">Photographs</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/photographs.html">Photographs</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   22 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../notes-from-mastering-vim-quickly.html">Notes From &#8220;Mastering Vim&nbsp;Quickly&#8221;</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html">Notes From “Mastering Vim Quickly”</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   21 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../python-notes.html">Notes From &#8220;Powerful&nbsp;Python&#8221;</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/python-notes.html">Notes From “Powerful Python”</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   21 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../mental-models-i-used-to-use.html">Mental Models I Used To&nbsp;Use</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/mental-models-i-used-to-use.html">Mental Models I Used To Use</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   20 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../vim-notes-goto-tag-definition.html">Vim: GoTo Tag&nbsp;Definition</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/vim-notes-goto-tag-definition.html">Vim: GoTo Tag Definition</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   20 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../whats-so-different-about-now.html">What&#8217;s So Different About&nbsp;Now</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/whats-so-different-about-now.html">What’s So Different About Now</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   20 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../what-happens-next.html">Predicting the Future using Human Nature and&nbsp;Technology</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/what-happens-next.html">Predicting the Future using Human Nature and Technology</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   20 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../financial-doom-and-gloom.html">Financial Doom And&nbsp;Gloom</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/financial-doom-and-gloom.html">Financial Doom And Gloom</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   19 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../debugging-more-categories-pelican-plugin.html">Debugging the more_categories plugin for&nbsp;Pelican</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html">Debugging the more_categories plugin for Pelican</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   19 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../different-views-for-different-users.html">Different Views For Different&nbsp;Users</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/different-views-for-different-users.html">Different Views For Different Users</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   19 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../different-types-of-problem.html">3 Different Types Of Programming&nbsp;Problems</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/different-types-of-problem.html">3 Different Types Of Programming Problems</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   18 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../why-i-want-to-write-regularly.html">Why I Want To Write&nbsp;Regularly</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/why-i-want-to-write-regularly.html">Why I Want To Write Regularly</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   18 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../becoming-a-better-python-developer.html">Python: Becoming A Better Python&nbsp;Developer</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/becoming-a-better-python-developer.html">Python: Becoming A Better Python Developer</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   18 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../vim-for-large-projects.html">Managing Large Projects with&nbsp;Vim</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/vim-for-large-projects.html">Managing Large Projects with Vim</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   15 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../using-rss.html">Using <span class="caps">RSS</span></a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/using-rss.html">Using <span class="caps">RSS</span></a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   14 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../learning-to-django.html">Notes on learning&nbsp;Django</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/learning-to-django.html">Notes on learning Django</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   14 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../larger-code-bases.html">Data Science vs Web Development: Larger Code&nbsp;Bases</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/larger-code-bases.html">Data Science vs Web Development: Larger Code Bases</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   14 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../test-driven-development.html"><span class="caps">TDD</span>: Test Driven&nbsp;Development</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/test-driven-development.html"><span class="caps">TDD</span>: Test Driven Development</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   6 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../faith-in-jesus.html">Why Start Talking About Faith In&nbsp;Jesus?</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/faith-in-jesus.html">Why Start Talking About Faith In Jesus?</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   5 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../api-design.html"><span class="caps">API</span> Design&nbsp;Principles</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/api-design.html"><span class="caps">API</span> Design Principles</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/principles-of-oop.html">Principles Of Object Orientated Programming</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/site-performance.html">Optimizing The Performance Of This Blog</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 January
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../using-unix-utilities-to-analyse-and-update-multiple-files.html">Unix: Utilities To Analyse And Update Multiple Text&nbsp;Files</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html">Unix: Utilities To Analyse And Update Multiple Text Files</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 January
                 </div>
-              </div>
-        </div>
-        <div class="my-2 py-3">
-          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2020</h2>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../a-new-blog-design.html">A New Blog&nbsp;Design</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+</div>
+<div class="my-2 py-3">
+<h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2020</h2>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/a-new-blog-design.html">A New Blog Design</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   18 December
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../product-led-growth.html">Product-Led&nbsp;Growth</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/product-led-growth.html">Product-Led Growth</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   8 December
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../mom-test.html">The Mom&nbsp;Test</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/mom-test.html">The Mom Test</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 December
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../obviously-awesome.html">Obviously&nbsp;Awesome</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/obviously-awesome.html">Obviously Awesome</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   3 December
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../How-I-learnt-to-code.html">How I learnt to&nbsp;code</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/How-I-learnt-to-code.html">How I learnt to code</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 December
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/1-page-marketing-plan.html">The 1-Page Marketing Plan</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   19 November
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../marketing-101.html">Learning to&nbsp;market</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/marketing-101.html">Learning to market</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   19 November
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../pippip.email.html">Pippip.Email</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/pippip.email.html">Pippip.Email</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   28 October
                 </div>
-              </div>
-        </div>
-        <div class="my-2 py-3">
-          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2019</h2>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../between-clients.html">Between&nbsp;Clients</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+</div>
+<div class="my-2 py-3">
+<h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2019</h2>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/between-clients.html">Between Clients</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   8 October
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../shell.html">A faster&nbsp;shell</a>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/btc-fork-analysis.html">Analysis of the mean and median value of transactions on 5 Blockchains</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  2 September
                 </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/shell.html">A faster shell</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   14 February
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/bitcoin-lightning.html">Bitcoin Lightning</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   24 January
                 </div>
-              </div>
-        </div>
-        <div class="my-2 py-3">
-          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2018</h2>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+</div>
+<div class="my-2 py-3">
+<h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2018</h2>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node, quickly</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   13 October
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../bakkerij.html">Bakke-Rij</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/bakkerij.html">Bakke-Rij</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   11 June
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../prediction.html">Prediction&nbsp;Markets</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/prediction.html">Prediction Markets</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   7 June
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../reading.html">What I&#8217;m&nbsp;reading</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/reading.html">What I’m reading</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   4 June
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/rys-git-tutorial.html">Ry’s Git Tutorial</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 June
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../neighbours.html">Neighbours</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/neighbours.html">Neighbours</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   31 May
                 </div>
-              </div>
-        </div>
-        <div class="my-2 py-3">
-          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2017</h2>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../buying-btc.html">How to buy&nbsp;Bitcoin</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+</div>
+<div class="my-2 py-3">
+<h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2017</h2>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/buying-btc.html">How to buy Bitcoin</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   7 December
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../ocean.html">Live near the&nbsp;ocean</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/ocean.html">Live near the ocean</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   23 November
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../pangea.html">Pangea</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/pangea.html">Pangea</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   22 November
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/bitcoin-vs-gold.html">Bitcoin compared to gold</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   21 November
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../wallet.html">Hardware&nbsp;Wallets</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/wallet.html">Hardware Wallets</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   8 November
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../chartered.html">I&#8217;m a chartered&nbsp;accountant</a>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/algo-trading.html">Trading digital assets</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  28 October
                 </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/chartered.html">I’m a chartered accountant</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   19 October
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../coworking.html">Coworking in&nbsp;Dublin</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/coworking.html">Coworking in Dublin</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   15 September
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../bitnation.html">Bitnation</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/bitnation.html">Bitnation</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   14 September
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using Parity</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   12 August
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../corporate.html">Corporate&nbsp;London</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  10 July
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  8 July
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../move.html">Move</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  8 July
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../flee.html">Flee</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  4 July
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  9 June
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../ambitious.html">How to be an ambitious founder in&nbsp;Europe</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  9 June
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../lis17.html">The Lisbon Investment&nbsp;Summit</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  9 June
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  1 June
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  25 May
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../london.html">London Rent vs. London&nbsp;Salaries</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  12 May
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  5 May
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  30 April
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../pelican.html">Blogging with&nbsp;Pelican</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  28 April
-                </div>
-              </div>
-        </div>
-        <div class="my-2 py-3">
-          <h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2016</h2>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../vim.html">Vim!</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  1 December
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  1 December
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../silos.html">Introduction to my doctorate research -&nbsp;Silos</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  2 October
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../encryption.html">Encryption</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  30 August
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  19 August
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../spare-time.html">Spare&nbsp;time</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  13 August
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../time-until.html">Übersicht widget: Time&nbsp;Until</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  7 August
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2   nonTechnical ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../how-to-wake-up-early.html">How to wake up&nbsp;early</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
-                  6 August
-                </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/macro-btc.html">Macro analysis of the Bitcoin blockchain</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   3 August
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/corporate.html">Corporate London</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  10 July
                 </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/blockchain-networks.html">Blockchains from the ground up: Part 2</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  8 July
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/move.html">Move</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  8 July
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/flee.html">Flee</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  4 July
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/investment.html">Understanding <span class="caps">VC</span> Investment</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  9 June
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/ambitious.html">How to be an ambitious founder in Europe</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  9 June
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/lis17.html">The Lisbon Investment Summit</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  9 June
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/pelican2.html">Blogging with Pelican: Design, Plugins, Sharing</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  1 June
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part 1</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  25 May
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/london.html">London Rent vs. London Salaries</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  12 May
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/aeternity.html">Introduction to the Æternity blockchain project</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  5 May
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My experience</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  30 April
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/pelican.html">Blogging with Pelican</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  28 April
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/books.html">Analysing a personal library</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  1 February
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/fakegl.html">FakeGL: A Synthetic General Ledger and Trial Balance</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  6 January
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/reconciliation.html">Reconciliation of a trial balance to a general ledger</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  3 January
+                </div>
+</div>
+</div>
+<div class="my-2 py-3">
+<h2 class="font-bold pt-5 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2016</h2>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/spotify.html">Spotify song history</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  22 December
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/vim.html">Vim!</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  1 December
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  1 December
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/silos.html">Introduction to my doctorate research - Silos</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  2 October
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/encryption.html">Encryption</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  30 August
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/digital-currencies-the-basics.html">Digital currencies: the basics</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  19 August
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/spare-time.html">Spare time</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  13 August
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/time-until.html">Übersicht widget: Time Until</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  7 August
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 nonTechnical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/how-to-wake-up-early.html">How to wake up early</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  6 August
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks + Pandas</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                  3 August
+                </div>
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/courseras-data-science-specialisation.html">Coursera’s “Data Science Specialisation”</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   1 August
                 </div>
-              </div>
-            <div class="flex justify-between py-3 md:py-2  technical  ">
-                <div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
-                  <a class="font-serif font-extralight text-2xl" href="../ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a>
-                </div>
-                <div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+</div>
+<div class="flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/ubersicht-widget-time-since.html">Übersicht widget: Time Since</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
                   30 July
                 </div>
-              </div>
-        </div>
-    </div>
-  </div>
-          </div>
-        </div>
-      </div>
-
-    </main>
-
-    <footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
-      <div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
-        <a class="px-3" href="../blog.html">Blog Posts</a> |
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto font-bold border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-500 dark:text-gray-300">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="../categories.html">Categories</a> |
-        <a class="px-3" href="../feeds/all.atom.xml">RSS</a>
-      </div>
-    </footer>
-
-      <script>
-        const indexURL = 'http://localhost:8000/fuse.html';
-        const siteURL = '..';
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
+</div>
+</footer>
+<script>
+        const indexURL = 'https://johnmathews.eu/fuse.html';
+        const siteURL = 'https://johnmathews.eu';
       </script>
-      <script type="text/javascript" src="../theme/js/navbar.js" crossorigin="anonymous"></script>
-      <script type="module" src="../theme/js/fuseSearch.js" crossorigin="anonymous"></script>
-      <script type="module" src="../theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
-  </body>
-
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+</body>
 </html>
