@@ -49,19 +49,19 @@ $(document).ready(function () {
   Mousetrap.bind('t t', function () {
     modeSwitcher()
   })
-  Mousetrap.bind('c t', function () {
+  Mousetrap.bind('v t', function () {
     window.localStorage.setItem('categoryChoice', 'Technical')
     if (typeof chooseTechnical === 'function') {
       chooseTechnical()
     }
   })
-  Mousetrap.bind('c n', function () {
+  Mousetrap.bind('v n', function () {
     window.localStorage.setItem('categoryChoice', 'nonTechnical')
     if (typeof chooseNonTechnical === 'function') {
       chooseNonTechnical()
     }
   })
-  Mousetrap.bind('c a', function () {
+  Mousetrap.bind('v a', function () {
     window.localStorage.setItem('categoryChoice', 'all')
     if (typeof chooseBoth === 'function') {
       chooseBoth()
