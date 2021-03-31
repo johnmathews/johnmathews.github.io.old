@@ -143,7 +143,13 @@ $( document ).ready(function() {
     if (event.which == 40) {
       incrementFocus(true);
       focussResult(window.focussedResult);
+    } else if (event.which == 74 && event.ctrlKey) {
+      incrementFocus(true);
+      focussResult(window.focussedResult);
     } else if (event.which == 38) {
+      incrementFocus(false);
+      focussResult(window.focussedResult);
+    } else if (event.which == 75 && event.ctrlKey) {
       incrementFocus(false);
       focussResult(window.focussedResult);
     } else if (event.keyCode == 13) { // return key
