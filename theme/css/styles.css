@@ -519,6 +519,22 @@ video {
   height: auto;
 }
 
+.toc {
+  margin-top: 1.25rem;
+}
+
+.toc ul {
+  list-style-type: decimal !important;
+  margin-top: 0px !important;
+}
+
+.toctitle {
+  border-bottom-width: 2px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 #searchResults {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
@@ -739,6 +755,10 @@ video {
 .dark .markdown code {
   --tw-text-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.markdown code {
+  white-space: nowrap;
 }
 
 /* .markdown pre code { */

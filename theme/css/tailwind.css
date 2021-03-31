@@ -1,6 +1,17 @@
 @tailwind base;
 
 
+.toc {
+	@apply mt-5;
+}
+.toc ul {
+	@apply -mt-0 list-decimal !important;
+}
+
+.toctitle {
+	@apply text-xl border-b-2 font-extrabold ;
+}
+
 #searchResults {
 	@apply border-2 border-white;
 }
@@ -109,6 +120,7 @@
 
 .markdown code {
   @apply font-mono text-base p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
+	white-space: nowrap;
 }
 
 /* .markdown pre code { */

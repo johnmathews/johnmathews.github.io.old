@@ -15,9 +15,9 @@
 <meta content="  " name="keywords"/>
 <meta content="John Mathews" name="author"/>
 <meta content="@johnmathews" name="twitter:creator"/>
-<meta content=" There are multiple ways of doing anything with vim, including going to where a function or object is defined, and I usually need to do something at least 3 times before I can do it without... " name="description"/>
-<meta content=" There are multiple ways of doing anything with vim, including going to where a function or object is defined, and I usually need to do something at least 3 times before I can do it without... " name="twitter:description"/>
-<meta content=" There are multiple ways of doing anything with vim, including going to where a function or object is defined, and I usually need to do something at least 3 times before I can do it without... " property="og:description"/>
+<meta content=" Update (2021-03-31): Just use neovim.coc instead of YouCompleteMe or Syntastic. It’s faster, easier to setup, and works intuitively. ALE is still wonderful and useful, though there’s a lot of... " name="description"/>
+<meta content=" Update (2021-03-31): Just use neovim.coc instead of YouCompleteMe or Syntastic. It’s faster, easier to setup, and works intuitively. ALE is still wonderful and useful, though there’s a lot of... " name="twitter:description"/>
+<meta content=" Update (2021-03-31): Just use neovim.coc instead of YouCompleteMe or Syntastic. It’s faster, easier to setup, and works intuitively. ALE is still wonderful and useful, though there’s a lot of... " property="og:description"/>
 <meta content="https://johnmathews.eu/vim-notes-goto-tag-definition.html" property="og:url"/>
 <meta content="https://johnmathews.eu/vim-notes-goto-tag-definition.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
@@ -242,7 +242,7 @@
 <div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
 <div class="mb-10">
 <div class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
-<span class="break-all" style="word-break: unset;">
+<span class="break-all" style="word-break: unset; white-space: wrap;">
           Vim: GoTo Tag Definition
         </span>
 </div>
@@ -259,32 +259,18 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>There are multiple ways of doing anything with vim, including going to where a
-function or object is defined, and I usually need to do something at least 3 times
-before I can do it without breaking my focus or train of thought.</p>
-<p>My memory is hazy but I remember spending a 1/2 day looking into this and
-considering which solution I wanted to commit to.<sup id="sf-vim-notes-goto-tag-definition-1-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do.">1</a></sup> My options seemed to be between
-<a href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a> and
-<a href="https://github.com/dense-analysis/ale"><span class="caps">ALE</span></a>. [Update!<sup id="sf-vim-notes-goto-tag-definition-2-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim">2</a></sup>]</p>
-<p>I can’t remember everything I read and tried, but I trust my conclusions.
-Looking in my <code>.vimrc</code> I see that I have <code>&lt;leader&gt;x</code> mapped to <code>:YcmCompleter
-GoTo</code> and it works just fine, even when a module is imported from somewhere
-outside the current project. The tool was working and ready to use, I just
-hadn’t internalized it yet.</p>
-<h2 id="commands-to-remember">Commands to remember:</h2>
-<ul>
-<li><code>&lt;Leader&gt;x</code> - GoTo definition - YCMs best guess at an ‘intelligent’ goto
-command, whether its a declaration or a definition.</li>
-<li><code>&lt;F2&gt;</code> - Toggle tagbar</li>
-</ul>
+<h2 id="update-2021-03-31">Update (2021-03-31):</h2>
+<p>Just use neovim.coc instead of YouCompleteMe or Syntastic.</p>
+<p>It’s faster, easier to setup, and works intuitively. <span class="caps">ALE</span> is still wonderful and
+useful, though there’s a lot of overlap - coc can lint as well.</p>
 <h2 id="jump-lists-and-change-lists">Jump Lists and Change Lists</h2>
 <p>If you’re going to be jumping around to where things are defined, you will need
 to know how to jump back again. It seems there are two lists you need to be
-aware of, the <em>jump list</em><sup id="sf-vim-notes-goto-tag-definition-3-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-3" title=":help jumplist">3</a></sup> and the <em>change
-list</em><sup id="sf-vim-notes-goto-tag-definition-4-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-4" title=":help changelist">4</a></sup>.</p>
+aware of, the <em>jump list</em><sup id="sf-vim-notes-goto-tag-definition-1-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title=":help jumplist">1</a></sup> and the <em>change
+list</em><sup id="sf-vim-notes-goto-tag-definition-2-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title=":help changelist">2</a></sup>.</p>
 <h3 id="jump-list">Jump List</h3>
 <ul>
-<li>A list of locations that the cursor has jumped to. </li>
+<li>A list of locations that the cursor has jumped to.</li>
 <li>Relevant to jumping to a definition.</li>
 <li><code>&lt;C-O&gt;</code> move up the jump list</li>
 <li><code>&lt;C-I&gt;</code> mode down the jump list</li>
@@ -301,13 +287,32 @@ list</em><sup id="sf-vim-notes-goto-tag-definition-4-back"><a class="simple-foot
 <li><code>.</code> is a special mark that is automatically set at the location of your last edit.</li>
 <li><code>''</code> will bring you back to where you were before your last jump</li>
 <li><code>g;</code> and <code>g,</code>  will also move you up and down the <code>change list</code></li>
-</ul><ol class="simple-footnotes"><li id="sf-vim-notes-goto-tag-definition-1">The more powerful the
+</ul>
+<h2 id="original-post">Original Post:</h2>
+<p>There are multiple ways of doing anything with vim, including going to where a
+function or object is defined, and I usually need to do something at least 3 times
+before I can do it without breaking my focus or train of thought.</p>
+<p>My memory is hazy but I remember spending a 1/2 day looking into this and
+considering which solution I wanted to commit to.<sup id="sf-vim-notes-goto-tag-definition-3-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-3" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do.">3</a></sup> My options seemed to be between
+<a href="https://github.com/ycm-core/YouCompleteMe">YouCompleteMe</a> and
+<a href="https://github.com/dense-analysis/ale"><span class="caps">ALE</span></a>. [Update!<sup id="sf-vim-notes-goto-tag-definition-4-back"><a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-4" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim">4</a></sup>]</p>
+<p>I can’t remember everything I read and tried, but I trust my conclusions.
+Looking in my <code>.vimrc</code> I see that I have <code>&lt;leader&gt;x</code> mapped to <code>:YcmCompleter
+GoTo</code> and it works just fine, even when a module is imported from somewhere
+outside the current project. The tool was working and ready to use, I just
+hadn’t internalized it yet.</p>
+<h2 id="commands-to-remember">Commands to remember:</h2>
+<ul>
+<li><code>&lt;Leader&gt;x</code> - GoTo definition - YCMs best guess at an ‘intelligent’ goto
+command, whether its a declaration or a definition.</li>
+<li><code>&lt;F2&gt;</code> - Toggle tagbar</li>
+</ul><ol class="simple-footnotes"><li id="sf-vim-notes-goto-tag-definition-1"><code>:help jumplist</code> <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-1-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-2"><code>:help changelist</code> <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-2-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-3">The more powerful the
 tool, the more worthwhile it is to take a closer look at what it can and can’t
-do. <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-1-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-2"><span class="caps">YCM</span> and
+do. <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-4"><span class="caps">YCM</span> and
 <span class="caps">ALE</span> work fine for goto definition and linting, but they don’t give me
 satisfactory autocompletion. <code>neoclide/coc.nvim</code> looks like it might offer some
 improvements.
-<a href="https://www.vimfromscratch.com/articles/vim-for-python/">neoclide/coc.nvim</a> <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-2-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-3"><code>:help jumplist</code> <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3-back">↩</a></li><li id="sf-vim-notes-goto-tag-definition-4"><code>:help changelist</code> <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back">↩</a></li></ol>
+<a href="https://www.vimfromscratch.com/articles/vim-for-python/">neoclide/coc.nvim</a> <a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back">↩</a></li></ol>
 </div>
 </article>
 </main>

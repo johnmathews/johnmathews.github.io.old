@@ -15,9 +15,9 @@
 <meta content="  " name="keywords"/>
 <meta content="John Mathews" name="author"/>
 <meta content="@johnmathews" name="twitter:creator"/>
-<meta content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... " name="description"/>
-<meta content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... " name="twitter:description"/>
-<meta content=" /dev/null In Linux everything is a file, including virtual devices. Processes (programmes) can request access to or from these devices. The only difference between these virtual device “files” and... " property="og:description"/>
+<meta content=" /dev/null In Linux everything is a file, including virtual devices like keyboards. Processes (programmes) can request access to or from these devices. The only difference between these virtual... " name="description"/>
+<meta content=" /dev/null In Linux everything is a file, including virtual devices like keyboards. Processes (programmes) can request access to or from these devices. The only difference between these virtual... " name="twitter:description"/>
+<meta content=" /dev/null In Linux everything is a file, including virtual devices like keyboards. Processes (programmes) can request access to or from these devices. The only difference between these virtual... " property="og:description"/>
 <meta content="https://johnmathews.eu/file-descriptors.html" property="og:url"/>
 <meta content="https://johnmathews.eu/file-descriptors.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
@@ -242,7 +242,7 @@
 <div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
 <div class="mb-10">
 <div class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
-<span class="break-all" style="word-break: unset;">
+<span class="break-all" style="word-break: unset; white-space: wrap;">
           File Descriptors and /dev/null
         </span>
 </div>
@@ -260,7 +260,7 @@
 <article class="">
 <div class="markdown">
 <h2 id="devnull">/dev/null</h2>
-<p>In Linux everything is a file, including virtual devices. Processes
+<p>In Linux everything is a file, including virtual devices like keyboards. Processes
 (programmes) can request access to or from these devices.</p>
 <p>The only difference between these virtual device “files” and real files, is
 that for a virtual device the <span class="caps">OS</span> generates the data that goes into the file,
@@ -298,7 +298,7 @@ filter out all the <code>stdout</code> by redirecting the <code>stdout</code> me
 <code>/dev/null</code>:</p>
 <div class="highlight"><pre><span></span>$ ping google.com <span class="m">1</span>&gt; /dev/null
 </pre></div>
-<h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly">Redirect all output into /dev/null If you want a command to run quietly,</h2>
+<h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly">Redirect all output into /dev/null if you want a command to run quietly,</h2>
 <p>Redirect all the output. The command below redirects <code>stdout</code> to <code>/dev/null</code>
 (the default file descriptor is 1 if it isn’t specified) and then redirects
 file descriptor 2 into file descriptor 1.</p>

@@ -15,9 +15,9 @@
 <meta content="  " name="keywords"/>
 <meta content="John Mathews" name="author"/>
 <meta content="@johnmathews" name="twitter:creator"/>
-<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this last night when... " name="description"/>
-<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this last night when... " name="twitter:description"/>
-<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this last night when... " property="og:description"/>
+<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this when I was... " name="description"/>
+<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this when I was... " name="twitter:description"/>
+<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this when I was... " property="og:description"/>
 <meta content="https://johnmathews.eu/nohup-and-background-processes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/nohup-and-background-processes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
@@ -242,7 +242,7 @@
 <div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
 <div class="mb-10">
 <div class="markdown prose prose-md lg:prose-xl xl:prose-2xl leading-tight text-left mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200" style="">
-<span class="break-all" style="word-break: unset;">
+<span class="break-all" style="word-break: unset; white-space: wrap;">
           nohup and Background Processes
         </span>
 </div>
@@ -262,9 +262,9 @@
 <h1 id="stop-stuff-from-stopping">Stop stuff from stopping</h1>
 <p>If you run a command in a terminal session and the terminal session is
 disconnected, the processes running in it will also be terminated.</p>
-<p>I discovered this last night when I was trying to download a ~500gb database
-overnight. I logged in this morning expecting to see a completed download, but
-realised I only had half the file.</p>
+<p>I discovered this when I was trying to download a ~500gb database
+overnight. I logged in the next morning expecting to see a completed download, but
+found I only had half the file.</p>
 <h1 id="use-nohup-to-ignore-hup-signals">Use <code>nohup</code> to ignore <code>HUP</code> signals</h1>
 <p>One solution to this seems to be to use <code>nohup</code>, a command that
 ignores the <code>HUP</code> signal. It stops your programme from stopping if the terminal
@@ -272,23 +272,22 @@ session its running in is stopped.</p>
 <p>By convention, the <code>HUP</code> signal is the method used by a terminal to warn
 dependent processes that it is about to logout.</p>
 <p>You probably want to run <code>nohup</code> in the background. You might want to prevent
-it from creating <code>nohup.out</code>. </p>
+it from creating <code>nohup.out</code>.</p>
 <h1 id="close-or-redirect-fd0-fd2">Close or redirect fd0 - fd2</h1>
-<p>On Linux, if you run a command with <code>nohup</code> then <code>nohup</code> automatically closes
-<code>stdin</code>. If you’re using MacOS or <span class="caps">BSD</span> this doesn’t automatically happen, so you
-might want to redirect it yourself. This is because if a background process
-tries to read anything from <code>stdin</code> then it will pause itself and wait for you
-to bring it to the foreground <code>fg</code> and type some input. This is probably a
-waste of time.</p>
+<p>On Linux,  <code>nohup</code> automatically closes <code>stdin</code>. If you’re using MacOS or <span class="caps">BSD</span>
+this doesn’t automatically happen, so you might want to redirect it yourself.
+This is because if a background process tries to read anything from <code>stdin</code>
+then it will pause itself whilst it waits for you to bring it to the foreground
+and type some input. This is probably a waste of time.</p>
 <p>If <code>nohup</code> detects that you have redirected <code>stdout</code> and <code>stderr</code> then it won’t
 create <code>nohup.out</code>.</p>
 <p>As with all commands, if you put <code>&amp;</code> at the end of the command, it will run in
 the background. You can bring it to the foreground by running <code>fg</code>, or see a
 list of jobs by running <code>jobs</code>.</p>
-<p>If you redirect input to /dev/null by <code>&lt;/dev/null</code> you will stop the program
+<p>If you redirect input to /dev/null (<code>&lt;/dev/null</code>) you will stop the program
 from receiving keyboard (stdin) input, but you won’t prevent it from accessing
 the terminal directly. Also you haven’t removed the program from the shell’s
-process group. </p>
+process group.</p>
 <h1 id="stopping-signals-using-disown">Stopping signals using <code>disown</code></h1>
 <p>If you want to remove a program from the shell’s process group, then
 immediately after you’ve run the command to start your programme, run <code>disown</code>
@@ -300,6 +299,20 @@ such as a manual <code>kill</code> command.</p>
 <p>A <code>nohup</code>ed process will ignore any and all <code>HUP</code> signal, no matter how they
 are sent.</p>
 <p><a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out">Source</a></p>
+<h1 id="update-2021-03-31">Update (2021-03-31):</h1>
+<p>Use <code>w</code> to see who is logged in and what they are doing. It’s summary of every
+user logged into a computer, what each user is currently doing, and the
+load all the current activity.</p>
+<p>It’s a combination of <code>who</code>, <code>uptime</code>, and <code>ps -a</code>.</p>
+<h2 id="process-groups">Process Groups</h2>
+<p>A collection of one or more processes. It’s used to control the distribution of
+a signal. When a signal is directed to a process group, the signal is delivered
+to each process that is a member of the group.</p>
+<h2 id="sessions">Sessions</h2>
+<p>A collection of one or more process groups. A process may not create a process
+group that belongs to another session. A process is not permitted
+to join a process group that is a member of another session. A process
+is not permitted to migrate from one session to another.</p>
 </div>
 </article>
 </main>
