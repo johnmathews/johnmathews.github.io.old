@@ -57,14 +57,9 @@ $( document ).ready(function() {
     $('#fuseModal').toggleClass('hidden');
   });
 
-  hotkeys('ctrl+k,command+k,/,esc,return', function (event, handler){
+  hotkeys('command+k,/,esc,return', function (event, handler){
     event.preventDefault();
     switch (handler.key) {
-      case 'ctrl+k':
-        window.focussedResult = -1;
-        $('#fuseModal').toggleClass('hidden');
-        $('#searchBox').focus();
-        break;
       case 'command+k':
         window.focussedResult = -1;
         $('#fuseModal').toggleClass('hidden');

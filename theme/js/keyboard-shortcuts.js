@@ -1,6 +1,71 @@
 import './mouseTrap.js'
 
+function traverseList(direction){
+  // f is forwards
+  // b is backwards
+  if (direction==='f'){
+    incrementFocus('f')
+  }
+  if (direction==='b'){
+    incrementFocus('b')
+  }
+}
+
+function goToSelected(){
+  // this preserves browser back/forwards history
+  $(".selected")[0].click()
+}
+
+function focusSelectedListItem(n){
+  var focusClasses = "selected underline"
+
+  console.log(`item ${n} selected`)
+  var listLength = $('.listItem').length
+  for (var i = 0; i < listLength; i++) {
+    if ( i == n ) {
+      $("#primaryList .listItem").eq(i).addClass(focusClasses);
+      console.log('found')
+    } else {
+      $("#primaryList .listItem").eq(i).removeClass(focusClasses);
+    }
+  }
+}
+
+
+
+function incrementFocus(direction){
+  // if there isn't a list, dont do anything
+  if (!$(".listItem")[0]) {
+    return
+  } else {
+    var listLength = $('.listItem').length
+  }
+
+  // check that search interface isnt showing
+  if ($('#fuseModal').hasClass('hidden')) {
+    if (direction === 'f'){
+      if (window.selectedListItem == listLength) {
+        window.selectedListItem = 0 ;
+      } else {
+        window.selectedListItem++;
+      };
+    } else if (direction === 'b'){
+      if (window.selectedListItem == 0) {
+        window.selectedListItem = listLength
+      } else {
+        window.selectedListItem-- ;
+      };
+    }
+    focusSelectedListItem(window.selectedListItem)
+  }
+};
+
 $(document).ready(function () {
+  window.selectedListItem = -1
+
+  Mousetrap.bind('ctrl+j', function(){traverseList('f')})
+  Mousetrap.bind('ctrl+k', function(){traverseList('b')})
+  Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
     window.scrollBy({top: 110, left: 0, behavior: 'smooth'})
   })
