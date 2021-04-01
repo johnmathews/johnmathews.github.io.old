@@ -1,36 +1,63 @@
 // choosing which articles to make visible based on choice in cat modal
 function chooseBoth() {
+  window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'all');
+
   $('.technical').removeClass('hidden');
   $('.nonTechnical').removeClass('hidden');
+
+  $('.Technical').addClass('listItem');
+  $('.nonTechnical').addClass('listItem');
 
   $('#chooseBoth').addClass('bg-yellow-500');
   $('#chooseTechnical').removeClass('bg-yellow-500');
   $('#chooseNonTechnical').removeClass('bg-yellow-500');
 
+  $('#sideBarChooseNonTechnical').text("Non-Technical")
+  $('#sideBarChooseTechnical').text("Technical")
+  $('#sideBarChooseBoth').text(">All")
+
   $('#catModal').addClass('hidden');
 }
 
 function chooseTechnical(){
+  window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'technical');
+
   $('.technical').removeClass('hidden');
   $('.nonTechnical').addClass('hidden');
+
+  $('.Technical').addClass('listItem');
+  $('.nonTechnical').removeClass('listItem');
 
   $('#chooseBoth').removeClass('bg-yellow-500');
   $('#chooseTechnical').addClass('bg-yellow-500');
   $('#chooseNonTechnical').removeClass('bg-yellow-500');
 
+  $('#sideBarChooseNonTechnical').text("Non-Technical")
+  $('#sideBarChooseTechnical').text(">Technical")
+  $('#sideBarChooseBoth').text("All")
+
   $('#catModal').addClass('hidden');
 };
 
 function chooseNonTechnical() {
+  window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'nonTechnical');
-  $('.nonTechnical').removeClass('hidden');
+
   $('.technical').addClass('hidden');
+  $('.nonTechnical').removeClass('hidden');
+
+  $('.nonTechnical').addClass('listItem');
+  $('.technical').removeClass('listItem');
 
   $('#chooseBoth').removeClass('bg-yellow-500');
   $('#chooseTechnical').removeClass('bg-yellow-500');
   $('#chooseNonTechnical').addClass('bg-yellow-500');
+
+  $('#sideBarChooseNonTechnical').text(">Non-Technical")
+  $('#sideBarChooseTechnical').text("Technical")
+  $('#sideBarChooseBoth').text("All")
 
   $('#catModal').addClass('hidden');
 }

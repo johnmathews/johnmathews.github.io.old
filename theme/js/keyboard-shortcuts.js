@@ -23,10 +23,9 @@ function focusSelectedListItem(n){
   var listLength = $('.listItem').length
   for (var i = 0; i < listLength; i++) {
     if ( i == n ) {
-      $("#primaryList .listItem").eq(i).addClass(focusClasses);
-      console.log('found')
+      $("#primaryList .listItem").eq(i).find('a').addClass(focusClasses);
     } else {
-      $("#primaryList .listItem").eq(i).removeClass(focusClasses);
+      $("#primaryList .listItem").eq(i).find('a').removeClass(focusClasses);
     }
   }
 }
@@ -40,6 +39,9 @@ function incrementFocus(direction){
   } else {
     var listLength = $('.listItem').length
   }
+
+  console.log(`listlength: ${listLength}`)
+  console.log(`selectedItem: ${window.selectedListItem}`)
 
   // check that search interface isnt showing
   if ($('#fuseModal').hasClass('hidden')) {
