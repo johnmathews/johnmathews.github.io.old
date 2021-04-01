@@ -63,7 +63,8 @@ function chooseNonTechnical() {
 }
 
 $( document ).ready(function() {
-  // show catChoosr on blog index page
+  // make sure catChoosr is visible.
+  // it can be hid on specific pages as required
   $( ".catChooser" ).removeClass('hidden')
 
   $( "#sideBarChooseBoth" ).click(chooseBoth);
@@ -76,17 +77,20 @@ $( document ).ready(function() {
     $('#chooseBoth').removeClass('bg-yellow-500');
     $('#chooseTechnical').addClass('bg-yellow-500');
     $('#chooseNonTechnical').removeClass('bg-yellow-500');
+    chooseTechnical()
 
   } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
     $('.technical').addClass('hidden');
     $('#chooseBoth').removeClass('bg-yellow-500');
     $('#chooseTechnical').removeClass('bg-yellow-500');
     $('#chooseNonTechnical').addClass('bg-yellow-500');
+    chooseNonTechnical()
 
   } else if (localStorage.getItem('categoryChoice') === "all") {
     $('#chooseBoth').addClass('bg-yellow-500');
     $('#chooseTechnical').removeClass('bg-yellow-500');
     $('#chooseNonTechnical').removeClass('bg-yellow-500');
+    chooseBoth()
   }
 
   $( "#chooseBoth" ).click(chooseBoth);
