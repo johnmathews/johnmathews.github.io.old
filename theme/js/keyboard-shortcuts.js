@@ -19,7 +19,6 @@ function goToSelected(){
 function focusSelectedListItem(n){
   var focusClasses = "selected underline"
 
-  console.log(`item ${n} selected`)
   var listLength = $('.listItem').length
   for (var i = 0; i < listLength; i++) {
     if ( i == n ) {
@@ -37,11 +36,8 @@ function incrementFocus(direction){
   if (!$(".listItem")[0]) {
     return
   } else {
-    var listLength = $('.listItem').length
+    var listLength = $('.listItem').length - 1
   }
-
-  console.log(`listlength: ${listLength}`)
-  console.log(`selectedItem: ${window.selectedListItem}`)
 
   // check that search interface isnt showing
   if ($('#fuseModal').hasClass('hidden')) {

@@ -1,12 +1,28 @@
+
+// this should be imported from keyboard-shortcuts.js, not duplicated
+function focusListItem(n){
+  var focusClasses = "selected underline"
+
+  var listLength = $('.listItem').length
+  for (var i = 0; i < listLength; i++) {
+    if ( i == n ) {
+      $("#primaryList .listItem").eq(i).find('a').addClass(focusClasses);
+    } else {
+      $("#primaryList .listItem").eq(i).find('a').removeClass(focusClasses);
+    }
+  }
+}
+
 // choosing which articles to make visible based on choice in cat modal
 function chooseBoth() {
-  window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'all');
+  window.selectedListItem = -1;
+  focusListItem(-1)
 
   $('.technical').removeClass('hidden');
   $('.nonTechnical').removeClass('hidden');
 
-  $('.Technical').addClass('listItem');
+  $('.technical').addClass('listItem');
   $('.nonTechnical').addClass('listItem');
 
   $('#chooseBoth').addClass('bg-yellow-500');
@@ -21,13 +37,14 @@ function chooseBoth() {
 }
 
 function chooseTechnical(){
-  window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'technical');
+  window.selectedListItem = -1;
+  focusListItem(-1)
 
   $('.technical').removeClass('hidden');
   $('.nonTechnical').addClass('hidden');
 
-  $('.Technical').addClass('listItem');
+  $('.technical').addClass('listItem');
   $('.nonTechnical').removeClass('listItem');
 
   $('#chooseBoth').removeClass('bg-yellow-500');
@@ -41,9 +58,11 @@ function chooseTechnical(){
   $('#catModal').addClass('hidden');
 };
 
+
 function chooseNonTechnical() {
-  window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'nonTechnical');
+  window.selectedListItem = -1;
+  focusListItem(-1)
 
   $('.technical').addClass('hidden');
   $('.nonTechnical').removeClass('hidden');
@@ -73,23 +92,10 @@ $( document ).ready(function() {
 
   // check if a category choice is present
   if (localStorage.getItem('categoryChoice') === "technical") {
-    $('.nonTechnical').addClass('hidden');
-    $('#chooseBoth').removeClass('bg-yellow-500');
-    $('#chooseTechnical').addClass('bg-yellow-500');
-    $('#chooseNonTechnical').removeClass('bg-yellow-500');
     chooseTechnical()
-
   } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
-    $('.technical').addClass('hidden');
-    $('#chooseBoth').removeClass('bg-yellow-500');
-    $('#chooseTechnical').removeClass('bg-yellow-500');
-    $('#chooseNonTechnical').addClass('bg-yellow-500');
     chooseNonTechnical()
-
   } else if (localStorage.getItem('categoryChoice') === "all") {
-    $('#chooseBoth').addClass('bg-yellow-500');
-    $('#chooseTechnical').removeClass('bg-yellow-500');
-    $('#chooseNonTechnical').removeClass('bg-yellow-500');
     chooseBoth()
   }
 
