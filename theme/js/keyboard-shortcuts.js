@@ -109,9 +109,6 @@ $(document).ready(function () {
   Mousetrap.bind('g l', function () {
     window.location.href = `${siteURL}`
   })
-  Mousetrap.bind('t t', function () {
-    modeSwitcher()
-  })
   Mousetrap.bind('v t', function () {
     window.localStorage.setItem('categoryChoice', 'Technical')
     if (typeof chooseTechnical === 'function') {

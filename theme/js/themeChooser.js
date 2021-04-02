@@ -1,3 +1,5 @@
+import './mouseTrap.js'
+
 $(document).ready(function () {
     if (document.getElementById('hamburger') != null) {
         $('.fa-bars').click(function () {
@@ -13,67 +15,57 @@ $(document).ready(function () {
         }
     };
 
+    function modeSwitcher () {
+        if (localStorage.getItem('theme') === 'dark') {
+            window.localStorage.setItem('theme', 'light')
+            $('#baz').removeClass('dark')
+            $("#PygmentCSS").attr('href', light)
+
+            const dayElement = document.getElementsByClassName('day')
+            for (let i = 0; i < dayElement.length; i++) {
+                dayElement.item(i).classList.add('hidden')
+            }
+            const nightElement = document.getElementsByClassName('night')
+            for (let i = 0; i < nightElement.length; i++) {
+                nightElement.item(i).classList.remove('hidden')
+            }
+        } else {
+            window.localStorage.setItem('theme', 'dark')
+            $('#baz').addClass('dark')
+            $("#PygmentCSS").attr('href', dark)
+
+            const dayElement = document.getElementsByClassName('day')
+            for (let i = 0; i < dayElement.length; i++) {
+                dayElement.item(i).classList.remove('hidden')
+            }
+            const nightElement = document.getElementsByClassName('night')
+            for (let i = 0; i < nightElement.length; i++) {
+                nightElement.item(i).classList.add('hidden')
+            }
+        }
+
+        if (window.hamburgerUsed === true) {
+            toggleMenu()
+            window.hamburgerUsed = false
+        };
+    }
+
     // change theme if theme switcher button is clicked
     $('#theme-toggle').click(modeSwitcher)
     $('#modeSwitcher1').click(modeSwitcher)
     $('#modeSwitcher2').click(modeSwitcher)
     $('#modeSwitcher3').click(modeSwitcher)
+
+    Mousetrap.bind('t t', function () {
+        modeSwitcher()
+    })
 })
 
-function changePygmentsCSS(){
-    $(document).ready(function () {
-        if (document.getElementById('PygmentCSS') != null) {
-            // swap out pygment CSS files based on dark/light theme
-            return function changePygmentsCSS(updated) {
-                var PygmentCSS = document.getElementById('PygmentCSS')
-                PygmentCSS.setAttribute('href', updated)
-            }
-        } else {
-            // need to define the function to avoid errors
-            return function changePygmentsCSS() {}
-        };
-    })
-}
-
-function modeSwitcher () {
-    if (localStorage.getItem('theme') === 'dark') {
-        window.localStorage.setItem('theme', 'light')
-        $('#baz').removeClass('dark')
-        changePygmentsCSS(light)
-
-        const dayElement = document.getElementsByClassName('day')
-        for (let i = 0; i < dayElement.length; i++) {
-            dayElement.item(i).classList.add('hidden')
-        }
-        const nightElement = document.getElementsByClassName('night')
-        for (let i = 0; i < nightElement.length; i++) {
-            nightElement.item(i).classList.remove('hidden')
-        }
-    } else {
-        window.localStorage.setItem('theme', 'dark')
-        $('#baz').addClass('dark')
-        changePygmentsCSS(dark)
-
-        const dayElement = document.getElementsByClassName('day')
-        for (let i = 0; i < dayElement.length; i++) {
-            dayElement.item(i).classList.remove('hidden')
-        }
-        const nightElement = document.getElementsByClassName('night')
-        for (let i = 0; i < nightElement.length; i++) {
-            nightElement.item(i).classList.add('hidden')
-        }
-    }
-
-    if (window.hamburgerUsed === true) {
-        toggleMenu()
-        window.hamburgerUsed = false // reset
-    };
-}
-
-// this avoids a flash of white is dark mode is set
+// this is supposed to avoid a flash of white if dark mode is set
 function setThemeBeforeDOMIsLoaded(){
     if (localStorage.getItem('theme') === 'dark') {
         document.getElementById('baz').classList.add('dark')
+        $("#PygmentCSS").attr('href', dark)
     }
 }
 setThemeBeforeDOMIsLoaded()
