@@ -1,21 +1,3 @@
-if (document.getElementById('PygmentCSS') != null) {
-    // swap out pygment CSS files based on dark/light theme
-    function changePygmentsCSS (updated) {
-        var PygmentCSS = document.getElementById('PygmentCSS')
-        PygmentCSS.setAttribute('href', updated)
-    }
-} else {
-    // need to define the function to avoid errors
-    function changePygmentsCSS () {}
-};
-
-function toggleMenu () {
-    const navToggle = document.getElementsByClassName('toggle')
-    for (let i = 0; i < navToggle.length; i++) {
-        navToggle.item(i).classList.toggle('hidden')
-    }
-};
-
 $(document).ready(function () {
 
     if (document.getElementById('hamburger') != null) {
@@ -25,41 +7,62 @@ $(document).ready(function () {
         document.getElementById('hamburger').onclick = toggleMenu
     };
 
-    // set dark theme based on local storage settings
-    if (localStorage.getItem('theme') === 'dark') {
-        document.getElementById('baz').classList.add('dark')
-
-        const dayElement = document.getElementsByClassName('day')
-        for (let i = 0; i < dayElement.length; i++) {
-            dayElement.item(i).classList.remove('hidden')
+    function toggleMenu () {
+        const navToggle = document.getElementsByClassName('toggle')
+        for (let i = 0; i < navToggle.length; i++) {
+            navToggle.item(i).classList.toggle('hidden')
         }
+    };
 
-        const nightElement = document.getElementsByClassName('night')
-        for (let i = 0; i < nightElement.length; i++) {
-            nightElement.item(i).classList.add('hidden')
+    if (document.getElementById('PygmentCSS') != null) {
+        // swap out pygment CSS files based on dark/light theme
+        function changePygmentsCSS(updated) {
+            var PygmentCSS = document.getElementById('PygmentCSS')
+            PygmentCSS.setAttribute('href', updated)
         }
-        changePygmentsCSS(dark)
     } else {
-        document.getElementById('baz').classList.remove('dark')
-        window.localStorage.setItem('theme', 'light')
-
-        const dayElement = document.getElementsByClassName('day')
-        for (let i = 0; i < dayElement.length; i++) {
-            dayElement.item(i).classList.add('hidden')
-        }
-
-        const nightElement = document.getElementsByClassName('night')
-        for (let i = 0; i < nightElement.length; i++) {
-            nightElement.item(i).classList.remove('hidden')
-        }
-        changePygmentsCSS(light)
-    }
+        // need to define the function to avoid errors
+        function changePygmentsCSS() {}
+    };
 
     // change theme if theme switcher button is clicked
     $('#theme-toggle').click(modeSwitcher)
     $('#modeSwitcher1').click(modeSwitcher)
     $('#modeSwitcher2').click(modeSwitcher)
     $('#modeSwitcher3').click(modeSwitcher)
+
+    function setTheme(){
+        // set dark theme based on local storage settings
+        if (localStorage.getItem('theme') === 'dark') {
+            document.getElementById('baz').classList.add('dark')
+
+            const dayElement = document.getElementsByClassName('day')
+            for (let i = 0; i < dayElement.length; i++) {
+                dayElement.item(i).classList.remove('hidden')
+            }
+
+            const nightElement = document.getElementsByClassName('night')
+            for (let i = 0; i < nightElement.length; i++) {
+                nightElement.item(i).classList.add('hidden')
+            }
+            changePygmentsCSS(dark)
+        } else {
+            document.getElementById('baz').classList.remove('dark')
+            window.localStorage.setItem('theme', 'light')
+
+            const dayElement = document.getElementsByClassName('day')
+            for (let i = 0; i < dayElement.length; i++) {
+                dayElement.item(i).classList.add('hidden')
+            }
+
+            const nightElement = document.getElementsByClassName('night')
+            for (let i = 0; i < nightElement.length; i++) {
+                nightElement.item(i).classList.remove('hidden')
+            }
+            changePygmentsCSS(light)
+        }
+    };
+    setTheme();
 })
 
 function modeSwitcher () {
@@ -96,3 +99,5 @@ function modeSwitcher () {
         window.hamburgerUsed = false // reset
     };
 }
+
+
