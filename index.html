@@ -34,6 +34,11 @@
         const light = "https://johnmathews.eu/theme/css/pygment-light.css"
         const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
       </script>
+<script>
+          if (localStorage.getItem('theme') === 'dark') {
+            document.getElementById('baz').classList.add('dark')
+          }
+      </script>
 </link></link></head>
 <body class="h-screen bg-gray-100 dark:bg-black">
 <a class="hidden" name="top"></a>
@@ -126,15 +131,6 @@
 <a class="font-serif text-center mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="javaScript:;" id="fuseSearch">Search</a>
 </div>
 </div>
-<script>
-        function setThemeBeforeDOMIsLoaded(){
-          if (localStorage.getItem('theme') === 'dark') {
-            document.getElementById('baz').classList.add('dark')
-            $("#PygmentCSS").attr('href', dark)
-          }
-        };
-        setThemeBeforeDOMIsLoaded();
-      </script>
 <script>
         /* image */
         /* you need to keep this list in sync with the items in pages/landing-images.md*/

@@ -45,6 +45,11 @@
 <link href="https://johnmathews.eu/extra/favicon.png" rel="icon">
 <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
 <link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script>
+          if (localStorage.getItem('theme') === 'dark') {
+            document.getElementById('baz').classList.add('dark')
+          }
+      </script>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
       #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
@@ -262,14 +267,6 @@ can find me on <a href="https://twitter.com/johnmathews">twitter</a>. </p>
 <script>
         const light = "https://johnmathews.eu/theme/css/pygment-light.css"
         const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-      </script>
-<script>
-        (function(){
-          if (localStorage.getItem('theme') === 'dark') {
-                    document.getElementById('baz').classList.add('dark')
-                    $("#PygmentCSS").attr('href', dark)
-                  }
-        })
       </script>
 <script> const indexURL = 'https://johnmathews.eu/fuse.html'; const siteURL = 'https://johnmathews.eu'; </script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
