@@ -33,9 +33,12 @@
 <script>
         const light = "https://johnmathews.eu/theme/css/pygment-light.css"
         const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-          if (localStorage.getItem('theme') === 'dark') {
-            document.getElementById('baz').classList.add('dark')
-          }
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+          document.getElementById('baz').classList.remove('hidden')
+        } else {
+          document.getElementById('baz').classList.remove('hidden')
+        }
       </script>
 </link></link></head>
 <body class="h-screen bg-gray-100 dark:bg-black">
