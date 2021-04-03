@@ -150,8 +150,8 @@
 <li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
 <li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
 <li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
-<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
 <li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
+<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
 <li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
 <li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
 <li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
@@ -180,10 +180,13 @@
 <input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
 <div class="hidden lg:inline-flex flex">
 <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
-                    ?
+                    /
                   </div>
-                  for shortcuts
-                </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    cmd-K
+                  </div>
+</div>
 <ul class="results text-lg text-bold text-gray-600" id="searchResults">
 </ul>
 </div>
@@ -214,6 +217,14 @@
 </div>
 <div class="night modeIcon hidden">
 <i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="themeToggle" class="md:pl-0 my-2 mx-5 theme-toggle" id="viewShortcuts">
+<div class="day modeIcon">
+<i class="fas fa-question fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="fas fa-question fa-lg"></i>
 </div>
 </button>
 </div>
