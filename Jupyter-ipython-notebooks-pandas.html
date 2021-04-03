@@ -46,12 +46,12 @@
 <link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
 <link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
 <script>
-          if (localStorage.getItem('theme') === 'dark') {
-            document.getElementById('baz').classList.add('dark')
-            document.getElementById('baz').classList.remove('hidden')
-          } else {
-            document.getElementById('baz').classList.remove('hidden')
-          }
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+        document.addEventListener("DOMContentLoaded", function(){
+          document.getElementById('baz').classList.remove('hidden')
+        });
       </script>
 </link></link></link></head>
 <body class="dark:bg-black">

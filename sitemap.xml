@@ -5,56 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/traffic.html</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-04-03T23:29:42-00:00</lastmod>
+<lastmod>2021-04-03T23:40:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -396,6 +396,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://johnmathews.eu/btc-fork-analysis.html</loc>
+<lastmod>2019-09-02T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://johnmathews.eu/shell.html</loc>
 <lastmod>2019-02-14T11:32:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -487,6 +494,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://johnmathews.eu/algo-trading.html</loc>
+<lastmod>2017-10-28T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://johnmathews.eu/chartered.html</loc>
 <lastmod>2017-10-19T21:56:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -510,6 +524,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/ethereum-parity-multisig-wallet.html</loc>
 <lastmod>2017-08-12T22:28:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/macro-btc.html</loc>
+<lastmod>2017-08-03T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
