@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="" id="baz" lang="en">
+<html class="hidden" id="baz" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
@@ -131,8 +131,11 @@
         function setThemeBeforeDOMIsLoaded(){
           if (localStorage.getItem('theme') === 'dark') {
             document.getElementById('baz').classList.add('dark')
+            document.getElementById('baz').classList.remove('hidden')
             $("#PygmentCSS").attr('href', dark)
-          }
+                  } else {
+            document.getElementById('baz').classList.remove('hidden')
+                          }
         };
         setThemeBeforeDOMIsLoaded();
       </script>
