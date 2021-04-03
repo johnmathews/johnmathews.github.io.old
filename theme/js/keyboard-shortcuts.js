@@ -6,6 +6,7 @@ function goToSelected(){
 
 function focusSelectedListItem(n){
   var focusClasses = "selected underline"
+
   var listLength = $('.listItem').length
   for (var i = 0; i < listLength; i++) {
     if ( i == n ) {
