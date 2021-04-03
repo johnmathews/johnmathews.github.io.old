@@ -71,6 +71,9 @@ $(document).ready(function () {
   Mousetrap.bind('j', function () {
     window.scrollBy({top: 110, left: 0, behavior: 'smooth'})
   })
+  Mousetrap.bind('t t', function () {
+    modeSwitcher()
+  })
   Mousetrap.bind('k', function () {
     window.scrollBy({top: -110, left: 0, behavior: 'smooth'})
   })

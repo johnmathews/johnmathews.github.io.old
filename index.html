@@ -34,7 +34,33 @@
         const light = "https://johnmathews.eu/theme/css/pygment-light.css"
         const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
+        function setThemeBeforeDOMIsLoaded(){
+                  if (localStorage.getItem('theme') === 'dark') {
+                            document.getElementById('baz').classList.add('dark')
+                            $("#PygmentCSS").attr('href', dark)
+                          }
+                }
+                setThemeBeforeDOMIsLoaded()
+      </script>
+<script>
+        /* image */
+        window.addEventListener('load', function() {
+                  /* you need to keep this list in sync with the items in pages/landing-images.md*/
+                  images = ['bike', 'square', 'roofs', 'roof-tower']
+                  var imageName = images[Math.floor(Math.random() * images.length)];
+
+                  var srcSet = $('#landingPhoto').attr("srcset");
+                  var src = $('#landingPhoto').attr("src");
+
+                  srcSet = srcSet.replaceAll('square', imageName)
+                  src = src.replaceAll('square', imageName)
+
+                  $('#landingPhoto').attr("srcset", srcSet);
+                  $('#landingPhoto').attr("src", src);
+                  $('#landingPhoto').removeClass('hidden');
+                })
+      </script>
 </link></link></head>
 <body class="h-screen bg-gray-100 dark:bg-black">
 <a class="hidden" name="top"></a>
@@ -141,28 +167,8 @@
       window.localStorage.setItem('categoryChoice', 'technical');
     };
   </script>
-<script>
-    /* image */
-    window.addEventListener('load', function() {
-      /* you need to keep this list in sync with the items in pages/landing-images.md*/
-      images = ['bike', 'square', 'roofs', 'roof-tower']
-      var imageName = images[Math.floor(Math.random() * images.length)];
-
-      var srcSet = $('#landingPhoto').attr("srcset");
-      var src = $('#landingPhoto').attr("src");
-
-      srcSet = srcSet.replaceAll('square', imageName)
-      src = src.replaceAll('square', imageName)
-
-      $('#landingPhoto').attr("srcset", srcSet);
-      $('#landingPhoto').attr("src", src);
-      $('#landingPhoto').removeClass('hidden');
-    })
-  </script>
-<script>
-    const indexURL = 'https://johnmathews.eu/fuse.html';
-    const siteURL = 'https://johnmathews.eu';
-  </script>
+<script> const indexURL = 'https://johnmathews.eu/fuse.html'; const siteURL = 'https://johnmathews.eu'; </script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/mouseTrap.js" type="text/javascript"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>

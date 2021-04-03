@@ -56,16 +56,6 @@ $(document).ready(function () {
     $('#modeSwitcher2').click(modeSwitcher)
     $('#modeSwitcher3').click(modeSwitcher)
 
-    Mousetrap.bind('t t', function () {
-        modeSwitcher()
-    })
 })
 
 // this is supposed to avoid a flash of white if dark mode is set
-function setThemeBeforeDOMIsLoaded(){
-    if (localStorage.getItem('theme') === 'dark') {
-        document.getElementById('baz').classList.add('dark')
-        $("#PygmentCSS").attr('href', dark)
-    }
-}
-setThemeBeforeDOMIsLoaded()
