@@ -1,5 +1,3 @@
-import './mouseTrap.js'
-
 $(document).ready(function () {
     if (document.getElementById('hamburger') != null) {
         $('.fa-bars').click(function () {
@@ -50,6 +48,10 @@ $(document).ready(function () {
         };
     }
 
+    Mousetrap.bind('t t', function () {
+        modeSwitcher()
+    })
+
     // change theme if theme switcher button is clicked
     $('#theme-toggle').click(modeSwitcher)
     $('#modeSwitcher1').click(modeSwitcher)
@@ -57,5 +59,3 @@ $(document).ready(function () {
     $('#modeSwitcher3').click(modeSwitcher)
 
 })
-
-// this is supposed to avoid a flash of white if dark mode is set

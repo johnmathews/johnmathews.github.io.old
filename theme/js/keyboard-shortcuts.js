@@ -1,18 +1,6 @@
 import './mouseTrap.js'
 
-function traverseList(direction){
-  // f is forwards
-  // b is backwards
-  if (direction==='f'){
-    incrementFocus('f')
-  }
-  if (direction==='b'){
-    incrementFocus('b')
-  }
-}
-
 function goToSelected(){
-  // this preserves browser back/forwards history
   $(".selected")[0].click()
 }
 
@@ -29,8 +17,6 @@ function focusSelectedListItem(n){
     }
   }
 }
-
-
 
 function incrementFocus(direction){
   // if there isn't a list, dont do anything
@@ -65,14 +51,11 @@ function incrementFocus(direction){
 $(document).ready(function () {
   window.selectedListItem = -1
 
-  Mousetrap.bind('ctrl+j', function(){traverseList('f')})
-  Mousetrap.bind('ctrl+k', function(){traverseList('b')})
+  Mousetrap.bind('ctrl+j', function(){incrementFocus('f')})
+  Mousetrap.bind('ctrl+k', function(){incrementFocus('b')})
   Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
     window.scrollBy({top: 110, left: 0, behavior: 'smooth'})
-  })
-  Mousetrap.bind('t t', function () {
-    modeSwitcher()
   })
   Mousetrap.bind('k', function () {
     window.scrollBy({top: -110, left: 0, behavior: 'smooth'})
