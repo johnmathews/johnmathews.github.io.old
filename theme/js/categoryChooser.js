@@ -123,4 +123,7 @@ $( document ).ready(function() {
   $("#viewShortcuts").click(function(){
     $("#keyboardShortcuts").toggleClass("hidden")
   })
+  $("#keyboardShortcuts").click(function(){
+    $("#keyboardShortcuts").toggleClass("hidden")
+  })
 })
