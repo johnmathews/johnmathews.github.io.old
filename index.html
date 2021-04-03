@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="hidden" id="baz" lang="en">
+<html class="" id="baz" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
@@ -126,16 +126,12 @@
 <a class="font-serif text-center mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="javaScript:;" id="fuseSearch">Search</a>
 </div>
 </div>
-</body>
 <script>
         function setThemeBeforeDOMIsLoaded(){
           if (localStorage.getItem('theme') === 'dark') {
             document.getElementById('baz').classList.add('dark')
-            document.getElementById('baz').classList.remove('hidden')
             $("#PygmentCSS").attr('href', dark)
-                  } else {
-            document.getElementById('baz').classList.remove('hidden')
-                          }
+          }
         };
         setThemeBeforeDOMIsLoaded();
       </script>
@@ -155,6 +151,7 @@
         $('#landingPhoto').attr("src", src);
         $('#landingPhoto').removeClass('hidden');
       </script>
+</body>
 <script>
     // set or update user preference for article category if it hasnt been set
     if (localStorage.getItem('categoryChoice') === "technical") {

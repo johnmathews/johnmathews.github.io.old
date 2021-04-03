@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="hidden" id="baz" lang="en">
+<html class="" id="baz" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
@@ -430,18 +430,12 @@
         const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
       </script>
 <script>
-        function setThemeBeforeDOMIsLoaded(){
-                  if (localStorage.getItem('theme') === 'dark') {
-                            document.getElementById('baz').classList.add('dark')
-                            document.getElementById('baz').classList.remove('hidden')
-                            $("#PygmentCSS").attr('href', dark)
-                          }
-                  else {
-                            document.getElementById('baz').classList.remove('hidden')
-                          }
-                };
-                setThemeBeforeDOMIsLoaded();
-                console.log('flag1');
+        (function(){
+          if (localStorage.getItem('theme') === 'dark') {
+                    document.getElementById('baz').classList.add('dark')
+                    $("#PygmentCSS").attr('href', dark)
+                  }
+        })
       </script>
 <script> const indexURL = 'https://johnmathews.eu/fuse.html'; const siteURL = 'https://johnmathews.eu'; </script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
