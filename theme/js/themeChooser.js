@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     if (document.getElementById('hamburger') != null) {
         $('.fa-bars').click(function () {
             window.hamburgerUsed = true
@@ -23,9 +24,9 @@ $(document).ready(function () {
             for (let i = 0; i < dayElement.length; i++) {
                 dayElement.item(i).classList.add('hidden')
             }
-            const nightElement = document.getElementsByClassName('night')
-            for (let i = 0; i < nightElement.length; i++) {
-                nightElement.item(i).classList.remove('hidden')
+            const nightElements = document.getElementsByClassName('night')
+            for (let i = 0; i < nightElements.length; i++) {
+                nightElements.item(i).classList.remove('hidden')
             }
         } else {
             window.localStorage.setItem('theme', 'dark')
@@ -36,9 +37,9 @@ $(document).ready(function () {
             for (let i = 0; i < dayElement.length; i++) {
                 dayElement.item(i).classList.remove('hidden')
             }
-            const nightElement = document.getElementsByClassName('night')
-            for (let i = 0; i < nightElement.length; i++) {
-                nightElement.item(i).classList.add('hidden')
+            const nightElements = document.getElementsByClassName('night')
+            for (let i = 0; i < nightElements.length; i++) {
+                nightElements.item(i).classList.add('hidden')
             }
         }
 
@@ -57,5 +58,32 @@ $(document).ready(function () {
     $('#modeSwitcher1').click(modeSwitcher)
     $('#modeSwitcher2').click(modeSwitcher)
     $('#modeSwitcher3').click(modeSwitcher)
+
+    // set correct theme icon on page load
+    if (localStorage.getItem('theme') === 'dark') {
+        $("#PygmentCSS").attr('href', dark)
+        $('#baz').addClass('dark')
+
+        const dayElement = document.getElementsByClassName('day')
+        for (let i = 0; i < dayElement.length; i++) {
+            dayElement.item(i).classList.remove('hidden')
+        }
+        const nightElements = document.getElementsByClassName('night')
+        for (let i = 0; i < nightElements.length; i++) {
+            nightElements.item(i).classList.add('hidden')
+        }
+    } else {
+        $("#PygmentCSS").attr('href', light)
+        $('#baz').removeClass('dark')
+
+        const dayElement = document.getElementsByClassName('day')
+        for (let i = 0; i < dayElement.length; i++) {
+            dayElement.item(i).classList.add('hidden')
+        }
+        const nightElements = document.getElementsByClassName('night')
+        for (let i = 0; i < nightElements.length; i++) {
+            nightElements.item(i).classList.remove('hidden')
+        }
+    }
 
 })

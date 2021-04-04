@@ -121,6 +121,7 @@ $( document ).ready(function() {
   };
 
   $("#viewShortcuts").click(function(){
+    console.log('smoke')
     $("#keyboardShortcuts").toggleClass("hidden")
   })
   $("#keyboardShortcuts").click(function(){
