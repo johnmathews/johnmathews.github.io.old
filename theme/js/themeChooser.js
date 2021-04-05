@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    $("#viewShortcuts").click(function(){
+        $("#keyboardShortcuts").toggleClass("hidden")
+    })
+    $("#keyboardShortcuts").click(function(){
+        $("#keyboardShortcuts").toggleClass("hidden")
+    })
+
     if (document.getElementById('hamburger') != null) {
         $('.fa-bars').click(function () {
             window.hamburgerUsed = true

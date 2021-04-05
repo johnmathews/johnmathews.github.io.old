@@ -119,11 +119,4 @@ $( document ).ready(function() {
       navToggle.item(i).classList.toggle("hidden");
     }
   };
-
-  $("#viewShortcuts").click(function(){
-    $("#keyboardShortcuts").toggleClass("hidden")
-  })
-  $("#keyboardShortcuts").click(function(){
-    $("#keyboardShortcuts").toggleClass("hidden")
-  })
 })
