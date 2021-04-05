@@ -50,32 +50,42 @@ meaningful goal, to the exclusion of more minor goals.&lt;/p&gt;
 that focussed. I am too distracted by life.&lt;/p&gt;
 &lt;p&gt;It’s a balancing act, there is a tension between being emotionally and
 physically present with my family and friends, and ignoring as many things as
-possible so that I can focus on doing something meaningful that is necessarily hard.&lt;/p&gt;</content><category term="Technical/Web"/><category term="blog"/><category term="javascript"/><category term="self-reflection"/></entry><entry><title>Fuse Search</title><link href="https://johnmathews.eu/fuse-search.html" rel="alternate"/><published>2021-04-05T10:45:00+02:00</published><updated>2021-04-05T10:45:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/fuse-search.html</id><summary type="html"/><content type="html">&lt;h2 id="search-make-the-site-feel-faster-and-more-accessible"&gt;Search make the site feel faster and more accessible&lt;/h2&gt;
+possible so that I can focus on doing something meaningful that is necessarily hard.&lt;/p&gt;</content><category term="Technical/Web"/><category term="blog"/><category term="javascript"/><category term="self-reflection"/></entry><entry><title>Fuse Search</title><link href="https://johnmathews.eu/fuse-search.html" rel="alternate"/><published>2021-04-05T10:45:00+02:00</published><updated>2021-04-05T10:45:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/fuse-search.html</id><summary type="html"/><content type="html">&lt;h2 id="adding-search-made-the-site-feel-faster-and-more-accessible"&gt;Adding search made the site feel faster and more accessible&lt;/h2&gt;
 &lt;p&gt;I’ve reimplemented search on this site using &lt;a href="https://fusejs.io/"&gt;fuse.js&lt;/a&gt;
 instead of &lt;a href="https://github.com/tinysearch/tinysearch"&gt;tinySearch&lt;/a&gt;. You can read
-about how I implemented tinysearch in &lt;a href="https://johnmathews.eu/Adding-search.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;When I implemented search I was surprised how much faster and more accessible
-the site began to feel. Suddenly I could access any content by typing a few
+about how I implemented tinysearch &lt;a href="https://johnmathews.eu/Adding-search.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When I first implemented search I was surprised how much faster and more accessible
+the site began to feel. I could quickly access any content by typing a few
 words, I didn’t need to scroll or follow a link.&lt;sup id="sf-fuse-search-1-back"&gt;&lt;a class="simple-footnote" href="#sf-fuse-search-1" title="It also immediately gave me the idea to add keyboard shortcuts. Type ? to see what happened"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;This means I can find content without having to think about how to get there -
 I don’t need to break my flow or concentration. It might sound like a
 trivially small consideration, but lowering friction or cognitive load in small
 ways can make the difference between using or not using something when you’re
 already working hard or concentrating on something else. &lt;/p&gt;
+&lt;p&gt;For example, if I want to look up my notes about using the &lt;code&gt;nohup&lt;/code&gt; command, I
+can quickly go to the site, type &lt;code&gt;/&lt;/code&gt; (the keyboard shortcut for search), type
+“nohup” and hit enter. This is all muscle-memory level impulses. I don’t need
+to think about the content, think about its category or when I posted it,
+then scroll down and scan a list, or use a mouse to click on intermediate links.
+Win. Working at the speed of thought rather than the speed of input is a big deal.&lt;/p&gt;
 &lt;h2 id="why-i-switched-from-tinysearch-to-fusejs"&gt;Why I switched from tinySearch to Fuse.js&lt;/h2&gt;
-&lt;p&gt;Before implementing &lt;code&gt;fuse.js&lt;/code&gt; this site had a search feature powered by
-TinySearch, I wouldn’t have been confident enough to try and implement fuse.js
-if I hadn’t already learnt how to setup tinySearch.&lt;/p&gt;
+&lt;p&gt;Before implementing &lt;code&gt;fuse.js&lt;/code&gt;, this site had a search feature powered by
+TinySearch. I wouldn’t have had enough knowledge to implement fuse.js
+if I hadn’t already learnt some JavaScript whilst setting-up tinySearch.&lt;/p&gt;
 &lt;p&gt;TinySearch had an example for Pelican Blogs, and a simple and clear readme. By using
 tinySearch first I saw an example of how to build the &lt;span class="caps"&gt;JSON&lt;/span&gt; array that becomes
 the search index, and how to implement the javascript that’s required for
 client side search.&lt;/p&gt;
 &lt;p&gt;Also, in the course of developing and over-engineering this blog I’ve become
-much more proficient and comfortable with JavaScript (and jQuery). &lt;/p&gt;
+much more proficient and comfortable with JavaScript (and jQuery) in general. &lt;/p&gt;
 &lt;p&gt;Fuse.js is really quite simple to set up once you’re familiar with JavaScript.
 It’s much more flexible than tinySearch; you  can choose search
 weights for different fields, accuracy thresholds, and some parameters for the
 fuzzy search algorithm.&lt;/p&gt;
+&lt;p&gt;The general approach is to instantiate an instance of &lt;code&gt;Fuse&lt;/code&gt; by calling Fuse
+with a &lt;span class="caps"&gt;JSON&lt;/span&gt; array for it to parse, along with some options. You then give the
+instance a string and get back an array of results which you can do whatever you
+want with.&lt;/p&gt;
 &lt;p&gt;The accuracy of the search results is higher with &lt;code&gt;fuse.js&lt;/code&gt; and the speed is
 still acceptable. I did have to do some optimization of the search index that
 Fuse generates, though.&lt;/p&gt;
@@ -90,13 +100,13 @@ speed really suffered.&lt;/p&gt;
 &lt;p&gt;I optimized the index file in the following three ways:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Remove any non-words. Some of my articles are jupyter notebooks that have
+&lt;p&gt;Removed any non-words. Some of my articles are jupyter notebooks that have
 been converted to articles (the plugin to do this is one of the reasons why I
 began using Pelican). When the index is built, lots of code and html gets
 included, which isn’t helpful. Any “words” that are more than 20 chars I just delete.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Remove the 150 most common words. Any word that is in many articles is
+&lt;p&gt;Removed the 150 most common words. Any word that is in many articles is
 not useful for distinguishing between different articles, so they can be
 deleted from the index. They don’t add any meaning. I wrote a short pipeline of
 shell commands using &lt;code&gt;tr&lt;/code&gt;, &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;uiq&lt;/code&gt; to generate a file with a list of the
@@ -104,26 +114,29 @@ most common words. I then wrote a python script to update the original search
 index by removing all the common words.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Shorten any long words by only keeping the first 12 characters. If a
-word was 15 characters long, I simply deleted that last 3 chars. I figured this
+&lt;p&gt;Shortened any long words by only keeping the first 12 characters. If a
+word was 15 characters long, I simply removed that last 3 chars. I figured this
 would work fine because matching the first 12 characters would already be quite
 unique and give a good result.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Doing these 3 optimzations reduced the file size by about 90%. Compressing the
+&lt;p&gt;Doing these 3 optimizations reduced the file size by about 90%. Compressing the
 &lt;span class="caps"&gt;JSON&lt;/span&gt; using &lt;code&gt;gzip&lt;/code&gt; or &lt;code&gt;brotli&lt;/code&gt; makes the files even smaller, and now the amount
 of data transferred to the client seems reasonably small. (This is a static
 site, and therefore search has to happen client side.)&lt;/p&gt;
-&lt;p&gt;When searching long-ish strings, the browser would still lag though, and I
-wanted the site to feel as fast as possible. My first approach had been to call
-the search function and return results for every char that the user entered
-into the search box. Adding a short delay of 200ms to the function call, and
-running the search query only once at the end of the delay reduced the
-lag and made the search tool feel fast enough. I learnt that this is called “debouncing”.&lt;/p&gt;
+&lt;p&gt;The browser would still begin to lag as the search string length increased. It
+takes more time to search for a 10 character string than for a 5 character
+string, and initially fuse was doing a search every time a character was typed.&lt;/p&gt;
+&lt;p&gt;I wanted the site to feel as fast as possible and thought that if search was
+paused whilst typing and occurred a short time after the last key was pressed
+this would be an improvement. I added a short delay of 200ms to the function
+call, and typing during the delay time resets the time. This reduced the lag
+and made the search tool feel responsive. I learnt that this is called “debouncing”.&lt;/p&gt;
 &lt;p&gt;There was some further complexity when I wanted to debounce characters used for
-searching, but not the navigation keys of keyboard shortcuts. Getting the
+searching, but not the navigation or keyboard shortcuts. Getting the
 debounce function to only run on some key presses was surprisingly complex. It
-taught me a lot of JavaScript though.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-fuse-search-1"&gt;It also immediately gave
+taught me a lot of JavaScript though, and it’s satisfying to have made a useful
+user interface.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-fuse-search-1"&gt;It also immediately gave
 me the idea to add keyboard shortcuts. Type &lt;code&gt;?&lt;/code&gt; to see what happened &lt;a class="simple-footnote-back" href="#sf-fuse-search-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"/><category term="Fuse"/><category term="Search"/><category term="Web"/></entry><entry><title>Adding Search</title><link href="https://johnmathews.eu/Adding-search.html" rel="alternate"/><published>2021-03-12T17:27:00+01:00</published><updated>2021-03-12T17:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-12:/Adding-search.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve added search to this blog. Results are generated as you type. Try it by
 typing &lt;code&gt;/&lt;/code&gt; or &lt;code&gt;cmd-k&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If you look on the Pelican &lt;a href="https://github.com/pelican-plugins"&gt;plugins&lt;/a&gt; index

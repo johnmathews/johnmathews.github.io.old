@@ -12,18 +12,18 @@
 <meta content="Fuse Search -  John Mathews Blog - JohnMathews.eu " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" Fuse,Search,Web " name="keywords"/>
-<meta content=" Search make the site feel faster and more accessible I’ve reimplemented search on this site using fuse.js instead of tinySearch. You can read about how I implemented tinysearch in here. When I... " name="description"/>
+<meta content=" Adding search made the site feel faster and more accessible I’ve reimplemented search on this site using fuse.js instead of tinySearch. You can read about how I implemented tinysearch here. When I... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Fuse Search" property="twitter:title"/>
-<meta content=" Search make the site feel faster and more accessible I’ve reimplemented search on this site using fuse.js instead of tinySearch. You can read about how I implemented tinysearch in here. When I... " name="twitter:description"/>
+<meta content=" Adding search made the site feel faster and more accessible I’ve reimplemented search on this site using fuse.js instead of tinySearch. You can read about how I implemented tinysearch here. When I... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/fuse-search.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Fuse Search" property="og:title"/>
-<meta content=" Search make the site feel faster and more accessible I’ve reimplemented search on this site using fuse.js instead of tinySearch. You can read about how I implemented tinysearch in here. When I... " property="og:description"/>
+<meta content=" Adding search made the site feel faster and more accessible I’ve reimplemented search on this site using fuse.js instead of tinySearch. You can read about how I implemented tinysearch here. When I... " property="og:description"/>
 <meta content="https://johnmathews.eu/fuse-search.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -255,32 +255,42 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<h2 id="search-make-the-site-feel-faster-and-more-accessible">Search make the site feel faster and more accessible</h2>
+<h2 id="adding-search-made-the-site-feel-faster-and-more-accessible">Adding search made the site feel faster and more accessible</h2>
 <p>I’ve reimplemented search on this site using <a href="https://fusejs.io/">fuse.js</a>
 instead of <a href="https://github.com/tinysearch/tinysearch">tinySearch</a>. You can read
-about how I implemented tinysearch in <a href="https://johnmathews.eu/Adding-search.html">here</a>.</p>
-<p>When I implemented search I was surprised how much faster and more accessible
-the site began to feel. Suddenly I could access any content by typing a few
+about how I implemented tinysearch <a href="https://johnmathews.eu/Adding-search.html">here</a>.</p>
+<p>When I first implemented search I was surprised how much faster and more accessible
+the site began to feel. I could quickly access any content by typing a few
 words, I didn’t need to scroll or follow a link.<sup id="sf-fuse-search-1-back"><a class="simple-footnote" href="#sf-fuse-search-1" title="It also immediately gave me the idea to add keyboard shortcuts. Type ? to see what happened">1</a></sup></p>
 <p>This means I can find content without having to think about how to get there -
 I don’t need to break my flow or concentration. It might sound like a
 trivially small consideration, but lowering friction or cognitive load in small
 ways can make the difference between using or not using something when you’re
 already working hard or concentrating on something else. </p>
+<p>For example, if I want to look up my notes about using the <code>nohup</code> command, I
+can quickly go to the site, type <code>/</code> (the keyboard shortcut for search), type
+“nohup” and hit enter. This is all muscle-memory level impulses. I don’t need
+to think about the content, think about its category or when I posted it,
+then scroll down and scan a list, or use a mouse to click on intermediate links.
+Win. Working at the speed of thought rather than the speed of input is a big deal.</p>
 <h2 id="why-i-switched-from-tinysearch-to-fusejs">Why I switched from tinySearch to Fuse.js</h2>
-<p>Before implementing <code>fuse.js</code> this site had a search feature powered by
-TinySearch, I wouldn’t have been confident enough to try and implement fuse.js
-if I hadn’t already learnt how to setup tinySearch.</p>
+<p>Before implementing <code>fuse.js</code>, this site had a search feature powered by
+TinySearch. I wouldn’t have had enough knowledge to implement fuse.js
+if I hadn’t already learnt some JavaScript whilst setting-up tinySearch.</p>
 <p>TinySearch had an example for Pelican Blogs, and a simple and clear readme. By using
 tinySearch first I saw an example of how to build the <span class="caps">JSON</span> array that becomes
 the search index, and how to implement the javascript that’s required for
 client side search.</p>
 <p>Also, in the course of developing and over-engineering this blog I’ve become
-much more proficient and comfortable with JavaScript (and jQuery). </p>
+much more proficient and comfortable with JavaScript (and jQuery) in general. </p>
 <p>Fuse.js is really quite simple to set up once you’re familiar with JavaScript.
 It’s much more flexible than tinySearch; you  can choose search
 weights for different fields, accuracy thresholds, and some parameters for the
 fuzzy search algorithm.</p>
+<p>The general approach is to instantiate an instance of <code>Fuse</code> by calling Fuse
+with a <span class="caps">JSON</span> array for it to parse, along with some options. You then give the
+instance a string and get back an array of results which you can do whatever you
+want with.</p>
 <p>The accuracy of the search results is higher with <code>fuse.js</code> and the speed is
 still acceptable. I did have to do some optimization of the search index that
 Fuse generates, though.</p>
@@ -295,13 +305,13 @@ speed really suffered.</p>
 <p>I optimized the index file in the following three ways:</p>
 <ol>
 <li>
-<p>Remove any non-words. Some of my articles are jupyter notebooks that have
+<p>Removed any non-words. Some of my articles are jupyter notebooks that have
 been converted to articles (the plugin to do this is one of the reasons why I
 began using Pelican). When the index is built, lots of code and html gets
 included, which isn’t helpful. Any “words” that are more than 20 chars I just delete.</p>
 </li>
 <li>
-<p>Remove the 150 most common words. Any word that is in many articles is
+<p>Removed the 150 most common words. Any word that is in many articles is
 not useful for distinguishing between different articles, so they can be
 deleted from the index. They don’t add any meaning. I wrote a short pipeline of
 shell commands using <code>tr</code>, <code>sort</code>, <code>uiq</code> to generate a file with a list of the
@@ -309,26 +319,29 @@ most common words. I then wrote a python script to update the original search
 index by removing all the common words.</p>
 </li>
 <li>
-<p>Shorten any long words by only keeping the first 12 characters. If a
-word was 15 characters long, I simply deleted that last 3 chars. I figured this
+<p>Shortened any long words by only keeping the first 12 characters. If a
+word was 15 characters long, I simply removed that last 3 chars. I figured this
 would work fine because matching the first 12 characters would already be quite
 unique and give a good result.</p>
 </li>
 </ol>
-<p>Doing these 3 optimzations reduced the file size by about 90%. Compressing the
+<p>Doing these 3 optimizations reduced the file size by about 90%. Compressing the
 <span class="caps">JSON</span> using <code>gzip</code> or <code>brotli</code> makes the files even smaller, and now the amount
 of data transferred to the client seems reasonably small. (This is a static
 site, and therefore search has to happen client side.)</p>
-<p>When searching long-ish strings, the browser would still lag though, and I
-wanted the site to feel as fast as possible. My first approach had been to call
-the search function and return results for every char that the user entered
-into the search box. Adding a short delay of 200ms to the function call, and
-running the search query only once at the end of the delay reduced the
-lag and made the search tool feel fast enough. I learnt that this is called “debouncing”.</p>
+<p>The browser would still begin to lag as the search string length increased. It
+takes more time to search for a 10 character string than for a 5 character
+string, and initially fuse was doing a search every time a character was typed.</p>
+<p>I wanted the site to feel as fast as possible and thought that if search was
+paused whilst typing and occurred a short time after the last key was pressed
+this would be an improvement. I added a short delay of 200ms to the function
+call, and typing during the delay time resets the time. This reduced the lag
+and made the search tool feel responsive. I learnt that this is called “debouncing”.</p>
 <p>There was some further complexity when I wanted to debounce characters used for
-searching, but not the navigation keys of keyboard shortcuts. Getting the
+searching, but not the navigation or keyboard shortcuts. Getting the
 debounce function to only run on some key presses was surprisingly complex. It
-taught me a lot of JavaScript though.</p><ol class="simple-footnotes"><li id="sf-fuse-search-1">It also immediately gave
+taught me a lot of JavaScript though, and it’s satisfying to have made a useful
+user interface.</p><ol class="simple-footnotes"><li id="sf-fuse-search-1">It also immediately gave
 me the idea to add keyboard shortcuts. Type <code>?</code> to see what happened <a class="simple-footnote-back" href="#sf-fuse-search-1-back">↩</a></li></ol>
 </div>
 </article>
@@ -358,7 +371,8 @@ me the idea to add keyboard shortcuts. Type <code>?</code> to see what happened
 <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
         <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a>
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
 </div>
 </footer>
 <script>
@@ -367,10 +381,11 @@ me the idea to add keyboard shortcuts. Type <code>?</code> to see what happened
         const indexURL = 'https://johnmathews.eu/fuse.html'
         const siteURL = 'https://johnmathews.eu'
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
 <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
