@@ -12,18 +12,18 @@
 <meta content="Adding Search -  John Mathews Blog - JohnMathews.eu " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" blog,search,tinysearch,web " name="keywords"/>
-<meta content=" I’ve added search to this blog. Results are generated as you type. Try it by typing / or ctrl-k or cmd-k. If you look on the Pelican plugins index you’ll see that Tipue search is the only search... " name="description"/>
+<meta content=" I’ve added search to this blog. Results are generated as you type. Try it by typing / or cmd-k. If you look on the Pelican plugins index you’ll see that Tipue search is the only search tool with a... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Adding Search" property="twitter:title"/>
-<meta content=" I’ve added search to this blog. Results are generated as you type. Try it by typing / or ctrl-k or cmd-k. If you look on the Pelican plugins index you’ll see that Tipue search is the only search... " name="twitter:description"/>
+<meta content=" I’ve added search to this blog. Results are generated as you type. Try it by typing / or cmd-k. If you look on the Pelican plugins index you’ll see that Tipue search is the only search tool with a... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/Adding-search.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Adding Search" property="og:title"/>
-<meta content=" I’ve added search to this blog. Results are generated as you type. Try it by typing / or ctrl-k or cmd-k. If you look on the Pelican plugins index you’ll see that Tipue search is the only search... " property="og:description"/>
+<meta content=" I’ve added search to this blog. Results are generated as you type. Try it by typing / or cmd-k. If you look on the Pelican plugins index you’ll see that Tipue search is the only search tool with a... " property="og:description"/>
 <meta content="https://johnmathews.eu/Adding-search.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -256,7 +256,7 @@
 <article class="">
 <div class="markdown">
 <p>I’ve added search to this blog. Results are generated as you type. Try it by
-typing <code>/</code> or <code>ctrl-k</code> or <code>cmd-k</code>.</p>
+typing <code>/</code> or <code>cmd-k</code>.</p>
 <p>If you look on the Pelican <a href="https://github.com/pelican-plugins">plugins</a> index
 you’ll see that <a href="https://github.com/pelican-plugins/tipue-search">Tipue search</a>
 is the only search tool with a ready-made Pelican plugin, but unfortunately the
@@ -275,10 +275,11 @@ good user experience. Maybe its because the amount of text on my site is
 significanly less, or more, than the typical use case. Either way, after
 checking the project’s issues on Github I found an issue that matched my
 problem perfectly. The solution is to increase the tiny_magic variable at build time.</p>
-<p>According to the Readme, this requires using a container and building the index using <code>docker run...</code>. Unfortunately
-the Dockerfile wouldn’t complete without errors. Checking the issues again and adding to the
-discussion resulted in an alternative Dockerfile being suggested, which works.
-Woohoo! I could then build the search index with a massive tiny_magic value (2048).</p>
+<p>According to the Readme, this requires using a container and building the index
+using <code>docker run...</code>. Unfortunately the Dockerfile wouldn’t complete without
+errors. Checking the issues again and adding to the discussion resulted in an
+alternative Dockerfile being suggested, which works. Woohoo! I could then build
+the search index with a massive tiny_magic value (2048).</p>
 <p>Then something weird happened. I write in Vim and I use <code>fzf</code> to find and open
 files. I realised that <code>fzf</code> had stopped working. After some investigating, I
 realised it was only not working in the blog project, and that <code>fzf.vim</code> calls
@@ -306,6 +307,8 @@ that populates results as you type!</p>
 feature. The search index includes article content as well as article titles
 and categories. I’d like to tweak a few of the keyboard shortcut behaviours,
 and add the contents of various pages (which aren’t articles) to the search index.</p>
+<h2 id="update">Update</h2>
+<p>I’ve reimplemented search using <code>fuse.js</code>. You can read about it <a href="https://johnmathews.eu/fuse-search.html">here</a></p>
 </div>
 </article>
 </main>
@@ -313,6 +316,10 @@ and add the contents of various pages (which aren’t articles) to the search i
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
 <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/different-views-for-different-users.html" id="previousArticleInCategory"> Different Views For Different Users</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/fuse-search.html" id="nextArticleInCategory"> Fuse Search</a>
 </div>
 <div class="mt-2 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
 <div class="">
