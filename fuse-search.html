@@ -289,7 +289,7 @@ Fuse generates, though.</p>
 all the content of all the articles that you want to be able to search. You can
 generate it using a jinja template or any other way you want. (There simply
 needs to be a <span class="caps">JSON</span> array that the browser downloads and does a fuzzy search
-on). This gave me a file that was about <span class="caps">6MB</span>. Once I asked Fuse to search the
+on). This gave me a file that was about <span class="caps">4MB</span>. Once I asked Fuse to search the
 complete text of each article (not just the default first 600 chars, iirc) then
 speed really suffered.</p>
 <p>I optimized the index file in the following three ways:</p>
@@ -337,6 +337,10 @@ me the idea to add keyboard shortcuts. Type <code>?</code> to see what happened
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
 <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/Adding-search.html" id="previousArticleInCategory"> Adding Search</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/over-engineering-this-blog.html" id="nextArticleInCategory"> Over-Engineering this blog</a>
 </div>
 <div class="mt-2 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
 <div class="">
