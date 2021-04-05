@@ -132,7 +132,7 @@ $( document ).ready(function() {
 
   var lazySearch = _.debounce(function(){
     doSearch(window.fuse);
-  }, 200);
+  }, 300);
 
   $('#searchBox').on('keydown', function(event) {
     if (event.which == 40) {

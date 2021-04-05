@@ -1,3 +1,10 @@
+function toggleMenu(){
+  const navToggle = document.getElementsByClassName("toggle");
+  for (let i = 0; i < navToggle.length; i++) {
+    navToggle.item(i).classList.toggle("hidden");
+  }
+}
+
 // choosing which articles to make visible based on choice in cat modal
 function chooseBoth() {
   window.selectedListItem = -1
@@ -63,6 +70,7 @@ function chooseNonTechnical() {
 }
 
 $( document ).ready(function() {
+  console.log('flag1')
   // make sure catChoosr is visible.
   // it can be hid on specific pages as required
   $( ".catChooser" ).removeClass('hidden')
@@ -100,23 +108,16 @@ $( document ).ready(function() {
   // hide cat modal if its clicked.
   // must be at bottom
   $( "#catModal" ).click(function() {
+    console.log('flag2')
     $('#catModal').toggleClass('hidden');
-  });
-
-  // toggle cat modal view if catChooser icon is clicked
-  $( ".catChooser" ).click(function() {
-    $('#catModal').toggleClass('hidden');
+    // toggle cat modal view if catModal icon is clicked
     if (window.hamburgerUsed === true) {
-        toggleMenu()
-        window.hamburgerUsed = false // reset
+      toggleMenu()
+      window.hamburgerUsed = false // reset
     };
   });
 
   // on small screens, collapse navbar into a menu
-  document.getElementById("hamburger").onclick = function toggleMenu() {
-    const navToggle = document.getElementsByClassName("toggle");
-    for (let i = 0; i < navToggle.length; i++) {
-      navToggle.item(i).classList.toggle("hidden");
-    }
-  };
+  $("hamburger").click(toggleMenu)
 })
+
