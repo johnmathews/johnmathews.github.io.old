@@ -70,7 +70,6 @@ function chooseNonTechnical() {
 }
 
 $( document ).ready(function() {
-  console.log('flag1')
   // make sure catChoosr is visible.
   // it can be hid on specific pages as required
   $( ".catChooser" ).removeClass('hidden')
@@ -108,7 +107,6 @@ $( document ).ready(function() {
   // hide cat modal if its clicked.
   // must be at bottom
   $( "#catModal" ).click(function() {
-    console.log('flag2')
     $('#catModal').toggleClass('hidden');
     // toggle cat modal view if catModal icon is clicked
     if (window.hamburgerUsed === true) {
@@ -118,6 +116,6 @@ $( document ).ready(function() {
   });
 
   // on small screens, collapse navbar into a menu
-  $("hamburger").click(toggleMenu)
+  document.getElementById("hamburger").onclick = toggleMenu
 })
 
