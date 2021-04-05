@@ -6,7 +6,7 @@ function chooseBoth() {
   $('.technical').removeClass('hidden');
   $('.nonTechnical').removeClass('hidden');
 
-  $('.Technical').addClass('listItem');
+  $('.technical').addClass('listItem');
   $('.nonTechnical').addClass('listItem');
 
   $('#chooseBoth').addClass('bg-yellow-500');
@@ -27,7 +27,7 @@ function chooseTechnical(){
   $('.technical').removeClass('hidden');
   $('.nonTechnical').addClass('hidden');
 
-  $('.Technical').addClass('listItem');
+  $('.technical').addClass('listItem');
   $('.nonTechnical').removeClass('listItem');
 
   $('#chooseBoth').removeClass('bg-yellow-500');

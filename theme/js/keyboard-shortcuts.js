@@ -17,6 +17,7 @@ function focusSelectedListItem(n){
   }
 }
 
+
 function incrementFocus(direction){
   // if there isn't a list, dont do anything
   if (!$(".listItem")[0]) {
@@ -47,7 +48,7 @@ function incrementFocus(direction){
 $(document).ready(function () {
   window.selectedListItem = -1
 
-  Mousetrap.bind('ctrl+j', function(){incrementFocus('f')})
+  Mousetrap.bind('ctrl+j', function(){ incrementFocus('f') })
   Mousetrap.bind('ctrl+k', function(){incrementFocus('b')})
   Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
