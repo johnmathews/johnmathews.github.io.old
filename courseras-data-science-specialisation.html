@@ -53,7 +53,7 @@
 </link></link></link></head>
 <body class="dark:bg-black">
 <a class="pt-20 mt-20" name="top"></a>
-<nav class="d:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<nav class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
 <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
 <div class="mt-10 md:mt-0 flex-grow justify-between">
 <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
@@ -98,7 +98,7 @@
 <i class="far fa-moon fa-2x"></i>
 </div>
 </button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5" id="">
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
 <i class="fas fa-paw fa-2x"></i>
 </button>
 </div>
@@ -312,8 +312,9 @@ time, working through the assignments and acquiring some useful skills!</p>
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
-              $('#catModal').toggleClass('hidden');
+              $('#catModal').removeClass('hidden');
         });
+
 
       </script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>

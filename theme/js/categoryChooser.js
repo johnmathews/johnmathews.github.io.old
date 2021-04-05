@@ -70,9 +70,6 @@ function chooseNonTechnical() {
 }
 
 $( document ).ready(function() {
-  // make sure catChoosr is visible.
-  // it can be hid on specific pages as required
-  $( ".catChooser" ).removeClass('hidden')
 
   $( "#sideBarChooseBoth" ).click(chooseBoth);
   $( "#sideBarChooseTechnical" ).click(chooseTechnical);
@@ -107,7 +104,7 @@ $( document ).ready(function() {
   // hide cat modal if its clicked.
   // must be at bottom
   $( "#catModal" ).click(function() {
-    $('#catModal').toggleClass('hidden');
+    $('#catModal').addClass('hidden');
     // toggle cat modal view if catModal icon is clicked
     if (window.hamburgerUsed === true) {
       toggleMenu()

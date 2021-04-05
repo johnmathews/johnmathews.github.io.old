@@ -15606,6 +15606,10 @@ video {
     padding-left: 0px;
   }
 
+  .md\:fixed {
+    position: fixed;
+  }
+
   .md\:w-64 {
     width: 16rem;
   }
