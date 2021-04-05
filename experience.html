@@ -299,6 +299,13 @@ you focus on writing, and then relax knowing that timely delivery is guaranteed
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
 <script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
     // set or update user preference for article category if it hasnt been set
     if (localStorage.getItem('categoryChoice') === "technical") {
       // pass

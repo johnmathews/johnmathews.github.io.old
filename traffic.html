@@ -457,6 +457,13 @@ before uploading.</p>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
 <script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
     // mailing list subscribe button
     document.getElementById("signupButton").addEventListener("click", function(e) {
       $('#signupButton').removeClass('block').addClass('hidden')

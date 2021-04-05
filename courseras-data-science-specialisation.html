@@ -322,6 +322,13 @@ time, working through the assignments and acquiring some useful skills!</p>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
 <script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 

@@ -379,6 +379,13 @@ tools in a toolbox.</p><ol class="simple-footnotes"><li id="sf-mental-models-i-
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
 <script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
