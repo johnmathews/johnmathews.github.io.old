@@ -519,553 +519,6 @@ video {
   height: auto;
 }
 
-.toc {
-  margin-top: 1.25rem;
-}
-
-.toc ul {
-  list-style-type: decimal !important;
-  margin-top: 0px !important;
-}
-
-.toctitle {
-  border-bottom-width: 2px;
-  font-weight: 800;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-#searchResults {
-  --tw-border-opacity: 1;
-  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
-  border-width: 2px;
-}
-
-#searchResults li div {
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-  --tw-border-opacity: 1;
-  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
-  border-radius: 0.5rem;
-  border-width: 2px;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  --tw-text-opacity: 1;
-  color: rgba(31, 41, 55, var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  #searchResults li div {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-}
-
-#searchResults li div:hover {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
-  --tw-border-opacity: 1 !important;
-  border-color: rgba(59, 130, 246, var(--tw-border-opacity)) !important;
-}
-
-#selected {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
-  --tw-border-opacity: 1 !important;
-  border-color: rgba(59, 130, 246, var(--tw-border-opacity)) !important;
-}
-
-/* checkboxes in markdown */
-
-.markdown .checklist {
-  list-style-type: none
-}
-
-.markdown .checklist input[type="checkbox"] {
-  height: 2rem;
-  margin-top: -0.25rem;
-  margin-left: -2.5rem;
-  vertical-align: middle;
-  width: 2rem
-}
-
-/* icons to toggle dark mode*/
-
-/* delete?? */
-
-#darkMode:hover{
-  color:red;
-}
-
-#lightMode:hover{
-  color:red;
-}
-
-/* font awesome icon colors*/
-
-.far:hover, .fas:hover {
-  text-decoration: underline;
-}
-
-.far, .fas {
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
-}
-
-.dark .far, .dark .fas {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-/* footnotes */
-
-.markdown .simple-footnotes {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-top: 2.5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-/* codeblocks */
-
-/* jupyter notebook input and output cells - scroll instead of overflow */
-
-.markdown .highlight {
-  overflow-x: auto;
-  margin-top: 2.5rem;
-}
-
-.markdown .inner_cell {
-  overflow: auto;
-}
-
-.prompt.input_prompt {
-  display: none;
-}
-
-.prompt.output_prompt {
-  display: none;
-}
-
-.plot-container.plotly{
-  margin-right: -10rem
-}
-
-.user-select-none.svg-container{
-  text-align: left;
-}
-
-/* code blocks */
-
-.markdown pre {
-  border-radius: 0.25rem;
-  padding: 1rem;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-.markdown .highlight pre {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-
-.dark .markdown .highlight pre {
-  --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-}
-
-.markdown .highlight pre {
-  --tw-border-opacity: 1;
-  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
-}
-
-.dark .markdown .highlight pre {
-  --tw-border-opacity: 1;
-  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
-}
-
-.markdown .highlight pre {
-  border-left-width: 2px;
-}
-
-.dark .markdown .highlight pre {
-  --tw-text-opacity: 1;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
-
-.markdown .highlight pre {
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-.markdown .highlight pre span {
-  border-width: 0px;
-  font-family: helvetica\ neue, helvetica, arial, geneva, sans-serif, ui-sans-serif, system-ui;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  line-height: 1.5;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-.markdown .anchor-link {
-  visibility: hidden;
-}
-
-/* code and quotes */
-
-.markdown blockquote {
-  --tw-border-opacity: 1;
-  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
-  border-left-width: 4px;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
-}
-
-.dark .markdown blockquote {
-  --tw-text-opacity: 1;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
-
-.markdown code {
-  --tw-bg-opacity: 1;
-  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
-  --tw-border-opacity: 1;
-  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
-  border-radius: 0.5rem;
-  border-width: 2px;
-  font-family: anonymous\ pro, andale mono, ubuntu mono, monospace;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  padding: 0.25rem;
-}
-
-.dark .markdown code {
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
-}
-
-.markdown code {
-  white-space: nowrap;
-}
-
-/* .markdown pre code { */
-
-/*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
-
-/* } */
-
-/* output_html */
-
-.markdown .output_html {
-  overflow-x: auto;
-}
-
-.dark .markdown .output_html {
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
-
-.markdown .output_html {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-
-.dark .markdown .output_html {
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-}
-
-.markdown .highlight hl-ipython3{
-  margin-top: 0px;
-}
-
-.output_subarea.output_stream > pre{
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-
-.dark .output_subarea.output_stream > pre {
-  --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-}
-
-.output_subarea.output_stream > pre {
-  --tw-border-opacity: 1;
-  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
-}
-
-.dark .output_subarea.output_stream > pre {
-  --tw-border-opacity: 1;
-  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
-}
-
-.output_subarea.output_stream > pre {
-  border-left-width: 2px;
-}
-
-.dark .output_subarea.output_stream > pre {
-  --tw-text-opacity: 1;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
-
-.output_subarea.output_stream > pre {
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-.dark .markdown .output_execute_result {
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
-
-.dark .markdown .output_subarea {
-  --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-}
-
-.markdown .output_subarea {
-  margin-right: -10rem;
-}
-
-.dark .markdown .output_subarea {
-  --tw-text-opacity: 1;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
-
-/* png images must have light bg cos tick marks are dark */
-
-.dark .markdown .output_png.output_subarea {
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
-
-/* matplotlib images */
-
-.dark .markdown .output_wrapper img[O] {
-  --tw-bg-opacity: 1;
-  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
-}
-
-/* matplotlib images overflow without making entire article scroll */
-
-.markdown .output_wrapper {
-  overflow-x: auto;
-}
-
-/* Additional vertical padding used by kbd tag. */
-
-.py-05 {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-}
-
-/* normal markdown */
-
-.markdown {
-  font-family: cardo, georgia, serif, ui-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  line-height: 1.625;
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
-}
-
-.dark .markdown {
-  --tw-text-opacity: 1;
-  color: rgba(209, 213, 219, var(--tw-text-opacity));
-}
-
-.markdown {
-  overflow-wrap: break-word;
-}
-
-.markdown strong {
-  font-weight: 600;
-}
-
-.markdown strong a {
-  font-weight: 500;
-}
-
-.markdown a {
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgba(37, 99, 235, var(--tw-text-opacity));
-}
-
-.dark .markdown a {
-  --tw-text-opacity: 1;
-  color: rgba(147, 197, 253, var(--tw-text-opacity));
-}
-
-.markdown p {
-  margin-bottom: 0px;
-  margin-top: 1.75rem;
-}
-
-.markdown p img {
-  --tw-border-opacity: 1;
-  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
-  border-radius: 0.125rem;
-  border-style: solid;
-  border-width: 2px;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.markdown p img:first-child {
-  margin-top: 2.5rem;
-}
-
-.markdown p img:last-child {
-  margin-bottom: 2.5rem;
-}
-
-/* Lists.. */
-
-.markdown ul {
-  list-style-type: disc;
-  padding-left: 2rem;
-}
-
-.markdown ol {
-  list-style-type: decimal;
-  padding-left: 2rem;
-}
-
-.markdown ol > li:first-child {
-  margin-top: 1rem;
-}
-
-.markdown ul > li:first-child {
-  margin-top: 1rem;
-}
-
-.markdown li > p  {
-  margin-top: 0.5rem;
-}
-
-/* headings */
-
-.markdown h1 {
-  border-bottom-width: 1px;
-  font-weight: 600;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.markdown h2 {
-  --tw-border-opacity: 1;
-  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-  border-bottom-width: 1px;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-  margin-top: 2.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.markdown h3 {
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  line-height: 1.375;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-}
-
-.markdown h4 {
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  line-height: 1;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-}
-
-.markdown h5 {
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-}
-
-.markdown h6 {
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
-}
-
-.markdown kbd {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  display: inline-block;
-  font-family: anonymous\ pro, andale mono, ubuntu mono, monospace;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  vertical-align: middle;
-}
-
-.markdown table {
-  --tw-border-opacity: 1;
-  border-color: rgba(75, 85, 99, var(--tw-border-opacity));
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.markdown th {
-  border-width: 1px;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.markdown td {
-  border-width: 1px;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -15474,6 +14927,553 @@ video {
   -webkit-line-clamp: unset;
 }
 
+.toc {
+  margin-top: 1.25rem;
+}
+
+.toc ul {
+  list-style-type: decimal !important;
+  margin-top: 0px !important;
+}
+
+.toctitle {
+  border-bottom-width: 2px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+#searchResults {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+  border-width: 2px;
+}
+
+#searchResults li div {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-width: 2px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  #searchResults li div {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+#searchResults li div:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(59, 130, 246, var(--tw-border-opacity)) !important;
+}
+
+#selected {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgba(59, 130, 246, var(--tw-border-opacity)) !important;
+}
+
+/* checkboxes in markdown */
+
+.markdown .checklist {
+  list-style-type: none
+}
+
+.markdown .checklist input[type="checkbox"] {
+  height: 2rem;
+  margin-top: -0.25rem;
+  margin-left: -2.5rem;
+  vertical-align: middle;
+  width: 2rem
+}
+
+/* icons to toggle dark mode*/
+
+/* delete?? */
+
+#darkMode:hover{
+  color:red;
+}
+
+#lightMode:hover{
+  color:red;
+}
+
+/* font awesome icon colors*/
+
+.far:hover, .fas:hover {
+  text-decoration: underline;
+}
+
+.far, .fas {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.dark .far, .dark .fas {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+/* footnotes */
+
+.markdown .simple-footnotes {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* codeblocks */
+
+/* jupyter notebook input and output cells - scroll instead of overflow */
+
+.markdown .highlight {
+  overflow-x: auto;
+  margin-top: 2.5rem;
+}
+
+.markdown .inner_cell {
+  overflow: auto;
+}
+
+.prompt.input_prompt {
+  display: none;
+}
+
+.prompt.output_prompt {
+  display: none;
+}
+
+.plot-container.plotly{
+  margin-right: -10rem
+}
+
+.user-select-none.svg-container{
+  text-align: left;
+}
+
+/* code blocks */
+
+.markdown pre {
+  border-radius: 0.25rem;
+  padding: 1rem;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.markdown .highlight pre {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.dark .markdown .highlight pre {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.markdown .highlight pre {
+  --tw-border-opacity: 1;
+  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+}
+
+.dark .markdown .highlight pre {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+}
+
+.markdown .highlight pre {
+  border-left-width: 2px;
+}
+
+.dark .markdown .highlight pre {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+
+.markdown .highlight pre {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.markdown .highlight pre span {
+  border-width: 0px;
+  font-family: helvetica\ neue, helvetica, arial, geneva, sans-serif, ui-sans-serif, system-ui;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.markdown .anchor-link {
+  visibility: hidden;
+}
+
+/* code and quotes */
+
+.markdown blockquote {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  border-left-width: 4px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.dark .markdown blockquote {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+
+.markdown code {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-width: 2px;
+  font-family: anonymous\ pro, andale mono, ubuntu mono, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.25rem;
+}
+
+.dark .markdown code {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.markdown code {
+  white-space: nowrap;
+}
+
+/* .markdown pre code { */
+
+/*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
+
+/* } */
+
+/* output_html */
+
+.markdown .output_html {
+  overflow-x: auto;
+}
+
+.dark .markdown .output_html {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+.markdown .output_html {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.dark .markdown .output_html {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+.markdown .highlight hl-ipython3{
+  margin-top: 0px;
+}
+
+.output_subarea.output_stream > pre{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.dark .output_subarea.output_stream > pre {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.output_subarea.output_stream > pre {
+  --tw-border-opacity: 1;
+  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+}
+
+.dark .output_subarea.output_stream > pre {
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+}
+
+.output_subarea.output_stream > pre {
+  border-left-width: 2px;
+}
+
+.dark .output_subarea.output_stream > pre {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+
+.output_subarea.output_stream > pre {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.dark .markdown .output_execute_result {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+.dark .markdown .output_subarea {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.markdown .output_subarea {
+  margin-right: -10rem;
+}
+
+.dark .markdown .output_subarea {
+  --tw-text-opacity: 1;
+  color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+
+/* png images must have light bg cos tick marks are dark */
+
+.dark .markdown .output_png.output_subarea {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+/* matplotlib images */
+
+.dark .markdown .output_wrapper img[O] {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+/* matplotlib images overflow without making entire article scroll */
+
+.markdown .output_wrapper {
+  overflow-x: auto;
+}
+
+/* Additional vertical padding used by kbd tag. */
+
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+/* normal markdown */
+
+.markdown {
+  font-family: cardo, georgia, serif, ui-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.dark .markdown {
+  --tw-text-opacity: 1;
+  color: rgba(209, 213, 219, var(--tw-text-opacity));
+}
+
+.markdown {
+  overflow-wrap: break-word;
+}
+
+.markdown strong {
+  font-weight: 600;
+}
+
+.markdown strong a {
+  font-weight: 500;
+}
+
+.markdown a {
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+}
+
+.dark .markdown a {
+  --tw-text-opacity: 1;
+  color: rgba(147, 197, 253, var(--tw-text-opacity));
+}
+
+.markdown p {
+  margin-bottom: 0px;
+  margin-top: 1.75rem;
+}
+
+.markdown p img {
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+  border-radius: 0.125rem;
+  border-style: solid;
+  border-width: 2px;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.markdown p img:first-child {
+  margin-top: 2.5rem;
+}
+
+.markdown p img:last-child {
+  margin-bottom: 2.5rem;
+}
+
+/* Lists.. */
+
+.markdown ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+  padding-left: 2rem;
+}
+
+.markdown ol > li:first-child {
+  margin-top: 1rem;
+}
+
+.markdown ul > li:first-child {
+  margin-top: 1rem;
+}
+
+.markdown li > p  {
+  margin-top: 0.5rem;
+}
+
+/* headings */
+
+.markdown h1 {
+  border-bottom-width: 1px;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  border-bottom-width: 1px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 1.375;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h5 {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h6 {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.markdown kbd {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  display: inline-block;
+  font-family: anonymous\ pro, andale mono, ubuntu mono, monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  vertical-align: middle;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.markdown table {
+  --tw-border-opacity: 1;
+  border-color: rgba(75, 85, 99, var(--tw-border-opacity));
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.markdown th {
+  border-width: 1px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.markdown td {
+  border-width: 1px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 @media (min-width: 640px) {
   .sm\:inline-block {
     display: inline-block;
@@ -15813,3 +15813,5 @@ video {
     width: 66.666667%;
   }
 }
+
+
