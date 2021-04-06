@@ -28,14 +28,16 @@ function chooseBoth() {
 }
 
 function chooseTechnical(){
+  console.log('smoke');
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'technical');
 
+  $('.nonTechnical').not('.technical').addClass('hidden');
   $('.technical').removeClass('hidden');
-  $('.nonTechnical').addClass('hidden');
 
   $('.technical').addClass('listItem');
-  $('.nonTechnical').removeClass('listItem');
+  $('.nonTechnical').addClass('listItem');
+  $('.nonTechnical').not('.technical').removeClass('listItem');
 
   $('#chooseBoth').removeClass('bg-yellow-500');
   $('#chooseTechnical').addClass('bg-yellow-500');
@@ -52,11 +54,13 @@ function chooseNonTechnical() {
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'nonTechnical');
 
-  $('.technical').addClass('hidden');
   $('.nonTechnical').removeClass('hidden');
+  $('.technical').removeClass('hidden');
+  $('.technical').not('.nonTechnical').addClass('hidden');
 
   $('.nonTechnical').addClass('listItem');
-  $('.technical').removeClass('listItem');
+  $('.technical').addClass('listItem');
+  $('.technical').not('.nonTechnical').removeClass('listItem');
 
   $('#chooseBoth').removeClass('bg-yellow-500');
   $('#chooseTechnical').removeClass('bg-yellow-500');

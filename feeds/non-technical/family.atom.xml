@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Family</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/family.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-02-01T22:52:00+01:00</updated><entry><title>Regrets Of The Dying</title><link href="https://johnmathews.eu/regrets-of-the-dying.html" rel="alternate"/><published>2021-02-01T22:52:00+01:00</published><updated>2021-02-01T22:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/regrets-of-the-dying.html</id><summary type="html"/><content type="html">&lt;p&gt;I wish that:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Family</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/family.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-05T11:54:00+02:00</updated><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
+making unnecessary improvements to this blog.&lt;/p&gt;
+&lt;p&gt;Some of these improvements are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Adding keyboard shortcuts (type &lt;code&gt;?&lt;/code&gt; to find out which)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Adding-search.html"&gt;Implementing&lt;/a&gt;, then
+   &lt;a href="https://johnmathews.eu/fuse-search.html"&gt;reimplementing&lt;/a&gt;, and then optimizing client side fuzzy search&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;src-set&lt;/code&gt;s to serve responsive images
+   (&lt;a href="https://github.com/pelican-plugins/image-process"&gt;Image-Process&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Lazy loading images to make this site load faster.&lt;/li&gt;
+&lt;li&gt;Compressing page files using &lt;code&gt;brotli&lt;/code&gt; and also &lt;code&gt;gzip&lt;/code&gt;.
+   (&lt;a href="https://github.com/kurtmckee/pelican_precompress"&gt;Precompress&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Trying (and ultimately failing) to avoid a “white flash” when dark mode is
+   chosen and a new page loads.
+   (&lt;a href="https://github.com/tailwindlabs/tailwindcss/discussions/3904"&gt;Github discussion&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’m not really sure why I did it. It makes almost no difference to anyone but
+me. It felt a bit compulsive.&lt;/p&gt;
+&lt;p&gt;I like tinkering, and it’s nice to build something that will continue to work
+with no maintenance. I tell myself that over the next few years I will gain the
+benefits of these features even when I’ve forgotten I implemented them. &lt;/p&gt;
+&lt;p&gt;It’s taught me a lot of JavaScript, which is a great language to be familiar
+with - it’s everywhere. I would warmly encourage someone younger than myself to
+pursue interests for the sake of curiosity and fun. And there is a very high chance that even if no-one uses
+the shortcuts except me, my new javascript skills will come in useful somewhere else.&lt;/p&gt;
+&lt;p&gt;But even if they do I’m not sure its a good enough reason - things should be
+built when they solve a present problem, not over-engineered for what-ifs and
+maybes. &lt;a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"&gt;&lt;span class="caps"&gt;YAGNI&lt;/span&gt;&lt;/a&gt;. I wouldn’t let myself do this in a professional capacity. There
+is a tension between being curious and being focussed.&lt;/p&gt;
+&lt;p&gt;I’m not really sure that I need to justify myself. Its a hobby, I wanted to do it, I
+enjoy tinkering with web technologies and learning new things.&lt;/p&gt;
+&lt;p&gt;But also, I lost sleep over this - I stayed up too late, and let it put
+pressure on other things.&lt;/p&gt;
+&lt;p&gt;I know that being curious, and making room to play with interesting
+things, has been one of the most useful approaches to personal development
+and up-skilling myself. But there must be a limit..&lt;/p&gt;
+&lt;p&gt;There is a tension between wasting my time and taking a risk, and it will take a few
+years before I know for sure if these efforts were worthwhile, or not.&lt;/p&gt;
+&lt;p&gt;If it’s not fun, don’t do it.&lt;/p&gt;
+&lt;p&gt;Successful business owners seem to be very good at leaving things alone once
+they’re “good enough”, and not being perfectionists. In fact, I think that
+being a perfectionist is antithetical to being an entrepreneur. I am not a
+perfectionist, I’m just really curious and have a big appetite for learning. &lt;/p&gt;
+&lt;p&gt;But this “appetite for learning” stops me from focussing. I let myself
+become distracted by adding new features to this blog, when instead I should
+zoom out a bit and think about working towards a more substantial and
+meaningful goal, to the exclusion of more minor goals.&lt;/p&gt;
+&lt;p&gt;I think that good entrepreneurs are very focussed, to a fault. I am not
+that focussed. I am too distracted by life.&lt;/p&gt;
+&lt;p&gt;It’s a balancing act, there is a tension between being emotionally and
+physically present with my family and friends, and ignoring as many things as
+possible so that I can focus on doing something meaningful that is necessarily hard.&lt;/p&gt;</content><category term="Technical/Web"/><category term="blog"/><category term="javascript"/><category term="self-reflection"/></entry><entry><title>Regrets Of The Dying</title><link href="https://johnmathews.eu/regrets-of-the-dying.html" rel="alternate"/><published>2021-02-01T22:52:00+01:00</published><updated>2021-02-01T22:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/regrets-of-the-dying.html</id><summary type="html"/><content type="html">&lt;p&gt;I wish that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I’d had the courage to live a life true to myself, not the life others expected of me.&lt;/li&gt;
 &lt;li&gt;I hadn’t worked so hard.&lt;/li&gt;
