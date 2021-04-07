@@ -1,282 +1,260 @@
-<!doctype html>
-<html id="baz" class="" lang="en">
-  <head>
-        <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!DOCTYPE html>
 
-      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-
-      <title>TDD: Test Driven Development - John Mathews Blog - JohnMathews.eu</title>
-      <meta name="title" content="TDD: Test Driven Development -  John Mathews Blog - JohnMathews.eu "/>
-      <meta name="author" content="John Mathews"/>
-      <meta name="keywords" content="  " />
-      <meta name="description" content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... "/>
-
-      <meta name="twitter:creator" content="@johnmathews"/>
-      <meta name="twitter:domain" content="https://johnmathews.eu"/>
-      <meta property="twitter:title" content="TDD: Test Driven Development"/>
-      <meta name="twitter:description" content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... "/>
-      <meta property="twitter:url" content="./test-driven-development.html"/>
-      <meta name="twitter:image" content="./
-"/>
-      <meta property="twitter:card" content="  summary  "/>
-
-      <meta property="og:type" content=" article "/>
-      <meta property="og:title" content="TDD: Test Driven Development"/>
-      <meta property="og:description" content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... "/>
-      <meta property="og:url" content="./test-driven-development.html"/>
-      <meta property="og:image" content="./
-"/>
-
-      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
-
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link async href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-      <link async href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-
-
-      <link rel="icon" href="./extra/favicon.png" />
-
-      <link href="./theme/css/styles.css" rel="stylesheet"/>
-      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
-
-      <script>
+<title>TDD: Test Driven Development - John Mathews Blog - JohnMathews.eu</title>
+<meta content="TDD: Test Driven Development -  John Mathews Blog - JohnMathews.eu " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content="  " name="keywords"/>
+<meta content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... " name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="TDD: Test Driven Development" property="twitter:title"/>
+<meta content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... " name="twitter:description"/>
+<meta content="https://johnmathews.eu/test-driven-development.html" property="twitter:url"/>
+<meta content="https://johnmathews.eu/
+" name="twitter:image"/>
+<meta content="  summary  " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="TDD: Test Driven Development" property="og:title"/>
+<meta content=" Test Driven Development was mind-bending when I first grappled with it. Last summer I was building a web app using Django and began to break things unintentionally when adding new features. This... " property="og:description"/>
+<meta content="https://johnmathews.eu/test-driven-development.html" property="og:url"/>
+<meta content="https://johnmathews.eu/
+" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon">
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
         }
       </script>
-
-
-
-
-  </head>
-
-  <body class="dark:bg-black">
-    <a class="pt-20 mt-20 " name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black">
-      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-        <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
-          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
-        </div>
-        <div class="flex-none justify-end px-2 pt-2">
-          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
-            <div class="day modeIcon hidden">
-              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-            </div>
-            <div class="night modeIcon">
-              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-            </div>
-          </button>
-          <button class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
-            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-          </button>
-        </div>
-      </div>
-      <div class="flex-none md:hidden block md:inline-block">
-        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
-          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-        </button>
-      </div>
-    </nav>
-      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
-        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
-        <div class="px-3 pt-3 flex flex-row">
-          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
-            <div class="day modeIcon">
-              <i class="far fa-lightbulb fa-2x"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="far fa-moon fa-2x"></i>
-            </div>
-          </button>
-          <button class="catChooser hidden ml-5" aria-label="Category chooser">
-            <i class="fas fa-paw fa-2x"></i>
-          </button>
-        </div>
-      </div>
-
-    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-
-      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-              <div class="text-center">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+</link></link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
-                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
-                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
-                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
-                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="keyboardShortcuts" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="px-5 py-5">
-              <div class="">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-                <hr class="">
-                <div id="" class="flex flex-row space-x-4 text-base text-gray-700" role="group">
-                  <div class="markdown">
-                    <ul class="text-black text-base leading-loose">
-                      <li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
-                      <li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
-                      <li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
-                      <li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
-                      <li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div id="searchModalBackground" class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <div class="absolute inset-x-0 w-screen px-3">
-            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-              <div class="py-1 px-1">
-                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
-                <div class="hidden lg:inline-flex flex">
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+<hr class=""/>
+<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<ul class="text-black text-base leading-loose">
+<li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
+<li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
+<li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
+<li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
+<li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
+<li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
+<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
+<li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
                   or
                   <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     cmd-K
                   </div>
-                </div>
-                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mx-auto w-full">
-        <div class="flex flex-row">
-          <div class="hidden xl:inline xl:w-32">
-            <div class="w-32">
-            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
-              <div class="lg:w-32">
-                    <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
-                  </div>
-                  <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
-                  </div>
-                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
-                <div class="flex my-2">
-                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
-                    <div  class="day modeIcon">
-                      <i class="far fa-lightbulb fa-lg"></i>
-                    </div>
-                    <div class="night modeIcon hidden">
-                      <i class="far fa-moon fa-lg"></i>
-                    </div>
-                  </button>
-                </div>
-
-  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> January 2021
   </div>
-  <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br> January 2021
-  </div>
-  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
  Category: 
     <div>
-            <a class="hover:underline" href="./category/technical/developer-tools.html">Developer Tools</a>
-    </div>
-
-  </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
-  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
-
-    <div class="mb-10">
-      <div style="word-break: unset; white-space: wrap;"
-           class="leading-tight text-left
-                  font-serif
-                  mt-20 lg:mt-24 lg:-mr-30 xl:-mr-40
-                  text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl
-                  font-semibold lg:font-normal
-                  dark:text-gray-200
-                  break-all
-                  ">
-          <span class="caps">TDD</span>: Test Driven&nbsp;Development
+<a class="hover:underline" href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
+<div class="mb-10">
+<div class="leading-tight text-left font-serif mt-20 lg:mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-all" style="word-break: unset; white-space: wrap;">
+<span class="caps">TDD</span>: Test Driven Development
       </div>
-
-      <div class="lg:hidden mt-10 mb-3 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
- Category:           <a class="hover:underline" href="./category/technical/developer-tools.html">Developer Tools</a>
-      </div>
-
-      <div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
+<div class="lg:hidden mt-10 mb-3 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
+ Category:           <a class="hover:underline" href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
+</div>
+<div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
         January 2021
       </div>
-    </div>
-
-    <div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-    </div>
-
-    <main class="lg:w-4/6">
-      <article class="">
-        <div class="markdown">
-          <p>Test Driven Development was mind-bending when I first grappled with it.
+</div>
+<div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown">
+<p>Test Driven Development was mind-bending when I first grappled with it.
 Last summer I was building a web app using Django and began to break things
 unintentionally when adding new features. This soon led to lots of clicking
 around different pages to test if stuff was still working each time I made an update.</p>
@@ -290,7 +268,7 @@ kind of documentation to show what stuff is supposed to be doing. Errr…</p>
 <p>Django was a big enough pile of abstractions as it was. Views, ORMs, mixins,
 serializers… Trying to add factories and fixtures into that took some getting
 used to. But eventually I made some progress, and now I quite enjoy running
-coverage reports to keep coverage <em>close</em> to 100%<sup id="sf-test-driven-development-1-back"><a href="#sf-test-driven-development-1" class="simple-footnote" title="Which is fun and all, but testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just written without ensuring that only the intended behaviours happen.">1</a></sup>.</p>
+coverage reports to keep coverage <em>close</em> to 100%<sup id="sf-test-driven-development-1-back"><a class="simple-footnote" href="#sf-test-driven-development-1" title="Which is fun and all, but testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just written without ensuring that only the intended behaviours happen.">1</a></sup>.</p>
 <p>Some of the main things I’ve learnt about writing tests:</p>
 <ol>
 <li>Use PyTest as much as possible rather than other testing libraries - its <code>assert</code> statements are more intuitive than Django’s own testing framework, and you can use it in any Python codebase, not just Django. It has lots of extensions and seems good at getting the job done fairly easily.</li>
@@ -307,51 +285,43 @@ coverage reports to keep coverage <em>close</em> to 100%<sup id="sf-test-driven-
    codebase complexity and size.</li>
 </ol><ol class="simple-footnotes"><li id="sf-test-driven-development-1">Which is fun and all, but
 testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just
-written without ensuring that <em>only</em> the intended behaviours happen. <a href="#sf-test-driven-development-1-back" class="simple-footnote-back">↩</a></li></ol>
-        </div>
-      </article>
-    </main>
-
-    <div class="mt-20 mb-10 text-lg dark:text-gray-200">
-        <div class="flex flex-row">
-          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
-          <a id="previousArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./api-design.html"> <span class="caps">API</span> Design&nbsp;Principles</a>
-        </div>
-        <div class="flex flex-row mt-2">
-          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
-          <a id="nextArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./larger-code-bases.html"> Data Science vs Web Development: Larger Code&nbsp;Bases</a>
-        </div>
-        <div class="mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-          Other articles in:
-              <a id="otherArticlesInCategory" class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold " href="./category/technical/developer-tools.html"> Developer Tools</a>
-            
-        </div>
-    </div>
-
-
-
-  </div>
-
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
-      <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-        <a class="px-3" href="./blog.html">Blog Posts</a> |
+written without ensuring that <em>only</em> the intended behaviours happen. <a class="simple-footnote-back" href="#sf-test-driven-development-1-back">↩</a></li></ol>
+</div>
+</article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/api-design.html" id="previousArticleInCategory"> <span class="caps">API</span> Design Principles</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/larger-code-bases.html" id="nextArticleInCategory"> Data Science vs Web Development: Larger Code Bases</a>
+</div>
+<div class="mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        Other articles in:
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/developer-tools.html" id="otherArticlesInCategory"> Developer Tools</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="./categories.html">Categories</a> |
-        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
-      </div>
-    </footer>
-
-        <script>
-        const light = "./theme/css/pygment-light.css"
-        const dark = "./theme/css/pygment-dark.css"
-        const indexURL = 'http://localhost:8000/fuse.html'
-        const siteURL = '.'
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -360,23 +330,19 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
 
 
       </script>
-      <script type="module" src="./theme/js/categoryChooser.js" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
-      <script type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
-      <script type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
-      <script type="module" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
-
-      <script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {
                   console.log('flag1')
                   $('#catModal').addClass('hidden');
                 });
       </script>
-
-
-
-  <script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -400,6 +366,5 @@ written without ensuring that <em>only</em> the intended behaviours happen. <a 
       };
     }
   </script>
-  </body>
-
+</body>
 </html>

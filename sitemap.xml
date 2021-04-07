@@ -4,1645 +4,1792 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/blog</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/blog</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/about.html</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/about.html</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/traffic.html</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/traffic.html</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/experience.html</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/experience.html</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/fuse.html</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/fuse.html</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/landing-images.html</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/landing-images.html</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/portfolio.html</loc>
-<lastmod>2021-04-07T11:10:17-00:00</lastmod>
+<loc>https://johnmathews.eu/portfolio.html</loc>
+<lastmod>2021-04-07T11:22:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/over-engineering-this-blog.html</loc>
+<loc>https://johnmathews.eu/over-engineering-this-blog.html</loc>
 <lastmod>2021-04-05T11:54:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/fuse-search.html</loc>
+<loc>https://johnmathews.eu/fuse-search.html</loc>
 <lastmod>2021-04-05T10:45:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/python-notes-2.html</loc>
+<loc>https://johnmathews.eu/python-notes-2.html</loc>
 <lastmod>2021-03-17T09:12:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Adding-search.html</loc>
+<loc>https://johnmathews.eu/Adding-search.html</loc>
 <lastmod>2021-03-12T17:27:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/cardano-generating-addresses.html</loc>
+<loc>https://johnmathews.eu/cardano-generating-addresses.html</loc>
 <lastmod>2021-03-05T16:14:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/more-vim-notes.html</loc>
+<loc>https://johnmathews.eu/more-vim-notes.html</loc>
 <lastmod>2021-03-04T14:44:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/two-years-of-vim.html</loc>
+<loc>https://johnmathews.eu/two-years-of-vim.html</loc>
 <lastmod>2021-03-04T10:44:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/binance-node-api.html</loc>
+<loc>https://johnmathews.eu/binance-node-api.html</loc>
 <lastmod>2021-03-03T15:28:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/nohup-and-background-processes.html</loc>
+<loc>https://johnmathews.eu/nohup-and-background-processes.html</loc>
 <lastmod>2021-03-02T13:10:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/file-descriptors.html</loc>
+<loc>https://johnmathews.eu/file-descriptors.html</loc>
 <lastmod>2021-03-02T11:36:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/cardano-node-api.html</loc>
+<loc>https://johnmathews.eu/cardano-node-api.html</loc>
 <lastmod>2021-03-01T18:01:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/running-a-polkadot-node.html</loc>
+<loc>https://johnmathews.eu/running-a-polkadot-node.html</loc>
 <lastmod>2021-03-01T17:40:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/microservices_events_docker.html</loc>
+<loc>https://johnmathews.eu/microservices_events_docker.html</loc>
 <lastmod>2021-02-02T13:31:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/regrets-of-the-dying.html</loc>
+<loc>https://johnmathews.eu/regrets-of-the-dying.html</loc>
 <lastmod>2021-02-01T22:52:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/a-list-of-unconnected-thoughts-and-aphorisms.html</loc>
+<loc>https://johnmathews.eu/a-list-of-unconnected-thoughts-and-aphorisms.html</loc>
 <lastmod>2021-02-01T22:27:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/notes-from-an-interview-with-geoffrey-hinton.html</loc>
+<loc>https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html</loc>
 <lastmod>2021-02-01T22:17:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/questions.html</loc>
+<loc>https://johnmathews.eu/questions.html</loc>
 <lastmod>2021-02-01T22:05:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/portfolio-image-recognition.html</loc>
+<loc>https://johnmathews.eu/portfolio-image-recognition.html</loc>
 <lastmod>2021-01-26T14:34:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/photographs.html</loc>
+<loc>https://johnmathews.eu/photographs.html</loc>
 <lastmod>2021-01-22T11:42:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/notes-from-mastering-vim-quickly.html</loc>
+<loc>https://johnmathews.eu/notes-from-mastering-vim-quickly.html</loc>
 <lastmod>2021-01-21T16:22:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/python-notes.html</loc>
+<loc>https://johnmathews.eu/python-notes.html</loc>
 <lastmod>2021-01-21T14:55:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/mental-models-i-used-to-use.html</loc>
+<loc>https://johnmathews.eu/mental-models-i-used-to-use.html</loc>
 <lastmod>2021-01-20T16:48:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/vim-notes-goto-tag-definition.html</loc>
+<loc>https://johnmathews.eu/vim-notes-goto-tag-definition.html</loc>
 <lastmod>2021-01-20T15:57:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/whats-so-different-about-now.html</loc>
+<loc>https://johnmathews.eu/whats-so-different-about-now.html</loc>
 <lastmod>2021-01-20T14:44:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/what-happens-next.html</loc>
+<loc>https://johnmathews.eu/what-happens-next.html</loc>
 <lastmod>2021-01-20T14:05:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/financial-doom-and-gloom.html</loc>
+<loc>https://johnmathews.eu/financial-doom-and-gloom.html</loc>
 <lastmod>2021-01-19T14:57:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/debugging-more-categories-pelican-plugin.html</loc>
+<loc>https://johnmathews.eu/debugging-more-categories-pelican-plugin.html</loc>
 <lastmod>2021-01-19T12:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/different-views-for-different-users.html</loc>
+<loc>https://johnmathews.eu/different-views-for-different-users.html</loc>
 <lastmod>2021-01-19T10:32:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/different-types-of-problem.html</loc>
+<loc>https://johnmathews.eu/different-types-of-problem.html</loc>
 <lastmod>2021-01-18T13:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/why-i-want-to-write-regularly.html</loc>
+<loc>https://johnmathews.eu/why-i-want-to-write-regularly.html</loc>
 <lastmod>2021-01-18T11:51:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/becoming-a-better-python-developer.html</loc>
+<loc>https://johnmathews.eu/becoming-a-better-python-developer.html</loc>
 <lastmod>2021-01-18T11:25:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/vim-for-large-projects.html</loc>
+<loc>https://johnmathews.eu/vim-for-large-projects.html</loc>
 <lastmod>2021-01-15T15:02:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/using-rss.html</loc>
+<loc>https://johnmathews.eu/using-rss.html</loc>
 <lastmod>2021-01-14T16:52:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/learning-to-django.html</loc>
+<loc>https://johnmathews.eu/learning-to-django.html</loc>
 <lastmod>2021-01-14T14:17:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/larger-code-bases.html</loc>
+<loc>https://johnmathews.eu/larger-code-bases.html</loc>
 <lastmod>2021-01-14T13:40:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/test-driven-development.html</loc>
+<loc>https://johnmathews.eu/test-driven-development.html</loc>
 <lastmod>2021-01-06T17:50:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/faith-in-jesus.html</loc>
+<loc>https://johnmathews.eu/faith-in-jesus.html</loc>
 <lastmod>2021-01-05T18:24:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/api-design.html</loc>
+<loc>https://johnmathews.eu/api-design.html</loc>
 <lastmod>2021-01-04T16:59:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/principles-of-oop.html</loc>
+<loc>https://johnmathews.eu/principles-of-oop.html</loc>
 <lastmod>2021-01-04T16:27:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/site-performance.html</loc>
+<loc>https://johnmathews.eu/site-performance.html</loc>
 <lastmod>2021-01-04T16:05:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/using-unix-utilities-to-analyse-and-update-multiple-files.html</loc>
+<loc>https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html</loc>
 <lastmod>2021-01-04T13:02:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/a-new-blog-design.html</loc>
+<loc>https://johnmathews.eu/a-new-blog-design.html</loc>
 <lastmod>2020-12-18T14:37:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/product-led-growth.html</loc>
+<loc>https://johnmathews.eu/product-led-growth.html</loc>
 <lastmod>2020-12-08T12:59:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/mom-test.html</loc>
+<loc>https://johnmathews.eu/mom-test.html</loc>
 <lastmod>2020-12-04T16:07:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/obviously-awesome.html</loc>
+<loc>https://johnmathews.eu/obviously-awesome.html</loc>
 <lastmod>2020-12-03T15:46:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/How-I-learnt-to-code.html</loc>
+<loc>https://johnmathews.eu/How-I-learnt-to-code.html</loc>
 <lastmod>2020-12-01T13:51:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/1-page-marketing-plan.html</loc>
+<loc>https://johnmathews.eu/1-page-marketing-plan.html</loc>
 <lastmod>2020-11-19T15:50:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/marketing-101.html</loc>
+<loc>https://johnmathews.eu/marketing-101.html</loc>
 <lastmod>2020-11-19T12:40:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pippip.email.html</loc>
+<loc>https://johnmathews.eu/pippip.email.html</loc>
 <lastmod>2020-10-28T13:37:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/between-clients.html</loc>
+<loc>https://johnmathews.eu/between-clients.html</loc>
 <lastmod>2019-10-08T16:05:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/shell.html</loc>
+<loc>https://johnmathews.eu/btc-fork-analysis.html</loc>
+<lastmod>2019-09-02T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/shell.html</loc>
 <lastmod>2019-02-14T11:32:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/bitcoin-lightning.html</loc>
+<loc>https://johnmathews.eu/bitcoin-lightning.html</loc>
 <lastmod>2019-01-24T12:57:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/sync-bitcoin-core-node.html</loc>
+<loc>https://johnmathews.eu/sync-bitcoin-core-node.html</loc>
 <lastmod>2018-10-13T20:34:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/bakkerij.html</loc>
+<loc>https://johnmathews.eu/bakkerij.html</loc>
 <lastmod>2018-06-11T13:09:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/prediction.html</loc>
+<loc>https://johnmathews.eu/prediction.html</loc>
 <lastmod>2018-06-07T12:29:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/reading.html</loc>
+<loc>https://johnmathews.eu/reading.html</loc>
 <lastmod>2018-06-04T15:52:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/rys-git-tutorial.html</loc>
+<loc>https://johnmathews.eu/rys-git-tutorial.html</loc>
 <lastmod>2018-06-01T17:11:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/neighbours.html</loc>
+<loc>https://johnmathews.eu/neighbours.html</loc>
 <lastmod>2018-05-31T22:30:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/buying-btc.html</loc>
+<loc>https://johnmathews.eu/buying-btc.html</loc>
 <lastmod>2017-12-07T09:56:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/ocean.html</loc>
+<loc>https://johnmathews.eu/ocean.html</loc>
 <lastmod>2017-11-23T18:48:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pangea.html</loc>
+<loc>https://johnmathews.eu/pangea.html</loc>
 <lastmod>2017-11-22T16:49:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/bitcoin-vs-gold.html</loc>
+<loc>https://johnmathews.eu/bitcoin-vs-gold.html</loc>
 <lastmod>2017-11-21T17:35:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/wallet.html</loc>
+<loc>https://johnmathews.eu/wallet.html</loc>
 <lastmod>2017-11-08T16:09:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/chartered.html</loc>
+<loc>https://johnmathews.eu/algo-trading.html</loc>
+<lastmod>2017-10-28T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/chartered.html</loc>
 <lastmod>2017-10-19T21:56:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/coworking.html</loc>
+<loc>https://johnmathews.eu/coworking.html</loc>
 <lastmod>2017-09-15T11:55:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/bitnation.html</loc>
+<loc>https://johnmathews.eu/bitnation.html</loc>
 <lastmod>2017-09-14T11:25:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/ethereum-parity-multisig-wallet.html</loc>
+<loc>https://johnmathews.eu/ethereum-parity-multisig-wallet.html</loc>
 <lastmod>2017-08-12T22:28:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/corporate.html</loc>
+<loc>https://johnmathews.eu/macro-btc.html</loc>
+<lastmod>2017-08-03T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/corporate.html</loc>
 <lastmod>2017-07-10T21:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/blockchain-networks.html</loc>
+<loc>https://johnmathews.eu/blockchain-networks.html</loc>
 <lastmod>2017-07-08T13:52:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/move.html</loc>
+<loc>https://johnmathews.eu/move.html</loc>
 <lastmod>2017-07-08T12:26:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/flee.html</loc>
+<loc>https://johnmathews.eu/flee.html</loc>
 <lastmod>2017-07-04T08:42:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/investment.html</loc>
+<loc>https://johnmathews.eu/investment.html</loc>
 <lastmod>2017-06-09T23:03:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/ambitious.html</loc>
+<loc>https://johnmathews.eu/ambitious.html</loc>
 <lastmod>2017-06-09T21:55:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/lis17.html</loc>
+<loc>https://johnmathews.eu/lis17.html</loc>
 <lastmod>2017-06-09T17:53:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pelican2.html</loc>
+<loc>https://johnmathews.eu/pelican2.html</loc>
 <lastmod>2017-06-01T18:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/blockchain-introduction.html</loc>
+<loc>https://johnmathews.eu/blockchain-introduction.html</loc>
 <lastmod>2017-05-25T20:38:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/london.html</loc>
+<loc>https://johnmathews.eu/london.html</loc>
 <lastmod>2017-05-12T22:55:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/aeternity.html</loc>
+<loc>https://johnmathews.eu/aeternity.html</loc>
 <lastmod>2017-05-05T21:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/aeternity-ico.html</loc>
+<loc>https://johnmathews.eu/aeternity-ico.html</loc>
 <lastmod>2017-04-30T23:37:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pelican.html</loc>
+<loc>https://johnmathews.eu/pelican.html</loc>
 <lastmod>2017-04-28T01:21:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/vim.html</loc>
+<loc>https://johnmathews.eu/books.html</loc>
+<lastmod>2017-02-01T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/fakegl.html</loc>
+<lastmod>2017-01-06T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/reconciliation.html</loc>
+<lastmod>2017-01-03T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/spotify.html</loc>
+<lastmod>2016-12-22T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/vim.html</loc>
 <lastmod>2016-12-01T22:32:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/autumn-bin-and-path.html</loc>
+<loc>https://johnmathews.eu/autumn-bin-and-path.html</loc>
 <lastmod>2016-12-01T21:53:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/silos.html</loc>
+<loc>https://johnmathews.eu/silos.html</loc>
 <lastmod>2016-10-02T00:06:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/encryption.html</loc>
+<loc>https://johnmathews.eu/encryption.html</loc>
 <lastmod>2016-08-30T23:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/digital-currencies-the-basics.html</loc>
+<loc>https://johnmathews.eu/digital-currencies-the-basics.html</loc>
 <lastmod>2016-08-19T21:02:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/spare-time.html</loc>
+<loc>https://johnmathews.eu/spare-time.html</loc>
 <lastmod>2016-08-13T21:15:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/time-until.html</loc>
+<loc>https://johnmathews.eu/time-until.html</loc>
 <lastmod>2016-08-07T11:40:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/how-to-wake-up-early.html</loc>
+<loc>https://johnmathews.eu/how-to-wake-up-early.html</loc>
 <lastmod>2016-08-06T22:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/Jupyter-ipython-notebooks-pandas.html</loc>
+<loc>https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html</loc>
 <lastmod>2016-08-03T13:04:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/courseras-data-science-specialisation.html</loc>
+<loc>https://johnmathews.eu/courseras-data-science-specialisation.html</loc>
 <lastmod>2016-08-01T13:30:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/ubersicht-widget-time-since.html</loc>
+<loc>https://johnmathews.eu/ubersicht-widget-time-since.html</loc>
 <lastmod>2016-07-30T13:29:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical.html</loc>
+<loc>https://johnmathews.eu/category/non-technical.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical/career.html</loc>
+<loc>https://johnmathews.eu/category/non-technical/career.html</loc>
 <lastmod>2021-02-01T22:17:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical/christianity.html</loc>
+<loc>https://johnmathews.eu/category/non-technical/christianity.html</loc>
 <lastmod>2021-01-05T18:24:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical/entrepreneurship.html</loc>
+<loc>https://johnmathews.eu/category/non-technical/entrepreneurship.html</loc>
 <lastmod>2020-10-28T13:37:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical/family.html</loc>
+<loc>https://johnmathews.eu/category/non-technical/family.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical/learning.html</loc>
+<loc>https://johnmathews.eu/category/non-technical/learning.html</loc>
 <lastmod>2021-01-18T11:51:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/non-technical/photography.html</loc>
+<loc>https://johnmathews.eu/category/non-technical/photography.html</loc>
 <lastmod>2021-01-22T11:42:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/technical.html</loc>
+<loc>https://johnmathews.eu/category/technical.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/technical/civil-engineering.html</loc>
+<loc>https://johnmathews.eu/category/technical/civil-engineering.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/technical/cryptocurrencies.html</loc>
+<loc>https://johnmathews.eu/category/technical/cryptocurrencies.html</loc>
 <lastmod>2021-03-05T16:14:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/technical/data-science.html</loc>
+<loc>https://johnmathews.eu/category/technical/data.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/category/technical/data-science.html</loc>
 <lastmod>2021-01-26T14:34:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/technical/developer-tools.html</loc>
+<loc>https://johnmathews.eu/category/technical/developer-tools.html</loc>
 <lastmod>2021-03-17T09:12:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/technical/web.html</loc>
+<loc>https://johnmathews.eu/category/technical/web.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/blog.html</loc>
+<loc>https://johnmathews.eu/tag/blog.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/javascript.html</loc>
+<loc>https://johnmathews.eu/tag/javascript.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/self-reflection.html</loc>
+<loc>https://johnmathews.eu/tag/self-reflection.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/fuse.html</loc>
+<loc>https://johnmathews.eu/tag/fuse.html</loc>
 <lastmod>2021-04-05T10:45:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/search.html</loc>
+<loc>https://johnmathews.eu/tag/search.html</loc>
 <lastmod>2021-04-05T10:45:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/web.html</loc>
+<loc>https://johnmathews.eu/tag/web.html</loc>
 <lastmod>2021-04-05T10:45:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/python.html</loc>
+<loc>https://johnmathews.eu/tag/python.html</loc>
 <lastmod>2021-03-17T09:12:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/learning-notes.html</loc>
+<loc>https://johnmathews.eu/tag/learning-notes.html</loc>
 <lastmod>2021-03-17T09:12:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/tinysearch.html</loc>
+<loc>https://johnmathews.eu/tag/tinysearch.html</loc>
 <lastmod>2021-03-12T17:27:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/marketing.html</loc>
+<loc>https://johnmathews.eu/tag/marketing.html</loc>
 <lastmod>2020-12-08T12:59:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/startups.html</loc>
+<loc>https://johnmathews.eu/tag/startups.html</loc>
 <lastmod>2020-12-08T12:59:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/positioning.html</loc>
+<loc>https://johnmathews.eu/tag/positioning.html</loc>
 <lastmod>2020-12-03T15:46:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/book.html</loc>
+<loc>https://johnmathews.eu/tag/book.html</loc>
 <lastmod>2020-12-03T15:46:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/growth.html</loc>
+<loc>https://johnmathews.eu/tag/growth.html</loc>
 <lastmod>2020-11-19T12:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/pippip.html</loc>
+<loc>https://johnmathews.eu/tag/pippip.html</loc>
 <lastmod>2020-10-28T13:37:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/freelance.html</loc>
+<loc>https://johnmathews.eu/tag/freelance.html</loc>
 <lastmod>2019-10-08T16:05:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/shell.html</loc>
+<loc>https://johnmathews.eu/tag/bitcoin.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/blockchain.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/litecoin.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/dogecoin.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/bitcoin-cash.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/bitcoin-sv.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/finance.html</loc>
+<lastmod>2019-09-02T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/shell.html</loc>
 <lastmod>2019-02-14T11:32:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/unix.html</loc>
+<loc>https://johnmathews.eu/tag/unix.html</loc>
 <lastmod>2019-02-14T11:32:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/zsh.html</loc>
+<loc>https://johnmathews.eu/tag/zsh.html</loc>
 <lastmod>2019-02-14T11:32:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/bash.html</loc>
+<loc>https://johnmathews.eu/tag/bash.html</loc>
 <lastmod>2019-02-14T11:32:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/profiling.html</loc>
+<loc>https://johnmathews.eu/tag/profiling.html</loc>
 <lastmod>2019-02-14T11:32:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/bitcoin.html</loc>
+<loc>https://johnmathews.eu/tag/lightning.html</loc>
 <lastmod>2019-01-24T12:57:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/lightning.html</loc>
+<loc>https://johnmathews.eu/tag/crypto.html</loc>
 <lastmod>2019-01-24T12:57:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/crypto.html</loc>
-<lastmod>2019-01-24T12:57:00+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/btc-core.html</loc>
+<loc>https://johnmathews.eu/tag/btc-core.html</loc>
 <lastmod>2018-10-13T20:34:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/blockchain.html</loc>
+<loc>https://johnmathews.eu/tag/node.html</loc>
 <lastmod>2018-10-13T20:34:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/node.html</loc>
-<lastmod>2018-10-13T20:34:00+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/coworking.html</loc>
+<loc>https://johnmathews.eu/tag/coworking.html</loc>
 <lastmod>2018-06-11T13:09:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/netherlands.html</loc>
+<loc>https://johnmathews.eu/tag/netherlands.html</loc>
 <lastmod>2018-06-11T13:09:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/haarlem.html</loc>
+<loc>https://johnmathews.eu/tag/haarlem.html</loc>
 <lastmod>2018-06-11T13:09:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/gnosis.html</loc>
+<loc>https://johnmathews.eu/tag/gnosis.html</loc>
 <lastmod>2018-06-07T12:29:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/prediction.html</loc>
+<loc>https://johnmathews.eu/tag/prediction.html</loc>
 <lastmod>2018-06-07T12:29:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/markets.html</loc>
+<loc>https://johnmathews.eu/tag/markets.html</loc>
 <lastmod>2018-06-07T12:29:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/brexit.html</loc>
+<loc>https://johnmathews.eu/tag/brexit.html</loc>
 <lastmod>2018-06-07T12:29:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/betting.html</loc>
+<loc>https://johnmathews.eu/tag/betting.html</loc>
 <lastmod>2018-06-07T12:29:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/reading.html</loc>
+<loc>https://johnmathews.eu/tag/reading.html</loc>
 <lastmod>2018-06-04T15:52:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/git.html</loc>
+<loc>https://johnmathews.eu/tag/git.html</loc>
 <lastmod>2018-06-01T17:11:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/rys.html</loc>
+<loc>https://johnmathews.eu/tag/rys.html</loc>
 <lastmod>2018-06-01T17:11:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/tutorial.html</loc>
+<loc>https://johnmathews.eu/tag/tutorial.html</loc>
 <lastmod>2018-06-01T17:11:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/ryan-hodson.html</loc>
+<loc>https://johnmathews.eu/tag/ryan-hodson.html</loc>
 <lastmod>2018-06-01T17:11:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/politics.html</loc>
+<loc>https://johnmathews.eu/tag/politics.html</loc>
 <lastmod>2018-05-31T22:30:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/equality.html</loc>
+<loc>https://johnmathews.eu/tag/equality.html</loc>
 <lastmod>2018-05-31T22:30:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/water.html</loc>
+<loc>https://johnmathews.eu/tag/water.html</loc>
 <lastmod>2017-11-23T18:48:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/bitnation.html</loc>
+<loc>https://johnmathews.eu/tag/bitnation.html</loc>
 <lastmod>2017-11-22T16:49:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/pangea.html</loc>
+<loc>https://johnmathews.eu/tag/pangea.html</loc>
 <lastmod>2017-11-22T16:49:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/gold.html</loc>
+<loc>https://johnmathews.eu/tag/gold.html</loc>
 <lastmod>2017-11-21T17:35:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/safe-haven.html</loc>
+<loc>https://johnmathews.eu/tag/safe-haven.html</loc>
 <lastmod>2017-11-21T17:35:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/wallet.html</loc>
+<loc>https://johnmathews.eu/tag/wallet.html</loc>
 <lastmod>2017-11-08T16:09:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/icaew.html</loc>
+<loc>https://johnmathews.eu/tag/ethereum.html</loc>
+<lastmod>2017-10-28T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/icaew.html</loc>
 <lastmod>2017-10-19T21:56:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/aca.html</loc>
+<loc>https://johnmathews.eu/tag/aca.html</loc>
 <lastmod>2017-10-19T21:56:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/accounting.html</loc>
+<loc>https://johnmathews.eu/tag/accounting.html</loc>
 <lastmod>2017-10-19T21:56:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/dublin.html</loc>
+<loc>https://johnmathews.eu/tag/dublin.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/element78.html</loc>
+<loc>https://johnmathews.eu/tag/element78.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/regus.html</loc>
+<loc>https://johnmathews.eu/tag/regus.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/officesuites.html</loc>
+<loc>https://johnmathews.eu/tag/officesuites.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/cocreate.html</loc>
+<loc>https://johnmathews.eu/tag/cocreate.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/studio9.html</loc>
+<loc>https://johnmathews.eu/tag/studio9.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/glandore.html</loc>
+<loc>https://johnmathews.eu/tag/glandore.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/tcube.html</loc>
+<loc>https://johnmathews.eu/tag/tcube.html</loc>
 <lastmod>2017-09-15T11:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/disintermediation.html</loc>
+<loc>https://johnmathews.eu/tag/disintermediation.html</loc>
 <lastmod>2017-09-14T11:25:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/identity.html</loc>
+<loc>https://johnmathews.eu/tag/identity.html</loc>
 <lastmod>2017-09-14T11:25:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/consulting.html</loc>
+<loc>https://johnmathews.eu/tag/consulting.html</loc>
 <lastmod>2017-09-14T11:25:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/finance.html</loc>
-<lastmod>2017-09-14T11:25:00+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/ethereum.html</loc>
+<loc>https://johnmathews.eu/tag/parity.html</loc>
 <lastmod>2017-08-12T22:28:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/parity.html</loc>
+<loc>https://johnmathews.eu/tag/blockchains.html</loc>
 <lastmod>2017-08-12T22:28:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/blockchains.html</loc>
+<loc>https://johnmathews.eu/tag/fintech.html</loc>
 <lastmod>2017-08-12T22:28:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/fintech.html</loc>
+<loc>https://johnmathews.eu/tag/multi-sig.html</loc>
 <lastmod>2017-08-12T22:28:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/multi-sig.html</loc>
-<lastmod>2017-08-12T22:28:00+00:20</lastmod>
+<loc>https://johnmathews.eu/tag/distributed-applications.html</loc>
+<lastmod>2017-08-03T00:00:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/career.html</loc>
+<loc>https://johnmathews.eu/tag/career.html</loc>
 <lastmod>2017-07-10T21:37:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/corporate.html</loc>
+<loc>https://johnmathews.eu/tag/corporate.html</loc>
 <lastmod>2017-07-10T21:37:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/london.html</loc>
+<loc>https://johnmathews.eu/tag/london.html</loc>
 <lastmod>2017-07-10T21:37:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/digital-currencies.html</loc>
+<loc>https://johnmathews.eu/tag/digital-currencies.html</loc>
 <lastmod>2017-07-08T13:52:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/distributed-ledger-technology.html</loc>
+<loc>https://johnmathews.eu/tag/distributed-ledger-technology.html</loc>
 <lastmod>2017-07-08T13:52:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/distributed-consensus.html</loc>
+<loc>https://johnmathews.eu/tag/distributed-consensus.html</loc>
 <lastmod>2017-07-08T13:52:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/sybil.html</loc>
+<loc>https://johnmathews.eu/tag/sybil.html</loc>
 <lastmod>2017-07-08T13:52:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/lifestyle.html</loc>
+<loc>https://johnmathews.eu/tag/lifestyle.html</loc>
 <lastmod>2017-07-08T12:26:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/poetry.html</loc>
+<loc>https://johnmathews.eu/tag/poetry.html</loc>
 <lastmod>2017-07-04T08:42:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/lis.html</loc>
+<loc>https://johnmathews.eu/tag/lis.html</loc>
 <lastmod>2017-06-09T23:03:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/startup.html</loc>
+<loc>https://johnmathews.eu/tag/startup.html</loc>
 <lastmod>2017-06-09T23:03:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/founder.html</loc>
+<loc>https://johnmathews.eu/tag/founder.html</loc>
 <lastmod>2017-06-09T23:03:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/europe.html</loc>
+<loc>https://johnmathews.eu/tag/europe.html</loc>
 <lastmod>2017-06-09T21:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/pelican.html</loc>
+<loc>https://johnmathews.eu/tag/pelican.html</loc>
 <lastmod>2017-06-01T18:00:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/jinja.html</loc>
+<loc>https://johnmathews.eu/tag/jinja.html</loc>
 <lastmod>2017-06-01T18:00:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/twitter.html</loc>
+<loc>https://johnmathews.eu/tag/twitter.html</loc>
 <lastmod>2017-06-01T18:00:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/facebook.html</loc>
+<loc>https://johnmathews.eu/tag/facebook.html</loc>
 <lastmod>2017-06-01T18:00:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/static-site.html</loc>
+<loc>https://johnmathews.eu/tag/static-site.html</loc>
 <lastmod>2017-06-01T18:00:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/public-key-cryptography.html</loc>
+<loc>https://johnmathews.eu/tag/public-key-cryptography.html</loc>
 <lastmod>2017-05-25T20:38:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/rent.html</loc>
+<loc>https://johnmathews.eu/tag/rent.html</loc>
 <lastmod>2017-05-12T22:55:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/aeternity.html</loc>
+<loc>https://johnmathews.eu/tag/aeternity.html</loc>
 <lastmod>2017-05-05T21:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/dlt.html</loc>
+<loc>https://johnmathews.eu/tag/dlt.html</loc>
 <lastmod>2017-05-05T21:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/ico.html</loc>
+<loc>https://johnmathews.eu/tag/ico.html</loc>
 <lastmod>2017-04-30T23:37:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/vim.html</loc>
+<loc>https://johnmathews.eu/tag/data-analysis.html</loc>
+<lastmod>2017-02-01T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/isbn.html</loc>
+<lastmod>2017-02-01T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/journals.html</loc>
+<lastmod>2017-01-06T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/reconciliation.html</loc>
+<lastmod>2017-01-06T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/trial-balance.html</loc>
+<lastmod>2017-01-06T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/general-ledger.html</loc>
+<lastmod>2017-01-06T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/music.html</loc>
+<lastmod>2016-12-22T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/spotify.html</loc>
+<lastmod>2016-12-22T00:00:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/vim.html</loc>
 <lastmod>2016-12-01T22:32:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/doctorate.html</loc>
+<loc>https://johnmathews.eu/tag/doctorate.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/granular-flow.html</loc>
+<loc>https://johnmathews.eu/tag/granular-flow.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/granular-materials.html</loc>
+<loc>https://johnmathews.eu/tag/granular-materials.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/phd.html</loc>
+<loc>https://johnmathews.eu/tag/phd.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/research.html</loc>
+<loc>https://johnmathews.eu/tag/research.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/engineering.html</loc>
+<loc>https://johnmathews.eu/tag/engineering.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/silo.html</loc>
+<loc>https://johnmathews.eu/tag/silo.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/thesis.html</loc>
+<loc>https://johnmathews.eu/tag/thesis.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/vienna.html</loc>
+<loc>https://johnmathews.eu/tag/vienna.html</loc>
 <lastmod>2016-10-02T00:06:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/encryption.html</loc>
+<loc>https://johnmathews.eu/tag/encryption.html</loc>
 <lastmod>2016-08-30T23:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/rsa.html</loc>
+<loc>https://johnmathews.eu/tag/rsa.html</loc>
 <lastmod>2016-08-30T23:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/cryptocurrencies.html</loc>
+<loc>https://johnmathews.eu/tag/cryptocurrencies.html</loc>
 <lastmod>2016-08-19T21:02:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/cryptography.html</loc>
+<loc>https://johnmathews.eu/tag/cryptography.html</loc>
 <lastmod>2016-08-19T21:02:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/habits.html</loc>
+<loc>https://johnmathews.eu/tag/habits.html</loc>
 <lastmod>2016-08-13T21:15:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/advice.html</loc>
+<loc>https://johnmathews.eu/tag/advice.html</loc>
 <lastmod>2016-08-13T21:15:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/reflection.html</loc>
+<loc>https://johnmathews.eu/tag/reflection.html</loc>
 <lastmod>2016-08-13T21:15:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/applescript.html</loc>
+<loc>https://johnmathews.eu/tag/applescript.html</loc>
 <lastmod>2016-08-07T11:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/coffeescript.html</loc>
+<loc>https://johnmathews.eu/tag/coffeescript.html</loc>
 <lastmod>2016-08-07T11:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/time-until.html</loc>
+<loc>https://johnmathews.eu/tag/time-until.html</loc>
 <lastmod>2016-08-07T11:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/ubersicht.html</loc>
+<loc>https://johnmathews.eu/tag/ubersicht.html</loc>
 <lastmod>2016-08-07T11:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/widgets.html</loc>
+<loc>https://johnmathews.eu/tag/widgets.html</loc>
 <lastmod>2016-08-07T11:40:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/productivity.html</loc>
+<loc>https://johnmathews.eu/tag/productivity.html</loc>
 <lastmod>2016-08-06T22:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/sleep.html</loc>
+<loc>https://johnmathews.eu/tag/sleep.html</loc>
 <lastmod>2016-08-06T22:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/data.html</loc>
+<loc>https://johnmathews.eu/tag/data.html</loc>
 <lastmod>2016-08-03T13:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/jupyter-notebook.html</loc>
+<loc>https://johnmathews.eu/tag/jupyter-notebook.html</loc>
 <lastmod>2016-08-03T13:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/pandas.html</loc>
+<loc>https://johnmathews.eu/tag/pandas.html</loc>
 <lastmod>2016-08-03T13:04:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/coursera.html</loc>
+<loc>https://johnmathews.eu/tag/coursera.html</loc>
 <lastmod>2016-08-01T13:30:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/data-science.html</loc>
+<loc>https://johnmathews.eu/tag/data-science.html</loc>
 <lastmod>2016-08-01T13:30:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/r.html</loc>
+<loc>https://johnmathews.eu/tag/r.html</loc>
 <lastmod>2016-08-01T13:30:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/time-since.html</loc>
+<loc>https://johnmathews.eu/tag/time-since.html</loc>
 <lastmod>2016-07-30T13:29:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/author/john-mathews.html</loc>
+<loc>https://johnmathews.eu/author/john-mathews.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
