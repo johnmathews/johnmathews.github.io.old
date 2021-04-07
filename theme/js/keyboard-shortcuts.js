@@ -60,6 +60,13 @@ $(document).ready(function () {
   Mousetrap.bind('g i', function () {
     window.location.href = `${siteURL}/blog.html`
   })
+  Mousetrap.bind('G', function () {
+    $("html, body").animate({ scrollTop: $(document).height()-$(window).height()}, 500)
+  })
+  Mousetrap.bind('g g', function () {
+    console.log('smoke')
+    $("html, body").animate({ scrollTop: 0}, 500)
+  })
   Mousetrap.bind('g b', function () {
     window.history.back()
   })
