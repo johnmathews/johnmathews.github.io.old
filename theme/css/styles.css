@@ -15382,8 +15382,8 @@ video {
   margin-top: 1rem;
 }
 
-.markdown ul > li:first-child {
-  margin-top: 1rem;
+.markdown ol > li > ul {
+  margin-top: 0px;
 }
 
 .markdown li > p  {

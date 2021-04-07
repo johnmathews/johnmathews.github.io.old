@@ -227,8 +227,8 @@
   @apply mt-4;
 }
 
-.markdown ul > li:first-child {
-  @apply mt-4;
+.markdown ol > li > ul {
+  @apply mt-0;
 }
 
 .markdown li > p  {

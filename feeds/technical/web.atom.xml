@@ -3,24 +3,24 @@
 making unnecessary improvements to this blog.&lt;/p&gt;
 &lt;p&gt;Some of these improvements are:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Adding keyboard shortcuts (type &lt;code&gt;?&lt;/code&gt; to find out which)&lt;/li&gt;
+&lt;li&gt;Adding keyboard shortcuts (type &lt;code&gt;?&lt;/code&gt; to find out which).&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://johnmathews.eu/Adding-search.html"&gt;Implementing&lt;/a&gt;, then
    &lt;a href="https://johnmathews.eu/fuse-search.html"&gt;reimplementing&lt;/a&gt;, and then optimizing client
-   side fuzzy search&lt;/li&gt;
-&lt;li&gt;Using &lt;code&gt;src-set&lt;/code&gt;s to serve responsive images
-   (&lt;a href="https://github.com/pelican-plugins/image-process"&gt;Image-Process&lt;/a&gt;)&lt;/li&gt;
+   side fuzzy search.&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;src-set&lt;/code&gt; to serve responsive images
+   (&lt;a href="https://github.com/pelican-plugins/image-process"&gt;Image-Process&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Lazy loading images to make this site load faster.&lt;/li&gt;
-&lt;li&gt;Compressing page files using &lt;code&gt;brotli&lt;/code&gt; and also &lt;code&gt;gzip&lt;/code&gt;.
-   (&lt;a href="https://github.com/kurtmckee/pelican_precompress"&gt;Precompress&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Compressing page files using &lt;code&gt;brotli&lt;/code&gt; and also &lt;code&gt;gzip&lt;/code&gt;
+   (&lt;a href="https://github.com/kurtmckee/pelican_precompress"&gt;Precompress&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Trying (and ultimately failing) to avoid a “white flash” when dark mode is
-   chosen and a new page loads. (&lt;a href="https://github.com/tailwindlabs/tailwindcss/discussions/3904"&gt;Github
-   discussion&lt;/a&gt;)&lt;/li&gt;
+   chosen and a new page loads (&lt;a href="https://github.com/tailwindlabs/tailwindcss/discussions/3904"&gt;Github
+   discussion&lt;/a&gt;).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;I’m not really sure why I did it. It makes almost no difference to anyone but
 me. It felt a bit compulsive.&lt;/p&gt;
 &lt;p&gt;I like tinkering, and it’s nice to build something that will continue to work
 with no maintenance. I tell myself that over the next few years I will gain the
-benefits of these features even when I’ve forgotten I implemented them. &lt;/p&gt;
+benefits of these features even when I’ve forgotten I implemented them.&lt;/p&gt;
 &lt;p&gt;It’s taught me a lot of JavaScript, which is a great language to be familiar
 with - it’s everywhere. I would warmly encourage someone younger than myself to
 pursue interests for the sake of curiosity and fun. And there is a very high
@@ -44,7 +44,7 @@ a few years before I know for sure if these efforts were worthwhile, or not.&lt
 &lt;p&gt;Successful business owners seem to be very good at leaving things alone once
 they’re “good enough”, and not being perfectionists. In fact, I think that
 being a perfectionist is antithetical to being an entrepreneur. I am not a
-perfectionist, I’m just really curious and have a big appetite for learning. &lt;/p&gt;
+perfectionist, I’m just really curious and have a big appetite for learning.&lt;/p&gt;
 &lt;p&gt;But this “appetite for learning” stops me from focussing. I let myself become
 distracted by adding new features to this blog, when instead I should zoom out
 a bit and think about working towards a more substantial and meaningful goal,
