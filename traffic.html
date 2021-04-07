@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+<title>Recognizing Traffic Lights Using The Azure Custom Vision API - John Mathews Blog - JohnMathews.eu</title>
+<meta content="Recognizing Traffic Lights Using The Azure Custom Vision API -  John Mathews Blog - JohnMathews.eu " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content="  " name="keywords"/>
+<meta content="" name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="Recognizing Traffic Lights Using The Azure Custom Vision API" property="twitter:title"/>
+<meta content="" name="twitter:description"/>
+<meta content="https://johnmathews.eu/traffic.html" property="twitter:url"/>
+<meta content=" 
+    https://johnmathews.eu//images/traffic_lights/header.png" name="twitter:image"/>
+<meta content=" " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="Recognizing Traffic Lights Using The Azure Custom Vision API" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://johnmathews.eu/traffic.html" property="og:url"/>
+<meta content=" 
+    https://johnmathews.eu//images/traffic_lights/header.png" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon">
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+      </script>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+<style>
+    #spinner:not([hidden]) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #spinner::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border: 2px solid #f3f3f3;
+      border-top: 3px solid #f25a41;
+      border-radius: 100%;
+      will-change: transform;
+      animation: spin 1s infinite linear
+    }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+  </style>
+</link></link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                 Keyboard Shortcuts:
+                </h3>
+<hr class=""/>
+<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<ul class="text-black text-base leading-loose">
+<li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
+<li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
+<li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
+<li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
+<li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
+<li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
+<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
+<li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    /
+                  </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    cmd-K
+                  </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="-ml-5 -mr-5 lg:mx-auto max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md" id="PageParent">
+<img alt="gold" class="lg:mx-auto" src="/images/traffic_lights/header.png"/>
+<div class="markdown break-words leading-tight text-left mt-10 -mr-30 text-4xl md:text-5xl lg:text-6xl font-semibold lg:font-normal dark:text-gray-200">
+      Recognizing Traffic Lights Using The Azure Custom Vision <span class="caps">API</span>
+</div>
+<div class="font-light text-xl text-gray-600 pb-5 dark:text-gray-200 mt-5">
+			January 2020
+    </div>
+<main>
+<article>
+<div class="leading-tight text-2xl font-semibold mt-3 pb-2 text-gray-900 dark:text-gray-200">
+          TL;DR
+        </div>
+<div class="markdown dark:text-gray-200">
+          I've trained and deployed a deep learning model to recognise and label traffic lights. You can upload an image to see the results below.
+				</div>
+<div class="mt-2 markdown dark:text-gray-200">
+          The model will show the location of the traffic lights, and how confident it is about each result. Just like in the image above.
+				</div>
+<div class="mt-5 mb-3 -ml-5 -mr-5 items-center mx-auto text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-800" id="wrapper">
+<input accept="image/*" class="mx-3 my-3" id="fileInput" onchange="preview_image(event)" type="file"/>
+<div class="" id="outsideWrapper">
+<div class="relative" id="insideWrapper">
+<img class="absolute top-0 left-0" id="output_image"/>
+<canvas class="absolute top-0 left-0" id="output_image">
+                  Your browser doesn't support canvas
+                </canvas>
+<div class="w-full flex">
+<div class="z-50 mx-auto my-10" hidden="" id="spinner"></div>
+</div>
+</div>
+</div>
+<div id="results">
+</div>
+</div>
+<div class="markdown dark:text-gray-200">
+<p>You can upload any image, I suggest googling <a href="https://www.google.com/search?tbm=isch&amp;as_q=dashcam+traffic+lights">dashcam traffic lights</a>, or use one of the images below. Images should be smaller than 4mb and should be <code>.jpeg</code>, <code>.bmp</code> or <code>.png</code>.</p>
+<h2 id="the-shortest-route-to-a-demo">The Shortest Route To A Demo</h2>
+<p>This demonstration was inspired by the job description for a freelance role I
+recently applied for. The project involved recognising faults with traffic
+lights and I wanted to see how quickly I could develop an end-to-end computer
+vision system that recognises and labels traffic lights.</p>
+<p>This is a relatively simple solution which prioritized speed, simplicity and
+low costs.  I used the free tier of the Azure <a href="https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/">Custom Vision</a> service to train and
+deploy the model. The model is trained to recognise and label traffic lights.</p>
+<h3 id="summary">Summary</h3>
+<ul>
+<li>The model is hosted on Azure Custom Vision on the free tier</li>
+<li>The model is trained on ~4500 images</li>
+<li>Images are part of the DriveU Traffic Light Dataset</li>
+</ul>
+<p>To improve the model I would:</p>
+<ul>
+<li>Use many more images</li>
+<li>Experiment with different model architectures</li>
+<li>Tune the hyper-parameters</li>
+</ul>
+<h3 id="method">Method</h3>
+<ol>
+<li>
+<p>Find a good dataset. It would have taken too long to create my own labelled
+dataset so I needed to find a freely available set of labelled images. It turns
+out there are several to choose from. <a href="https://waymo.com/open/data/">Waymo</a> have a huge dataset that is freely
+available but I chose to use the
+<a href="https://www.uni-ulm.de/en/in/driveu/projects/driveu-traffic-light-dataset/">DriveU</a> Traffic Light dataset instead. It’s well documented, easily accessible and good enough.</p>
+</li>
+<li>
+<p>Convert the images - the <a href="https://github.com/julimueller/dtld_parsing"><span class="caps">DTLD</span></a> images are 16-bit .<span class="caps">TIFF</span> images. I needed .<span class="caps">JPEG</span>
+or .<span class="caps">PNG</span> images. I first converted the 16-bit .<span class="caps">TIFF</span> images to 8-bit, and then
+converted them to .<span class="caps">JPEG</span>. The <span class="caps">DTLD</span> dataset contains more image data and metadata than I
+needed so I simply ignored or stripped out what I didn’t need.</p>
+</li>
+<li>
+<p>Parse the label data to extract only the information I needed.
+The <span class="caps">DTLD</span> dataset contains labels that specify the location of the traffic
+lights in the images as well as the type of traffic light and what phase the
+lights are in. I was only interested in the location of the lights for this
+demo. I needed to convert the coordinates of the regions from absolute to relative.</p>
+</li>
+<li>
+<p>Create a <a href="https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/">Custom Vision</a> project, create custom tags, and upload pairs of
+    images and labels in the required form. The documentation was good enough and
+    whilst there were a few steps that were unclear.</p>
+<p>I was able to quickly figure out what to do, usually by clicking around to try
+a couple things and check the results. Each cloud platform has its own quirks and
+design concepts, and once you’ve understood the pattern you can develop a good
+intuition for how each platform (in this case Azure) “wants” you to do something.</p>
+</li>
+<li>
+<p>Train the model. There aren’t many options to choose from and the dataset
+    wasn’t very big.</p>
+</li>
+<li>
+<p>Use the model to make predictions.</p>
+</li>
+<li>
+<p>Create a simple <span class="caps">UI</span> on a static site (this page) using JavaScript and <span class="caps">HTML</span>.
+    The JavaScript Fetch <span class="caps">API</span> is used to query the Custom Vision <span class="caps">API</span>. jQuery and
+    some custom (vanilla) JavaScript is used to parse the results and create the
+    interactive elements on the page.</p>
+<p>The model’s results are shown by overlaying an <span class="caps">HTML</span> <code>canvas</code> element on top
+of the <code>img</code> element that shows the image that’s been uploaded by the user.
+The regions and probabilities are drawn using <span class="caps">HTML</span> Canvas methods
+(<code>strokeRect</code>, <code>fillText</code> etc).</p>
+</li>
+</ol>
+<h3 id="next-steps">Next steps:</h3>
+<ul>
+<li>
+<p>The model is trained on images from German Cities. In order to generalise the model
+    it should be trained using images from a wider distribution. This could include:</p>
+<ul>
+<li>Rural and urban settings.</li>
+<li>Views from footpaths as well as roads.</li>
+<li>Different weather conditions.</li>
+<li>Different cities and countries.</li>
+</ul>
+</li>
+<li>
+<p>It would be nice to let the user adjust the minimum probability threshold. Currently only results
+    with a probability above 10% are shown.</p>
+</li>
+</ul>
+<h3 id="test-images">Test images:</h3>
+<p>You could use these images to test the model. You’ll need to store them locally
+before uploading.</p>
+<ul>
+<li><a href="https://johnmathews.eu/demo1.jpeg">Test Image 1</a></li>
+<li><a href="https://johnmathews.eu/demo2.jpeg">Test Image 2</a></li>
+<li><a href="https://johnmathews.eu/demo3.jpeg">Test Image 3</a></li>
+<li><a href="https://johnmathews.eu/demo4.png">Test Image 4</a></li>
+</ul>
+</div>
+</article>
+</main>
+<div class="border border-gray-300 mt-10 mb-10"></div>
+<div class="text-left">
+<button class="inline-flex items-center h-10 px-5 text-gray-700 dark:text-gray-700 transition-colors duration-150 bg-yellow-500 hover:bg-yellow-600 rounded-lg focus:shadow-outline dark:hover:text-gray-200" id="signupButton">
+<span>Subscribe</span>
+<i class="py-2 pl-3 fas fa-lg fa-envelope"></i>
+</button>
+</div>
+<div class="hidden" id="subscribeBox">
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://johnmathews.us15.list-manage.com/subscribe/post?u=293155ea06a261f5255378dc0&amp;id=38c1e277b4" class="validate dark:bg-gray-700" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group dark:text-gray-300">
+<label for="mce-EMAIL">Email Address </label>
+<input class="required email dark:bg-gray-500" id="mce-EMAIL" name="EMAIL" type="email" value=""/>
+</div>
+<div class="clear" id="mce-responses">
+<div class="response" id="mce-error-response" style="display:none"></div>
+<div class="response" id="mce-success-response" style="display:none"></div>
+</div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<div aria-hidden="true" style="position: absolute; left: -5000px;">
+<input name="b_293155ea06a261f5255378dc0_38c1e277b4" tabindex="-1" type="text" value=""/>
+</div>
+<div class="clear">
+<input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"/>
+</div>
+</div>
+</form>
+</div>
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+</div>
+</div>
+</div>
+</div>
+</div></main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
+
+        // show category options window when cat icon is clicked
+        $( ".catChooser" ).click(function() {
+              $('#catModal').removeClass('hidden');
+        });
+
+
+      </script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
+    // mailing list subscribe button
+    document.getElementById("signupButton").addEventListener("click", function(e) {
+      $('#signupButton').removeClass('block').addClass('hidden')
+      $('#subscribeBox').removeClass('hidden').addClass('block')
+    });
+  </script>
+<script>
+    // show uploaded image
+    function preview_image(event) {
+      var reader = new FileReader();
+      reader.onload = function()
+      {
+        var output = document.getElementById('output_image');
+        output.src = reader.result;
+
+        output.onload = function() {
+          $('#outsideWrapper').height(this.height);
+          $('#outsideWrapper').width(this.width);
+          $('#canvas').height(this.height);
+          $('#canvas').width(this.width);
+
+          window.canvasHeight = this.height
+          window.canvasWidth = this.width
+
+          var canvas = $("#canvas")
+          var ctx = canvas[0].getContext('2d');
+          ctx.canvas.height = this.height
+          ctx.canvas.width = this.width
+        };
+
+      
+      }
+
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // only show predictions with confidence of at least (percent)
+    window.probabilty_threshold = 10
+
+    function printResults(predictions){
+      num_found = 0
+      for (i=0; i < predictions.length; i++) {
+        prob = predictions[i]['probability']*100;
+        if (prob > window.probabilty_threshold) {
+          num_found = num_found + 1
+        };
+      };
+      if (num_found > 0){
+            $( "#results" ).html(''.concat(num_found.toString(), ' traffic lights detected'));
+          } else {
+           $( "#results" ).html('no traffic lights here');
+          };
+
+      var canvas = $("#canvas")
+      var ctx = canvas[0].getContext('2d');
+      ctx.fillStyle = "red";
+      ctx.font = "20pt sans-serif";
+
+       for (i=0; i < predictions.length; i++){
+         if (predictions[i]['probability'] * 100 > window.probabilty_threshold ) {
+
+           let left = predictions[i]['boundingBox']['left'];
+           left = left * window.canvasWidth
+
+           let top = predictions[i]['boundingBox']['top'];
+           top = top * window.canvasHeight;
+
+           let width = predictions[i]['boundingBox']['width'];
+           width = width * window.canvasWidth
+
+           let height = predictions[i]['boundingBox']['height'];
+           height = height * window.canvasHeight
+
+           let probability = Math.round(predictions[i]['probability'] * 100);
+
+           probabilty = probability.toString();
+           probability = ''.concat(probability, '%');
+
+           ctx.strokeStyle = "#FF0000";
+           ctx.strokeRect(left, top, width, height);
+
+           ctx.strokeStyle = "black";
+           ctx.fillText(probability, left, top);
+           ctx.strokeText(probability, left, top);
+         }
+       }; 
+    }
+
+   // fetch azure customvision api results
+   const spinner = document.getElementById("spinner");
+   const upload = (file) => {
+    spinner.removeAttribute('hidden');
+    fetch('https://traffic-lights-free-tier.cognitiveservices.azure.com/customvision/v3.0/Prediction/fee4a5ea-2cc5-4caf-8458-2ac1c934277b/detect/iterations/Iteration1/image',
+		 {
+      method: 'POST',
+      headers: {
+       "Content-Type": "application/octet-stream",
+			 "Prediction-Key": "43e3d22785704f7c998130aab3a8ac14"
+      },
+      body: file
+		 }
+		).then(
+     response => response.json()
+    ).then(
+      (function(success){
+        printResults(success['predictions'])
+        spinner.setAttribute('hidden', '');
+      })
+    ).catch(
+     error => console.log(error)
+    );
+   };
+
+   // Event handler executed when a file is selected
+   const onSelectFile = () => upload(fileInput.files[0]);
+   fileInput.addEventListener('change', onSelectFile, false);
+	</script>
+<script>
+    // set or update user preference for article category if it hasnt been set
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      // pass
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      window.localStorage.setItem('categoryChoice', 'all');
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      window.localStorage.setItem('categoryChoice', 'technical');
+    };
+  </script>
+</body>
+</html>

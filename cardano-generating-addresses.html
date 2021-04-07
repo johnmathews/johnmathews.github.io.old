@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+<title>Cardano: Generating Addresses - John Mathews Blog - JohnMathews.eu</title>
+<meta content="Cardano: Generating Addresses -  John Mathews Blog - JohnMathews.eu " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content="  " name="keywords"/>
+<meta content=" If many different customers are to deposit or send ADA (The unit of currency on the Cardano blockchain) to a Cardano node, it will be necessary to determine which customer is responsible for each... " name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="Cardano: Generating Addresses" property="twitter:title"/>
+<meta content=" If many different customers are to deposit or send ADA (The unit of currency on the Cardano blockchain) to a Cardano node, it will be necessary to determine which customer is responsible for each... " name="twitter:description"/>
+<meta content="./cardano-generating-addresses.html" property="twitter:url"/>
+<meta content="./
+" name="twitter:image"/>
+<meta content="  summary  " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="Cardano: Generating Addresses" property="og:title"/>
+<meta content=" If many different customers are to deposit or send ADA (The unit of currency on the Cardano blockchain) to a Cardano node, it will be necessary to determine which customer is responsible for each... " property="og:description"/>
+<meta content="./cardano-generating-addresses.html" property="og:url"/>
+<meta content="./
+" property="og:image"/>
+<link href="./None" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<link href="./extra/favicon.png" rel="icon">
+<link href="./theme/css/styles.css" rel="stylesheet">
+<link href="./theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+      </script>
+</link></link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                 Keyboard Shortcuts:
+                </h3>
+<hr class=""/>
+<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<ul class="text-black text-base leading-loose">
+<li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
+<li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
+<li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
+<li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
+<li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
+<li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
+<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
+<li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    /
+                  </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    cmd-K
+                  </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> March 2021
+  </div>
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+ Category: 
+    <div>
+<a class="hover:underline" href="./category/technical/cryptocurrencies.html">Cryptocurrencies</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
+<div class="mb-10">
+<div class="leading-tight text-left font-serif mt-20 lg:mt-24 lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-all" style="word-break: unset; white-space: wrap;">
+          Cardano: Generating Addresses
+      </div>
+<div class="lg:hidden mt-10 mb-3 text-lg font-serif font-bold text-gray-700 dark:text-gray-200">
+ Category:           <a class="hover:underline" href="./category/technical/cryptocurrencies.html">Cryptocurrencies</a>
+</div>
+<div class="lg:hidden text-lg font-serif font-light text-gray-600 dark:text-gray-200">
+        March 2021
+      </div>
+</div>
+<div class="mt-5 md:mt-20 md:mb-10 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown">
+<p>If many different customers are to deposit or send <span class="caps">ADA</span> (The unit of currency on the
+Cardano blockchain) to a Cardano node, it will be necessary to determine which
+customer is responsible for each transaction so that the correct customer
+account can be updated.</p>
+<p>As with many things involving blockchains, this initially seemed like a simple
+requirement but involved several hours of work. </p>
+<p>Cardano wallets are generated using a parameter called ADDRESS_POOL_GAP. The
+default value is 20, and is the number of unused addresses that the node will
+generate and return to a client using the <span class="caps">REST</span> <span class="caps">API</span>. If one of the addresses is
+used, the node will automatically generate another so that there are always 20
+unused addresses.</p>
+<p>This is probably very convenient for personal use. If I want someone to send me
+some funds, I can make a simple api call using cURL and get a fresh address.
+But if you are running a service, weather its e-commerce or a financial
+service, its not really good enough. Some advice on the forums says to generate
+a wallet with a very large ADDRESS_POOL_GAP value such as 10,000 and just
+generate a new wallet when you run out of fresh addresses, but it still
+feels like a compromise.</p>
+<p>But lets explain our situation in more detail first. If a customer wants to
+send us some <span class="caps">ADA</span>, we want to give them a fresh address that’s never been used
+before and that only they have. Then we know that any funds that arrive to that
+address are from a particular customer. However we don’t know if the customer
+will actually use the address and transfer any funds. The address might remain
+unused or it might not. Nevertheless, that address is now reserved for them,
+and no one else can use it. </p>
+<p>In this way, we might need to generate and maintain a list of thousands of
+addresses that are never used. Using ADDRESS_POOL_GAP for this seems like a bad solution. </p>
+<p>Fortunately,
+<a href="https://github.com/input-output-hk/cardano-addresses">Cardano-Addresses</a> has
+the answer, albeit in a fairly convoluted and obscured form. If you have the
+mnemonic that was used to generate a wallet originally, you can generate 2^31
+unique addresses like so:</p>
+<p>Clone the repo and build the docker image:</p>
+<div class="highlight"><pre><span></span>git clone https://github.com/input-output-hk/cardano-wallet 
+docker build -t cardano-address .
+</pre></div>
+<p>Get the mnemonic and generate a file containing a list of space separated words on one row.</p>
+<p>Run the following:</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">increment</span><span class="o">=</span><span class="m">0</span>
+<span class="o">((</span><span class="nv">increment</span><span class="o">=</span>increment+1<span class="o">))</span> <span class="o">&amp;&amp;</span> cat mnumonic.txt <span class="p">|</span> docker run --rm -i cardano-address key from-recovery-phrase Shelley <span class="p">|</span> docker run --rm -i cardano-address key child 1852H/1815H/0H/0/<span class="nv">$increment</span> <span class="p">|</span> docker run --rm -i cardano-address key public --with-chain-code  <span class="p">|</span> docker run --rm -i cardano-address address payment --network-tag testnet &gt; payment.addr <span class="o">&amp;&amp;</span> cat payment.addr <span class="p">;</span><span class="nb">echo</span> 
+</pre></div>
+</div>
+</article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./more-vim-notes.html" id="previousArticleInCategory"> More <span class="caps">VIM</span> notes</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./Adding-search.html" id="nextArticleInCategory"> Adding Search</a>
+</div>
+<div class="mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        Other articles in:
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="./category/technical/cryptocurrencies.html" id="otherArticlesInCategory"> Cryptocurrencies</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="./blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
+</div>
+</footer>
+<script>
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
+        const indexURL = 'http://localhost:8000/fuse.html'
+        const siteURL = '.'
+
+        // show category options window when cat icon is clicked
+        $( ".catChooser" ).click(function() {
+              $('#catModal').removeClass('hidden');
+        });
+
+
+      </script>
+<script crossorigin="anonymous" src="./theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" src="./theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="./theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" src="./theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" src="./theme/js/themeChooser.js" type="module"></script>
+<script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+</body>
+</html>
