@@ -1,446 +1,440 @@
-<!DOCTYPE html>
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<html class="" id="baz" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>John Mathews Blog - JohnMathews.eu - Archives</title>
-<meta content=" John Mathews Blog - JohnMathews.eu " name="title"/>
-<meta content="John Mathews" name="author"/>
-<meta content=" blog, john mathews, blockchain, developer, bitcoin, data, python " name="keywords"/>
-<meta content="John Mathews' personal blog" name="description"/>
-<meta content="@johnmathews" name="twitter:creator"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content=" John Mathews Blog - JohnMathews.eu " property="twitter:title"/>
-<meta content="John Mathews' personal blog" name="twitter:description"/>
-<meta content=" https://johnmathews.eu " property="twitter:url"/>
-<meta content="" name="twitter:image"/>
-<meta content=" summary_large_image " property="twitter:card"/>
-<meta content="website" property="og:type"/>
-<meta content=" John Mathews Blog - JohnMathews.eu " property="og:title"/>
-<meta content="John Mathews' personal blog" property="og:description"/>
-<meta content=" https://johnmathews.eu " property="og:url"/>
-<meta content="" property="og:image"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
-<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
-<link href="https://fonts.gstatic.com" rel="preconnect"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<script>
-          window.ga = window.ga || function () {
-            (ga.q = ga.q || []).push(arguments);
-          };
-          ga.l = +new Date();
-          ga("create", "UA-82253540-1", "auto");
-          ga("send", "pageview");
-        </script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon">
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
-<script>
+
+      <title>John Mathews Blog - JohnMathews.eu - Archives</title>
+      <meta name="title" content=" John Mathews Blog - JohnMathews.eu "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="keywords" content=" blog, john mathews, blockchain, developer, bitcoin, data, python " />
+      <meta name="description" content="John Mathews' personal blog"/>
+
+      <meta name="twitter:creator" content="@johnmathews"/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+      <meta property="twitter:title" content=" John Mathews Blog - JohnMathews.eu "/>
+      <meta name="twitter:description" content="John Mathews' personal blog"/>
+      <meta property="twitter:url" content=" . "/>
+      <meta name="twitter:image" content=""/>
+      <meta property="twitter:card" content=" summary_large_image "/>
+
+      <meta property="og:type" content="website"/>
+      <meta property="og:title" content=" John Mathews Blog - JohnMathews.eu "/>
+      <meta property="og:description" content="John Mathews' personal blog"/>
+      <meta property="og:url" content=" . "/>
+      <meta property="og:image" content=""/>
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews Feed" href="./None" />
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link async href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+      <link async href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+
+
+      <link rel="icon" href="./extra/favicon.png" />
+
+      <link href="./theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
         }
       </script>
-</link></link></link></head>
-<body class="dark:bg-black">
-<a class="pt-20 mt-20" name="top"></a>
-<nav class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
-<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-<div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
-</div>
-<div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
-<div class="day modeIcon hidden">
-<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon">
-<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
-<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-</button>
-</div>
-</div>
-<div class="flex-none md:hidden block md:inline-block">
-<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
-<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-</button>
-</div>
-</nav>
-<div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
-<div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-2x"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-2x"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5">
-<i class="fas fa-paw fa-2x"></i>
-</button>
-</div>
-</div>
-<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-<div class="text-center">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+
+  </head>
+
+  <body class="dark:bg-black">
+    <a class="pt-20 mt-20" name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
+            <div class="day modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
-<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
-<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="px-5 py-5">
-<div class="">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboardShortcuts" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="px-5 py-5">
+              <div class="">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-<hr class=""/>
-<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
-<div class="markdown">
-<ul class="text-black text-base leading-loose">
-<li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
-<li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
-<li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
-<li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
-<li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
-<li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
-<li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
-<li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
-<li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
-<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
-<li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
-<li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
-<li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
-<li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
-<li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
-<li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
-<li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
-<li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
-<li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
-<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<div class="absolute inset-x-0 w-screen px-3">
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="py-1 px-1">
-<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
-<div class="hidden lg:inline-flex flex">
-<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                <hr class="">
+                <div id="" class="flex flex-row space-x-4 text-base text-gray-700" role="group">
+                  <div class="markdown">
+                    <ul class="text-black text-base leading-loose">
+                      <li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
+                      <li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
+                      <li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
+                      <li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
+                      <li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div id="searchModalBackground" class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <div class="absolute inset-x-0 w-screen px-3">
+            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="py-1 px-1">
+                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
+                <div class="hidden lg:inline-flex flex">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
                   or
                   <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     cmd-K
                   </div>
-</div>
-<ul class="results text-lg text-bold text-gray-600" id="searchResults">
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mx-auto w-full">
-<div class="flex flex-row">
-<div class="hidden xl:inline xl:w-32">
-<div class="w-32">
-<div class="mt-5 2xl:mt-20 fixed flex flex-col">
-<div class="lg:w-32">
-<div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-</div>
-<div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-</div>
-<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
-<div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-lg"></i>
-</div>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+                </div>
+                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                  <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                  </div>
+                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
 <h1>Archives for John Mathews Blog - JohnMathews.eu</h1>
+
 <dl>
-<dt>5 April</dt>
-<dd><a href="https://johnmathews.eu/over-engineering-this-blog.html">Over-Engineering this blog</a></dd>
-<dt>5 April</dt>
-<dd><a href="https://johnmathews.eu/fuse-search.html">Fuse Search</a></dd>
-<dt>17 March</dt>
-<dd><a href="https://johnmathews.eu/python-notes-2.html">Python Notes</a></dd>
-<dt>12 March</dt>
-<dd><a href="https://johnmathews.eu/Adding-search.html">Adding Search</a></dd>
-<dt>5 March</dt>
-<dd><a href="https://johnmathews.eu/cardano-generating-addresses.html">Cardano: Generating Addresses</a></dd>
-<dt>4 March</dt>
-<dd><a href="https://johnmathews.eu/more-vim-notes.html">More <span class="caps">VIM</span> notes</a></dd>
-<dt>4 March</dt>
-<dd><a href="https://johnmathews.eu/two-years-of-vim.html">Two Years Of Vim</a></dd>
-<dt>3 March</dt>
-<dd><a href="https://johnmathews.eu/binance-node-api.html">Binance-Chain: Running a node</a></dd>
-<dt>2 March</dt>
-<dd><a href="https://johnmathews.eu/nohup-and-background-processes.html">nohup and Background Processes</a></dd>
-<dt>2 March</dt>
-<dd><a href="https://johnmathews.eu/file-descriptors.html">File Descriptors and /dev/null</a></dd>
-<dt>1 March</dt>
-<dd><a href="https://johnmathews.eu/cardano-node-api.html">Cardano: Running a full node</a></dd>
-<dt>1 March</dt>
-<dd><a href="https://johnmathews.eu/running-a-polkadot-node.html">Polkadot: Running and interacting with a full node</a></dd>
-<dt>2 February</dt>
-<dd><a href="https://johnmathews.eu/microservices_events_docker.html">Microservices, Docker, Azure</a></dd>
-<dt>1 February</dt>
-<dd><a href="https://johnmathews.eu/regrets-of-the-dying.html">Regrets Of The Dying</a></dd>
-<dt>1 February</dt>
-<dd><a href="https://johnmathews.eu/a-list-of-unconnected-thoughts-and-aphorisms.html">A List Of Unconnected Thoughts And Aphorisms</a></dd>
-<dt>1 February</dt>
-<dd><a href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html">Notes From An Interview With Geoffrey Hinton</a></dd>
-<dt>1 February</dt>
-<dd><a href="https://johnmathews.eu/questions.html">Questions For Interesting Conversations</a></dd>
-<dt>26 January</dt>
-<dd><a href="https://johnmathews.eu/portfolio-image-recognition.html">Portfolio: Image Recognition</a></dd>
-<dt>22 January</dt>
-<dd><a href="https://johnmathews.eu/photographs.html">Photographs</a></dd>
-<dt>21 January</dt>
-<dd><a href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html">Notes From “Mastering Vim Quickly”</a></dd>
-<dt>21 January</dt>
-<dd><a href="https://johnmathews.eu/python-notes.html">Notes From “Powerful Python”</a></dd>
-<dt>20 January</dt>
-<dd><a href="https://johnmathews.eu/mental-models-i-used-to-use.html">Mental Models I Used To Use</a></dd>
-<dt>20 January</dt>
-<dd><a href="https://johnmathews.eu/vim-notes-goto-tag-definition.html">Vim: GoTo Tag Definition</a></dd>
-<dt>20 January</dt>
-<dd><a href="https://johnmathews.eu/whats-so-different-about-now.html">What’s So Different About Now</a></dd>
-<dt>20 January</dt>
-<dd><a href="https://johnmathews.eu/what-happens-next.html">Predicting the Future using Human Nature and Technology</a></dd>
-<dt>19 January</dt>
-<dd><a href="https://johnmathews.eu/financial-doom-and-gloom.html">Financial Doom And Gloom</a></dd>
-<dt>19 January</dt>
-<dd><a href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html">Debugging the more_categories plugin for Pelican</a></dd>
-<dt>19 January</dt>
-<dd><a href="https://johnmathews.eu/different-views-for-different-users.html">Different Views For Different Users</a></dd>
-<dt>18 January</dt>
-<dd><a href="https://johnmathews.eu/different-types-of-problem.html">3 Different Types Of Programming Problems</a></dd>
-<dt>18 January</dt>
-<dd><a href="https://johnmathews.eu/why-i-want-to-write-regularly.html">Why I Want To Write Regularly</a></dd>
-<dt>18 January</dt>
-<dd><a href="https://johnmathews.eu/becoming-a-better-python-developer.html">Python: Becoming A Better Python Developer</a></dd>
-<dt>15 January</dt>
-<dd><a href="https://johnmathews.eu/vim-for-large-projects.html">Managing Large Projects with Vim</a></dd>
-<dt>14 January</dt>
-<dd><a href="https://johnmathews.eu/using-rss.html">Using <span class="caps">RSS</span></a></dd>
-<dt>14 January</dt>
-<dd><a href="https://johnmathews.eu/learning-to-django.html">Notes on learning Django</a></dd>
-<dt>14 January</dt>
-<dd><a href="https://johnmathews.eu/larger-code-bases.html">Data Science vs Web Development: Larger Code Bases</a></dd>
-<dt>6 January</dt>
-<dd><a href="https://johnmathews.eu/test-driven-development.html"><span class="caps">TDD</span>: Test Driven Development</a></dd>
-<dt>5 January</dt>
-<dd><a href="https://johnmathews.eu/faith-in-jesus.html">Why Start Talking About Faith In Jesus?</a></dd>
-<dt>4 January</dt>
-<dd><a href="https://johnmathews.eu/api-design.html"><span class="caps">API</span> Design Principles</a></dd>
-<dt>4 January</dt>
-<dd><a href="https://johnmathews.eu/principles-of-oop.html">Principles Of Object Orientated Programming</a></dd>
-<dt>4 January</dt>
-<dd><a href="https://johnmathews.eu/site-performance.html">Optimizing The Performance Of This Blog</a></dd>
-<dt>4 January</dt>
-<dd><a href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html">Unix: Utilities To Analyse And Update Multiple Text Files</a></dd>
-<dt>18 December</dt>
-<dd><a href="https://johnmathews.eu/a-new-blog-design.html">A New Blog Design</a></dd>
-<dt>8 December</dt>
-<dd><a href="https://johnmathews.eu/product-led-growth.html">Product-Led Growth</a></dd>
-<dt>4 December</dt>
-<dd><a href="https://johnmathews.eu/mom-test.html">The Mom Test</a></dd>
-<dt>3 December</dt>
-<dd><a href="https://johnmathews.eu/obviously-awesome.html">Obviously Awesome</a></dd>
-<dt>1 December</dt>
-<dd><a href="https://johnmathews.eu/How-I-learnt-to-code.html">How I learnt to code</a></dd>
-<dt>19 November</dt>
-<dd><a href="https://johnmathews.eu/1-page-marketing-plan.html">The 1-Page Marketing Plan</a></dd>
-<dt>19 November</dt>
-<dd><a href="https://johnmathews.eu/marketing-101.html">Learning to market</a></dd>
-<dt>28 October</dt>
-<dd><a href="https://johnmathews.eu/pippip.email.html">Pippip.Email</a></dd>
-<dt>8 October</dt>
-<dd><a href="https://johnmathews.eu/between-clients.html">Between Clients</a></dd>
-<dt>2 September</dt>
-<dd><a href="https://johnmathews.eu/btc-fork-analysis.html">Analysis of the mean and median value of transactions on 5 Blockchains</a></dd>
-<dt>14 February</dt>
-<dd><a href="https://johnmathews.eu/shell.html">A faster shell</a></dd>
-<dt>24 January</dt>
-<dd><a href="https://johnmathews.eu/bitcoin-lightning.html">Bitcoin Lightning</a></dd>
-<dt>13 October</dt>
-<dd><a href="https://johnmathews.eu/sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node, quickly</a></dd>
-<dt>11 June</dt>
-<dd><a href="https://johnmathews.eu/bakkerij.html">Bakke-Rij</a></dd>
-<dt>7 June</dt>
-<dd><a href="https://johnmathews.eu/prediction.html">Prediction Markets</a></dd>
-<dt>4 June</dt>
-<dd><a href="https://johnmathews.eu/reading.html">What I’m reading</a></dd>
-<dt>1 June</dt>
-<dd><a href="https://johnmathews.eu/rys-git-tutorial.html">Ry’s Git Tutorial</a></dd>
-<dt>31 May</dt>
-<dd><a href="https://johnmathews.eu/neighbours.html">Neighbours</a></dd>
-<dt>7 December</dt>
-<dd><a href="https://johnmathews.eu/buying-btc.html">How to buy Bitcoin</a></dd>
-<dt>23 November</dt>
-<dd><a href="https://johnmathews.eu/ocean.html">Live near the ocean</a></dd>
-<dt>22 November</dt>
-<dd><a href="https://johnmathews.eu/pangea.html">Pangea</a></dd>
-<dt>21 November</dt>
-<dd><a href="https://johnmathews.eu/bitcoin-vs-gold.html">Bitcoin compared to gold</a></dd>
-<dt>8 November</dt>
-<dd><a href="https://johnmathews.eu/wallet.html">Hardware Wallets</a></dd>
-<dt>28 October</dt>
-<dd><a href="https://johnmathews.eu/algo-trading.html">Trading digital assets</a></dd>
-<dt>19 October</dt>
-<dd><a href="https://johnmathews.eu/chartered.html">I’m a chartered accountant</a></dd>
-<dt>15 September</dt>
-<dd><a href="https://johnmathews.eu/coworking.html">Coworking in Dublin</a></dd>
-<dt>14 September</dt>
-<dd><a href="https://johnmathews.eu/bitnation.html">Bitnation</a></dd>
-<dt>12 August</dt>
-<dd><a href="https://johnmathews.eu/ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using Parity</a></dd>
-<dt>3 August</dt>
-<dd><a href="https://johnmathews.eu/macro-btc.html">Macro analysis of the Bitcoin blockchain</a></dd>
-<dt>10 July</dt>
-<dd><a href="https://johnmathews.eu/corporate.html">Corporate London</a></dd>
-<dt>8 July</dt>
-<dd><a href="https://johnmathews.eu/blockchain-networks.html">Blockchains from the ground up: Part 2</a></dd>
-<dt>8 July</dt>
-<dd><a href="https://johnmathews.eu/move.html">Move</a></dd>
-<dt>4 July</dt>
-<dd><a href="https://johnmathews.eu/flee.html">Flee</a></dd>
-<dt>9 June</dt>
-<dd><a href="https://johnmathews.eu/investment.html">Understanding <span class="caps">VC</span> Investment</a></dd>
-<dt>9 June</dt>
-<dd><a href="https://johnmathews.eu/ambitious.html">How to be an ambitious founder in Europe</a></dd>
-<dt>9 June</dt>
-<dd><a href="https://johnmathews.eu/lis17.html">The Lisbon Investment Summit</a></dd>
-<dt>1 June</dt>
-<dd><a href="https://johnmathews.eu/pelican2.html">Blogging with Pelican: Design, Plugins, Sharing</a></dd>
-<dt>25 May</dt>
-<dd><a href="https://johnmathews.eu/blockchain-introduction.html">Blockchains from the ground up: Part 1</a></dd>
-<dt>12 May</dt>
-<dd><a href="https://johnmathews.eu/london.html">London Rent vs. London Salaries</a></dd>
-<dt>5 May</dt>
-<dd><a href="https://johnmathews.eu/aeternity.html">Introduction to the Æternity blockchain project</a></dd>
-<dt>30 April</dt>
-<dd><a href="https://johnmathews.eu/aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My experience</a></dd>
-<dt>28 April</dt>
-<dd><a href="https://johnmathews.eu/pelican.html">Blogging with Pelican</a></dd>
-<dt>1 February</dt>
-<dd><a href="https://johnmathews.eu/books.html">Analysing a personal library</a></dd>
-<dt>6 January</dt>
-<dd><a href="https://johnmathews.eu/fakegl.html">FakeGL: A Synthetic General Ledger and Trial Balance</a></dd>
-<dt>3 January</dt>
-<dd><a href="https://johnmathews.eu/reconciliation.html">Reconciliation of a trial balance to a general ledger</a></dd>
-<dt>22 December</dt>
-<dd><a href="https://johnmathews.eu/spotify.html">Spotify song history</a></dd>
-<dt>1 December</dt>
-<dd><a href="https://johnmathews.eu/vim.html">Vim!</a></dd>
-<dt>1 December</dt>
-<dd><a href="https://johnmathews.eu/autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a></dd>
-<dt>2 October</dt>
-<dd><a href="https://johnmathews.eu/silos.html">Introduction to my doctorate research - Silos</a></dd>
-<dt>30 August</dt>
-<dd><a href="https://johnmathews.eu/encryption.html">Encryption</a></dd>
-<dt>19 August</dt>
-<dd><a href="https://johnmathews.eu/digital-currencies-the-basics.html">Digital currencies: the basics</a></dd>
-<dt>13 August</dt>
-<dd><a href="https://johnmathews.eu/spare-time.html">Spare time</a></dd>
-<dt>7 August</dt>
-<dd><a href="https://johnmathews.eu/time-until.html">Übersicht widget: Time Until</a></dd>
-<dt>6 August</dt>
-<dd><a href="https://johnmathews.eu/how-to-wake-up-early.html">How to wake up early</a></dd>
-<dt>3 August</dt>
-<dd><a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks + Pandas</a></dd>
-<dt>1 August</dt>
-<dd><a href="https://johnmathews.eu/courseras-data-science-specialisation.html">Coursera’s “Data Science Specialisation”</a></dd>
-<dt>30 July</dt>
-<dd><a href="https://johnmathews.eu/ubersicht-widget-time-since.html">Übersicht widget: Time Since</a></dd>
+    <dt>5 April</dt>
+    <dd><a href="./over-engineering-this-blog.html">Over-Engineering this&nbsp;blog</a></dd>
+    <dt>5 April</dt>
+    <dd><a href="./fuse-search.html">Fuse&nbsp;Search</a></dd>
+    <dt>17 March</dt>
+    <dd><a href="./python-notes-2.html">Python&nbsp;Notes</a></dd>
+    <dt>12 March</dt>
+    <dd><a href="./Adding-search.html">Adding&nbsp;Search</a></dd>
+    <dt>5 March</dt>
+    <dd><a href="./cardano-generating-addresses.html">Cardano: Generating&nbsp;Addresses</a></dd>
+    <dt>4 March</dt>
+    <dd><a href="./more-vim-notes.html">More <span class="caps">VIM</span>&nbsp;notes</a></dd>
+    <dt>4 March</dt>
+    <dd><a href="./two-years-of-vim.html">Two Years Of&nbsp;Vim</a></dd>
+    <dt>3 March</dt>
+    <dd><a href="./binance-node-api.html">Binance-Chain: Running a&nbsp;node</a></dd>
+    <dt>2 March</dt>
+    <dd><a href="./nohup-and-background-processes.html">nohup and Background&nbsp;Processes</a></dd>
+    <dt>2 March</dt>
+    <dd><a href="./file-descriptors.html">File Descriptors and&nbsp;/dev/null</a></dd>
+    <dt>1 March</dt>
+    <dd><a href="./cardano-node-api.html">Cardano: Running a full&nbsp;node</a></dd>
+    <dt>1 March</dt>
+    <dd><a href="./running-a-polkadot-node.html">Polkadot: Running and interacting with a full&nbsp;node</a></dd>
+    <dt>2 February</dt>
+    <dd><a href="./microservices_events_docker.html">Microservices, Docker,&nbsp;Azure</a></dd>
+    <dt>1 February</dt>
+    <dd><a href="./regrets-of-the-dying.html">Regrets Of The&nbsp;Dying</a></dd>
+    <dt>1 February</dt>
+    <dd><a href="./a-list-of-unconnected-thoughts-and-aphorisms.html">A List Of Unconnected Thoughts And&nbsp;Aphorisms</a></dd>
+    <dt>1 February</dt>
+    <dd><a href="./notes-from-an-interview-with-geoffrey-hinton.html">Notes From An Interview With Geoffrey&nbsp;Hinton</a></dd>
+    <dt>1 February</dt>
+    <dd><a href="./questions.html">Questions For Interesting&nbsp;Conversations</a></dd>
+    <dt>26 January</dt>
+    <dd><a href="./portfolio-image-recognition.html">Portfolio: Image&nbsp;Recognition</a></dd>
+    <dt>22 January</dt>
+    <dd><a href="./photographs.html">Photographs</a></dd>
+    <dt>21 January</dt>
+    <dd><a href="./notes-from-mastering-vim-quickly.html">Notes From &#8220;Mastering Vim&nbsp;Quickly&#8221;</a></dd>
+    <dt>21 January</dt>
+    <dd><a href="./python-notes.html">Notes From &#8220;Powerful&nbsp;Python&#8221;</a></dd>
+    <dt>20 January</dt>
+    <dd><a href="./mental-models-i-used-to-use.html">Mental Models I Used To&nbsp;Use</a></dd>
+    <dt>20 January</dt>
+    <dd><a href="./vim-notes-goto-tag-definition.html">Vim: GoTo Tag&nbsp;Definition</a></dd>
+    <dt>20 January</dt>
+    <dd><a href="./whats-so-different-about-now.html">What&#8217;s So Different About&nbsp;Now</a></dd>
+    <dt>20 January</dt>
+    <dd><a href="./what-happens-next.html">Predicting the Future using Human Nature and&nbsp;Technology</a></dd>
+    <dt>19 January</dt>
+    <dd><a href="./financial-doom-and-gloom.html">Financial Doom And&nbsp;Gloom</a></dd>
+    <dt>19 January</dt>
+    <dd><a href="./debugging-more-categories-pelican-plugin.html">Debugging the more_categories plugin for&nbsp;Pelican</a></dd>
+    <dt>19 January</dt>
+    <dd><a href="./different-views-for-different-users.html">Different Views For Different&nbsp;Users</a></dd>
+    <dt>18 January</dt>
+    <dd><a href="./different-types-of-problem.html">3 Different Types Of Programming&nbsp;Problems</a></dd>
+    <dt>18 January</dt>
+    <dd><a href="./why-i-want-to-write-regularly.html">Why I Want To Write&nbsp;Regularly</a></dd>
+    <dt>18 January</dt>
+    <dd><a href="./becoming-a-better-python-developer.html">Python: Becoming A Better Python&nbsp;Developer</a></dd>
+    <dt>15 January</dt>
+    <dd><a href="./vim-for-large-projects.html">Managing Large Projects with&nbsp;Vim</a></dd>
+    <dt>14 January</dt>
+    <dd><a href="./using-rss.html">Using <span class="caps">RSS</span></a></dd>
+    <dt>14 January</dt>
+    <dd><a href="./learning-to-django.html">Notes on learning&nbsp;Django</a></dd>
+    <dt>14 January</dt>
+    <dd><a href="./larger-code-bases.html">Data Science vs Web Development: Larger Code&nbsp;Bases</a></dd>
+    <dt>6 January</dt>
+    <dd><a href="./test-driven-development.html"><span class="caps">TDD</span>: Test Driven&nbsp;Development</a></dd>
+    <dt>5 January</dt>
+    <dd><a href="./faith-in-jesus.html">Why Start Talking About Faith In&nbsp;Jesus?</a></dd>
+    <dt>4 January</dt>
+    <dd><a href="./api-design.html"><span class="caps">API</span> Design&nbsp;Principles</a></dd>
+    <dt>4 January</dt>
+    <dd><a href="./principles-of-oop.html">Principles Of Object Orientated&nbsp;Programming</a></dd>
+    <dt>4 January</dt>
+    <dd><a href="./site-performance.html">Optimizing The Performance Of This&nbsp;Blog</a></dd>
+    <dt>4 January</dt>
+    <dd><a href="./using-unix-utilities-to-analyse-and-update-multiple-files.html">Unix: Utilities To Analyse And Update Multiple Text&nbsp;Files</a></dd>
+    <dt>18 December</dt>
+    <dd><a href="./a-new-blog-design.html">A New Blog&nbsp;Design</a></dd>
+    <dt>8 December</dt>
+    <dd><a href="./product-led-growth.html">Product-Led&nbsp;Growth</a></dd>
+    <dt>4 December</dt>
+    <dd><a href="./mom-test.html">The Mom&nbsp;Test</a></dd>
+    <dt>3 December</dt>
+    <dd><a href="./obviously-awesome.html">Obviously&nbsp;Awesome</a></dd>
+    <dt>1 December</dt>
+    <dd><a href="./How-I-learnt-to-code.html">How I learnt to&nbsp;code</a></dd>
+    <dt>19 November</dt>
+    <dd><a href="./1-page-marketing-plan.html">The 1-Page Marketing&nbsp;Plan</a></dd>
+    <dt>19 November</dt>
+    <dd><a href="./marketing-101.html">Learning to&nbsp;market</a></dd>
+    <dt>28 October</dt>
+    <dd><a href="./pippip.email.html">Pippip.Email</a></dd>
+    <dt>8 October</dt>
+    <dd><a href="./between-clients.html">Between&nbsp;Clients</a></dd>
+    <dt>14 February</dt>
+    <dd><a href="./shell.html">A faster&nbsp;shell</a></dd>
+    <dt>24 January</dt>
+    <dd><a href="./bitcoin-lightning.html">Bitcoin&nbsp;Lightning</a></dd>
+    <dt>13 October</dt>
+    <dd><a href="./sync-bitcoin-core-node.html">Sync a <span class="caps">BTC</span> node,&nbsp;quickly</a></dd>
+    <dt>11 June</dt>
+    <dd><a href="./bakkerij.html">Bakke-Rij</a></dd>
+    <dt>7 June</dt>
+    <dd><a href="./prediction.html">Prediction&nbsp;Markets</a></dd>
+    <dt>4 June</dt>
+    <dd><a href="./reading.html">What I&#8217;m&nbsp;reading</a></dd>
+    <dt>1 June</dt>
+    <dd><a href="./rys-git-tutorial.html">Ry&#8217;s Git&nbsp;Tutorial</a></dd>
+    <dt>31 May</dt>
+    <dd><a href="./neighbours.html">Neighbours</a></dd>
+    <dt>7 December</dt>
+    <dd><a href="./buying-btc.html">How to buy&nbsp;Bitcoin</a></dd>
+    <dt>23 November</dt>
+    <dd><a href="./ocean.html">Live near the&nbsp;ocean</a></dd>
+    <dt>22 November</dt>
+    <dd><a href="./pangea.html">Pangea</a></dd>
+    <dt>21 November</dt>
+    <dd><a href="./bitcoin-vs-gold.html">Bitcoin compared to&nbsp;gold</a></dd>
+    <dt>8 November</dt>
+    <dd><a href="./wallet.html">Hardware&nbsp;Wallets</a></dd>
+    <dt>19 October</dt>
+    <dd><a href="./chartered.html">I&#8217;m a chartered&nbsp;accountant</a></dd>
+    <dt>15 September</dt>
+    <dd><a href="./coworking.html">Coworking in&nbsp;Dublin</a></dd>
+    <dt>14 September</dt>
+    <dd><a href="./bitnation.html">Bitnation</a></dd>
+    <dt>12 August</dt>
+    <dd><a href="./ethereum-parity-multisig-wallet.html">Create a Multi-Signature Ethereum wallet using&nbsp;Parity</a></dd>
+    <dt>10 July</dt>
+    <dd><a href="./corporate.html">Corporate&nbsp;London</a></dd>
+    <dt>8 July</dt>
+    <dd><a href="./blockchain-networks.html">Blockchains from the ground up: Part&nbsp;2</a></dd>
+    <dt>8 July</dt>
+    <dd><a href="./move.html">Move</a></dd>
+    <dt>4 July</dt>
+    <dd><a href="./flee.html">Flee</a></dd>
+    <dt>9 June</dt>
+    <dd><a href="./investment.html">Understanding <span class="caps">VC</span>&nbsp;Investment</a></dd>
+    <dt>9 June</dt>
+    <dd><a href="./ambitious.html">How to be an ambitious founder in&nbsp;Europe</a></dd>
+    <dt>9 June</dt>
+    <dd><a href="./lis17.html">The Lisbon Investment&nbsp;Summit</a></dd>
+    <dt>1 June</dt>
+    <dd><a href="./pelican2.html">Blogging with Pelican: Design, Plugins,&nbsp;Sharing</a></dd>
+    <dt>25 May</dt>
+    <dd><a href="./blockchain-introduction.html">Blockchains from the ground up: Part&nbsp;1</a></dd>
+    <dt>12 May</dt>
+    <dd><a href="./london.html">London Rent vs. London&nbsp;Salaries</a></dd>
+    <dt>5 May</dt>
+    <dd><a href="./aeternity.html">Introduction to the Æternity blockchain&nbsp;project</a></dd>
+    <dt>30 April</dt>
+    <dd><a href="./aeternity-ico.html">The Æternity <span class="caps">ICO</span>: My&nbsp;experience</a></dd>
+    <dt>28 April</dt>
+    <dd><a href="./pelican.html">Blogging with&nbsp;Pelican</a></dd>
+    <dt>1 December</dt>
+    <dd><a href="./vim.html">Vim!</a></dd>
+    <dt>1 December</dt>
+    <dd><a href="./autumn-bin-and-path.html">Autumn, <span class="caps">BIN</span> and $<span class="caps">PATH</span></a></dd>
+    <dt>2 October</dt>
+    <dd><a href="./silos.html">Introduction to my doctorate research -&nbsp;Silos</a></dd>
+    <dt>30 August</dt>
+    <dd><a href="./encryption.html">Encryption</a></dd>
+    <dt>19 August</dt>
+    <dd><a href="./digital-currencies-the-basics.html">Digital currencies: the&nbsp;basics</a></dd>
+    <dt>13 August</dt>
+    <dd><a href="./spare-time.html">Spare&nbsp;time</a></dd>
+    <dt>7 August</dt>
+    <dd><a href="./time-until.html">Übersicht widget: Time&nbsp;Until</a></dd>
+    <dt>6 August</dt>
+    <dd><a href="./how-to-wake-up-early.html">How to wake up&nbsp;early</a></dd>
+    <dt>3 August</dt>
+    <dd><a href="./Jupyter-ipython-notebooks-pandas.html">Jupyter (iPython) notebooks +&nbsp;Pandas</a></dd>
+    <dt>1 August</dt>
+    <dd><a href="./courseras-data-science-specialisation.html">Coursera&#8217;s &#8220;Data Science&nbsp;Specialisation&#8221;</a></dd>
+    <dt>30 July</dt>
+    <dd><a href="./ubersicht-widget-time-since.html">Übersicht widget: Time&nbsp;Since</a></dd>
 </dl>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
-<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+        <a class="px-3" href="./blog.html">Blog Posts</a> |
         <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
-</div>
-</footer>
-<script>
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-        const indexURL = 'https://johnmathews.eu/fuse.html'
-        const siteURL = 'https://johnmathews.eu'
+      </div>
+    </footer>
+
+      <script>
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
+        const indexURL = 'http://localhost:8000/fuse.html'
+        const siteURL = '.'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -449,17 +443,20 @@
 
 
       </script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
-<script>
+      <script type="module" src="./theme/js/categoryChooser.js" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
+      <script type="module" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
+
+      <script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {
                   console.log('flag1')
                   $('#catModal').addClass('hidden');
                 });
       </script>
-</body>
+
+  </body>
+
 </html>

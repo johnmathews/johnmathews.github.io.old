@@ -52,10 +52,10 @@ $(document).ready(function () {
   Mousetrap.bind('ctrl+k', function(){incrementFocus('b')})
   Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
-    window.scrollBy({top: 110, left: 0, behavior: 'smooth'})
+    window.scrollBy({top: 200, left: 0, behavior: 'smooth'})
   })
   Mousetrap.bind('k', function () {
-    window.scrollBy({top: -110, left: 0, behavior: 'smooth'})
+    window.scrollBy({top: -200, left: 0, behavior: 'smooth'})
   })
   Mousetrap.bind('g i', function () {
     window.location.href = `${siteURL}/blog.html`

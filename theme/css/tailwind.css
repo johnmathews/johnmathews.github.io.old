@@ -4,7 +4,7 @@
 
 .image-process-logo {
 	@apply ml-0 !important;
-	@apply border-2 border-white !important;
+	@apply p-2 border-2 border-white dark:border-gray-500 !important;
 }
 
 .toc {
