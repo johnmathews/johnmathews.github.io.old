@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Learning</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/learning.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-01-18T11:51:00+01:00</updated><entry><title>Why I Want To Write Regularly</title><link href="https://johnmathews.eu/why-i-want-to-write-regularly.html" rel="alternate"/><published>2021-01-18T11:51:00+01:00</published><updated>2021-01-18T11:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/why-i-want-to-write-regularly.html</id><summary type="html"/><content type="html">&lt;p&gt;As you can see, I’ve recently started writing more frequently. I want to do
+this because I often have thoughts which I’d like to explore and develop
+further, but rarely do. I find writing hard because it forces me to organise my
+thoughts and look at how substantial they really are, or aren’t.&lt;/p&gt;
+&lt;p&gt;There is truth in the saying that “to know a thing you need to be able to teach
+it &lt;sup id="sf-why-i-want-to-write-regularly-1-back"&gt;&lt;a class="simple-footnote" href="#sf-why-i-want-to-write-regularly-1" title="wikipedia article, and some extenal validation"&gt;1&lt;/a&gt;&lt;/sup&gt;
+“, and writing well has several similarities to teaching. Can I really copy a
+collection of thoughts from my head to yours?&lt;/p&gt;
+&lt;p&gt;I remember watching Inception and hearing that the most resilient parasite is
+an idea. I think that’s mostly true, and the older I get the more I believe
+that ideas matter&lt;sup id="sf-why-i-want-to-write-regularly-2-back"&gt;&lt;a class="simple-footnote" href="#sf-why-i-want-to-write-regularly-2" title="and also, that asking the right question is more important than finding the right answer. I guess asking the right question is always necessary, but finding the right answer is only sometimes sufficient. Sometimes you can get the answer a bit wrong if you asked the right question, and still get enough benefits to avoid the problem."&gt;2&lt;/a&gt;&lt;/sup&gt;. They have so many
+subtle consequences. They are the first
+&lt;a href="https://en.wikipedia.org/wiki/Domino_effect"&gt;dominos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I don’t expect writing regularly to become a permanent habit - it doesn’t need
+to be. But I do want to focus on it for a while so that I become significantly
+better. It’s a skill that has too many benefits to be ignored.&lt;/p&gt;
+&lt;p&gt;I realised that the blogs I remembered most were focussed and unapologetic
+about their priorities. Most of them have a lot of text and do not focus on
+design. They make it easy to read text, and don’t spend time or attention on
+header images or styling. &lt;/p&gt;
+&lt;p&gt;Before I redesigned this blog I had default settings that asked me to supply an
+image for each post, and for a summary, and a suggested tweet. None of it was
+necessary, and whilst they all tried to make the blog better they ended up
+making it worse because they added complexity and distracted from the main thing.&lt;/p&gt;
+&lt;p&gt;These features are still there if I want to use them, but they are not set up
+to be used by default anymore. They’ve been moved to the background, and if I
+forget they exist then that is &lt;span class="caps"&gt;OK&lt;/span&gt; - it just shows they weren’t as important in
+practice as I thought they’d be when I was &lt;a href="https://en.wiktionary.org/wiki/yak_shaving"&gt;Yak
+Shaving&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"&gt;You Ain’t Gonna Need
+It&lt;/a&gt;, mate.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-why-i-want-to-write-regularly-1"&gt;wikipedia
+&lt;a href="https://en.wikipedia.org/wiki/Learning_by_teaching"&gt;article&lt;/a&gt;, and some
+&lt;a href="https://web.archive.org/web/20210118112910/https://digest.bps.org.uk/2018/05/04/learning-by-teaching-others-is-extremely-effective-a-new-study-tested-a-key-reason-why/"&gt;extenal
+validation&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-why-i-want-to-write-regularly-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-why-i-want-to-write-regularly-2"&gt;and also, that asking the right question is more
+important than finding the right answer. I guess asking the right question is
+always necessary, but finding the right answer is only sometimes &lt;a href="https://en.wikipedia.org/wiki/Necessity_and_sufficiency"&gt;sufficient&lt;/a&gt;.
+Sometimes you can get the answer a bit wrong if you asked the right question,
+and still get enough benefits to avoid the problem. &lt;a class="simple-footnote-back" href="#sf-why-i-want-to-write-regularly-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>Using RSS</title><link href="https://johnmathews.eu/using-rss.html" rel="alternate"/><published>2021-01-14T16:52:00+01:00</published><updated>2021-01-14T16:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/using-rss.html</id><summary type="html"/><content type="html">&lt;h3 id="updated-10-feb-2021"&gt;Updated: 10 Feb 2021&lt;/h3&gt;
+&lt;p&gt;I found a &lt;a href="https://brandur.org/fragments/rss-abandon"&gt;blog post&lt;/a&gt; which is
+surprisingly similar to my thoughts on &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds, but better presented and
+thought through. The post mentions the idea that “&lt;span class="caps"&gt;RSS&lt;/span&gt; is about capturing the
+long tail of blogs that don’t post frequently”
+&lt;sup id="sf-using-rss-1-back"&gt;&lt;a class="simple-footnote" href="#sf-using-rss-1" title="https://marco.org/2013/03/26/power-of-rss"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;This idea crystalised why I was so glad I’d started using &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds
+again. If readers use &lt;span class="caps"&gt;RSS&lt;/span&gt;, then authors don’t need to concern themselves with
+attention. This removes pressure on the author to post
+frequently and lets them focus on quality over quantity. News feeds and ad
+supported platforms have fundamentally different mechanics and incentives.&lt;/p&gt;
+&lt;p&gt;With &lt;span class="caps"&gt;RSS&lt;/span&gt; I can let good quality content come to me, on its own schedule. I
+don’t need to remember to look for it, and the authors don’t need to remind me
+that they exist.&lt;/p&gt;
+&lt;h2 id="google-reader"&gt;Google Reader&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; is a very effective way of having good quality information
+come to you. Back in 2008, I used to use Google Reader to subscribe to &lt;span class="caps"&gt;RSS&lt;/span&gt;
+feeds. I was an aspiring photographer back then and I remember being subscribed
+to around 80 blogs. Each day I’d read articles from whoever had posted
+something new, without needing to visit their websites or remember who they are
+or that I’d subscribed to their blog. The authors didn’t need to optimize their
+output according to an opaque and changing algorithm either - they didn’t need
+to optimize article length, tags, post frequency, image inclusion or linked
+content. They could write how they wanted to, which I suspect leads to higher
+quality content.&lt;/p&gt;
+&lt;h2 id="social-media"&gt;Social Media&lt;/h2&gt;
+&lt;p&gt;A few years later Google Reader was closed down, presumably because using &lt;span class="caps"&gt;RSS&lt;/span&gt;
+didn’t fit with Googles advertising model. I was unaware of it at the time but
+I imagine it sent shockwaves through blogging communities and probably upended
+many businesses. I mostly stopped reading blogs.&lt;/p&gt;
+&lt;p&gt;Facebook was growing fast, Instagram felt new and exciting, and content was
+moving onto ‘platforms’, or into walled gardens. And as they kept on growing
+the average quality of the content decreased.&lt;/p&gt;
+&lt;p&gt;Twitter is like this now I think. There are some real diamonds to be found from
+time to time, but there’s a lot of mud too. Mostly its just mud, but the
+occasional diamond can have outsized benefits.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; isn’t like this. I choose the contents of my ‘news feed’, and
+each article can be much longer than a Tweet, or a caption to a photo, or a
+status update. It’s hard to write well and to create an interesting or useful blog
+post, and that makes it harder to dilute quality with entertaining
+distractions. I have complete control about what content I see, and I can
+change it whenever I want. The process is designed around me.&lt;/p&gt;
+&lt;h2 id="reeder5"&gt;Reeder5&lt;/h2&gt;
+&lt;p&gt;I used &lt;code&gt;netNewsWire&lt;/code&gt; for a few weeks, but it couldn’t sync between my laptop
+and phone, so I bought &lt;code&gt;Reeder 5&lt;/code&gt;. It’s got a few unusual design patterns, but
+ it works well and has all the features I want. I’ve been unsubscribing from
+ email newsletters and subscribing to the &lt;span class="caps"&gt;RSS&lt;/span&gt; feed instead.&lt;/p&gt;
+&lt;p&gt;It keeps my inbox quieter, and it feels good to have a ‘separation of
+ concerns’. It makes it easier to read interesting content without being distracted.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-using-rss-1"&gt;&lt;a href="https://marco.org/2013/03/26/power-of-rss"&gt;https://marco.org/2013/03/26/power-of-rss&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-using-rss-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>How I learnt to code</title><link href="https://johnmathews.eu/How-I-learnt-to-code.html" rel="alternate"/><published>2020-12-01T13:51:00+01:00</published><updated>2020-12-01T13:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-01:/How-I-learnt-to-code.html</id><summary type="html"/><content type="html">&lt;p&gt;4 years ago I started learning how to code, and it was &lt;em&gt;really&lt;/em&gt; difficult! It’s
+still difficult, but I now have a collection of tools and perspectives that
+make it less daunting (more on that below). Leveling up requires one more
+abstraction to wrap my head around, or one more &lt;span class="caps"&gt;API&lt;/span&gt; to understand. I can do it.&lt;/p&gt;
+&lt;p&gt;But I don’t think it needed to be so difficult, so now I’m building &lt;a href="https://codeschoolmeta.com"&gt;Code
+School Meta&lt;/a&gt; to make it easier to learn how to code.&lt;/p&gt;
+&lt;p&gt;Learning to code has been fun, ultimately successful, and life changing (hello
+job security!) but at the beginning it was sooo slow, and super tricky.&lt;/p&gt;
+&lt;p&gt;I remember feeling like an imposter, and thinking that I was definitely not a
+real developer - I hadn’t taken any classes in computer science. I felt like I
+knew almost nothing about anything. &lt;/p&gt;
+&lt;p&gt;The process began with Pandas, a (&lt;em&gt;the&lt;/em&gt;) Python analytics library. Spreadsheets
+were slowing me down at work, and I was bored. I found this &lt;a href="https://youtu.be/5JnMutdy6Fw"&gt;great
+tutorial&lt;/a&gt; by Brandon Rhodes. From there I found
+out about Jupyter Notebooks, and then I found about Github pages and how to
+make a blog using &lt;a href="https://blog.getpelican.com/"&gt;pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That led to &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; (and also JavaScript, which I tried very hard to avoid
+for as long as possible). I felt like a monkey bashing a keyboard as I tried to
+make &lt;span class="caps"&gt;HTML&lt;/span&gt; elements do what I wanted.&lt;/p&gt;
+&lt;p&gt;Git was next, but I found this &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;amazing tutorial&lt;/a&gt;
+to help me learn. It made Git seem &lt;span class="caps"&gt;OK&lt;/span&gt;, and also helped &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; make more
+sense too. Bonus!&lt;/p&gt;
+&lt;p&gt;I suddenly realized that great learning materials are crucial if I was going to
+keep momentum and keep on enjoying the thrill of seeing the computer do
+something I hadn’t made it do before.&lt;/p&gt;
+&lt;p&gt;So now I’m now working on &lt;a href="https://codeschoolmeta.com"&gt;Code School: Meta&lt;/a&gt;. It’s
+an online community to make it easier to teach yourself how to code - less
+confusion about how to get started or what to learn next, more encouragement,
+and lots of high quality resources.&lt;/p&gt;
+&lt;p&gt;If you’d like to know more, please &lt;a href="https://codeschoolmeta.com"&gt;check it out&lt;/a&gt;
+and sign up for updates.&lt;/p&gt;</content><category term="Non-technical/Learning"/></entry></feed>
