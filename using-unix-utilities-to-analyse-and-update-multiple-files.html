@@ -339,12 +339,14 @@ Tools</code> I did:</p>
 <p>Since writing this post I’ve modified the categories a few times. The commands I
 run to switch out categories are as follows:</p>
 <div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">oldName</span><span class="o">=</span>Lifestyle<span class="p">;</span> <span class="nb">export</span> <span class="nv">newName</span><span class="o">=</span>Living
-grep -l <span class="s2">"Category: Non-technical/</span><span class="nv">$oldName</span><span class="s2">"</span> content/articles/*.md <span class="p">|</span> xargs sed -i <span class="s1">''</span> <span class="s2">"s/Category: Non-technical\/</span><span class="nv">$oldName</span><span class="s2">/Category: Non-technical\/</span><span class="nv">$newName</span><span class="s2">/g"</span>
+grep -l <span class="s2">"Category: .*Non-technical/</span><span class="nv">$oldName</span><span class="s2">"</span> content/articles/*.md <span class="p">|</span> xargs sed -i <span class="s1">''</span> <span class="s2">"s/Non-technical\/</span><span class="nv">$oldName</span><span class="s2">/Non-technical\/</span><span class="nv">$newName</span><span class="s2">/g"</span>
 </pre></div>
 <p>Notes:</p>
 <ul>
-<li>Double quotes are not the same as single quotes</li>
-<li>This won’t work on articles with multiple categories</li>
+<li>Double quotes are not the same as single quotes. You need to use them if you
+    want to access variables or commands inside a string.</li>
+<li><code>.*</code> is a wildcard operator allowing any number of characters. It’s
+    required when an article belongs to multiple categories.</li>
 </ul>
 </div>
 </article>

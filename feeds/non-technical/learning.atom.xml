@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Learning</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/learning.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-01-18T11:51:00+01:00</updated><entry><title>Why I Want To Write Regularly</title><link href="https://johnmathews.eu/why-i-want-to-write-regularly.html" rel="alternate"/><published>2021-01-18T11:51:00+01:00</published><updated>2021-01-18T11:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/why-i-want-to-write-regularly.html</id><summary type="html"/><content type="html">&lt;p&gt;As you can see, I’ve recently started writing more frequently. I want to do
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Learning</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/learning.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-02-01T22:17:00+01:00</updated><entry><title>Notes From An Interview With Geoffrey Hinton</title><link href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html" rel="alternate"/><published>2021-02-01T22:17:00+01:00</published><updated>2021-02-01T22:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/notes-from-an-interview-with-geoffrey-hinton.html</id><summary type="html"/><content type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Read the literature but don’t read too much&lt;/strong&gt; of it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Trust your intuitions&lt;/strong&gt;, because if you don’t trust them then there’s no point&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt;&lt;strong&gt;This person is either drunk or stupid&lt;/strong&gt;‘ - feedback on one of his papers that went on to become significant &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For creative researchers; read a bit of the literature and notice something that you think everybody is doing wrong. (I guess &lt;span class="caps"&gt;GH&lt;/span&gt; is contrarian in this sense)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Look for a problem that doesn’t feel &lt;em&gt;right&lt;/em&gt;. Then figure out how to do it right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When people tell you that your (contrarian) approach is just no good, just keep at it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Either your intuitions are good or they’re not. If they are good then you should follow them and you will eventually be successful. If they are bad then it doesn’t matter what you do.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You might as well trust your intutions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you try to replicate a published paper you discover all the little tricks needed to make it work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Never stop programming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you give a student something to do and they are a bad student then they’ll come back and say it didn’t work. They’ll say this because of some little decision they made which they didn’t realise was crucial. But if you give it to a good student, you can give them anything and they will come back and say it works&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read enough so that you start developing intuitions, and then trust your intuitions and go for it! - Don’t be too worried if everybody else says its nonsense.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you think it’s a really good idea, and others tell you its complete nonsense, then you know you are really onto something!&lt;/p&gt;
+&lt;p&gt;One example of this is when Ramford and I first came up with variational methods, I sent a mail explaining it to a former student, who showed it to his colleagues. He told me that they said ‘Either this guy is drunk or he is just stupid’. They really really thought is was nonsense.&lt;/p&gt;
+&lt;p&gt;Maybe that is partly because of how i explained it - I explained it in intuitive terms, but when you have what you think is a good idea and other people think it is complete rubbish, that is the sign of a really good idea.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;See if you can find an advisor who has beliefs similar to your own, because if you work on stuff that your adviser feels deeply about, then you’ll get a lot of good advice and time from them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read enough so that you can trust your intuitions&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>Mental Models I Used To Use</title><link href="https://johnmathews.eu/mental-models-i-used-to-use.html" rel="alternate"/><published>2021-01-20T16:48:00+01:00</published><updated>2021-01-20T16:48:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/mental-models-i-used-to-use.html</id><summary type="html"/><content type="html">&lt;p&gt;The rules&lt;sup id="sf-mental-models-i-used-to-use-1-back"&gt;&lt;a class="simple-footnote" href="#sf-mental-models-i-used-to-use-1" title="or policies"&gt;1&lt;/a&gt;&lt;/sup&gt; and mental models that helped me
+succeed in one season or phase of life may not be the best for the next phase.&lt;/p&gt;
+&lt;p&gt;Here is a list of a few mental models I remember being concious of in previous
+years. Probably I’ve already forgotten some.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Always ask “why…”&lt;/em&gt;. Be obsessive about this. It’s going to make things
+    harder for a while before things get easier. You’ll find difficult answers
+    that you otherwise wouldn’t. If you’re only concerned with the present then
+    its true that ignorance is bliss, but otherwise it’s a liability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;What if…”&lt;/em&gt; is another good question to ask a lot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Adapt&lt;/em&gt; to the situation, don’t make it adapt to you if you have any
+    choice. Be kind of like water, going around things and through the gaps.
+    Look for the edges and the gaps, the parts that aren’t well known.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Let people talk&lt;/em&gt; as much as they want to. Shut up and listen. If they
+    mean you harm or don’t respect you then it’ll become more obvious the more
+    they keep talking. If they mean you well or they’re saying something
+    useful, you will benefit more from letting them talk more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Inversion&lt;/em&gt; - it can be hard to know if you should do something, but how
+    would you feel if you didn’t do it, or if it didn’t happen?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Regrets are inevitable&lt;/em&gt;, everyone has them. Same as making mistakes. Let
+    your regrets be for things that you did do, and not what you didn’t do.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you are willing to try something, fail at it, and still be glad that you
+    tried, then you should almost definitely do it. Commit to it and enjoy the
+    experience! Don’t be scared, or at least, be scared &lt;em&gt;and&lt;/em&gt; optimistic and
+    happy&lt;sup id="sf-mental-models-i-used-to-use-2-back"&gt;&lt;a class="simple-footnote" href="#sf-mental-models-i-used-to-use-2" title="Courage isn’t the absence of fear. It’s being scared and doing     the right thing anyway."&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There is beauty and luxury in being in such a bad spot that you are backed
+    into a corner with seemingly no way out. Things become black and white,
+    instead of shades of gray, and that will make priorities and options much
+    clearer. You are likely to work very efficiently and effectively in this
+    scenario, and you will learn important things about yourself.&lt;/p&gt;
+&lt;p&gt;Now that I’m older and I have responsibilities, I can’t ever let things
+become so bad that a situation becomes black and white. I have to
+navigate a world of grays. If they do become black and white, I’ll
+already have a long list of failings.&lt;/p&gt;
+&lt;p&gt;When I was younger, things were more fragile. My resources were smaller and
+things could quickly flip from good to bad. Enjoy the few benefits that a
+situation like that gives, because (hopefully) once its gone its gone for good.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The best way to solve a problem is to prevent it from occurring in the first
+    place. Succeeding at this will bring its own challenges.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take responsibility for things you are not responsible for, kind of. Do it
+    deliberately and for your own benefit, but don’t forget that you are only
+    pretending that it’s your responsibility.&lt;/p&gt;
+&lt;p&gt;If you do this, you will force yourself to understand a situation more
+deeply and from other peoples perspectives. This will let you learn faster
+and help you in future. Keep this at arms length though - it’s make-believe
+and you need to be able to switch it on and off. It’s a toy for you to play
+with. This seems to be what “extreme responsibility” is.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I think its important to have mental models that you’re comfortable with,
+because it lets you make decisions quickly and consistently. But understand
+that &lt;a href="https://fs.blog/2015/11/map-and-territory/"&gt;the map is not the
+territory&lt;/a&gt;, and these are just
+tools in a toolbox.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-mental-models-i-used-to-use-1"&gt;or policies &lt;a class="simple-footnote-back" href="#sf-mental-models-i-used-to-use-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-mental-models-i-used-to-use-2"&gt;Courage isn’t the absence of fear. It’s being scared and doing
+    the right thing anyway. &lt;a class="simple-footnote-back" href="#sf-mental-models-i-used-to-use-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>Why I Want To Write Regularly</title><link href="https://johnmathews.eu/why-i-want-to-write-regularly.html" rel="alternate"/><published>2021-01-18T11:51:00+01:00</published><updated>2021-01-18T11:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/why-i-want-to-write-regularly.html</id><summary type="html"/><content type="html">&lt;p&gt;As you can see, I’ve recently started writing more frequently. I want to do
 this because I often have thoughts which I’d like to explore and develop
 further, but rarely do. I find writing hard because it forces me to organise my
 thoughts and look at how substantial they really are, or aren’t.&lt;/p&gt;
@@ -114,4 +235,184 @@ an online community to make it easier to teach yourself how to code - less
 confusion about how to get started or what to learn next, more encouragement,
 and lots of high quality resources.&lt;/p&gt;
 &lt;p&gt;If you’d like to know more, please &lt;a href="https://codeschoolmeta.com"&gt;check it out&lt;/a&gt;
-and sign up for updates.&lt;/p&gt;</content><category term="Non-technical/Learning"/></entry></feed>
+and sign up for updates.&lt;/p&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>What I’m reading</title><link href="https://johnmathews.eu/reading.html" rel="alternate"/><published>2018-06-04T15:52:00+02:00</published><updated>2018-06-04T15:52:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-04:/reading.html</id><summary type="html">&lt;p&gt;A list of interesting things. June&amp;nbsp;2018&lt;/p&gt;</summary><content type="html">&lt;h2 id="articles"&gt;Articles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://fs.blog/mental-models/"&gt;Mental models&lt;/a&gt; A comprehensive list organised around different disciplines. It a long read but probably one of the most easy to apply and tangibly useful articles I’ve read recently.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.paulgraham.com/vb.html"&gt;Life is short&lt;/a&gt; - Is life actually short, or would we always want more time, no matter how much we could have?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.eugenewei.com/blog/2018/5/21/invisible-asymptotes"&gt;Invisible asymptotes&lt;/a&gt; - A well written and long look at various facets of business strategy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://osam.com/Commentary/factors-from-scratch"&gt;Factors from scratch&lt;/a&gt; - Investing: A unified framework to explain how factors work. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://kottke.org/18/06/a-sad-update-about-a-scissors-maker-that-went-viral"&gt;This is tragic&lt;/a&gt; - “…But I do think this highlights the potential disconnects between mental health &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; business, publicity &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; success, and success &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; happiness. The internet can seem so intimate but ultimately it’s a thin view of an individual’s or company’s reality.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://statico.github.io/vim3.html"&gt;Vim&lt;/a&gt; after 15 years&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.cnbc.com/2018/03/27/a-complete-guide-to-cyprocurrency-regulations-around-the-world.html?__source=sharebar%7Clinkedin&amp;amp;par=sharebar"&gt;Cryptocurrency regulations around the world&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.lrb.co.uk/v40/n13/john-lanchester/after-the-fall"&gt;On the 2008 financial crisis&lt;/a&gt; - “I’m not sure if it’s philosophically possible for an action to be both necessary and a disaster, but that in essence is what the bailouts were.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="podcasts"&gt;Podcasts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/whatbitcoindid"&gt;Jill Carlson&lt;/a&gt; on the “What Bitcoin Did” podcast. “For the first time there is no longer a monopoly on the creation of value or monetary systems, that is really What Bitcoin Did.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/deVoaRTfVqs"&gt;Georges St-Pierre&lt;/a&gt; on the Joe Rogan podcast. A long and candid conversation from one of the world’s best athletes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/KqhRZfKRriU"&gt;Ricardo Spagni&lt;/a&gt; a.k.a Fluffypony on Monero vs Bitcoin, &lt;span class="caps"&gt;EOS&lt;/span&gt;, the current bear market, Tari, and ASICs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="resources"&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lots of &lt;a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html"&gt;data sets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Non-technical/Learning"/><category term="Reading"/></entry><entry><title>I’m a chartered accountant</title><link href="https://johnmathews.eu/chartered.html" rel="alternate"/><published>2017-10-19T21:56:00+02:00</published><updated>2017-10-19T21:56:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-10-19:/chartered.html</id><summary type="html">&lt;p&gt;I&amp;rsquo;ve qualified as a chartered accountant and will soon become a member of the Institute of Chartered Accountants in England and&amp;nbsp;Wales&lt;/p&gt;</summary><content type="html">&lt;p&gt;Earlier this year I qualified as a chartered accountant. Qualification requires
+passing 15 exams and gaining 3150 hours of work experience. &lt;/p&gt;
+&lt;p&gt;To celebrate passing your exams and verify your success, the &lt;span class="caps"&gt;ICAEW&lt;/span&gt; print the
+names of everyone who passed in an advert in the Financial Times. This happened
+for me on the 26 January.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="exam pass list in the financial times" src="https://johnmathews.eu/images/exam_pass_list.jpg"/&gt;&lt;/p&gt;</content><category term="Non-technical/Learning"/><category term="ICAEW"/><category term="ACA"/><category term="Accounting"/></entry><entry><title>Spare time</title><link href="https://johnmathews.eu/spare-time.html" rel="alternate"/><published>2016-08-13T21:15:00+02:00</published><updated>2016-08-13T21:15:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-13:/spare-time.html</id><summary type="html"/><content type="html">&lt;p&gt;This is a list of interests I want to consider pursuing. I wrote it when I began to study for my last set of exams and my mind filled with things I’d rather be doing instead. Some of these interests are just me reacting to having no spare time for a few months, but others are decent goals and projects. Temporarily losing my spare time made me value it more.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="free-time" src="/images/spare_time.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;I wrote this post so that I could compare what I thought was important when I was busy to when I wasn’t. Writing the list allowed me to move on without forgetting. Here’s a break down of each item:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Run 10k in 50 minutes” - This is easier than I imagined. When I wrote the
+     list I could barely run 2k without stopping, but intended to go for a
+     weekly run whilst studying. I’ve struggled to stay energetic and healthy
+     during previous exam phases, so now I have a rule that I must do some mild
+     exercise even if I think I can’t spare the time. I find running really
+     lowers my stress levels, and increasing my heart rate and working up a
+     sweat lets me sleep better and concentrate for longer. After a few weeks of
+     minimal running, I could run 5k easily. If I kept at it, 10k in 50 mins
+     would be easy. But point 2…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Be Insanity strong” - As in, do the Insanity workout programme. Again. I thought about it and decided to do P90x instead. Week 1 is going great.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Read the bible habitually” - When I was 17 I found out about Jesus and
+    became a Christian. In the months and years after that I’d regularly read my
+    bible almost every day and pray a lot. I wanted to understand, so I set a
+    goal of 5 chapters each day.&lt;/p&gt;
+&lt;p&gt;I read through the new testament repeatedly and read most of the old
+testament during this time. I knew the scriptures well enough that a lot of
+sermons became boring and obvious - I’d already studied the bible passage
+being used. During this time I remember being aware that the way I thought
+was different to how it would have been otherwise. My perspectives were
+long-term and less me focused. I thought about what I was reading instead
+of the days’ headlines or social chatter. I remember enjoying the benefits
+and thinking that I should keep this habit. The reasons why I think
+Christianity is so wonderful are well summarised in &lt;a href="http://messages.destinyedinburgh.com/sermon/the-gospel-we-preach-a-message-for-leaders"&gt;this
+sermon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It’s now 10 years later, and whilst my convictions are strong, my knowledge
+of the bible is sadly pretty fuzzy. My thinking is clouded by the
+perspectives contained in the media I consume and the conversations I’m
+part of. I strongly suspect I would be acting and thinking differently if I
+read my bible more, but I don’t know what those differences would be.
+Trouble is, it’s often not obvious what the immediate benefits of
+reading the bible are, you have to work for it a bit. Praying for help is
+effective. The books in the bible were written to last through the ages and
+across all cultures, so it’s not surprising that they’re not as easy to
+read as something written for an English speaker in a hurry. I should stop
+being in a hurry, and stop prioritising only quantifiable goals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Think more” - On a similar note to 3, but less supernatural. If I spent
+    less time consuming content and a little more looking around me or walking,
+    I reckon I’d be more self-aware and make better decisions. This would
+    probably lead to a happier, more satisfying life.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Pray more” - I don’t know why, but the creator of the universe wants me to
+    talk and share my life with him. He cares about me. This makes no sense to
+    me, at all. If I was God, I would not go out of my way to consider the views
+    and concerns of a very flawed human. But when I pray, my prayers are very
+    often answered. I should ask him about this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Amazon seller?” - Amazon have this “Fulfilled by Amazon” service,
+     which means you don’t even need to hold the stock you want to sell.
+     If I choose the right products, import them cheaply from China and
+     reselling  them on Amazon at a profit, I end up quids in for minimal
+     effort and manageable risk. Sounds intriguing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Blog about interesting data” - Here I am, blogging. I should stick
+    to the main topic and get technical. I was inspired by this
+    &lt;a href="http://www.curiousgnu.com/"&gt;blog&lt;/a&gt; in particular.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Finish Coursera” - The data science specialization is great! It’s in R, and I want to focus on Python, but I’d still like to do it. I need to consider the opportunity cost of the time committed, though.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Read for fun, history, fiction” - When I started my job, in April 2014, I
+    was half way through &lt;a href="https://read.amazon.co.uk/kp/embed?asin=B00796LLLK&amp;amp;asin=B00796LLLK&amp;amp;preview=newtab&amp;amp;linkCode=kpe&amp;amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4"&gt;Savage
+    Continent&lt;/a&gt;,
+    which is an eye-opening and eye-watering history of Europe in the years
+    after World War 2. I see Europe through different eyes because of it.
+    However I only got half way though, and since April ‘14 I never felt I had
+    the free time or energy to pick it back up. This should change. When I was a
+    researcher, and when I was a student, I had so much more opportunity to
+    develop my own pursuits. Since entering the corporate world, I find myself
+    fighting a war of attrition to exert my personality onto my lifestyle.&lt;/p&gt;
+&lt;p&gt;Read for fiction… I’m unconvinced. What do you have at the end of
+it? What can you do with it? Maybe I’ve just been reading the wrong authors,
+but I’m going to leave this for now. Sure, you could gain an appreciation of
+a different time or place, but that appreciation comes via the fictional
+characters and events, its secondary. What about abstract constructs,
+perspectives, morals… things that history books are ill-suited for? Great
+fiction would be essential for exploring these. But for now, I’ll prioritise
+point 3.&lt;/p&gt;
+&lt;p&gt;&lt;iframe allowfullscreen="allowfullscreen" class="my-5" frameborder="0" height="550" src="https://read.amazon.co.uk/kp/card?asin=B00796LLLK&amp;amp;asin=B00796LLLK&amp;amp;preview=inline&amp;amp;linkCode=kpe&amp;amp;ref_=cm_sw_r_kb_dp_GP2Rxb3Q8MYC4" style="max-width: 100%; float:middle" width="336"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Do a photography project” - This I would love to do, but probably won’t.
+     It would be a luxury, and the opportunity cost would be too great right
+     now. I’d like to shoot a series of black and white portraits, and turn them
+     into large prints. I think good portrait photography is uniquely impactful
+     and moving, choosing B&amp;amp;W removes distractions and leaves a subjects
+     humanity more exposed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Have a list of business/product ideas” - There’s no excuse for this
+     one, anyone can have several good ideas. It’s turning them into
+     reality that takes skill. Need to have the ideas first, though.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Do a law &lt;span class="caps"&gt;MOOC&lt;/span&gt;” - i.e Study particular areas of law, in my own time
+     and at my own pace. I studied a tiny bit of law during the &lt;span class="caps"&gt;ACA&lt;/span&gt;, and
+     realised employment law or contract law could be really useful.
+     (Same for the tax system - another surprise). We only had a brief
+     introduction though, so if I could find the time I’d like to know more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Do an InfoSec or Network Security &lt;span class="caps"&gt;MOOC&lt;/span&gt;” - Its super interesting,
+     but not likely to be a good use of time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Learn to fight - Krav Maga / &lt;span class="caps"&gt;MMA&lt;/span&gt;” - Ever since watching The Bourne
+     Identity I’ve wanted to learn Krav Maga, and &lt;a href="https://youtu.be/LybrzdG96_8"&gt;Georges
+     St-Pierre&lt;/a&gt; made me want to train
+     for &lt;span class="caps"&gt;MMA&lt;/span&gt;. For now though, I’ll do P90x. I can reconsider in 90 days.&lt;/p&gt;
+&lt;p&gt;&lt;div class="relative" style="padding-top: 56.25%"&gt;
+&lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://www.youtube.com/embed/u0_8dzaNxhg"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Get out of London” - My contract ends in April 2017, next summer
+     will be a crossroads. I hate the commute, I hate being constantly
+     rushed. Living in other cities has been a lot more pleasant.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Learning"/><category term="Habits"/><category term="Advice"/><category term="Reflection"/></entry></feed>

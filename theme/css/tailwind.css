@@ -103,13 +103,13 @@
 }
 
 .markdown .highlight pre {
-  @apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
+  @apply border-l-2 text-base border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
 	overflow-x: auto;
 	overflow-y: auto;
 }
 
 .markdown .highlight pre span {
-	@apply font-sans text-lg border-0 leading-normal;
+	@apply font-sans border-0 leading-normal;
 	overflow-x: auto;
 	overflow-y: auto;
 }
@@ -125,7 +125,7 @@
 }
 
 .markdown code {
-  @apply font-mono text-base p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
+  @apply font-mono text-sm p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
 	white-space: nowrap;
 }
 
@@ -181,7 +181,7 @@
 
 /* normal markdown */
 .markdown {
-	@apply break-words font-serif text-xl leading-relaxed font-normal text-gray-700 dark:text-gray-300;
+	@apply break-words font-serif text-lg leading-relaxed font-normal text-gray-700 dark:text-gray-300;
 }
 
 .markdown strong {

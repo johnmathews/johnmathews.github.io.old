@@ -5,56 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/traffic.html</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-04-08T16:14:18-00:00</lastmod>
+<lastmod>2021-04-08T17:33:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -466,13 +466,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://johnmathews.eu/neighbours.html</loc>
-<lastmod>2018-05-31T22:30:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://johnmathews.eu/buying-btc.html</loc>
 <lastmod>2017-12-07T09:56:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -753,13 +746,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://johnmathews.eu/category/non-technical/career.html</loc>
-<lastmod>2021-02-01T22:17:00+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://johnmathews.eu/category/non-technical/entrepreneurship.html</loc>
 <lastmod>2020-12-08T12:59:00+00:20</lastmod>
 <changefreq>daily</changefreq>
@@ -767,15 +753,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://johnmathews.eu/category/non-technical/learning.html</loc>
-<lastmod>2021-01-18T11:51:00+00:20</lastmod>
+<loc>https://johnmathews.eu/category/non-technical/journal.html</loc>
+<lastmod>2021-04-05T11:54:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://johnmathews.eu/category/non-technical/living.html</loc>
-<lastmod>2021-04-05T11:54:00+00:20</lastmod>
+<loc>https://johnmathews.eu/category/non-technical/learning.html</loc>
+<lastmod>2021-02-01T22:17:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -783,6 +769,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/category/non-technical/other.html</loc>
 <lastmod>2021-01-22T11:42:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/category/non-technical/social.html</loc>
+<lastmod>2021-01-20T14:44:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1140,20 +1133,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/tag/ryan-hodson.html</loc>
 <lastmod>2018-06-01T17:11:00+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://johnmathews.eu/tag/politics.html</loc>
-<lastmod>2018-05-31T22:30:00+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://johnmathews.eu/tag/equality.html</loc>
-<lastmod>2018-05-31T22:30:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -1422,12 +1422,14 @@ Tools&lt;/code&gt; I did:&lt;/p&gt;
 &lt;p&gt;Since writing this post I’ve modified the categories a few times. The commands I
 run to switch out categories are as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;oldName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Lifestyle&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;newName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Living
-grep -l &lt;span class="s2"&gt;"Category: Non-technical/&lt;/span&gt;&lt;span class="nv"&gt;$oldName&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; content/articles/*.md &lt;span class="p"&gt;|&lt;/span&gt; xargs sed -i &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="s2"&gt;"s/Category: Non-technical\/&lt;/span&gt;&lt;span class="nv"&gt;$oldName&lt;/span&gt;&lt;span class="s2"&gt;/Category: Non-technical\/&lt;/span&gt;&lt;span class="nv"&gt;$newName&lt;/span&gt;&lt;span class="s2"&gt;/g"&lt;/span&gt;
+grep -l &lt;span class="s2"&gt;"Category: .*Non-technical/&lt;/span&gt;&lt;span class="nv"&gt;$oldName&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; content/articles/*.md &lt;span class="p"&gt;|&lt;/span&gt; xargs sed -i &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="s2"&gt;"s/Non-technical\/&lt;/span&gt;&lt;span class="nv"&gt;$oldName&lt;/span&gt;&lt;span class="s2"&gt;/Non-technical\/&lt;/span&gt;&lt;span class="nv"&gt;$newName&lt;/span&gt;&lt;span class="s2"&gt;/g"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Double quotes are not the same as single quotes&lt;/li&gt;
-&lt;li&gt;This won’t work on articles with multiple categories&lt;/li&gt;
+&lt;li&gt;Double quotes are not the same as single quotes. You need to use them if you
+    want to access variables or commands inside a string.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.*&lt;/code&gt; is a wildcard operator allowing any number of characters. It’s
+    required when an article belongs to multiple categories.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>A faster shell</title><link href="https://johnmathews.eu/shell.html" rel="alternate"/><published>2019-02-14T11:32:00+01:00</published><updated>2019-02-14T11:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-02-14:/shell.html</id><summary type="html">&lt;p&gt;zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&amp;nbsp;down&lt;/p&gt;</summary><content type="html">&lt;p&gt;Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a niggle.&lt;/p&gt;
 &lt;p&gt;I wanted to find out which components were causing the most delay, so I used
 &lt;code&gt;time&lt;/code&gt; to measure how long it took to launch a shell. Even though shells

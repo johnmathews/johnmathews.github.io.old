@@ -1,53 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Career</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/career.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-02-01T22:17:00+01:00</updated><entry><title>Notes From An Interview With Geoffrey Hinton</title><link href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html" rel="alternate"/><published>2021-02-01T22:17:00+01:00</published><updated>2021-02-01T22:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/notes-from-an-interview-with-geoffrey-hinton.html</id><summary type="html"/><content type="html">&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Read the literature but don’t read too much&lt;/strong&gt; of it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Trust your intuitions&lt;/strong&gt;, because if you don’t trust them then there’s no point&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class="quo"&gt;‘&lt;/span&gt;&lt;strong&gt;This person is either drunk or stupid&lt;/strong&gt;‘ - feedback on one of his papers that went on to become significant &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For creative researchers; read a bit of the literature and notice something that you think everybody is doing wrong. (I guess &lt;span class="caps"&gt;GH&lt;/span&gt; is contrarian in this sense)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Look for a problem that doesn’t feel &lt;em&gt;right&lt;/em&gt;. Then figure out how to do it right.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When people tell you that your (contrarian) approach is just no good, just keep at it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Either your intuitions are good or they’re not. If they are good then you should follow them and you will eventually be successful. If they are bad then it doesn’t matter what you do.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You might as well trust your intutions.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When you try to replicate a published paper you discover all the little tricks needed to make it work.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Never stop programming.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you give a student something to do and they are a bad student then they’ll come back and say it didn’t work. They’ll say this because of some little decision they made which they didn’t realise was crucial. But if you give it to a good student, you can give them anything and they will come back and say it works&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Read enough so that you start developing intuitions, and then trust your intuitions and go for it! - Don’t be too worried if everybody else says its nonsense.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you think it’s a really good idea, and others tell you its complete nonsense, then you know you are really onto something!&lt;/p&gt;
-&lt;p&gt;One example of this is when Ramford and I first came up with variational methods, I sent a mail explaining it to a former student, who showed it to his colleagues. He told me that they said ‘Either this guy is drunk or he is just stupid’. They really really thought is was nonsense.&lt;/p&gt;
-&lt;p&gt;Maybe that is partly because of how i explained it - I explained it in intuitive terms, but when you have what you think is a good idea and other people think it is complete rubbish, that is the sign of a really good idea.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;See if you can find an advisor who has beliefs similar to your own, because if you work on stuff that your adviser feels deeply about, then you’ll get a lot of good advice and time from them.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Read enough so that you can trust your intuitions&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Non-technical/Career"/></entry><entry><title>What’s So Different About Now</title><link href="https://johnmathews.eu/whats-so-different-about-now.html" rel="alternate"/><published>2021-01-20T14:44:00+01:00</published><updated>2021-01-20T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/whats-so-different-about-now.html</id><summary type="html"/><content type="html">&lt;p&gt;I think we are less aware of our ignorance than previous generations. It is
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Social</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/social.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-01-20T14:44:00+01:00</updated><entry><title>What’s So Different About Now</title><link href="https://johnmathews.eu/whats-so-different-about-now.html" rel="alternate"/><published>2021-01-20T14:44:00+01:00</published><updated>2021-01-20T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/whats-so-different-about-now.html</id><summary type="html"/><content type="html">&lt;p&gt;I think we are less aware of our ignorance than previous generations. It is
 easy to implicitly assume that all useful information is available to us, and
 that we are therefore more informed than we really are.&lt;/p&gt;
 &lt;p&gt;I think this is because the internet has made information more accessible
@@ -63,7 +15,7 @@ to what we find when we apply effort.&lt;/p&gt;
 always slightly overwhelmed. The pace of modern communications encourages me to
 never slow down enough to form my own questions or frame my own arguments. I
 can always find &lt;em&gt;an&lt;/em&gt; answer to my questions, but when was the last time I checked
-that whoever gave it to me wasn’t going to profit from it?&lt;/p&gt;</content><category term="Non-technical/Career"/></entry><entry><title>Predicting the Future using Human Nature and Technology</title><link href="https://johnmathews.eu/what-happens-next.html" rel="alternate"/><published>2021-01-20T14:05:00+01:00</published><updated>2021-01-20T14:05:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/what-happens-next.html</id><summary type="html"/><content type="html">&lt;p&gt;Predicting the future sounds like a tough problem, but we try to do it all the
+that whoever gave it to me wasn’t going to profit from it?&lt;/p&gt;</content><category term="Non-technical/Social"/></entry><entry><title>Predicting the Future using Human Nature and Technology</title><link href="https://johnmathews.eu/what-happens-next.html" rel="alternate"/><published>2021-01-20T14:05:00+01:00</published><updated>2021-01-20T14:05:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/what-happens-next.html</id><summary type="html"/><content type="html">&lt;p&gt;Predicting the future sounds like a tough problem, but we try to do it all the
 time without realising it.&lt;/p&gt;
 &lt;p&gt;We predict the future when we think about how risky or scary something is, or
 when we think about what’s really going to change because of an announcement or
@@ -84,7 +36,7 @@ human nature has a much bigger role on efficiency than tech. Young men will
 stack and pack quickly, old women will be the opposite. What types of shopping
 bags they have, or how they pay, or even how many items they’re buying, are
 probably not going to lead you to the right decision.&lt;/p&gt;
-&lt;p&gt;The same probably works for getting through airport security.&lt;/p&gt;</content><category term="Non-technical/Career"/></entry><entry><title>Financial Doom And Gloom</title><link href="https://johnmathews.eu/financial-doom-and-gloom.html" rel="alternate"/><published>2021-01-19T14:57:00+01:00</published><updated>2021-01-19T14:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/financial-doom-and-gloom.html</id><summary type="html"/><content type="html">&lt;p&gt;Financial crises seem to happen fairly regularly, so they shouldn’t be unexpected.&lt;/p&gt;
+&lt;p&gt;The same probably works for getting through airport security.&lt;/p&gt;</content><category term="Non-technical/Social"/></entry><entry><title>Financial Doom And Gloom</title><link href="https://johnmathews.eu/financial-doom-and-gloom.html" rel="alternate"/><published>2021-01-19T14:57:00+01:00</published><updated>2021-01-19T14:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/financial-doom-and-gloom.html</id><summary type="html"/><content type="html">&lt;p&gt;Financial crises seem to happen fairly regularly, so they shouldn’t be unexpected.&lt;/p&gt;
 &lt;p&gt;But on the other hand, no-one seems particularly concerned about
 any particular aspect of our current financial system. At the moment our
 attention is controlled by other threats.&lt;/p&gt;
@@ -131,7 +83,7 @@ rates to make it 1. Cheaper for a business to borrow money to invest in their bu
 therefore easier for a business investments to be profitable, and 2. So that
 its more attractive for investors to use their capital to invest in a business 
 (which grows the economy) relative to depositing spare cash in a bank account (which is safer but a less efficient way to deploy capital). Interest rates affect the relative risk-reward ratios of
-different investment strategies &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-2"&gt;&lt;a href="https://web.archive.org/web/20210119144242/https://www.wsj.com/articles/index-funds-are-the-new-kings-of-wall-street-11568799004"&gt;Index Funds Are the New Kings of Wall Street&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-3"&gt;&lt;a href="https://www.statista.com/statistics/254220/value-of-euro-coins-in-circulation-since-2002/"&gt;statista&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-4"&gt;&lt;a href="https://www.in2013dollars.com/europe/inflation/2010"&gt;in2013dollars.com&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Career"/></entry><entry><title>Between Clients</title><link href="https://johnmathews.eu/between-clients.html" rel="alternate"/><published>2019-10-08T16:05:00+02:00</published><updated>2019-10-08T16:05:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-10-08:/between-clients.html</id><summary type="html">&lt;p&gt;As a freelance data scientist, I use time between client engagements to up-skill and pursue professional interests that I wouldn&amp;rsquo;t otherwise be able&amp;nbsp;to.&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the end of the summer I had time between engagements to work on some side projects and grapple with some new (to me) libraries and technologies. &lt;/p&gt;
+different investment strategies &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-2"&gt;&lt;a href="https://web.archive.org/web/20210119144242/https://www.wsj.com/articles/index-funds-are-the-new-kings-of-wall-street-11568799004"&gt;Index Funds Are the New Kings of Wall Street&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-3"&gt;&lt;a href="https://www.statista.com/statistics/254220/value-of-euro-coins-in-circulation-since-2002/"&gt;statista&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-financial-doom-and-gloom-4"&gt;&lt;a href="https://www.in2013dollars.com/europe/inflation/2010"&gt;in2013dollars.com&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-financial-doom-and-gloom-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Social"/></entry><entry><title>Between Clients</title><link href="https://johnmathews.eu/between-clients.html" rel="alternate"/><published>2019-10-08T16:05:00+02:00</published><updated>2019-10-08T16:05:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-10-08:/between-clients.html</id><summary type="html">&lt;p&gt;As a freelance data scientist, I use time between client engagements to up-skill and pursue professional interests that I wouldn&amp;rsquo;t otherwise be able&amp;nbsp;to.&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the end of the summer I had time between engagements to work on some side projects and grapple with some new (to me) libraries and technologies. &lt;/p&gt;
 &lt;h3 id="during-august-and-september-2019-i"&gt;During August and September 2019, I:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -182,12 +134,7 @@ different investment strategies &lt;a class="simple-footnote-back" href="#sf-fin
 &lt;li&gt;
 &lt;p&gt;Chose a primary school for my daughter to go to next year.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Non-technical/Career"/><category term="Freelance"/></entry><entry><title>I’m a chartered accountant</title><link href="https://johnmathews.eu/chartered.html" rel="alternate"/><published>2017-10-19T21:56:00+02:00</published><updated>2017-10-19T21:56:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-10-19:/chartered.html</id><summary type="html">&lt;p&gt;I&amp;rsquo;ve qualified as a chartered accountant and will soon become a member of the Institute of Chartered Accountants in England and&amp;nbsp;Wales&lt;/p&gt;</summary><content type="html">&lt;p&gt;Earlier this year I qualified as a chartered accountant. Qualification requires
-passing 15 exams and gaining 3150 hours of work experience. &lt;/p&gt;
-&lt;p&gt;To celebrate passing your exams and verify your success, the &lt;span class="caps"&gt;ICAEW&lt;/span&gt; print the
-names of everyone who passed in an advert in the Financial Times. This happened
-for me on the 26 January.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="exam pass list in the financial times" src="https://johnmathews.eu/images/exam_pass_list.jpg"/&gt;&lt;/p&gt;</content><category term="Non-technical/Career"/><category term="ICAEW"/><category term="ACA"/><category term="Accounting"/></entry><entry><title>Coworking in Dublin</title><link href="https://johnmathews.eu/coworking.html" rel="alternate"/><published>2017-09-15T11:55:00+02:00</published><updated>2017-09-15T11:55:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-09-15:/coworking.html</id><summary type="html">&lt;p&gt;A review of eight coworking spaces in&amp;nbsp;Dublin&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I arrived in Dublin and had two days to find a coworking space. I ran around Dublin visiting as many as possible. &lt;/p&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Social"/><category term="Freelance"/></entry><entry><title>Coworking in Dublin</title><link href="https://johnmathews.eu/coworking.html" rel="alternate"/><published>2017-09-15T11:55:00+02:00</published><updated>2017-09-15T11:55:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-09-15:/coworking.html</id><summary type="html">&lt;p&gt;A review of eight coworking spaces in&amp;nbsp;Dublin&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week I arrived in Dublin and had two days to find a coworking space. I ran around Dublin visiting as many as possible. &lt;/p&gt;
 &lt;p&gt;I’m looking to rent a hotdesk, which means I don’t have any storage space at the office and I don’t have a particular desk. &lt;/p&gt;
 &lt;p&gt;Below are my impressions of eight businesses offering either hot desks or dedicated desks, ranked in order of preference. It’s subjective. The going rate in Dublin seems to be €200 — €300 per month for a hot desk. Hours range from 9am - 7pm Monday - Friday, to 24/7. &lt;/p&gt;
 &lt;h3 id="first-place-dogpatch-labs"&gt;First place: &lt;a href="http://dogpatchlabs.com/"&gt;Dogpatch Labs&lt;/a&gt;&lt;/h3&gt;
@@ -217,4 +164,4 @@ for me on the 26 January.&lt;/p&gt;
 &lt;p&gt;The thought of paying €200 a month to sit at a small wobbly desk put me off. The place was also almost deserted. Maybe their other branch is better, but this is not for me. &lt;/p&gt;
 &lt;p&gt;€220 p/m. &lt;/p&gt;
 &lt;h3 id="last-place-tcube"&gt;Last place: &lt;a href="http://tcubedublin.com/tcube/index.html"&gt;tCube&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Last and least, tCube seems to be putting in zero effort. When I visited I saw two rooms that needed painting, disorganised furniture and abandoned bits of computers lying around. The kitchen isn’t high spec and the meeting room isn’t big enough. I was also given a speech about how great the wifi was - a prerequisite that was taken for granted everywhere else. At €300 p/m for a dedicated desk its easy to find better value elsewhere. &lt;/p&gt;</content><category term="Non-technical/Career"/><category term="Freelance"/><category term="Coworking"/><category term="Dublin"/><category term="Element78"/><category term="Regus"/><category term="OfficeSuites"/><category term="CoCreate"/><category term="Studio9"/><category term="Glandore"/><category term="tCube"/></entry></feed>
+&lt;p&gt;Last and least, tCube seems to be putting in zero effort. When I visited I saw two rooms that needed painting, disorganised furniture and abandoned bits of computers lying around. The kitchen isn’t high spec and the meeting room isn’t big enough. I was also given a speech about how great the wifi was - a prerequisite that was taken for granted everywhere else. At €300 p/m for a dedicated desk its easy to find better value elsewhere. &lt;/p&gt;</content><category term="Non-technical/Social"/><category term="Freelance"/><category term="Coworking"/><category term="Dublin"/><category term="Element78"/><category term="Regus"/><category term="OfficeSuites"/><category term="CoCreate"/><category term="Studio9"/><category term="Glandore"/><category term="tCube"/></entry></feed>
