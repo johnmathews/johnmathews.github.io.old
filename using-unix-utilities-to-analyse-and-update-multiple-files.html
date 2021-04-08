@@ -352,8 +352,7 @@ sub&nbsp;categories.</p>
 all the articles with <code>Category: Tools</code> to <code>Category: Technical/Developer
 Tools</code> I&nbsp;did:</p>
 <ul>
-<li><code>grep -l 'Category: Tools' *.md | xargs sed -i 's/Category: Tools/Category:
-    Technical\/Developer Tools/g</code></li>
+<li><code>grep -l 'Category: Tools' *.md | xargs sed -i 's/Category: Tools/Category: Technical\/Developer Tools/g'</code></li>
 </ul>
 <p>If I want to see a list of files containing <code>Category: General</code>:</p>
 <ul>
@@ -363,6 +362,12 @@ Tools</code> I&nbsp;did:</p>
 <ul>
 <li><code>grep -l 'Category: General' *.md</code></li>
 </ul>
+<h1 id="update">Update</h1>
+<p>Since writing this post I&rsquo;ve modified the categories a few times. The commands I
+run to switch out categories are as&nbsp;follows:</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">oldName</span><span class="o">=</span>Lifestyle<span class="p">;</span> <span class="nb">export</span> <span class="nv">newName</span><span class="o">=</span>Living
+grep -l <span class="s2">&quot;Category: Non-technical/</span><span class="nv">$oldName</span><span class="s2">&quot;</span> content/articles/*.md <span class="p">|</span> xargs sed -i <span class="s1">&#39;&#39;</span> <span class="s2">&quot;s/Category: Non-technical\/</span><span class="nv">$oldName</span><span class="s2">/Category: Non-technical\/</span><span class="nv">$newName</span><span class="s2">/g&quot;</span>
+</pre></div>
         </div>
       </article>
     </main>
