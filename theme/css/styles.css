@@ -15058,7 +15058,7 @@ video {
 /* footnotes */
 
 .markdown .simple-footnotes {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   margin-top: 2.5rem;
   padding-top: 0.75rem;
@@ -15599,6 +15599,10 @@ video {
 
   .md\:mt-24 {
     margin-top: 6rem;
+  }
+
+  .md\:-mr-64 {
+    margin-right: -16rem;
   }
 
   .md\:overflow-x-auto {

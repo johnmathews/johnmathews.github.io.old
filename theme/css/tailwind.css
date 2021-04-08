@@ -64,7 +64,7 @@
 
 /* footnotes */
 .markdown .simple-footnotes {
-	@apply mt-10 py-3 text-xl;
+	@apply mt-10 py-3 text-lg;
 }
 
 /* codeblocks */
