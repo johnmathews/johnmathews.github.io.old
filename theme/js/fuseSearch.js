@@ -22,14 +22,14 @@ window.focussedResult = -1;
     findAllMatches: true,
     threshold: 0.4, // 0 is perfect, 1 is anything
     ignoreLocation: true, // it doesn't matter where the text is in the article
-    useExtendedSearch: false, // https://fusejs.io/examples.html#extended-search
+    useExtendedSearch: true, // https://fusejs.io/examples.html#extended-search
     // distance: 8000, //  how close the match can be from the expected location
     // location: 0, // where in the text is the match expected
     // threshold: 1, // match anything within `distance` of `location`
     keys: [
       {name: "title", weight: 0.9},
       {name: "tags", weight: 0.7},
-      {name: "body", weight: 0.6},
+      {name: "body", weight: 0.7},
       // {name: "category", weight: 0.3},
       // {name: "url", weight: 0.3},
     ]
@@ -132,7 +132,7 @@ $( document ).ready(function() {
 
   var lazySearch = _.debounce(function(){
     doSearch(window.fuse);
-  }, 300);
+  }, 250);
 
   $('#searchBox').on('keydown', function(event) {
     if (event.which == 40) {
