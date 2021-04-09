@@ -33,8 +33,15 @@ languages and this applies more to the idiom level than the design pattern
 level. It applies even less at the architectural level where there can be
 several equally good ways of organizing business logic and data representations.&lt;/p&gt;
 &lt;p&gt;Perl has the “&lt;span class="caps"&gt;TMTOWTDI&lt;/span&gt;” (tim towtdi) principle - “There’s More Than One Way To Do
-It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="learning notes"/></entry><entry><title>More VIM notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
-I’ve either copied or was more or less doing already.&lt;/p&gt;
+It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="learning notes"/></entry><entry><title>More VIM Notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;q:&lt;/code&gt; - opens the command line window. Good for yanking and viewing previous commands&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:UltiSnipsEdit&lt;/code&gt; - opens the ultiSnips file for the current buffers filetype.
+    See which snippets are defined.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has the following gems that I’d like to start using.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -73,7 +80,9 @@ lines 3 blocks to the right.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;&lt;c-b&gt;&lt;/c-b&gt;&lt;/code&gt; - move screen up one page, with cursor at bottom of screen&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"/><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been feeling very comfortable with my Vim + Tmux setup recently.
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
+I’ve either copied or was more or less doing already.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="tips"/><category term="vim"/></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"/><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been feeling very comfortable with my Vim + Tmux setup recently.
 Navigating around shells and files isn’t taking much mental effort anymore. Wohoo!&lt;/p&gt;
 &lt;p&gt;It’s taken about 2 years of working full time with vim to get to the stage
 where the commands are so intuitive that:&lt;/p&gt;
@@ -613,12 +622,13 @@ to try again with what eluded me the first time.&lt;/p&gt;
    be used (everywhere).&lt;/li&gt;
 &lt;li&gt;A machine learning model - I’ve already studied this, from theory (&lt;code&gt;numpy&lt;/code&gt;)
    to frameworks (&lt;code&gt;tensorflow&lt;/code&gt;). I’m happy to see it’s included.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Managing Large Projects with Vim</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"/><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"/><content type="html">&lt;p&gt;I use Vim as my text editor and as my &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free and open
-source, and I like that I can customize it. This post is about the most useful
-plugins and features I’ve started using this year. There’s a copy of my
-&lt;code&gt;.vimrc&lt;/code&gt; at the end.&lt;/p&gt;
-&lt;p&gt;I’m happy to invest some time and effort into learning how to make the most of
-vim and its plugins because I’m confident that I’ll still be using it twenty
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Using Vim with large codebases</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"/><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"/><content type="html">&lt;p&gt;I use Vim as my text editor and &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free, open
+source and customizable. Below are some of the most useful
+plugins and features I’ve started using this year when I was building Moneybar
+and learning how to use Django.&lt;/p&gt;
+&lt;p&gt;There’s a copy of my &lt;code&gt;.vimrc&lt;/code&gt; at the end. &lt;/p&gt;
+&lt;p&gt;I’m happy to invest time and effort learning how to make the most of
+Vim and its plugins. I’m confident that I’ll still be using it twenty
 years from now.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -656,6 +666,7 @@ years from now.&lt;/p&gt;
    is defined.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;This is my &lt;code&gt;.vimrc&lt;/code&gt; during January 2021.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;" ========== Global ==========&lt;/span&gt;
 &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;nocompatible&lt;/span&gt;              &lt;span class="c"&gt;" always put it at the top of .vimrc. effects mappings, undo, etc.&lt;/span&gt;
 &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;encoding&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;utf&lt;span class="m"&gt;-8&lt;/span&gt;            &lt;span class="c"&gt;" utf-8 encoding&lt;/span&gt;
