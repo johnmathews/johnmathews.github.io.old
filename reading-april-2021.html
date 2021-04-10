@@ -12,18 +12,18 @@
 <meta content="What I’m reading: April 2021 -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" reading " name="keywords"/>
-<meta content=" Articles and blog posts I’ve saved to read later: Djangos place in a web development world Cache invalidation Vim abbreviations To fix the social sciences, look to the “dark ages” of medicine... " name="description"/>
+<meta content=" Articles and blog posts I’ve saved to read later: The Architecture Behind A One-Person Tech Startup - An article by Anthony Najjar Simon about how he runs his one-man SaaS using Django. Low... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="What I’m reading: April 2021" property="twitter:title"/>
-<meta content=" Articles and blog posts I’ve saved to read later: Djangos place in a web development world Cache invalidation Vim abbreviations To fix the social sciences, look to the “dark ages” of medicine... " name="twitter:description"/>
+<meta content=" Articles and blog posts I’ve saved to read later: The Architecture Behind A One-Person Tech Startup - An article by Anthony Najjar Simon about how he runs his one-man SaaS using Django. Low... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/reading-april-2021.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="What I’m reading: April 2021" property="og:title"/>
-<meta content=" Articles and blog posts I’ve saved to read later: Djangos place in a web development world Cache invalidation Vim abbreviations To fix the social sciences, look to the “dark ages” of medicine... " property="og:description"/>
+<meta content=" Articles and blog posts I’ve saved to read later: The Architecture Behind A One-Person Tech Startup - An article by Anthony Najjar Simon about how he runs his one-man SaaS using Django. Low... " property="og:description"/>
 <meta content="https://johnmathews.eu/reading-april-2021.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -255,14 +255,55 @@
 <article class="">
 <div class="markdown">
 <p>Articles and blog posts I’ve saved to read later:</p>
-<ul>
-<li><a href="https://thenewstack.io/djangos-place-in-a-web-development-world-ruled-by-react/">Djangos place in a web development world</a></li>
+<ol>
+<li><a href="https://anthonynsimon.com/blog/one-man-saas-architecture/">The Architecture Behind A One-Person Tech Startup</a> - An article by <a href="https://twitter.com/anthonynsimon">Anthony Najjar Simon</a> about how he runs his one-man SaaS using Django.<ul>
+<li>Low stress, one-person company, run from a flat.</li>
+<li>Self-funded, taking things slow - <em>he likes taking things slow</em>.</li>
+<li>Grateful to be standing on the shoulders of the open source giants who went ahead and made the <span class="caps">OSS</span> stack we all enjoy and benefit from.</li>
+<li>Your own context matters when choosing a tech stack. There is no “holy grail”. I guess this means that you should use what you’re familiar with and what is <em>boring</em> for you.</li>
+<li>Uses K8s on <span class="caps">AWS</span>. He says “dont fall into the trap of thinking you need to use it too” - expertise with these tools was learnt over several years fighting fires on the day job.</li>
+<li>Productive because he used the tools he is most familiar with and he can focus on shipping.</li>
+<li>Django, Celery, PostgreSQL, Python, <span class="caps">AWS</span>, Redis. - same as MoneyBar and PipPip.</li>
+</ul>
+</li>
+<li><a href="https://www.listennotes.com/blog/the-boring-technology-behind-a-one-person-23/">Boring tech behind a one person SaaS</a><ul>
+<li>The tech-stack keeps evolving</li>
+<li><span class="dquo">“</span>Boring” means “what I’m familiar with so that I can focus on the business”</li>
+<li>Most of his time is spent talking to people and thinking. He spends 15% of his time on engineering. Probably it was more when he was setting stuff up.</li>
+<li>The methods described in the post are <strong>definitely not the best way</strong>. <em>It’s just one way of doing engineering in a very specific type of business. It’s not the only way.</em></li>
+<li>Django, Celery, PostgreSQL, Python, <span class="caps">AWS</span>, Redis. - same as MoneyBar and PipPip.</li>
+<li>Uses Ansible for provisioning machines. - <span class="caps">YAML</span> files. Should look into this.</li>
+<li><span class="dquo">“</span>Good enough for now”</li>
+<li>Doesn’t use <span class="caps">CI</span> tools, he uses Ansible with a shell script he wrote.</li>
+<li>Uses <a href="https://www.datadoghq.com/">Datadog</a> for monitoring and alerting, and PagerDuty.</li>
+<li>Uses <a href="https://rollbar.com/">Rollbar</a>, which seems similar to Sentry.</li>
+<li>Uses Slack, not to talk with humans, but integrations with Rollbar and Datadog, and also <a href="https://api.slack.com/messaging/webhooks">slack incoming webhooks</a> to be notified when someone signs up or does something interesting like deletes a thing.</li>
+<li>Make a “ding” sound whenever someone signs up.</li>
+<li>He’s <em>always very careful about operational stuff</em> to prevent downtime and outages. Servers are over-provisioned to protect against spikes caused by sudden media interest.</li>
+<li>Avoids working from home or cafe cos its more productive in an office. Productivity is important - make every minute count. He doesn’t often work more than 8 hours/day.</li>
+<li>He optimizes for spending less time and making money instead of more time and saving money.</li>
+<li>Uses <code>Vagrant</code> and <code>virtualbox</code> on an <span class="caps">MBP</span> so that dev work is on the same systems as prod infra.</li>
+<li>Uses 1 monolithic repo. Likes this approach.</li>
+<li><em>He uses contractors</em>!!</li>
+<li>Usually, the biggest obstacle to building and shipping things is overthinking. What if this, what if that. You are not important at all and no one cares. No one sees. Even if you screw up the initial product launch, no one will care because they’re not looking. Only when you’ve proved that you deserve their attention will you have any attention and visibility.</li>
+<li><a href="https://hackernoon.com/think-big-start-small-act-fast-6fdab1f771ea">Think big, start small, act fast</a>.</li>
+<li>Use boring technology, or whatever tech you want. Just make sure you’re solving an actual problem.</li>
+<li>Ignore the <a href="https://stevemcconnell.com/articles/cargo-cult-software-engineering/">cargo cult people</a> and ignore the noise. Keep calm and carry on.</li>
+</ul>
+</li>
+<li><a href="https://thenewstack.io/djangos-place-in-a-web-development-world-ruled-by-react/">Djangos place in a web development world</a><ul>
+<li>Not everything needs to be an <span class="caps">SPA</span></li>
+<li>Django is a back-end framework, it’ll work with an front-end framework, because separation of concerns.</li>
+<li>To use django with an <span class="caps">SPA</span>, you could use <span class="caps">DRF</span>, or just normal views that return <span class="caps">JSON</span>.</li>
+<li>Reading this makes me want to check out React to see what all the fuss is about.</li>
+</ul>
+</li>
 <li><a href="https://yihui.org/en/2018/06/cache-invalidation/">Cache invalidation</a></li>
 <li><a href="https://jovica.org/posts/vim_abbreviations/">Vim abbreviations</a></li>
 <li><a href="https://thereader.mitpress.mit.edu/social-sciences-dark-ages/">To fix the social sciences, look to the “dark ages” of medicine</a></li>
 <li><a href="https://docs.google.com/document/d/18FfZ86PGA_uSFf425EzKXAmiFQLFBPqjqPN7iu1TZRw/preview?pru=AAABdEZGCv8*_gdPBrQH8tAPyvMfLk6Unw">Emotional resilience in leadership report</a></li>
 <li><a href="http://threevirtues.com/">3 virtues of a programmer</a></li>
-</ul>
+</ol>
 </div>
 </article>
 </main>
