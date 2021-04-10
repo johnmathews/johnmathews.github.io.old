@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews Blog - JohnMathews.eu - Non-technical/Learning</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/learning.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-02-01T22:17:00+01:00</updated><entry><title>Notes From An Interview With Geoffrey Hinton</title><link href="https://johnmathews.eu/notes-from-an-interview-with-geoffrey-hinton.html" rel="alternate"/><published>2021-02-01T22:17:00+01:00</published><updated>2021-02-01T22:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/notes-from-an-interview-with-geoffrey-hinton.html</id><summary type="html"/><content type="html">&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Read the literature but don’t read too much&lt;/strong&gt; of it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Read the literature, but don’t read too much&lt;/strong&gt; of it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Trust your intuitions&lt;/strong&gt;, because if you don’t trust them then there’s no point&lt;/p&gt;
@@ -22,7 +22,7 @@
 &lt;p&gt;Either your intuitions are good or they’re not. If they are good then you should follow them and you will eventually be successful. If they are bad then it doesn’t matter what you do.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;You might as well trust your intutions.&lt;/p&gt;
+&lt;p&gt;You might as well trust your intuitions.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;When you try to replicate a published paper you discover all the little tricks needed to make it work.&lt;/p&gt;
@@ -45,7 +45,7 @@
 &lt;p&gt;See if you can find an advisor who has beliefs similar to your own, because if you work on stuff that your adviser feels deeply about, then you’ll get a lot of good advice and time from them.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Read enough so that you can trust your intuitions&lt;/p&gt;
+&lt;p&gt;Read enough so that you can &lt;em&gt;trust your intuitions&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>Mental Models I Used To Use</title><link href="https://johnmathews.eu/mental-models-i-used-to-use.html" rel="alternate"/><published>2021-01-20T16:48:00+01:00</published><updated>2021-01-20T16:48:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/mental-models-i-used-to-use.html</id><summary type="html"/><content type="html">&lt;p&gt;The rules&lt;sup id="sf-mental-models-i-used-to-use-1-back"&gt;&lt;a class="simple-footnote" href="#sf-mental-models-i-used-to-use-1" title="or policies"&gt;1&lt;/a&gt;&lt;/sup&gt; and mental models that helped me
 succeed in one season or phase of life may not be the best for the next phase.&lt;/p&gt;

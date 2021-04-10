@@ -5,62 +5,62 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/traffic.html</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-04-09T15:01:54-00:00</lastmod>
+<lastmod>2021-04-10T12:03:20-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://johnmathews.eu/"reading-april-2021".html</loc>
+<loc>https://johnmathews.eu/reading-april-2021.html</loc>
 <lastmod>2021-04-09T14:55:20+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -753,15 +753,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://johnmathews.eu/category/articles.html</loc>
-<lastmod>2021-04-09T14:55:20+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://johnmathews.eu/category/non-technical.html</loc>
-<lastmod>2021-04-05T11:54:00+00:20</lastmod>
+<lastmod>2021-04-09T14:55:20+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -775,7 +768,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/non-technical/journal.html</loc>
-<lastmod>2021-04-05T11:54:00+00:20</lastmod>
+<lastmod>2021-04-09T14:55:20+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -845,13 +838,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/tag/reading.html</loc>
-<lastmod>2021-04-09T14:55:20+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://johnmathews.eu/tag/books.html</loc>
 <lastmod>2021-04-09T14:55:20+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

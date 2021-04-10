@@ -231,7 +231,7 @@
   @apply mt-0;
 }
 
-.markdown li > p  {
+.markdown li   {
   @apply mt-2;
 }
 
