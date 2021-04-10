@@ -15058,7 +15058,7 @@ video {
 /* footnotes */
 
 .markdown .simple-footnotes {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   margin-top: 2.5rem;
   padding-top: 0.75rem;
@@ -15125,8 +15125,8 @@ video {
 
 .markdown .highlight pre {
   border-left-width: 2px;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .dark .markdown .highlight pre {
@@ -15176,8 +15176,8 @@ video {
   border-radius: 0.5rem;
   border-width: 2px;
   font-family: anonymous\ pro, andale mono, ubuntu mono, monospace;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   padding: 0.25rem;
 }
 
@@ -15306,7 +15306,7 @@ video {
 .markdown {
   font-family: cardo, georgia, serif, ui-serif;
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   line-height: 1.625;
   --tw-text-opacity: 1;
@@ -15428,8 +15428,8 @@ video {
 
 .markdown h4 {
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   line-height: 1;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
@@ -15437,8 +15437,8 @@ video {
 
 .markdown h5 {
   font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   line-height: 1.25;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
@@ -15446,8 +15446,8 @@ video {
 
 .markdown h6 {
   font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   line-height: 1.25;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
@@ -15475,8 +15475,8 @@ video {
 .markdown table {
   --tw-border-opacity: 1;
   border-color: rgba(75, 85, 99, var(--tw-border-opacity));
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .markdown th {

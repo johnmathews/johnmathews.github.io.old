@@ -64,7 +64,7 @@
 
 /* footnotes */
 .markdown .simple-footnotes {
-	@apply mt-10 py-3 text-lg;
+	@apply mt-10 py-3 text-xl;
 }
 
 /* codeblocks */
@@ -103,7 +103,7 @@
 }
 
 .markdown .highlight pre {
-  @apply border-l-2 text-base border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
+  @apply border-l-2 text-lg border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
 	overflow-x: auto;
 	overflow-y: auto;
 }
@@ -125,7 +125,7 @@
 }
 
 .markdown code {
-  @apply font-mono text-sm p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
+  @apply font-mono text-lg p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
 	white-space: nowrap;
 }
 
@@ -181,7 +181,7 @@
 
 /* normal markdown */
 .markdown {
-	@apply break-words font-serif text-lg leading-relaxed font-normal text-gray-700 dark:text-gray-300;
+	@apply break-words font-serif text-xl leading-relaxed font-normal text-gray-700 dark:text-gray-300;
 }
 
 .markdown strong {
@@ -250,15 +250,15 @@
 }
 
 .markdown h4 {
-  @apply leading-none text-base font-semibold mb-4 mt-6;
+  @apply leading-none text-lg font-semibold mb-4 mt-6;
 }
 
 .markdown h5 {
-  @apply leading-tight text-sm font-semibold mb-4 mt-6;
+  @apply leading-tight text-lg font-semibold mb-4 mt-6;
 }
 
 .markdown h6 {
-  @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
+  @apply leading-tight text-lg font-semibold text-gray-600 mb-4 mt-6;
 }
 
 
@@ -268,7 +268,7 @@
 }
 
 .markdown table {
-  @apply text-base border-gray-600;
+  @apply text-lg border-gray-600;
 }
 
 .markdown th {
