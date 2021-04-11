@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-09T14:55:20+02:00</updated><entry><title>What I’m reading: April 2021</title><link href="https://johnmathews.eu/reading-april-2021.html" rel="alternate"/><published>2021-04-09T14:55:20+02:00</published><updated>2021-04-09T14:55:20+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-09:/reading-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#the-architecture-behind-a-one-person-tech-startup"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#boring-tech-behind-a-one-person-saas"&gt;Boring tech behind a one person SaaS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#djangos-place-in-a-web-development-world"&gt;Djangos place in a web development world&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cache-invalidation"&gt;&lt;s&gt;Cache invalidation&lt;/s&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#vim-abbreviations"&gt;Vim abbreviations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine"&gt;&lt;s&gt;To fix the social sciences, look to the “dark ages” of medicine&lt;/s&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#emotional-resilience-in-leadership-report"&gt;Emotional resilience in leadership report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#3-virtues-of-a-programmer"&gt;3 virtues of a programmer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Articles and blog posts I saved to read later:&lt;/p&gt;
+&lt;h1 id="the-architecture-behind-a-one-person-tech-startup"&gt;&lt;a href="https://anthonynsimon.com/blog/one-man-saas-architecture/"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;An article by &lt;a href="https://twitter.com/anthonynsimon"&gt;Anthony Najjar Simon&lt;/a&gt; about how he runs his one-man SaaS using Django.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Low stress, one-person company, run from a flat.&lt;/li&gt;
+&lt;li&gt;Self-funded, taking things slow - &lt;em&gt;he likes taking things slow&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Grateful to be standing on the shoulders of the open source giants who went ahead and made the &lt;span class="caps"&gt;OSS&lt;/span&gt; stack we all enjoy and benefit from.&lt;/li&gt;
+&lt;li&gt;Your own context matters when choosing a tech stack. There is no “holy grail”. I guess this means that you should use what you’re familiar with and what is &lt;em&gt;boring&lt;/em&gt; for you.&lt;/li&gt;
+&lt;li&gt;Uses K8s on &lt;span class="caps"&gt;AWS&lt;/span&gt;. He says “dont fall into the trap of thinking you need to use it too” - expertise with these tools was learnt over several years fighting fires on the day job.&lt;/li&gt;
+&lt;li&gt;Productive because he used the tools he is most familiar with and he can focus on shipping.&lt;/li&gt;
+&lt;li&gt;Django, Celery, PostgreSQL, Python, &lt;span class="caps"&gt;AWS&lt;/span&gt;, Redis. - same as MoneyBar and PipPip.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="boring-tech-behind-a-one-person-saas"&gt;&lt;a href="https://www.listennotes.com/blog/the-boring-technology-behind-a-one-person-23/"&gt;Boring tech behind a one person SaaS&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The tech-stack keeps evolving&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Boring” means “what I’m familiar with so that I can focus on the business”&lt;/li&gt;
+&lt;li&gt;Most of his time is spent talking to people and thinking. He spends 15% of his time on engineering. Probably it was more when he was setting stuff up.&lt;/li&gt;
+&lt;li&gt;The methods described in the post are &lt;strong&gt;definitely not the best way&lt;/strong&gt;. &lt;em&gt;It’s just one way of doing engineering in a very specific type of business. It’s not the only way.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Django, Celery, PostgreSQL, Python, &lt;span class="caps"&gt;AWS&lt;/span&gt;, Redis. - same as MoneyBar and PipPip.&lt;/li&gt;
+&lt;li&gt;Uses Ansible for provisioning machines. - &lt;span class="caps"&gt;YAML&lt;/span&gt; files. Should look into this.&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Good enough for now”&lt;/li&gt;
+&lt;li&gt;Doesn’t use &lt;span class="caps"&gt;CI&lt;/span&gt; tools, he uses Ansible with a shell script he wrote.&lt;/li&gt;
+&lt;li&gt;Uses &lt;a href="https://www.datadoghq.com/"&gt;Datadog&lt;/a&gt; for monitoring and alerting, and PagerDuty.&lt;/li&gt;
+&lt;li&gt;Uses &lt;a href="https://rollbar.com/"&gt;Rollbar&lt;/a&gt;, which seems similar to Sentry.&lt;/li&gt;
+&lt;li&gt;Uses Slack, not to talk with humans, but integrations with Rollbar and Datadog, and also &lt;a href="https://api.slack.com/messaging/webhooks"&gt;slack incoming webhooks&lt;/a&gt; to be notified when someone signs up or does something interesting like deletes a thing.&lt;/li&gt;
+&lt;li&gt;Make a “ding” sound whenever someone signs up.&lt;/li&gt;
+&lt;li&gt;He’s &lt;em&gt;always very careful about operational stuff&lt;/em&gt; to prevent downtime and outages. Servers are over-provisioned to protect against spikes caused by sudden media interest.&lt;/li&gt;
+&lt;li&gt;Avoids working from home or cafe cos its more productive in an office. Productivity is important - make every minute count. He doesn’t often work more than 8 hours/day.&lt;/li&gt;
+&lt;li&gt;He optimizes for spending less time and making money instead of more time and saving money.&lt;/li&gt;
+&lt;li&gt;Uses &lt;code&gt;Vagrant&lt;/code&gt; and &lt;code&gt;virtualbox&lt;/code&gt; on an &lt;span class="caps"&gt;MBP&lt;/span&gt; so that dev work is on the same systems as prod infra.&lt;/li&gt;
+&lt;li&gt;Uses 1 monolithic repo. Likes this approach.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;He uses contractors&lt;/em&gt;!!&lt;/li&gt;
+&lt;li&gt;Usually, the biggest obstacle to building and shipping things is overthinking. What if this, what if that. You are not important at all and no one cares. No one sees. Even if you screw up the initial product launch, no one will care because they’re not looking. Only when you’ve proved that you deserve their attention will you have any attention and visibility.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hackernoon.com/think-big-start-small-act-fast-6fdab1f771ea"&gt;Think big, start small, act fast&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use boring technology, or whatever tech you want. Just make sure you’re solving an actual problem.&lt;/li&gt;
+&lt;li&gt;Ignore the &lt;a href="https://stevemcconnell.com/articles/cargo-cult-software-engineering/"&gt;cargo cult people&lt;/a&gt; and ignore the noise. Keep calm and carry on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="djangos-place-in-a-web-development-world"&gt;&lt;a href="https://thenewstack.io/djangos-place-in-a-web-development-world-ruled-by-react/"&gt;Djangos place in a web development world&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Not everything needs to be an &lt;span class="caps"&gt;SPA&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Django is a back-end framework, it’ll work with an front-end framework, because separation of concerns.&lt;/li&gt;
+&lt;li&gt;To use django with an &lt;span class="caps"&gt;SPA&lt;/span&gt;, you could use &lt;span class="caps"&gt;DRF&lt;/span&gt;, or just normal views that return &lt;span class="caps"&gt;JSON&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Reading this makes me want to check out React to see what all the fuss is about.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="cache-invalidation"&gt;&lt;s&gt;&lt;a href="https://yihui.org/en/2018/06/cache-invalidation/"&gt;Cache invalidation&lt;/a&gt;&lt;/s&gt;&lt;/h1&gt;
+&lt;h1 id="vim-abbreviations"&gt;&lt;a href="https://jovica.org/posts/vim_abbreviations/"&gt;Vim abbreviations&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Cool and all, but not as powerful as snippets I think.&lt;/li&gt;
+&lt;li&gt;Auto correcting types: teh -&amp;gt; the&lt;/li&gt;
+&lt;li&gt;Expanding phrase: kr -&amp;gt; kind regards&lt;/li&gt;
+&lt;li&gt;Multi-line text expansion.&lt;/li&gt;
+&lt;li&gt;It really seems similar to what I’m using UltiSnips for.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine"&gt;&lt;s&gt;&lt;a href="https://thereader.mitpress.mit.edu/social-sciences-dark-ages/"&gt;To fix the social sciences, look to the “dark ages” of medicine&lt;/a&gt;&lt;/s&gt;&lt;/h1&gt;
+&lt;h1 id="emotional-resilience-in-leadership-report"&gt;&lt;a href="https://docs.google.com/document/d/18FfZ86PGA_uSFf425EzKXAmiFQLFBPqjqPN7iu1TZRw/preview?pru=AAABdEZGCv8*_gdPBrQH8tAPyvMfLk6Unw"&gt;Emotional resilience in leadership report&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="3-virtues-of-a-programmer"&gt;&lt;a href="http://threevirtues.com/"&gt;3 virtues of a programmer&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Laziness - The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful and document what you wrote so you don’t have to answer so many questions about it.&lt;/li&gt;
+&lt;li&gt;Impatience - The anger you feel when the computer is being lazy. This makes you write programs that don’t just react to your needs, but actually anticipate them. Or at least pretend to.&lt;/li&gt;
+&lt;li&gt;Hubris - The quality that makes you write (and maintain) programs that other people won’t want to say bad things about.&lt;/li&gt;
+&lt;li&gt;Also, I read a quote somewhere saying the mark of a great program is having people use it in ways you didn’t expect, or something like that.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Non-technical/Journal"/><category term="reading"/></entry><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
+making unnecessary improvements to this blog.&lt;/p&gt;
+&lt;p&gt;Some of these improvements are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Adding keyboard shortcuts (type &lt;code&gt;?&lt;/code&gt; to find out which).&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/Adding-search.html"&gt;Implementing&lt;/a&gt;, then
+   &lt;a href="https://johnmathews.eu/fuse-search.html"&gt;reimplementing&lt;/a&gt;, and then optimizing client
+   side fuzzy search.&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;src-set&lt;/code&gt; to serve responsive images
+   (&lt;a href="https://github.com/pelican-plugins/image-process"&gt;Image-Process&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Lazy loading images to make this site load faster.&lt;/li&gt;
+&lt;li&gt;Compressing page files using &lt;code&gt;brotli&lt;/code&gt; and also &lt;code&gt;gzip&lt;/code&gt;
+   (&lt;a href="https://github.com/kurtmckee/pelican_precompress"&gt;Precompress&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Trying (and ultimately failing) to avoid a “white flash” when dark mode is
+   chosen and a new page loads (&lt;a href="https://github.com/tailwindlabs/tailwindcss/discussions/3904"&gt;Github
+   discussion&lt;/a&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’m not really sure why I did it. It makes almost no difference to anyone but
+me. It felt a bit compulsive.&lt;/p&gt;
+&lt;p&gt;I like tinkering, and it’s nice to build something that will continue to work
+with no maintenance. I tell myself that over the next few years I will gain the
+benefits of these features even when I’ve forgotten I implemented them.&lt;/p&gt;
+&lt;p&gt;It’s taught me a lot of JavaScript, which is a great language to be familiar
+with - it’s everywhere. I would warmly encourage someone younger than myself to
+pursue interests for the sake of curiosity and fun. And there is a very high
+chance that even if no-one uses the shortcuts except me, my new javascript
+skills will come in useful somewhere else.&lt;/p&gt;
+&lt;p&gt;But even if they do I’m not sure its a good enough reason - things should be
+built when they solve a present problem, not over-engineered for what-ifs and
+maybes. &lt;a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"&gt;&lt;span class="caps"&gt;YAGNI&lt;/span&gt;&lt;/a&gt;. I
+wouldn’t let myself do this in a professional capacity. There is a tension
+between being curious and being focussed.&lt;/p&gt;
+&lt;p&gt;I’m not really sure that I need to justify myself. Its a hobby, I wanted to do
+it, I enjoy tinkering with web technologies and learning new things.&lt;/p&gt;
+&lt;p&gt;But also, I lost sleep over this - I stayed up too late, and let it put
+pressure on other things.&lt;/p&gt;
+&lt;p&gt;I know that being curious, and making room to play with interesting things, has
+been one of the most useful approaches to personal development and up-skilling
+myself. But there must be a limit..&lt;/p&gt;
+&lt;p&gt;There is a tension between wasting my time and taking a risk, and it will take
+a few years before I know for sure if these efforts were worthwhile, or not.&lt;/p&gt;
+&lt;p&gt;If it’s not fun, don’t do it.&lt;/p&gt;
+&lt;p&gt;Successful business owners seem to be very good at leaving things alone once
+they’re “good enough”, and not being perfectionists. In fact, I think that
+being a perfectionist is antithetical to being an entrepreneur. I am not a
+perfectionist, I’m just really curious and have a big appetite for learning.&lt;/p&gt;
+&lt;p&gt;But this “appetite for learning” stops me from focussing. I let myself become
+distracted by adding new features to this blog, when instead I should zoom out
+a bit and think about working towards a more substantial and meaningful goal,
+to the exclusion of more minor goals.&lt;/p&gt;
+&lt;p&gt;I think that good entrepreneurs are very focussed, to a fault. I am not that
+focussed. I am too distracted by life.&lt;/p&gt;
+&lt;p&gt;It’s a balancing act, there is a tension between being emotionally and
+physically present with my family and friends, and ignoring as many things as
+possible so that I can focus on doing something meaningful that is necessarily hard.&lt;/p&gt;</content><category term="Technical/Web"/><category term="blog"/><category term="javascript"/><category term="self-reflection"/></entry><entry><title>Regrets Of The Dying</title><link href="https://johnmathews.eu/regrets-of-the-dying.html" rel="alternate"/><published>2021-02-01T22:52:00+01:00</published><updated>2021-02-01T22:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/regrets-of-the-dying.html</id><summary type="html"/><content type="html">&lt;p&gt;I wish that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’d had the courage to live a life true to myself, not the life others expected of me.&lt;/li&gt;
+&lt;li&gt;I hadn’t worked so hard.&lt;/li&gt;
+&lt;li&gt;I’d had the courage to express my feelings.&lt;/li&gt;
+&lt;li&gt;I had stayed in touch with my friends.&lt;/li&gt;
+&lt;li&gt;I’d let myself be happier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;…the five most common regrets of terminally ill patients, as described by a
+palliative care nurse&lt;sup id="sf-regrets-of-the-dying-1-back"&gt;&lt;a class="simple-footnote" href="#sf-regrets-of-the-dying-1" title="Source"&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-regrets-of-the-dying-1"&gt;&lt;a href="https://bronnieware.com/blog/regrets-of-the-dying/"&gt;Source&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-regrets-of-the-dying-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Journal"/></entry><entry><title>A List Of Unconnected Thoughts And Aphorisms</title><link href="https://johnmathews.eu/a-list-of-unconnected-thoughts-and-aphorisms.html" rel="alternate"/><published>2021-02-01T22:27:00+01:00</published><updated>2021-02-01T22:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/a-list-of-unconnected-thoughts-and-aphorisms.html</id><summary type="html"/><content type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Do the people you care about love you back?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Assume that nobody is going to help you, and nobody is going to stop you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Money is (just) fuel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lets talk about the end. My current self, existing now, is to be seen in
+    the context of my end, and my beginning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you want money, ask for advice. When you want advice, ask for money.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You follow the rules of war for you, not your enemy. You fight by rules to
+   keep your
+   humanity.&lt;sup id="sf-a-list-of-unconnected-thoughts-and-aphorisms-1-back"&gt;&lt;a class="simple-footnote" href="#sf-a-list-of-unconnected-thoughts-and-aphorisms-1" title="source"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you want to be a top performer in any field you must become abnormal.
+   Normal is average, which by definition, is far below the top! “We can always
+   be average and do what’s normal. I’m not in this to do what’s normal.”
+   –Kobe Bryant&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Becoming Abnormally Good&lt;sup id="sf-a-list-of-unconnected-thoughts-and-aphorisms-2-back"&gt;&lt;a class="simple-footnote" href="#sf-a-list-of-unconnected-thoughts-and-aphorisms-2" title="source"&gt;2&lt;/a&gt;&lt;/sup&gt; at something:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No reasonable excuses - don’t make (reasonable) excuses that let you off the hook. You need the negative emotions that leads to inspired decision making.&lt;/li&gt;
+&lt;li&gt;Not Worrying About What You Can’t Control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We know it’s best to be genuinely friendly no matter who you’re trying to
+    get information out of, thanks in part to the work of Hanns Scharff and a
+    slew of studies on interrogation
+    techniques&lt;sup id="sf-a-list-of-unconnected-thoughts-and-aphorisms-3-back"&gt;&lt;a class="simple-footnote" href="#sf-a-list-of-unconnected-thoughts-and-aphorisms-3" title="source"&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-a-list-of-unconnected-thoughts-and-aphorisms-1"&gt;&lt;a href="https://www.globalo.com/history-wwii-charlie-brown-franz-stigler-incident/"&gt;source&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-a-list-of-unconnected-thoughts-and-aphorisms-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-a-list-of-unconnected-thoughts-and-aphorisms-2"&gt;&lt;a href="https://capitalandgrowth.org/answers/Article/3217401/Become-Abnormal"&gt;source&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-a-list-of-unconnected-thoughts-and-aphorisms-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-a-list-of-unconnected-thoughts-and-aphorisms-3"&gt;&lt;a href="https://psmag.com/social-justice/nazi-interrogator-revealed-value-kindness-84747"&gt;source&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-a-list-of-unconnected-thoughts-and-aphorisms-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Journal"/></entry><entry><title>Questions For Interesting Conversations</title><link href="https://johnmathews.eu/questions.html" rel="alternate"/><published>2021-02-01T22:05:00+01:00</published><updated>2021-02-01T22:05:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-01:/questions.html</id><summary type="html"/><content type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;What’s the &lt;strong&gt;best piece of advice&lt;/strong&gt; you ever received?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What would you say to your &lt;strong&gt;18-year-old self&lt;/strong&gt; if you had a chat with them today?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Have you ever &lt;strong&gt;lost or rejected a friend&lt;/strong&gt;?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about &lt;strong&gt;a time when you changed your mind&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What have you been &lt;strong&gt;thinking about lately&lt;/strong&gt;? What’s on your mind?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do you work in a language that’s not your mother tongue? &lt;strong&gt;What’s it like to live in translation&lt;/strong&gt;?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there is a &lt;strong&gt;choice between remembering and forgetting&lt;/strong&gt;, do you lean towards the side of forgetting?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Were you raised for &lt;strong&gt;autonomy or loyalty&lt;/strong&gt;?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Was there ever a moment where you thought, &lt;strong&gt;‘I’m giving up’&lt;/strong&gt; — what did you do?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Was your identity given to you or chosen by you&lt;/strong&gt;?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Non-technical/Journal"/></entry><entry><title>Live near the ocean</title><link href="https://johnmathews.eu/ocean.html" rel="alternate"/><published>2017-11-23T18:48:00+01:00</published><updated>2017-11-23T18:48:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-23:/ocean.html</id><summary type="html">&lt;p&gt;Being near water is&amp;nbsp;better.&lt;/p&gt;</summary><content type="html">&lt;h3 id="california"&gt;California&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="California" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/california3.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/california3.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/california3.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/california3.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/california3.jpg 1600w"/&gt;
+&lt;img alt="California" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/california7.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/california7.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/california7.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/california7.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/california7.jpg 1600w"/&gt;
+&lt;img alt="California" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/california9.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/california9.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/california9.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/california9.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/california9.jpg 1600w"/&gt;&lt;/p&gt;
+&lt;h3 id="dorset"&gt;Dorset&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Dorset" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/dorset.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/dorset.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/dorset.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/dorset.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/dorset.jpg 1600w"/&gt;
+&lt;img alt="Dorset" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/beach.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/beach.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/beach.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/beach.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/beach.jpg 1600w"/&gt;&lt;/p&gt;
+&lt;h3 id="acapulco"&gt;Acapulco&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Acapulco" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/mex1.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/mex1.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/mex1.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/mex1.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/mex1.jpg 1600w"/&gt;
+&lt;img alt="Acapulco" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/mex2.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/mex2.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/mex2.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/mex2.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/mex2.jpg 1600w"/&gt;&lt;/p&gt;
+&lt;h3 id="dublin"&gt;Dublin&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Dublin" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/dublin.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/dublin.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/dublin.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/dublin.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/dublin.jpg 1600w"/&gt;
+&lt;img alt="Dublin" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/dublin1.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/dublin1.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/dublin1.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/dublin1.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/dublin1.jpg 1600w"/&gt;&lt;/p&gt;
+&lt;h3 id="the-netherlands"&gt;The Netherlands&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Hague" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/hague.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/hague.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/hague.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/hague.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/hague.jpg 1600w"/&gt;
+&lt;img alt="Hague" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/amsterdam3.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/amsterdam3.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/amsterdam3.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/amsterdam3.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/amsterdam3.jpg 1600w"/&gt;
+&lt;img alt="Hague" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/800w/amsterdam1.jpg" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/amsterdam1.jpg 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/amsterdam1.jpg 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/amsterdam1.jpg 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/amsterdam1.jpg 1600w"/&gt;&lt;/p&gt;</content><category term="Non-technical/Journal"/><category term="water"/></entry><entry><title>Corporate London</title><link href="https://johnmathews.eu/corporate.html" rel="alternate"/><published>2017-07-10T21:37:00+02:00</published><updated>2017-07-10T21:37:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-10:/corporate.html</id><summary type="html">&lt;p&gt;Reflections on 3 years living and working in&amp;nbsp;London&lt;/p&gt;</summary><content type="html">&lt;h1 id="2014-2017"&gt;2014 - 2017&lt;/h1&gt;
+&lt;p&gt;Having made arrangements to leave London, it seems like a reasonable time to
+reflect on my time here.&lt;/p&gt;
+&lt;p&gt;London is a tough city to live in — it’s big enough that a sub 1-hour commute
+is considered good, and it’s super expensive. My stay in London has been
+defined by my quest to complete my graduate scheme and qualify as an accountant.&lt;/p&gt;
+&lt;p&gt;When I first arrived I had no idea what London or working in a corporate would
+be like. I was coming from academia, and my motivation for moving to finance
+could be summed up in two points:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Understand more about the 2008 financial crisis&lt;/li&gt;
+&lt;li&gt;Get paid more for using mostly the same skills (math) as in engineering&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I don’t think there’s anything wrong with these motivations, but I should have
+been making a long term career plan instead.&lt;/p&gt;
+&lt;p&gt;When I started my job I was surprised at the 6 weeks of induction and
+hot-desking. Life as an auditor felt nomadic, as everyone would spend large
+amounts of time at client’s offices, and no-one has their own desk in our
+office. The only thing you really own is your knowledge and your network of relationships.&lt;/p&gt;
+&lt;p&gt;In 2014, I arrived with a high opinion of my employer and the view that I would
+be staying for several years. Having escaped the financial insecurity of
+short-term research grants, I’d moved back to my home country to contribute to
+the system that educated me. I was happy to have a regular job with a decent,
+predictable salary.&lt;/p&gt;
+&lt;p&gt;A phrase that kept coming to mind back then was “accountant factory”. Our
+training materials were scripted and everything was a standardised process. We
+were being processed. Graduates in, corporate accountants out.&lt;/p&gt;
+&lt;p&gt;The company is huge and so are the efficiencies and barriers to competition
+that come with this. When I arrived I was impressed there were free biscuits,
+and it felt presumptuous to put a meeting in someones diary. Now I ignore any
+communications addressed to a mailing list.&lt;/p&gt;
+&lt;h2 id="accountant"&gt;Accountant&lt;/h2&gt;
+&lt;p&gt;The toughest experiences were related to the accountancy qualification. Naïvely
+I had believed that the qualification wouldn’t be a big deal and I didn’t give
+any thought to it when I applied — I just wanted to find out how banks worked.
+If there were some exams to be done then it would be fine, I’d already achieved
+a PhD and I would handle it.&lt;/p&gt;
+&lt;p&gt;That turned out to be a mistake. A huge mistake. The alarm bells should have
+rung louder when I realised most of my graduate colleagues had only applied so
+that they could get the qualification (and were already intending to leave asap
+afterwards). Doing the pre-course work before college wasn’t trivial. College -
+I was being sent to a classroom again. We were being taken out of the office,
+away from clients, and put in a classroom to prepare for these exams…&lt;/p&gt;
+&lt;p&gt;Starting a job that required becoming a chartered accountant, without
+considering the effort and time involved to qualify was dumb. It’s an oversight
+I find hard to believe.&lt;/p&gt;
+&lt;p&gt;The disappointment and sadness at having to study again was profound. The
+teaching and assessment style was several steps behind what I’d become used to.
+Compared to the depth, autonomy and research-focus of a doctorate, writing
+cookie-cutter essays in time-pressured exams felt stupid. The exams were hard
+and I failed several of them, probably because of my low morale whilst
+revising. Retaking them required more weekends and annual leave being spent
+away from my family, camped-out in libraries and offices.&lt;/p&gt;
+&lt;p&gt;This required much patience and generosity from Ritsya, who having not seen me
+for long periods during my doctorate expected us to have a more normal
+lifestyle when we came to London. I found it miserable to pause my social life
+and other interests whilst studying, and then I would try to rush back to them
+when I had the time, knowing that soon I’d have to pause them again.&lt;/p&gt;
+&lt;p&gt;If I hadn’t already studied in Vienna, this process of working and studying in
+London would have been exciting and felt valuable or special. I’d passed enough
+exams though to know that they’re never as important as they’re made out to be,
+and whatever it was that was missing from my life wasn’t going to be found in
+another qualification.&lt;/p&gt;
+&lt;p&gt;On the upside though, the &lt;span class="caps"&gt;ACA&lt;/span&gt; is the most practical qualification I’ve gained
+and has taught me many useful aspects of business and finance. I’m glad to
+finally see business not as some mysterious system but something attainable and understandable.&lt;/p&gt;
+&lt;h2 id="neighbourhood"&gt;Neighbourhood&lt;/h2&gt;
+&lt;p&gt;Living in London has also required a lot of time on trains — my door to desk
+commute is about an hour each way, and I’ve never lived somewhere in London
+that hasn’t felt transient. We’ve needed to live near a station and didn’t want
+to commute more than an hour and that’s put us in neighbourhoods with other
+young professionals who also don’t have long term plans (or financial ability)
+to stay in the city. We’re all looking to move on and move up as fast as
+possible.  I want to leave London partly because there are so many people with
+the same attitudes and priorities as my own…&lt;/p&gt;
+&lt;h2 id="corporate-culture"&gt;Corporate Culture&lt;/h2&gt;
+&lt;p&gt;Back in the office I spent the first few months figuring out how people were
+organised, how teams operated and how decisions were made. I think it took me
+about a year to feel like I understood how things really worked, and 1.5 years
+to feel like I could do all aspects of my job with certainty. There is a
+difference between how things are spoken about, and how things actually happen.&lt;/p&gt;
+&lt;p&gt;My experience has been that performance is all that matters and behaviour is
+defined by self-interest. I don’t think this is different from previous
+environments I’ve worked in — academia isn’t any different&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; and the
+construction industry certainly isn’t. I wonder if the only way people can
+endure it is if they’ve not experienced anything else, or think it normal, or
+necessary. I find myself wishing we could be kinder to each other, and that we
+could create structures that incentivise mutual support.&lt;/p&gt;
+&lt;p&gt;Corporate finance usually appears clean and well presented. Its people appear
+dependable and capable. The culture is sanitised and there’s a lot of pressure
+to conform - you can see it in the clothes and accessories we wear and the
+jokes we tell each other in the canteen. &lt;/p&gt;
+&lt;p&gt;I came to see my office as a glass and steel cathedral. I read about the Middle
+East, and migrants arriving in Europe, and tower blocks burning, and felt
+really disconnected.&lt;/p&gt;
+&lt;p&gt;Despite the high regard with which we hold ourselves, we don’t ask each other
+how we can help. Maybe we are too busy, or feel powerless to help. Apparently
+we do not know how to help, despite our wealth, talents, education and connections.&lt;/p&gt;
+&lt;p&gt;I remember watching a man leave the office one day and thought that if he gave
+his whole career and left his firm after decades of service, there would be
+nothing left to identify him after a few weeks. The work will always get done.
+Market forces will dictate how the business adapts and grows. The City rolls on.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Publications trump almost all other metrics, and the incentives to
+  publish quantity over quality are such that risky or slow research is
+  inexcusable. The metrics used to standardise success and allocate resources
+  can be subverted just as well in academia as in any other industry. What
+  management measures, the team prioritises. &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Non-technical/Journal"/><category term="Career"/><category term="Corporate"/><category term="London"/></entry><entry><title>Move</title><link href="https://johnmathews.eu/move.html" rel="alternate"/><published>2017-07-08T12:26:00+02:00</published><updated>2017-07-08T12:26:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-08:/move.html</id><summary type="html">&lt;p&gt;Training&amp;rsquo;s&amp;nbsp;over&lt;/p&gt;</summary><content type="html">&lt;h1 id="ambition"&gt;Ambition&lt;/h1&gt;
+&lt;p&gt;Since I was 15, one of my ambitions has been to be an entrepreneur. I used to joke with my dad about buying him a nice boat one day.&lt;/p&gt;
+&lt;p&gt;Life so far has been predominantly about education, and that stage is over now. I’m walking away from what I’ve come to see as a lifestyle and career that has too many contradictions, it doesn’t make sense to live like this. Ultimately I want to develop multiple sources of passive income. I want to create.&lt;/p&gt;
+&lt;h2 id="summer-2017"&gt;Summer 2017&lt;/h2&gt;
+&lt;p&gt;The last few months have been intense, with some weeks leaving me feeling ambitious and energetic, and others feeling anxious and overwhelmed. I need to get better at defining a goal, taking the quickest path there, and ignoring interesting distractions.&lt;/p&gt;
+&lt;p&gt;Ritsya is brave enough and imaginative enough to force me to think big and consider how to live a better life. My biggest fear is that I screw it up, shooting myself in the foot and Ritsya and my daughter also. We were headed safely to an unremarkable existence and it would be terrible to swap that for something worse. That won’t happen.&lt;/p&gt;
+&lt;p&gt;I know that I make better decisions and produce my best work under pressure, I thrive when I’m perceived as an underdog. I need to accept this without using it as a reason to be foolish. Whilst I don’t have a clear plan, or direction, or goal, (I have many of them) I’ve got skills and I want to see what I can make. I’ll never do my best work, using my most productive combination of skills and experiences, if I’m a cog in someone else’s machine.&lt;/p&gt;
+&lt;p&gt;It’s safer being an employee than self-employed. I guess the price of removing self-employment risks is the difference between the value you generate for your employer and what you’re paid. I think those risks are overpriced, and most people are more capable than they realise. Sometimes you have to walk into a situation to find out how to make the most of it. And sometimes you have to leave a place in order to gain perspective.&lt;/p&gt;
+&lt;h2 id="autumn-2016"&gt;Autumn 2016&lt;/h2&gt;
+&lt;p&gt;Last year my boss gave me some advice that was supposed to be encouraging. I’d requested to reduce my involvement with some stuff that was unrelated to my job so that I could contribute more to my team and still maintain some semblance of a work/life balance.&lt;/p&gt;
+&lt;p&gt;My boss was pretty clear that reducing my involvement in the extra stuff would not be possible. During our conversation he advised me not to worry about how much I contributed to the team because “the work will get done anyway”. This was meant to be encouraging, but instead removed any conviction that the work I did was important.&lt;/p&gt;</content><category term="Non-technical/Journal"/><category term="Lifestyle"/></entry><entry><title>Flee</title><link href="https://johnmathews.eu/flee.html" rel="alternate"/><published>2017-07-04T08:42:00+02:00</published><updated>2017-07-04T08:42:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-07-04:/flee.html</id><summary type="html"/><content type="html">&lt;p&gt;Summer children 
+squeal and shriek, &lt;br/&gt;
+Watch wars. &lt;br/&gt;
+Excitement mounts. &lt;/p&gt;
+&lt;p&gt;How exotic. 
+Unexpectedly, &lt;br/&gt;
+Death arrives. &lt;/p&gt;
+&lt;p&gt;Grow-up&lt;br/&gt;
+Grow old&lt;br/&gt;
+Face death &lt;br/&gt;
+Evade evil.&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Don’t tire. 
+World is fragile.&lt;br/&gt;
+Towers burn,&lt;br/&gt;
+Bridges bludgeon,&lt;br/&gt;
+Markets stab. &lt;/p&gt;
+&lt;p&gt;Got to get out.&lt;/p&gt;</content><category term="Non-technical/Journal"/><category term="Poetry"/></entry><entry><title>London Rent vs. London Salaries</title><link href="https://johnmathews.eu/london.html" rel="alternate"/><published>2017-05-12T22:55:00+02:00</published><updated>2017-05-12T22:55:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-05-12:/london.html</id><summary type="html">&lt;p&gt;Living in London is only financially possible if you are either single or household income is more than&amp;nbsp;£60k/year.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Living in London is expensive, everyone in the &lt;span class="caps"&gt;UK&lt;/span&gt; knows this. Everyone knows that this is mostly due to the price of property, which we all enjoy talking about.&lt;/p&gt;
+&lt;p&gt;I’ve lived here for 3 years now, and when my wife and I were both working we lived comfortably. Two incomes under one roof is just fine. Not as fine as in many other cities, but reasonable. Just over a year ago my first child was born, and now that my wife’s maternity pay has ended we are a single income household. This is not fine. &lt;/p&gt;
+&lt;p&gt;Even though I earn almost £50k/year, and any salary increase will be taxed at 40%, I cannot cover essential day-to-day costs. I’m in the 40% tax bracket, and my basic monthly outgoings exceed my monthly take home pay by £400. If my employer wanted to pay me enough to cover essential costs, it would cost them approximately double the shortfall due to tax. None of this makes sense.&lt;/p&gt;
+&lt;p&gt;Salaries and living expenses have become really disconnected. &lt;/p&gt;
+&lt;p&gt;For most people the most obvious way to increase wealth is to buy property. Mortgage repayments are cheaper than rent, and the value of the property increases over time. Double win. But there is a big hurdle to overcome before this is possible - saving money for a deposit on a house is often impossible without external help (i.e. the “Bank of Mum and Dad”), because so much of the money earnt must be spent on rent first. &lt;/p&gt;
+&lt;p&gt;It’s a trap. Repayments on a mortgage are cheaper than paying rent, but you cannot save enough for a deposit because;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;so much of your salary goes to paying rent&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;, and&lt;/li&gt;
+&lt;li&gt;the average cost of a &lt;em&gt;flat&lt;/em&gt; in London is 500k&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;, which means a 5% deposit is £25k — which is a higher deposit than you would need anywhere else in the &lt;span class="caps"&gt;UK&lt;/span&gt;, despite being the place you are least able to accumulate it. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;What if my partner went back to work and we put our baby in childcare? Childcare is not cheap, and working would need to bring in more than the cost of childcare. This requires a higher than average salary from a graduate job, (which is the life stage when people might reasonably start having children), so unless both parents are unusually high earners that option isnt viable either.&lt;/p&gt;
+&lt;p&gt;Living in London is only financially possible if you are either single or household income is more than £60k/year.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;You’d be lucky to find a 1 bedroom flat for less than £1000/month &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;According to &lt;a href="http://www.rightmove.co.uk/house-prices/London.html"&gt;Rightmove&lt;/a&gt;, an estate agent with some useful price statistics. &lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Non-technical/Journal"/><category term="London"/><category term="Rent"/></entry><entry><title>How to wake up early</title><link href="https://johnmathews.eu/how-to-wake-up-early.html" rel="alternate"/><published>2016-08-06T22:04:00+02:00</published><updated>2016-08-06T22:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-06:/how-to-wake-up-early.html</id><summary type="html"/><content type="html">&lt;p&gt;For years I’ve wished that I could wake up early and use the quiet
+pre-breakfast hours for distraction-free productivity. And for years I
+have spectacularly failed at this. I love the quiet, distraction-free
+hours at the end of the day too, as well as waking up slowly.&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;p&gt;Many famous leaders and politicians are known to start their days early,
+and I would like to be able to do this too. After years of trying and
+failing, I have had a break-through.&lt;/p&gt;
+&lt;p&gt;The secret of waking up early is this:&lt;/p&gt;
+&lt;p&gt;Become a parent.&lt;/p&gt;
+&lt;p&gt;After the first couple of months with a new-born:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You will be well-practiced at quickly waking up at previously
+    unthinkable times&lt;/li&gt;
+&lt;li&gt;You will be used to operating on less sleep than you ever thought possible&lt;/li&gt;
+&lt;li&gt;Your beautiful child will become a reliable alarm clock, waking you
+    up at the crack of dawn with cute smiles and increasingly insistent
+    demands that you get up, play and make breakfast.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;If you have the freedom to begin sleeping and working when you want, I still believe this is a great option. I bashed out a PhD in 3.5 years during which I usually woke up late and began to work around lunch time! - Glorious autonomy! &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Non-technical/Journal"/><category term="Productivity"/><category term="Sleep"/></entry></feed>
