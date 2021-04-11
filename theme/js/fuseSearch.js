@@ -36,7 +36,6 @@ window.focussedResult = -1;
       // {name: "url", weight: 0.3},
     ]
   }
-
   window.fuse = new Fuse(searchIndex, options)
 })()
 
