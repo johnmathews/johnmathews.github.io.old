@@ -182,6 +182,7 @@
 /* normal markdown */
 .markdown {
 	@apply break-words font-serif text-xl leading-relaxed font-normal text-gray-700 dark:text-gray-300;
+	counter-reset: h1
 }
 
 .markdown strong {
@@ -239,27 +240,52 @@
 /* headings */
 .markdown h1 {
   @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pt-2 pb-2;
+	counter-reset: h2
 }
 
 .markdown h2 {
   @apply leading-tight border-b border-gray-200 text-2xl font-semibold mb-4 mt-10 pb-2;
+	counter-reset: h3
 }
 
 .markdown h3 {
   @apply leading-snug text-xl font-semibold mb-4 mt-6;
+	counter-reset: h4
 }
 
 .markdown h4 {
   @apply leading-none text-lg font-semibold mb-4 mt-6;
+	counter-reset: h5
 }
 
 .markdown h5 {
   @apply leading-tight text-lg font-semibold mb-4 mt-6;
+	counter-reset: h6
 }
 
 .markdown h6 {
   @apply leading-tight text-lg font-semibold text-gray-600 mb-4 mt-6;
 }
+
+/* h1:before { */
+/*     counter-increment: h1; */
+/*     content: counter(h1) ". " */
+/* } */
+
+/* h2:before { */
+/*     counter-increment: h2; */
+/*     content: counter(h1) "." counter(h2) ". " */
+/* } */
+
+/* h3:before { */
+/*     counter-increment: h3; */
+/*     content: counter(h1) "." counter(h2) "." counter(h3) ". " */
+/* } */
+
+/* h4:before { */
+/*     counter-increment: h4; */
+/*     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". " */
+/* } */
 
 
 .markdown kbd {

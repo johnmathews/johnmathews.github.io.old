@@ -43,7 +43,7 @@
 &lt;li&gt;Uses 1 monolithic repo. Likes this approach.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;He uses contractors&lt;/em&gt;!!&lt;/li&gt;
 &lt;li&gt;Usually, the biggest obstacle to building and shipping things is overthinking. What if this, what if that. You are not important at all and no one cares. No one sees. Even if you screw up the initial product launch, no one will care because they’re not looking. Only when you’ve proved that you deserve their attention will you have any attention and visibility.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://hackernoon.com/think-big-start-small-act-fast-6fdab1f771ea"&gt;Think big, start small, act fast&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="https://hackernoon.com/think-big-start-small-act-fast-6fdab1f771ea"&gt;Think big, start small, act fast&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Use boring technology, or whatever tech you want. Just make sure you’re solving an actual problem.&lt;/li&gt;
 &lt;li&gt;Ignore the &lt;a href="https://stevemcconnell.com/articles/cargo-cult-software-engineering/"&gt;cargo cult people&lt;/a&gt; and ignore the noise. Keep calm and carry on.&lt;/li&gt;
 &lt;/ul&gt;
@@ -58,10 +58,11 @@
 &lt;h1 id="vim-abbreviations"&gt;&lt;a href="https://jovica.org/posts/vim_abbreviations/"&gt;Vim abbreviations&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Cool and all, but not as powerful as snippets I think.&lt;/li&gt;
-&lt;li&gt;Auto correcting types: teh -&amp;gt; the&lt;/li&gt;
-&lt;li&gt;Expanding phrase: kr -&amp;gt; kind regards&lt;/li&gt;
+&lt;li&gt;Auto correcting typos: teh -&amp;gt; the&lt;/li&gt;
+&lt;li&gt;Expanding phrases: kr -&amp;gt; kind regards&lt;/li&gt;
 &lt;li&gt;Multi-line text expansion.&lt;/li&gt;
 &lt;li&gt;It really seems similar to what I’m using UltiSnips for.&lt;/li&gt;
+&lt;li&gt;I found &lt;a href="https://stackoverflow.com/questions/30266587/snippets-vs-abbreviations-in-vim"&gt;this&lt;/a&gt; question on &lt;span class="caps"&gt;SO&lt;/span&gt; comparing abbreviations and snippets. &lt;span class="caps"&gt;TLDR&lt;/span&gt;: It’s easier to add and maintain snippets than abbreviations, and you have less boilerplate with snippets than abbreviations, especially in complex cases.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine"&gt;&lt;s&gt;&lt;a href="https://thereader.mitpress.mit.edu/social-sciences-dark-ages/"&gt;To fix the social sciences, look to the “dark ages” of medicine&lt;/a&gt;&lt;/s&gt;&lt;/h1&gt;
 &lt;h1 id="emotional-resilience-in-leadership-report"&gt;&lt;a href="https://docs.google.com/document/d/18FfZ86PGA_uSFf425EzKXAmiFQLFBPqjqPN7iu1TZRw/preview?pru=AAABdEZGCv8*_gdPBrQH8tAPyvMfLk6Unw"&gt;Emotional resilience in leadership report&lt;/a&gt;&lt;/h1&gt;

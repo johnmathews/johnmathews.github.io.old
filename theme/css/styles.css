@@ -15310,7 +15310,7 @@ video {
   line-height: 1.75rem;
   line-height: 1.625;
   --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
+  color: rgba(55, 65, 81, var(--tw-text-opacity))
 }
 
 .dark .markdown {
@@ -15320,6 +15320,7 @@ video {
 
 .markdown {
   overflow-wrap: break-word;
+  counter-reset: h1;
 }
 
 .markdown strong {
@@ -15402,6 +15403,7 @@ video {
   margin-top: 1.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  counter-reset: h2
 }
 
 .markdown h2 {
@@ -15415,6 +15417,7 @@ video {
   margin-bottom: 1rem;
   margin-top: 2.5rem;
   padding-bottom: 0.5rem;
+  counter-reset: h3
 }
 
 .markdown h3 {
@@ -15424,6 +15427,7 @@ video {
   line-height: 1.375;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
+  counter-reset: h4
 }
 
 .markdown h4 {
@@ -15433,6 +15437,7 @@ video {
   line-height: 1;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
+  counter-reset: h5
 }
 
 .markdown h5 {
@@ -15442,6 +15447,7 @@ video {
   line-height: 1.25;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
+  counter-reset: h6
 }
 
 .markdown h6 {
@@ -15454,6 +15460,38 @@ video {
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
+
+/* h1:before { */
+
+/*     counter-increment: h1; */
+
+/*     content: counter(h1) ". " */
+
+/* } */
+
+/* h2:before { */
+
+/*     counter-increment: h2; */
+
+/*     content: counter(h1) "." counter(h2) ". " */
+
+/* } */
+
+/* h3:before { */
+
+/*     counter-increment: h3; */
+
+/*     content: counter(h1) "." counter(h2) "." counter(h3) ". " */
+
+/* } */
+
+/* h4:before { */
+
+/*     counter-increment: h4; */
+
+/*     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". " */
+
+/* } */
 
 .markdown kbd {
   border-radius: 0.25rem;
