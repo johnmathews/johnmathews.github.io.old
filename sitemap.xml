@@ -5,56 +5,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/traffic.html</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-04-12T16:55:34-00:00</lastmod>
+<lastmod>2021-04-13T22:25:34-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/ansible.html</loc>
+<lastmod>2021-04-12T11:40:41+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -796,7 +803,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/technical.html</loc>
-<lastmod>2021-04-09T10:14:00+00:20</lastmod>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -817,7 +824,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/technical/developer-tools.html</loc>
-<lastmod>2021-04-09T10:14:00+00:20</lastmod>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -832,6 +839,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/category/technical/web.html</loc>
 <lastmod>2021-04-05T11:54:00+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/ansible.html</loc>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/servers.html</loc>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/ssh.html</loc>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/automation.html</loc>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1811,7 +1846,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/author/john-mathews.html</loc>
-<lastmod>2021-04-09T14:55:20+00:20</lastmod>
+<lastmod>2021-04-12T11:40:41+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

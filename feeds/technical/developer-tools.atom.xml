@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-09T10:14:00+02:00</updated><entry><title>One-man SaaS architecture</title><link href="https://johnmathews.eu/one-man-saas-architecture.html" rel="alternate"/><published>2021-04-09T10:14:00+02:00</published><updated>2021-04-09T10:14:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-09:/one-man-saas-architecture.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;a href="https://anthonynsimon.com/blog/one-man-saas-architecture/"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="kubernetes"/><category term="django"/><category term="saas"/><category term="micro-saas"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-12T11:40:41+02:00</updated><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;p&gt;I’ve been spending a lot of time lately creating nodes for various blockchain
+projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …) and
+interacting with them using the Rosetta &lt;span class="caps"&gt;API&lt;/span&gt; spec.&lt;/p&gt;
+&lt;p&gt;Each of the nodes runs on a separate server, and we typically have one node for
+mainnet and another for testnet. I have a lot of servers to manage.&lt;/p&gt;
+&lt;p&gt;So that I can be productive and learn new things, I need to make working on
+new servers as easy and fun as possible. I need to reduce friction and cognitive load.&lt;/p&gt;
+&lt;p&gt;Accessing the VMs is easy - I use Tmux with the continuum and resurrect plugins
+and maintain different sessions for each type of server. This makes accessing
+multiple servers during the same work day really simple and effortless. But
+working on the servers is still awkward .&lt;/p&gt;
+&lt;p&gt;On my dev machine I have &lt;code&gt;zsh&lt;/code&gt; with syntax highlighting, command
+completion, and various tools, like &lt;code&gt;z&lt;/code&gt; to make navigation supper easy. I also
+have a lot of aliases defined. E.g. &lt;code&gt;..&lt;/code&gt; -&amp;gt; &lt;code&gt;cd ..&lt;/code&gt;. Working on a remote server
+should be as convenient and familiar as working on my local machine, so I want
+to find a way to configure a server the same way as my laptop, and I want to do
+it automatically so that it can be done many times, with no additional effort.&lt;/p&gt;
+&lt;h1 id="ansible"&gt;Ansible&lt;/h1&gt;
+&lt;p&gt;Ansible seems to be popular because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It’s free&lt;/li&gt;
+&lt;li&gt;It’s got all the features and capabilities you’re going to need&lt;/li&gt;
+&lt;li&gt;It’s agentless - you don’t need to install anything on the machine you want
+   to control - you can use Ansible with anything that you can ssh into.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I used the following resources to get started:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This &lt;a href="https://www.youtube.com/watch?v=w9eCU4bGgjQ"&gt;useful video&lt;/a&gt; gave me some
+    orientation and helped me figure out what I was aiming for and how to get
+    started. Before watching it, I didn’t know “which way was up”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This &lt;a href="http://matthieure.me/2018/12/31/ansible_inventory_plugin.html"&gt;blog
+    post&lt;/a&gt; showed
+    me how to create an inventory using the &lt;code&gt;gcp_compute&lt;/code&gt; plugin.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I spent a lot of time being unnecessarily confused about service accounts.
+    I guess until you have 1 success at understanding something you don’t know
+    if you’ve misunderstood by a little or a lot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once you have an inventory of servers that you want to connect to, you
+    still need to specify (and prepare for) how you will connect to them. I’d
+    hoped that the &lt;code&gt;gcp_compute&lt;/code&gt; plugin would do some heavy lifting for me in
+    this step, but it seems not. It &lt;em&gt;can&lt;/em&gt; do lots of useful stuff like
+    creating instances and specifying disk space and networks, but it won’t
+    really help you ssh into an instance. No matter though…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This &lt;a href="https://alex.dzyoba.com/blog/gcp-ansible-service-account/"&gt;blog post&lt;/a&gt;
+    turned out to be just what I needed. I found it at the beginning of my
+    search when I was trying to create an inventory, and discarded it as almost
+    useful. Turns out that &lt;code&gt;OS Login&lt;/code&gt; is the best way to ssh into a &lt;span class="caps"&gt;GCE&lt;/span&gt;
+    instance and once you’ve got your inventory taken care of, this blog post
+    really helps.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When I was installing python modules, I had some errors about pyenv shims
+being incorrect. The scripts were looking for versions that weren’t present.
+Running &lt;code&gt;pyenv reshash&lt;/code&gt; fixed it. Kind of magically, but annoying.&lt;/p&gt;
+&lt;p&gt;Setting up a service account and giving it the correct permissions took more
+time and was more confusing than anything to do with Ansible.&lt;/p&gt;
+&lt;p&gt;I found this &lt;a href="https://www.arthurkoziel.com/setting-up-vim-for-yaml/"&gt;blog post&lt;/a&gt;
+about setting up vim for &lt;code&gt;yml&lt;/code&gt; files.&lt;/p&gt;
+&lt;p&gt;The preferred way to install ansible on Mac is using &lt;code&gt;pip&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When you use &lt;code&gt;OS Login&lt;/code&gt; the username you have when you ssh into the compute
+instance will change. This &lt;a href="https://superuser.com/questions/1379434/google-compute-engine-ssh-different-username-after-switching-to-os-login"&gt;&lt;span class="caps"&gt;SO&lt;/span&gt;
+question&lt;/a&gt;
+explains why.&lt;/p&gt;
+&lt;h1 id="commands"&gt;Commands&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gcloud auth list&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ansible-config view|list|dump&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ansible-inventory -i inventory.compute.gcp.yml --graph&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ansible -i inventory.compute.gcp.yml all -m ping&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>One-man SaaS architecture</title><link href="https://johnmathews.eu/one-man-saas-architecture.html" rel="alternate"/><published>2021-04-09T10:14:00+02:00</published><updated>2021-04-09T10:14:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-09:/one-man-saas-architecture.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;a href="https://anthonynsimon.com/blog/one-man-saas-architecture/"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="kubernetes"/><category term="django"/><category term="saas"/><category term="micro-saas"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
 &lt;p&gt;In Python, every time you call a function or method such as &lt;code&gt;my_function()&lt;/code&gt; or
 &lt;code&gt;my_class.my_method()&lt;/code&gt; the interpreter will replace the &lt;code&gt;(&lt;/code&gt; with
 &lt;code&gt;.__call__(&lt;/code&gt;&lt;/p&gt;
