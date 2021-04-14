@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-09T14:55:20+02:00</updated><entry><title>What I’m reading: April 2021</title><link href="https://johnmathews.eu/reading-april-2021.html" rel="alternate"/><published>2021-04-09T14:55:20+02:00</published><updated>2021-04-09T14:55:20+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-09:/reading-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-09T14:55:20+02:00</updated><entry><title>What I’m reading - April 2021</title><link href="https://johnmathews.eu/reading-april-2021.html" rel="alternate"/><published>2021-04-09T14:55:20+02:00</published><updated>2021-04-09T14:55:20+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-09:/reading-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#the-architecture-behind-a-one-person-tech-startup"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#boring-tech-behind-a-one-person-saas"&gt;Boring tech behind a one person SaaS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#djangos-place-in-a-web-development-world"&gt;Djangos place in a web development world&lt;/a&gt;&lt;/li&gt;
@@ -8,6 +8,11 @@
 &lt;li&gt;&lt;a href="#to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine"&gt;&lt;s&gt;To fix the social sciences, look to the “dark ages” of medicine&lt;/s&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#emotional-resilience-in-leadership-report"&gt;Emotional resilience in leadership report&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#3-virtues-of-a-programmer"&gt;3 virtues of a programmer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#is-webassembly-magic-performance-pixie-dust"&gt;Is WebAssembly magic performance pixie dust?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#yamauchi-no10-family-office"&gt;Yamauchi No.10 Family Office&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#improve-and-extend-your-text-objects-with-targetsvim"&gt;Improve and Extend Your Text Objects With targets.vim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#a-vim-guide-for-adept-users"&gt;A Vim Guide for Adept Users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#deep-dive-in-cors"&gt;Deep dive in &lt;span class="caps"&gt;CORS&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;p&gt;Articles and blog posts I saved to read later:&lt;/p&gt;
@@ -72,7 +77,24 @@
 &lt;li&gt;Impatience - The anger you feel when the computer is being lazy. This makes you write programs that don’t just react to your needs, but actually anticipate them. Or at least pretend to.&lt;/li&gt;
 &lt;li&gt;Hubris - The quality that makes you write (and maintain) programs that other people won’t want to say bad things about.&lt;/li&gt;
 &lt;li&gt;Also, I read a quote somewhere saying the mark of a great program is having people use it in ways you didn’t expect, or something like that.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Non-technical/Journal"/><category term="reading"/></entry><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
+&lt;/ul&gt;
+&lt;h1 id="is-webassembly-magic-performance-pixie-dust"&gt;&lt;a href="https://surma.dev/things/js-to-asc/"&gt;Is WebAssembly magic performance pixie dust?&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="yamauchi-no10-family-office"&gt;&lt;a href="https://y-n10.com/"&gt;Yamauchi No.10 Family Office&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;A beautifully designed website.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="improve-and-extend-your-text-objects-with-targetsvim"&gt;&lt;a href="https://www.barbarianmeetscoding.com/blog/exploring-vim-plugins-improve-and-extend-your-text-objects-with-targets-vim"&gt;Improve and Extend Your Text Objects With targets.vim&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="a-vim-guide-for-adept-users"&gt;&lt;a href="https://thevaluable.dev/vim-adept"&gt;A Vim Guide for Adept Users&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;How to manipulate multiple quickfix and location lists.&lt;/li&gt;
+&lt;li&gt;What are digraphs and how to use them.&lt;/li&gt;
+&lt;li&gt;Useful keystrokes in &lt;span class="caps"&gt;INSERT&lt;/span&gt; mode.&lt;/li&gt;
+&lt;li&gt;Useful keystrokes in &lt;span class="caps"&gt;VISUAL&lt;/span&gt; mode.&lt;/li&gt;
+&lt;li&gt;Vim regular expressions.&lt;/li&gt;
+&lt;li&gt;Using shell commands in Vim.&lt;/li&gt;
+&lt;li&gt;Folding content.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="deep-dive-in-cors"&gt;&lt;a href="https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/"&gt;Deep dive in &lt;span class="caps"&gt;CORS&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;</content><category term="Non-technical/Journal"/><category term="reading"/></entry><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
 making unnecessary improvements to this blog.&lt;/p&gt;
 &lt;p&gt;Some of these improvements are:&lt;/p&gt;
 &lt;ol&gt;

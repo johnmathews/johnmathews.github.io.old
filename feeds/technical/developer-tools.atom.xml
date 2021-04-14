@@ -13,7 +13,7 @@ multiple servers during the same work day really simple and effortless. But
 working on the servers is still awkward .&lt;/p&gt;
 &lt;p&gt;On my dev machine I have &lt;code&gt;zsh&lt;/code&gt; with syntax highlighting, command
 completion, and various tools, like &lt;code&gt;z&lt;/code&gt; to make navigation supper easy. I also
-have a lot of aliases defined. E.g. &lt;code&gt;..&lt;/code&gt; -&amp;gt; &lt;code&gt;cd ..&lt;/code&gt;. Working on a remote server
+have a lot of aliases defined. E.g. &lt;code&gt;..&lt;/code&gt; → &lt;code&gt;cd ..&lt;/code&gt;. Working on a remote server
 should be as convenient and familiar as working on my local machine, so I want
 to find a way to configure a server the same way as my laptop, and I want to do
 it automatically so that it can be done many times, with no additional effort.&lt;/p&gt;
