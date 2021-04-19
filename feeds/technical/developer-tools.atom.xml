@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-12T11:40:41+02:00</updated><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
-&lt;p&gt;I’ve been spending a lot of time lately creating nodes for various blockchain
-projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …) and
-interacting with them using the Rosetta &lt;span class="caps"&gt;API&lt;/span&gt; spec.&lt;/p&gt;
+&lt;p&gt;I’ve been spending a lot of time lately working on nodes for various blockchain
+projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta
+api spec is super interesting, but like most things in crypto the documentation
+is sometimes wrong or incomplete and there are bugs and undocumented features. &lt;/p&gt;
 &lt;p&gt;Each of the nodes runs on a separate server, and we typically have one node for
-mainnet and another for testnet. I have a lot of servers to manage.&lt;/p&gt;
-&lt;p&gt;So that I can be productive and learn new things, I need to make working on
-new servers as easy and fun as possible. I need to reduce friction and cognitive load.&lt;/p&gt;
-&lt;p&gt;Accessing the VMs is easy - I use Tmux with the continuum and resurrect plugins
-and maintain different sessions for each type of server. This makes accessing
+mainnet and another for testnet.  I’m working across mutiple servers, doing
+difficult stuff, and I want it to be as easy as possible.&lt;/p&gt;
+&lt;p&gt;I need to reduce friction and cognitive load.&lt;/p&gt;
+&lt;p&gt;Accessing the servers is easy - I use Tmux with the
+&lt;a href="https://github.com/tmux-plugins/tmux-continuum"&gt;continuum&lt;/a&gt; and
+&lt;a href="https://github.com/tmux-plugins/tmux-resurrect"&gt;resurrect&lt;/a&gt; plugins and
+maintain different sessions for each type of server. This makes accessing
 multiple servers during the same work day really simple and effortless. But
-working on the servers is still awkward .&lt;/p&gt;
-&lt;p&gt;On my dev machine I have &lt;code&gt;zsh&lt;/code&gt; with syntax highlighting, command
-completion, and various tools, like &lt;code&gt;z&lt;/code&gt; to make navigation supper easy. I also
-have a lot of aliases defined. E.g. &lt;code&gt;..&lt;/code&gt; → &lt;code&gt;cd ..&lt;/code&gt;. Working on a remote server
-should be as convenient and familiar as working on my local machine, so I want
-to find a way to configure a server the same way as my laptop, and I want to do
-it automatically so that it can be done many times, with no additional effort.&lt;/p&gt;
+working on the servers is still awkward.&lt;/p&gt;
+&lt;p&gt;On my dev machine I have &lt;code&gt;zsh&lt;/code&gt; with syntax highlighting, command completion,
+and various tools, like &lt;a href="https://github.com/agkozak/zsh-z"&gt;z&lt;/a&gt; to make
+navigation supper easy. I also have a lot of aliases defined. E.g. &lt;code&gt;..&lt;/code&gt; → &lt;code&gt;cd
+..&lt;/code&gt;. Working on a remote server should be as convenient and familiar as working
+on my local machine, so I want to find a way to configure a server the same way
+as my laptop, and I want to do it automatically so that it can be done many
+times, with no additional effort.&lt;/p&gt;
 &lt;h1 id="ansible"&gt;Ansible&lt;/h1&gt;
 &lt;p&gt;Ansible seems to be popular because:&lt;/p&gt;
 &lt;ol&gt;
@@ -77,7 +81,7 @@ explains why.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ansible-config view|list|dump&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ansible-inventory -i inventory.compute.gcp.yml --graph&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ansible -i inventory.compute.gcp.yml all -m ping&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>One-man SaaS architecture</title><link href="https://johnmathews.eu/one-man-saas-architecture.html" rel="alternate"/><published>2021-04-09T10:14:00+02:00</published><updated>2021-04-09T10:14:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-09:/one-man-saas-architecture.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;a href="https://anthonynsimon.com/blog/one-man-saas-architecture/"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="kubernetes"/><category term="django"/><category term="saas"/><category term="micro-saas"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
 &lt;p&gt;In Python, every time you call a function or method such as &lt;code&gt;my_function()&lt;/code&gt; or
 &lt;code&gt;my_class.my_method()&lt;/code&gt; the interpreter will replace the &lt;code&gt;(&lt;/code&gt; with
 &lt;code&gt;.__call__(&lt;/code&gt;&lt;/p&gt;

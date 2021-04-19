@@ -12,18 +12,18 @@
 <meta content="Ansible -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" ansible,automation,servers,ssh " name="keywords"/>
-<meta content=" Background I’ve been spending a lot of time lately creating nodes for various blockchain projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …) and interacting with them using the Rosetta... " name="description"/>
+<meta content=" Background I’ve been spending a lot of time lately working on nodes for various blockchain projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta api spec is super... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Ansible" property="twitter:title"/>
-<meta content=" Background I’ve been spending a lot of time lately creating nodes for various blockchain projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …) and interacting with them using the Rosetta... " name="twitter:description"/>
+<meta content=" Background I’ve been spending a lot of time lately working on nodes for various blockchain projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta api spec is super... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/ansible.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Ansible" property="og:title"/>
-<meta content=" Background I’ve been spending a lot of time lately creating nodes for various blockchain projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …) and interacting with them using the Rosetta... " property="og:description"/>
+<meta content=" Background I’ve been spending a lot of time lately working on nodes for various blockchain projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta api spec is super... " property="og:description"/>
 <meta content="https://johnmathews.eu/ansible.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -246,23 +246,27 @@
 <article class="">
 <div class="markdown">
 <h1 id="background">Background</h1>
-<p>I’ve been spending a lot of time lately creating nodes for various blockchain
-projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …) and
-interacting with them using the Rosetta <span class="caps">API</span> spec.</p>
+<p>I’ve been spending a lot of time lately working on nodes for various blockchain
+projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta
+api spec is super interesting, but like most things in crypto the documentation
+is sometimes wrong or incomplete and there are bugs and undocumented features. </p>
 <p>Each of the nodes runs on a separate server, and we typically have one node for
-mainnet and another for testnet. I have a lot of servers to manage.</p>
-<p>So that I can be productive and learn new things, I need to make working on
-new servers as easy and fun as possible. I need to reduce friction and cognitive load.</p>
-<p>Accessing the VMs is easy - I use Tmux with the continuum and resurrect plugins
-and maintain different sessions for each type of server. This makes accessing
+mainnet and another for testnet.  I’m working across mutiple servers, doing
+difficult stuff, and I want it to be as easy as possible.</p>
+<p>I need to reduce friction and cognitive load.</p>
+<p>Accessing the servers is easy - I use Tmux with the
+<a href="https://github.com/tmux-plugins/tmux-continuum">continuum</a> and
+<a href="https://github.com/tmux-plugins/tmux-resurrect">resurrect</a> plugins and
+maintain different sessions for each type of server. This makes accessing
 multiple servers during the same work day really simple and effortless. But
-working on the servers is still awkward .</p>
-<p>On my dev machine I have <code>zsh</code> with syntax highlighting, command
-completion, and various tools, like <code>z</code> to make navigation supper easy. I also
-have a lot of aliases defined. E.g. <code>..</code> → <code>cd ..</code>. Working on a remote server
-should be as convenient and familiar as working on my local machine, so I want
-to find a way to configure a server the same way as my laptop, and I want to do
-it automatically so that it can be done many times, with no additional effort.</p>
+working on the servers is still awkward.</p>
+<p>On my dev machine I have <code>zsh</code> with syntax highlighting, command completion,
+and various tools, like <a href="https://github.com/agkozak/zsh-z">z</a> to make
+navigation supper easy. I also have a lot of aliases defined. E.g. <code>..</code> → <code>cd
+..</code>. Working on a remote server should be as convenient and familiar as working
+on my local machine, so I want to find a way to configure a server the same way
+as my laptop, and I want to do it automatically so that it can be done many
+times, with no additional effort.</p>
 <h1 id="ansible">Ansible</h1>
 <p>Ansible seems to be popular because:</p>
 <ol>
@@ -330,7 +334,7 @@ explains why.</p>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/one-man-saas-architecture.html" id="previousArticleInCategory"> One-man SaaS architecture</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/over-engineering-this-blog.html" id="previousArticleInCategory"> Over-Engineering this blog</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
