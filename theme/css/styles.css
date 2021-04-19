@@ -15639,6 +15639,10 @@ video {
     margin-top: 6rem;
   }
 
+  .md\:mt-40 {
+    margin-top: 10rem;
+  }
+
   .md\:-mr-64 {
     margin-right: -16rem;
   }
@@ -15769,10 +15773,6 @@ video {
 
   .lg\:mt-20 {
     margin-top: 5rem;
-  }
-
-  .lg\:mt-24 {
-    margin-top: 6rem;
   }
 
   .lg\:max-w-3xl {
