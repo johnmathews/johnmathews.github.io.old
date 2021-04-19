@@ -15817,6 +15817,10 @@ video {
     display: none;
   }
 
+  .xl\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .xl\:ml-20 {
     margin-left: 5rem;
   }
