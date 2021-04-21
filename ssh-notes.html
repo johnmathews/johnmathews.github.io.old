@@ -8,23 +8,23 @@
 <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>Reading - April 2021 - John Mathews</title>
-<meta content="Reading - April 2021 -  John Mathews " name="title"/>
+<title>SSH-Notes - John Mathews</title>
+<meta content="SSH-Notes -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
-<meta content=" reading " name="keywords"/>
-<meta content=" Table of Contents The Architecture Behind A One-Person Tech Startup Boring tech behind a one person SaaS Djangos place in a web development world Cache invalidation Vim abbreviations To fix the... " name="description"/>
+<meta content=" linux,security,ssh " name="keywords"/>
+<meta content=" Table of Contents Background Authentication Passwords and Keys Handshake Background Secure Shell lets you securely connect to remote servers. You connect using an account that exists on the remote... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content="Reading - April 2021" property="twitter:title"/>
-<meta content=" Table of Contents The Architecture Behind A One-Person Tech Startup Boring tech behind a one person SaaS Djangos place in a web development world Cache invalidation Vim abbreviations To fix the... " name="twitter:description"/>
-<meta content="https://johnmathews.eu/reading-april-2021.html" property="twitter:url"/>
+<meta content="SSH-Notes" property="twitter:title"/>
+<meta content=" Table of Contents Background Authentication Passwords and Keys Handshake Background Secure Shell lets you securely connect to remote servers. You connect using an account that exists on the remote... " name="twitter:description"/>
+<meta content="https://johnmathews.eu/ssh-notes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
-<meta content="Reading - April 2021" property="og:title"/>
-<meta content=" Table of Contents The Architecture Behind A One-Person Tech Startup Boring tech behind a one person SaaS Djangos place in a web development world Cache invalidation Vim abbreviations To fix the... " property="og:description"/>
-<meta content="https://johnmathews.eu/reading-april-2021.html" property="og:url"/>
+<meta content="SSH-Notes" property="og:title"/>
+<meta content=" Table of Contents Background Authentication Passwords and Keys Handshake Background Secure Shell lets you securely connect to remote servers. You connect using an account that exists on the remote... " property="og:description"/>
+<meta content="https://johnmathews.eu/ssh-notes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
 <link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
@@ -220,7 +220,7 @@
 <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
  Category: 
     <div>
-<a class="hover:underline" href="https://johnmathews.eu/category/non-technical/journal.html">Journal</a>
+<a class="hover:underline" href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
 </div>
 </div>
 </div>
@@ -228,10 +228,10 @@
 </div>
 </div>
 <div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
-<div class="mx-3 xl:ml-20 my-4 nonTechnical" id="articleParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
 <div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
-<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-all" style="word-break: unset; white-space: wrap;">
-          Reading - April 2021
+<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
+<span class="caps">SSH</span>-Notes
       </div>
 <div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
         April 2021
@@ -243,118 +243,124 @@
 <article class="">
 <div class="markdown">
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
-<li><a href="#the-architecture-behind-a-one-person-tech-startup">The Architecture Behind A One-Person Tech Startup</a></li>
-<li><a href="#boring-tech-behind-a-one-person-saas">Boring tech behind a one person SaaS</a></li>
-<li><a href="#djangos-place-in-a-web-development-world">Djangos place in a web development world</a></li>
-<li><a href="#cache-invalidation"><s>Cache invalidation</s></a></li>
-<li><a href="#vim-abbreviations">Vim abbreviations</a></li>
-<li><a href="#to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine"><s>To fix the social sciences, look to the “dark ages” of medicine</s></a></li>
-<li><a href="#emotional-resilience-in-leadership-report">Emotional resilience in leadership report</a></li>
-<li><a href="#3-virtues-of-a-programmer">3 virtues of a programmer</a></li>
-<li><a href="#is-webassembly-magic-performance-pixie-dust">Is WebAssembly magic performance pixie dust?</a></li>
-<li><a href="#yamauchi-no10-family-office">Yamauchi No.10 Family Office</a></li>
-<li><a href="#improve-and-extend-your-text-objects-with-targetsvim">Improve and Extend Your Text Objects With targets.vim</a></li>
-<li><a href="#a-vim-guide-for-adept-users">A Vim Guide for Adept Users</a></li>
-<li><a href="#deep-dive-in-cors">Deep dive in <span class="caps">CORS</span></a></li>
-<li><a href="#the-tty-demystified">The <span class="caps">TTY</span> demystified</a></li>
+<li><a href="#background">Background</a></li>
+<li><a href="#authentication">Authentication</a><ul>
+<li><a href="#passwords-and-keys">Passwords and Keys</a></li>
+<li><a href="#handshake">Handshake</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<p>Articles and blog posts I saved to read later:</p>
-<h1 id="the-architecture-behind-a-one-person-tech-startup"><a href="https://anthonynsimon.com/blog/one-man-saas-architecture/">The Architecture Behind A One-Person Tech Startup</a></h1>
-<p>An article by <a href="https://twitter.com/anthonynsimon">Anthony Najjar Simon</a> about how he runs his one-man SaaS using Django.</p>
-<ul>
-<li>Low stress, one-person company, run from a flat.</li>
-<li>Self-funded, taking things slow - <em>he likes taking things slow</em>.</li>
-<li>Grateful to be standing on the shoulders of the open source giants who went ahead and made the <span class="caps">OSS</span> stack we all enjoy and benefit from.</li>
-<li>Your own context matters when choosing a tech stack. There is no “holy grail”. I guess this means that you should use what you’re familiar with and what is <em>boring</em> for you.</li>
-<li>Uses K8s on <span class="caps">AWS</span>. He says “dont fall into the trap of thinking you need to use it too” - expertise with these tools was learnt over several years fighting fires on the day job.</li>
-<li>Productive because he used the tools he is most familiar with and he can focus on shipping.</li>
-<li>Django, Celery, PostgreSQL, Python, <span class="caps">AWS</span>, Redis. - same as MoneyBar and PipPip.</li>
-</ul>
-<h1 id="boring-tech-behind-a-one-person-saas"><a href="https://www.listennotes.com/blog/the-boring-technology-behind-a-one-person-23/">Boring tech behind a one person SaaS</a></h1>
-<ul>
-<li>The tech-stack keeps evolving</li>
-<li><span class="dquo">“</span>Boring” means “what I’m familiar with so that I can focus on the business”</li>
-<li>Most of his time is spent talking to people and thinking. He spends 15% of his time on engineering. Probably it was more when he was setting stuff up.</li>
-<li>The methods described in the post are <strong>definitely not the best way</strong>. <em>It’s just one way of doing engineering in a very specific type of business. It’s not the only way.</em></li>
-<li>Django, Celery, PostgreSQL, Python, <span class="caps">AWS</span>, Redis. - same as MoneyBar and PipPip.</li>
-<li>Uses Ansible for provisioning machines. - <span class="caps">YAML</span> files. Should look into this.</li>
-<li><span class="dquo">“</span>Good enough for now”</li>
-<li>Doesn’t use <span class="caps">CI</span> tools, he uses Ansible with a shell script he wrote.</li>
-<li>Uses <a href="https://www.datadoghq.com/">Datadog</a> for monitoring and alerting, and PagerDuty.</li>
-<li>Uses <a href="https://rollbar.com/">Rollbar</a>, which seems similar to Sentry.</li>
-<li>Uses Slack, not to talk with humans, but integrations with Rollbar and Datadog, and also <a href="https://api.slack.com/messaging/webhooks">slack incoming webhooks</a> to be notified when someone signs up or does something interesting like deletes a thing.</li>
-<li>Make a “ding” sound whenever someone signs up.</li>
-<li>He’s <em>always very careful about operational stuff</em> to prevent downtime and outages. Servers are over-provisioned to protect against spikes caused by sudden media interest.</li>
-<li>Avoids working from home or cafe cos its more productive in an office. Productivity is important - make every minute count. He doesn’t often work more than 8 hours/day.</li>
-<li>He optimizes for spending less time and making money instead of more time and saving money.</li>
-<li>Uses <code>Vagrant</code> and <code>virtualbox</code> on an <span class="caps">MBP</span> so that dev work is on the same systems as prod infra.</li>
-<li>Uses 1 monolithic repo. Likes this approach.</li>
-<li><em>He uses contractors</em>!!</li>
-<li>Usually, the biggest obstacle to building and shipping things is overthinking. What if this, what if that. You are not important at all and no one cares. No one sees. Even if you screw up the initial product launch, no one will care because they’re not looking. Only when you’ve proved that you deserve their attention will you have any attention and visibility.</li>
-<li><strong><a href="https://hackernoon.com/think-big-start-small-act-fast-6fdab1f771ea">Think big, start small, act fast</a></strong>.</li>
-<li>Use boring technology, or whatever tech you want. Just make sure you’re solving an actual problem.</li>
-<li>Ignore the <a href="https://stevemcconnell.com/articles/cargo-cult-software-engineering/">cargo cult people</a> and ignore the noise. Keep calm and carry on.</li>
-</ul>
-<h1 id="djangos-place-in-a-web-development-world"><a href="https://thenewstack.io/djangos-place-in-a-web-development-world-ruled-by-react/">Djangos place in a web development world</a></h1>
-<ul>
-<li>Not everything needs to be an <span class="caps">SPA</span></li>
-<li>Django is a back-end framework, it’ll work with an front-end framework, because separation of concerns.</li>
-<li>To use django with an <span class="caps">SPA</span>, you could use <span class="caps">DRF</span>, or just normal views that return <span class="caps">JSON</span>.</li>
-<li>Reading this makes me want to check out React to see what all the fuss is about.</li>
-</ul>
-<h1 id="cache-invalidation"><s><a href="https://yihui.org/en/2018/06/cache-invalidation/">Cache invalidation</a></s></h1>
-<h1 id="vim-abbreviations"><a href="https://jovica.org/posts/vim_abbreviations/">Vim abbreviations</a></h1>
-<ul>
-<li>Cool and all, but not as powerful as snippets I think.</li>
-<li>Auto correcting typos: teh -&gt; the</li>
-<li>Expanding phrases: kr -&gt; kind regards</li>
-<li>Multi-line text expansion.</li>
-<li>It really seems similar to what I’m using UltiSnips for.</li>
-<li>I found <a href="https://stackoverflow.com/questions/30266587/snippets-vs-abbreviations-in-vim">this</a> question on <span class="caps">SO</span> comparing abbreviations and snippets. <span class="caps">TLDR</span>: It’s easier to add and maintain snippets than abbreviations, and you have less boilerplate with snippets than abbreviations, especially in complex cases.</li>
-</ul>
-<h1 id="to-fix-the-social-sciences-look-to-the-dark-ages-of-medicine"><s><a href="https://thereader.mitpress.mit.edu/social-sciences-dark-ages/">To fix the social sciences, look to the “dark ages” of medicine</a></s></h1>
-<h1 id="emotional-resilience-in-leadership-report"><a href="https://docs.google.com/document/d/18FfZ86PGA_uSFf425EzKXAmiFQLFBPqjqPN7iu1TZRw/preview?pru=AAABdEZGCv8*_gdPBrQH8tAPyvMfLk6Unw">Emotional resilience in leadership report</a></h1>
-<h1 id="3-virtues-of-a-programmer"><a href="http://threevirtues.com/">3 virtues of a programmer</a></h1>
-<ul>
-<li>Laziness - The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful and document what you wrote so you don’t have to answer so many questions about it.</li>
-<li>Impatience - The anger you feel when the computer is being lazy. This makes you write programs that don’t just react to your needs, but actually anticipate them. Or at least pretend to.</li>
-<li>Hubris - The quality that makes you write (and maintain) programs that other people won’t want to say bad things about.</li>
-<li>Also, I read a quote somewhere saying the mark of a great program is having people use it in ways you didn’t expect, or something like that.</li>
-</ul>
-<h1 id="is-webassembly-magic-performance-pixie-dust"><a href="https://surma.dev/things/js-to-asc/">Is WebAssembly magic performance pixie dust?</a></h1>
-<h1 id="yamauchi-no10-family-office"><a href="https://y-n10.com/">Yamauchi No.10 Family Office</a></h1>
-<ul>
-<li>A beautifully designed website.</li>
-</ul>
-<h1 id="improve-and-extend-your-text-objects-with-targetsvim"><a href="https://www.barbarianmeetscoding.com/blog/exploring-vim-plugins-improve-and-extend-your-text-objects-with-targets-vim">Improve and Extend Your Text Objects With targets.vim</a></h1>
-<h1 id="a-vim-guide-for-adept-users"><a href="https://thevaluable.dev/vim-adept">A Vim Guide for Adept Users</a></h1>
-<ul>
-<li>How to manipulate multiple quickfix and location lists.</li>
-<li>What are digraphs and how to use them.</li>
-<li>Useful keystrokes in <span class="caps">INSERT</span> mode.</li>
-<li>Useful keystrokes in <span class="caps">VISUAL</span> mode.</li>
-<li>Vim regular expressions.</li>
-<li>Using shell commands in Vim.</li>
-<li>Folding content.</li>
-</ul>
-<h1 id="deep-dive-in-cors"><a href="https://ieftimov.com/post/deep-dive-cors-history-how-it-works-best-practices/">Deep dive in <span class="caps">CORS</span></a></h1>
-<h1 id="the-tty-demystified"><a href="http://www.linusakesson.net/programming/tty/index.php">The <span class="caps">TTY</span> demystified</a></h1>
-<ul>
-<li><code>ps 1</code> - see which processes are running or sleeping. <code>WCHAN</code> tells you which
-    kernel event a waiting processing is awaiting.</li>
-</ul>
+<h1 id="background">Background</h1>
+<ol>
+<li>
+<p>Secure Shell lets you securely connect to remote servers. You connect using
+   an account that exists on the remote server. Once you’ve connected you’ll be
+   dropped into a shell session.</p>
+</li>
+<li>
+<p>The computer you connect from is the “local” or “client” computer. The
+   computer you connect to is the “host” or the “server”.</p>
+</li>
+<li>
+<p>When you’re connected to the server using <span class="caps">SSH</span>, any commands you input from
+   the client are sent securely and privately (through a “tunnel”) to the remote
+   computer, where the commands are executed.</p>
+</li>
+<li>
+<p><span class="caps">SSH</span> is implemented using the client-server model. The server must be running
+   a small app to listen for <span class="caps">SSH</span> connections. This kind of app is
+   called a daemon (pronounced day-mon). For <span class="caps">SSH</span> to work, the host must be
+   running the <span class="caps">SSH</span> daemon. The <span class="caps">SSH</span> daemon listens for connections on a specific
+   port (22), authenticates connections requests, and (if the connection
+   request is approved) it will spawn the correct environment. The correct
+   environment is a terminal session.</p>
+</li>
+<li>
+<p>The client (the computer you connect from) must be running an <span class="caps">SSH</span> client,
+   which is a small app that can communicate using the <span class="caps">SSH</span> protocol. (A
+   protocol is a set of rules.) It needs to be able to receive information
+   about which host to connect to, which user to connect as and which
+   credentials to use when trying to connect.</p>
+</li>
+</ol>
+<h1 id="authentication">Authentication</h1>
+<h2 id="passwords-and-keys">Passwords and Keys</h2>
+<ol>
+<li>
+<p>Clients authenticate using passwords or keys. Passwords are less secure than
+   keys. Keys are very secure. You can also connect using no authentication by
+   specifying a particular <span class="caps">IP</span> address I think.</p>
+</li>
+<li>
+<p>Passwords are encrypted, and are conceptually familiar, but can (and will)
+   be brute forced. There are tools that will block repeated attempts or
+   block/allow authentication attempts from particular <span class="caps">IP</span> addresses.</p>
+</li>
+<li>
+<p><span class="caps">SSH</span> keys using public and private (or secret) key pairs and are very secure.
+   Keys are generated in pairs.  The public key can be shared freely without
+   concern. The secret key must be kept as secure and secret as a password.</p>
+</li>
+<li>
+<p>To authenticate using a key pair, the client must have both keys (a key
+   pair) on their computer. The server must have the public key in a file
+   called <code>authorized_keys</code>. If the server has the private key then something
+   has gone wrong and you should be alarmed.</p>
+</li>
+</ol>
+<p>The server stores the public keys of users who can connect as a particular
+   user in the file <code>~/.ssh/authorized_keys</code>. The file contains a list of
+   public keys, one public key on each row.</p>
+<ol>
+<li>The default location to store the public key on the remote server is in the
+   users home folder in a subdirectory called <code>.ssh/authorized_keys</code>. The full
+   path would be <code>~/.ssh/authorized_keys</code></li>
+</ol>
+<h2 id="handshake">Handshake</h2>
+<ol>
+<li>
+<p>When a client wants to connect to a server using <span class="caps">SSH</span>, it tells the server
+   which public key to use. The server then checks in the <code>authorized_keys</code> file
+   for the public key. </p>
+</li>
+<li>
+<p>A unique session <span class="caps">ID</span> is generated and shared between the client and server.</p>
+</li>
+<li>
+<p>If the server has the same public key that the client sent when it  began
+   the connection attempt, the server generates a random string and encrypts
+   it using the public key. This random string can only be decrypted using the
+   private (secret) key associated with the public key.</p>
+</li>
+<li>
+<p>The server sends the encrypted string to the client. The client decrypts it
+   using the secret key and combines the original random string with the
+   session <span class="caps">ID</span>. The client then hashes the combined string and sends the hash
+   back to the server. </p>
+</li>
+<li>
+<p>The server already has the hash of the string combining the original random
+   string and the session <span class="caps">ID</span>. If the hash from the client matches the hash on
+   the server, the server can be sure that the client has the private key.</p>
+</li>
+</ol>
+<p><a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys">Source</a></p>
 </div>
 </article>
 </main>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/tweets-april-2021.html" id="previousArticleInCategory"> Tweets - April 2021</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/chezmoi.html" id="previousArticleInCategory"> ChezMoi</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/learning-april-2021.html" id="nextArticleInCategory"> Learning - April 2021</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
-          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/non-technical/journal.html" id="otherArticlesInCategory"> Journal</a>
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/developer-tools.html" id="otherArticlesInCategory"> Developer Tools</a>
 </div>
 </div>
 </div>
