@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-21T11:09:19+02:00</updated><entry><title>Learning - April 2021</title><link href="https://johnmathews.eu/learning-april-2021.html" rel="alternate"/><published>2021-04-21T11:09:19+02:00</published><updated>2021-04-21T11:09:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/learning-april-2021.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PLIivdWyY5sqIlPnZ7cvkg2Ck-8ZZ8TA5t"&gt;Google Cloud Platform Service Accounts&lt;/a&gt;
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/xXk1YlkKW_k" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PL2_OBreMn7FplshFCWYlaN2uS8et9RjNG"&gt;Ansible&lt;/a&gt; - based on Jeff Geerlings book. There are 15 episodes.
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/goclfp6a2IQ" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=hQWRp-FdTpc&amp;amp;list=PLQGMHRkCCyDw5arrPInZT_T8TbDdzmeBp&amp;amp;index=4"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/hQWRp-FdTpc" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=vBrezgo&amp;amp;list=PLQGMHRkCCyDw5arrPInZT_T8TbDdzmeBp&amp;amp;index=2X"&gt;Vagrant&lt;/a&gt;
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/vBreXjkizgo" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="learning"/><category term="youtube"/><category term="ansible"/><category term="ssh"/><category term="vagrant"/><category term="gcp"/><category term="service-accounts"/><category term="iam"/></entry><entry><title>SSH-Notes</title><link href="https://johnmathews.eu/ssh-notes.html" rel="alternate"/><published>2021-04-21T10:21:15+02:00</published><updated>2021-04-21T10:21:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/ssh-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-21T11:09:19+02:00</updated><entry><title>Learning - April 2021</title><link href="https://johnmathews.eu/learning-april-2021.html" rel="alternate"/><published>2021-04-21T11:09:19+02:00</published><updated>2021-04-21T11:09:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/learning-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#google-cloud-platform-service-accounts"&gt;Google Cloud Platform Service Accounts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ansible"&gt;Ansible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#vagrant"&gt;Vagrant&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="google-cloud-platform-service-accounts"&gt;&lt;a href="https://www.youtube.com/playlist?list=PLIivdWyY5sqIlPnZ7cvkg2Ck-8ZZ8TA5t"&gt;Google Cloud Platform Service Accounts&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;It seems like I’m looking for some general overview of how roles are managed,
+viewed, compared, and inherited.&lt;/p&gt;
+&lt;p&gt;How can you tell if a users (or a service accounts) roles are adequate, or
+too much or too little for a particular task? And what’s the difference
+between a user having some roles, and a user using a service account that
+has those roles. &lt;/p&gt;
+&lt;p&gt;It would also be nice to have some kind of adversarial test, that would
+identify how/if users or service accounts can create identities with more
+flexible permissions that their own.&lt;/p&gt;
+&lt;p&gt;These short videos are good, but they’re not a complete solution. I’m not sure
+where to look next.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/xXk1YlkKW_k" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h1 id="ansible"&gt;&lt;a href="https://www.youtube.com/playlist?list=PL2_OBreMn7FplshFCWYlaN2uS8et9RjNG"&gt;Ansible&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Based on Jeff Geerlings book. There are 15 episodes. Jeff seems like a great
+guy. I’m going to try listen to one of these each day.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/goclfp6a2IQ" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h1 id="ssh"&gt;&lt;a href="https://www.youtube.com/watch?v=hQWRp-FdTpc&amp;amp;list=PLQGMHRkCCyDw5arrPInZT_T8TbDdzmeBp&amp;amp;index=4"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;br/&gt;&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/hQWRp-FdTpc" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;This&lt;/a&gt;
+is also a very useful article. I made notes from it in another &lt;a href="https://johnmathews.eu/ssh-notes.html"&gt;post&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="vagrant"&gt;&lt;a href="https://www.youtube.com/watch?v=vBrezgo&amp;amp;list=PLQGMHRkCCyDw5arrPInZT_T8TbDdzmeBp&amp;amp;index=2X"&gt;Vagrant&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;br/&gt;&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/vBreXjkizgo" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Good for local development. (Especially when on aeroplanes?)&lt;/li&gt;
+&lt;li&gt;Not as good for cloud providers as Terraform.&lt;/li&gt;
+&lt;li&gt;No more snowflake servers.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="learning"/><category term="youtube"/><category term="ansible"/><category term="ssh"/><category term="vagrant"/><category term="gcp"/><category term="service-accounts"/><category term="iam"/></entry><entry><title>SSH-Notes</title><link href="https://johnmathews.eu/ssh-notes.html" rel="alternate"/><published>2021-04-21T10:21:15+02:00</published><updated>2021-04-21T10:21:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/ssh-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#authentication"&gt;Authentication&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#passwords-and-keys"&gt;Passwords and Keys&lt;/a&gt;&lt;/li&gt;
@@ -109,24 +136,67 @@
    the server, the server can be sure that the client has the private key.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.eu/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;a href="https://github.com/twpayne/chezmoi"&gt;Project Repo&lt;/a&gt;&lt;br/&gt;
-&lt;a href="https://www.chezmoi.io/"&gt;Project Site&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="commands"&gt;Commands&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.eu/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#razor"&gt;Razor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1-question"&gt;1 Question&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#commands"&gt;Commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#links"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;p&gt;Chezmoi seems to be dotfiles management for power users. I’ve been using a
+shell script to create symlinks from a directory with version control into my
+home directory. This is great for a single machine, but is not robust or
+flexible enough for managing multiple machines or multiple operating systems.&lt;/p&gt;
+&lt;p&gt;I broke my dotfiles setup and it stressed me out. It’s not just files that sit
+in &lt;code&gt;$home&lt;/code&gt; anymore, I need to track configuration files that live in other places
+too. I needed something better than generating symlinks from a bash script.&lt;/p&gt;
+&lt;h1 id="razor"&gt;Razor&lt;/h1&gt;
+&lt;p&gt;I think I read somewhere that when purchasing a new appliance you should buy
+the cheapest you think you can get away with, and if that doesn’t work then get
+the best you can afford. Moving from a custom bash script to Chezmoi is an
+example of this. My custom bash script was the most basic approach, and it
+broke badly. Chezmoi seems like the most heavy duty tool for dotfiles management
+I could find.&lt;/p&gt;
+&lt;p&gt;For example I think I’m able to encrypt my files using 1Password or similar,
+and I can use Jinja templates to create scripts for different scenarios. I
+don’t even know what that means at the moment. I’ve only scratched the surface
+but I’m happily managing dotfiles across different machines and
+updating/modifying them safely. Chezmoi (aliased to cm) is free and &lt;span class="caps"&gt;OSS&lt;/span&gt; so I’m
+confident it’ll be “my” tool for the next few decades. I’m happy to invest a
+couple of hours to learn a few new habits and iron out a few wrinkles.&lt;/p&gt;
+&lt;h1 id="1-question"&gt;1 Question&lt;/h1&gt;
+&lt;p&gt;One thing I don’t understand now though is why does &lt;code&gt;chezmoi cd&lt;/code&gt; create a new
+shell and then jump into the Chezmoi directory. Why not simply &lt;code&gt;cd&lt;/code&gt; into the Chezmoi
+directory? What’s the advantage/necessity of a new shell?&lt;/p&gt;
+&lt;h1 id="commands"&gt;Commands&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Type &lt;code&gt;cm&lt;/code&gt; instead of &lt;code&gt;chezmoi&lt;/code&gt;: &lt;code&gt;alias cm="chezmoi"&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Start tracking a file: &lt;code&gt;cm add &lt;dir file=""&gt;&lt;/dir&gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Update cm with a new version, add the file again: &lt;code&gt;cm add ..&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Edit tracked version of file: &lt;code&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update a file, add the file again: &lt;code&gt;cm add ..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Edit tracked version of file: &lt;code&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/code&gt; - don’t think I’m going to
+    use this, I’d rather edit the source file, test it, and then update using
+    &lt;code&gt;cm add ..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Differences between local version and tracked versions: &lt;code&gt;cm diff &lt;file&gt;&lt;/file&gt;&lt;/code&gt; -
+    this tells me which files I need to &lt;code&gt;cm add&lt;/code&gt; again. This feels clunky and I
+    suspect there is a better workflow. Parsing git style diff files is horrible.&lt;/li&gt;
 &lt;li&gt;Clobber local version with the tracked version: &lt;code&gt;cm apply&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Dry run and see diff between local version and tracked version: &lt;code&gt;cm -nv apply&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Differences between local version and tracked versions: &lt;code&gt;cm diff &lt;file&gt;&lt;/file&gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Pull the latest changes from your repo and apply them: &lt;code&gt;cm update&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Remove a file:&lt;ul&gt;
 &lt;li&gt;Create &lt;code&gt;.chezmoiremove&lt;/code&gt; in the source directory&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;chezmoi apply --remove --dry-run --verbose&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;li&gt;List of managed files: &lt;code&gt;cm managed&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List of unmanaged files: &lt;code&gt;cm unmanaged&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="links"&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/twpayne/chezmoi"&gt;Project Repo&lt;/a&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.chezmoi.io/"&gt;Project Site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
 &lt;p&gt;I’ve been spending a lot of time lately working on nodes for various blockchain
 projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta
 api spec is super interesting, but like most things in crypto the documentation
