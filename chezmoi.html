@@ -12,18 +12,18 @@
 <meta content="ChezMoi -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" linux " name="keywords"/>
-<meta content=" Table of Contents Background Razor 1 Question Commands Links Background Chezmoi seems to be dotfiles management for power users. I’ve been using a shell script to create symlinks from a directory... " name="description"/>
+<meta content=" Table of Contents Background Razor One Question Command Reference Links Background Chezmoi seems to be dotfiles management for power users. Until a few days ago, when I realised I’d massively... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="ChezMoi" property="twitter:title"/>
-<meta content=" Table of Contents Background Razor 1 Question Commands Links Background Chezmoi seems to be dotfiles management for power users. I’ve been using a shell script to create symlinks from a directory... " name="twitter:description"/>
+<meta content=" Table of Contents Background Razor One Question Command Reference Links Background Chezmoi seems to be dotfiles management for power users. Until a few days ago, when I realised I’d massively... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/chezmoi.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="ChezMoi" property="og:title"/>
-<meta content=" Table of Contents Background Razor 1 Question Commands Links Background Chezmoi seems to be dotfiles management for power users. I’ve been using a shell script to create symlinks from a directory... " property="og:description"/>
+<meta content=" Table of Contents Background Razor One Question Command Reference Links Background Chezmoi seems to be dotfiles management for power users. Until a few days ago, when I realised I’d massively... " property="og:description"/>
 <meta content="https://johnmathews.eu/chezmoi.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -245,19 +245,23 @@
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#background">Background</a></li>
 <li><a href="#razor">Razor</a></li>
-<li><a href="#1-question">1 Question</a></li>
-<li><a href="#commands">Commands</a></li>
+<li><a href="#one-question">One Question</a></li>
+<li><a href="#command-reference">Command Reference</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
 </div>
 <h1 id="background">Background</h1>
-<p>Chezmoi seems to be dotfiles management for power users. I’ve been using a
-shell script to create symlinks from a directory with version control into my
-home directory. This is great for a single machine, but is not robust or
-flexible enough for managing multiple machines or multiple operating systems.</p>
-<p>I broke my dotfiles setup and it stressed me out. It’s not just files that sit
-in <code>$home</code> anymore, I need to track configuration files that live in other places
-too. I needed something better than generating symlinks from a bash script.</p>
+<p>Chezmoi seems to be dotfiles management for power users. Until a few days ago,
+when I realised I’d massively broken a lot of things, I’d been putting my
+dotfiles in a version controlled directory and using a shell script to generate
+symlinks in my home directory.</p>
+<p>This had worked really well for several years. It’s a great system for
+maintaining dotfiles on a single machine. But it’s not robust or flexible enough
+for managing multiple machines or multiple operating systems.</p>
+<p>Also, it’s not just files that sit in <code>$home</code> anymore, I need to track
+configuration files that live in other places too<sup id="sf-chezmoi-1-back"><a class="simple-footnote" href="#sf-chezmoi-1" title="For example, every file in $HOME/.vim/ftplugin/ should be version controlled.">1</a></sup>.</p>
+<p>I needed something more robust and flexible than generating symlinks from a
+bash script.</p>
 <h1 id="razor">Razor</h1>
 <p>I think I read somewhere that when purchasing a new appliance you should buy
 the cheapest you think you can get away with, and if that doesn’t work then get
@@ -265,18 +269,24 @@ the best you can afford. Moving from a custom bash script to Chezmoi is an
 example of this. My custom bash script was the most basic approach, and it
 broke badly. Chezmoi seems like the most heavy duty tool for dotfiles management
 I could find.</p>
-<p>For example I think I’m able to encrypt my files using 1Password or similar,
-and I can use Jinja templates to create scripts for different scenarios. I
+<p>For example, I think I’m able to encrypt my files using 1Password or similar.
+I can use Jinja templates to create scripts for different scenarios. I
 don’t even know what that means at the moment. I’ve only scratched the surface
 but I’m happily managing dotfiles across different machines and
 updating/modifying them safely. Chezmoi (aliased to cm) is free and <span class="caps">OSS</span> so I’m
 confident it’ll be “my” tool for the next few decades. I’m happy to invest a
-couple of hours to learn a few new habits and iron out a few wrinkles.</p>
-<h1 id="1-question">1 Question</h1>
-<p>One thing I don’t understand now though is why does <code>chezmoi cd</code> create a new
-shell and then jump into the Chezmoi directory. Why not simply <code>cd</code> into the Chezmoi
-directory? What’s the advantage/necessity of a new shell?</p>
-<h1 id="commands">Commands</h1>
+couple of hours to learn a few new habits and iron out a few
+wrinkles<sup id="sf-chezmoi-2-back"><a class="simple-footnote" href="#sf-chezmoi-2" title="Happily, it seems like the amount of time required to learn or become familiar with a new tool is decreasing. I guess this is to be expected as experience increases but nonetheless it’s gratifying to realise.Dotfiles management was a fairly new and interesting concept when I first began symlinking into my home directory. It still feels amazing to bootstrap a fresh machine and have it feel like home in just a few minutes, but the technicalities of it are now familiar.">2</a></sup>.</p>
+<h1 id="one-question">One Question</h1>
+<p>I don’t understand why <code>chezmoi cd</code> creates a new shell in order to jump into the
+Chezmoi directory. Why not simply <code>cd</code> into the Chezmoi directory? What’s the
+advantage/necessity of a new shell?</p>
+<p>You have to remember to <code>exit</code> after you’ve done whatever you went there to do,
+but my habit is to <code>cd</code> or <code>z ..</code>. I guess it’s nice to exit and then
+immediately go back to where ever you were before, but there are other ways of
+doing that - you could write the current directory to an environment variable.
+It seems unnecessarily complex.</p>
+<h1 id="command-reference">Command Reference</h1>
 <ol>
 <li>Type <code>cm</code> instead of <code>chezmoi</code>: <code>alias cm="chezmoi"</code></li>
 <li>Start tracking a file: <code>cm add &lt;dir/file&gt;</code></li>
@@ -300,9 +310,16 @@ directory? What’s the advantage/necessity of a new shell?</p>
 </ol>
 <h1 id="links">Links</h1>
 <ul>
-<li><a href="https://github.com/twpayne/chezmoi">Project Repo</a><br/></li>
+<li><a href="https://github.com/twpayne/chezmoi">Github</a></li>
 <li><a href="https://www.chezmoi.io/">Project Site</a></li>
-</ul>
+</ul><ol class="simple-footnotes"><li id="sf-chezmoi-1">For example, every file
+in <code>$HOME/.vim/ftplugin/</code> should be version controlled. <a class="simple-footnote-back" href="#sf-chezmoi-1-back">↩</a></li><li id="sf-chezmoi-2">Happily, it seems like the amount of time required to learn or
+become familiar with a new tool is decreasing. I guess this is to be expected
+as experience increases but nonetheless it’s gratifying to realise.<br class="mb-3"/>Dotfiles
+management was a fairly new and interesting concept when I first began
+symlinking into my home directory. It still feels amazing to bootstrap a fresh
+machine and have it feel like home in just a few minutes, but the
+technicalities of it are now familiar. <a class="simple-footnote-back" href="#sf-chezmoi-2-back">↩</a></li></ol>
 </div>
 </article>
 </main>

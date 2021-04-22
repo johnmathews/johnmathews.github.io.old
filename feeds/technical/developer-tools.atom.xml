@@ -139,19 +139,23 @@ is also a very useful article. I made notes from it in another &lt;a href="https
 &lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.eu/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#razor"&gt;Razor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#1-question"&gt;1 Question&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#commands"&gt;Commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#one-question"&gt;One Question&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#command-reference"&gt;Command Reference&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#links"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h1 id="background"&gt;Background&lt;/h1&gt;
-&lt;p&gt;Chezmoi seems to be dotfiles management for power users. I’ve been using a
-shell script to create symlinks from a directory with version control into my
-home directory. This is great for a single machine, but is not robust or
-flexible enough for managing multiple machines or multiple operating systems.&lt;/p&gt;
-&lt;p&gt;I broke my dotfiles setup and it stressed me out. It’s not just files that sit
-in &lt;code&gt;$home&lt;/code&gt; anymore, I need to track configuration files that live in other places
-too. I needed something better than generating symlinks from a bash script.&lt;/p&gt;
+&lt;p&gt;Chezmoi seems to be dotfiles management for power users. Until a few days ago,
+when I realised I’d massively broken a lot of things, I’d been putting my
+dotfiles in a version controlled directory and using a shell script to generate
+symlinks in my home directory.&lt;/p&gt;
+&lt;p&gt;This had worked really well for several years. It’s a great system for
+maintaining dotfiles on a single machine. But it’s not robust or flexible enough
+for managing multiple machines or multiple operating systems.&lt;/p&gt;
+&lt;p&gt;Also, it’s not just files that sit in &lt;code&gt;$home&lt;/code&gt; anymore, I need to track
+configuration files that live in other places too&lt;sup id="sf-chezmoi-1-back"&gt;&lt;a class="simple-footnote" href="#sf-chezmoi-1" title="For example, every file in $HOME/.vim/ftplugin/ should be version controlled."&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;I needed something more robust and flexible than generating symlinks from a
+bash script.&lt;/p&gt;
 &lt;h1 id="razor"&gt;Razor&lt;/h1&gt;
 &lt;p&gt;I think I read somewhere that when purchasing a new appliance you should buy
 the cheapest you think you can get away with, and if that doesn’t work then get
@@ -159,18 +163,24 @@ the best you can afford. Moving from a custom bash script to Chezmoi is an
 example of this. My custom bash script was the most basic approach, and it
 broke badly. Chezmoi seems like the most heavy duty tool for dotfiles management
 I could find.&lt;/p&gt;
-&lt;p&gt;For example I think I’m able to encrypt my files using 1Password or similar,
-and I can use Jinja templates to create scripts for different scenarios. I
+&lt;p&gt;For example, I think I’m able to encrypt my files using 1Password or similar.
+I can use Jinja templates to create scripts for different scenarios. I
 don’t even know what that means at the moment. I’ve only scratched the surface
 but I’m happily managing dotfiles across different machines and
 updating/modifying them safely. Chezmoi (aliased to cm) is free and &lt;span class="caps"&gt;OSS&lt;/span&gt; so I’m
 confident it’ll be “my” tool for the next few decades. I’m happy to invest a
-couple of hours to learn a few new habits and iron out a few wrinkles.&lt;/p&gt;
-&lt;h1 id="1-question"&gt;1 Question&lt;/h1&gt;
-&lt;p&gt;One thing I don’t understand now though is why does &lt;code&gt;chezmoi cd&lt;/code&gt; create a new
-shell and then jump into the Chezmoi directory. Why not simply &lt;code&gt;cd&lt;/code&gt; into the Chezmoi
-directory? What’s the advantage/necessity of a new shell?&lt;/p&gt;
-&lt;h1 id="commands"&gt;Commands&lt;/h1&gt;
+couple of hours to learn a few new habits and iron out a few
+wrinkles&lt;sup id="sf-chezmoi-2-back"&gt;&lt;a class="simple-footnote" href="#sf-chezmoi-2" title="Happily, it seems like the amount of time required to learn or become familiar with a new tool is decreasing. I guess this is to be expected as experience increases but nonetheless it’s gratifying to realise.Dotfiles management was a fairly new and interesting concept when I first began symlinking into my home directory. It still feels amazing to bootstrap a fresh machine and have it feel like home in just a few minutes, but the technicalities of it are now familiar."&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h1 id="one-question"&gt;One Question&lt;/h1&gt;
+&lt;p&gt;I don’t understand why &lt;code&gt;chezmoi cd&lt;/code&gt; creates a new shell in order to jump into the
+Chezmoi directory. Why not simply &lt;code&gt;cd&lt;/code&gt; into the Chezmoi directory? What’s the
+advantage/necessity of a new shell?&lt;/p&gt;
+&lt;p&gt;You have to remember to &lt;code&gt;exit&lt;/code&gt; after you’ve done whatever you went there to do,
+but my habit is to &lt;code&gt;cd&lt;/code&gt; or &lt;code&gt;z ..&lt;/code&gt;. I guess it’s nice to exit and then
+immediately go back to where ever you were before, but there are other ways of
+doing that - you could write the current directory to an environment variable.
+It seems unnecessarily complex.&lt;/p&gt;
+&lt;h1 id="command-reference"&gt;Command Reference&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Type &lt;code&gt;cm&lt;/code&gt; instead of &lt;code&gt;chezmoi&lt;/code&gt;: &lt;code&gt;alias cm="chezmoi"&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Start tracking a file: &lt;code&gt;cm add &lt;dir file=""&gt;&lt;/dir&gt;&lt;/code&gt;&lt;/li&gt;
@@ -194,9 +204,16 @@ directory? What’s the advantage/necessity of a new shell?&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h1 id="links"&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/twpayne/chezmoi"&gt;Project Repo&lt;/a&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/twpayne/chezmoi"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.chezmoi.io/"&gt;Project Site&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-chezmoi-1"&gt;For example, every file
+in &lt;code&gt;$HOME/.vim/ftplugin/&lt;/code&gt; should be version controlled. &lt;a class="simple-footnote-back" href="#sf-chezmoi-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-chezmoi-2"&gt;Happily, it seems like the amount of time required to learn or
+become familiar with a new tool is decreasing. I guess this is to be expected
+as experience increases but nonetheless it’s gratifying to realise.&lt;br class="mb-3"/&gt;Dotfiles
+management was a fairly new and interesting concept when I first began
+symlinking into my home directory. It still feels amazing to bootstrap a fresh
+machine and have it feel like home in just a few minutes, but the
+technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
 &lt;p&gt;I’ve been spending a lot of time lately working on nodes for various blockchain
 projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta
 api spec is super interesting, but like most things in crypto the documentation
