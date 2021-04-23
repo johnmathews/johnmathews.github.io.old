@@ -5,56 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/traffic.html</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-04-23T17:51:56-00:00</lastmod>
+<lastmod>2021-04-23T17:58:13-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -817,7 +817,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/non-technical/other.html</loc>
-<lastmod>2021-04-21T10:39:48+00:20</lastmod>
+<lastmod>2021-01-22T11:42:00+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
