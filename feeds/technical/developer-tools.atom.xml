@@ -214,7 +214,7 @@ as experience increases but nonetheless it’s gratifying to realise.&lt;br clas
 management was a fairly new and interesting concept when I first began
 symlinking into my home directory. It still feels amazing to bootstrap a fresh
 machine and have it feel like home in just a few minutes, but the
-technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>I Leaked Service Account Credentials Onto A Public GitHub Repo</title><link href="https://johnmathews.eu/i-leaked-service-account-credentials-onto-a-public-github-repo.html" rel="alternate"/><published>2021-04-15T19:19:35+02:00</published><updated>2021-04-15T19:19:35+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-15:/i-leaked-service-account-credentials-onto-a-public-github-repo.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>I Leaked Credentials Onto A Public GitHub Repo</title><link href="https://johnmathews.eu/i-leaked-credentials-onto-a-public-github-repo.html" rel="alternate"/><published>2021-04-15T19:19:35+02:00</published><updated>2021-04-15T19:19:35+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-15:/i-leaked-credentials-onto-a-public-github-repo.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#dont-post-secrets-to-public-github-repositories"&gt;Don’t post secrets to public GitHub repositories.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#the-hack"&gt;The hack&lt;/a&gt;&lt;/li&gt;
@@ -234,7 +234,7 @@ production systems.  My account was isolated  away from the rest of the busines
 &lt;p&gt;As the number of servers I was working with increased, I realised I needed to
 begin using some tools to automate server setup. This lead me to begin using
 Ansible, and once I’d cobbled together a working playbook I pushed my Ansible
-project to my GitHub account… And accidentally leaked the key for a service
+project to my GitHub account… And accidentally leaked the key for an
 account I’d been using.&lt;/p&gt;
 &lt;h1 id="the-hack"&gt;The hack&lt;/h1&gt;
 &lt;p&gt;Within a couple of minutes of pushing the repository to GitHub I:&lt;/p&gt;
@@ -262,7 +262,7 @@ the account which the stolen credentials belonged to didn’t have the necessary
 permissions. Our project also maxed out its quota of compute instances in
 multiple regions and zones.&lt;/p&gt;
 &lt;h1 id="remediation"&gt;Remediation&lt;/h1&gt;
-&lt;p&gt;I deleted the service account that had been leaked, and began quantifying the
+&lt;p&gt;I deleted the account that had been leaked, and began quantifying the
 damage. I wanted to know exactly what permissions the key had, which
 resources could be created, and could the leaked account be used to create
 other accounts? No, it can’t.&lt;/p&gt;
