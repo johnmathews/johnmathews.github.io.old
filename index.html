@@ -54,7 +54,7 @@
                /
               </div>
               or
-              <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+              <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
                cmd-K
               </div>
 </div>
@@ -161,5 +161,12 @@
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/mouseTrap.js" type="text/javascript"></script>
 <script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
+      </script>
 </body>
 </html>

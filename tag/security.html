@@ -174,7 +174,7 @@
                     /
                   </div>
                   or
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
                     cmd-K
                   </div>
 </div>
@@ -248,6 +248,14 @@
                     21 April
                   </div>
 </div>
+<div class="listItem flex justify-between py-3 md:py-2 technical">
+<div class="flex w-fill md:w-4/5 pr-2 my-1 ml-2 md:ml-0 dark:text-gray-100">
+<a class="font-serif font-extralight text-2xl" href="https://johnmathews.eu/i-leaked-service-account-credentials-onto-a-public-github-repo.html">I Leaked Service Account Credentials Onto A Public GitHub Repo</a>
+</div>
+<div class="hidden md:block font-serif w-1/3 px-2 text-2xl text-right text-gray-500 dark:text-gray-200">
+                    15 April
+                  </div>
+</div>
 </div>
 </div>
 </div>
@@ -289,6 +297,13 @@
                   console.log('flag1')
                   $('#catModal').addClass('hidden');
                 });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
       </script>
 <script> $(".catChooser").removeClass('hidden') </script>
 </body>

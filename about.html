@@ -176,7 +176,7 @@
                     /
                   </div>
                   or
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
                     cmd-K
                   </div>
 </div>
@@ -279,6 +279,13 @@ develop <a href="https://moneybar.nl">web</a> <a href="https://pippip.email">app
                   console.log('flag1')
                   $('#catModal').addClass('hidden');
                 });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
       </script>
 <script>
     // set or update user preference for article category if it hasnt been set

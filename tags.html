@@ -173,7 +173,7 @@
                     /
                   </div>
                   or
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
                     cmd-K
                   </div>
 </div>
@@ -272,6 +272,7 @@
 <li><a href="https://johnmathews.eu/tag/gcp.html">gcp</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/general-ledger.html">General Ledger</a> (2)</li>
 <li><a href="https://johnmathews.eu/tag/git.html">Git</a> (1)</li>
+<li><a href="https://johnmathews.eu/tag/github.html">github</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/glandore.html">Glandore</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/gnosis.html">Gnosis</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/gold.html">gold</a> (1)</li>
@@ -280,6 +281,7 @@
 <li><a href="https://johnmathews.eu/tag/growth.html">growth</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/haarlem.html">Haarlem</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/habits.html">Habits</a> (1)</li>
+<li><a href="https://johnmathews.eu/tag/hack.html">hack</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/iam.html">iam</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/icaew.html">ICAEW</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/ico.html">ICO</a> (1)</li>
@@ -289,6 +291,7 @@
 <li><a href="https://johnmathews.eu/tag/jinja.html">Jinja</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/journals.html">Journals</a> (2)</li>
 <li><a href="https://johnmathews.eu/tag/jupyter-notebook.html">Jupyter Notebook</a> (1)</li>
+<li><a href="https://johnmathews.eu/tag/keys.html">keys</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/learning.html">learning</a> (2)</li>
 <li><a href="https://johnmathews.eu/tag/learning-notes.html">learning notes</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/lifestyle.html">Lifestyle</a> (1)</li>
@@ -329,9 +332,10 @@
 <li><a href="https://johnmathews.eu/tag/rys.html">Rys</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/safe-haven.html">safe haven</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/search.html">Search</a> (2)</li>
-<li><a href="https://johnmathews.eu/tag/security.html">security</a> (1)</li>
+<li><a href="https://johnmathews.eu/tag/security.html">security</a> (2)</li>
 <li><a href="https://johnmathews.eu/tag/self-reflection.html">self-reflection</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/servers.html">servers</a> (1)</li>
+<li><a href="https://johnmathews.eu/tag/service-account.html">service-account</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/service-accounts.html">service-accounts</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/shell.html">shell</a> (1)</li>
 <li><a href="https://johnmathews.eu/tag/silo.html">Silo</a> (1)</li>
@@ -401,6 +405,13 @@
                   console.log('flag1')
                   $('#catModal').addClass('hidden');
                 });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
       </script>
 </body>
 </html>

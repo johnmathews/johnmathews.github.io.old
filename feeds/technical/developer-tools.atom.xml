@@ -183,6 +183,7 @@ It seems unnecessarily complex.&lt;/p&gt;
 &lt;h1 id="command-reference"&gt;Command Reference&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Type &lt;code&gt;cm&lt;/code&gt; instead of &lt;code&gt;chezmoi&lt;/code&gt;: &lt;code&gt;alias cm="chezmoi"&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show which files have changed: &lt;code&gt;cm status&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Start tracking a file: &lt;code&gt;cm add &lt;dir file=""&gt;&lt;/dir&gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Update a file, add the file again: &lt;code&gt;cm add ..&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Edit tracked version of file: &lt;code&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/code&gt; - don’t think I’m going to
@@ -213,7 +214,109 @@ as experience increases but nonetheless it’s gratifying to realise.&lt;br clas
 management was a fairly new and interesting concept when I first began
 symlinking into my home directory. It still feels amazing to bootstrap a fresh
 machine and have it feel like home in just a few minutes, but the
-technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>I Leaked Service Account Credentials Onto A Public GitHub Repo</title><link href="https://johnmathews.eu/i-leaked-service-account-credentials-onto-a-public-github-repo.html" rel="alternate"/><published>2021-04-15T19:19:35+02:00</published><updated>2021-04-15T19:19:35+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-15:/i-leaked-service-account-credentials-onto-a-public-github-repo.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#dont-post-secrets-to-public-github-repositories"&gt;Don’t post secrets to public GitHub repositories.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-hack"&gt;The hack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#remediation"&gt;Remediation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#questions"&gt;Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#study"&gt;Study&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="dont-post-secrets-to-public-github-repositories"&gt;Don’t post secrets to public GitHub repositories.&lt;/h1&gt;
+&lt;p&gt;I made this mistake a while ago, and in the interests of openness and learning
+from others, I’d like to describe what happened. Maybe it’ll help others avoid
+the mistake, and maybe I’ll learn something from any conversation this article generates.&lt;/p&gt;
+&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;p&gt;Using Google Cloud Platform (&lt;span class="caps"&gt;GCP&lt;/span&gt;), I’ve been doing some work across multiple
+compute instances. Thankfully, the work wasn’t business ciritical or on
+production systems.  My account was isolated  away from the rest of the business.&lt;/p&gt;
+&lt;p&gt;As the number of servers I was working with increased, I realised I needed to
+begin using some tools to automate server setup. This lead me to begin using
+Ansible, and once I’d cobbled together a working playbook I pushed my Ansible
+project to my GitHub account… And accidentally leaked the key for a service
+account I’d been using.&lt;/p&gt;
+&lt;h1 id="the-hack"&gt;The hack&lt;/h1&gt;
+&lt;p&gt;Within a couple of minutes of pushing the repository to GitHub I:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Made the repository private.&lt;/li&gt;
+&lt;li&gt;Stopped tracking the keys in git and removed them from the cache &lt;code&gt;git rm -r --cached &lt;dir&gt;&lt;/dir&gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Received an email from Google saying they’d found leaked credentials.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;, close call. The secret was leaked for less than 5 minutes. On my obscure
+personal GitHub.&lt;/p&gt;
+&lt;p&gt;I thought there was nothing to worry about.. But then I noticed some activity
+in the console.&lt;/p&gt;
+&lt;p&gt;Compute instances were being created, I could see the list growing rapidly.
+Over the next few minutes 195 compute instances and disks were being created,
+each with a unique name in zones across the world. The format of the name was
+&lt;code&gt;node-&lt;type&gt;-&lt;number&gt;&lt;/number&gt;&lt;/type&gt;&lt;/code&gt;. Where type was either application, backup, jenkins,
+gke, prod, staging, worker, www, build, redis, or runner. Maybe some others
+too. The number seemed to be 5 random digits.&lt;/p&gt;
+&lt;p&gt;Some of the instances were ephemeral. They all had delete protection enabled. I
+checked the details of a few of them and noticed some scripts that included
+references to Monero.&lt;/p&gt;
+&lt;p&gt;So I guess a Monero mining bot was being set up.&lt;/p&gt;
+&lt;p&gt;The logs showed that &lt;span class="caps"&gt;GKE&lt;/span&gt; and networking resources had also been requested, but
+the account which the stolen credentials belonged to didn’t have the necessary
+permissions. Our project also maxed out its quota of compute instances in
+multiple regions and zones.&lt;/p&gt;
+&lt;h1 id="remediation"&gt;Remediation&lt;/h1&gt;
+&lt;p&gt;I deleted the service account that had been leaked, and began quantifying the
+damage. I wanted to know exactly what permissions the key had, which
+resources could be created, and could the leaked account be used to create
+other accounts? No, it can’t.&lt;/p&gt;
+&lt;p&gt;After looking around and becoming confident that it was &lt;em&gt;only&lt;/em&gt; 195 compute
+instances with disks and delete protection that had been created, in regions
+and zones across the globe, I began to remove them. No other resources had been provisioned.&lt;/p&gt;
+&lt;p&gt;It took me 10 minutes and some googling to create the following workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Get all the compute instances and dump them into a file. I expected to run a
+   script that iterated through the file line by line, setting variables based
+   on the content of the current line: &lt;code&gt;gcloud compute instances list --format
+   'csv[no-heading](name, zone)' &amp;gt; names.txt&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Vim, find the rows that contain the instances that I don’t want to
+   delete, and remove these from the file. There are a handful of compute
+   instances I want to keep, and 195 that I want to remove. &lt;code&gt;:v/node-&lt;/code&gt; shows
+   any rows that &lt;em&gt;don’t&lt;/em&gt; include “node-”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Loop through the file and for each row, which contains the instance name and its zone,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove delete protection&lt;/li&gt;
+&lt;li&gt;Delete the instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nv"&gt;IFS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;, &lt;span class="nb"&gt;read&lt;/span&gt; -r name zone
+  &lt;span class="k"&gt;do&lt;/span&gt; gcloud compute instances update &lt;span class="nv"&gt;$name&lt;/span&gt; --zone &lt;span class="nv"&gt;$zone&lt;/span&gt; --no-deletion-protection &lt;span class="se"&gt;\&lt;/span&gt;
+  &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; gcloud compute instances delete &lt;span class="nv"&gt;$name&lt;/span&gt; --zone &lt;span class="nv"&gt;$zone&lt;/span&gt; --quiet
+&lt;span class="k"&gt;done&lt;/span&gt; &amp;lt; names.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;--quiet&lt;/code&gt; flag is necessary because otherwise gcloud will ask me to confirm
+that I want to delete the instance otherwise.&lt;/p&gt;
+&lt;h1 id="questions"&gt;Questions&lt;/h1&gt;
+&lt;p&gt;I’m surprised by the speed with which the attacker found the leaked
+credentials. The repo did not belong to the clients account but my own, and I
+assume that my account is obscure enough to not be on any interesting lists. If
+my account is being scanned every few minutes, presumably all accounts are
+being scanned regularly.&lt;/p&gt;
+&lt;p&gt;How many resources are required to do that? I guess if one of these attacks
+works you can use the stolen compute to scan more repositories for more leaded
+credentials. It’s easy to imagine scenarios where large corporations that are
+already running complicated cloud infrastructure deployments wouldn’t notice a
+few (200?) unauthorized compute instances running.&lt;/p&gt;
+&lt;h1 id="study"&gt;Study&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/playlist?list=PLIivdWyY5sqIlPnZ7cvkg2Ck-8ZZ8TA5t"&gt;Service accounts&lt;/a&gt; on Google Cloud Platform.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=goclfp6a2IQ&amp;amp;t=1962s"&gt;Ansible&lt;/a&gt; videos.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=hQWRp-FdTpc"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt; crash course.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/vBrezgoX"&gt;Vagrant&lt;/a&gt; crash course.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://stackoverflow.com/questions/26479562/what-does-ifs-do-in-this-bash-loop-cat-file-while-ifs-read-r-line-do/26480210"&gt;&lt;span class="caps"&gt;IFS&lt;/span&gt;=&lt;/a&gt; syntax explanation.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="hack"/><category term="github"/><category term="service-account"/><category term="keys"/><category term="security"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
 &lt;p&gt;I’ve been spending a lot of time lately working on nodes for various blockchain
 projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta
 api spec is super interesting, but like most things in crypto the documentation
