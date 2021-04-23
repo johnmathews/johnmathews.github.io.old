@@ -304,7 +304,7 @@ assume that my account is obscure enough to not be on any interesting lists. If
 my account is being scanned every few minutes, presumably all accounts are
 being scanned regularly.&lt;/p&gt;
 &lt;p&gt;How many resources are required to do that? I guess if one of these attacks
-works you can use the stolen compute to scan more repositories for more leaded
+works you can use the stolen compute to scan more repositories for more leaked
 credentials. It’s easy to imagine scenarios where large corporations that are
 already running complicated cloud infrastructure deployments wouldn’t notice a
 few (200?) unauthorized compute instances running.&lt;/p&gt;
