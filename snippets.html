@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+<title>John Mathews</title>
+<meta content=" John Mathews " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content=" blog, john mathews, blockchain, developer, bitcoin, data, python " name="keywords"/>
+<meta content="John Mathews' personal blog" name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content=" John Mathews " property="twitter:title"/>
+<meta content="John Mathews' personal blog" name="twitter:description"/>
+<meta content=" https://johnmathews.eu " property="twitter:url"/>
+<meta content="" name="twitter:image"/>
+<meta content=" summary_large_image " property="twitter:card"/>
+<meta content="website" property="og:type"/>
+<meta content=" John Mathews " property="og:title"/>
+<meta content="John Mathews' personal blog" property="og:description"/>
+<meta content=" https://johnmathews.eu " property="og:url"/>
+<meta content="" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon">
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet">
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet">
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+      </script>
+</link></link></link></head>
+<body class="dark:bg-black">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-black" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-auto md:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                 Keyboard Shortcuts:
+                </h3>
+<hr class=""/>
+<div class="flex flex-row space-x-4 text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<ul class="text-black text-base leading-loose">
+<li class="list-none pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></li>
+<li class="list-none pb-1"><code>/</code><span class="ml-2"> search</span></li>
+<li class="list-none pb-1"><code>j</code><span class="ml-2"> scroll down</span></li>
+<li class="list-none pb-1"><code>k</code><span class="ml-2"> scroll up</span></li>
+<li class="list-none pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></li>
+<li class="list-none pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></li>
+<li class="list-none pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></li>
+<li class="list-none pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></li>
+<li class="list-none pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></li>
+<li class="list-none pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></li>
+<li class="list-none pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></li>
+<li class="list-none pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    /
+                  </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                    cmd-K
+                  </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="w-full">
+<div class="xl:ml-20">
+<div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
+        Snippets
+      </div>
+<div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<div id="primaryList">
+<div class="my-1 py-0">
+<h2 class="font-bold pt-5 md:mb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2021</h2>
+<div class="my-1 py-0">
+<h2 class="font-bold pt-0 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">April</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p><code>where &lt;command&gt;</code> - shows all known locations of <command/></p>
+<p><code>man where</code> - show all builtin commands.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>make aliased files the real file:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> f in <span class="k">$(</span>find . -type l -maxdepth <span class="m">1</span><span class="k">)</span><span class="p">;</span>
+    <span class="k">do</span> cp --remove-destination <span class="k">$(</span>readlink <span class="nv">$f</span><span class="k">)</span> <span class="nv">$f</span><span class="p">;</span>
+<span class="k">done</span><span class="p">;</span>
+</pre></div> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>tmux reorganize windows:</p>
+<p><code>swap-window -s 3 -t 1</code></p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>vim save a file with sudo when you opened it without sudo-ing:</p>
+<p><code>:w !sudo tee %</code></p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>The trouble with climbing higher is that eventually you lose sight of the ground.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p><a href="https://dystroy.org/broot/">broot</a> - I’d forgotten the name and tried to re-find it by googling, without success.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>I added keyboard navigation to my blog and it works really well. Now I find
+myself trying to use the same shortcuts on other sites. </p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>I should see if I can use GitHub actions to generate html from markdown and run
+some shell and python scripts.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Its more socially acceptable to make mistakes and errors of omission than commission.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p><code>du</code> is a tool for showing disk usage.
+There is a similar tool, with a list of other similar tools at https://dev.yorhel.nl/ncdu`</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>safe, good, better bash shell script
+<a href="https://t.co/MRxnbHgryD?amp=1">here</a></p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Was running a binary in debian that was complaining about an environment
+variable not existing. I moved the binary into a <span class="caps">PATH</span> dir and logged in as a
+<span class="caps">SU</span>. problem solved. why? </p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>As a hacker, or creator, or whatever the best label is, I always want to create
+something (usually code) and have it finished.</p>
+<p>But a strange creativity and productivity boost comes from dabbling, dipping in
+and out.</p>
+<p>I think that if the technical challenges aren’t too hard, then the main
+criteria for success is creativity.</p>
+<p>Creativity needs time away from the project, and sleep, to bubble up and let
+ideas grow.</p>
+<p>Ultimately, the most successful path is usually the most interesting, because
+success has more consequences than failure. “Interesting” requires elements of
+novelty and surprise, and without creativity these elements can’t flourish. 3/n</p>
+<p>Dabbling results in more creativity than 6+ hours of strenuous work, and is
+more likely to give you satisfying results.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p><code>bar &lt;&lt; foo</code> bar will stop reading input when it reached “foo” (here-document)</p>
+<p><code>bar &lt;&lt;&lt; "foo"</code> foo is all the input. bar wont run interactively. (here-string)</p>
+<p><code>bar &lt; &lt;(foo:list)</code> process subscription. kind of like piping in the output of multiple commands</p> </div>
+</div>
+</div>
+</div>
+<div class="my-1 py-0">
+<h2 class="font-bold pt-0 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">March</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>typescript: pretty print json stuff:</p>
+<div class="highlight"><pre><span></span>http://console.info(`foo: <span class="cp">${</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="cp">}</span>`);
+</pre></div> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>analystsnow.com/# looks like a really useful business</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>frantic distraction via productive procrastination is exhausting, and useful.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Vim  split rearranging:</p>
+<p><c-w>x swap buffers, but keep arrangement the same
+<c-w>H (capital H) - make the current split cover the left of the screen. (J,
+K, L covers the bottom, top, right of the screen) </c-w></c-w></p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Here is a guide about writing plugins for Pelican, a static site generator written in Python.</p>
+<p>https://blog.geographer.fr/pelican-plugins</p>
+<p>Thanks @geographeur</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead:</p>
+<div class="highlight"><pre><span></span>some_script &lt; file &gt; smscrpt.<span class="nv">$$</span> <span class="o">&amp;&amp;</span> mv smscrpt.<span class="nv">$$</span> file <span class="o">||</span> rm smscrpt.<span class="nv">$$</span>
+</pre></div>
+<p>the last part removes the temporary file if it errors</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>json tools:</p>
+<p>jj - json stream editor https://github.com/tidwall/jj
+jq - json processor 
+python -m json.tool </p>
+<p>I like jq for pretty printing json output, jj for making json pretty or condensed</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>docker containers - foreground, background, attach, logs:</p>
+<div class="highlight"><pre><span></span>docker run -d ... 
+docker logs -f &lt;ID&gt;
+docker run -it ...
+docker run -itd 
+docker container attach &lt;ID&gt;
+&lt;C-p&gt;&lt;C-q&gt; -&gt; detach from container interactively
+</pre></div>
+<p>https://stackoverflow.com/questions/34029680/docker-detached-mode</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p><code>sh -s</code></p>
+<p>Pipe a script file into bash, probably one you just <code>curl</code>-ed</p>
+<p>e.g:</p>
+<div class="highlight"><pre><span></span>curl -sSfL https://example.com/install.sh <span class="p">|</span> sh -s
+</pre></div> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Split long output onto multiple lines (find and replace on output)</p>
+<div class="highlight"><pre><span></span><span class="p">...</span> <span class="o">|</span> <span class="n">tr</span> <span class="s1">':'</span> <span class="s1">'\n'</span>
+
+<span class="p">...</span> <span class="o">|</span> <span class="n">sed</span> <span class="s1">'s/:/\n/g'</span>
+</pre></div> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><ol>
+<li>
+<p>Without noticing, create a .gitignore file with a single * in it.</p>
+</li>
+<li>
+<p>Spend a day trying to understand why ripgrep has stopped working for only 1 project.</p>
+</li>
+<li>
+<p>sad face.</p>
+</li>
+</ol> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Teaching my kids about money and work is having an effect. </p>
+<p>Yesterday, my daughter made a painting for me and asked my to buy it using
+pretend money.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Stop prepending docker commands with sudo:</p>
+<div class="highlight"><pre><span></span>sudo groupadd docker -&gt; make the group 
+sudo gpasswd -a <span class="nv">$USER</span> docker -&gt; add <span class="nv">$USER</span> to the docker group
+newgrp docker -&gt; activate the changes
+</pre></div> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>If you’re <code>cat</code>-ing a file and the bash prompt doesn’t start on a new line (cos
+the file you displayed using cat doesn’t end with a new line char) the
+following will fix it:</p>
+<p><code>cat &lt;filename&gt; ; echo</code></p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Creating users with sudo permissions:</p>
+<div class="highlight"><pre><span></span>adduser -m &lt;username&gt;
+usermod -aG sudo &lt;username&gt;
+</pre></div>
+<p>CentOS:</p>
+<div class="highlight"><pre><span></span>adduser -m &lt;username&gt;
+passwd &lt;username&gt;
+usermod -aG wheel &lt;username&gt;
+</pre></div>
+<p>(wheel is a usergroup with sudo permissions)</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p><code>df -h</code></p>
+<p>Show disk space</p>
+<p><code>du -hs .</code></p>
+<p>See how big the current dir is</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Cloning large repos, or repos with large files in them, doesn’t work with <code>git
+clone ...</code> you need to use <code>git lfs clone ...</code></p>
+<p>So why is <code>git lfs clone</code> deprecated? What’s the replacement? </p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Use <code>nohup</code> to keep a curl process running even when the terminal (tty?) session autocloses at 3am.</p> </div>
+</div>
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>zsh isn’t a superset of bash.</p>
+<p>bash is a superset of the bourne shell.</p>
+<p>You can group shells into groups:</p>
+<ol>
+<li>ksh - korn shell and zshell</li>
+<li>sh - bourne shell and bash (the bourne again shell)</li>
+</ol> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="my-1 py-0">
+<h2 class="font-bold pt-5 md:mb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">2020</h2>
+<div class="my-1 py-0">
+<h2 class="font-bold pt-0 md:mb-5 pb-5 ml-2 md:ml-0 text-3xl dark:text-gray-100">November</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+<div class="rounded-lg shadow-xl p-3 border-2 border-gray-600">
+<div class="markdown -mt-5"><p>Two nights ago, I dreamed I was experimenting with Emacs..</p> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
+
+        // show category options window when cat icon is clicked
+        $( ".catChooser" ).click(function() {
+              $('#catModal').removeClass('hidden');
+        });
+
+
+      </script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
+      </script>
+<script> $(".catChooser").removeClass('hidden') </script>
+</body>
+</html>
