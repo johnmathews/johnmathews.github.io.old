@@ -12,18 +12,18 @@
 <meta content="read and write same file -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" bash,pipe,shell,syntax " name="keywords"/>
-<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ &amp;&amp; mv smscrpt.$$ file || rm... " name="description"/>
+<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file ||... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="read and write same file" property="twitter:title"/>
-<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ &amp;&amp; mv smscrpt.$$ file || rm... " name="twitter:description"/>
+<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file ||... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/read-and-write-same-file.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="read and write same file" property="og:title"/>
-<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ &amp;&amp; mv smscrpt.$$ file || rm... " property="og:description"/>
+<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file ||... " property="og:description"/>
 <meta content="https://johnmathews.eu/read-and-write-same-file.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -247,9 +247,12 @@
 <article class="">
 <div class="markdown">
 <p>Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead:</p>
-<div class="highlight"><pre><span></span>some_script &lt; file &gt; smscrpt.<span class="nv">$$</span> <span class="o">&amp;&amp;</span> mv smscrpt.<span class="nv">$$</span> file <span class="o">||</span> rm smscrpt.<span class="nv">$$</span>
+<div class="highlight"><pre><span></span>some_script &lt; file &gt; smscrpt.<span class="nv">$$</span> <span class="se">\</span>
+<span class="o">&amp;&amp;</span> mv smscrpt.<span class="nv">$$</span> file <span class="o">||</span> rm smscrpt.<span class="nv">$$</span>
 </pre></div>
-<p>the last part removes the temporary file if it errors</p>
+<p><code>||</code> removes the temporary file if it errors.</p>
+<p><code>$$</code> is the process <span class="caps">ID</span> and ensures that you always have a unique temporary
+file name.</p>
 </div>
 </article>
 </main>

@@ -237,15 +237,17 @@
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p><code>where &lt;command&gt;</code> - shows all known locations of <command/></p>
-<p><code>man where</code> - show all builtin commands.</p>
+<p>Show all known locations of an executable
+<code>where &lt;executable&gt;</code></p>
+<p>See a list of all builtin commands
+<code>man where</code></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>make aliased files the real file:</p>
+<p>Make aliased files the real file</p>
 <div class="highlight"><pre><span></span><span class="k">for</span> f in <span class="k">$(</span>find . -type l -maxdepth <span class="m">1</span><span class="k">)</span><span class="p">;</span>
     <span class="k">do</span> cp --remove-destination <span class="k">$(</span>readlink <span class="nv">$f</span><span class="k">)</span> <span class="nv">$f</span><span class="p">;</span>
 <span class="k">done</span><span class="p">;</span>
@@ -256,7 +258,7 @@
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>tmux reorganize windows:</p>
+<p>Reorganize tmux windows</p>
 <p><code>swap-window -s 3 -t 1</code></p>
 </div>
 </div>
@@ -264,7 +266,7 @@
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>vim save a file with sudo when you opened it without sudo-ing:</p>
+<p>Save a Vim file with sudo when you opened it without sudo-ing:</p>
 <p><code>:w !sudo tee %</code></p>
 </div>
 </div>
@@ -272,62 +274,62 @@
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>The trouble with climbing higher is that eventually you lose sight of the ground.</p>
+<p><em>The trouble with climbing higher is that eventually you lose sight of the ground.</em></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p><a href="https://dystroy.org/broot/">broot</a> - I’d forgotten the name and tried to re-find it by googling, without success.</p>
+<p><a href="https://dystroy.org/broot/">Broot</a> is a tool that shows the contents of a directory on one screen, even its got lots of files or sub-directories.</p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>I added keyboard navigation to my blog and it works really well. Now I find
-myself trying to use the same shortcuts on other sites. </p>
+<p><em>I added keyboard navigation to my blog and it works really well. Now I find
+myself trying to use the same shortcuts on other sites.</em></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>I should see if I can use GitHub actions to generate html from markdown and run
-some shell and python scripts.</p>
+<p><em>I should see if I can use GitHub actions to generate html from markdown and run
+some shell and python scripts.</em></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>Its more socially acceptable to make mistakes and errors of omission than commission.</p>
+<p><em>Its more socially acceptable to make mistakes and errors of omission than commission.</em></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p><code>du</code> is a tool for showing disk usage.
-There is a similar tool, with a list of other similar tools at https://dev.yorhel.nl/ncdu`</p>
+<p><code>du</code> is a tool for showing disk usage.</p>
+<p>There is a similar tool, with a list of other similar tools at
+<a href="https://dev.yorhel.nl/ncdu`">here</a></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>safe, good, better bash shell script
-<a href="https://t.co/MRxnbHgryD?amp=1">here</a></p>
+<p>An <a href="https://t.co/MRxnbHgryD?amp=1">example</a> of a safe, good, robust bash file skeleton.</p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>Was running a binary in debian that was complaining about an environment
-variable not existing. I moved the binary into a <span class="caps">PATH</span> dir and logged in as a
-<span class="caps">SU</span>. problem solved. why? </p>
+<p>I was running a binary in Debian that was complaining about an environment
+variable not existing. I moved the binary into a &amp;dollar<span class="caps">PATH</span> directory and logged in as a
+sudo user. Why did this solve the problem?</p>
 </div>
 </div>
 </div>
@@ -353,9 +355,10 @@ more likely to give you satisfying results.</p>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p><code>bar &lt;&lt; foo</code> bar will stop reading input when it reached “foo” (here-document)</p>
-<p><code>bar &lt;&lt;&lt; "foo"</code> foo is all the input. bar wont run interactively. (here-string)</p>
-<p><code>bar &lt; &lt;(foo:list)</code> process subscription. kind of like piping in the output of multiple commands</p>
+<p><code>bar &lt;&lt; foo</code> bar will stop reading input when it reached “foo”.</p>
+<p><code>bar &lt;&lt;&lt; "foo"</code> foo is all the input. bar wont run interactively.</p>
+<p><code>bar &lt; &lt;(foo:list)</code> process subscription. Kind of like piping in the output of multiple commands.</p>
+<p><a href="https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash">Stack Overflow</a></p>
 </div>
 </div>
 </div>
@@ -367,8 +370,8 @@ more likely to give you satisfying results.</p>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>typescript: pretty print json stuff:</p>
-<div class="highlight"><pre><span></span>http://console.info(`foo: <span class="cp">${</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="cp">}</span>`);
+<p>Pretty print <span class="caps">JSON</span></p>
+<div class="highlight"><pre><span></span>console.info(`<span class="cp">${</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="cp">}</span>`);
 </pre></div>
 </div>
 </div>
@@ -376,32 +379,32 @@ more likely to give you satisfying results.</p>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>analystsnow.com/# looks like a really useful business</p>
+<p><em><a href="http://analystsnow.com">analystsnow.com</a> looks like a really useful business.</em></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>frantic distraction via productive procrastination is exhausting, and useful.</p>
+<p><em>Frantic distraction via productive procrastination is exhausting, and useful.</em></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>Vim  split rearranging:</p>
-<p><c-w>x swap buffers, but keep arrangement the same
-<c-w>H (capital H) - make the current split cover the left of the screen. (J,
-K, L covers the bottom, top, right of the screen) </c-w></c-w></p>
+<p>Rearrange splits in Vim</p>
+<p><code>&lt;C-w&gt;x</code> - swap buffers, but keep arrangement the same</p>
+<p><code>&lt;C-w&gt;H</code> - make the current split cover the left of the screen.</p>
+<p>J, K, L covers the bottom, top, right of the screen</p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>Here is a guide about writing plugins for Pelican, a static site generator written in Python.</p>
-<p>https://blog.geographer.fr/pelican-plugins</p>
+<p>A <a href="https://blog.geographer.fr/pelican-plugins">guide</a>
+ about writing plugins for Pelican.</p>
 <p>Thanks @geographeur</p>
 </div>
 </div>
@@ -410,44 +413,48 @@ K, L covers the bottom, top, right of the screen) </c-w></c-w></p>
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
 <p>Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead:</p>
-<div class="highlight"><pre><span></span>some_script &lt; file &gt; smscrpt.<span class="nv">$$</span> <span class="o">&amp;&amp;</span> mv smscrpt.<span class="nv">$$</span> file <span class="o">||</span> rm smscrpt.<span class="nv">$$</span>
+<div class="highlight"><pre><span></span>some_script &lt; file &gt; smscrpt.<span class="nv">$$</span> <span class="se">\</span>
+<span class="o">&amp;&amp;</span> mv smscrpt.<span class="nv">$$</span> file <span class="o">||</span> rm smscrpt.<span class="nv">$$</span>
 </pre></div>
-<p>the last part removes the temporary file if it errors</p>
+<p><code>||</code> removes the temporary file if it errors.</p>
+<p><code>$$</code> is the process <span class="caps">ID</span> and ensures that you always have a unique temporary
+file name.</p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>json tools:</p>
-<p>jj - json stream editor https://github.com/tidwall/jj
-jq - json processor 
-python -m json.tool </p>
-<p>I like jq for pretty printing json output, jj for making json pretty or condensed</p>
+<p><span class="caps">JSON</span> tools:</p>
+<ul>
+<li><code>jj</code> - A <a href="https://github.com/tidwall/jj">stream editor</a></li>
+<li><code>jq</code> - A json processor</li>
+<li><code>python -m json.tool</code></li>
+</ul>
+<p>I like <code>jq</code> for pretty printing <span class="caps">JSON</span> output, <code>jj</code> for making <span class="caps">JSON</span> pretty or condensed.</p>
+<p>This was really useful when optimizing the search index for this blog.</p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>docker containers - foreground, background, attach, logs:</p>
-<div class="highlight"><pre><span></span>docker run -d ... 
+<p>Commands for working with Docker containers.</p>
+<div class="highlight"><pre><span></span>docker run -d ...
 docker logs -f &lt;ID&gt;
 docker run -it ...
-docker run -itd 
+docker run -itd
 docker container attach &lt;ID&gt;
 &lt;C-p&gt;&lt;C-q&gt; -&gt; detach from container interactively
 </pre></div>
-<p>https://stackoverflow.com/questions/34029680/docker-detached-mode</p>
+<p><a href="https://stackoverflow.com/questions/34029680/docker-detached-mode">stack overflow</a></p>
 </div>
 </div>
 </div>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p><code>sh -s</code></p>
 <p>Pipe a script file into bash, probably one you just <code>curl</code>-ed</p>
-<p>e.g:</p>
 <div class="highlight"><pre><span></span>curl -sSfL https://example.com/install.sh <span class="p">|</span> sh -s
 </pre></div>
 </div>
@@ -484,9 +491,9 @@ docker container attach &lt;ID&gt;
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>Teaching my kids about money and work is having an effect. </p>
-<p>Yesterday, my daughter made a painting for me and asked my to buy it using
-pretend money.</p>
+<p><em>Teaching my kids about money and work is having an effect.</em></p>
+<p><em>Yesterday, my daughter made a painting for me and asked my to buy it using
+pretend money.</em></p>
 </div>
 </div>
 </div>
@@ -556,13 +563,16 @@ clone ...</code> you need to use <code>git lfs clone ...</code></p>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>zsh isn’t a superset of bash.</p>
-<p>bash is a superset of the bourne shell.</p>
 <p>You can group shells into groups:</p>
 <ol>
-<li>ksh - korn shell and zshell</li>
-<li>sh - bourne shell and bash (the bourne again shell)</li>
+<li><code>ksh</code> - korn shell and zshell</li>
+<li><code>sh</code> - bourne shell and bash (the bourne again shell)</li>
 </ol>
+<p>Because</p>
+<ul>
+<li><code>zsh</code> isn’t a superset of bash.</li>
+<li><code>bash</code> is a superset of the bourne shell.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -576,7 +586,7 @@ clone ...</code> you need to use <code>git lfs clone ...</code></p>
 <div class="transform transition duration-500 hover:scale-105 rounded-lg shadow-xl bg-gray-100 dark:bg-black">
 <div class="markdown">
 <div class="px-4 pb-4 -mt-3">
-<p>Two nights ago, I dreamed I was experimenting with Emacs..</p>
+<p><em>Two nights ago, I dreamed I was experimenting with Emacs..</em></p>
 </div>
 </div>
 </div>
