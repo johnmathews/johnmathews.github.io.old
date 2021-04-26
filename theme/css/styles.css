@@ -15720,10 +15720,6 @@ video {
     width: 83.333333%;
   }
 
-  .md\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -15830,12 +15826,20 @@ video {
     width: 66.666667%;
   }
 
+  .lg\:w-5\/6 {
+    width: 83.333333%;
+  }
+
   .lg\:w-8\/12 {
     width: 66.666667%;
   }
 
   .lg\:w-11\/12 {
     width: 91.666667%;
+  }
+
+  .lg\:gap-5 {
+    gap: 1.25rem;
   }
 
   .lg\:grid-cols-3 {
