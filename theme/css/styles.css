@@ -1741,6 +1741,10 @@ video {
   z-index: 50;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
@@ -2635,6 +2639,10 @@ video {
 
   .md\:w-10\/12 {
     width: 83.333333%;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:grid-cols-3 {
