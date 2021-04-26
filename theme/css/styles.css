@@ -2367,6 +2367,11 @@ video {
   background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+
 .bg-none {
   background-image: none;
 }
@@ -4053,11 +4058,6 @@ video {
   border-color: rgba(131, 24, 67, var(--tw-border-opacity));
 }
 
-.dark .dark\:border-black {
-  --tw-border-opacity: 1;
-  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
-}
-
 .dark .dark\:border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgba(243, 244, 246, var(--tw-border-opacity));
@@ -4076,6 +4076,16 @@ video {
 .dark .dark\:border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+}
+
+.dark .dark\:border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgba(31, 41, 55, var(--tw-border-opacity));
+}
+
+.dark .dark\:border-gray-900 {
+  --tw-border-opacity: 1;
+  border-color: rgba(17, 24, 39, var(--tw-border-opacity));
 }
 
 .border-opacity-0 {
@@ -12500,6 +12510,11 @@ video {
   color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 
+.dark .dark\:text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgba(185, 28, 28, var(--tw-text-opacity));
+}
+
 .dark .dark\:text-green-200 {
   --tw-text-opacity: 1;
   color: rgba(167, 243, 208, var(--tw-text-opacity));
@@ -15110,7 +15125,7 @@ video {
 
 .dark .markdown .highlight pre {
   --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
 .markdown .highlight pre {
@@ -15228,7 +15243,7 @@ video {
 
 .dark .output_subarea.output_stream > pre {
   --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
 .output_subarea.output_stream > pre {
@@ -15262,7 +15277,7 @@ video {
 
 .dark .markdown .output_subarea {
   --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
 .markdown .output_subarea {

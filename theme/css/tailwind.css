@@ -103,7 +103,7 @@
 }
 
 .markdown .highlight pre {
-  @apply border-l-2 text-lg border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
+  @apply border-l-2 text-lg border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
 	overflow-x: auto;
 	overflow-y: auto;
 }
@@ -145,7 +145,7 @@
 }
 
 .output_subarea.output_stream > pre{
-	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-black dark:text-gray-200;
+	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
 	overflow-x: auto;
 	overflow-y: auto;
 }
@@ -155,7 +155,7 @@
 }
 
 .markdown .output_subarea {
-  @apply dark:bg-black dark:text-gray-200 -mr-40;
+  @apply dark:bg-gray-900 dark:text-gray-200 -mr-40;
 }
 
 /* png images must have light bg cos tick marks are dark */
