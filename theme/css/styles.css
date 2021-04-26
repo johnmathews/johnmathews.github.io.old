@@ -1745,6 +1745,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
