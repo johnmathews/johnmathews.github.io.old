@@ -10,11 +10,9 @@ function focusSelectedListItem (n) {
   var focusClasses = 'selected underline'
 
   var listLength = $('.listItem').length
-  console.log(`listLength: ${listLength}`);
   for (var i = 0; i < listLength; i++) {
     if (i == n) {
       $('#primaryList .listItem').eq(i).find('a').addClass(focusClasses)
-      console.log($('#primaryList .listItem'))
     } else {
       $('#primaryList .listItem').eq(i).find('a').removeClass(focusClasses)
     }
@@ -36,14 +34,12 @@ function incrementFocus (direction) {
         window.selectedListItem = 0
       } else {
         window.selectedListItem++
-        console.log(`window.selectedListItem: ${window.selectedListItem}`);
       }
     } else if (direction === 'b') {
       if (window.selectedListItem == 0) {
         window.selectedListItem = listLength
       } else {
         window.selectedListItem--
-        console.log(`window.selectedListItem: ${window.selectedListItem}`);
       }
     }
     focusSelectedListItem(window.selectedListItem)
@@ -69,7 +65,6 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 500)
   })
   Mousetrap.bind('g g', function () {
-    console.log('smoke')
     $('html, body').animate({ scrollTop: 0 }, 500)
   })
   Mousetrap.bind('g b', function () {
