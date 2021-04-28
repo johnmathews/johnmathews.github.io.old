@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-28T11:53:44+02:00</updated><entry><title>Ranger file manager</title><link href="https://johnmathews.eu/ranger-file-manager.html" rel="alternate"/><published>2021-04-28T11:53:44+02:00</published><updated>2021-04-28T11:53:44+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-28:/ranger-file-manager.html</id><summary type="html"/><content type="html">&lt;p&gt;Ranger is a console based file manager with vi key bindings.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-28T12:18:40+02:00</updated><entry><title>lsblk command</title><link href="https://johnmathews.eu/lsblk-command.html" rel="alternate"/><published>2021-04-28T12:18:40+02:00</published><updated>2021-04-28T12:18:40+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-28:/lsblk-command.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;code&gt;lsblk&lt;/code&gt; is a command to get info about connected devices.&lt;/p&gt;
+&lt;p&gt;Used when attaching drives.&lt;/p&gt;</content><category term="snippet"/><category term="unix"/><category term="cli"/></entry><entry><title>Ranger file manager</title><link href="https://johnmathews.eu/ranger-file-manager.html" rel="alternate"/><published>2021-04-28T11:53:44+02:00</published><updated>2021-04-28T11:53:44+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-28:/ranger-file-manager.html</id><summary type="html"/><content type="html">&lt;p&gt;Ranger is a console based file manager with vi key bindings.&lt;/p&gt;
 &lt;p&gt;Install it with &lt;code&gt;brew install ranger&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Launch it with &lt;code&gt;ranger&lt;/code&gt;&lt;/p&gt;</content><category term="snippet"/><category term="ranger"/><category term="unix"/><category term="vim"/><category term="tools"/></entry><entry><title>Vim Regex</title><link href="https://johnmathews.eu/vim-regex.html" rel="alternate"/><published>2021-04-28T11:37:58+02:00</published><updated>2021-04-28T11:37:58+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-28:/vim-regex.html</id><summary type="html"/><content type="html">&lt;p&gt;This is a great article about using regular expressions in Vim:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://marcelfischer.eu/blog/2019/checkbox-regex/"&gt;marcelfischer.eu/blog/2019/checkbox-regex/&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/><category term="regex"/></entry><entry><title>where command</title><link href="https://johnmathews.eu/where-command.html" rel="alternate"/><published>2021-04-25T22:39:05+02:00</published><updated>2021-04-25T22:39:05+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-25:/where-command.html</id><summary type="html"/><content type="html">&lt;p&gt;Show all known locations of an executable
@@ -2686,52 +2687,4 @@ Plug &lt;span class="s1"&gt;'valloric/matchtagalways'&lt;/span&gt;
 &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:closetag_filenames &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"*.html, *.xhtml, *.phtml"&lt;/span&gt;
 
 &lt;span class="k"&gt;call&lt;/span&gt; plug#&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Using RSS</title><link href="https://johnmathews.eu/using-rss.html" rel="alternate"/><published>2021-01-14T16:52:00+01:00</published><updated>2021-01-14T16:52:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/using-rss.html</id><summary type="html"/><content type="html">&lt;h3 id="updated-10-feb-2021"&gt;Updated: 10 Feb 2021&lt;/h3&gt;
-&lt;p&gt;I found a &lt;a href="https://brandur.org/fragments/rss-abandon"&gt;blog post&lt;/a&gt; which is
-surprisingly similar to my thoughts on &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds, but better presented and
-thought through. The post mentions the idea that “&lt;span class="caps"&gt;RSS&lt;/span&gt; is about capturing the
-long tail of blogs that don’t post frequently”
-&lt;sup id="sf-using-rss-1-back"&gt;&lt;a class="simple-footnote" href="#sf-using-rss-1" title="https://marco.org/2013/03/26/power-of-rss"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;This idea crystalised why I was so glad I’d started using &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds
-again. If readers use &lt;span class="caps"&gt;RSS&lt;/span&gt;, then authors don’t need to concern themselves with
-attention. This removes pressure on the author to post
-frequently and lets them focus on quality over quantity. News feeds and ad
-supported platforms have fundamentally different mechanics and incentives.&lt;/p&gt;
-&lt;p&gt;With &lt;span class="caps"&gt;RSS&lt;/span&gt; I can let good quality content come to me, on its own schedule. I
-don’t need to remember to look for it, and the authors don’t need to remind me
-that they exist.&lt;/p&gt;
-&lt;h2 id="google-reader"&gt;Google Reader&lt;/h2&gt;
-&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; is a very effective way of having good quality information
-come to you. Back in 2008, I used to use Google Reader to subscribe to &lt;span class="caps"&gt;RSS&lt;/span&gt;
-feeds. I was an aspiring photographer back then and I remember being subscribed
-to around 80 blogs. Each day I’d read articles from whoever had posted
-something new, without needing to visit their websites or remember who they are
-or that I’d subscribed to their blog. The authors didn’t need to optimize their
-output according to an opaque and changing algorithm either - they didn’t need
-to optimize article length, tags, post frequency, image inclusion or linked
-content. They could write how they wanted to, which I suspect leads to higher
-quality content.&lt;/p&gt;
-&lt;h2 id="social-media"&gt;Social Media&lt;/h2&gt;
-&lt;p&gt;A few years later Google Reader was closed down, presumably because using &lt;span class="caps"&gt;RSS&lt;/span&gt;
-didn’t fit with Googles advertising model. I was unaware of it at the time but
-I imagine it sent shockwaves through blogging communities and probably upended
-many businesses. I mostly stopped reading blogs.&lt;/p&gt;
-&lt;p&gt;Facebook was growing fast, Instagram felt new and exciting, and content was
-moving onto ‘platforms’, or into walled gardens. And as they kept on growing
-the average quality of the content decreased.&lt;/p&gt;
-&lt;p&gt;Twitter is like this now I think. There are some real diamonds to be found from
-time to time, but there’s a lot of mud too. Mostly its just mud, but the
-occasional diamond can have outsized benefits.&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; isn’t like this. I choose the contents of my ‘news feed’, and
-each article can be much longer than a Tweet, or a caption to a photo, or a
-status update. It’s hard to write well and to create an interesting or useful blog
-post, and that makes it harder to dilute quality with entertaining
-distractions. I have complete control about what content I see, and I can
-change it whenever I want. The process is designed around me.&lt;/p&gt;
-&lt;h2 id="reeder5"&gt;Reeder5&lt;/h2&gt;
-&lt;p&gt;I used &lt;code&gt;netNewsWire&lt;/code&gt; for a few weeks, but it couldn’t sync between my laptop
-and phone, so I bought &lt;code&gt;Reeder 5&lt;/code&gt;. It’s got a few unusual design patterns, but
- it works well and has all the features I want. I’ve been unsubscribing from
- email newsletters and subscribing to the &lt;span class="caps"&gt;RSS&lt;/span&gt; feed instead.&lt;/p&gt;
-&lt;p&gt;It keeps my inbox quieter, and it feels good to have a ‘separation of
- concerns’. It makes it easier to read interesting content without being distracted.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-using-rss-1"&gt;&lt;a href="https://marco.org/2013/03/26/power-of-rss"&gt;https://marco.org/2013/03/26/power-of-rss&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-using-rss-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"/></entry></feed>
