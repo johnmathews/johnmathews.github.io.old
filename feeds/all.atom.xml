@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-25T22:39:05+02:00</updated><entry><title>where command</title><link href="https://johnmathews.eu/where-command.html" rel="alternate"/><published>2021-04-25T22:39:05+02:00</published><updated>2021-04-25T22:39:05+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-25:/where-command.html</id><summary type="html"/><content type="html">&lt;p&gt;Show all known locations of an executable
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-28T11:53:44+02:00</updated><entry><title>Ranger file manager</title><link href="https://johnmathews.eu/ranger-file-manager.html" rel="alternate"/><published>2021-04-28T11:53:44+02:00</published><updated>2021-04-28T11:53:44+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-28:/ranger-file-manager.html</id><summary type="html"/><content type="html">&lt;p&gt;Ranger is a console based file manager with vi key bindings.&lt;/p&gt;
+&lt;p&gt;Install it with &lt;code&gt;brew install ranger&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Launch it with &lt;code&gt;ranger&lt;/code&gt;&lt;/p&gt;</content><category term="snippet"/><category term="ranger"/><category term="unix"/><category term="vim"/><category term="tools"/></entry><entry><title>Vim Regex</title><link href="https://johnmathews.eu/vim-regex.html" rel="alternate"/><published>2021-04-28T11:37:58+02:00</published><updated>2021-04-28T11:37:58+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-28:/vim-regex.html</id><summary type="html"/><content type="html">&lt;p&gt;This is a great article about using regular expressions in Vim:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://marcelfischer.eu/blog/2019/checkbox-regex/"&gt;marcelfischer.eu/blog/2019/checkbox-regex/&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/><category term="regex"/></entry><entry><title>where command</title><link href="https://johnmathews.eu/where-command.html" rel="alternate"/><published>2021-04-25T22:39:05+02:00</published><updated>2021-04-25T22:39:05+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-25:/where-command.html</id><summary type="html"/><content type="html">&lt;p&gt;Show all known locations of an executable
 &lt;code&gt;where &lt;executable&gt;&lt;/executable&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;See a list of all builtin commands
 &lt;code&gt;man where&lt;/code&gt;&lt;/p&gt;</content><category term="snippet"/><category term="unix"/><category term="macOS"/><category term="cli"/><category term="bash"/></entry><entry><title>Reading - April 2021</title><link href="https://johnmathews.eu/reading-april-2021.html" rel="alternate"/><published>2021-04-21T12:55:20+02:00</published><updated>2021-04-21T12:55:20+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/reading-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
@@ -546,7 +549,7 @@ explains why.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ansible -i inventory.compute.gcp.yml all -m ping&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>github actions blog</title><link href="https://johnmathews.eu/github-actions-blog.html" rel="alternate"/><published>2021-04-10T22:53:39+02:00</published><updated>2021-04-10T22:53:39+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-10:/github-actions-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;I should see if I can use GitHub actions to generate html from markdown and run
 some shell and python scripts.&lt;/em&gt;&lt;/p&gt;</content><category term="snippet"/><category term="github"/><category term="blog"/></entry><entry><title>socially acceptable mistakes</title><link href="https://johnmathews.eu/socially-acceptable-mistakes.html" rel="alternate"/><published>2021-04-10T22:52:26+02:00</published><updated>2021-04-10T22:52:26+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-10:/socially-acceptable-mistakes.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;Its more socially acceptable to make mistakes and errors of omission than commission.&lt;/em&gt;&lt;/p&gt;</content><category term="snippet"/><category term="meta"/><category term="thinking"/><category term="advice"/></entry><entry><title>du command</title><link href="https://johnmathews.eu/du-command.html" rel="alternate"/><published>2021-04-07T22:55:19+02:00</published><updated>2021-04-07T22:55:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-07:/du-command.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;code&gt;du&lt;/code&gt; is a tool for showing disk usage.&lt;/p&gt;
-&lt;p&gt;There is a similar tool, with a list of other similar tools at
+&lt;p&gt;There is a similar tool, with a list of other similar tools
 &lt;a href="https://dev.yorhel.nl/ncdu`"&gt;here&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="cli"/><category term="unix"/><category term="macos"/></entry><entry><title>safe bash scripting</title><link href="https://johnmathews.eu/safe-bash-scripting.html" rel="alternate"/><published>2021-04-06T22:56:14+02:00</published><updated>2021-04-06T22:56:14+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-06:/safe-bash-scripting.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://t.co/MRxnbHgryD?amp=1"&gt;example&lt;/a&gt; of a safe, good, robust bash file skeleton.&lt;/p&gt;</content><category term="snippet"/><category term="bash"/></entry><entry><title>running a binary in debian</title><link href="https://johnmathews.eu/running-a-binary-in-debian.html" rel="alternate"/><published>2021-04-05T22:58:02+02:00</published><updated>2021-04-05T22:58:02+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/running-a-binary-in-debian.html</id><summary type="html"/><content type="html">&lt;p&gt;I was running a binary in Debian that was complaining about an environment
 variable not existing. I moved the binary into a $&lt;span class="caps"&gt;PATH&lt;/span&gt; directory and logged in as a
 sudo user. Why did this solve the problem?&lt;/p&gt;</content><category term="snippet"/><category term="debian"/><category term="binary"/><category term="path"/></entry><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
@@ -2731,137 +2734,4 @@ and phone, so I bought &lt;code&gt;Reeder 5&lt;/code&gt;. It’s got a few unusu
  it works well and has all the features I want. I’ve been unsubscribing from
  email newsletters and subscribing to the &lt;span class="caps"&gt;RSS&lt;/span&gt; feed instead.&lt;/p&gt;
 &lt;p&gt;It keeps my inbox quieter, and it feels good to have a ‘separation of
- concerns’. It makes it easier to read interesting content without being distracted.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-using-rss-1"&gt;&lt;a href="https://marco.org/2013/03/26/power-of-rss"&gt;https://marco.org/2013/03/26/power-of-rss&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-using-rss-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>Notes on learning Django</title><link href="https://johnmathews.eu/learning-to-django.html" rel="alternate"/><published>2021-01-14T14:17:00+01:00</published><updated>2021-01-14T14:17:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/learning-to-django.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#in-the-beginning"&gt;In the beginning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#a-personal-finances-dashboard"&gt;A personal finances dashboard&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#learning-django"&gt;Learning Django&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#the-best-moments"&gt;The best moments&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#adding-a-unique-identifier-to-an-existing-authentication-model"&gt;Adding a unique identifier to an existing authentication model&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#testing-code"&gt;Testing code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h2 id="in-the-beginning"&gt;In the beginning&lt;/h2&gt;
-&lt;p&gt;I came to web development via business analytics. I was working as an
-accountant and Excel wasn’t good enough anymore, so I looked around for a way
-to get started and came across &lt;a href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html"&gt;Jupyter
-Notebooks&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Notebooks are said to be a kind of “gateway drug” to programming, and I think
-that’s true. They’re the easiest and fastest way to start programming that I’ve
-come across.&lt;/p&gt;
-&lt;p&gt;When you’re working in a notebook, its easy to get data, wrangle it, and show
-some results. But as soon as you can create a chart or some summary table you
-inevitably wonder how you can show this to people more easily, and publishing
-the results to a website feels like the best most general and versatile solution.&lt;/p&gt;
-&lt;p&gt;Unfortunately it’s also the hardest, and so begins a long series of compromises
-and incremental progress. Learn to use a dashboarding &lt;span class="caps"&gt;API&lt;/span&gt;, and learn to create
-static sites. But the end-goal, the ultimate solution, is a data driven web
-app, with authentication, saved user preferences, scalable performance, and
-automatically updated data sources.&lt;/p&gt;
-&lt;h2 id="a-personal-finances-dashboard"&gt;A personal finances dashboard&lt;/h2&gt;
-&lt;p&gt;When I moved to the Netherlands, I wanted to use a personal finances dashboard
-to check weekly expenses. There wasn’t a web-app that would do this (though
-there are a couple of apps that are trying) so I built my own dashboard. Then a
-few friends asked if they could use it too. They couldn’t because it was just a
-dashboard and not a web app, but I thought this was a good reason to jump into
-web development.&lt;/p&gt;
-&lt;p&gt;It was a much bigger task than I anticipated. (And that’s &lt;span class="caps"&gt;OK&lt;/span&gt;.)&lt;/p&gt;
-&lt;p&gt;It took several attempts and was super frustrating, I would dabble for a few
-weeks, do a few tutorials, and then get completely lost when I tried to do
-something by myself. I’d get disorientated working across many different files
-and trying to visualise which part of the Model-View-Controller model, or the
-request-response cycle I was currently working on.&lt;/p&gt;
-&lt;p&gt;I came to realisea that the mental load seems so large at the beginning because
-“web-development” is really a whole stack of technologies and abstractions
-combined (or stacked) together. Many of these have to be used together at the
-same time before you can see &lt;em&gt;any evidence of success at all&lt;/em&gt;.&lt;/p&gt;
-&lt;h2 id="learning-django"&gt;Learning Django&lt;/h2&gt;
-&lt;p&gt;I think the hardest things about Django are not actually Django. You’ll need to
-comfortable with classes and inheritance. You’ll also need to be comfortable
-with working across multiple files, and have some tools for searching across
-all you open buffers, or all the files in the project, at the same time. You’ll
-also need to be comfortable with version control (Git) and using the command
-line. Get familiar with stack traces too.&lt;/p&gt;
-&lt;p&gt;If you’re familiar enough with all these things, so that using them doesn’t
-feel new, but ideally feels familiar and comfortable, then I think you’ll make
-quite quick progress with Django.&lt;/p&gt;
-&lt;p&gt;Django uses the Model-View-Controller model. Models are how django maps Python
-objects to items in your database (oh yeah, you need to be familiar with &lt;span class="caps"&gt;SQL&lt;/span&gt;
-too…), Views are where requests are processed (also Middleware) and turned
-into Responses, which are then combined with templates (unless your building an
-&lt;span class="caps"&gt;API&lt;/span&gt;). You might notice I haven’t mentioned what a Controller is - get used to
-information feeling incomplete whilst you’re learning the ropes. It’ll become
-clear soon enough.&lt;/p&gt;
-&lt;h2 id="the-best-moments"&gt;The best moments&lt;/h2&gt;
-&lt;p&gt;The ‘curse of knowledge’ states that once you’ve learnt something you can’t
-imagine or remember what it’s like to not know it. Before that happens
-completely, I want to record some of the ‘ahah!’ moments of ‘learning Django’.&lt;/p&gt;
-&lt;p&gt;For context, I stopped working as a freelance data scientist in April and after
-a few weeks wondering if django and PostgreSQL and python was the way to go
-(yes it is. use boring technology), I began working full-time on what would
-become &lt;a href="https://moneybar.nl"&gt;MoneyBar.nl&lt;/a&gt;. I called it ‘myeuros’ in the beginning.&lt;/p&gt;
-&lt;p&gt;The learning curve felt steep. I wanted to do things “right” the first
-time because I wasn’t building a toy, and although I felt that hindsight would
-show this to be a mistake in terms of efficiency, I did it anyway because I
-have a hunch that following my compulsions sometimes makes life harder in the
-short term and better in the long term.&lt;/p&gt;
-&lt;p&gt;The best moments are usually preceded by the most frustrating.&lt;/p&gt;
-&lt;h3 id="adding-a-unique-identifier-to-an-existing-authentication-model"&gt;Adding a unique identifier to an existing authentication model&lt;/h3&gt;
-&lt;p&gt;I used pydanny’s &lt;code&gt;cookiecutter-django&lt;/code&gt; template. Honestly, by the time I’d gone
-through the quickstart process and googled the nouns in all the questions (what
-is &lt;code&gt;Sentry&lt;/code&gt;, what is &lt;code&gt;Celery&lt;/code&gt; and what is a &lt;code&gt;task que&lt;/code&gt;, what is &lt;code&gt;whitenoise&lt;/code&gt;,
-etc.) I was already tired. Play with it a few times and come back to it.&lt;/p&gt;
-&lt;p&gt;Anyway, I wanted to start with authentication, because the project template has
-that part kind of up and rnuning for you out of the box. &lt;code&gt;cookiecutter-django&lt;/code&gt;
-uses the &lt;code&gt;Django Allauth&lt;/code&gt; package, which is awesome, and reliable, and fully
-featured… and extremely abstracted. Good luck looking at the module code and
-understanding it if youre not an expert.&lt;/p&gt;
-&lt;p&gt;I wanted to give each user a unique &lt;span class="caps"&gt;ID&lt;/span&gt; - a &lt;code&gt;UUID&lt;/code&gt; when they signed up. This
-would be used in query strings instead of usernames or incremental keys. This
-was so hard the first time! And it turns out its not a trivial task, not if you
-already have a few users in your (test) database. Sure you can reset the
-database and start again, but experimenting like this is fairly complex.
-Understanding how the python model classes (the &lt;span class="caps"&gt;ORM&lt;/span&gt;) maps to the relations in
-the PostgreSQL databse was complex, and if I got confused, should I try to fix
-it by changing python Models, or editing migrations, or working on the database
-directly? Getting started is one of the hardest things.&lt;/p&gt;
-&lt;p&gt;After I’d figured out authentication, I started creating models for other
-simpler data (transactions and bank accounts I expect). This was much simpler
-and faster. I remember driving home one evening thinking that if I could get
-this far then success was inevitable.&lt;/p&gt;
-&lt;h3 id="testing-code"&gt;Testing code&lt;/h3&gt;
-&lt;p&gt;Before long, testing each part of the app by hand when I added or changed a
-feature was no longer trivial. I needed to find some way of automatically
-creating users and checking that they could log in and access views.&lt;/p&gt;
-&lt;p&gt;I began working with &lt;code&gt;pytest&lt;/code&gt;, and really found it hard to wrap my head around
-the idea accessing different parts of the app not by requests and responses but
-by accessing class methods directly.&lt;/p&gt;
-&lt;p&gt;I think its normal and good to code at the limit of your knowledge, where you
-know just enough to make a thing “work”. But this approach falters when you
-want to then test what you wrote. Or at least, the measure of “just enough”
-really changes when you require tests to be written. You don’t just need to
-make it work, you need to understand why it works, so that you can write tests
-to assert that certain conditions pass and others fail.&lt;/p&gt;
-&lt;p&gt;This feels really satisfying when it works, because you have proof that you
-really have grasped a bigger picture. There are far fewer (relevant) black
-boxes when you write tests. But it also makes learning slower, at least in the
-short term. It means you might have two get comfortable with a handful of
-abstractions, when you’ve already solved the problem you started with. This is
-frustrating, and it takes discipline to slow down, take a deeper look at the
-solution, and not just race on to the next feature.&lt;/p&gt;</content><category term="Technical/Web"/></entry><entry><title>Data Science vs Web Development: Larger Code Bases</title><link href="https://johnmathews.eu/larger-code-bases.html" rel="alternate"/><published>2021-01-14T13:40:00+01:00</published><updated>2021-01-14T13:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/larger-code-bases.html</id><summary type="html"/><content type="html">&lt;h2 id="code-structure"&gt;Code Structure&lt;/h2&gt;
-&lt;p&gt;One of the most immediate and basic differences between working as a data
-scientist or as a web developer is the number of files the codebase
-is spread across and the amount of code within each file.&lt;/p&gt;
-&lt;p&gt;Web applications tend to be very modular - there are a lot of different things
-going on in a modern web app and generally they all need to be able to be
-modified or updated independently of each other. This requirement encourages
-modular code base architecture with the code broken down into testable units.&lt;/p&gt;
-&lt;p&gt;When working on a data science project you often have a well defined and quite narrow pipe line. Each stage of a pipeline has well defined inputs and outputs.&lt;/p&gt;
-&lt;p&gt;This seems to have the consequence of making data science projects tend towards a handful of files each with a substantial amount of unique (not boilerplate) code. In web development there seems to be more boilerplate, many more
-files spread across a tree of directories, and the average number of lines of code per file is significantly lower.&lt;/p&gt;
-&lt;h2 id="ide-features"&gt;&lt;span class="caps"&gt;IDE&lt;/span&gt; features&lt;/h2&gt;
-&lt;p&gt;These differences mean that code organization tools and &lt;span class="caps"&gt;IDE&lt;/span&gt; features play very
-different roles within each industry. In web development you really need to be able to jump between different files (or buffers) quickly, and search for text across multiple files. Writing idiomatically becomes more important, and writing code within discreet testable units becomes essential so that things don’t break without being noticed.&lt;/p&gt;
-&lt;p&gt;In data science, linting feels more optional, and searching for text within  methods or functions outside the current module is rarer.&lt;/p&gt;
-&lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry></feed>
+ concerns’. It makes it easier to read interesting content without being distracted.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-using-rss-1"&gt;&lt;a href="https://marco.org/2013/03/26/power-of-rss"&gt;https://marco.org/2013/03/26/power-of-rss&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-using-rss-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry></feed>
