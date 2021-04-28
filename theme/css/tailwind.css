@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind utilities;
+@tailwind components;
 
 
 .image-process-logo {
@@ -308,4 +308,4 @@
   @apply border py-1 px-3;
 }
 
-
+@tailwind utilities;
