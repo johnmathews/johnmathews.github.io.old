@@ -28,7 +28,6 @@ function chooseBoth() {
 }
 
 function chooseTechnical(){
-  console.log('smoke');
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'technical');
 
