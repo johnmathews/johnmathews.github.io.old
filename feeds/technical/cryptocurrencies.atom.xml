@@ -31,6 +31,7 @@
 &lt;li&gt;&lt;a href="#bitcoin-price-history"&gt;Bitcoin price history&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#3-month-coin-days-destroyed"&gt;3 month coin days destroyed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#double-top"&gt;Double top&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#similarities-to-previous-bull-runs"&gt;Similarities to previous bull runs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#summary"&gt;Summary&lt;/a&gt;&lt;/li&gt;
@@ -78,7 +79,7 @@ Some more general articles on this site are:&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/glassnode"&gt;Glass Node&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/rationalroot"&gt;therationalroot&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/coinmetrics"&gt;CoinMetrics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://twitter.com/TimmerFidelity"&gt;Jurrien Timmer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/TimmerFidelity/status/1382026394541174787?s=20"&gt;Jurrien Timmer&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The level of hype on Twitter and YouTube becomes silly when “experts” start
 appearing from nowhere. Track record and consistency is essential.&lt;/p&gt;
@@ -142,18 +143,18 @@ the current rate of production) to produce the amount of gold currently in
 circulation. Silver has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of 74. &lt;span class="caps"&gt;BTC&lt;/span&gt; has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of about 50.&lt;/p&gt;
 &lt;h1 id="threshold-values"&gt;Threshold Values&lt;/h1&gt;
 &lt;h2 id="mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; has historically been one of the best on-chain predictors of market tops and bottoms.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 3 → Local top&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 4 → Macro top&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; has historically been one of the best on-chain predictors of market tops and bottoms.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;7 day average &lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1.04 → Sell&lt;/li&gt;
 &lt;li&gt;0.97 → Buy&lt;/li&gt;
+&lt;li&gt;Noisy - defer to other metrics&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;But this is a noisy metric.&lt;/p&gt;
 &lt;h2 id="hodl-waves"&gt;&lt;span class="caps"&gt;HODL&lt;/span&gt; Waves&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&amp;gt;45% of supply has been moved in the last 180 days → Sell&lt;/li&gt;
@@ -162,8 +163,9 @@ circulation. Silver has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of 74.
 &lt;h2 id="rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;14 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 95 → Sell&lt;/li&gt;
+&lt;li&gt;12 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 90 → Sell&lt;/li&gt;
+&lt;li&gt;Noisy - defer to other metrics&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(compare to 12 month &lt;span class="caps"&gt;RSI&lt;/span&gt;)&lt;/p&gt;
 &lt;h1 id="charts"&gt;Charts&lt;/h1&gt;
 &lt;h2 id="stock-to-flow-model"&gt;Stock to Flow Model&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/bitcoin-stock-to-flow-model.png"&gt;&lt;img alt="bitcoin stock to flow model" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-stock-to-flow-model.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bitcoin-stock-to-flow-model.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bitcoin-stock-to-flow-model.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-stock-to-flow-model.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bitcoin-stock-to-flow-model.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
@@ -177,11 +179,30 @@ circulation. Silver has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of 74.
 &lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/3monthCoindaysDestroyed.png"&gt;&lt;img alt="bitcoin 3 month coin days destroyed" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/3monthCoindaysDestroyed.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/3monthCoindaysDestroyed.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/3monthCoindaysDestroyed.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/3monthCoindaysDestroyed.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/3monthCoindaysDestroyed.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="double-top"&gt;Double top&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/woobull_double_top_first_top_now.jpg"&gt;&lt;img alt="bitcoin historical double tops" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/woobull_double_top_first_top_now.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/woobull_double_top_first_top_now.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/woobull_double_top_first_top_now.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/woobull_double_top_first_top_now.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/woobull_double_top_first_top_now.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="similarities-to-previous-bull-runs"&gt;Similarities to previous bull runs&lt;/h2&gt;
+&lt;p&gt;Version 1:
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/bull_run_comparison.jpg"&gt;&lt;img alt="bitcoin price comparison of historical bullruns" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bull_run_comparison.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bull_run_comparison.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bull_run_comparison.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Version 2:
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/bull_run_comparison2.jpeg"&gt;&lt;img alt="bitcoin price comparison of historical bullruns" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison2.jpeg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bull_run_comparison2.jpeg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bull_run_comparison2.jpeg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison2.jpeg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bull_run_comparison2.jpeg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Halving model:
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/halving_model.jpg"&gt;&lt;img alt="bitcoin historical price oriented around historical halving" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/halving_model.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/halving_model.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/halving_model.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/halving_model.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/halving_model.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;12 Month &lt;span class="caps"&gt;RSI&lt;/span&gt; comparison
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/rsi_comparison.jpg"&gt;&lt;img alt="bitocin historical RSI" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/rsi_comparison.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/rsi_comparison.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/rsi_comparison.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/rsi_comparison.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/rsi_comparison.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Sell at $100,000 if price shoots up unexpectedly quickly. I expect the market top to be significantly higher.&lt;/li&gt;
-&lt;li&gt;$100k will be a massive psychological level. If the price does increase to this level before approximately July then the optimal sell price would therefore not be exactly $100,000.&lt;/li&gt;
-&lt;li&gt;Market top is expected around October 2021 at the earliest.&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;S2F&lt;/span&gt; model suggests a peak around the beginning of 2021Q4, in the region of &lt;strong&gt;$300,000&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The rainbow chart seems to broadly agree with &lt;span class="caps"&gt;S2F&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;If the age-adjusted 3-month coin days destroyed goes above 550,000 then get ready to sell.&lt;/li&gt;
+&lt;li&gt;Willy Woos “double top” chart suggests a peak around &lt;strong&gt;$400,000&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;RationalRoot’s comparison of bull runs suggests a market top around &lt;strong&gt;14 September&lt;/strong&gt; and a maximum price around &lt;strong&gt;$2,000,000&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;RationalRoot’s comparison of 12 months &lt;span class="caps"&gt;RSI&lt;/span&gt; suggests that the market top is reached shortly after a &lt;strong&gt;12 month &lt;span class="caps"&gt;RSI&lt;/span&gt; exceeds 90&lt;/strong&gt;. This seems less reliable than the above points&lt;/li&gt;
+&lt;li&gt;Jurrien Timmer suggests a peak price around $100,000 if price shoots up unexpectedly quickly. I expect the market top to be significantly higher.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$100k will be a massive psychological level. If the price does increase to this level before approximately July then the optimal sell price would therefore not be exactly $100,000.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Market top is expected around &lt;strong&gt;September 2021 at the earliest&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;The behaviour of the market will change as its participants change. There hasn’t been a bull run with significant institutional investors before.&lt;/li&gt;
 &lt;li&gt;Sell using a cost averaging strategy.&lt;/li&gt;
 &lt;/ul&gt;
