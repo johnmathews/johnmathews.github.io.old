@@ -1,5 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-03-05T16:14:00+01:00</updated><entry><title>Cardano: Generating Addresses</title><link href="https://johnmathews.eu/cardano-generating-addresses.html" rel="alternate"/><published>2021-03-05T16:14:00+01:00</published><updated>2021-03-05T16:14:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-05:/cardano-generating-addresses.html</id><summary type="html"/><content type="html">&lt;p&gt;If many different customers are to deposit or send &lt;span class="caps"&gt;ADA&lt;/span&gt; (The unit of currency on the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-27T17:46:58+02:00</updated><entry><title>When Bitcoin Top?</title><link href="https://johnmathews.eu/when-bitcoin-top.html" rel="alternate"/><published>2021-04-27T17:46:58+02:00</published><updated>2021-04-27T17:46:58+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-27:/when-bitcoin-top.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#hopefully-helpful-links"&gt;Hopefully helpful links:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#analysts"&gt;Analysts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#key-metrics-and-terms"&gt;Key metrics and terms&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#mvrv"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#realised-cap"&gt;Realised Cap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#utxo"&gt;&lt;span class="caps"&gt;UTXO&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sopr"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#asopr"&gt;aSOPR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#urpd"&gt;&lt;span class="caps"&gt;URPD&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rsi"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#miner-net-position"&gt;Miner Net Position&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#unrealised-price-distribution"&gt;Unrealised Price Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#stock-to-flow"&gt;Stock-to-Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#threshold-values"&gt;Threshold Values&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#hodl-waves"&gt;&lt;span class="caps"&gt;HODL&lt;/span&gt; Waves&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#charts"&gt;Charts&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#stock-to-flow-model"&gt;Stock to Flow Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rainbow-model"&gt;Rainbow Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lowest-price-forward-model"&gt;Lowest price forward model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#summary"&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#finally"&gt;Finally&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;p&gt;Over the past 8 years, Bitcoin has gone through phases of rapid price increase
+followed by periods of rapid decrease. The price has been driven by increasing
+market size and a decreasing rate of issuance, and has been so volatile
+(compared to traditional finance) that “1 month in cryptocurrency markets is
+like 1 year in traditional markets”. However volatility is decreasing and we
+are seeing lower highs and higher lows during each subsequent market cycle.&lt;/p&gt;
+&lt;p&gt;The single biggest factor driving multi-year market cycles appears to be the
+decreasing rate of supply increase (the issuance rate). The last 3 halvings&lt;sup id="sf-when-bitcoin-top-1-back"&gt;&lt;a class="simple-footnote" href="#sf-when-bitcoin-top-1" title="Every 210,000 blocks, the number of bitcoin awarded to the miner for successfully adding a block is halved. The last halving occurred in May 2020 and the rate of issuance halved from 12.5 BTC/block to 6.25 BTC/block"&gt;1&lt;/a&gt;&lt;/sup&gt; seem to have provoked the last
+3 bull cycles. We are in the third bull cycle now (April 2021) and I fully
+expect it to be followed by a bear cycle.&lt;/p&gt;
+&lt;p&gt;As an amateur investor, I want to buy low and sell high. I’d like to time the
+top and bottom of the market with reasonable accuracy, just like everyone else.
+But I’m aware that my methods are less nuanced than professional traders and
+analysts - I have access to less data than them and I’m not willing to put in
+as much effort as they are. I’m happy to do this
+&lt;a href="https://en.wikipedia.org/wiki/Pareto_principle"&gt;Pareto&lt;/a&gt; style - I’ll give it
+20% of my maximum effort and I’ll be happy with 80% of an ideal result&lt;sup id="sf-when-bitcoin-top-2-back"&gt;&lt;a class="simple-footnote" href="#sf-when-bitcoin-top-2" title="I realise this probably isn’t, strictly, what Mr. Pareto was thinking when he published his research. I hope you get my intention."&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;This is a review of what I consider to be the best sources of metrics and
+analysis that I’ve come across. All the resources used in this article are
+attributed to the original author and have been made freely available on
+Twitter. I hope its &lt;span class="caps"&gt;OK&lt;/span&gt; for me to repost them here, if it’s not then
+let me know and I’ll edit the post.&lt;/p&gt;
+&lt;h3 id="hopefully-helpful-links"&gt;Hopefully helpful links:&lt;/h3&gt;
+&lt;p&gt;This article assumes some familiarity with blockchains and financial markets.
+Some more general articles on this site are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/bitcoin-vs-gold.html"&gt;Bitcoin compared to Gold&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/buying-btc.html"&gt;How to buy bitcoin&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="analysts"&gt;Analysts&lt;/h1&gt;
+&lt;p&gt;These insights, metrics and charts are the work of the following people and organisations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/woonomic"&gt;Willy Woo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/nsquaredcrypto"&gt;Timothy Peterson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/100trillionUSD"&gt;PlanB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/glassnode"&gt;Glass Node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/rationalroot"&gt;therationalroot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/coinmetrics"&gt;CoinMetrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/TimmerFidelity"&gt;Jurrien Timmer&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The level of hype on Twitter and YouTube is beginning to approach silly levels,
+when “experts” start appearing from nowhere. Track record and consistency is essential.&lt;/p&gt;
+&lt;h1 id="key-metrics-and-terms"&gt;Key metrics and terms&lt;/h1&gt;
+&lt;h2 id="mvrv"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;The ratio of Market Value to Realised Value is calculated by dividing Bitcoin’s
+market cap by its realised cap.&lt;/p&gt;
+&lt;h2 id="realised-cap"&gt;Realised Cap&lt;/h2&gt;
+&lt;p&gt;The sum of the products of each &lt;span class="caps"&gt;UTXO&lt;/span&gt; and the market price of Bitcoin when the &lt;span class="caps"&gt;UTXO&lt;/span&gt; was generated.&lt;/p&gt;
+&lt;h2 id="utxo"&gt;&lt;span class="caps"&gt;UTXO&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Unspent Transaction Outputs&lt;/em&gt;. These are kind of like unspent coins. If you have
+1.5 &lt;span class="caps"&gt;BTC&lt;/span&gt; then you might have bought 2 and sold 0.5. The total value of UTXOs in
+your wallet will be 1.5.&lt;/p&gt;
+&lt;h2 id="sopr"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;Spent Output Profit Ratio&lt;/em&gt; is a measure of the average profit or loss on a
+coin. Is a coin is moved when the price is higher than when it was received the
+&lt;span class="caps"&gt;SOPR&lt;/span&gt; increases, if a coin is moved when the price is lower than when the coin
+was received then &lt;span class="caps"&gt;SOPR&lt;/span&gt; decreases.&lt;/p&gt;
+&lt;p&gt;It won’t be accurate for individual coins but in aggregate it gives an idea of
+whether coins are being sold at a loss or for profit.&lt;/p&gt;
+&lt;p&gt;Market participants who have owned &lt;span class="caps"&gt;BTC&lt;/span&gt; for 3 months behave differently to those
+that have held &lt;span class="caps"&gt;BTC&lt;/span&gt; for 3 years. A more experienced investor will likely make
+more measured and less rash decisions.&lt;/p&gt;
+&lt;p&gt;By segregating the UTXOs according to age you can compare old coins and new
+coins, experienced and inexperienced investors (in aggregate).&lt;/p&gt;
+&lt;p&gt;Weak hands will sell before stronger hands, and when market price decrease it’s
+useful to know aggregate age data for the coins being sold. If coins are moving
+from young wallets then the selling is likely much less significant than if
+coins are being moved onto exchanges from old wallets.&lt;/p&gt;
+&lt;h2 id="asopr"&gt;aSOPR&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;Adjusted Spent Output Profit Ratio&lt;/em&gt; is the same as &lt;code&gt;SOPR&lt;/code&gt; but it ignores
+coins less than 1 hour old.&lt;/p&gt;
+&lt;p&gt;If profits are taken by old coins, aSOPR trends higher. It will trend lower
+when older (and therefore profitable) coins remain dormant.&lt;/p&gt;
+&lt;p&gt;The higher aSOPR is, the more profit has been taken off the table.&lt;/p&gt;
+&lt;p&gt;When aSOPR is less than 1, spent coints are moved at an aggregate loss.&lt;/p&gt;
+&lt;h2 id="urpd"&gt;&lt;span class="caps"&gt;URPD&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;span class="caps"&gt;UTXO&lt;/span&gt; Realised Price Distribution&lt;/em&gt; - If a lot of coins have moved within a
+particular price band, it is likely that there is strong price support and
+resistance at this price.&lt;/p&gt;
+&lt;p&gt;This would be truer and more reliable in a mature market. Because the market
+for Bitcoin is expanding so rapidly and the price is so volatile, the attitudes
+and expectations of market participants is also much more malleable than in
+traditional finance. For example, what was considered a very high price 12
+months ago would be considered a disaster today.&lt;/p&gt;
+&lt;h2 id="rsi"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;Relative Strength Index&lt;/em&gt; is borrowed directly from traditional finance.
+You can calculate it over different time periods.&lt;/p&gt;
+&lt;h2 id="miner-net-position"&gt;Miner Net Position&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Miner Net Position&lt;/em&gt; shows the degree to which, on aggregate, Bitcoin miners
+are profiting from the coins they’ve generated from mining. Miners are expected
+to be among the most bullish of all market participants, and therefore it is
+notable when they start moving coins from their mining wallets into exchange wallets.&lt;/p&gt;
+&lt;h2 id="unrealised-price-distribution"&gt;Unrealised Price Distribution&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;WIP&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id="stock-to-flow"&gt;Stock-to-Flow&lt;/h2&gt;
+&lt;p&gt;A stock to flow model is used to measure the scarcity of a commodity. It’s a
+calculation based on the ratio of the existing supply of an asset and how much
+is becoming available. The higher the ratio, the longer it will take for supply
+to meet existing demand, and therefore the more scarce the asset is.&lt;/p&gt;
+&lt;p&gt;Gold has a stock to flow ratio of 66, which means it would take 66 years (at
+the current rate of production) to produce the amount of gold currently in
+circulation. Silver has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of 74. &lt;span class="caps"&gt;BTC&lt;/span&gt; has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of about 50.&lt;/p&gt;
+&lt;h1 id="threshold-values"&gt;Threshold Values&lt;/h1&gt;
+&lt;h2 id="mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; has historically been one of the best on-chain predictors of market tops and bottoms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 3 → Local top&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 4 → Macro top&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;7 day average &lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.04 → Sell&lt;/li&gt;
+&lt;li&gt;0.97 → Buy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But this is a noisy metric.&lt;/p&gt;
+&lt;h2 id="hodl-waves"&gt;&lt;span class="caps"&gt;HODL&lt;/span&gt; Waves&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;gt;45% of supply has been moved in the last 180 days → Sell&lt;/li&gt;
+&lt;li&gt;&amp;gt;70% of supply has been held over 180 days → Buy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;14 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 95 → Sell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(compare to 12 month &lt;span class="caps"&gt;RSI&lt;/span&gt;)&lt;/p&gt;
+&lt;h1 id="charts"&gt;Charts&lt;/h1&gt;
+&lt;h2 id="stock-to-flow-model"&gt;Stock to Flow Model&lt;/h2&gt;
+&lt;h2 id="rainbow-model"&gt;Rainbow Model&lt;/h2&gt;
+&lt;h2 id="lowest-price-forward-model"&gt;Lowest price forward model&lt;/h2&gt;
+&lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Sell at $100,000.&lt;ul&gt;
+&lt;li&gt;This will be a massive psycological level. The optimal sell price will not be exactly $100,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Market top is expected sometime around October 2021.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="finally"&gt;Finally&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Buy when everyone is selling, sell when everyone is buying. Be
+  brave when there is fear, if there is no fear then its about to get very messy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If everyone is super confident that prices are definitely going to go up,
+  something bad is about to happen. A lack of uncertainty is a big warning bell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-when-bitcoin-top-1"&gt;Every 210,000
+blocks, the number of bitcoin awarded to the miner for successfully adding a
+block is halved. The last halving occurred in May 2020 and the rate of issuance
+halved from 12.5 &lt;span class="caps"&gt;BTC&lt;/span&gt;/block to 6.25 &lt;span class="caps"&gt;BTC&lt;/span&gt;/block &lt;a class="simple-footnote-back" href="#sf-when-bitcoin-top-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-when-bitcoin-top-2"&gt;I
+realise this probably isn’t, strictly, what Mr. Pareto was thinking when he
+published his research. I hope you get my intention. &lt;a class="simple-footnote-back" href="#sf-when-bitcoin-top-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/><category term="bitcoin"/><category term="finance"/><category term="markets"/></entry><entry><title>Cardano: Generating Addresses</title><link href="https://johnmathews.eu/cardano-generating-addresses.html" rel="alternate"/><published>2021-03-05T16:14:00+01:00</published><updated>2021-03-05T16:14:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-05:/cardano-generating-addresses.html</id><summary type="html"/><content type="html">&lt;p&gt;If many different customers are to deposit or send &lt;span class="caps"&gt;ADA&lt;/span&gt; (The unit of currency on the
 Cardano blockchain) to a Cardano node, it will be necessary to determine which
 customer is responsible for each transaction so that the correct customer
 account can be updated.&lt;/p&gt;
@@ -299,8 +489,7 @@ there is right now.&lt;/p&gt;
     own your private key, you don’t own the asset. If you don’t know what
     that means, google it (Point 8).&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Leave a comment if you think I’ve missed something or if you disagree.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/><category term="Bitcoin"/></entry><entry><title>Pangea</title><link href="https://johnmathews.eu/pangea.html" rel="alternate"/><published>2017-11-22T16:49:00+01:00</published><updated>2017-11-22T16:49:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-22:/pangea.html</id><summary type="html">&lt;p&gt;Communities will always need to create reliable and enforceable agreements with each&amp;nbsp;other.&lt;/p&gt;</summary><content type="html">&lt;h2 id="the-problem"&gt;The problem&lt;/h2&gt;
+&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/><category term="Bitcoin"/></entry><entry><title>Pangea</title><link href="https://johnmathews.eu/pangea.html" rel="alternate"/><published>2017-11-22T16:49:00+01:00</published><updated>2017-11-22T16:49:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-22:/pangea.html</id><summary type="html">&lt;p&gt;Communities will always need to create reliable and enforceable agreements with each&amp;nbsp;other.&lt;/p&gt;</summary><content type="html">&lt;h2 id="the-problem"&gt;The problem&lt;/h2&gt;
 &lt;p&gt;In many countries the ability to create legally binding agreements is not available to average citizens. Legal services are often unaffordable and opaque, or service providers are corrupt. Legal services are in need of disruption.&lt;/p&gt;
 &lt;h2 id="the-solution"&gt;The solution&lt;/h2&gt;
 &lt;h3 id="pangea"&gt;Pangea&lt;/h3&gt;
@@ -314,33 +503,47 @@ there is right now.&lt;/p&gt;
 &lt;p&gt;Generating Bitcoin through proof of work occurs because individuals believe that Bitcoin will be continuously used — that it will meet an ongoing need to transact using a decentralised and disintermediated method. &lt;/p&gt;
 &lt;p&gt;Generating &lt;span class="caps"&gt;PAT&lt;/span&gt; by being a good citizen will occur because individuals believe that Pangea will be continuously used  — that it will meet an ongoing need to create enforceable agreements using a voluntary and geographically agnostic (and decentralised) method.&lt;/p&gt;
 &lt;h3 id="comments"&gt;Comments&lt;/h3&gt;
-&lt;p&gt;There is much still to say about the Pangea platform and the mechanisms which will make it function. Please give feedback and ask questions in the comments. To find out more, visit the &lt;a href="http://bitnation.co"&gt;website&lt;/a&gt;.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/><category term="bitnation"/><category term="pangea"/></entry><entry><title>Bitcoin compared to gold</title><link href="https://johnmathews.eu/bitcoin-vs-gold.html" rel="alternate"/><published>2017-11-21T17:35:00+01:00</published><updated>2017-11-21T17:35:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-21:/bitcoin-vs-gold.html</id><summary type="html">&lt;p&gt;Bitcoin will become a safe haven asset comparable to&amp;nbsp;gold&lt;/p&gt;</summary><content type="html">&lt;p&gt;A safe haven asset is something to buy during economic uncertainty. Historically, the safest asset you can buy has been gold. This is not because of anything inherently special about gold, but because that is what people believe to be the best long term method of storing value. &lt;/p&gt;
-&lt;p&gt;People believe gold is special because they assume that in future other people will believe it’s special.&lt;/p&gt;
+&lt;p&gt;There is much still to say about the Pangea platform and the mechanisms which will make it function. Please give feedback and ask questions in the comments. To find out more, visit the &lt;a href="http://bitnation.co"&gt;website&lt;/a&gt;.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/><category term="bitnation"/><category term="pangea"/></entry><entry><title>Bitcoin compared to gold</title><link href="https://johnmathews.eu/bitcoin-vs-gold.html" rel="alternate"/><published>2017-11-21T17:35:00+01:00</published><updated>2017-11-21T17:35:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-21:/bitcoin-vs-gold.html</id><summary type="html">&lt;p&gt;Bitcoin will become a safe haven asset comparable to&amp;nbsp;gold&lt;/p&gt;</summary><content type="html">&lt;p&gt;A safe haven asset is something to buy during economic uncertainty.
+Historically, the safest asset you can buy has been gold. This is not because
+of anything inherently special about gold, but because that is what people
+believe to be the best long term method of storing value.&lt;/p&gt;
+&lt;p&gt;People believe gold is special because they assume that in future other people
+will believe it’s special.&lt;/p&gt;
 &lt;h3 id="criteria-for-a-safe-haven-asset"&gt;Criteria for a safe haven asset&lt;/h3&gt;
 &lt;p&gt;A safe-haven asset must fulfil the following criteria:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Price isn’t controlled by any single party, including a state or bank. The market is spread out beyond the reach of any one organisation. This is important because an asset which is issued, controlled or backed by an organisation has its value tied to the health of that organisation.&lt;/li&gt;
-&lt;li&gt;Supply isn’t controlled by any single party, including a state, bank or anyone else - it exists naturally and the rate at which it’s produced or traded is beyond the control of any one organisation. &lt;/li&gt;
+&lt;li&gt;Supply isn’t controlled by any single party, including a state, bank or anyone else - it exists naturally and the rate at which it’s produced or traded is beyond the control of any one organisation.&lt;/li&gt;
 &lt;li&gt;Supply is limited. The effort required to create the asset naturally limits the supply.&lt;/li&gt;
 &lt;li&gt;The asset doesn’t wear out or expire.&lt;/li&gt;
 &lt;li&gt;It’s prohibitively expensive to fake.&lt;/li&gt;
 &lt;li&gt;Almost everyone considers it to be precious and valuable.&lt;/li&gt;
 &lt;li&gt;It can be stored and transported simply. It’s not delicate or volatile.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;For these reasons, and because of historical consensus, people have been happy to use gold as a store of value in times of economic uncertainty or for long durations. Other assets also meets these requirements to lesser extents.&lt;/p&gt;
+&lt;p&gt;For these reasons, and because of historical consensus, people have been happy
+to use gold as a store of value in times of economic uncertainty or for long
+durations. Other assets also meets these requirements to lesser extents.&lt;/p&gt;
 &lt;h3 id="bitcoin-compared-to-gold"&gt;Bitcoin compared to gold&lt;/h3&gt;
-&lt;p&gt;Consider why gold is so good as a safe haven asset and long term value store. For all the reasons above, bitcoin is better, except one: At present, not many people consider it to be precious and valuable, so the market is small. This will change as confidence and awareness increases, and the eco-system of services and applications matures.&lt;/p&gt;
+&lt;p&gt;Consider why gold is so good as a safe haven asset and long term value store.
+For all the reasons above, bitcoin is better, except one: At present, not many
+people consider it to be precious and valuable, so the market is small. This
+will change as confidence and awareness increases, and the eco-system of
+services and applications matures.&lt;/p&gt;
 &lt;p&gt;The fundamentals are already established:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;A decentralised network ensures that Bitcoin can’t be regulated or controlled by a single government or organisation. The network can’t be turned off or controlled.&lt;/li&gt;
-&lt;li&gt;The present and future rate of supply is publicly available and inviolable. This increases market efficiency and creates more rational pricing than a market where the rate of supply is unverifiable.&lt;/li&gt;
-&lt;li&gt;Supply is naturally (mathematically) limited using proof of work algorithms. &lt;/li&gt;
+&lt;li&gt;A decentralised network ensures that Bitcoin can’t be regulated or manipulated by any single government or organisation. The Bitcoin network can’t be turned off.&lt;/li&gt;
+&lt;li&gt;The present and future rate of supply is publicly available and unchangeable. This increases market efficiency and creates more rational pricing than a market where the rate of supply is unverifiable.&lt;/li&gt;
+&lt;li&gt;Supply is naturally (mathematically) limited using proof of work algorithms.&lt;/li&gt;
 &lt;li&gt;Bitcoin doesn’t corrode or wear out.&lt;/li&gt;
 &lt;li&gt;Bitcoin is impossible to fake.&lt;/li&gt;
-&lt;li&gt;Bitcoin can be stored and transported more easily than gold. - If you can remember 24 words you can transport all your bitcoin effortlessly where ever you go. &lt;/li&gt;
+&lt;li&gt;Bitcoin can be stored and transported more easily than gold. - If you can remember 24 words then you can access your bitcoin for free from any internet connection.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="read-more"&gt;Read more&lt;/h3&gt;
-&lt;p&gt;This &lt;a href="http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/"&gt;article&lt;/a&gt;, published a week after I wrote this post, looks at different factors to consider when evaluating Bitcoin’s value. It goes into a lot of detail, relative to what I’ve seen in other articles. &lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/><category term="bitcoin"/><category term="gold"/><category term="safe haven"/></entry><entry><title>Hardware Wallets</title><link href="https://johnmathews.eu/wallet.html" rel="alternate"/><published>2017-11-08T16:09:00+01:00</published><updated>2017-11-08T16:09:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-08:/wallet.html</id><summary type="html">&lt;p&gt;Current hardware wallets are technically good but are awkward to use. A good solution would solve the following&amp;nbsp;problems:&lt;/p&gt;</summary><content type="html">&lt;h2 id="what-is-a-hardware-wallet"&gt;What is a hardware wallet&lt;/h2&gt;
+&lt;p&gt;This
+&lt;a href="http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/"&gt;article&lt;/a&gt;,
+published a week after I wrote this post, looks at different factors to
+consider when evaluating Bitcoin’s value. It goes into a lot of detail,
+relative to what I’ve seen in other articles.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/><category term="bitcoin"/><category term="gold"/><category term="safe haven"/></entry><entry><title>Hardware Wallets</title><link href="https://johnmathews.eu/wallet.html" rel="alternate"/><published>2017-11-08T16:09:00+01:00</published><updated>2017-11-08T16:09:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-08:/wallet.html</id><summary type="html">&lt;p&gt;Current hardware wallets are technically good but are awkward to use. A good solution would solve the following&amp;nbsp;problems:&lt;/p&gt;</summary><content type="html">&lt;h2 id="what-is-a-hardware-wallet"&gt;What is a hardware wallet&lt;/h2&gt;
 &lt;p&gt;A hardware wallet (&lt;span class="caps"&gt;HW&lt;/span&gt; wallet) is a physical device that stores the information required to access digital currency or assets. It is plugged into a computer via &lt;span class="caps"&gt;USB&lt;/span&gt; in order to initiate or confirm transactions on the Bitcoin, Ethereum or other digital asset blockchain networks.&lt;/p&gt;
 &lt;p&gt;They are a secure method of storing cryptographic data. They are so secure that they can be used on a compromised computer. All that is needed to access funds using a &lt;span class="caps"&gt;HW&lt;/span&gt; wallet (in addition to the device itself) is a &lt;span class="caps"&gt;PIN&lt;/span&gt; code which the user chooses. A single &lt;span class="caps"&gt;HW&lt;/span&gt; wallet can store multiple currencies in multiple accounts.&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;HW&lt;/span&gt; wallets are an easier solution than remembering a good password, and safer than storing the data in a file on my computer or online.&lt;/p&gt;

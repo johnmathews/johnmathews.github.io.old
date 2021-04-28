@@ -15080,6 +15080,27 @@ video {
   padding-bottom: 0.75rem;
 }
 
+@media (min-width: 1024px) {
+  .markdown .simple-footnotes {
+    margin-top: 5rem;
+  }
+}
+
+.markdown .simple-footnotes {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.dark .markdown .simple-footnotes {
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+}
+
+.markdown .simple-footnotes {
+  border-style: double;
+  border-top-width: 4px;
+}
+
 /* codeblocks */
 
 /* jupyter notebook input and output cells - scroll instead of overflow */
@@ -15409,7 +15430,6 @@ video {
 /* headings */
 
 .markdown h1 {
-  border-bottom-width: 1px;
   font-weight: 600;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -15418,20 +15438,29 @@ video {
   margin-top: 1.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  counter-reset: h2
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity))
+}
+
+.dark .markdown h1 {
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+}
+
+.markdown h1 {
+  border-bottom-width: 1px;
+  counter-reset: h2;
 }
 
 .markdown h2 {
-  --tw-border-opacity: 1;
-  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-  border-bottom-width: 1px;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   margin-top: 2.5rem;
   padding-bottom: 0.5rem;
+  text-decoration: underline;
   counter-reset: h3
 }
 
@@ -15440,7 +15469,7 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
   line-height: 1.375;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   counter-reset: h4
 }
@@ -15450,7 +15479,7 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   line-height: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   counter-reset: h5
 }
@@ -15460,7 +15489,7 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   counter-reset: h6
 }
@@ -15470,7 +15499,7 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));

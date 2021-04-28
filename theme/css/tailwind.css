@@ -64,7 +64,8 @@
 
 /* footnotes */
 .markdown .simple-footnotes {
-	@apply mt-10 py-3 text-xl;
+	@apply mt-10 lg:mt-20 py-3 text-xl;
+	@apply border-double border-t-4 border-gray-200 dark:border-gray-500;
 }
 
 /* codeblocks */
@@ -239,32 +240,34 @@
 
 /* headings */
 .markdown h1 {
-  @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pt-2 pb-2;
+  @apply leading-tight text-4xl font-semibold mb-4 mt-6 pt-2 pb-2;
+	@apply border-b border-gray-200 dark:border-gray-500;
 	counter-reset: h2
 }
 
 .markdown h2 {
-  @apply leading-tight border-b border-gray-200 text-2xl font-semibold mb-4 mt-10 pb-2;
+  @apply leading-tight text-2xl font-semibold mb-3 mt-10 pb-2;
+	@apply underline;
 	counter-reset: h3
 }
 
 .markdown h3 {
-  @apply leading-snug text-xl font-semibold mb-4 mt-6;
+  @apply leading-snug text-xl font-semibold mb-3 mt-6;
 	counter-reset: h4
 }
 
 .markdown h4 {
-  @apply leading-none text-lg font-semibold mb-4 mt-6;
+  @apply leading-none text-lg font-semibold mb-3 mt-6;
 	counter-reset: h5
 }
 
 .markdown h5 {
-  @apply leading-tight text-lg font-semibold mb-4 mt-6;
+  @apply leading-tight text-lg font-semibold mb-3 mt-6;
 	counter-reset: h6
 }
 
 .markdown h6 {
-  @apply leading-tight text-lg font-semibold text-gray-600 mb-4 mt-6;
+  @apply leading-tight text-lg font-semibold text-gray-600 mb-3 mt-6;
 }
 
 /* h1:before { */
