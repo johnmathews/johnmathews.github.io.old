@@ -513,7 +513,7 @@ symlinks in my home directory.&lt;/p&gt;
 &lt;p&gt;This had worked really well for several years. It’s a great system for
 maintaining dotfiles on a single machine. But it’s not robust or flexible enough
 for managing multiple machines or multiple operating systems.&lt;/p&gt;
-&lt;p&gt;Also, it’s not just files that sit in &lt;code&gt;$home&lt;/code&gt; anymore, I need to track
+&lt;p&gt;Also, it’s not just files that sit in &lt;em&gt;$home&lt;/em&gt; anymore, I need to track
 configuration files that live in other places too&lt;sup id="sf-chezmoi-1-back"&gt;&lt;a class="simple-footnote" href="#sf-chezmoi-1" title="For example, every file in $HOME/.vim/ftplugin/ should be version controlled."&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;I needed something more robust and flexible than generating symlinks from a
 bash script.&lt;/p&gt;
@@ -543,26 +543,50 @@ doing that - you could write the current directory to an environment variable.
 It seems unnecessarily complex.&lt;/p&gt;
 &lt;h1 id="command-reference"&gt;Command Reference&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;Type &lt;code&gt;cm&lt;/code&gt; instead of &lt;code&gt;chezmoi&lt;/code&gt;: &lt;code&gt;alias cm="chezmoi"&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Show which files have changed: &lt;code&gt;cm status&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start tracking a file: &lt;code&gt;cm add &lt;dir file=""&gt;&lt;/dir&gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Update a file, add the file again: &lt;code&gt;cm add ..&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Edit tracked version of file: &lt;code&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/code&gt; - don’t think I’m going to
+&lt;li&gt;
+&lt;p&gt;Type &lt;code&gt;cm&lt;/code&gt; instead of &lt;code&gt;chezmoi&lt;/code&gt;:&lt;code&gt;alias cm="chezmoi"&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Show which files have changed: &lt;code&gt;cm status&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start tracking a file: &lt;code&gt;cm add &lt;dir file=""&gt;&lt;/dir&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update a file, add the file again: &lt;code&gt;cm add ..&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit tracked version of file: &lt;code&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/code&gt; - don’t think I’m going to
     use this, I’d rather edit the source file, test it, and then update using
-    &lt;code&gt;cm add ..&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Differences between local version and tracked versions: &lt;code&gt;cm diff &lt;file&gt;&lt;/file&gt;&lt;/code&gt; -
+    &lt;code&gt;cm add ..&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Differences between local version tracked versions: &lt;code&gt;cm diff &lt;file&gt;&lt;/file&gt;&lt;/code&gt; -
     this tells me which files I need to &lt;code&gt;cm add&lt;/code&gt; again. This feels clunky and I
-    suspect there is a better workflow. Parsing git style diff files is horrible.&lt;/li&gt;
-&lt;li&gt;Clobber local version with the tracked version: &lt;code&gt;cm apply&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Dry run and see diff between local version and tracked version: &lt;code&gt;cm -nv apply&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Pull the latest changes from your repo and apply them: &lt;code&gt;cm update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Remove a file:&lt;ul&gt;
+    suspect there is a better workflow. Parsing git style diff files is horrible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clobber local version with the tracked version: &lt;code&gt;cm apply&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dry run and see diff between local version and tracked version: &lt;code&gt;cm -nv apply&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pull the latest changes from your repo and apply them: &lt;code&gt;cm update&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove a file:&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;Create &lt;code&gt;.chezmoiremove&lt;/code&gt; in the source directory&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;chezmoi apply --remove --dry-run --verbose&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;List of managed files: &lt;code&gt;cm managed&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;List of unmanaged files: &lt;code&gt;cm unmanaged&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List of managed files: &lt;code&gt;cm managed&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List of unmanaged files: &lt;code&gt;cm unmanaged&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id="links"&gt;Links&lt;/h1&gt;
 &lt;ul&gt;

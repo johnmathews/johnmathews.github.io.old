@@ -47,7 +47,7 @@ function chooseTechnical(){
   $('#sideBarChooseBoth').text("All")
 
   $('#catModal').addClass('hidden');
-};
+}
 
 function chooseNonTechnical() {
   window.selectedListItem = -1

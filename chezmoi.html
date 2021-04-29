@@ -268,7 +268,7 @@ symlinks in my home directory.</p>
 <p>This had worked really well for several years. It’s a great system for
 maintaining dotfiles on a single machine. But it’s not robust or flexible enough
 for managing multiple machines or multiple operating systems.</p>
-<p>Also, it’s not just files that sit in <code>$home</code> anymore, I need to track
+<p>Also, it’s not just files that sit in <em>$home</em> anymore, I need to track
 configuration files that live in other places too<sup id="sf-chezmoi-1-back"><a class="simple-footnote" href="#sf-chezmoi-1" title="For example, every file in $HOME/.vim/ftplugin/ should be version controlled.">1</a></sup>.</p>
 <p>I needed something more robust and flexible than generating symlinks from a
 bash script.</p>
@@ -298,26 +298,50 @@ doing that - you could write the current directory to an environment variable.
 It seems unnecessarily complex.</p>
 <h1 id="command-reference">Command Reference</h1>
 <ol>
-<li>Type <code>cm</code> instead of <code>chezmoi</code>: <code>alias cm="chezmoi"</code></li>
-<li>Show which files have changed: <code>cm status</code></li>
-<li>Start tracking a file: <code>cm add &lt;dir/file&gt;</code></li>
-<li>Update a file, add the file again: <code>cm add ..</code></li>
-<li>Edit tracked version of file: <code>cm edit &lt;file&gt;</code> - don’t think I’m going to
+<li>
+<p>Type <code>cm</code> instead of <code>chezmoi</code>:<code>alias cm="chezmoi"</code></p>
+</li>
+<li>
+<p>Show which files have changed: <code>cm status</code></p>
+</li>
+<li>
+<p>Start tracking a file: <code>cm add &lt;dir/file&gt;</code></p>
+</li>
+<li>
+<p>Update a file, add the file again: <code>cm add ..</code></p>
+</li>
+<li>
+<p>Edit tracked version of file: <code>cm edit &lt;file&gt;</code> - don’t think I’m going to
     use this, I’d rather edit the source file, test it, and then update using
-    <code>cm add ..</code></li>
-<li>Differences between local version and tracked versions: <code>cm diff &lt;file&gt;</code> -
+    <code>cm add ..</code></p>
+</li>
+<li>
+<p>Differences between local version tracked versions: <code>cm diff &lt;file&gt;</code> -
     this tells me which files I need to <code>cm add</code> again. This feels clunky and I
-    suspect there is a better workflow. Parsing git style diff files is horrible.</li>
-<li>Clobber local version with the tracked version: <code>cm apply</code></li>
-<li>Dry run and see diff between local version and tracked version: <code>cm -nv apply</code></li>
-<li>Pull the latest changes from your repo and apply them: <code>cm update</code></li>
-<li>Remove a file:<ul>
+    suspect there is a better workflow. Parsing git style diff files is horrible.</p>
+</li>
+<li>
+<p>Clobber local version with the tracked version: <code>cm apply</code></p>
+</li>
+<li>
+<p>Dry run and see diff between local version and tracked version: <code>cm -nv apply</code></p>
+</li>
+<li>
+<p>Pull the latest changes from your repo and apply them: <code>cm update</code></p>
+</li>
+<li>
+<p>Remove a file:</p>
+<ul>
 <li>Create <code>.chezmoiremove</code> in the source directory</li>
 <li><code>chezmoi apply --remove --dry-run --verbose</code></li>
 </ul>
 </li>
-<li>List of managed files: <code>cm managed</code></li>
-<li>List of unmanaged files: <code>cm unmanaged</code></li>
+<li>
+<p>List of managed files: <code>cm managed</code></p>
+</li>
+<li>
+<p>List of unmanaged files: <code>cm unmanaged</code></p>
+</li>
 </ol>
 <h1 id="links">Links</h1>
 <ul>
