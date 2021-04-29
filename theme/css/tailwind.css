@@ -254,49 +254,24 @@
 }
 
 .markdown h2 {
-  @apply leading-tight text-2xl font-semibold mb-3 mt-10 pb-2;
-	counter-reset: h3
+  @apply leading-tight text-2xl font-semibold mb-2 mt-10 pb-1;
 }
 
 .markdown h3 {
   @apply leading-snug text-xl font-semibold mb-3 mt-6;
-	counter-reset: h4
 }
 
 .markdown h4 {
   @apply leading-none text-lg font-semibold mb-3 mt-6;
-	counter-reset: h5
 }
 
 .markdown h5 {
   @apply leading-tight text-lg font-semibold mb-3 mt-6;
-	counter-reset: h6
 }
 
 .markdown h6 {
   @apply leading-tight text-lg font-semibold text-gray-600 mb-3 mt-6;
 }
-
-/* h1:before { */
-/*     counter-increment: h1; */
-/*     content: counter(h1) ". " */
-/* } */
-
-/* h2:before { */
-/*     counter-increment: h2; */
-/*     content: counter(h1) "." counter(h2) ". " */
-/* } */
-
-/* h3:before { */
-/*     counter-increment: h3; */
-/*     content: counter(h1) "." counter(h2) "." counter(h3) ". " */
-/* } */
-
-/* h4:before { */
-/*     counter-increment: h4; */
-/*     content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". " */
-/* } */
-
 
 .markdown kbd {
   @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
