@@ -183,48 +183,48 @@ It seems unnecessarily complex.&lt;/p&gt;
 &lt;h1 id="command-reference"&gt;Command Reference&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Type &lt;code&gt;cm&lt;/code&gt; instead of &lt;code&gt;chezmoi&lt;/code&gt;:&lt;code&gt;alias cm="chezmoi"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Type &lt;strong&gt;cm&lt;/strong&gt; instead of &lt;strong&gt;chezmoi&lt;/strong&gt; → &lt;strong&gt;alias cm=”chezmoi”&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Show which files have changed: &lt;code&gt;cm status&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Show which files have changed → &lt;strong&gt;cm status&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Start tracking a file: &lt;code&gt;cm add &lt;dir file=""&gt;&lt;/dir&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Start tracking a file → &lt;strong&gt;cm add &lt;/strong&gt;&lt;/p&gt;&lt;dir file=""&gt;&lt;p&gt;&lt;/p&gt;
+&lt;/dir&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update a file, add the file again → &lt;strong&gt;cm add ..&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Update a file, add the file again: &lt;code&gt;cm add ..&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Edit tracked version of file: &lt;code&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/code&gt; - don’t think I’m going to
+&lt;p&gt;Edit tracked version of file → &lt;strong&gt;cm edit &lt;file&gt;&lt;/file&gt;&lt;/strong&gt; - don’t think I’m going to
     use this, I’d rather edit the source file, test it, and then update using
-    &lt;code&gt;cm add ..&lt;/code&gt;&lt;/p&gt;
+    &lt;strong&gt;cm add ..&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Differences between local version tracked versions: &lt;code&gt;cm diff &lt;file&gt;&lt;/file&gt;&lt;/code&gt; -
-    this tells me which files I need to &lt;code&gt;cm add&lt;/code&gt; again. This feels clunky and I
+&lt;p&gt;Differences between local version tracked versions → &lt;strong&gt;cm diff &lt;file&gt;&lt;/file&gt;&lt;/strong&gt; -
+    this tells me which files I need to &lt;strong&gt;cm add&lt;/strong&gt; again. This feels clunky and I
     suspect there is a better workflow. Parsing git style diff files is horrible.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Clobber local version with the tracked version: &lt;code&gt;cm apply&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Clobber local version with the tracked version → &lt;strong&gt;cm apply&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Dry run and see diff between local version and tracked version: &lt;code&gt;cm -nv apply&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Dry run and see diff between local version and tracked version → &lt;strong&gt;cm -nv apply&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Pull the latest changes from your repo and apply them: &lt;code&gt;cm update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pull the latest changes from your repo and apply them → &lt;strong&gt;cm update&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Remove a file:&lt;/p&gt;
+&lt;p&gt;Remove a file →&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Create &lt;code&gt;.chezmoiremove&lt;/code&gt; in the source directory&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;chezmoi apply --remove --dry-run --verbose&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create &lt;strong&gt;.chezmoiremove&lt;/strong&gt; in the source directory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;chezmoi apply –remove –dry-run –verbose&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;List of managed files: &lt;code&gt;cm managed&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;List of managed files → &lt;strong&gt;cm managed&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;List of unmanaged files: &lt;code&gt;cm unmanaged&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;List of unmanaged files → &lt;strong&gt;cm unmanaged&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id="links"&gt;Links&lt;/h1&gt;

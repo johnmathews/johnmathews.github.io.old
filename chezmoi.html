@@ -299,48 +299,48 @@ It seems unnecessarily complex.</p>
 <h1 id="command-reference">Command Reference</h1>
 <ol>
 <li>
-<p>Type <code>cm</code> instead of <code>chezmoi</code>:<code>alias cm="chezmoi"</code></p>
+<p>Type <strong>cm</strong> instead of <strong>chezmoi</strong> → <strong>alias cm=”chezmoi”</strong></p>
 </li>
 <li>
-<p>Show which files have changed: <code>cm status</code></p>
+<p>Show which files have changed → <strong>cm status</strong></p>
 </li>
 <li>
-<p>Start tracking a file: <code>cm add &lt;dir/file&gt;</code></p>
+<p>Start tracking a file → <strong>cm add </strong></p><dir file=""><p></p>
+</dir></li>
+<li>
+<p>Update a file, add the file again → <strong>cm add ..</strong></p>
 </li>
 <li>
-<p>Update a file, add the file again: <code>cm add ..</code></p>
-</li>
-<li>
-<p>Edit tracked version of file: <code>cm edit &lt;file&gt;</code> - don’t think I’m going to
+<p>Edit tracked version of file → <strong>cm edit <file></file></strong> - don’t think I’m going to
     use this, I’d rather edit the source file, test it, and then update using
-    <code>cm add ..</code></p>
+    <strong>cm add ..</strong></p>
 </li>
 <li>
-<p>Differences between local version tracked versions: <code>cm diff &lt;file&gt;</code> -
-    this tells me which files I need to <code>cm add</code> again. This feels clunky and I
+<p>Differences between local version tracked versions → <strong>cm diff <file></file></strong> -
+    this tells me which files I need to <strong>cm add</strong> again. This feels clunky and I
     suspect there is a better workflow. Parsing git style diff files is horrible.</p>
 </li>
 <li>
-<p>Clobber local version with the tracked version: <code>cm apply</code></p>
+<p>Clobber local version with the tracked version → <strong>cm apply</strong></p>
 </li>
 <li>
-<p>Dry run and see diff between local version and tracked version: <code>cm -nv apply</code></p>
+<p>Dry run and see diff between local version and tracked version → <strong>cm -nv apply</strong></p>
 </li>
 <li>
-<p>Pull the latest changes from your repo and apply them: <code>cm update</code></p>
+<p>Pull the latest changes from your repo and apply them → <strong>cm update</strong></p>
 </li>
 <li>
-<p>Remove a file:</p>
+<p>Remove a file →</p>
 <ul>
-<li>Create <code>.chezmoiremove</code> in the source directory</li>
-<li><code>chezmoi apply --remove --dry-run --verbose</code></li>
+<li>Create <strong>.chezmoiremove</strong> in the source directory</li>
+<li><strong>chezmoi apply –remove –dry-run –verbose</strong></li>
 </ul>
 </li>
 <li>
-<p>List of managed files: <code>cm managed</code></p>
+<p>List of managed files → <strong>cm managed</strong></p>
 </li>
 <li>
-<p>List of unmanaged files: <code>cm unmanaged</code></p>
+<p>List of unmanaged files → <strong>cm unmanaged</strong></p>
 </li>
 </ol>
 <h1 id="links">Links</h1>
