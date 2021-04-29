@@ -203,8 +203,16 @@
   @apply mt-7 mb-0;
 }
 
+.markdown h2 + p {
+  @apply mt-2 mb-0;
+}
+
 .markdown p img {
   @apply mx-auto my-3 border-solid border-2 rounded-sm border-gray-500;
+}
+
+.markdown p a img:first-child {
+  @apply -mt-0;
 }
 
 .markdown p img:first-child {
@@ -247,7 +255,6 @@
 
 .markdown h2 {
   @apply leading-tight text-2xl font-semibold mb-3 mt-10 pb-2;
-	@apply underline;
 	counter-reset: h3
 }
 

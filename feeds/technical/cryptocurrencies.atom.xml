@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-27T17:46:58+02:00</updated><entry><title>When Bitcoin Top?</title><link href="https://johnmathews.eu/when-bitcoin-top.html" rel="alternate"/><published>2021-04-27T17:46:58+02:00</published><updated>2021-04-27T17:46:58+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-27:/when-bitcoin-top.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;TLDR&lt;/span&gt;: mid-September, $300,000&lt;/strong&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Cryptocurrencies</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/cryptocurrencies.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-27T17:46:58+02:00</updated><entry><title>Where and when will the current Bitcoin market peak?</title><link href="https://johnmathews.eu/when-bitcoin-top.html" rel="alternate"/><published>2021-04-27T17:46:58+02:00</published><updated>2021-04-27T17:46:58+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-27:/when-bitcoin-top.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;TLDR&lt;/span&gt;: mid-September, $300,000&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#hopefully-helpful-links"&gt;Hopefully helpful links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#analysts"&gt;Analysts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#key-metrics-and-terms"&gt;Key metrics and terms&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#mvrv"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#realised-cap"&gt;Realised Cap&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#utxo"&gt;&lt;span class="caps"&gt;UTXO&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#sopr"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#asopr"&gt;aSOPR&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#urpd"&gt;&lt;span class="caps"&gt;URPD&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#rsi"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#miner-net-position"&gt;Miner Net Position&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#stock-to-flow"&gt;Stock-to-Flow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;&lt;a href="#threshold-values"&gt;Threshold Values&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#mvrv"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sopr"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#hodl-waves"&gt;&lt;span class="caps"&gt;HODL&lt;/span&gt; Waves&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rsi"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#charts"&gt;Charts&lt;/a&gt;&lt;ul&gt;
@@ -33,6 +21,18 @@
 &lt;li&gt;&lt;a href="#3-month-coin-days-destroyed"&gt;3 month coin days destroyed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#double-top"&gt;Double top&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#similarities-to-previous-bull-runs"&gt;Similarities to previous bull runs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#key-metrics-and-terms"&gt;Key metrics and terms&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#realised-cap"&gt;Realised Cap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#utxo"&gt;&lt;span class="caps"&gt;UTXO&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#asopr"&gt;aSOPR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#urpd"&gt;&lt;span class="caps"&gt;URPD&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#miner-net-position"&gt;Miner Net Position&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#stock-to-flow"&gt;Stock-to-Flow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#summary"&gt;Summary&lt;/a&gt;&lt;/li&gt;
@@ -84,8 +84,55 @@ Some more general articles on this site are:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;The level of hype on Twitter and YouTube becomes silly when “experts” start
 appearing from nowhere. Track record and consistency is essential.&lt;/p&gt;
-&lt;h1 id="key-metrics-and-terms"&gt;Key metrics and terms&lt;/h1&gt;
+&lt;h1 id="threshold-values"&gt;Threshold Values&lt;/h1&gt;
 &lt;h2 id="mvrv"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 3 → Local top&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 4 → Macro top&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; has historically been one of the best on-chain predictors of market tops and bottoms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="sopr"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use 7 day average&lt;/li&gt;
+&lt;li&gt;1.04 → Sell&lt;/li&gt;
+&lt;li&gt;0.97 → Buy&lt;/li&gt;
+&lt;li&gt;Noisy - defer to other metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="hodl-waves"&gt;&lt;span class="caps"&gt;HODL&lt;/span&gt; Waves&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;gt;45% of supply has been moved in the last 180 days → Sell&lt;/li&gt;
+&lt;li&gt;&amp;gt;70% of supply has been held over 180 days → Buy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="rsi"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;14 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 95 → Sell&lt;/li&gt;
+&lt;li&gt;12 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 90 → Sell&lt;/li&gt;
+&lt;li&gt;Noisy - defer to other metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="charts"&gt;Charts&lt;/h1&gt;
+&lt;h2 id="stock-to-flow-model"&gt;Stock to Flow Model&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/bitcoin-stock-to-flow-model.png"&gt;&lt;img alt="bitcoin stock to flow model" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-stock-to-flow-model.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bitcoin-stock-to-flow-model.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bitcoin-stock-to-flow-model.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-stock-to-flow-model.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bitcoin-stock-to-flow-model.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="rainbow-model"&gt;Rainbow Model&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/bitcoin-when-to-sell.jpg"&gt;&lt;img alt="bitcoin rainbow price bands" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-when-to-sell.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bitcoin-when-to-sell.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bitcoin-when-to-sell.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-when-to-sell.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bitcoin-when-to-sell.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="lowest-price-forward-model"&gt;Lowest price forward model&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/btc_minimum_price_forecast.jpg"&gt;&lt;img alt="bitcoin lowest price forward" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btc_minimum_price_forecast.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/btc_minimum_price_forecast.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/btc_minimum_price_forecast.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btc_minimum_price_forecast.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/btc_minimum_price_forecast.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="bitcoin-price-history"&gt;Bitcoin price history&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/btcPriceHistoryLog.png"&gt;&lt;img alt="bitcoin price history" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btcPriceHistoryLog.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/btcPriceHistoryLog.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/btcPriceHistoryLog.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btcPriceHistoryLog.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/btcPriceHistoryLog.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="3-month-coin-days-destroyed"&gt;3 month coin days destroyed&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/3monthCoindaysDestroyed.png"&gt;&lt;img alt="bitcoin 3 month coin days destroyed" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/3monthCoindaysDestroyed.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/3monthCoindaysDestroyed.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/3monthCoindaysDestroyed.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/3monthCoindaysDestroyed.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/3monthCoindaysDestroyed.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="double-top"&gt;Double top&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/woobull_double_top_first_top_now.jpg"&gt;&lt;img alt="bitcoin historical double tops" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/woobull_double_top_first_top_now.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/woobull_double_top_first_top_now.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/woobull_double_top_first_top_now.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/woobull_double_top_first_top_now.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/woobull_double_top_first_top_now.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="similarities-to-previous-bull-runs"&gt;Similarities to previous bull runs&lt;/h2&gt;
+&lt;p&gt;Version 1:
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/bull_run_comparison.jpg"&gt;&lt;img alt="bitcoin price comparison of historical bullruns" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bull_run_comparison.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bull_run_comparison.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bull_run_comparison.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Version 2:
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/bull_run_comparison2.jpeg"&gt;&lt;img alt="bitcoin price comparison of historical bullruns" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison2.jpeg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bull_run_comparison2.jpeg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bull_run_comparison2.jpeg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison2.jpeg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bull_run_comparison2.jpeg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Halving model:
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/halving_model.jpg"&gt;&lt;img alt="bitcoin historical price oriented around historical halving" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/halving_model.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/halving_model.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/halving_model.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/halving_model.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/halving_model.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;12 Month &lt;span class="caps"&gt;RSI&lt;/span&gt; comparison
+&lt;a href="https://johnmathews.eu/images/btc_price_charts/rsi_comparison.jpg"&gt;&lt;img alt="bitocin historical RSI" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/rsi_comparison.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/rsi_comparison.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/rsi_comparison.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/rsi_comparison.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/rsi_comparison.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="key-metrics-and-terms"&gt;Key metrics and terms&lt;/h1&gt;
+&lt;h2 id="mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;The ratio of Market Value to Realised Value is calculated by dividing Bitcoin’s
 market cap by its realised cap.&lt;/p&gt;
 &lt;h2 id="realised-cap"&gt;Realised Cap&lt;/h2&gt;
@@ -94,7 +141,7 @@ market cap by its realised cap.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Unspent Transaction Outputs&lt;/em&gt;. These are kind of like unspent coins. If you have
 1.5 &lt;span class="caps"&gt;BTC&lt;/span&gt; then you might have bought 2 and sold 0.5. The total value of UTXOs in
 your wallet will be 1.5.&lt;/p&gt;
-&lt;h2 id="sopr"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id="sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;The &lt;em&gt;Spent Output Profit Ratio&lt;/em&gt; is a measure of the average profit or loss on a
 coin. Is a coin is moved when the price is higher than when it was received the
 &lt;span class="caps"&gt;SOPR&lt;/span&gt; increases, if a coin is moved when the price is lower than when the coin
@@ -126,7 +173,7 @@ for Bitcoin is expanding so rapidly and the price is so volatile, the attitudes
 and expectations of market participants is also much more malleable than in
 traditional finance. For example, what was considered a very high price 12
 months ago would be considered a disaster today.&lt;/p&gt;
-&lt;h2 id="rsi"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id="rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;The &lt;em&gt;Relative Strength Index&lt;/em&gt; is borrowed directly from traditional finance.
 You can calculate it over different time periods.&lt;/p&gt;
 &lt;h2 id="miner-net-position"&gt;Miner Net Position&lt;/h2&gt;
@@ -142,53 +189,6 @@ to meet existing demand.&lt;/p&gt;
 &lt;p&gt;Gold has a stock to flow ratio of 66, which means it would take 66 years at
 the current rate of production to produce the amount of gold currently in
 circulation. Silver has a &lt;span class="caps"&gt;S2F&lt;/span&gt; ratio of 74. &lt;span class="caps"&gt;BTC&lt;/span&gt; has a &lt;span class="caps"&gt;S2F&lt;/span&gt; of about 50.&lt;/p&gt;
-&lt;h1 id="threshold-values"&gt;Threshold Values&lt;/h1&gt;
-&lt;h2 id="mvrv_1"&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 3 → Local top&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; &amp;gt; 4 → Macro top&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;MVRV&lt;/span&gt; has historically been one of the best on-chain predictors of market tops and bottoms.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="sopr_1"&gt;&lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;7 day average &lt;span class="caps"&gt;SOPR&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.04 → Sell&lt;/li&gt;
-&lt;li&gt;0.97 → Buy&lt;/li&gt;
-&lt;li&gt;Noisy - defer to other metrics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="hodl-waves"&gt;&lt;span class="caps"&gt;HODL&lt;/span&gt; Waves&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;gt;45% of supply has been moved in the last 180 days → Sell&lt;/li&gt;
-&lt;li&gt;&amp;gt;70% of supply has been held over 180 days → Buy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="rsi_1"&gt;&lt;span class="caps"&gt;RSI&lt;/span&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;14 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 95 → Sell&lt;/li&gt;
-&lt;li&gt;12 month &lt;span class="caps"&gt;RSI&lt;/span&gt; &amp;gt; 90 → Sell&lt;/li&gt;
-&lt;li&gt;Noisy - defer to other metrics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="charts"&gt;Charts&lt;/h1&gt;
-&lt;h2 id="stock-to-flow-model"&gt;Stock to Flow Model&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/bitcoin-stock-to-flow-model.png"&gt;&lt;img alt="bitcoin stock to flow model" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-stock-to-flow-model.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bitcoin-stock-to-flow-model.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bitcoin-stock-to-flow-model.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-stock-to-flow-model.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bitcoin-stock-to-flow-model.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="rainbow-model"&gt;Rainbow Model&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/bitcoin-when-to-sell.jpg"&gt;&lt;img alt="bitcoin rainbow price bands" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-when-to-sell.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bitcoin-when-to-sell.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bitcoin-when-to-sell.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bitcoin-when-to-sell.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bitcoin-when-to-sell.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="lowest-price-forward-model"&gt;Lowest price forward model&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/btc_minimum_price_forecast.jpg"&gt;&lt;img alt="bitcoin lowest price forward" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btc_minimum_price_forecast.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/btc_minimum_price_forecast.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/btc_minimum_price_forecast.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btc_minimum_price_forecast.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/btc_minimum_price_forecast.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="bitcoin-price-history"&gt;Bitcoin price history&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/btcPriceHistoryLog.png"&gt;&lt;img alt="bitcoin price history" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btcPriceHistoryLog.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/btcPriceHistoryLog.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/btcPriceHistoryLog.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/btcPriceHistoryLog.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/btcPriceHistoryLog.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="3-month-coin-days-destroyed"&gt;3 month coin days destroyed&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/3monthCoindaysDestroyed.png"&gt;&lt;img alt="bitcoin 3 month coin days destroyed" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/3monthCoindaysDestroyed.png" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/3monthCoindaysDestroyed.png 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/3monthCoindaysDestroyed.png 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/3monthCoindaysDestroyed.png 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/3monthCoindaysDestroyed.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="double-top"&gt;Double top&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/images/btc_price_charts/woobull_double_top_first_top_now.jpg"&gt;&lt;img alt="bitcoin historical double tops" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/woobull_double_top_first_top_now.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/woobull_double_top_first_top_now.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/woobull_double_top_first_top_now.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/woobull_double_top_first_top_now.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/woobull_double_top_first_top_now.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="similarities-to-previous-bull-runs"&gt;Similarities to previous bull runs&lt;/h2&gt;
-&lt;p&gt;Version 1:
-&lt;a href="https://johnmathews.eu/images/btc_price_charts/bull_run_comparison.jpg"&gt;&lt;img alt="bitcoin price comparison of historical bullruns" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bull_run_comparison.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bull_run_comparison.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bull_run_comparison.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Version 2:
-&lt;a href="https://johnmathews.eu/images/btc_price_charts/bull_run_comparison2.jpeg"&gt;&lt;img alt="bitcoin price comparison of historical bullruns" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison2.jpeg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/bull_run_comparison2.jpeg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/bull_run_comparison2.jpeg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/bull_run_comparison2.jpeg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/bull_run_comparison2.jpeg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Halving model:
-&lt;a href="https://johnmathews.eu/images/btc_price_charts/halving_model.jpg"&gt;&lt;img alt="bitcoin historical price oriented around historical halving" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/halving_model.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/halving_model.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/halving_model.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/halving_model.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/halving_model.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;12 Month &lt;span class="caps"&gt;RSI&lt;/span&gt; comparison
-&lt;a href="https://johnmathews.eu/images/btc_price_charts/rsi_comparison.jpg"&gt;&lt;img alt="bitocin historical RSI" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/rsi_comparison.jpg" srcset="https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/300w/rsi_comparison.jpg 300w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/600w/rsi_comparison.jpg 600w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/800w/rsi_comparison.jpg 800w, https://johnmathews.eu/images/btc_price_charts/derivatives/article-inline-image/1600w/rsi_comparison.jpg 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;S2F&lt;/span&gt; model suggests a peak around the beginning of 2021Q4, in the region of &lt;strong&gt;$300,000&lt;/strong&gt;.&lt;/li&gt;
