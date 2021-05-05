@@ -1407,7 +1407,7 @@ video {
 }
 
 .markdown code {
-  white-space: nowrap;
+  /* white-space: normal; */
 }
 
 /* .markdown pre code { */
@@ -3488,7 +3488,7 @@ video {
     width: 66.666667%;
   }
 
-  .\32xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .\32xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

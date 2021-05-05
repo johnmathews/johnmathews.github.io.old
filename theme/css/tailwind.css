@@ -127,7 +127,7 @@
 
 .markdown code {
   @apply font-mono text-lg p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
-	white-space: nowrap;
+	/* white-space: normal; */
 }
 
 /* .markdown pre code { */
