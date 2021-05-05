@@ -424,7 +424,57 @@ explains why.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ansible-config view|list|dump&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ansible-inventory -i inventory.compute.gcp.yml --graph&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ansible -i inventory.compute.gcp.yml all -m ping&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>Vim: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"/><published>2021-03-31T15:57:00+02:00</published><updated>2021-03-31T15:57:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-31:/vim-notes-goto-tag-definition.html</id><summary type="html"/><content type="html">&lt;h2 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h2&gt;
+&lt;p&gt;Just use neovim.coc instead of YouCompleteMe or Syntastic.&lt;/p&gt;
+&lt;p&gt;It’s faster, easier to setup, and works intuitively. &lt;span class="caps"&gt;ALE&lt;/span&gt; is still wonderful and
+useful, though there’s a lot of overlap - coc can lint as well.&lt;/p&gt;
+&lt;h2 id="jump-lists-and-change-lists"&gt;Jump Lists and Change Lists&lt;/h2&gt;
+&lt;p&gt;If you’re going to be jumping around to where things are defined, you will need
+to know how to jump back again. It seems there are two lists you need to be
+aware of, the &lt;em&gt;jump list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-1-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title=":help jumplist"&gt;1&lt;/a&gt;&lt;/sup&gt; and the &lt;em&gt;change
+list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title=":help changelist"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3 id="jump-list"&gt;Jump List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A list of locations that the cursor has jumped to.&lt;/li&gt;
+&lt;li&gt;Relevant to jumping to a definition.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-o&gt;&lt;/c-o&gt;&lt;/code&gt; move up the jump list&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-i&gt;&lt;/c-i&gt;&lt;/code&gt; mode down the jump list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="change-list"&gt;Change List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A list of locations where a change was made.&lt;/li&gt;
+&lt;li&gt;A change is something that can be undone using &lt;code&gt;u&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'.&lt;/code&gt; will move you to the &lt;code&gt;.&lt;/code&gt; mark.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; is a special mark that is automatically set at the location of your last edit.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;''&lt;/code&gt; will bring you back to where you were before your last jump&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt;  will also move you up and down the &lt;code&gt;change list&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="mt-10 -mb-5 border-double border-t-4 border-gray-500 dark:border-gray-200"/&gt;
+&lt;h2 id="original-post"&gt;Original Post:&lt;/h2&gt;
+&lt;p&gt;There are multiple ways of doing anything with vim, including going to where a
+function or object is defined, and I usually need to do something at least 3 times
+before I can do it without breaking my focus or train of thought.&lt;/p&gt;
+&lt;p&gt;My memory is hazy but I remember spending a 1/2 day looking into this and
+considering which solution I wanted to commit to.&lt;sup id="sf-vim-notes-goto-tag-definition-3-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-3" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do."&gt;3&lt;/a&gt;&lt;/sup&gt; My options seemed to be between
+&lt;a href="https://github.com/ycm-core/YouCompleteMe"&gt;YouCompleteMe&lt;/a&gt; and
+&lt;a href="https://github.com/dense-analysis/ale"&gt;&lt;span class="caps"&gt;ALE&lt;/span&gt;&lt;/a&gt;. [Update!&lt;sup id="sf-vim-notes-goto-tag-definition-4-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-4" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim"&gt;4&lt;/a&gt;&lt;/sup&gt;]&lt;/p&gt;
+&lt;p&gt;I can’t remember everything I read and tried, but I trust my conclusions.
+Looking in my &lt;code&gt;.vimrc&lt;/code&gt; I see that I have &lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; mapped to &lt;code&gt;:YcmCompleter
+GoTo&lt;/code&gt; and it works just fine, even when a module is imported from somewhere
+outside the current project. The tool was working and ready to use, I just
+hadn’t internalized it yet.&lt;/p&gt;
+&lt;h2 id="commands-to-remember"&gt;Commands to remember:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; - GoTo definition - YCMs best guess at an ‘intelligent’ goto
+command, whether its a declaration or a definition.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;f2&gt;&lt;/f2&gt;&lt;/code&gt; - Toggle tagbar&lt;/li&gt;
+&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-vim-notes-goto-tag-definition-1"&gt;&lt;code&gt;:help jumplist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-2"&gt;&lt;code&gt;:help changelist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-3"&gt;The more powerful the
+tool, the more worthwhile it is to take a closer look at what it can and can’t
+do. &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-4"&gt;&lt;span class="caps"&gt;YCM&lt;/span&gt; and
+&lt;span class="caps"&gt;ALE&lt;/span&gt; work fine for goto definition and linting, but they don’t give me
+satisfactory autocompletion. &lt;code&gt;neoclide/coc.nvim&lt;/code&gt; looks like it might offer some
+improvements.
+&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;neoclide/coc.nvim&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
 &lt;p&gt;In Python, every time you call a function or method such as &lt;code&gt;my_function()&lt;/code&gt; or
 &lt;code&gt;my_class.my_method()&lt;/code&gt; the interpreter will replace the &lt;code&gt;(&lt;/code&gt; with
 &lt;code&gt;.__call__(&lt;/code&gt;&lt;/p&gt;
@@ -855,60 +905,7 @@ lots of sample code.&lt;/p&gt;
 the authoritative document for that feature and how to use it.&lt;/p&gt;
 &lt;p&gt;PEPs tend to be written by the best programmers in the world, so hang out with them.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-python-notes-1"&gt;
 &lt;a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction"&gt;Abstraction&lt;/a&gt; as a
-principal of &lt;span class="caps"&gt;OOP&lt;/span&gt; &lt;a class="simple-footnote-back" href="#sf-python-notes-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Vim: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"/><published>2021-01-20T15:57:00+01:00</published><updated>2021-01-20T15:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/vim-notes-goto-tag-definition.html</id><summary type="html"/><content type="html">&lt;h2 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h2&gt;
-&lt;p&gt;Just use neovim.coc instead of YouCompleteMe or Syntastic.&lt;/p&gt;
-&lt;p&gt;It’s faster, easier to setup, and works intuitively. &lt;span class="caps"&gt;ALE&lt;/span&gt; is still wonderful and
-useful, though there’s a lot of overlap - coc can lint as well.&lt;/p&gt;
-&lt;h2 id="jump-lists-and-change-lists"&gt;Jump Lists and Change Lists&lt;/h2&gt;
-&lt;p&gt;If you’re going to be jumping around to where things are defined, you will need
-to know how to jump back again. It seems there are two lists you need to be
-aware of, the &lt;em&gt;jump list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-1-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title=":help jumplist"&gt;1&lt;/a&gt;&lt;/sup&gt; and the &lt;em&gt;change
-list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title=":help changelist"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h3 id="jump-list"&gt;Jump List&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A list of locations that the cursor has jumped to.&lt;/li&gt;
-&lt;li&gt;Relevant to jumping to a definition.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&lt;c-o&gt;&lt;/c-o&gt;&lt;/code&gt; move up the jump list&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&lt;c-i&gt;&lt;/c-i&gt;&lt;/code&gt; mode down the jump list&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="change-list"&gt;Change List&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A list of locations where a change was made.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A change is something that can be undone using &lt;code&gt;u&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;'.&lt;/code&gt; will move you to the &lt;code&gt;.&lt;/code&gt; mark.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; is a special mark that is automatically set at the location of your last edit.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;''&lt;/code&gt; will bring you back to where you were before your last jump&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt;  will also move you up and down the &lt;code&gt;change list&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="original-post"&gt;Original Post:&lt;/h2&gt;
-&lt;p&gt;There are multiple ways of doing anything with vim, including going to where a
-function or object is defined, and I usually need to do something at least 3 times
-before I can do it without breaking my focus or train of thought.&lt;/p&gt;
-&lt;p&gt;My memory is hazy but I remember spending a 1/2 day looking into this and
-considering which solution I wanted to commit to.&lt;sup id="sf-vim-notes-goto-tag-definition-3-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-3" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do."&gt;3&lt;/a&gt;&lt;/sup&gt; My options seemed to be between
-&lt;a href="https://github.com/ycm-core/YouCompleteMe"&gt;YouCompleteMe&lt;/a&gt; and
-&lt;a href="https://github.com/dense-analysis/ale"&gt;&lt;span class="caps"&gt;ALE&lt;/span&gt;&lt;/a&gt;. [Update!&lt;sup id="sf-vim-notes-goto-tag-definition-4-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-4" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim"&gt;4&lt;/a&gt;&lt;/sup&gt;]&lt;/p&gt;
-&lt;p&gt;I can’t remember everything I read and tried, but I trust my conclusions.
-Looking in my &lt;code&gt;.vimrc&lt;/code&gt; I see that I have &lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; mapped to &lt;code&gt;:YcmCompleter
-GoTo&lt;/code&gt; and it works just fine, even when a module is imported from somewhere
-outside the current project. The tool was working and ready to use, I just
-hadn’t internalized it yet.&lt;/p&gt;
-&lt;h2 id="commands-to-remember"&gt;Commands to remember:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; - GoTo definition - YCMs best guess at an ‘intelligent’ goto
-command, whether its a declaration or a definition.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&lt;f2&gt;&lt;/f2&gt;&lt;/code&gt; - Toggle tagbar&lt;/li&gt;
-&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-vim-notes-goto-tag-definition-1"&gt;&lt;code&gt;:help jumplist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-2"&gt;&lt;code&gt;:help changelist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-3"&gt;The more powerful the
-tool, the more worthwhile it is to take a closer look at what it can and can’t
-do. &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-4"&gt;&lt;span class="caps"&gt;YCM&lt;/span&gt; and
-&lt;span class="caps"&gt;ALE&lt;/span&gt; work fine for goto definition and linting, but they don’t give me
-satisfactory autocompletion. &lt;code&gt;neoclide/coc.nvim&lt;/code&gt; looks like it might offer some
-improvements.
-&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;neoclide/coc.nvim&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Debugging the more_categories plugin for Pelican</title><link href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html" rel="alternate"/><published>2021-01-19T12:00:00+01:00</published><updated>2021-01-19T12:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/debugging-more-categories-pelican-plugin.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve realised that one of the plugins I use to make this blog is not working
+principal of &lt;span class="caps"&gt;OOP&lt;/span&gt; &lt;a class="simple-footnote-back" href="#sf-python-notes-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Debugging the more_categories plugin for Pelican</title><link href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html" rel="alternate"/><published>2021-01-19T12:00:00+01:00</published><updated>2021-01-19T12:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/debugging-more-categories-pelican-plugin.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve realised that one of the plugins I use to make this blog is not working
 correctly. I use the &lt;code&gt;more_categories&lt;/code&gt; plugin to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;add subcategories&lt;/li&gt;

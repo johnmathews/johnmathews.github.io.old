@@ -30,10 +30,10 @@ window.focussedResult = -1;
     // threshold: 1, // match anything within `distance` of `location`
     keys: [
       { name: 'title', weight: 1.0 },
-      { name: 'tags', weight: 0.7 },
-      { name: 'body', weight: 0.4 }
+      { name: 'tags', weight: 0.9 },
+      { name: 'body', weight: 0.3 },
       // {name: "category", weight: 0.3},
-      // {name: "url", weight: 0.3},
+      {name: "url", weight: 0.6}
     ]
   }
   window.fuse = new Fuse(searchIndex, options)
@@ -114,11 +114,14 @@ $(document).ready(function () {
     for (let i = 0; i < results.length; i++) {
       const item = results[i].item
 
+      console.log(item.date);
+      console.log(item.tags);
+
       const li = document.createElement('li')
 
       const link = document.createElement('a')
       link.setAttribute('href', item.url)
-      link.innerHTML = `<div class="w-100">${item.title}</div>`
+      link.innerHTML = `<div class="flex justify-between"><div class="">${item.title}</div><div class="hidden md:inline"> ${item.date}</div></div>`
 
       li.appendChild(link)
       ul.appendChild(li)

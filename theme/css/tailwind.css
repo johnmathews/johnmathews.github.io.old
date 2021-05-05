@@ -22,11 +22,11 @@
 	@apply border-2 border-white;
 }
 
-#searchResults li div {
+#searchResults li {
 	@apply mx-0 px-2 py-3 my-2 lg:my-5 text-gray-800 text-xl font-semibold border-2 border-gray-500 bg-gray-100 rounded-lg;
 }
 
-#searchResults li div:hover {
+#searchResults li:hover {
 	@apply bg-blue-200 border-blue-500 !important;
 }
 

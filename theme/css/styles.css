@@ -1169,7 +1169,7 @@ video {
   border-width: 2px;
 }
 
-#searchResults li div {
+#searchResults li {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
   --tw-border-opacity: 1;
@@ -1192,13 +1192,13 @@ video {
 }
 
 @media (min-width: 1024px) {
-  #searchResults li div {
+  #searchResults li {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
   }
 }
 
-#searchResults li div:hover {
+#searchResults li:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgba(191, 219, 254, var(--tw-bg-opacity)) !important;
   --tw-border-opacity: 1 !important;
@@ -2417,6 +2417,10 @@ video {
   margin-right: -1.25rem;
 }
 
+.-mb-5 {
+  margin-bottom: -1.25rem;
+}
+
 .-ml-5 {
   margin-left: -1.25rem;
 }
@@ -3114,6 +3118,10 @@ video {
 
   .md\:inline-block {
     display: inline-block;
+  }
+
+  .md\:inline {
+    display: inline;
   }
 
   .md\:flex {

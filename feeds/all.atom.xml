@@ -971,7 +971,57 @@ more likely to give you satisfying results.&lt;/p&gt;</content><category term="
 &lt;p&gt;&lt;code&gt;bar &amp;lt; &amp;lt;(foo:list)&lt;/code&gt; process subscription. Kind of like piping in the output of multiple commands.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="bash"/><category term="syntax"/></entry><entry><title>pretty print json in typescript</title><link href="https://johnmathews.eu/pretty-print-json-in-typescript.html" rel="alternate"/><published>2021-03-31T23:04:25+02:00</published><updated>2021-03-31T23:04:25+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-31:/pretty-print-json-in-typescript.html</id><summary type="html"/><content type="html">&lt;p&gt;Pretty print &lt;span class="caps"&gt;JSON&lt;/span&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;console.info(`&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;JSON&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;`);
-&lt;/pre&gt;&lt;/div&gt;</content><category term="snippet"/><category term="typescript"/><category term="json"/><category term="syntax"/></entry><entry><title>useful business</title><link href="https://johnmathews.eu/useful-business.html" rel="alternate"/><published>2021-03-30T23:07:07+02:00</published><updated>2021-03-30T23:07:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-30:/useful-business.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;&lt;a href="http://analystsnow.com"&gt;analystsnow.com&lt;/a&gt; looks like a really useful business.&lt;/em&gt;&lt;/p&gt;</content><category term="snippet"/><category term="entrepreneur"/><category term="saas"/></entry><entry><title>frantic distraction</title><link href="https://johnmathews.eu/frantic-distraction.html" rel="alternate"/><published>2021-03-30T23:05:59+02:00</published><updated>2021-03-30T23:05:59+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-30:/frantic-distraction.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;Frantic distraction via productive procrastination is exhausting, and useful.&lt;/em&gt;&lt;/p&gt;</content><category term="snippet"/><category term="meta"/><category term="thinking"/></entry><entry><title>vim split rearranging</title><link href="https://johnmathews.eu/vim-split-rearranging.html" rel="alternate"/><published>2021-03-29T23:09:27+02:00</published><updated>2021-03-29T23:09:27+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-29:/vim-split-rearranging.html</id><summary type="html"/><content type="html">&lt;p&gt;Rearrange splits in Vim&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="snippet"/><category term="typescript"/><category term="json"/><category term="syntax"/></entry><entry><title>Vim: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"/><published>2021-03-31T15:57:00+02:00</published><updated>2021-03-31T15:57:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-31:/vim-notes-goto-tag-definition.html</id><summary type="html"/><content type="html">&lt;h2 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h2&gt;
+&lt;p&gt;Just use neovim.coc instead of YouCompleteMe or Syntastic.&lt;/p&gt;
+&lt;p&gt;It’s faster, easier to setup, and works intuitively. &lt;span class="caps"&gt;ALE&lt;/span&gt; is still wonderful and
+useful, though there’s a lot of overlap - coc can lint as well.&lt;/p&gt;
+&lt;h2 id="jump-lists-and-change-lists"&gt;Jump Lists and Change Lists&lt;/h2&gt;
+&lt;p&gt;If you’re going to be jumping around to where things are defined, you will need
+to know how to jump back again. It seems there are two lists you need to be
+aware of, the &lt;em&gt;jump list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-1-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title=":help jumplist"&gt;1&lt;/a&gt;&lt;/sup&gt; and the &lt;em&gt;change
+list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title=":help changelist"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3 id="jump-list"&gt;Jump List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A list of locations that the cursor has jumped to.&lt;/li&gt;
+&lt;li&gt;Relevant to jumping to a definition.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-o&gt;&lt;/c-o&gt;&lt;/code&gt; move up the jump list&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-i&gt;&lt;/c-i&gt;&lt;/code&gt; mode down the jump list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="change-list"&gt;Change List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A list of locations where a change was made.&lt;/li&gt;
+&lt;li&gt;A change is something that can be undone using &lt;code&gt;u&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'.&lt;/code&gt; will move you to the &lt;code&gt;.&lt;/code&gt; mark.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; is a special mark that is automatically set at the location of your last edit.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;''&lt;/code&gt; will bring you back to where you were before your last jump&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt;  will also move you up and down the &lt;code&gt;change list&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="mt-10 -mb-5 border-double border-t-4 border-gray-500 dark:border-gray-200"/&gt;
+&lt;h2 id="original-post"&gt;Original Post:&lt;/h2&gt;
+&lt;p&gt;There are multiple ways of doing anything with vim, including going to where a
+function or object is defined, and I usually need to do something at least 3 times
+before I can do it without breaking my focus or train of thought.&lt;/p&gt;
+&lt;p&gt;My memory is hazy but I remember spending a 1/2 day looking into this and
+considering which solution I wanted to commit to.&lt;sup id="sf-vim-notes-goto-tag-definition-3-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-3" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do."&gt;3&lt;/a&gt;&lt;/sup&gt; My options seemed to be between
+&lt;a href="https://github.com/ycm-core/YouCompleteMe"&gt;YouCompleteMe&lt;/a&gt; and
+&lt;a href="https://github.com/dense-analysis/ale"&gt;&lt;span class="caps"&gt;ALE&lt;/span&gt;&lt;/a&gt;. [Update!&lt;sup id="sf-vim-notes-goto-tag-definition-4-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-4" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim"&gt;4&lt;/a&gt;&lt;/sup&gt;]&lt;/p&gt;
+&lt;p&gt;I can’t remember everything I read and tried, but I trust my conclusions.
+Looking in my &lt;code&gt;.vimrc&lt;/code&gt; I see that I have &lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; mapped to &lt;code&gt;:YcmCompleter
+GoTo&lt;/code&gt; and it works just fine, even when a module is imported from somewhere
+outside the current project. The tool was working and ready to use, I just
+hadn’t internalized it yet.&lt;/p&gt;
+&lt;h2 id="commands-to-remember"&gt;Commands to remember:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; - GoTo definition - YCMs best guess at an ‘intelligent’ goto
+command, whether its a declaration or a definition.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;f2&gt;&lt;/f2&gt;&lt;/code&gt; - Toggle tagbar&lt;/li&gt;
+&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-vim-notes-goto-tag-definition-1"&gt;&lt;code&gt;:help jumplist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-2"&gt;&lt;code&gt;:help changelist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-3"&gt;The more powerful the
+tool, the more worthwhile it is to take a closer look at what it can and can’t
+do. &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-4"&gt;&lt;span class="caps"&gt;YCM&lt;/span&gt; and
+&lt;span class="caps"&gt;ALE&lt;/span&gt; work fine for goto definition and linting, but they don’t give me
+satisfactory autocompletion. &lt;code&gt;neoclide/coc.nvim&lt;/code&gt; looks like it might offer some
+improvements.
+&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;neoclide/coc.nvim&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>useful business</title><link href="https://johnmathews.eu/useful-business.html" rel="alternate"/><published>2021-03-30T23:07:07+02:00</published><updated>2021-03-30T23:07:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-30:/useful-business.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;&lt;a href="http://analystsnow.com"&gt;analystsnow.com&lt;/a&gt; looks like a really useful business.&lt;/em&gt;&lt;/p&gt;</content><category term="snippet"/><category term="entrepreneur"/><category term="saas"/></entry><entry><title>frantic distraction</title><link href="https://johnmathews.eu/frantic-distraction.html" rel="alternate"/><published>2021-03-30T23:05:59+02:00</published><updated>2021-03-30T23:05:59+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-30:/frantic-distraction.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;em&gt;Frantic distraction via productive procrastination is exhausting, and useful.&lt;/em&gt;&lt;/p&gt;</content><category term="snippet"/><category term="meta"/><category term="thinking"/></entry><entry><title>vim split rearranging</title><link href="https://johnmathews.eu/vim-split-rearranging.html" rel="alternate"/><published>2021-03-29T23:09:27+02:00</published><updated>2021-03-29T23:09:27+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-29:/vim-split-rearranging.html</id><summary type="html"/><content type="html">&lt;p&gt;Rearrange splits in Vim&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&lt;c-w&gt;x&lt;/c-w&gt;&lt;/code&gt; - swap buffers, but keep arrangement the same&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&lt;c-w&gt;H&lt;/c-w&gt;&lt;/code&gt; - make the current split cover the left of the screen.&lt;/p&gt;
 &lt;p&gt;J, K, L covers the bottom, top, right of the screen&lt;/p&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>pelican plugin guide</title><link href="https://johnmathews.eu/pelican-plugin-guide.html" rel="alternate"/><published>2021-03-29T23:07:52+02:00</published><updated>2021-03-29T23:07:52+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-29:/pelican-plugin-guide.html</id><summary type="html"/><content type="html">&lt;p&gt;A &lt;a href="https://blog.geographer.fr/pelican-plugins"&gt;guide&lt;/a&gt;
@@ -1916,60 +1966,7 @@ because it lets you make decisions quickly and consistently. But understand
 that &lt;a href="https://fs.blog/2015/11/map-and-territory/"&gt;the map is not the
 territory&lt;/a&gt;, and these are just
 tools in a toolbox.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-mental-models-i-used-to-use-1"&gt;or policies &lt;a class="simple-footnote-back" href="#sf-mental-models-i-used-to-use-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-mental-models-i-used-to-use-2"&gt;Courage isn’t the absence of fear. It’s being scared and doing
-    the right thing anyway. &lt;a class="simple-footnote-back" href="#sf-mental-models-i-used-to-use-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>Vim: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"/><published>2021-01-20T15:57:00+01:00</published><updated>2021-01-20T15:57:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/vim-notes-goto-tag-definition.html</id><summary type="html"/><content type="html">&lt;h2 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h2&gt;
-&lt;p&gt;Just use neovim.coc instead of YouCompleteMe or Syntastic.&lt;/p&gt;
-&lt;p&gt;It’s faster, easier to setup, and works intuitively. &lt;span class="caps"&gt;ALE&lt;/span&gt; is still wonderful and
-useful, though there’s a lot of overlap - coc can lint as well.&lt;/p&gt;
-&lt;h2 id="jump-lists-and-change-lists"&gt;Jump Lists and Change Lists&lt;/h2&gt;
-&lt;p&gt;If you’re going to be jumping around to where things are defined, you will need
-to know how to jump back again. It seems there are two lists you need to be
-aware of, the &lt;em&gt;jump list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-1-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title=":help jumplist"&gt;1&lt;/a&gt;&lt;/sup&gt; and the &lt;em&gt;change
-list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title=":help changelist"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h3 id="jump-list"&gt;Jump List&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A list of locations that the cursor has jumped to.&lt;/li&gt;
-&lt;li&gt;Relevant to jumping to a definition.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&lt;c-o&gt;&lt;/c-o&gt;&lt;/code&gt; move up the jump list&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&lt;c-i&gt;&lt;/c-i&gt;&lt;/code&gt; mode down the jump list&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="change-list"&gt;Change List&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A list of locations where a change was made.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A change is something that can be undone using &lt;code&gt;u&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;'.&lt;/code&gt; will move you to the &lt;code&gt;.&lt;/code&gt; mark.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; is a special mark that is automatically set at the location of your last edit.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;''&lt;/code&gt; will bring you back to where you were before your last jump&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt;  will also move you up and down the &lt;code&gt;change list&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="original-post"&gt;Original Post:&lt;/h2&gt;
-&lt;p&gt;There are multiple ways of doing anything with vim, including going to where a
-function or object is defined, and I usually need to do something at least 3 times
-before I can do it without breaking my focus or train of thought.&lt;/p&gt;
-&lt;p&gt;My memory is hazy but I remember spending a 1/2 day looking into this and
-considering which solution I wanted to commit to.&lt;sup id="sf-vim-notes-goto-tag-definition-3-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-3" title="The more powerful the tool, the more worthwhile it is to take a closer look at what it can and can’t do."&gt;3&lt;/a&gt;&lt;/sup&gt; My options seemed to be between
-&lt;a href="https://github.com/ycm-core/YouCompleteMe"&gt;YouCompleteMe&lt;/a&gt; and
-&lt;a href="https://github.com/dense-analysis/ale"&gt;&lt;span class="caps"&gt;ALE&lt;/span&gt;&lt;/a&gt;. [Update!&lt;sup id="sf-vim-notes-goto-tag-definition-4-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-4" title="YCM and ALE work fine for goto definition and linting, but they don’t give me satisfactory autocompletion. neoclide/coc.nvim looks like it might offer some improvements. neoclide/coc.nvim"&gt;4&lt;/a&gt;&lt;/sup&gt;]&lt;/p&gt;
-&lt;p&gt;I can’t remember everything I read and tried, but I trust my conclusions.
-Looking in my &lt;code&gt;.vimrc&lt;/code&gt; I see that I have &lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; mapped to &lt;code&gt;:YcmCompleter
-GoTo&lt;/code&gt; and it works just fine, even when a module is imported from somewhere
-outside the current project. The tool was working and ready to use, I just
-hadn’t internalized it yet.&lt;/p&gt;
-&lt;h2 id="commands-to-remember"&gt;Commands to remember:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&lt;leader&gt;x&lt;/leader&gt;&lt;/code&gt; - GoTo definition - YCMs best guess at an ‘intelligent’ goto
-command, whether its a declaration or a definition.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&lt;f2&gt;&lt;/f2&gt;&lt;/code&gt; - Toggle tagbar&lt;/li&gt;
-&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-vim-notes-goto-tag-definition-1"&gt;&lt;code&gt;:help jumplist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-2"&gt;&lt;code&gt;:help changelist&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-3"&gt;The more powerful the
-tool, the more worthwhile it is to take a closer look at what it can and can’t
-do. &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-vim-notes-goto-tag-definition-4"&gt;&lt;span class="caps"&gt;YCM&lt;/span&gt; and
-&lt;span class="caps"&gt;ALE&lt;/span&gt; work fine for goto definition and linting, but they don’t give me
-satisfactory autocompletion. &lt;code&gt;neoclide/coc.nvim&lt;/code&gt; looks like it might offer some
-improvements.
-&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;neoclide/coc.nvim&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>What’s So Different About Now</title><link href="https://johnmathews.eu/whats-so-different-about-now.html" rel="alternate"/><published>2021-01-20T14:44:00+01:00</published><updated>2021-01-20T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/whats-so-different-about-now.html</id><summary type="html"/><content type="html">&lt;p&gt;I think we are less aware of our ignorance than previous generations. It is
+    the right thing anyway. &lt;a class="simple-footnote-back" href="#sf-mental-models-i-used-to-use-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>What’s So Different About Now</title><link href="https://johnmathews.eu/whats-so-different-about-now.html" rel="alternate"/><published>2021-01-20T14:44:00+01:00</published><updated>2021-01-20T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-20:/whats-so-different-about-now.html</id><summary type="html"/><content type="html">&lt;p&gt;I think we are less aware of our ignorance than previous generations. It is
 easy to implicitly assume that all useful information is available to us, and
 that we are therefore more informed than we really are.&lt;/p&gt;
 &lt;p&gt;I think this is because the internet has made information more accessible
