@@ -94,9 +94,9 @@ $(document).ready(function () {
     if (window.resultsLength > 0) {
       for (var i = 0; i < window.resultsLength; i++) {
         if (i == n) {
-          $('#searchResults > li').eq(i).find('div').attr('id', 'selected')
+          $('#searchResults > li').eq(i).attr('id', 'selected')
         } else {
-          $('#searchResults > li').eq(i).find('div').attr('id', 'notSelected')
+          $('#searchResults > li').eq(i).attr('id', 'notSelected')
         }
       }
     }

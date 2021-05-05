@@ -1173,17 +1173,16 @@ You want objective facts about what happened in the past.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Each of these components is relevant to the others&lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"/><category term="marketing"/><category term="positioning"/><category term="startups"/><category term="book"/></entry><entry><title>How I learnt to code</title><link href="https://johnmathews.eu/How-I-learnt-to-code.html" rel="alternate"/><published>2020-12-01T13:51:00+01:00</published><updated>2020-12-01T13:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-01:/How-I-learnt-to-code.html</id><summary type="html"/><content type="html">&lt;p&gt;4 years ago I started learning how to code, and it was &lt;em&gt;really&lt;/em&gt; difficult! It’s
-still difficult, but I now have a collection of tools and perspectives that
-make it less daunting (more on that below). Leveling up requires one more
-abstraction to wrap my head around, or one more &lt;span class="caps"&gt;API&lt;/span&gt; to understand. I can do it.&lt;/p&gt;
+&lt;p&gt;Each of these components is relevant to the others&lt;/p&gt;</content><category term="Non-technical/Entrepreneurship"/><category term="marketing"/><category term="positioning"/><category term="startups"/><category term="book"/></entry><entry><title>How I learnt to code</title><link href="https://johnmathews.eu/How-I-learnt-to-code.html" rel="alternate"/><published>2020-12-01T13:51:00+01:00</published><updated>2020-12-01T13:51:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-12-01:/How-I-learnt-to-code.html</id><summary type="html"/><content type="html">&lt;p&gt;4 years ago I started learning how to code, and it was difficult! It still is
+difficult, but I now have a collection of tools and perspectives that make it
+less daunting. Leveling up requires one more abstraction
+to wrap my head around, or one more &lt;span class="caps"&gt;API&lt;/span&gt; to understand. I can do it.&lt;/p&gt;
 &lt;p&gt;But I don’t think it needed to be so difficult, so now I’m building &lt;a href="https://codeschoolmeta.com"&gt;Code
 School Meta&lt;/a&gt; to make it easier to learn how to code.&lt;/p&gt;
 &lt;p&gt;Learning to code has been fun, ultimately successful, and life changing (hello
 job security!) but at the beginning it was sooo slow, and super tricky.&lt;/p&gt;
-&lt;p&gt;I remember feeling like an imposter, and thinking that I was definitely not a
-real developer - I hadn’t taken any classes in computer science. I felt like I
-knew almost nothing about anything. &lt;/p&gt;
+&lt;p&gt;Imposter syndrome is real, and I definitely felt it. I hadn’t taken any classes
+in computer science, and I felt like I knew almost nothing about anything. &lt;/p&gt;
 &lt;p&gt;The process began with Pandas, a (&lt;em&gt;the&lt;/em&gt;) Python analytics library. Spreadsheets
 were slowing me down at work, and I was bored. I found this &lt;a href="https://youtu.be/5JnMutdy6Fw"&gt;great
 tutorial&lt;/a&gt; by Brandon Rhodes. From there I found
@@ -1192,9 +1191,9 @@ make a blog using &lt;a href="https://blog.getpelican.com/"&gt;pelican&lt;/a&gt;
 &lt;p&gt;That led to &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; (and also JavaScript, which I tried very hard to avoid
 for as long as possible). I felt like a monkey bashing a keyboard as I tried to
 make &lt;span class="caps"&gt;HTML&lt;/span&gt; elements do what I wanted.&lt;/p&gt;
-&lt;p&gt;Git was next, but I found this &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;amazing tutorial&lt;/a&gt;
-to help me learn. It made Git seem &lt;span class="caps"&gt;OK&lt;/span&gt;, and also helped &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; make more
-sense too. Bonus!&lt;/p&gt;
+&lt;p&gt;Unusally, I think Git was next. Mainly because I found this &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;amazing
+tutorial&lt;/a&gt; to help me learn. It made Git seem &lt;span class="caps"&gt;OK&lt;/span&gt;,
+and also helped &lt;span class="caps"&gt;HTML&lt;/span&gt; and &lt;span class="caps"&gt;CSS&lt;/span&gt; make more sense too. Bonus!&lt;/p&gt;
 &lt;p&gt;I suddenly realized that great learning materials are crucial if I was going to
 keep momentum and keep on enjoying the thrill of seeing the computer do
 something I hadn’t made it do before.&lt;/p&gt;
@@ -1203,7 +1202,7 @@ an online community to make it easier to teach yourself how to code - less
 confusion about how to get started or what to learn next, more encouragement,
 and lots of high quality resources.&lt;/p&gt;
 &lt;p&gt;If you’d like to know more, please &lt;a href="https://codeschoolmeta.com"&gt;check it out&lt;/a&gt;
-and sign up for updates.&lt;/p&gt;</content><category term="Non-technical/Learning"/></entry><entry><title>The 1-Page Marketing Plan</title><link href="https://johnmathews.eu/1-page-marketing-plan.html" rel="alternate"/><published>2020-11-19T15:50:00+01:00</published><updated>2020-11-19T15:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-11-19:/1-page-marketing-plan.html</id><summary type="html">&lt;p&gt;My notes on &amp;ldquo;The 1-Page Marketing Plan&amp;rdquo; by Allan&amp;nbsp;Dib&lt;/p&gt;</summary><content type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+and sign up for updates.&lt;/p&gt;</content><category term="Non-technical/Learning"/><category term="learning"/><category term="code"/></entry><entry><title>The 1-Page Marketing Plan</title><link href="https://johnmathews.eu/1-page-marketing-plan.html" rel="alternate"/><published>2020-11-19T15:50:00+01:00</published><updated>2020-11-19T15:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2020-11-19:/1-page-marketing-plan.html</id><summary type="html">&lt;p&gt;My notes on &amp;ldquo;The 1-Page Marketing Plan&amp;rdquo; by Allan&amp;nbsp;Dib&lt;/p&gt;</summary><content type="html">&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;h3 id="marketing-has-three-phases"&gt;Marketing has three phases&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Before (prospect) - get people to know you and indicate interest&lt;/li&gt;

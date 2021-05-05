@@ -1632,11 +1632,15 @@ files spread across a tree of directories, and the average number of lines of co
 &lt;p&gt;These differences mean that code organization tools and &lt;span class="caps"&gt;IDE&lt;/span&gt; features play very
 different roles within each industry. In web development you really need to be able to jump between different files (or buffers) quickly, and search for text across multiple files. Writing idiomatically becomes more important, and writing code within discreet testable units becomes essential so that things don’t break without being noticed.&lt;/p&gt;
 &lt;p&gt;In data science, linting feels more optional, and searching for text within  methods or functions outside the current module is rarer.&lt;/p&gt;
-&lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>TDD: Test Driven Development</title><link href="https://johnmathews.eu/test-driven-development.html" rel="alternate"/><published>2021-01-06T17:50:00+01:00</published><updated>2021-01-06T17:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-06:/test-driven-development.html</id><summary type="html"/><content type="html">&lt;p&gt;Test Driven Development was mind-bending when I first grappled with it.
-Last summer I was building a web app using Django and began to break things
-unintentionally when adding new features. This soon led to lots of clicking
-around different pages to test if stuff was still working each time I made an update.&lt;/p&gt;
-&lt;p&gt;This soon led to me thinking there must be a better way. Which brought
+&lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Test Driven Development</title><link href="https://johnmathews.eu/test-driven-development.html" rel="alternate"/><published>2021-01-06T17:50:00+01:00</published><updated>2021-01-06T17:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-06:/test-driven-development.html</id><summary type="html"/><content type="html">&lt;p&gt;Test Driven Development was mind-bending when I first grappled with it: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Write a test for the code before you write the code”&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Assert that your code matches your expectations by understanding &lt;em&gt;all&lt;/em&gt; the inputs and &lt;em&gt;all&lt;/em&gt; the outputs for &lt;em&gt;every&lt;/em&gt; function or method I write”. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Last summer I was building a web app and began to break things unintentionally
+when adding new features. This soon led to lots of clicking around different
+pages to test if stuff was still working each time I made an update.&lt;/p&gt;
+&lt;p&gt;This led to me thinking there must be a better way, which eventually brought
 me to Test Driven Development (&lt;span class="caps"&gt;TDD&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;It should have just led me to writing tests, which it did. But googling
 whatever I googled got me down the &lt;span class="caps"&gt;TDD&lt;/span&gt; rabbit hole rather than just the “write
@@ -1663,7 +1667,7 @@ coverage reports to keep coverage &lt;em&gt;close&lt;/em&gt; to 100%&lt;sup id="
    codebase complexity and size.&lt;/li&gt;
 &lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-test-driven-development-1"&gt;Which is fun and all, but
 testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just
-written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours happen. &lt;a class="simple-footnote-back" href="#sf-test-driven-development-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>API Design Principles</title><link href="https://johnmathews.eu/api-design.html" rel="alternate"/><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/api-design.html</id><summary type="html"/><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt; design:&lt;/p&gt;
+written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours happen. &lt;a class="simple-footnote-back" href="#sf-test-driven-development-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="django"/><category term="testing"/><category term="web-app"/></entry><entry><title>API Design Principles</title><link href="https://johnmathews.eu/api-design.html" rel="alternate"/><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/api-design.html</id><summary type="html"/><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt; design:&lt;/p&gt;
 &lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;It’s more of an art than a science&lt;/li&gt;
