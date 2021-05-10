@@ -43,6 +43,10 @@
   @apply w-8 h-8 align-middle -mt-1 -ml-10
 }
 
+.markdown hr {
+  @apply mt-2 border-t-4 dark:border-gray-300 border-gray-800 border-double
+}
+
 /* icons to toggle dark mode*/
 /* delete?? */
 #darkMode:hover{
@@ -201,6 +205,14 @@
 
 .markdown p {
   @apply mt-7 mb-0;
+}
+
+.markdown ul li p:first-child {
+	@apply mt-0
+}
+
+.markdown ul li p {
+	@apply mt-2
 }
 
 .markdown h2 + p {

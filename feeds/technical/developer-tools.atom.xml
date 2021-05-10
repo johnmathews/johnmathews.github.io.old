@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-21T11:09:19+02:00</updated><entry><title>Learning - April 2021</title><link href="https://johnmathews.eu/learning-april-2021.html" rel="alternate"/><published>2021-04-21T11:09:19+02:00</published><updated>2021-04-21T11:09:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/learning-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-10T10:44:00+02:00</updated><entry><title>More VIM Notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-05-10T10:44:00+02:00</published><updated>2021-05-10T10:44:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-10:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#quickfix-list"&gt;Quickfix list&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#registers"&gt;Registers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#expression-register"&gt;Expression register&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#substitutions"&gt;Substitutions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#command-line"&gt;Command line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#delete-stuff-without-leaving-insert-mode"&gt;Delete stuff without leaving insert mode:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#text-objects"&gt;Text objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#screen-movement"&gt;Screen Movement&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sources"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id="quickfix-list"&gt;Quickfix list&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A quickfix list is a set of positions in one or more files&lt;/li&gt;
+&lt;li&gt;A quckfix list is global. Not local to a particular buffer.&lt;/li&gt;
+&lt;li&gt;A quickfix list is &lt;em&gt;not&lt;/em&gt; the quickfix window. The window can show the list. The list is a datastructure.&lt;/li&gt;
+&lt;li&gt;A changelist is local to its buffer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="registers"&gt;Registers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; contains the content of the last yank&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;1&lt;/code&gt;-&lt;code&gt;9&lt;/code&gt; contains the content you’ve deleted or changed&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;_&lt;/code&gt; blackhole register - send something here and it wont change any other register.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&lt;/code&gt; contains any deleted or changed content smaller than 1 row.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%&lt;/code&gt; contains the name of the current file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="expression-register"&gt;Expression register&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In insert mode, &lt;code&gt;&lt;c-r&gt;=&lt;/c-r&gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Type any valid vimscript.&lt;/li&gt;
+&lt;li&gt;The output is inserted into the buffer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="substitutions"&gt;Substitutions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:&amp;amp;&amp;amp;&lt;/code&gt; → repeat the last substitution command with its flags&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:~&lt;/code&gt; → repeat the lat substitution with the same replacement, but with the last used search pattern&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="command-line"&gt;Command line&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;q:&lt;/code&gt; - opens the command line window. Good for yanking and viewing previous commands&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:&lt;c-f&gt;&lt;/c-f&gt;&lt;/code&gt; - open command history list&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:UltiSnipsEdit&lt;/code&gt; - opens the ultiSnips file for the current buffers filetype. See which snippets are defined.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="delete-stuff-without-leaving-insert-mode"&gt;Delete stuff without leaving insert mode:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-h&gt;&lt;/c-h&gt;&lt;/code&gt; - same as backspace&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-w&gt;&lt;/c-w&gt;&lt;/code&gt; - delete previous word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-u&gt;&lt;/c-u&gt;&lt;/code&gt; - delete everything before cursor (on same row)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-d&gt;&lt;/c-d&gt;&lt;/code&gt; or &lt;code&gt;&lt;c-t&gt;&lt;/c-t&gt;&lt;/code&gt; - (un)indent a row&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-e&gt;&lt;/c-e&gt;&lt;/code&gt; - delete next word&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="text-objects"&gt;Text objects&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the cursor (useful for netrw?)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the cursor (useful for netrw?)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[m&lt;/code&gt;, &lt;code&gt;]m&lt;/code&gt; - move to the start or end of a method &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@:&lt;/code&gt; - repeat the last command&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; will indent a line. &lt;code&gt;.&lt;/code&gt; will repeat the operation, so &lt;code&gt;&amp;gt;&amp;gt;..&lt;/code&gt; would indent
+    a line 3 times.&lt;/p&gt;
+&lt;p&gt;You can use this along with a count, which will do the indention for &lt;code&gt;n&lt;/code&gt; number
+of lines (with the current line being the top line). &lt;code&gt;3&amp;gt;&amp;gt;..&lt;/code&gt; will indent 3
+lines 3 blocks to the right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="screen-movement"&gt;Screen Movement&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-y&gt;&lt;/c-y&gt;&lt;/code&gt; - up one line, and moves the cursor if it would go off the screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-e&gt;&lt;/c-e&gt;&lt;/code&gt; - down one line, and moves the cursor if it would go off screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-f&gt;&lt;/c-f&gt;&lt;/code&gt; - down one page, with cursor at top of screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&lt;c-b&gt;&lt;/c-b&gt;&lt;/code&gt; - up one page, with cursor at bottom of screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="sources"&gt;Sources&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has a lot of great tips.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that I’ve either copied or was more or less doing already.&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="tips"/><category term="vim"/></entry><entry><title>Learning - April 2021</title><link href="https://johnmathews.eu/learning-april-2021.html" rel="alternate"/><published>2021-04-21T11:09:19+02:00</published><updated>2021-04-21T11:09:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/learning-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#google-cloud-platform-service-accounts"&gt;Google Cloud Platform Service Accounts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ansible"&gt;Ansible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -442,12 +523,10 @@ list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a cla
 &lt;/ul&gt;
 &lt;h3 id="change-list"&gt;Change List&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt; → move up and down the change list&lt;/li&gt;
 &lt;li&gt;A list of locations where a change was made.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt;  will also move you up and down the &lt;code&gt;change list&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;'.&lt;/code&gt; will move you to the &lt;code&gt;.&lt;/code&gt; mark.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; is a special mark that is automatically set at the location of your last edit.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;''&lt;/code&gt; will bring you back to where you were before your last jump&lt;/li&gt;
-&lt;li&gt;A change is something that can be undone using &lt;code&gt;u&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;'.&lt;/code&gt; → go to the location of your last edit (&lt;code&gt;.&lt;/code&gt; is a mark).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;''&lt;/code&gt; → go back to where you were before your last jump&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr class="mt-10 -mb-5 border-double border-t-4 border-gray-500 dark:border-gray-200"/&gt;
 &lt;h2 id="original-post"&gt;Original Post:&lt;/h2&gt;
@@ -506,56 +585,7 @@ languages and this applies more to the idiom level than the design pattern
 level. It applies even less at the architectural level where there can be
 several equally good ways of organizing business logic and data representations.&lt;/p&gt;
 &lt;p&gt;Perl has the “&lt;span class="caps"&gt;TMTOWTDI&lt;/span&gt;” (tim towtdi) principle - “There’s More Than One Way To Do
-It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="learning notes"/></entry><entry><title>More VIM Notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-03-04T14:44:00+01:00</published><updated>2021-03-04T14:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;q:&lt;/code&gt; - opens the command line window. Good for yanking and viewing previous commands&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;:UltiSnipsEdit&lt;/code&gt; - opens the ultiSnips file for the current buffers filetype.
-    See which snippets are defined.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has the following gems that I’d like to start using.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the cursor&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the cursor&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;[m&lt;/code&gt;, &lt;code&gt;]m&lt;/code&gt; - move to the start or end of a method &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;@:&lt;/code&gt; - repeat the last command&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;:&lt;c-f&gt;&lt;/c-f&gt;&lt;/code&gt; - open command history list&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; will indent a line. &lt;code&gt;.&lt;/code&gt; will repeat the operation, so &lt;code&gt;&amp;gt;&amp;gt;..&lt;/code&gt; would indent
-    a line 3 times.&lt;/p&gt;
-&lt;p&gt;You can use this along with a count, which will do the indention for &lt;code&gt;n&lt;/code&gt; number
-of lines (with the current line being the top line). &lt;code&gt;3&amp;gt;&amp;gt;..&lt;/code&gt; will indent 3
-lines 3 blocks to the right.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;&lt;c-y&gt;&lt;/c-y&gt;&lt;/code&gt; - moves screen up one line, and moves the cursor if it would go off
-    the screen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;&lt;c-e&gt;&lt;/c-e&gt;&lt;/code&gt; - moves the screen down one lines, and moves the cursor if the would
-    go off screen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;&lt;c-f&gt;&lt;/c-f&gt;&lt;/code&gt; - move screen down one page, with cursor at top of screen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;&lt;c-b&gt;&lt;/c-b&gt;&lt;/code&gt; - move screen up one page, with cursor at bottom of screen&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that
-I’ve either copied or was more or less doing already.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="tips"/><category term="vim"/></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"/><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been feeling very comfortable with my Vim + Tmux setup recently.
+It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="learning notes"/></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"/><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been feeling very comfortable with my Vim + Tmux setup recently.
 Navigating around shells and files isn’t taking much mental effort anymore. Wohoo!&lt;/p&gt;
 &lt;p&gt;It’s taken about 2 years of working full time with vim to get to the stage
 where the commands are so intuitive that:&lt;/p&gt;

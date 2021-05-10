@@ -12,18 +12,18 @@
 <meta content="More VIM Notes -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" tips,vim " name="keywords"/>
-<meta content=" q: - opens the command line window. Good for yanking and viewing previous commands :UltiSnipsEdit - opens the ultiSnips file for the current buffers filetype. See which snippets are defined. The Valuable Dev has the following gems that I’d like to start using. gf - edit the file at the file path under the cursor gx - open the file at the file path under the cursor [m, ]m - move to the start or end of a method @: - repeat the last command :&lt;C-f&gt; - open command history list &gt;&gt; will indent a... " name="description"/>
+<meta content=" Table of Contents Quickfix list Registers Expression register Substitutions Command line Delete stuff without leaving insert mode: Text objects Screen Movement Sources Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="More VIM Notes" property="twitter:title"/>
-<meta content=" q: - opens the command line window. Good for yanking and viewing previous commands :UltiSnipsEdit - opens the ultiSnips file for the current buffers filetype. See which snippets are defined. The Valuable Dev has the following gems that I’d like to start using. gf - edit the file at the file path under the cursor gx - open the file at the file path under the cursor [m, ]m - move to the start or end of a method @: - repeat the last command :&lt;C-f&gt; - open command history list &gt;&gt; will indent a... " name="twitter:description"/>
+<meta content=" Table of Contents Quickfix list Registers Expression register Substitutions Command line Delete stuff without leaving insert mode: Text objects Screen Movement Sources Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/more-vim-notes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="More VIM Notes" property="og:title"/>
-<meta content=" q: - opens the command line window. Good for yanking and viewing previous commands :UltiSnipsEdit - opens the ultiSnips file for the current buffers filetype. See which snippets are defined. The Valuable Dev has the following gems that I’d like to start using. gf - edit the file at the file path under the cursor gx - open the file at the file path under the cursor [m, ]m - move to the start or end of a method @: - repeat the last command :&lt;C-f&gt; - open command history list &gt;&gt; will indent a... " property="og:description"/>
+<meta content=" Table of Contents Quickfix list Registers Expression register Substitutions Command line Delete stuff without leaving insert mode: Text objects Screen Movement Sources Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9... " property="og:description"/>
 <meta content="https://johnmathews.eu/more-vim-notes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -225,7 +225,7 @@
 <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
 </div>
 <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br/> March 2021
+    Published: <br/> May 2021
   </div>
 <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
  Category: 
@@ -244,7 +244,7 @@
           More <span class="caps">VIM</span> Notes
       </div>
 <div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
-        March 2021
+        May 2021
       </div>
 </div>
 <div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
@@ -252,32 +252,68 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<ul>
-<li>
-<p><code>q:</code> - opens the command line window. Good for yanking and viewing previous commands</p>
-</li>
-<li>
-<p><code>:UltiSnipsEdit</code> - opens the ultiSnips file for the current buffers filetype.
-    See which snippets are defined.</p>
-</li>
+<div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#quickfix-list">Quickfix list</a></li>
+<li><a href="#registers">Registers</a></li>
+<li><a href="#expression-register">Expression register</a></li>
+<li><a href="#substitutions">Substitutions</a></li>
+<li><a href="#command-line">Command line</a></li>
+<li><a href="#delete-stuff-without-leaving-insert-mode">Delete stuff without leaving insert mode:</a></li>
+<li><a href="#text-objects">Text objects</a></li>
+<li><a href="#screen-movement">Screen Movement</a></li>
+<li><a href="#sources">Sources</a></li>
 </ul>
-<p><em><a href="https://thevaluable.dev/vim-advanced/">The Valuable Dev</a></em> has the following gems that I’d like to start using.</p>
+</div>
+<h3 id="quickfix-list">Quickfix list</h3>
 <ul>
+<li>A quickfix list is a set of positions in one or more files</li>
+<li>A quckfix list is global. Not local to a particular buffer.</li>
+<li>A quickfix list is <em>not</em> the quickfix window. The window can show the list. The list is a datastructure.</li>
+<li>A changelist is local to its buffer.</li>
+</ul>
+<h3 id="registers">Registers</h3>
+<ul>
+<li><code>0</code> contains the content of the last yank</li>
 <li>
-<p><code>gf</code> - edit the file at the file path under the cursor</p>
+<p><code>1</code>-<code>9</code> contains the content you’ve deleted or changed</p>
 </li>
 <li>
-<p><code>gx</code> - open the file at the file path under the cursor</p>
+<p><code>_</code> blackhole register - send something here and it wont change any other register.</p>
 </li>
-<li>
-<p><code>[m</code>, <code>]m</code> - move to the start or end of a method </p>
-</li>
-<li>
-<p><code>@:</code> - repeat the last command</p>
-</li>
-<li>
-<p><code>:&lt;C-f&gt;</code> - open command history list</p>
-</li>
+<li><code>-</code> contains any deleted or changed content smaller than 1 row.</li>
+<li><code>%</code> contains the name of the current file.</li>
+</ul>
+<h3 id="expression-register">Expression register</h3>
+<ol>
+<li>In insert mode, <code>&lt;C-r&gt;=</code>.</li>
+<li>Type any valid vimscript.</li>
+<li>The output is inserted into the buffer.</li>
+</ol>
+<h3 id="substitutions">Substitutions</h3>
+<ul>
+<li><code>:&amp;&amp;</code> → repeat the last substitution command with its flags</li>
+<li><code>:~</code> → repeat the lat substitution with the same replacement, but with the last used search pattern</li>
+</ul>
+<h3 id="command-line">Command line</h3>
+<ul>
+<li><code>q:</code> - opens the command line window. Good for yanking and viewing previous commands</li>
+<li><code>:&lt;C-f&gt;</code> - open command history list</li>
+<li><code>:UltiSnipsEdit</code> - opens the ultiSnips file for the current buffers filetype. See which snippets are defined.</li>
+</ul>
+<h3 id="delete-stuff-without-leaving-insert-mode">Delete stuff without leaving insert mode:</h3>
+<ul>
+<li><code>&lt;C-h&gt;</code> - same as backspace</li>
+<li><code>&lt;C-w&gt;</code> - delete previous word</li>
+<li><code>&lt;C-u&gt;</code> - delete everything before cursor (on same row)</li>
+<li><code>&lt;C-d&gt;</code> or <code>&lt;C-t&gt;</code> - (un)indent a row</li>
+<li><code>&lt;C-e&gt;</code> - delete next word</li>
+</ul>
+<h3 id="text-objects">Text objects</h3>
+<ul>
+<li><code>gf</code> - edit the file at the file path under the cursor (useful for netrw?)</li>
+<li><code>gx</code> - open the file at the file path under the cursor (useful for netrw?)</li>
+<li><code>[m</code>, <code>]m</code> - move to the start or end of a method </li>
+<li><code>@:</code> - repeat the last command</li>
 <li>
 <p><code>&gt;&gt;</code> will indent a line. <code>.</code> will repeat the operation, so <code>&gt;&gt;..</code> would indent
     a line 3 times.</p>
@@ -285,34 +321,26 @@
 of lines (with the current line being the top line). <code>3&gt;&gt;..</code> will indent 3
 lines 3 blocks to the right.</p>
 </li>
-<li>
-<p><code>&lt;C-y&gt;</code> - moves screen up one line, and moves the cursor if it would go off
-    the screen</p>
-</li>
-<li>
-<p><code>&lt;C-e&gt;</code> - moves the screen down one lines, and moves the cursor if the would
-    go off screen</p>
-</li>
-<li>
-<p><code>&lt;C-f&gt;</code> - move screen down one page, with cursor at top of screen</p>
-</li>
-<li>
-<p><code>&lt;C-b&gt;</code> - move screen up one page, with cursor at bottom of screen</p>
-</li>
 </ul>
-<p><em><a href="https://www.vimfromscratch.com/articles/vim-for-python/">Vim for Python</a></em> has some great notes on linting and code completion plugins that
-I’ve either copied or was more or less doing already.</p>
+<h3 id="screen-movement">Screen Movement</h3>
+<ul>
+<li><code>&lt;C-y&gt;</code> - up one line, and moves the cursor if it would go off the screen</li>
+<li><code>&lt;C-e&gt;</code> - down one line, and moves the cursor if it would go off screen</li>
+<li><code>&lt;C-f&gt;</code> - down one page, with cursor at top of screen</li>
+<li><code>&lt;C-b&gt;</code> - up one page, with cursor at bottom of screen</li>
+</ul>
+<h3 id="sources">Sources</h3>
+<ol>
+<li><em><a href="https://thevaluable.dev/vim-advanced/">The Valuable Dev</a></em> has a lot of great tips.</li>
+<li><em><a href="https://www.vimfromscratch.com/articles/vim-for-python/">Vim for Python</a></em> has some great notes on linting and code completion plugins that I’ve either copied or was more or less doing already.</li>
+</ol>
 </div>
 </article>
 </main>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/two-years-of-vim.html" id="previousArticleInCategory"> Two Years Of Vim</a>
-</div>
-<div class="flex flex-row mt-2">
-<div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/cardano-generating-addresses.html" id="nextArticleInCategory"> Cardano: Generating Addresses</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/when-bitcoin-top.html" id="previousArticleInCategory"> Where and when will the current Bitcoin market peak?</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
