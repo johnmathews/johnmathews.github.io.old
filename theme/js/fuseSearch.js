@@ -114,9 +114,6 @@ $(document).ready(function () {
     for (let i = 0; i < results.length; i++) {
       const item = results[i].item
 
-      console.log(item.date);
-      console.log(item.tags);
-
       const li = document.createElement('li')
 
       const link = document.createElement('a')
@@ -150,11 +147,12 @@ $(document).ready(function () {
       incrementFocus(false)
       focussResult(window.focussedResult)
     } else if (event.keyCode == 13) { // return key
+      console.log(window.focussedResult);
       if (window.focussedResult >= 0) {
-        $('#selected').trigger('click')
+        $('#selected a')[0].click()
       } else {
         focussResult(0)
-        $('#selected').trigger('click')
+        $('#selected a')[0].click()
       }
     } else if (event.keyCode == 27) { // escape key
       document.getElementById('searchBox').blur()
