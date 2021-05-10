@@ -528,7 +528,7 @@ list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a cla
 &lt;li&gt;&lt;code&gt;'.&lt;/code&gt; → go to the location of your last edit (&lt;code&gt;.&lt;/code&gt; is a mark).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;''&lt;/code&gt; → go back to where you were before your last jump&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr class="mt-10 -mb-5 border-double border-t-4 border-gray-500 dark:border-gray-200"/&gt;
+&lt;hr/&gt;
 &lt;h2 id="original-post"&gt;Original Post:&lt;/h2&gt;
 &lt;p&gt;There are multiple ways of doing anything with vim, including going to where a
 function or object is defined, and I usually need to do something at least 3 times

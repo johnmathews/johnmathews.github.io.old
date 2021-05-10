@@ -245,9 +245,37 @@
 <div class="my-0 py-0">
 <h2 class="font-bold my-5 text-3xl dark:text-gray-100">May</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-3 lg:gap-5">
+<div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="globbing.html">
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="globbing">Globbing</h2>
+<ul>
+<li><code>????</code> → 4 chars</li>
+<li><code>*</code> → any number of chars</li>
+<li><code>[:upper:]</code> ⇔ <code>[A-Z]</code> same for <code>[:lower:]</code> and <code>[:digit:]</code></li>
+<li><code>[:alpha:]</code> ⇔ <code>[a-zA-Z]</code></li>
+<li>
+<p><code>[:alnum:]</code> ⇔ <code>[a-zA-Z0-9]</code></p>
+</li>
+<li>
+<p><code>ls -l [a-d]</code> → part of a range</p>
+</li>
+<li>^ and $ works like in regex</li>
+<li><code>la a*.{doc,docx}</code> → <span class="caps">OR</span></li>
+<li><code>ls a*.(doc|docx)</code> → <span class="caps">OR</span></li>
+</ul> </div> </div>
+<div class="border-t-2 border-gray-200 dark:border-gray-700">
+<div class="markdown mx-5 mb-1 mt-2">
+<div class="text-sm font-mono"> 10 May 2021 </div>
+</div>
+<div class="flex flex-wrap px-3 mt-1 mb-2">
+<div class="mx-1 px-1 my-1 text-sm font-mono rounded-lg border-2 border border-gray-600 dark:border-gray-200 dark:text-gray-300 bg-gray-200 dark:bg-gray-600"> 
+                                  linux
+                                </div>
+</div>
+</div>
+</div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="create-custom-functions-in-vim.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>Create a custom command and function to create a new file in vim.</p>
-<p><a href="https://stackoverflow.com/questions/54354220/trying-to-create-a-vimscript-function-that-creates-a-new-file">question on <span class="caps">SO</span></a></p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="vimscript-functions">Vimscript functions</h2>
+<p>Create a custom command and function to create a new file in vim.</p>
 <div class="highlight"><pre><span></span><span class="p">:</span><span class="k">h</span> expand<span class="p">()</span>
 
 <span class="p">:</span><span class="k">h</span> %:<span class="k">h</span>
@@ -258,7 +286,8 @@
   <span class="k">echom</span> <span class="k">a</span>:<span class="nb">fp</span>
   execute <span class="s2">"e "</span> . <span class="s2">"~/foo/bar/"</span> . <span class="k">a</span>:<span class="nb">fp</span> . <span class="s2">".ext"</span>
 <span class="k">endfunction</span>
-</pre></div> </div> </div>
+</pre></div>
+<p><a href="https://stackoverflow.com/questions/54354220/trying-to-create-a-vimscript-function-that-creates-a-new-file">question on <span class="caps">SO</span></a></p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
 <div class="text-sm font-mono"> 05 May 2021 </div>
@@ -271,8 +300,17 @@
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="vim-text-objects.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>More better faster vim text objects</p>
-<p><a href="https://www.barbarianmeetscoding.com/blog/exploring-vim-plugins-improve-and-extend-your-text-objects-with-targets-vim">article about a plugin</a></p> </div> </div>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="better-text-objects-in-vim">Better text objects in Vim</h2>
+<ul>
+<li>target function arguments</li>
+<li>more types of object</li>
+<li>consistent searching/jumping if you’re not inside the thing you’re targeting</li>
+<li>jump forward or backward</li>
+<li>look for the nth occurrance</li>
+<li>select white space around/inside object</li>
+</ul>
+<p><a href="https://github.com/wellle/targets.vim">github</a>
+<a href="https://www.barbarianmeetscoding.com/blog/exploring-vim-plugins-improve-and-extend-your-text-objects-with-targets-vim">article about a plugin</a></p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
 <div class="text-sm font-mono"> 05 May 2021 </div>
@@ -285,16 +323,13 @@
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="delete-from-vim-insert-mode.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>Vim - delete stuff without leaving insert mode:</p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="delete-stuff-in-vim-without-leaving-insert-mode">Delete stuff in Vim without leaving insert mode:</h2>
 <ul>
 <li><code>&lt;C-h&gt;</code> - same as backspace</li>
 <li><code>&lt;C-w&gt;</code> - delete previous word</li>
 <li><code>&lt;C-u&gt;</code> - delete everything before cursor (on same row)</li>
 <li><code>&lt;C-d&gt;</code> or <code>&lt;C-t&gt;</code> - (un)indent a row</li>
-</ul>
-<p><code>inoremap &lt;C-e&gt; &lt;C-o&gt;de</code> then:</p>
-<ul>
-<li><code>&lt;C-e&gt;</code> - delete next word</li>
+<li><code>&lt;C-e&gt;</code> - delete next word (create a mapping in vimrc)</li>
 </ul> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
@@ -308,7 +343,8 @@
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="global-aliases.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>If you want to alias a bunch of arguments for a command, use global aliases</p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="alias-function-arguments">Alias function arguments</h2>
+<p>If you want to alias a bunch of arguments for a command, use global aliases</p>
 <p><code>alias -g foo="some complicated options"</code></p>
 <p>then
 <code>grep some complicated options</code></p>
@@ -330,7 +366,8 @@
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="vim-yanked-text-buffer.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>Vim - it’s annoying when you delete something and overwrite your yanked text. </p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="vim-register-for-yanked-text">Vim register for yanked text</h2>
+<p>It’s annoying when you delete something and overwrite your yanked text. </p>
 <p>Use numbered registers!
 <code>"0</code> to <code>"9</code></p>
 <p><code>"0</code> contains the most recent yank.
@@ -354,7 +391,8 @@
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="chezmoi-shortcuts.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>Chezmoi is a great tool for managing dotfiles. This is a shortcut to update the source state based on local changes.</p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="chezmoi">Chezmoi</h2>
+<p>Chezmoi is a great tool for managing dotfiles. This is a shortcut to update the source state based on local changes.</p>
 <p>chezmoi status | cut -c 4- | xargs -I % -p sh -c ‘chezmoi add ~/%’</p>
 <p><a href="https://github.com/twpayne/chezmoi">project</a></p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
@@ -372,8 +410,9 @@
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="sleep-is-good.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>“It [sleep] enhances your memory and makes you more creative. It makes you look more attractive. It keeps you slim and lowers food cravings. It protects you from cancer and dementia. It wards off colds and the flu. It lowers your risk of heart attacks and stroke, not to mention diabetes. You’ll even feel happier, less depressed, and less anxious.”
-Dr. Walker - why we need to sleep</p> </div> </div>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="sleep">Sleep</h2>
+<p>“It enhances your memory and makes you more creative. It makes you look more attractive. It keeps you slim and lowers food cravings. It protects you from cancer and dementia. It wards off colds and the flu. It lowers your risk of heart attacks and stroke, not to mention diabetes. You’ll even feel happier, less depressed, and less anxious.”</p>
+<p>Dr. Walker - why we need to sleep</p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
 <div class="text-sm font-mono"> 04 May 2021 </div>
@@ -389,7 +428,8 @@ Dr. Walker - why we need to sleep</p> </div> </div>
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="bash-strict-mode.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>How to write robust bash scripts:</p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="bash-strict-mode">Bash strict mode</h2>
+<p>How to write robust bash scripts:</p>
 <p><a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Bash Strict Mode</a></p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
@@ -406,7 +446,8 @@ Dr. Walker - why we need to sleep</p> </div> </div>
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="how-to-write-an-about-page.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>An often recommended <a href="https://www.kaleighmoore.com/blog/2020/5/14/how-to-write-a-stellar-about-page">blog post</a> by Kaleigh Moore about writing a good about page.</p> </div> </div>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="how-to-write-an-about-page">How to write an About Page</h2>
+<p>An often recommended <a href="https://www.kaleighmoore.com/blog/2020/5/14/how-to-write-a-stellar-about-page">blog post</a> by Kaleigh Moore about writing a good about page.</p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
 <div class="text-sm font-mono"> 04 May 2021 </div>
@@ -419,7 +460,7 @@ Dr. Walker - why we need to sleep</p> </div> </div>
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="domain-name-registraars.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>Domain name registries:</p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="domain-name-registrars">Domain name registrars</h2>
 <ul>
 <li><a href="https://namecheap.com">https://namecheap.com</a> (cheap)</li>
 <li><a href="https://instantdomainsearch.com">https://instantdomainsearch.com</a> (variants)</li>
@@ -498,7 +539,7 @@ Dr. Walker - why we need to sleep</p> </div> </div>
 </div>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="html-templates.html">
-<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p><span class="caps">HTML</span> templates:</p>
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="html-templates"><span class="caps">HTML</span> Templates</h2>
 <ul>
 <li><a href="wickedtemplates.com">wickedtemplates.com</a></li>
 <li><a href="cruip.com">cruip.com</a></li>
