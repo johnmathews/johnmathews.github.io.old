@@ -1925,50 +1925,41 @@ not at all…&lt;/p&gt;
 &lt;p&gt;Update:
 &lt;code&gt;virtualenvwrapper&lt;/code&gt; is the biggest cause of slow loading. Using the &lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html"&gt;lazy
 loading&lt;/a&gt; option decreased loading time by 0.3s&lt;/p&gt;
-&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"/&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="shell"/><category term="unix"/><category term="zsh"/><category term="bash"/><category term="profiling"/></entry><entry><title>Ry’s Git Tutorial</title><link href="https://johnmathews.eu/rys-git-tutorial.html" rel="alternate"/><published>2018-06-01T17:11:00+02:00</published><updated>2018-06-01T17:11:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-01:/rys-git-tutorial.html</id><summary type="html">&lt;p&gt;Ry&amp;rsquo;s Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For tracking changes to a collection of files, Git is the ubiquitous solution. It’s free, robust, comprehensive, and there is a plethora of resources that are easy to find.&lt;/p&gt;
-&lt;p&gt;I usually find the commands difficult to remember though, and the concepts which Git is built on often seem counter-intuitive to me. This means I spend a lot of time searching for answers and trying to remember how I can use Git to experiment with a project without fear of losing any hard won progress.&lt;/p&gt;
-&lt;p&gt;Ry’s Git Tutorial by Ryan Hodson is the best way to learn Git that I have come across. Its simple, practical, and clear. The reader learns how to use Git yy creating and maintaining a simple website. This gives the Git commands a meaningful context, which makes them a lot easier to remember and use in the future.&lt;/p&gt;
-&lt;p&gt;The tutorial was first published in 2012 and the website which originally hosted the examples no longer exists. Each tutorial chapter starts with a link to download the project files up to that point, so the reader doesn’t need to start at the beginning but can jump into any part of the guide. Unfortunately these links are dead now.&lt;/p&gt;
-&lt;p&gt;Therefore I’m hosting the tutorial here so that it continues to be useful. If the author would like to get in touch, please do. I’d like to keep this great resource available so that others can benefit from it.&lt;/p&gt;
-&lt;p&gt;Download the .epub file &lt;a href="https://johnmathews.eu/Ry’s Git Tutorial.epub"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"/&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="shell"/><category term="unix"/><category term="zsh"/><category term="bash"/><category term="profiling"/></entry><entry><title>Ry’s Git Tutorial</title><link href="https://johnmathews.eu/rys-git-tutorial.html" rel="alternate"/><published>2018-06-01T17:11:00+02:00</published><updated>2018-06-01T17:11:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-01:/rys-git-tutorial.html</id><summary type="html">&lt;p&gt;Ry&amp;rsquo;s Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For tracking changes to a collection of files, Git is the ubiquitous solution.
+It’s free, robust, comprehensive, and there is a plethora of resources that are
+easy to find.&lt;/p&gt;
+&lt;p&gt;I usually find the commands difficult to remember though, and the concepts
+which Git is built on often seem counter-intuitive to me. This means I spend a
+lot of time searching for answers and trying to remember how I can use Git to
+experiment with a project without fear of losing any hard won progress.&lt;/p&gt;
+&lt;p&gt;Ry’s Git Tutorial by Ryan Hodson is the best way to learn Git that I have come
+across. Its simple, practical, and clear. The reader learns how to use Git yy
+creating and maintaining a simple website. This gives the Git commands a
+meaningful context, which makes them a lot easier to remember and use in the future.&lt;/p&gt;
+&lt;p&gt;The tutorial was first published in 2012 and the website which originally
+hosted the examples no longer exists. Each tutorial chapter starts with a link
+to download the project files up to that point, so the reader doesn’t need to
+start at the beginning but can jump into any part of the guide.&lt;/p&gt;
+&lt;p&gt;Unfortunately these links no longer work. Therefore I’m going to make the materials available here
+so that they can continue to be useful. If the author would like to get in touch,
+please do. I’d like to keep this great resource available so that others can
+benefit from it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/Rys Git Tutorial.epub"&gt;.epub&lt;/a&gt; or
+&lt;a href="https://johnmathews.eu/Rys Git Tutorial.pdf"&gt;.pdf&lt;/a&gt; versions are available to download.&lt;/p&gt;
 &lt;p&gt;Download the example files for each module below:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter2.zip"&gt;Chapter 2: Undoing Changes&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter3.zip"&gt;Chapter 3: Branches I&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter4.zip"&gt;Chapter 4: Branches &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter5.zip"&gt;Chapter 5: Rebasing&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter6.zip"&gt;Chapter 6: Rewriting History&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter7.zip"&gt;Chapter 7: Remotes&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter8.zip"&gt;Chapter 8: Centralized Workflows&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter9.zip"&gt;Chapter 9: Distributed Workflows&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter10.zip"&gt;Chapter 10: Patch Workflows&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter11.zip"&gt;Chapter 11: Tips &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Tricks&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter12.zip"&gt;Chapter 12: Plumbing&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/chapter13.zip"&gt;end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter2.zip"&gt;Chapter 2: Undoing Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter3.zip"&gt;Chapter 3: Branches I&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter4.zip"&gt;Chapter 4: Branches &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter5.zip"&gt;Chapter 5: Rebasing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter6.zip"&gt;Chapter 6: Rewriting History&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter7.zip"&gt;Chapter 7: Remotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter8.zip"&gt;Chapter 8: Centralized Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter9.zip"&gt;Chapter 9: Distributed Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter10.zip"&gt;Chapter 10: Patch Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter11.zip"&gt;Chapter 11: Tips &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter12.zip"&gt;Chapter 12: Plumbing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter13.zip"&gt;end&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="Git"/><category term="Rys"/><category term="Tutorial"/><category term="Ryan Hodson"/></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"/><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"/><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
 shortcuts. It’s based on the Vi text editor from the 1970’s. It was first
 released in 1991 and is still being developed today. It comes pre-installed on
