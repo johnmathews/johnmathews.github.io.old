@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-10T16:12:25+02:00</updated><entry><title>Globbing</title><link href="https://johnmathews.eu/globbing.html" rel="alternate"/><published>2021-05-10T16:12:25+02:00</published><updated>2021-05-10T16:12:25+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-10:/globbing.html</id><summary type="html"/><content type="html">&lt;h2 id="globbing"&gt;Globbing&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-12T11:17:45+02:00</updated><entry><title>Where was a setting set?</title><link href="https://johnmathews.eu/where-was-a-setting-set-.html" rel="alternate"/><published>2021-05-12T11:17:45+02:00</published><updated>2021-05-12T11:17:45+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-12:/where-was-a-setting-set-.html</id><summary type="html"/><content type="html">&lt;h2 id="see-where-vim-is-setting-an-option"&gt;See where Vim is setting an option&lt;/h2&gt;
+&lt;p&gt;See where an option was set in vim using the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:verbose set textwidth?&lt;/code&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>My Life Expectancy</title><link href="https://johnmathews.eu/my-life-expectancy.html" rel="alternate"/><published>2021-05-12T10:59:32+02:00</published><updated>2021-05-12T10:59:32+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-12:/my-life-expectancy.html</id><summary type="html"/><content type="html">&lt;h1 id="key-points"&gt;Key points:&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Weight doesn’t matter.&lt;/li&gt;
+&lt;li&gt;Be in “excellent” health.&lt;/li&gt;
+&lt;li&gt;Workout 3 or 4 times a week.&lt;/li&gt;
+&lt;li&gt;Drink liquor (or red wine) 3 or 4 times a week (after each workout).&lt;/li&gt;
+&lt;li&gt;Try to be happy, optimistic and relaxed. What are you working so hard for
+   anyway? You need something to do, someone to love, something to hope for.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="longevity-calculations"&gt;Longevity Calculations&lt;/h1&gt;
+&lt;p&gt;I was playing with the life expectancy calculator at &lt;a href="https://www.blueprintincome.com/tools/life-expectancy-calculator-how-long-will-i-live/"&gt;blueprintincome&lt;/a&gt;&lt;sup id="sf-my-life-expectancy-1-back"&gt;&lt;a class="simple-footnote" href="#sf-my-life-expectancy-1" title="There is also a more detailed calculator at projectbiglife, its calibrated for Canadian citizens."&gt;1&lt;/a&gt;&lt;/sup&gt; and was surprised to find that their regression technique gives me
+a 50% chance of living to 95! I’d expected a result closer to 80.&lt;/p&gt;
+&lt;p&gt;After printing out a &lt;a href="https://johnmathews.eu/documents/90-year-life-calendar.jpg"&gt;90 year
+calendar&lt;/a&gt;, my next
+thought was to play with the calculator to find my maximum possible age (statistically).&lt;/p&gt;
+&lt;p&gt;The “findings” are below. Doing all this gives me &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;75% chance of living to 92&lt;/li&gt;
+&lt;li&gt;50% change of living to 101&lt;/li&gt;
+&lt;li&gt;25% chance of living to 107&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dont-workout-every-day"&gt;Don’t workout every day&lt;/h2&gt;
+&lt;p&gt;There is no additional benefit from working out more than 4 times a week.
+Once you’re fit and working out 4 times a week it doesn’t matter if you do
+more exercise.&lt;/p&gt;
+&lt;p&gt;Being in “excellent” health is better than being in “very good” health though,
+so make the workouts count. I guess if it didn’t make a difference then it
+wouldn’t be excellent in the first place.&lt;/p&gt;
+&lt;h2 id="drink-more"&gt;Drink more&lt;/h2&gt;
+&lt;p&gt;I was surprised that having 3-4 drinks each week increases your life
+expectancy. I thought that it was best to not drink any alcohol at all.&lt;/p&gt;
+&lt;p&gt;I should be drinking red wine or liquor 3 or 4 times each week. Liquor increases
+longevity in men, but reduces longevity for women. Red wine increases longevity in
+women, but has no effect in men&lt;sup id="sf-my-life-expectancy-2-back"&gt;&lt;a class="simple-footnote" href="#sf-my-life-expectancy-2" title="Alcohol consumption in later life and reaching longevity: the Netherlands Cohort Study "&gt;2&lt;/a&gt;&lt;/sup&gt;. I guess I
+should drink some rum after each workout.&lt;/p&gt;
+&lt;h2 id="weight-doesnt-make-a-different"&gt;Weight doesn’t make a different&lt;/h2&gt;
+&lt;p&gt;According to their regression, my expected longevity is unchanged within a
+weight range of 78kg - 90kg. I guess it’s much more important that I’m in
+“excellent” health, working out 4 times a week and having some wine, rum, or
+whiskey after each workout.&lt;/p&gt;
+&lt;h1 id="but-its-just-statistics"&gt;But it’s just statistics&lt;/h1&gt;
+&lt;p&gt;The calculator only asks for quantifiable or physical attributes. It doesn’t
+consider emotional, relational or spiritual factors.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-my-life-expectancy-1"&gt;There is also a more detailed
+calculator at &lt;a href="https://www.projectbiglife.ca/life-expectancy-calculator"&gt;projectbiglife&lt;/a&gt;, its calibrated for Canadian citizens. &lt;a class="simple-footnote-back" href="#sf-my-life-expectancy-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-my-life-expectancy-2"&gt;&lt;a href="https://academic.oup.com/ageing/article/49/3/395/5730334"&gt;Alcohol consumption in later life and
+reaching longevity: the Netherlands Cohort Study
+&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-my-life-expectancy-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Non-technical/Journal"/><category term="regression"/><category term="statistics"/><category term="life-expectancy"/><category term="death"/></entry><entry><title>Globbing</title><link href="https://johnmathews.eu/globbing.html" rel="alternate"/><published>2021-05-10T16:12:25+02:00</published><updated>2021-05-10T16:12:25+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-10:/globbing.html</id><summary type="html"/><content type="html">&lt;h2 id="globbing"&gt;Globbing&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;????&lt;/code&gt; → 4 chars&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;*&lt;/code&gt; → any number of chars&lt;/li&gt;
@@ -1565,92 +1612,4 @@ anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as 
 &lt;p&gt;You can redirect &lt;code&gt;stdin&lt;/code&gt; similarly. If you run &lt;code&gt; then if the program
 attempt to read from &lt;code&gt;stdin&lt;/code&gt; then it will get end-of-file. &lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The merge (or redirect) syntax (for example &lt;code&gt;&amp;lt;&amp;amp;2&lt;/code&gt;) won’t work, because you can
-only redirect in the same direction.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Cardano: Running a full node</title><link href="https://johnmathews.eu/cardano-node-api.html" rel="alternate"/><published>2021-03-01T18:01:00+01:00</published><updated>2021-03-01T18:01:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/cardano-node-api.html</id><summary type="html"/><content type="html">&lt;p&gt;I recently deployed a Cardano node on Google Cloud Platform and used its &lt;span class="caps"&gt;API&lt;/span&gt; to
-create and watch addresses, and make transactions.&lt;/p&gt;
-&lt;p&gt;Helpfully, Cardano make it quite simple to get up and running if you are
-familiar with Docker-Compose, and know where to look, and what questions to ask.&lt;/p&gt;
-&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#docker-compose"&gt;Docker Compose&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#cardano-wallet"&gt;Cardano wallet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#cardano-cli"&gt;Cardano-&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#rest-api"&gt;&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#surprising-things"&gt;Surprising things&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h1 id="docker-compose"&gt;Docker Compose&lt;/h1&gt;
-&lt;p&gt;The &lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;Cardano Wallet&lt;/a&gt;
-repo&lt;sup id="sf-cardano-node-api-1-back"&gt;&lt;a class="simple-footnote" href="#sf-cardano-node-api-1" title="https://github.com/input-output-hk/cardano-wallet"&gt;1&lt;/a&gt;&lt;/sup&gt;
-contains almost all you need to get started. The command to run is:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;NETWORK=testnet docker-compose up -d&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This does a couple of things for you:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Creates a Cardano node and begins syncing with the network&lt;/li&gt;
-&lt;li&gt;Creates a Cardano Wallet instance&lt;/li&gt;
-&lt;li&gt;Creates all the required data volumes&lt;/li&gt;
-&lt;li&gt;Maps the ports required to make &lt;span class="caps"&gt;API&lt;/span&gt; calls.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Running &lt;code&gt;docker ps&lt;/code&gt; should show that two containers are running, &lt;code&gt;cardano-node&lt;/code&gt;
-and &lt;code&gt;cardano-wallet&lt;/code&gt;.&lt;/p&gt;
-&lt;h1 id="cardano-wallet"&gt;Cardano wallet&lt;/h1&gt;
-&lt;p&gt;In order to run &lt;code&gt;cardano-wallet&lt;/code&gt; commands (not using the &lt;span class="caps"&gt;API&lt;/span&gt;, but directly on
-the node) you’ll need to &lt;code&gt;docker exec&lt;/code&gt; into the container like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo docker &lt;span class="nb"&gt;exec&lt;/span&gt; -it cardano-wallet_cardano-wallet_1 sh
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then you  can run commands like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cardano-wallet network information
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id="cardano-cli"&gt;Cardano-&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;Similarly, if you want to use the &lt;code&gt;cardano-cli&lt;/code&gt; programme, exec into the
-&lt;code&gt;cardano-wallet&lt;/code&gt; container:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo docker &lt;span class="nb"&gt;exec&lt;/span&gt; -it cardano-wallet_cardano-node_1 sh 
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cardano-cli —version
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id="rest-api"&gt;&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;Perhaps you wont need to do this though because once the containers are up and
-running and online, you can use the &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to monitor the node, make
-transactions, and watch
-addresses.&lt;sup id="sf-cardano-node-api-2-back"&gt;&lt;a class="simple-footnote" href="#sf-cardano-node-api-2" title="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;For example, a good test to see if the node is ok is to run &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl http://localhost:8090/v2/network/information
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Addresses on Cardano need to be &lt;span class="caps"&gt;BIP39&lt;/span&gt; compliant, and before you can use the
-&lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; to create the address you will need to have already generated the keys
-and the mnemonic. This can be done using various other tools
-(&lt;a href="https://iancoleman.io/bip39/"&gt;web page&lt;/a&gt;, &lt;a href="https://github.com/trezor/python-mnemonic"&gt;python&lt;/a&gt;) and the results put into a &lt;span class="caps"&gt;JSON&lt;/span&gt; file
-according to the &lt;span class="caps"&gt;API&lt;/span&gt; spec.&lt;/p&gt;
-&lt;h1 id="surprising-things"&gt;Surprising things&lt;/h1&gt;
-&lt;p&gt;Cardano requires that addresses are created sequentially and instead of
-allowing the user to generate them &lt;em&gt;ad-hoc&lt;/em&gt;, the node by default will manage
-the creation of addresses of each
-wallet.&lt;sup id="sf-cardano-node-api-3-back"&gt;&lt;a class="simple-footnote" href="#sf-cardano-node-api-3" title="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;The value of &lt;code&gt;ADDRESS_POOL_GAP&lt;/code&gt; sets the number of unused addresses in each
-wallet. By default this is 20. When an address is used, the node will
-automatically generate a new unused address for the wallet, so that there is
-always a pool of 20 unused addresses.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-cardano-node-api-1"&gt;&lt;a href="https://github.com/input-output-hk/cardano-wallet"&gt;https://github.com/input-output-hk/cardano-wallet&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-cardano-node-api-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-cardano-node-api-2"&gt;&lt;a href="https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet"&gt;https://input-output-hk.github.io/cardano-wallet/api/edge/#operation/postWallet&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-cardano-node-api-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-cardano-node-api-3"&gt;&lt;a href="https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/"&gt;https://input-output-hk.github.io/adrestia/docs/common-use-cases/how-to-create-addresses/&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-cardano-node-api-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/></entry><entry><title>Polkadot: Running and interacting with a full node</title><link href="https://johnmathews.eu/running-a-polkadot-node.html" rel="alternate"/><published>2021-03-01T17:40:00+01:00</published><updated>2021-03-01T17:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-01:/running-a-polkadot-node.html</id><summary type="html"/><content type="html">&lt;p&gt;I recently set up a Polkadot node on Google Cloud Platform that could create
-addresses and make transactions.&lt;/p&gt;
-&lt;p&gt;Instead of building from source I used Docker. After some troubleshooting, I
-found the command to run is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker run -it -p &lt;span class="m"&gt;30333&lt;/span&gt;:30333 -p &lt;span class="m"&gt;9944&lt;/span&gt;:9944 -p &lt;span class="m"&gt;80&lt;/span&gt;:9933 -v /mnt/polkadot:/polkadot/.local/share parity/polkadot:latest --rpc-external --rpc-cors&lt;span class="o"&gt;=&lt;/span&gt;all --chain westend --ws-external
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This differs from the (current) documentation in two ways:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;The data volume needs to point to &lt;code&gt;/polkadot/.local/share&lt;/code&gt;. The symlink that
-     is supposed to exist for &lt;code&gt;/data&lt;/code&gt; appears to be broken in the current image.
-     See this GitHub &lt;a href="https://github.com/paritytech/polkadot/issues/2482"&gt;issue&lt;/a&gt; for details.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Port 9944 needs to be mapped.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;One of the first &lt;span class="caps"&gt;API&lt;/span&gt; calls you are likely to make to check that things are
-    working as expected, particularly for WebSocket connections, is to
-    open to a &lt;span class="caps"&gt;WS&lt;/span&gt; connection to be notified when your node syncs a new block.
-    The node only does this once it has caught up with its piers. Whilst it is
-    still syncing it will only return the current highest block when you make
-    the initial &lt;span class="caps"&gt;API&lt;/span&gt; call. I ended up chatting to one of the Parity devs about
-    this issue on discord and then on &lt;a href="https://stackoverflow.com/questions/66358685/polkadot-websocket-api-doesnt-listen-for-new-blocks/66365716?noredirect=1#comment117342945_66365716"&gt;Stack Overflow&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Other than that, everything went as described in the documentation.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/></entry></feed>
+only redirect in the same direction.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry></feed>
