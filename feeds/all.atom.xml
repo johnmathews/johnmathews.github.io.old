@@ -13,8 +13,7 @@
 &lt;h1 id="longevity-calculations"&gt;Longevity Calculations&lt;/h1&gt;
 &lt;p&gt;I was playing with the life expectancy calculator at &lt;a href="https://www.blueprintincome.com/tools/life-expectancy-calculator-how-long-will-i-live/"&gt;blueprintincome&lt;/a&gt;&lt;sup id="sf-my-life-expectancy-1-back"&gt;&lt;a class="simple-footnote" href="#sf-my-life-expectancy-1" title="There is also a more detailed calculator at projectbiglife, its calibrated for Canadian citizens."&gt;1&lt;/a&gt;&lt;/sup&gt; and was surprised to find that their regression technique gives me
 a 50% chance of living to 95! I’d expected a result closer to 80.&lt;/p&gt;
-&lt;p&gt;After printing out a &lt;a href="https://johnmathews.eu/documents/90-year-life-calendar.jpg"&gt;90 year
-calendar&lt;/a&gt;, my next
+&lt;p&gt;After printing out a &lt;a href="https://johnmathews.eu/90-year-life-calendar.jpg"&gt;90 year calendar&lt;/a&gt;, my next
 thought was to play with the calculator to find the maximum age I could have a 50% chance of reaching.&lt;/p&gt;
 &lt;p&gt;Doing the factors below would apparently give me:&lt;/p&gt;
 &lt;ul&gt;

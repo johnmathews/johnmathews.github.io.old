@@ -2462,6 +2462,10 @@ video {
   margin-left: -1.5rem;
 }
 
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
 .-mr-10 {
   margin-right: -2.5rem;
 }
@@ -3342,6 +3346,10 @@ video {
     font-weight: 400;
   }
 
+  .lg\:h-full {
+    height: 100%;
+  }
+
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -3396,6 +3404,14 @@ video {
     padding-top: 1.25rem;
   }
 
+  .lg\:absolute {
+    position: absolute;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
+  }
+
   .lg\:w-32 {
     width: 8rem;
   }
@@ -3424,8 +3440,8 @@ video {
     width: 66.666667%;
   }
 
-  .lg\:w-11\/12 {
-    width: 91.666667%;
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:gap-5 {

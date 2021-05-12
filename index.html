@@ -38,7 +38,7 @@
 <body class="h-screen bg-gray-100 dark:bg-gray-900">
 <a class="hidden" name="top"></a>
 <div class="border border-gray-100 dark:border-gray-900 inline">
-<button aria-label="themeToggle" class="absolute m-3" id="theme-toggle">
+<button aria-label="themeToggle" class="absolute m-3 z-50" id="theme-toggle">
 <div class="day modeIcon hidden">
 <i class="far fa-lightbulb fa-lg"></i>
 </div>
@@ -80,8 +80,8 @@
 <div class="px-5 py-5">
 <div class="">
 <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
-                 Keyboard Shortcuts:
-                </h3>
+                            Keyboard Shortcuts:
+                        </h3>
 <hr class="mb-5"/>
 <div class="text-base text-gray-700" id="" role="group">
 <div class="markdown">
@@ -114,7 +114,7 @@
 </div>
 </div>
 </div>
-<div class="lg:w-11/12 my-auto mx-auto lg:flex lg:flex-row">
+<div class="z-10 my-auto mx-auto lg:flex lg:flex-row lg:h-full lg:absolute lg:top-0 lg:w-full">
 <div class="w-5/6 lg:w-1/3 flex flex-wrap flex-col mx-auto my-10 md:my-20 lg:my-auto 2xl:pl-20 font-serif text-3xl leading-relaxed md:leading-normal dark:text-gray-200">
 <div class="lg:ml-10 flex flex-wrap lg:flex-col lg:space-y-10" id="primaryList">
 <div class="listItem mx-auto lg:ml-12 xl:ml-40 block md:inline-block px-3 pb-1 pt-1"><a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold" href="https://johnmathews.eu/blog.html">Blog</a></div>
@@ -124,11 +124,11 @@
 <div class="listItem mx-auto lg:ml-12 xl:ml-40 block md:inline-block px-3 pb-1 pt-1"><a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold" href="https://johnmathews.eu/experience.html">Experience</a></div>
 </div>
 </div>
-<div class="flex flex-col lg:w-2/3 lg:mt-10">
+<div class="flex flex-col lg:w-2/3">
 <img alt="random landing page image" class="image-process-large-image mx-auto lg:mx-0 md:my-auto md:w-5/6 xl:w-3/4 2xl:w-2/3 hidden" id="landingPhoto" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 680px, (min-width: 768px) 510px, (min-width: 640px) 425px, 100vw" src="/images/landing/derivatives/large-image/800w/square.jpeg" srcset="/images/landing/derivatives/large-image/500w/square.jpeg 500w, /images/landing/derivatives/large-image/600w/square.jpeg 600w, /images/landing/derivatives/large-image/800w/square.jpeg 800w, /images/landing/derivatives/large-image/1600w/square.jpeg 1600w"/>
 </div>
-<div class="md:hidden w-full mt-20">
-<a class="font-serif text-center mx-auto lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block px-3 pb-1 pt-1" href="javaScript:;" id="fuseSearch">Search</a>
+<div class="lg:hidden w-full mt-20">
+<a class="font-serif text-center mx-auto px-3 -mt-10 lg:ml-12 xl:ml-40 text-gray-700 dark:text-gray-200 hover:underline font-semibold block" href="javaScript:;" id="fuseSearch">Search</a>
 </div>
 </div>
 <script>
