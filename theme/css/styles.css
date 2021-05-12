@@ -2995,6 +2995,14 @@ video {
   z-index: 10;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -3396,6 +3404,10 @@ video {
     margin-top: 5rem;
   }
 
+  .lg\:-mr-32 {
+    margin-right: -8rem;
+  }
+
   .lg\:max-w-3xl {
     max-width: 48rem;
   }
@@ -3460,6 +3472,10 @@ video {
 
   .xl\:hidden {
     display: none;
+  }
+
+  .xl\:ml-0 {
+    margin-left: 0px;
   }
 
   .xl\:mt-8 {
