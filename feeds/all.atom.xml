@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-12T11:17:45+02:00</updated><entry><title>Where was a setting set?</title><link href="https://johnmathews.eu/where-was-a-setting-set-.html" rel="alternate"/><published>2021-05-12T11:17:45+02:00</published><updated>2021-05-12T11:17:45+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-12:/where-was-a-setting-set-.html</id><summary type="html"/><content type="html">&lt;h2 id="see-where-vim-is-setting-an-option"&gt;See where Vim is setting an option&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-14T13:44:11+02:00</updated><entry><title>email forwarding</title><link href="https://johnmathews.eu/email-forwarding.html" rel="alternate"/><published>2021-05-14T13:44:11+02:00</published><updated>2021-05-14T13:44:11+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-14:/email-forwarding.html</id><summary type="html"/><content type="html">&lt;h2 id="forward-email"&gt;Forward Email&lt;/h2&gt;
+&lt;p&gt;I know about &lt;a href="https://improvmx.com/"&gt;ImprovMX&lt;/a&gt;, which used to be great because you could do a lot for
+free, but now you only get 1 domain for free.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://forwardemail.net"&gt;ForwardEmail&lt;/a&gt; are 3 times cheaper than ImprovMX, and
+I have 2 domains forwarding email. It’s not particularly private, but I can send
+and recieve from a domain, for free.&lt;/p&gt;</content><category term="snippet"/><category term="email"/></entry><entry><title>modifying vim colorschemes correctly</title><link href="https://johnmathews.eu/modifying-vim-colorschemes-correctly.html" rel="alternate"/><published>2021-05-13T14:12:00+02:00</published><updated>2021-05-13T14:12:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-13:/modifying-vim-colorschemes-correctly.html</id><summary type="html"/><content type="html">&lt;p&gt;A &lt;a href="https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f"&gt;snippet&lt;/a&gt;
+detailing how to use nested autocommands to apply custom modifications when a
+colorscheme is loaded. Perhaps this will stop me &lt;code&gt;:e&lt;/code&gt;-ing so frequently.&lt;/p&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>Vim Snippets</title><link href="https://johnmathews.eu/vim-snippets.html" rel="alternate"/><published>2021-05-13T13:04:09+02:00</published><updated>2021-05-13T13:04:09+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-13:/vim-snippets.html</id><summary type="html"/><content type="html">&lt;h2 id="vim-snippets"&gt;Vim Snippets&lt;/h2&gt;
+&lt;p&gt;A useful collection of
+&lt;a href="https://gist.github.com/romainl/4b9f139d2a8694612b924322de1025ce"&gt;gists&lt;/a&gt; by
+&lt;a href="https://gist.github.com/romainl"&gt;Romain Lafourcade&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A &lt;a href="https://gist.github.com/t-mart/610795fcf7998559ea80"&gt;gist&lt;/a&gt; about &lt;code&gt;netrw&lt;/code&gt;.&lt;/p&gt;</content><category term="snippet"/><category term="vim"/><category term="netrw"/></entry><entry><title>Where was a setting set?</title><link href="https://johnmathews.eu/where-was-a-setting-set-.html" rel="alternate"/><published>2021-05-12T11:17:45+02:00</published><updated>2021-05-12T11:17:45+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-12:/where-was-a-setting-set-.html</id><summary type="html"/><content type="html">&lt;h2 id="see-where-vim-is-setting-an-option"&gt;See where Vim is setting an option&lt;/h2&gt;
 &lt;p&gt;See where an option was set in vim using the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:verbose set textwidth?&lt;/code&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>My Life Expectancy</title><link href="https://johnmathews.eu/my-life-expectancy.html" rel="alternate"/><published>2021-05-12T10:59:32+02:00</published><updated>2021-05-12T10:59:32+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-12:/my-life-expectancy.html</id><summary type="html"/><content type="html">&lt;h1 id="key-points"&gt;Key points:&lt;/h1&gt;
 &lt;ol&gt;
@@ -1491,124 +1502,4 @@ wasn’t - I’d even forgotten what the &lt;code&gt;&amp;amp;&lt;/code&gt; symb
 &lt;a href="https://johnmathews.eu/nohup-and-background-processes.html"&gt;notes&lt;/a&gt;&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-binance-node-api-1"&gt;It starts a process in
 the background. You can move it to the foreground with &lt;code&gt;fg&lt;/code&gt; or see a list of
 running jobs using &lt;code&gt;jobs&lt;/code&gt;. You can move a running job to the background (like a
-vim session) using &lt;code&gt;ctrl-z&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-binance-node-api-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/></entry><entry><title>nohup</title><link href="https://johnmathews.eu/nohup.html" rel="alternate"/><published>2021-03-02T23:30:02+01:00</published><updated>2021-03-02T23:30:02+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup.html</id><summary type="html"/><content type="html">&lt;p&gt;Use &lt;code&gt;nohup&lt;/code&gt; to keep a curl process running even when the terminal (tty?) session autocloses at 3am.&lt;/p&gt;</content><category term="snippet"/><category term="linux"/><category term="cli"/></entry><entry><title>shell comparisons</title><link href="https://johnmathews.eu/shell-comparisons.html" rel="alternate"/><published>2021-03-02T23:28:35+01:00</published><updated>2021-03-02T23:28:35+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/shell-comparisons.html</id><summary type="html"/><content type="html">&lt;p&gt;You can group shells into groups:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;ksh&lt;/code&gt; - korn shell and zshell&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sh&lt;/code&gt; - bourne shell and bash (the bourne again shell)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Because&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;zsh&lt;/code&gt; isn’t a superset of bash.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bash&lt;/code&gt; is a superset of the bourne shell.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="snippet"/><category term="zsh"/><category term="bash"/><category term="bsh"/><category term="linux"/><category term="cli"/></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"/><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"/><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from stopping&lt;/h1&gt;
-&lt;p&gt;If you run a command in a terminal session and the terminal session is
-disconnected, the processes running in it will also be terminated.&lt;/p&gt;
-&lt;p&gt;I discovered this when I was trying to download a ~500gb database
-overnight. I logged in the next morning expecting to see a completed download, but
-found I only had half the file.&lt;/p&gt;
-&lt;h1 id="use-nohup-to-ignore-hup-signals"&gt;Use &lt;code&gt;nohup&lt;/code&gt; to ignore &lt;code&gt;HUP&lt;/code&gt; signals&lt;/h1&gt;
-&lt;p&gt;One solution to this seems to be to use &lt;code&gt;nohup&lt;/code&gt;, a command that
-ignores the &lt;code&gt;HUP&lt;/code&gt; signal. It stops your programme from stopping if the terminal
-session its running in is stopped.&lt;/p&gt;
-&lt;p&gt;By convention, the &lt;code&gt;HUP&lt;/code&gt; signal is the method used by a terminal to warn
-dependent processes that it is about to logout.&lt;/p&gt;
-&lt;p&gt;You probably want to run &lt;code&gt;nohup&lt;/code&gt; in the background. You might want to prevent
-it from creating &lt;code&gt;nohup.out&lt;/code&gt;.&lt;/p&gt;
-&lt;h1 id="close-or-redirect-fd0-fd2"&gt;Close or redirect fd0 - fd2&lt;/h1&gt;
-&lt;p&gt;On Linux,  &lt;code&gt;nohup&lt;/code&gt; automatically closes &lt;code&gt;stdin&lt;/code&gt;. If you’re using MacOS or &lt;span class="caps"&gt;BSD&lt;/span&gt;
-this doesn’t automatically happen, so you might want to redirect it yourself.
-This is because if a background process tries to read anything from &lt;code&gt;stdin&lt;/code&gt;
-then it will pause itself whilst it waits for you to bring it to the foreground
-and type some input. This is probably a waste of time.&lt;/p&gt;
-&lt;p&gt;If &lt;code&gt;nohup&lt;/code&gt; detects that you have redirected &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; then it won’t
-create &lt;code&gt;nohup.out&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;As with all commands, if you put &lt;code&gt;&amp;amp;&lt;/code&gt; at the end of the command, it will run in
-the background. You can bring it to the foreground by running &lt;code&gt;fg&lt;/code&gt;, or see a
-list of jobs by running &lt;code&gt;jobs&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If you redirect input to /dev/null (&lt;code&gt;) you will stop the program
-from receiving keyboard (stdin) input, but you won’t prevent it from accessing
-the terminal directly. Also you haven’t removed the program from the shell’s
-process group.&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id="stopping-signals-using-disown"&gt;Stopping signals using &lt;code&gt;disown&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;If you want to remove a program from the shell’s process group, then
-immediately after you’ve run the command to start your programme, run &lt;code&gt;disown&lt;/code&gt;
-with no arguments. This will make the background process no longer associated
-with the shell job and it wont have any signals forwarded to it by the shell.&lt;/p&gt;
-&lt;p&gt;A &lt;code&gt;disown&lt;/code&gt;ed process gets nothing (no signals) sent to it by the shell. But
-without a &lt;code&gt;nohup&lt;/code&gt; it will still be sent a &lt;code&gt;HUP&lt;/code&gt; signal sent via other means,
-such as a manual &lt;code&gt;kill&lt;/code&gt; command.&lt;/p&gt;
-&lt;p&gt;A &lt;code&gt;nohup&lt;/code&gt;ed process will ignore any and all &lt;code&gt;HUP&lt;/code&gt; signal, no matter how they
-are sent.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out"&gt;Source&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h1&gt;
-&lt;p&gt;Use &lt;code&gt;w&lt;/code&gt; to see who is logged in and what they are doing. It’s summary of every
-user logged into a computer, what each user is currently doing, and the
-load all the current activity.&lt;/p&gt;
-&lt;p&gt;It’s a combination of &lt;code&gt;who&lt;/code&gt;, &lt;code&gt;uptime&lt;/code&gt;, and &lt;code&gt;ps -a&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="process-groups"&gt;Process Groups&lt;/h2&gt;
-&lt;p&gt;A collection of one or more processes. It’s used to control the distribution of
-a signal. When a signal is directed to a process group, the signal is delivered
-to each process that is a member of the group.&lt;/p&gt;
-&lt;h2 id="sessions"&gt;Sessions&lt;/h2&gt;
-&lt;p&gt;A collection of one or more process groups. A process may not create a process
-group that belongs to another session. A process is not permitted
-to join a process group that is a member of another session. A process
-is not permitted to migrate from one session to another.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"/><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"/><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
-&lt;p&gt;In Linux everything is a file, including virtual devices like keyboards. Processes
-(programmes) can request access to or from these devices.&lt;/p&gt;
-&lt;p&gt;The only difference between these virtual device “files” and real files, is
-that for a virtual device the &lt;span class="caps"&gt;OS&lt;/span&gt; generates the data that goes into the file,
-instead of reading the data from storage.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;/dev/null&lt;/code&gt; is a virtual device that looks like a file and is used to write
-output into a black hole that is discarded, lost forever and never seen. It
-isn’t written to the terminal.&lt;/p&gt;
-&lt;h2 id="file-descriptors"&gt;File Descriptors&lt;/h2&gt;
-&lt;p&gt;File descriptors are integer values assigned to a file. &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;stdin&lt;/strong&gt; has a file descriptor of 0&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;stdout&lt;/strong&gt; has a file descriptor of 1&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;stderr&lt;/strong&gt; has a file descriptor of 2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Two outputs are generated whenever a &lt;span class="caps"&gt;CLI&lt;/span&gt; is run &lt;code&gt;stdout&lt;/code&gt; and
-&lt;code&gt;stderr&lt;/code&gt;. By default, both these data streams are associated with the
-terminal. You can use file descriptors to redirect them.&lt;/p&gt;
-&lt;p&gt;If a command exits successfully, the exit status is 0.&lt;/p&gt;
-&lt;p&gt;If it exits unsuccessfully, the exit status will be something else.&lt;/p&gt;
-&lt;p&gt;If you don’t specify which file descriptor you want to use, bash will use
-&lt;code&gt;stdout&lt;/code&gt; by default.&lt;/p&gt;
-&lt;p&gt;The following redirects &lt;code&gt;stdout&lt;/code&gt; away from the terminal and into &lt;code&gt;/dev/null&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;echo&lt;/span&gt; “Hello World” &amp;gt; log.txt
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This will redirect &lt;code&gt;stderr&lt;/code&gt; into a file:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ asdfadsa &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt; error.txt
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you run a command that generates lots of error messages along with “good”
-messages, you can redirect all the error messages (&lt;code&gt;stderr&lt;/code&gt;) into &lt;code&gt;/dev/null&lt;/code&gt;
-so that you can only see the useful &lt;code&gt;stdout&lt;/code&gt; messages. e.g.:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt; /dev/null
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you want to run a command and only see the errors, (&lt;code&gt;stderr&lt;/code&gt;) then you can
-filter out all the &lt;code&gt;stdout&lt;/code&gt; by redirecting the &lt;code&gt;stdout&lt;/code&gt; messages to
-&lt;code&gt;/dev/null&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ping google.com &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="redirect-all-output-into-devnull-if-you-want-a-command-to-run-quietly"&gt;Redirect all output into /dev/null if you want a command to run quietly,&lt;/h2&gt;
-&lt;p&gt;Redirect all the output. The command below redirects &lt;code&gt;stdout&lt;/code&gt; to &lt;code&gt;/dev/null&lt;/code&gt;
-(the default file descriptor is 1 if it isn’t specified) and then redirects
-file descriptor 2 into file descriptor 1.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ grep -r hello /sys/ &amp;gt; /dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="read-input-from-a-file-instead-of-the-terminal"&gt;Read input from a file instead of the terminal&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;infile &lt;="" pre=""&gt;&lt;/infile&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="direct-stderr-to-append-to-a-particular-file"&gt;Direct stderr to append to a particular file&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&amp;gt;logfile
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="combining-file-descriptors"&gt;Combining file descriptors&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;2&amp;gt;&amp;amp;1&lt;/code&gt; means send &lt;code&gt;stderr&lt;/code&gt; wherever &lt;code&gt;stdout&lt;/code&gt; is going. This means that you’ve
-combined &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; into one data stream and you can’t separate them
-anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as you can &lt;code&gt;stdout&lt;/code&gt;.&lt;/p&gt;
-&lt;h1 id="input"&gt;Input&lt;/h1&gt;
-&lt;p&gt;You can redirect &lt;code&gt;stdin&lt;/code&gt; similarly. If you run &lt;code&gt; then if the program
-attempt to read from &lt;code&gt;stdin&lt;/code&gt; then it will get end-of-file. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The merge (or redirect) syntax (for example &lt;code&gt;&amp;lt;&amp;amp;2&lt;/code&gt;) won’t work, because you can
-only redirect in the same direction.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry></feed>
+vim session) using &lt;code&gt;ctrl-z&lt;/code&gt; &lt;a class="simple-footnote-back" href="#sf-binance-node-api-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/></entry><entry><title>nohup</title><link href="https://johnmathews.eu/nohup.html" rel="alternate"/><published>2021-03-02T23:30:02+01:00</published><updated>2021-03-02T23:30:02+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup.html</id><summary type="html"/><content type="html">&lt;p&gt;Use &lt;code&gt;nohup&lt;/code&gt; to keep a curl process running even when the terminal (tty?) session autocloses at 3am.&lt;/p&gt;</content><category term="snippet"/><category term="linux"/><category term="cli"/></entry></feed>
