@@ -12,18 +12,18 @@
 <meta content="Create Custom Functions in Vim -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" vim " name="keywords"/>
-<meta content=' Vimscript functions Create a custom command and function to create a new file in vim. :h expand() :h %:h command! -nargs=1 Ms call s:NewFile(&lt;q-args&gt;)` function! s:NewFile(fp) echom a:fp execute "e " . "~/foo/bar/" . a:fp . ".ext" endfunction question on SO ' name="description"/>
+<meta content=' Vimscript functions Create a custom command and function to create a new file in vim. command! -nargs=1 Ms call s:NewFile(&lt;q-args&gt;)` function! s:NewFile(fp) echom a:fp execute "e " . "~/foo/bar/" . a:fp . ".ext" endfunction Useful help: :h %:h → filename modifiers :h expand() → expand wildcards, including filename modifiers question on SO ' name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Create Custom Functions in Vim" property="twitter:title"/>
-<meta content=' Vimscript functions Create a custom command and function to create a new file in vim. :h expand() :h %:h command! -nargs=1 Ms call s:NewFile(&lt;q-args&gt;)` function! s:NewFile(fp) echom a:fp execute "e " . "~/foo/bar/" . a:fp . ".ext" endfunction question on SO ' name="twitter:description"/>
+<meta content=' Vimscript functions Create a custom command and function to create a new file in vim. command! -nargs=1 Ms call s:NewFile(&lt;q-args&gt;)` function! s:NewFile(fp) echom a:fp execute "e " . "~/foo/bar/" . a:fp . ".ext" endfunction Useful help: :h %:h → filename modifiers :h expand() → expand wildcards, including filename modifiers question on SO ' name="twitter:description"/>
 <meta content="https://johnmathews.eu/create-custom-functions-in-vim.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Create Custom Functions in Vim" property="og:title"/>
-<meta content=' Vimscript functions Create a custom command and function to create a new file in vim. :h expand() :h %:h command! -nargs=1 Ms call s:NewFile(&lt;q-args&gt;)` function! s:NewFile(fp) echom a:fp execute "e " . "~/foo/bar/" . a:fp . ".ext" endfunction question on SO ' property="og:description"/>
+<meta content=' Vimscript functions Create a custom command and function to create a new file in vim. command! -nargs=1 Ms call s:NewFile(&lt;q-args&gt;)` function! s:NewFile(fp) echom a:fp execute "e " . "~/foo/bar/" . a:fp . ".ext" endfunction Useful help: :h %:h → filename modifiers :h expand() → expand wildcards, including filename modifiers question on SO ' property="og:description"/>
 <meta content="https://johnmathews.eu/create-custom-functions-in-vim.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -254,10 +254,6 @@
 <div class="markdown">
 <h2 id="vimscript-functions">Vimscript functions</h2>
 <p>Create a custom command and function to create a new file in vim.</p>
-<div class="highlight"><pre><span></span><span class="p">:</span><span class="k">h</span> expand<span class="p">()</span>
-
-<span class="p">:</span><span class="k">h</span> %:<span class="k">h</span>
-</pre></div>
 <div class="highlight"><pre><span></span>command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span><span class="m">1</span> Ms <span class="k">call</span> s:NewFile<span class="p">(&lt;</span><span class="k">q</span><span class="p">-</span>args<span class="p">&gt;)</span>`
 
 <span class="k">function</span><span class="p">!</span> s:NewFile<span class="p">(</span><span class="nb">fp</span><span class="p">)</span>
@@ -265,6 +261,11 @@
   execute <span class="s2">"e "</span> . <span class="s2">"~/foo/bar/"</span> . <span class="k">a</span>:<span class="nb">fp</span> . <span class="s2">".ext"</span>
 <span class="k">endfunction</span>
 </pre></div>
+<p>Useful help:</p>
+<ul>
+<li><code>:h %:h</code> → filename modifiers</li>
+<li><code>:h expand()</code> → expand wildcards, including filename modifiers</li>
+</ul>
 <p><a href="https://stackoverflow.com/questions/54354220/trying-to-create-a-vimscript-function-that-creates-a-new-file">question on <span class="caps">SO</span></a></p>
 </div>
 </article>

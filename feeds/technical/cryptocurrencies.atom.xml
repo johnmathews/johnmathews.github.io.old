@@ -201,7 +201,7 @@ analysis that I’ve come across. All the resources used in this article are
 attributed to the original author and have been made freely available on
 Twitter. I hope its &lt;span class="caps"&gt;OK&lt;/span&gt; for me to repost them here, if it’s not then
 let me know and I’ll edit the post.&lt;/p&gt;
-&lt;h3 id="hopefully-helpful-links"&gt;Hopefully helpful links&lt;/h3&gt;
+&lt;h3&gt;Hopefully helpful links&lt;/h3&gt;
 &lt;p&gt;This article assumes some familiarity with blockchains and financial markets.
 Some more general articles on this site are:&lt;/p&gt;
 &lt;ol&gt;
@@ -526,24 +526,24 @@ there is right now.&lt;/p&gt;
 &lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/><category term="Bitcoin"/></entry><entry><title>Pangea</title><link href="https://johnmathews.eu/pangea.html" rel="alternate"/><published>2017-11-22T16:49:00+01:00</published><updated>2017-11-22T16:49:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-22:/pangea.html</id><summary type="html">&lt;p&gt;Communities will always need to create reliable and enforceable agreements with each&amp;nbsp;other.&lt;/p&gt;</summary><content type="html">&lt;h2 id="the-problem"&gt;The problem&lt;/h2&gt;
 &lt;p&gt;In many countries the ability to create legally binding agreements is not available to average citizens. Legal services are often unaffordable and opaque, or service providers are corrupt. Legal services are in need of disruption.&lt;/p&gt;
 &lt;h2 id="the-solution"&gt;The solution&lt;/h2&gt;
-&lt;h3 id="pangea"&gt;Pangea&lt;/h3&gt;
+&lt;h3&gt;Pangea&lt;/h3&gt;
 &lt;p&gt;Bitnation (who I consult for) intends to address this problem by empowering people to self-organise and self-govern. We are building a platform called Pangea which allows users to create, notarise and arbitrate contracts according to a jurisdiction which each party joins voluntarily, irrespective of their geographical location. &lt;/p&gt;
 &lt;p&gt;Pangea is a smart phone app that looks and feels like a chat app, the back-end (called Panthalassa) is an encrypted mesh network hooked up to the Ethereum blockchain. &lt;/p&gt;
-&lt;h3 id="rewarded-for-doing-good-empowered-to-be-a-responsible-citizen"&gt;Rewarded for doing good, empowered to be a responsible citizen&lt;/h3&gt;
+&lt;h3&gt;Rewarded for doing good, empowered to be a responsible citizen&lt;/h3&gt;
 &lt;p&gt;On Pangea, people are incentivised to be good citizens by receiving rewards for doing good, rather than being coerced by the threat of punishment for bad behaviour. &lt;/p&gt;
 &lt;p&gt;This platform would fulfil a vast and unmet need, particularly in countries whose legal systems function poorly. On Pangea, a user voluntarily chooses which jurisdiction to be a part of. Contracts are then notarised, executed and arbitrated according to that jurisdiction. Users voluntarily join a decentralised borderless voluntary nation (&lt;span class="caps"&gt;DBVN&lt;/span&gt;) and will receive tokens (Pangea Arbitration Tokens) as a reward for good behaviour. The tokens will be tradable and will be used as payment on Pangea for notarisation and arbitration services.&lt;/p&gt;
-&lt;h3 id="combining-a-store-of-value-and-access-to-legal-services"&gt;Combining a store of value and access to legal services&lt;/h3&gt;
+&lt;h3&gt;Combining a store of value and access to legal services&lt;/h3&gt;
 &lt;p&gt;Societies cannot escape their need to use currency as stores of value. They also cannot escape their need to create reliable and enforceable agreements (contracts) with each other.&lt;/p&gt;
 &lt;p&gt;Generating Bitcoin through proof of work occurs because individuals believe that Bitcoin will be continuously used — that it will meet an ongoing need to transact using a decentralised and disintermediated method. &lt;/p&gt;
 &lt;p&gt;Generating &lt;span class="caps"&gt;PAT&lt;/span&gt; by being a good citizen will occur because individuals believe that Pangea will be continuously used  — that it will meet an ongoing need to create enforceable agreements using a voluntary and geographically agnostic (and decentralised) method.&lt;/p&gt;
-&lt;h3 id="comments"&gt;Comments&lt;/h3&gt;
+&lt;h3&gt;Comments&lt;/h3&gt;
 &lt;p&gt;There is much still to say about the Pangea platform and the mechanisms which will make it function. Please give feedback and ask questions in the comments. To find out more, visit the &lt;a href="http://bitnation.co"&gt;website&lt;/a&gt;.&lt;/p&gt;</content><category term="Technical/Cryptocurrencies"/><category term="bitnation"/><category term="pangea"/></entry><entry><title>Bitcoin compared to gold</title><link href="https://johnmathews.eu/bitcoin-vs-gold.html" rel="alternate"/><published>2017-11-21T17:35:00+01:00</published><updated>2017-11-21T17:35:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-11-21:/bitcoin-vs-gold.html</id><summary type="html">&lt;p&gt;Bitcoin will become a safe haven asset comparable to&amp;nbsp;gold&lt;/p&gt;</summary><content type="html">&lt;p&gt;A safe haven asset is something to buy during economic uncertainty.
 Historically, the safest asset you can buy has been gold. This is not because
 of anything inherently special about gold, but because that is what people
 believe to be the best long term method of storing value.&lt;/p&gt;
 &lt;p&gt;People believe gold is special because they assume that in future other people
 will believe it’s special.&lt;/p&gt;
-&lt;h3 id="criteria-for-a-safe-haven-asset"&gt;Criteria for a safe haven asset&lt;/h3&gt;
+&lt;h3&gt;Criteria for a safe haven asset&lt;/h3&gt;
 &lt;p&gt;A safe-haven asset must fulfil the following criteria:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Price isn’t controlled by any single party, including a state or bank. The market is spread out beyond the reach of any one organisation. This is important because an asset which is issued, controlled or backed by an organisation has its value tied to the health of that organisation.&lt;/li&gt;
@@ -557,7 +557,7 @@ will believe it’s special.&lt;/p&gt;
 &lt;p&gt;For these reasons, and because of historical consensus, people have been happy
 to use gold as a store of value in times of economic uncertainty or for long
 durations. Other assets also meets these requirements to lesser extents.&lt;/p&gt;
-&lt;h3 id="bitcoin-compared-to-gold"&gt;Bitcoin compared to gold&lt;/h3&gt;
+&lt;h3&gt;Bitcoin compared to gold&lt;/h3&gt;
 &lt;p&gt;Consider why gold is so good as a safe haven asset and long term value store.
 For all the reasons above, bitcoin is better, except one: At present, not many
 people consider it to be precious and valuable, so the market is small. This
@@ -572,7 +572,7 @@ services and applications matures.&lt;/p&gt;
 &lt;li&gt;Bitcoin is impossible to fake.&lt;/li&gt;
 &lt;li&gt;Bitcoin can be stored and transported more easily than gold. - If you can remember 24 words then you can access your bitcoin for free from any internet connection.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="read-more"&gt;Read more&lt;/h3&gt;
+&lt;h3&gt;Read more&lt;/h3&gt;
 &lt;p&gt;This
 &lt;a href="http://www.runtogold.com/the-great-bitcoin-bull-market-of-2017/"&gt;article&lt;/a&gt;,
 published a week after I wrote this post, looks at different factors to
@@ -595,9 +595,9 @@ relative to what I’ve seen in other articles.&lt;/p&gt;</content><category te
 &lt;li&gt;two or more buttons&lt;/li&gt;
 &lt;li&gt;to  plug into a &lt;span class="caps"&gt;USB&lt;/span&gt; port&lt;/li&gt;
 &lt;li&gt;securely sign transactions and create addresses&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/><category term="wallet"/><category term="crypto"/><category term="blockchain"/><category term="bitcoin"/></entry><entry><title>Bitnation</title><link href="https://johnmathews.eu/bitnation.html" rel="alternate"/><published>2017-09-14T11:25:00+02:00</published><updated>2017-09-14T11:25:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-09-14:/bitnation.html</id><summary type="html">&lt;p&gt;I&amp;rsquo;m about to begin consulting for &lt;a href="http://bitnation.co"&gt;Bitnation&lt;/a&gt; as their finance&amp;nbsp;officer.&lt;/p&gt;</summary><content type="html">&lt;h3 id="im-consulting"&gt;I’m Consulting&lt;/h3&gt;
+&lt;/ol&gt;</content><category term="Technical/Cryptocurrencies"/><category term="wallet"/><category term="crypto"/><category term="blockchain"/><category term="bitcoin"/></entry><entry><title>Bitnation</title><link href="https://johnmathews.eu/bitnation.html" rel="alternate"/><published>2017-09-14T11:25:00+02:00</published><updated>2017-09-14T11:25:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2017-09-14:/bitnation.html</id><summary type="html">&lt;p&gt;I&amp;rsquo;m about to begin consulting for &lt;a href="http://bitnation.co"&gt;Bitnation&lt;/a&gt; as their finance&amp;nbsp;officer.&lt;/p&gt;</summary><content type="html">&lt;h3&gt;I’m Consulting&lt;/h3&gt;
 &lt;p&gt;Next week I begin working with &lt;a href="http://bitnation.co"&gt;Bitnation&lt;/a&gt; as their finance officer. I’m excited about this because I get to work on a really ambitious project using new technology to do something innovative and valuable. &lt;/p&gt;
-&lt;h3 id="bitnation"&gt;Bitnation&lt;/h3&gt;
+&lt;h3&gt;Bitnation&lt;/h3&gt;
 &lt;p&gt;Bitnation’s purpose is to offer the same services as governments do, in a way that delivers more benefit to users. &lt;/p&gt;
 &lt;p&gt;In the West this may not immediately sound like a big deal. Our governments are fairly organised and the services are usually “good enough”. Most significantly, we are not used to thinking about &lt;span class="caps"&gt;ID&lt;/span&gt; services (passports, visa, drivers licences) or registration services (land registry, marriage certificates) as a service that we are customers of - like our internet service provider, or our electricity supplier. &lt;/p&gt;
 &lt;p&gt;In many parts of the world dysfunctional or unjust governments represent a huge obstacle to improving everyday life, the progress and achievement that many people can hope to realise is limited because of this. &lt;/p&gt;
@@ -616,10 +616,10 @@ relative to what I’ve seen in other articles.&lt;/p&gt;</content><category te
 &lt;p&gt;You can do a bunch of stuff with Parity including mining Ether, manage accounts, interact with different dapps, send/receive from different accounts, and set up contracts. On the accounts tab, you can quickly set up Multi-Signature wallets. If you use the Chrome plugin you will also get handy notifications when transactions are confirmed or contracts deployed.&lt;/p&gt;
 &lt;h2 id="download-and-open-parity"&gt;Download and open Parity&lt;/h2&gt;
 &lt;p&gt;For MacOS you can download and install Parity by visiting the Parity site and downloading the &lt;a href="https://parity.io/parity.html"&gt;installer&lt;/a&gt;, or from the terminal using curl or Homebrew.&lt;/p&gt;
-&lt;h3 id="simple-option"&gt;Simple option&lt;/h3&gt;
+&lt;h3&gt;Simple option&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   $ bash &amp;lt;&lt;span class="o"&gt;(&lt;/span&gt;curl https://get.parity.io -kL&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="homebrew"&gt;Homebrew&lt;/h3&gt;
+&lt;h3&gt;Homebrew&lt;/h3&gt;
 &lt;p&gt;Detailed instructions are &lt;a href="https://github.com/paritytech/homebrew-paritytech"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   brew tap paritytech/paritytech
    brew install parity --stable
@@ -726,7 +726,7 @@ relative to what I’ve seen in other articles.&lt;/p&gt;</content><category te
 &lt;/ul&gt;
 &lt;p&gt;As the number of people in the network grows, the transfer of coins from one user to another becomes harder to track. If every users ledger is not identical then the opportunity arises to use coins that have already been spent to pay someone who doesn’t know they’ve already been used. &lt;/p&gt;
 &lt;p&gt;This is double spending, and is possible because the ledger that is shared amongst all members of the group only has &lt;em&gt;weak consistency&lt;/em&gt; - it is not necessarily correct all the time in all locations. &lt;/p&gt;
-&lt;h3 id="weak-consistency"&gt;Weak Consistency&lt;/h3&gt;
+&lt;h3&gt;Weak Consistency&lt;/h3&gt;
 &lt;p&gt;Weak consistency could be solved by requiring that everyone votes to accept a transaction before it is accepted into the ledger (Unanimous consensus), or to save time we could reduce the requirements so that only 50% of all users validate a transaction before it is accepted into the ledger (Quorum consensus). Either of these solutions is possible for a small local group with a list of all users. &lt;/p&gt;
 &lt;p&gt;However Unanimous or Quorum Consensus doesn’t solve the weak consistency problem if:&lt;/p&gt;
 &lt;ol&gt;
@@ -742,7 +742,7 @@ relative to what I’ve seen in other articles.&lt;/p&gt;</content><category te
 &lt;h2 id="distributed-consensus"&gt;Distributed Consensus&lt;/h2&gt;
 &lt;p&gt;When the number and identity of participants is known, distributed consensus is possible. Two types of protocol which allows all users in a distributed system to agree on a transaction are the &lt;a href="https://en.wikipedia.org/wiki/Paxos_(computer_science)"&gt;Paxos&lt;/a&gt; family of protocols and the &lt;a href="http://courses.cs.vt.edu/~cs5204/fall00/distributedDBMS/duckett/tpcp.html"&gt;Two-phase commit&lt;/a&gt; protocol. Both of these would require that at least 50% of all users reach agreement in order to add a new transaction. &lt;/p&gt;
 &lt;p&gt;However in a public peer-to-peer network the total number of active users is not known - its  fast and cheap to create new user profiles, and existing user profiles may become dormant. This makes it impossible to know how many users 50% would be. Additionally, because its possible to cheaply create new user profiles (just generate a new public-private key pair), a single actor could generate and control many user accounts in order to have many votes and force incorrect transactions onto the ledger. An attack where one user subverts a network by creating many profiles is known as a &lt;a href="https://en.wikipedia.org/wiki/Sybil_attack"&gt;Sybil attack&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="proof-of-work"&gt;Proof of Work&lt;/h3&gt;
+&lt;h3&gt;Proof of Work&lt;/h3&gt;
 &lt;p&gt;The solution to the Sybil attack is to increase the cost of verifying a transaction such that the cost exceeds the reward. This is achieved through proof-of-work (PoW) algorithms, which are computationally expensive for a sender claiming to have verified a transaction, and computationally simple for the receiver to verify that the sender has validated the transaction.&lt;/p&gt;
 &lt;p&gt;One possible Proof of Work approach is to require that the hash of a verification message begins with a certain set of characters. The chosen set of characters is called a &lt;em&gt;nonce&lt;/em&gt; and the only way to create a verification message with an acceptable hash is to try many slightly different messages. For example, a nonce may be 3 zeros. It’s arbitrary, but the longer the nonce is the more difficult it becomes to find a hash that fits the requirements. &lt;/p&gt;
 &lt;p&gt;This is because a hash is a random list of characters, and altering even a single part of the data being hashed will result in a completely different hash value. Therefore there is no way to predict a hash value. The only way to generate a hash with the required none is to  repeatedly alter the data being hashed (even by just one character) until a hash with the required features is randomly achieved. This is computationally expensive to achieve, but computationally simple to verify. &lt;/p&gt;
@@ -1008,22 +1008,22 @@ challenges, I hope they’re successful and wish them well.    &lt;/p&gt;</cont
 &lt;p&gt;Named after its founders (&lt;a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest"&gt;Ron Rivest&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir"&gt;Adi Shamir&lt;/a&gt;, and &lt;a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard"&gt;Leonard Adleman&lt;/a&gt;), &lt;span class="caps"&gt;RSA&lt;/span&gt; was one of the first public-key encryption algorithms and is still widely used.&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;RSA&lt;/span&gt; (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number &lt;span class="math"&gt;\(n\)&lt;/span&gt; has been defined, if a number greater than &lt;span class="math"&gt;\(n\)&lt;/span&gt; is created the result simply loops around to 0 and begins counting from 0 again. i.e. if &lt;span class="math"&gt;\(n = 10\)&lt;/span&gt;, then &lt;span class="math"&gt;\(7 + 5 = 12 - 10 = 2\)&lt;/span&gt;. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. &lt;span class="math"&gt;\(12 / 10 = 1\)&lt;/span&gt; with &lt;span class="math"&gt;\(2\)&lt;/span&gt; remaining.&lt;/p&gt;
 &lt;h2 id="generation-of-a-pair-of-rsa-keys"&gt;Generation of a pair of &lt;span class="caps"&gt;RSA&lt;/span&gt; keys:&lt;/h2&gt;
-&lt;h3 id="1-generate-the-rsa-module"&gt;1. Generate the &lt;span class="caps"&gt;RSA&lt;/span&gt; module&lt;/h3&gt;
+&lt;h3&gt;1. Generate the &lt;span class="caps"&gt;RSA&lt;/span&gt; module&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Select two large random prime numbers, &lt;span class="math"&gt;\(p\)&lt;/span&gt; and &lt;span class="math"&gt;\(q\)&lt;/span&gt;. They need to be random because anyone who knows or guesses them will be able to decrypt the encryption.&lt;/li&gt;
 &lt;li&gt;Calculate &lt;span class="math"&gt;\(n = pq\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="2-find-derived-number-e"&gt;2. Find derived number (e)&lt;/h3&gt;
+&lt;h3&gt;2. Find derived number (e)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;e&lt;/em&gt; must be greater than 1 and less than &lt;span class="math"&gt;\(( p - 1)( q - 1)\)&lt;/span&gt;.&lt;/li&gt;
 &lt;li&gt;There must be no common factor for e and &lt;span class="math"&gt;\(( p - 1)( q - 1)\)&lt;/span&gt; except for 1. &lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="3-form-the-public-key"&gt;3. Form the public key&lt;/h3&gt;
+&lt;h3&gt;3. Form the public key&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;The pair of numbers &lt;span class="math"&gt;\((n, e)\)&lt;/span&gt; form the public key and can be made public.&lt;/li&gt;
 &lt;li&gt;Even though &lt;span class="math"&gt;\(n\)&lt;/span&gt; is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of &lt;span class="caps"&gt;RSA&lt;/span&gt; rests entirely on the difficulty of factoring &lt;span class="math"&gt;\(n\)&lt;/span&gt; into its two component prime numbers.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="4-generate-the-private-key-d"&gt;4. Generate the private key (d)&lt;/h3&gt;
+&lt;h3&gt;4. Generate the private key (d)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;The private key is generated from using &lt;span class="math"&gt;\(p\)&lt;/span&gt;, &lt;span class="math"&gt;\(q\)&lt;/span&gt; and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer &lt;span class="math"&gt;\(d\)&lt;/span&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;span class="math"&gt;\(d\)&lt;/span&gt; is the inverse of &lt;span class="math"&gt;\(e\)&lt;/span&gt; modulo &lt;span class="math"&gt;\(( p - 1)( q - 1 )\)&lt;/span&gt;. This means that &lt;span class="math"&gt;\(d\)&lt;/span&gt; is the number less than &lt;span class="math"&gt;\(( p - 1 ) ( q - 1 )\)&lt;/span&gt; such that when it is multiplied by e, it is equal to &lt;span class="math"&gt;\(1\)&lt;/span&gt; modulo &lt;span class="math"&gt;\(( p - 1 ) ( q - 1 )\)&lt;/span&gt;.&lt;/li&gt;
@@ -1035,7 +1035,7 @@ challenges, I hope they’re successful and wish them well.    &lt;/p&gt;</cont
 &lt;p&gt;Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime numbers.&lt;/p&gt;
 &lt;p&gt;Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key &lt;span class="math"&gt;\(d\)&lt;/span&gt;, which is 29.&lt;/p&gt;
 &lt;p&gt;Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional &lt;span class="caps"&gt;RSA&lt;/span&gt; system.&lt;/p&gt;
-&lt;h3 id="encoding"&gt;Encoding&lt;/h3&gt;
+&lt;h3&gt;Encoding&lt;/h3&gt;
 &lt;p&gt;To encode a letter H in a message (‘H’ is &lt;span class="math"&gt;\(72\)&lt;/span&gt; in &lt;span class="caps"&gt;UTF&lt;/span&gt;-8), we need to multiply it by itself &lt;span class="math"&gt;\(e\)&lt;/span&gt; times (&lt;span class="math"&gt;\(e = 5\)&lt;/span&gt;), remembering to wrap around each time we pass our maximum value of &lt;span class="math"&gt;\(n = 91\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;\(72 \times 72 = 5184, 5184 / 91 = 56\)&lt;/span&gt; with &lt;span class="math"&gt;\(88\)&lt;/span&gt; remaining, (i.e. &lt;span class="math"&gt;\(5184 = 91 \times 56 + 88\)&lt;/span&gt;). Therefore:
 &lt;span class="math"&gt;\(72 \times 72 = 5184 = 88\)&lt;/span&gt;
@@ -1054,7 +1054,7 @@ challenges, I hope they’re successful and wish them well.    &lt;/p&gt;</cont
 &lt;h2 id="files"&gt;Files&lt;/h2&gt;
 &lt;p&gt;The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded &lt;a href="https://johnmathews.eu/RSA-Example.xlsx"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;A simple python script to encrypt and decrypt a message is &lt;a href="https://johnmathews.eu/AES_Example.py"&gt;here&lt;/a&gt;. It uses the &lt;span class="caps"&gt;AES&lt;/span&gt; encryption method.&lt;/p&gt;
-&lt;h3 id="footnotes"&gt;Footnotes&lt;/h3&gt;
+&lt;h3&gt;Footnotes&lt;/h3&gt;
 &lt;div class="footnote"&gt;
 &lt;hr/&gt;
 &lt;ol&gt;

@@ -270,22 +270,22 @@
 <p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a>, and <a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard">Leonard Adleman</a>), <span class="caps">RSA</span> was one of the first public-key encryption algorithms and is still widely used.</p>
 <p><span class="caps">RSA</span> (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number <span class="math">\(n\)</span> has been defined, if a number greater than <span class="math">\(n\)</span> is created the result simply loops around to 0 and begins counting from 0 again. i.e. if <span class="math">\(n = 10\)</span>, then <span class="math">\(7 + 5 = 12 - 10 = 2\)</span>. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. <span class="math">\(12 / 10 = 1\)</span> with <span class="math">\(2\)</span> remaining.</p>
 <h2 id="generation-of-a-pair-of-rsa-keys">Generation of a pair of <span class="caps">RSA</span> keys:</h2>
-<h3 id="1-generate-the-rsa-module">1. Generate the <span class="caps">RSA</span> module</h3>
+<h3>1. Generate the <span class="caps">RSA</span> module</h3>
 <ul>
 <li>Select two large random prime numbers, <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. They need to be random because anyone who knows or guesses them will be able to decrypt the encryption.</li>
 <li>Calculate <span class="math">\(n = pq\)</span></li>
 </ul>
-<h3 id="2-find-derived-number-e">2. Find derived number (e)</h3>
+<h3>2. Find derived number (e)</h3>
 <ul>
 <li><em>e</em> must be greater than 1 and less than <span class="math">\(( p - 1)( q - 1)\)</span>.</li>
 <li>There must be no common factor for e and <span class="math">\(( p - 1)( q - 1)\)</span> except for 1. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
 </ul>
-<h3 id="3-form-the-public-key">3. Form the public key</h3>
+<h3>3. Form the public key</h3>
 <ul>
 <li>The pair of numbers <span class="math">\((n, e)\)</span> form the public key and can be made public.</li>
 <li>Even though <span class="math">\(n\)</span> is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of <span class="caps">RSA</span> rests entirely on the difficulty of factoring <span class="math">\(n\)</span> into its two component prime numbers.</li>
 </ul>
-<h3 id="4-generate-the-private-key-d">4. Generate the private key (d)</h3>
+<h3>4. Generate the private key (d)</h3>
 <ul>
 <li>The private key is generated from using <span class="math">\(p\)</span>, <span class="math">\(q\)</span> and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer <span class="math">\(d\)</span>.</li>
 <li><span class="math">\(d\)</span> is the inverse of <span class="math">\(e\)</span> modulo <span class="math">\(( p - 1)( q - 1 )\)</span>. This means that <span class="math">\(d\)</span> is the number less than <span class="math">\(( p - 1 ) ( q - 1 )\)</span> such that when it is multiplied by e, it is equal to <span class="math">\(1\)</span> modulo <span class="math">\(( p - 1 ) ( q - 1 )\)</span>.</li>
@@ -297,7 +297,7 @@
 <p>Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime numbers.</p>
 <p>Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key <span class="math">\(d\)</span>, which is 29.</p>
 <p>Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional <span class="caps">RSA</span> system.</p>
-<h3 id="encoding">Encoding</h3>
+<h3>Encoding</h3>
 <p>To encode a letter H in a message (‘H’ is <span class="math">\(72\)</span> in <span class="caps">UTF</span>-8), we need to multiply it by itself <span class="math">\(e\)</span> times (<span class="math">\(e = 5\)</span>), remembering to wrap around each time we pass our maximum value of <span class="math">\(n = 91\)</span>.</p>
 <p><span class="math">\(72 \times 72 = 5184, 5184 / 91 = 56\)</span> with <span class="math">\(88\)</span> remaining, (i.e. <span class="math">\(5184 = 91 \times 56 + 88\)</span>). Therefore:
 <span class="math">\(72 \times 72 = 5184 = 88\)</span>
@@ -316,7 +316,7 @@
 <h2 id="files">Files</h2>
 <p>The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded <a href="https://johnmathews.eu/RSA-Example.xlsx">here</a>.</p>
 <p>A simple python script to encrypt and decrypt a message is <a href="https://johnmathews.eu/AES_Example.py">here</a>. It uses the <span class="caps">AES</span> encryption method.</p>
-<h3 id="footnotes">Footnotes</h3>
+<h3>Footnotes</h3>
 <div class="footnote">
 <hr/>
 <ol>

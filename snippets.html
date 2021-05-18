@@ -245,6 +245,30 @@
 <div class="my-0 py-0">
 <h2 class="font-bold my-5 text-3xl dark:text-gray-100">May</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-3 lg:gap-5">
+<div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="grep-particular-files-only.html">
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="title">Title</h2>
+<div class="highlight"><pre><span></span>grep -inr --include package.json <span class="s1">'shortcut": {'</span> . -A <span class="m">3</span>
+</pre></div>
+<p>Its the <code>--include</code> flag that does the important part.</p>
+<p><code>-i</code> → case insensitive<br/>
+<code>-n</code> → print line number<br/>
+<code>-r</code> → recursive from starting page<br/>
+<code>.</code> → start in current directory<br/>
+<code>-A 3</code> → print the 3 lines below the found line</p> </div> </div>
+<div class="border-t-2 border-gray-200 dark:border-gray-700">
+<div class="markdown mx-5 mb-1 mt-2">
+<div class="text-sm font-mono"> 18 May 2021 </div>
+</div>
+<div class="flex flex-wrap px-3 mt-1 mb-2">
+<div class="mx-1 px-1 my-1 text-sm font-mono rounded-lg border-2 border border-gray-600 dark:border-gray-200 dark:text-gray-300 bg-gray-200 dark:bg-gray-600"> 
+                                  grep
+                                </div>
+<div class="mx-1 px-1 my-1 text-sm font-mono rounded-lg border-2 border border-gray-600 dark:border-gray-200 dark:text-gray-300 bg-gray-200 dark:bg-gray-600"> 
+                                  linux
+                                </div>
+</div>
+</div>
+</div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="vim-debug-mapping.html">
 <div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="view-a-list-of-keyboard-mappings-in-vim">View a list of keyboard mappings in Vim</h2>
 <p><code>:map</code> → show a list of the current keyboard mappings for <em>normal</em>, <em>visual</em>, <em>select</em> and <em>operator pending</em> modes.</p>
@@ -415,10 +439,6 @@ colorscheme is loaded. Perhaps this will stop me <code>:e</code>-ing so frequen
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="create-custom-functions-in-vim.html">
 <div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="vimscript-functions">Vimscript functions</h2>
 <p>Create a custom command and function to create a new file in vim.</p>
-<div class="highlight"><pre><span></span><span class="p">:</span><span class="k">h</span> expand<span class="p">()</span>
-
-<span class="p">:</span><span class="k">h</span> %:<span class="k">h</span>
-</pre></div>
 <div class="highlight"><pre><span></span>command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span><span class="m">1</span> Ms <span class="k">call</span> s:NewFile<span class="p">(&lt;</span><span class="k">q</span><span class="p">-</span>args<span class="p">&gt;)</span>`
 
 <span class="k">function</span><span class="p">!</span> s:NewFile<span class="p">(</span><span class="nb">fp</span><span class="p">)</span>
@@ -426,6 +446,11 @@ colorscheme is loaded. Perhaps this will stop me <code>:e</code>-ing so frequen
   execute <span class="s2">"e "</span> . <span class="s2">"~/foo/bar/"</span> . <span class="k">a</span>:<span class="nb">fp</span> . <span class="s2">".ext"</span>
 <span class="k">endfunction</span>
 </pre></div>
+<p>Useful help:</p>
+<ul>
+<li><code>:h %:h</code> → filename modifiers</li>
+<li><code>:h expand()</code> → expand wildcards, including filename modifiers</li>
+</ul>
 <p><a href="https://stackoverflow.com/questions/54354220/trying-to-create-a-vimscript-function-that-creates-a-new-file">question on <span class="caps">SO</span></a></p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">

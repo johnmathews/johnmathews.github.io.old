@@ -12,18 +12,18 @@
 <meta content="More VIM Notes -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" tips,vim " name="keywords"/>
-<meta content=" Table of Contents Quickfix list Registers Expression register Substitutions Command line Delete stuff without leaving insert mode: Text objects Screen Movement Sources Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9... " name="description"/>
+<meta content=" Table of Contents Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9 contains the content you’ve deleted or changed _ blackhole register - send something here and it wont change any other register. - contains any deleted... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="More VIM Notes" property="twitter:title"/>
-<meta content=" Table of Contents Quickfix list Registers Expression register Substitutions Command line Delete stuff without leaving insert mode: Text objects Screen Movement Sources Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9... " name="twitter:description"/>
+<meta content=" Table of Contents Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9 contains the content you’ve deleted or changed _ blackhole register - send something here and it wont change any other register. - contains any deleted... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/more-vim-notes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="More VIM Notes" property="og:title"/>
-<meta content=" Table of Contents Quickfix list Registers Expression register Substitutions Command line Delete stuff without leaving insert mode: Text objects Screen Movement Sources Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9... " property="og:description"/>
+<meta content=" Table of Contents Quickfix list A quickfix list is a set of positions in one or more files A quckfix list is global. Not local to a particular buffer. A quickfix list is not the quickfix window. The window can show the list. The list is a datastructure. A changelist is local to its buffer. Registers 0 contains the content of the last yank 1-9 contains the content you’ve deleted or changed _ blackhole register - send something here and it wont change any other register. - contains any deleted... " property="og:description"/>
 <meta content="https://johnmathews.eu/more-vim-notes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -252,26 +252,16 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<div class="toc"><span class="toctitle">Table of Contents</span><ul>
-<li><a href="#quickfix-list">Quickfix list</a></li>
-<li><a href="#registers">Registers</a></li>
-<li><a href="#expression-register">Expression register</a></li>
-<li><a href="#substitutions">Substitutions</a></li>
-<li><a href="#command-line">Command line</a></li>
-<li><a href="#delete-stuff-without-leaving-insert-mode">Delete stuff without leaving insert mode:</a></li>
-<li><a href="#text-objects">Text objects</a></li>
-<li><a href="#screen-movement">Screen Movement</a></li>
-<li><a href="#sources">Sources</a></li>
-</ul>
+<div class="toc"><span class="toctitle">Table of Contents</span><ul></ul>
 </div>
-<h3 id="quickfix-list">Quickfix list</h3>
+<h3>Quickfix list</h3>
 <ul>
 <li>A quickfix list is a set of positions in one or more files</li>
 <li>A quckfix list is global. Not local to a particular buffer.</li>
 <li>A quickfix list is <em>not</em> the quickfix window. The window can show the list. The list is a datastructure.</li>
 <li>A changelist is local to its buffer.</li>
 </ul>
-<h3 id="registers">Registers</h3>
+<h3>Registers</h3>
 <ul>
 <li><code>0</code> contains the content of the last yank</li>
 <li>
@@ -283,24 +273,24 @@
 <li><code>-</code> contains any deleted or changed content smaller than 1 row.</li>
 <li><code>%</code> contains the name of the current file.</li>
 </ul>
-<h3 id="expression-register">Expression register</h3>
+<h3>Expression register</h3>
 <ol>
 <li>In insert mode, <code>&lt;C-r&gt;=</code>.</li>
 <li>Type any valid vimscript.</li>
 <li>The output is inserted into the buffer.</li>
 </ol>
-<h3 id="substitutions">Substitutions</h3>
+<h3>Substitutions</h3>
 <ul>
 <li><code>:&amp;&amp;</code> → repeat the last substitution command with its flags</li>
 <li><code>:~</code> → repeat the lat substitution with the same replacement, but with the last used search pattern</li>
 </ul>
-<h3 id="command-line">Command line</h3>
+<h3>Command line</h3>
 <ul>
 <li><code>q:</code> - opens the command line window. Good for yanking and viewing previous commands</li>
 <li><code>:&lt;C-f&gt;</code> - open command history list</li>
 <li><code>:UltiSnipsEdit</code> - opens the ultiSnips file for the current buffers filetype. See which snippets are defined.</li>
 </ul>
-<h3 id="delete-stuff-without-leaving-insert-mode">Delete stuff without leaving insert mode:</h3>
+<h3>Delete stuff without leaving insert mode:</h3>
 <ul>
 <li><code>&lt;C-h&gt;</code> - same as backspace</li>
 <li><code>&lt;C-w&gt;</code> - delete previous word</li>
@@ -308,7 +298,7 @@
 <li><code>&lt;C-d&gt;</code> or <code>&lt;C-t&gt;</code> - (un)indent a row</li>
 <li><code>&lt;C-e&gt;</code> - delete next word</li>
 </ul>
-<h3 id="text-objects">Text objects</h3>
+<h3>Text objects</h3>
 <ul>
 <li><code>gf</code> - edit the file at the file path under the cursor (useful for netrw?)</li>
 <li><code>gx</code> - open the file at the file path under the cursor (useful for netrw?)</li>
@@ -322,14 +312,14 @@ of lines (with the current line being the top line). <code>3&gt;&gt;..</code> wi
 lines 3 blocks to the right.</p>
 </li>
 </ul>
-<h3 id="screen-movement">Screen Movement</h3>
+<h3>Screen Movement</h3>
 <ul>
 <li><code>&lt;C-y&gt;</code> - up one line, and moves the cursor if it would go off the screen</li>
 <li><code>&lt;C-e&gt;</code> - down one line, and moves the cursor if it would go off screen</li>
 <li><code>&lt;C-f&gt;</code> - down one page, with cursor at top of screen</li>
 <li><code>&lt;C-b&gt;</code> - up one page, with cursor at bottom of screen</li>
 </ul>
-<h3 id="sources">Sources</h3>
+<h3>Sources</h3>
 <ol>
 <li><em><a href="https://thevaluable.dev/vim-advanced/">The Valuable Dev</a></em> has a lot of great tips.</li>
 <li><em><a href="https://www.vimfromscratch.com/articles/vim-for-python/">Vim for Python</a></em> has some great notes on linting and code completion plugins that I’ve either copied or was more or less doing already.</li>

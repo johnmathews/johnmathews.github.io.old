@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-18T10:37:17+02:00</updated><entry><title>debug mappings in vim</title><link href="https://johnmathews.eu/vim-debug-mapping.html" rel="alternate"/><published>2021-05-18T10:37:17+02:00</published><updated>2021-05-18T10:37:17+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-18:/vim-debug-mapping.html</id><summary type="html"/><content type="html">&lt;h2 id="view-a-list-of-keyboard-mappings-in-vim"&gt;View a list of keyboard mappings in Vim&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/all.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-18T13:11:15+02:00</updated><entry><title>Grep inside particular files only</title><link href="https://johnmathews.eu/grep-particular-files-only.html" rel="alternate"/><published>2021-05-18T13:11:15+02:00</published><updated>2021-05-18T13:11:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-18:/grep-particular-files-only.html</id><summary type="html"/><content type="html">&lt;h2 id="title"&gt;Title&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep -inr --include package.json &lt;span class="s1"&gt;'shortcut": {'&lt;/span&gt; . -A &lt;span class="m"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Its the &lt;code&gt;--include&lt;/code&gt; flag that does the important part.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-i&lt;/code&gt; → case insensitive&lt;br/&gt;
+&lt;code&gt;-n&lt;/code&gt; → print line number&lt;br/&gt;
+&lt;code&gt;-r&lt;/code&gt; → recursive from starting page&lt;br/&gt;
+&lt;code&gt;.&lt;/code&gt; → start in current directory&lt;br/&gt;
+&lt;code&gt;-A 3&lt;/code&gt; → print the 3 lines below the found line&lt;/p&gt;</content><category term="snippet"/><category term="grep"/><category term="linux"/></entry><entry><title>debug mappings in vim</title><link href="https://johnmathews.eu/vim-debug-mapping.html" rel="alternate"/><published>2021-05-18T10:37:17+02:00</published><updated>2021-05-18T10:37:17+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-18:/vim-debug-mapping.html</id><summary type="html"/><content type="html">&lt;h2 id="view-a-list-of-keyboard-mappings-in-vim"&gt;View a list of keyboard mappings in Vim&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;:map&lt;/code&gt; → show a list of the current keyboard mappings for &lt;em&gt;normal&lt;/em&gt;, &lt;em&gt;visual&lt;/em&gt;, &lt;em&gt;select&lt;/em&gt; and &lt;em&gt;operator pending&lt;/em&gt; modes.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:map!&lt;/code&gt; → show a list of the current keyboard mappings for &lt;em&gt;insert&lt;/em&gt; and &lt;em&gt;command-line&lt;/em&gt; mode&lt;/p&gt;
 &lt;p&gt;Top put all the mappings into a convenient text file:&lt;/p&gt;
@@ -91,26 +99,16 @@ reaching longevity: the Netherlands Cohort Study
 &lt;li&gt;^ and $ works like in regex&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;la a*.{doc,docx}&lt;/code&gt; → &lt;span class="caps"&gt;OR&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ls a*.(doc|docx)&lt;/code&gt; → &lt;span class="caps"&gt;OR&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="snippet"/><category term="linux"/></entry><entry><title>More VIM Notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-05-10T10:44:00+02:00</published><updated>2021-05-10T10:44:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-10:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#quickfix-list"&gt;Quickfix list&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#registers"&gt;Registers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#expression-register"&gt;Expression register&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#substitutions"&gt;Substitutions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#command-line"&gt;Command line&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#delete-stuff-without-leaving-insert-mode"&gt;Delete stuff without leaving insert mode:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#text-objects"&gt;Text objects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#screen-movement"&gt;Screen Movement&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#sources"&gt;Sources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;</content><category term="snippet"/><category term="linux"/></entry><entry><title>More VIM Notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-05-10T10:44:00+02:00</published><updated>2021-05-10T10:44:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-10:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;&lt;/ul&gt;
 &lt;/div&gt;
-&lt;h3 id="quickfix-list"&gt;Quickfix list&lt;/h3&gt;
+&lt;h3&gt;Quickfix list&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;A quickfix list is a set of positions in one or more files&lt;/li&gt;
 &lt;li&gt;A quckfix list is global. Not local to a particular buffer.&lt;/li&gt;
 &lt;li&gt;A quickfix list is &lt;em&gt;not&lt;/em&gt; the quickfix window. The window can show the list. The list is a datastructure.&lt;/li&gt;
 &lt;li&gt;A changelist is local to its buffer.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="registers"&gt;Registers&lt;/h3&gt;
+&lt;h3&gt;Registers&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;0&lt;/code&gt; contains the content of the last yank&lt;/li&gt;
 &lt;li&gt;
@@ -122,24 +120,24 @@ reaching longevity: the Netherlands Cohort Study
 &lt;li&gt;&lt;code&gt;-&lt;/code&gt; contains any deleted or changed content smaller than 1 row.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;%&lt;/code&gt; contains the name of the current file.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="expression-register"&gt;Expression register&lt;/h3&gt;
+&lt;h3&gt;Expression register&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;In insert mode, &lt;code&gt;&lt;c-r&gt;=&lt;/c-r&gt;&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Type any valid vimscript.&lt;/li&gt;
 &lt;li&gt;The output is inserted into the buffer.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="substitutions"&gt;Substitutions&lt;/h3&gt;
+&lt;h3&gt;Substitutions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;:&amp;amp;&amp;amp;&lt;/code&gt; → repeat the last substitution command with its flags&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:~&lt;/code&gt; → repeat the lat substitution with the same replacement, but with the last used search pattern&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="command-line"&gt;Command line&lt;/h3&gt;
+&lt;h3&gt;Command line&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;q:&lt;/code&gt; - opens the command line window. Good for yanking and viewing previous commands&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:&lt;c-f&gt;&lt;/c-f&gt;&lt;/code&gt; - open command history list&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:UltiSnipsEdit&lt;/code&gt; - opens the ultiSnips file for the current buffers filetype. See which snippets are defined.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="delete-stuff-without-leaving-insert-mode"&gt;Delete stuff without leaving insert mode:&lt;/h3&gt;
+&lt;h3&gt;Delete stuff without leaving insert mode:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-h&gt;&lt;/c-h&gt;&lt;/code&gt; - same as backspace&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-w&gt;&lt;/c-w&gt;&lt;/code&gt; - delete previous word&lt;/li&gt;
@@ -147,7 +145,7 @@ reaching longevity: the Netherlands Cohort Study
 &lt;li&gt;&lt;code&gt;&lt;c-d&gt;&lt;/c-d&gt;&lt;/code&gt; or &lt;code&gt;&lt;c-t&gt;&lt;/c-t&gt;&lt;/code&gt; - (un)indent a row&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-e&gt;&lt;/c-e&gt;&lt;/code&gt; - delete next word&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="text-objects"&gt;Text objects&lt;/h3&gt;
+&lt;h3&gt;Text objects&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;gf&lt;/code&gt; - edit the file at the file path under the cursor (useful for netrw?)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gx&lt;/code&gt; - open the file at the file path under the cursor (useful for netrw?)&lt;/li&gt;
@@ -161,23 +159,19 @@ of lines (with the current line being the top line). &lt;code&gt;3&amp;gt;&amp;g
 lines 3 blocks to the right.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="screen-movement"&gt;Screen Movement&lt;/h3&gt;
+&lt;h3&gt;Screen Movement&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-y&gt;&lt;/c-y&gt;&lt;/code&gt; - up one line, and moves the cursor if it would go off the screen&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-e&gt;&lt;/c-e&gt;&lt;/code&gt; - down one line, and moves the cursor if it would go off screen&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-f&gt;&lt;/c-f&gt;&lt;/code&gt; - down one page, with cursor at top of screen&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-b&gt;&lt;/c-b&gt;&lt;/code&gt; - up one page, with cursor at bottom of screen&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="sources"&gt;Sources&lt;/h3&gt;
+&lt;h3&gt;Sources&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has a lot of great tips.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that I’ve either copied or was more or less doing already.&lt;/li&gt;
 &lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="tips"/><category term="vim"/></entry><entry><title>Create Custom Functions in Vim</title><link href="https://johnmathews.eu/create-custom-functions-in-vim.html" rel="alternate"/><published>2021-05-05T18:06:15+02:00</published><updated>2021-05-05T18:06:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-05:/create-custom-functions-in-vim.html</id><summary type="html"/><content type="html">&lt;h2 id="vimscript-functions"&gt;Vimscript functions&lt;/h2&gt;
 &lt;p&gt;Create a custom command and function to create a new file in vim.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt; expand&lt;span class="p"&gt;()&lt;/span&gt;
-
-&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt; %:&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;command&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;nargs&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; Ms &lt;span class="k"&gt;call&lt;/span&gt; s:NewFile&lt;span class="p"&gt;(&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;args&lt;span class="p"&gt;&amp;gt;)&lt;/span&gt;`
 
 &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:NewFile&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;fp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -185,6 +179,11 @@ lines 3 blocks to the right.&lt;/p&gt;
   execute &lt;span class="s2"&gt;"e "&lt;/span&gt; . &lt;span class="s2"&gt;"~/foo/bar/"&lt;/span&gt; . &lt;span class="k"&gt;a&lt;/span&gt;:&lt;span class="nb"&gt;fp&lt;/span&gt; . &lt;span class="s2"&gt;".ext"&lt;/span&gt;
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Useful help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:h %:h&lt;/code&gt; → filename modifiers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:h expand()&lt;/code&gt; → expand wildcards, including filename modifiers&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://stackoverflow.com/questions/54354220/trying-to-create-a-vimscript-function-that-creates-a-new-file"&gt;question on &lt;span class="caps"&gt;SO&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>Vim Text Objects</title><link href="https://johnmathews.eu/vim-text-objects.html" rel="alternate"/><published>2021-05-05T18:04:40+02:00</published><updated>2021-05-05T18:04:40+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-05:/vim-text-objects.html</id><summary type="html"/><content type="html">&lt;h2 id="better-text-objects-in-vim"&gt;Better text objects in Vim&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;target function arguments&lt;/li&gt;
@@ -462,7 +461,7 @@ analysis that I’ve come across. All the resources used in this article are
 attributed to the original author and have been made freely available on
 Twitter. I hope its &lt;span class="caps"&gt;OK&lt;/span&gt; for me to repost them here, if it’s not then
 let me know and I’ll edit the post.&lt;/p&gt;
-&lt;h3 id="hopefully-helpful-links"&gt;Hopefully helpful links&lt;/h3&gt;
+&lt;h3&gt;Hopefully helpful links&lt;/h3&gt;
 &lt;p&gt;This article assumes some familiarity with blockchains and financial markets.
 Some more general articles on this site are:&lt;/p&gt;
 &lt;ol&gt;
@@ -1225,14 +1224,14 @@ useful, though there’s a lot of overlap - coc can lint as well.&lt;/p&gt;
 to know how to jump back again. It seems there are two lists you need to be
 aware of, the &lt;em&gt;jump list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-1-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-1" title=":help jumplist"&gt;1&lt;/a&gt;&lt;/sup&gt; and the &lt;em&gt;change
 list&lt;/em&gt;&lt;sup id="sf-vim-notes-goto-tag-definition-2-back"&gt;&lt;a class="simple-footnote" href="#sf-vim-notes-goto-tag-definition-2" title=":help changelist"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h3 id="jump-list"&gt;Jump List&lt;/h3&gt;
+&lt;h3&gt;Jump List&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;A list of locations that the cursor has jumped to.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-o&gt;&lt;/c-o&gt;&lt;/code&gt; move up the jump list&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&lt;c-i&gt;&lt;/c-i&gt;&lt;/code&gt; mode down the jump list&lt;/li&gt;
 &lt;li&gt;Jumping to a definition, or a search result&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="change-list"&gt;Change List&lt;/h3&gt;
+&lt;h3&gt;Change List&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;g;&lt;/code&gt; and &lt;code&gt;g,&lt;/code&gt; → move up and down the change list&lt;/li&gt;
 &lt;li&gt;A list of locations where a change was made.&lt;/li&gt;
@@ -1486,7 +1485,4 @@ where the commands are so intuitive that:&lt;/p&gt;
      where I know text is. I’m not saying I &lt;em&gt;should&lt;/em&gt; work when I’m that tired,
      but I can, if I’m already familiar with the code/file.. &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>disk full and usage commands</title><link href="https://johnmathews.eu/disk-full-and-usage-commands.html" rel="alternate"/><published>2021-03-03T23:27:11+01:00</published><updated>2021-03-03T23:27:11+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/disk-full-and-usage-commands.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;code&gt;df -h&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Show disk space&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;du -hs .&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;See how big the current dir is&lt;/p&gt;</content><category term="snippet"/><category term="linux"/><category term="du"/><category term="df"/><category term="shell"/><category term="cli"/></entry></feed>
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry></feed>

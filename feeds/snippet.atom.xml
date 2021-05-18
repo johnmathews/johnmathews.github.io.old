@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-18T10:37:17+02:00</updated><entry><title>debug mappings in vim</title><link href="https://johnmathews.eu/vim-debug-mapping.html" rel="alternate"/><published>2021-05-18T10:37:17+02:00</published><updated>2021-05-18T10:37:17+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-18:/vim-debug-mapping.html</id><summary type="html"/><content type="html">&lt;h2 id="view-a-list-of-keyboard-mappings-in-vim"&gt;View a list of keyboard mappings in Vim&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-18T13:11:15+02:00</updated><entry><title>Grep inside particular files only</title><link href="https://johnmathews.eu/grep-particular-files-only.html" rel="alternate"/><published>2021-05-18T13:11:15+02:00</published><updated>2021-05-18T13:11:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-18:/grep-particular-files-only.html</id><summary type="html"/><content type="html">&lt;h2 id="title"&gt;Title&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep -inr --include package.json &lt;span class="s1"&gt;'shortcut": {'&lt;/span&gt; . -A &lt;span class="m"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Its the &lt;code&gt;--include&lt;/code&gt; flag that does the important part.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-i&lt;/code&gt; → case insensitive&lt;br/&gt;
+&lt;code&gt;-n&lt;/code&gt; → print line number&lt;br/&gt;
+&lt;code&gt;-r&lt;/code&gt; → recursive from starting page&lt;br/&gt;
+&lt;code&gt;.&lt;/code&gt; → start in current directory&lt;br/&gt;
+&lt;code&gt;-A 3&lt;/code&gt; → print the 3 lines below the found line&lt;/p&gt;</content><category term="snippet"/><category term="grep"/><category term="linux"/></entry><entry><title>debug mappings in vim</title><link href="https://johnmathews.eu/vim-debug-mapping.html" rel="alternate"/><published>2021-05-18T10:37:17+02:00</published><updated>2021-05-18T10:37:17+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-18:/vim-debug-mapping.html</id><summary type="html"/><content type="html">&lt;h2 id="view-a-list-of-keyboard-mappings-in-vim"&gt;View a list of keyboard mappings in Vim&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;:map&lt;/code&gt; → show a list of the current keyboard mappings for &lt;em&gt;normal&lt;/em&gt;, &lt;em&gt;visual&lt;/em&gt;, &lt;em&gt;select&lt;/em&gt; and &lt;em&gt;operator pending&lt;/em&gt; modes.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:map!&lt;/code&gt; → show a list of the current keyboard mappings for &lt;em&gt;insert&lt;/em&gt; and &lt;em&gt;command-line&lt;/em&gt; mode&lt;/p&gt;
 &lt;p&gt;Top put all the mappings into a convenient text file:&lt;/p&gt;
@@ -49,10 +57,6 @@ colorscheme is loaded. Perhaps this will stop me &lt;code&gt;:e&lt;/code&gt;-ing
 &lt;li&gt;&lt;code&gt;ls a*.(doc|docx)&lt;/code&gt; → &lt;span class="caps"&gt;OR&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="snippet"/><category term="linux"/></entry><entry><title>Create Custom Functions in Vim</title><link href="https://johnmathews.eu/create-custom-functions-in-vim.html" rel="alternate"/><published>2021-05-05T18:06:15+02:00</published><updated>2021-05-05T18:06:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-05:/create-custom-functions-in-vim.html</id><summary type="html"/><content type="html">&lt;h2 id="vimscript-functions"&gt;Vimscript functions&lt;/h2&gt;
 &lt;p&gt;Create a custom command and function to create a new file in vim.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt; expand&lt;span class="p"&gt;()&lt;/span&gt;
-
-&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt; %:&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;command&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;nargs&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; Ms &lt;span class="k"&gt;call&lt;/span&gt; s:NewFile&lt;span class="p"&gt;(&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;args&lt;span class="p"&gt;&amp;gt;)&lt;/span&gt;`
 
 &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:NewFile&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;fp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -60,6 +64,11 @@ colorscheme is loaded. Perhaps this will stop me &lt;code&gt;:e&lt;/code&gt;-ing
   execute &lt;span class="s2"&gt;"e "&lt;/span&gt; . &lt;span class="s2"&gt;"~/foo/bar/"&lt;/span&gt; . &lt;span class="k"&gt;a&lt;/span&gt;:&lt;span class="nb"&gt;fp&lt;/span&gt; . &lt;span class="s2"&gt;".ext"&lt;/span&gt;
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Useful help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:h %:h&lt;/code&gt; → filename modifiers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:h expand()&lt;/code&gt; → expand wildcards, including filename modifiers&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://stackoverflow.com/questions/54354220/trying-to-create-a-vimscript-function-that-creates-a-new-file"&gt;question on &lt;span class="caps"&gt;SO&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>Vim Text Objects</title><link href="https://johnmathews.eu/vim-text-objects.html" rel="alternate"/><published>2021-05-05T18:04:40+02:00</published><updated>2021-05-05T18:04:40+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-05:/vim-text-objects.html</id><summary type="html"/><content type="html">&lt;h2 id="better-text-objects-in-vim"&gt;Better text objects in Vim&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;target function arguments&lt;/li&gt;
