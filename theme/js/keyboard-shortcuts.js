@@ -100,6 +100,9 @@ $(document).ready(function () {
   Mousetrap.bind('g s', function () {
     window.location.href = `${siteURL}/snippets.html`
   })
+  Mousetrap.bind('g k', function () {
+    window.location.href = `${siteURL}/book-notes.html`
+  })
   Mousetrap.bind('g r', function () {
     window.location.href = `${siteURL}/portfolio.html`
   })
