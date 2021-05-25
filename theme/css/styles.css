@@ -2533,11 +2533,6 @@ video {
   padding-bottom: 0px;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -3016,6 +3011,10 @@ video {
   gap: 0.75rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .grid-flow-row {
   grid-auto-flow: row;
 }
@@ -3218,11 +3217,6 @@ video {
     margin-right: 0px;
   }
 
-  .md\:my-4 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
   .md\:my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -3278,11 +3272,6 @@ video {
     padding-bottom: 0.5rem;
   }
 
-  .md\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .md\:pr-0 {
     padding-right: 0px;
   }
@@ -3301,10 +3290,6 @@ video {
 
   .md\:w-64 {
     width: 16rem;
-  }
-
-  .md\:w-1\/2 {
-    width: 50%;
   }
 
   .md\:w-4\/5 {
@@ -3398,12 +3383,12 @@ video {
     margin-right: auto;
   }
 
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
+  .lg\:mr-5 {
+    margin-right: 1.25rem;
   }
 
-  .lg\:ml-10 {
-    margin-left: 2.5rem;
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:ml-12 {
@@ -3412,6 +3397,10 @@ video {
 
   .lg\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .lg\:ml-20 {
+    margin-left: 5rem;
   }
 
   .lg\:max-w-3xl {
@@ -3434,12 +3423,8 @@ video {
     width: 8rem;
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .lg\:w-2\/3 {
-    width: 66.666667%;
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:w-1\/4 {
@@ -3488,6 +3473,10 @@ video {
     margin-top: 2rem;
   }
 
+  .xl\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
   .xl\:ml-20 {
     margin-left: 5rem;
   }
@@ -3506,10 +3495,6 @@ video {
 
   .xl\:w-32 {
     width: 8rem;
-  }
-
-  .xl\:w-3\/4 {
-    width: 75%;
   }
 
   .xl\:w-5\/6 {
@@ -3535,6 +3520,10 @@ video {
     margin-top: 5rem;
   }
 
+  .\32xl\:mr-20 {
+    margin-right: 5rem;
+  }
+
   .\32xl\:mt-40 {
     margin-top: 10rem;
   }
@@ -3545,14 +3534,6 @@ video {
 
   .\32xl\:pl-20 {
     padding-left: 5rem;
-  }
-
-  .\32xl\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .\32xl\:w-2\/3 {
-    width: 66.666667%;
   }
 
   .\32xl\:grid-cols-3 {
