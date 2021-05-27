@@ -12,18 +12,18 @@
 <meta content="Grep inside particular files only -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" grep,linux " name="keywords"/>
-<meta content=" Grep a subset of files only grep -inr --include package.json 'shortcut&quot;: {' . -A 3 Its the --include flag that does the important part. -i → case insensitive -n → print line number -r → recursive from starting page . → start in current directory -A 3 → print the 3 lines below the found line " name="description"/>
+<meta content=" Grep a subset of files only grep -inr --include package.json \ 'shortcut&quot;: {' . -A 3 It’s the --include flag that does the important part. -i → case insensitive -n → print line number -r → recursive from starting page . → start in current directory -A 3 → print the 3 lines below the found line " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Grep inside particular files only" property="twitter:title"/>
-<meta content=" Grep a subset of files only grep -inr --include package.json 'shortcut&quot;: {' . -A 3 Its the --include flag that does the important part. -i → case insensitive -n → print line number -r → recursive from starting page . → start in current directory -A 3 → print the 3 lines below the found line " name="twitter:description"/>
+<meta content=" Grep a subset of files only grep -inr --include package.json \ 'shortcut&quot;: {' . -A 3 It’s the --include flag that does the important part. -i → case insensitive -n → print line number -r → recursive from starting page . → start in current directory -A 3 → print the 3 lines below the found line " name="twitter:description"/>
 <meta content="https://johnmathews.eu/grep-particular-files-only.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Grep inside particular files only" property="og:title"/>
-<meta content=" Grep a subset of files only grep -inr --include package.json 'shortcut&quot;: {' . -A 3 Its the --include flag that does the important part. -i → case insensitive -n → print line number -r → recursive from starting page . → start in current directory -A 3 → print the 3 lines below the found line " property="og:description"/>
+<meta content=" Grep a subset of files only grep -inr --include package.json \ 'shortcut&quot;: {' . -A 3 It’s the --include flag that does the important part. -i → case insensitive -n → print line number -r → recursive from starting page . → start in current directory -A 3 → print the 3 lines below the found line " property="og:description"/>
 <meta content="https://johnmathews.eu/grep-particular-files-only.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -257,14 +257,17 @@
 <article class="">
 <div class="markdown">
 <h2 id="grep-a-subset-of-files-only">Grep a subset of files only</h2>
-<div class="highlight"><pre><span></span>grep -inr --include package.json <span class="s1">'shortcut": {'</span> . -A <span class="m">3</span>
+<div class="highlight"><pre><span></span>grep -inr --include package.json <span class="se">\</span>
+    <span class="s1">'shortcut": {'</span> . -A <span class="m">3</span>
 </pre></div>
-<p>Its the <code>--include</code> flag that does the important part.</p>
-<p><code>-i</code> → case insensitive<br/>
-<code>-n</code> → print line number<br/>
-<code>-r</code> → recursive from starting page<br/>
-<code>.</code> → start in current directory<br/>
-<code>-A 3</code> → print the 3 lines below the found line</p>
+<ul>
+<li>It’s the <code>--include</code> flag that does the important part.</li>
+<li><code>-i</code> → case insensitive</li>
+<li><code>-n</code> → print line number</li>
+<li><code>-r</code> → recursive from starting page</li>
+<li><code>.</code> → start in current directory</li>
+<li><code>-A 3</code> → print the 3 lines below the found line</li>
+</ul>
 </div>
 </article>
 </main>
@@ -272,6 +275,10 @@
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
 <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/vim-debug-mapping.html" id="previousArticleInCategory"> debug mappings in vim</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/what-i-ve-learned-in-45-years-in-the-software-industry.html" id="nextArticleInCategory"> What I’ve learned in 45 years in the software industry</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
