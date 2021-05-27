@@ -5,77 +5,84 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/traffic.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/book-notes.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse-search-snippets.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/snippets.html</loc>
-<lastmod>2021-05-27T13:21:21-00:00</lastmod>
+<lastmod>2021-05-27T15:43:06-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/questions-for-good-references.html</loc>
+<lastmod>2021-05-27T15:28:49+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1286,14 +1293,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/non-technical.html</loc>
-<lastmod>2021-05-17T13:15:07+00:20</lastmod>
+<lastmod>2021-05-27T15:28:49+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/category/non-technical/entrepreneurship.html</loc>
-<lastmod>2020-12-08T12:59:00+00:20</lastmod>
+<lastmod>2021-05-27T15:28:49+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1376,6 +1383,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://johnmathews.eu/tag/marketing.html</loc>
+<lastmod>2021-05-27T15:28:49+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://johnmathews.eu/tag/advice.html</loc>
 <lastmod>2021-05-27T10:37:18+00:20</lastmod>
 <changefreq>daily</changefreq>
@@ -1433,13 +1447,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/tag/reading.html</loc>
-<lastmod>2021-05-17T13:15:07+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://johnmathews.eu/tag/marketing.html</loc>
 <lastmod>2021-05-17T13:15:07+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -2931,7 +2938,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/author/john-mathews.html</loc>
-<lastmod>2021-05-27T10:37:18+00:20</lastmod>
+<lastmod>2021-05-27T15:28:49+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
