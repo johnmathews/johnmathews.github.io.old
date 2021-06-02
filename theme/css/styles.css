@@ -1131,6 +1131,11 @@ video {
   margin-bottom: 0;
 }
 
+.dark .markdown .MathJax .mo {
+  --tw-text-opacity: 1 !important;
+  color: rgba(229, 231, 235, var(--tw-text-opacity)) !important;
+}
+
 .image-process-logo {
   margin-left: 0px !important;
   --tw-border-opacity: 1 !important;

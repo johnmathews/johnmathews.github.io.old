@@ -1,5 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-01T10:16:41+02:00</updated><entry><title>Proverbs - Chapter 11</title><link href="https://johnmathews.eu/proverbs-chapter-11.html" rel="alternate"/><published>2021-06-01T10:16:41+02:00</published><updated>2021-06-01T10:16:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-01:/proverbs-chapter-11.html</id><summary type="html"/><content type="html">&lt;h1 id="context"&gt;Context&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-02T12:24:40+02:00</updated><entry><title>Proverbs 12</title><link href="https://johnmathews.eu/proverbs-12.html" rel="alternate"/><published>2021-06-02T12:24:40+02:00</published><updated>2021-06-02T12:24:40+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-02:/proverbs-12.html</id><summary type="html"/><content type="html">&lt;h1 id="notes"&gt;Notes&lt;/h1&gt;
+&lt;p&gt;The chapter starts with:&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;“Whoever loves discipline loves knowledge, but he who hates reproof is stupid.”&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;This is jarring to read, maybe because unlike “wickedness” or “righteousness”,
+which are concepts I don’t hear or think much about day-to-day, “discipline” and
+“knowledge” are very familiar and part of contemporary conversation. So is
+stupidity. So this proverb feels tangible.&lt;/p&gt;
+&lt;p&gt;What does it mean? If I love discipline then I am loving knowledge, and in this
+case I’m confident the opposite is also true - If I avoid or dislike discipline
+then I avoid or dislike knowledge. Discipline is hard, I guess I need to lean
+into being disciplined, and remember why.&lt;/p&gt;
+&lt;p&gt;Encouragingly, the proverb is immediately followed by the reminder that “A good
+man obtains favour from the Lord, but a man of evil devices he condemns”, so
+make an effort, do good things, and I will obtain favour. That’s a big reason to
+persevere through discipline.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(^4\)&lt;/span&gt;&lt;mark&gt;“An excellent wife is the crown of her husband, but she who
+brings shame is like rottenness in his bones”&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;If it were me, I’d leave off all the negative second parts of these proverbs,
+its abrasive. But also if it were me I doubt they’d be worth studying. Why is
+the pattern of all these proverbs “good thing, bad thing” - to make the contrast
+stronger? To know why to do a thing and also why not to do the opposite? To make
+it more punchy? I guess if its abrasive you are more likely to remember it, and
+if you’re confident that what you are saying is true then you want people to
+remember it clearly.&lt;/p&gt;
+&lt;p&gt;Back to the proverb, this is a great proverb - I like it. It honors wives,
+though it does put them in the context of their husbands, and it also speaks to
+how valuable and precious a good wife is - crowns are precious and rare.&lt;/p&gt;
+&lt;p&gt;Empirically, it also seems like a very reasonable assertion - marriages are
+difficult and if either spouse can be considered “excellent” then that is
+certainly rare, and super valuable. Relationships can give a lot of life and
+health and happiness, and require a lot of effort and work. To be an excellent
+spouse is certainly worth desiring and celebrating and protecting.&lt;/p&gt;
+&lt;p&gt;The next few verses contrast wickedness and upright righteousness - don’t be
+wicked, do be upright!&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(^9\)&lt;/span&gt; &lt;mark&gt;“Better to be lowly and have a servant that to play the great man and lack
+bread”&lt;/mark&gt;. Don’t put appearances before substance? Don’t spend money on fancy cars
+or clothes if you wont have enough for decent food? Prioritize substance
+(truth?) over appearances and social pressures? Having a servant (or a domestic
+helper) would certainly be helpful, and of more tangible benefit than receiving
+shout-outs at networking events.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(^{10}\)&lt;/span&gt; &lt;mark&gt;“Whoever is righteous has regard for the life of his beast, but the mercy of the
+wicked is cruel.”&lt;/mark&gt; - animal welfare is important.&lt;/p&gt;
+&lt;p&gt;To be continued…&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Non-technical/Journal"/><category term="bible"/><category term="proverbs"/><category term="wisdom"/></entry><entry><title>Proverbs 11</title><link href="https://johnmathews.eu/proverbs-chapter-11.html" rel="alternate"/><published>2021-06-01T10:16:41+02:00</published><updated>2021-06-01T10:16:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-01:/proverbs-chapter-11.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#context"&gt;Context&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#notes"&gt;Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#examples"&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#conclusion"&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="context"&gt;Context&lt;/h1&gt;
 &lt;p&gt;These are my notes from reading Proverbs, one of the books in the bible. Almost
 the entire book is a collection of proverbs - short sayings that are generally
 true. I presume there is some structure and themes in their arrangement,
@@ -17,7 +128,7 @@ to read - the sentences are short and the analogies seem simple enough.&lt;/p&g
 &lt;p&gt;It’s refreshing to read something that has existed for thousands of year, has
 withstood criticisms, and feels approachable. It’s practical, despite being
 old and written in a completely different cultural context. I find this comforting.&lt;/p&gt;
-&lt;h1 id="text"&gt;Text&lt;/h1&gt;
+&lt;h1 id="notes"&gt;Notes&lt;/h1&gt;
 &lt;p&gt;Each proverb contrasts justice and injustice using a variety of
 phrases and images. Pride and humility, integrity and crookedness, righteousness
 and wickedness.&lt;/p&gt;
@@ -33,7 +144,7 @@ reliable and consistent, and inevitable. The advice to “love your neighbor lik
 yourself” is a good summary of many of the proverbs.&lt;/p&gt;
 &lt;p&gt;Its clarity and confidence is encouraging. Do good and good things will happen,
 do evil and the consequences are inevitably bad for you.&lt;/p&gt;
-&lt;h1 id="outstanding-proverbs"&gt;Outstanding proverbs&lt;/h1&gt;
+&lt;h1 id="examples"&gt;Examples&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;mark&gt;The fruit of the righteous is a tree of life, and whoever captures souls is
     wise&lt;/mark&gt; - &lt;em&gt;the first part sounds wonderful. Who wouldn’t want to produce life?
@@ -56,7 +167,7 @@ do evil and the consequences are inevitably bad for you.&lt;/p&gt;
 for you.&lt;/li&gt;
 &lt;li&gt;God delights in blameless people, and he abhors people with crooked hearts.&lt;/li&gt;
 &lt;li&gt;Beauty without discretion is an incongruous waste.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Non-technical/Journal"/><category term="books"/><category term="bible"/></entry><entry><title>Questions for good references</title><link href="https://johnmathews.eu/questions-for-good-references.html" rel="alternate"/><published>2021-05-27T15:28:49+02:00</published><updated>2021-05-27T15:28:49+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-27:/questions-for-good-references.html</id><summary type="html"/><content type="html">&lt;p&gt;Use the following questions to get better references:&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Non-technical/Journal"/><category term="books"/><category term="bible"/><category term="proverbs"/><category term="wisdom"/></entry><entry><title>Questions for good references</title><link href="https://johnmathews.eu/questions-for-good-references.html" rel="alternate"/><published>2021-05-27T15:28:49+02:00</published><updated>2021-05-27T15:28:49+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-27:/questions-for-good-references.html</id><summary type="html"/><content type="html">&lt;p&gt;Use the following questions to get better references:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;What was the problem you had before you used the solution I helped develop?&lt;/li&gt;
 &lt;li&gt;What did the frustration feel like as you tried to solve the problem?&lt;/li&gt;

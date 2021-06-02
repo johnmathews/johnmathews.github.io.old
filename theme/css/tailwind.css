@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 
+.markdown .MathJax .mo {
+ @apply dark:text-gray-200 !important;
+}
 
 .image-process-logo {
 	@apply ml-0 !important;
