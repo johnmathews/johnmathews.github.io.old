@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Other</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/other.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-04-21T12:55:20+02:00</updated><entry><title>Reading - April 2021</title><link href="https://johnmathews.eu/reading-april-2021.html" rel="alternate"/><published>2021-04-21T12:55:20+02:00</published><updated>2021-04-21T12:55:20+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/reading-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Other</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/other.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-27T10:37:18+02:00</updated><entry><title>Lessons from 45 years in the software industry</title><link href="https://johnmathews.eu/45-years-in-software.html" rel="alternate"/><published>2021-05-27T10:37:18+02:00</published><updated>2021-05-27T10:37:18+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-27:/45-years-in-software.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://web.archive.org/web/20210527083359/https://www.bti360.com/what-ive-learned-in-45-years-in-the-software-industry/"&gt;article&lt;/a&gt;
+from a recently retired software engineer about lessons learned over 4 decades.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Beware the curse of knowledge&lt;/li&gt;
+&lt;li&gt;Focus on the fundamentals; Teamwork, Trust, Testing, Communication, Code Design&lt;/li&gt;
+&lt;li&gt;Simplicity&lt;/li&gt;
+&lt;li&gt;Seek first to understand&lt;/li&gt;
+&lt;li&gt;Beware lock-in - cost of change, swapping problems&lt;/li&gt;
+&lt;li&gt;Be honest and acknowledge when you don’t fit the role&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Other"/><category term="advice"/></entry><entry><title>Reading - April 2021</title><link href="https://johnmathews.eu/reading-april-2021.html" rel="alternate"/><published>2021-04-21T12:55:20+02:00</published><updated>2021-04-21T12:55:20+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/reading-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#the-architecture-behind-a-one-person-tech-startup"&gt;The Architecture Behind A One-Person Tech Startup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#boring-tech-behind-a-one-person-saas"&gt;Boring tech behind a one person SaaS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#djangos-place-in-a-web-development-world"&gt;Djangos place in a web development world&lt;/a&gt;&lt;/li&gt;
