@@ -249,11 +249,41 @@
 <div class="my-0 py-0">
 <h2 class="font-bold my-5 text-3xl dark:text-gray-100">June</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-3 gap-3 lg:gap-5">
+<div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="git-lfs-2.html">
+<div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="git-lfs">Git <span class="caps">LFS</span></h2>
+<p>Key commands</p>
+<ul>
+<li><code>git lfs install</code> (also uninstall)</li>
+<li><code>git lfs track "**/*.mp4"</code></li>
+<li><code>git lfs ls-files</code></li>
+<li><code>git lfs status</code></li>
+</ul>
+<p><code>track</code> just updates the <code>.gitattributes</code> file.</p>
+<p>Commit the .gitattributes file with the tracking configuration before committing
+the large files.</p>
+<p><code>status</code> or <code>ls-files</code> should show the large files in question
+before you push the commit that starts tracking the large files.</p> </div> </div>
+<div class="border-t-2 border-gray-200 dark:border-gray-700">
+<div class="markdown mx-5 mb-1 mt-2">
+<div class="text-sm font-mono"> 11 June 2021 </div>
+</div>
+<div class="flex flex-wrap px-3 mt-1 mb-2">
+<div class="mx-1 px-1 my-1 text-sm font-mono rounded-lg border-2 border border-gray-600 dark:border-gray-200 dark:text-gray-300 bg-gray-200 dark:bg-gray-600"> 
+                                  git
+                                </div>
+<div class="mx-1 px-1 my-1 text-sm font-mono rounded-lg border-2 border border-gray-600 dark:border-gray-200 dark:text-gray-300 bg-gray-200 dark:bg-gray-600"> 
+                                  lfs
+                                </div>
+<div class="mx-1 px-1 my-1 text-sm font-mono rounded-lg border-2 border border-gray-600 dark:border-gray-200 dark:text-gray-300 bg-gray-200 dark:bg-gray-600"> 
+                                  github-pages
+                                </div>
+</div>
+</div>
+</div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="your-bashrc-doesn-t-have-to-be-a-mess.html">
 <div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <h2 id="your-bashrc-doesnt-have-to-be-a-mess">Your .bashrc doesn’t have to be a mess</h2>
 <p><a href="https://write.as/bpsylevc6lliaspe">Blog post</a> demonstrating how to split a
 <code>.bashrc</code> file into “submodules” and keep it maintainable.</p>
-<p>Key part is below - check if something is readable and then run it.</p>
 <div class="highlight"><pre><span></span><span class="nv">BASHRC_D</span><span class="o">=</span>~/.config/bashrc.d
 <span class="o">[[</span> -r <span class="si">${</span><span class="nv">BASHRC_D</span><span class="si">}</span>/bootstrap <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="si">${</span><span class="nv">BASHRC_D</span><span class="si">}</span>/bootstrap
 </pre></div>
@@ -1654,7 +1684,7 @@ usermod -aG wheel &lt;username&gt;
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="cloning-git-repos-using-lfs.html">
 <div class="flex-grow markdown"><div class="px-4 pb-4 -mt-3 font-serif text-lg"> <p>Cloning large repos, or repos with large files in them, doesn’t work with <code>git
 clone ...</code> you need to use <code>git lfs clone ...</code></p>
-<p>So why is <code>git lfs clone</code> deprecated? What’s the replacement? </p> </div> </div>
+<p>So why is <code>git lfs clone</code> deprecated? What’s the replacement?</p> </div> </div>
 <div class="border-t-2 border-gray-200 dark:border-gray-700">
 <div class="markdown mx-5 mb-1 mt-2">
 <div class="text-sm font-mono"> 03 March 2021 </div>

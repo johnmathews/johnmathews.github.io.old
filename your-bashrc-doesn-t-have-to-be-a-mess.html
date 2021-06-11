@@ -12,18 +12,18 @@
 <meta content="Your bashrc doesn’t have to be a mess -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" bash,shell,zsh " name="keywords"/>
-<meta content=" Your .bashrc doesn’t have to be a mess Blog post demonstrating how to split a .bashrc file into “submodules” and keep it maintainable. Key part is below - check if something is readable and then run it. BASHRC_D=~/.config/bashrc.d [[ -r ${BASHRC_D}/bootstrap ]] &amp;&amp; . ${BASHRC_D}/bootstrap for file in ${BASHRC_D}/*.sh; do [[ -r $file ]] &amp;&amp; . $file done unset file " name="description"/>
+<meta content=" Your .bashrc doesn’t have to be a mess Blog post demonstrating how to split a .bashrc file into “submodules” and keep it maintainable. BASHRC_D=~/.config/bashrc.d [[ -r ${BASHRC_D}/bootstrap ]] &amp;&amp; . ${BASHRC_D}/bootstrap for file in ${BASHRC_D}/*.sh; do [[ -r $file ]] &amp;&amp; . $file done unset file " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Your bashrc doesn’t have to be a mess" property="twitter:title"/>
-<meta content=" Your .bashrc doesn’t have to be a mess Blog post demonstrating how to split a .bashrc file into “submodules” and keep it maintainable. Key part is below - check if something is readable and then run it. BASHRC_D=~/.config/bashrc.d [[ -r ${BASHRC_D}/bootstrap ]] &amp;&amp; . ${BASHRC_D}/bootstrap for file in ${BASHRC_D}/*.sh; do [[ -r $file ]] &amp;&amp; . $file done unset file " name="twitter:description"/>
+<meta content=" Your .bashrc doesn’t have to be a mess Blog post demonstrating how to split a .bashrc file into “submodules” and keep it maintainable. BASHRC_D=~/.config/bashrc.d [[ -r ${BASHRC_D}/bootstrap ]] &amp;&amp; . ${BASHRC_D}/bootstrap for file in ${BASHRC_D}/*.sh; do [[ -r $file ]] &amp;&amp; . $file done unset file " name="twitter:description"/>
 <meta content="https://johnmathews.eu/your-bashrc-doesn-t-have-to-be-a-mess.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Your bashrc doesn’t have to be a mess" property="og:title"/>
-<meta content=" Your .bashrc doesn’t have to be a mess Blog post demonstrating how to split a .bashrc file into “submodules” and keep it maintainable. Key part is below - check if something is readable and then run it. BASHRC_D=~/.config/bashrc.d [[ -r ${BASHRC_D}/bootstrap ]] &amp;&amp; . ${BASHRC_D}/bootstrap for file in ${BASHRC_D}/*.sh; do [[ -r $file ]] &amp;&amp; . $file done unset file " property="og:description"/>
+<meta content=" Your .bashrc doesn’t have to be a mess Blog post demonstrating how to split a .bashrc file into “submodules” and keep it maintainable. BASHRC_D=~/.config/bashrc.d [[ -r ${BASHRC_D}/bootstrap ]] &amp;&amp; . ${BASHRC_D}/bootstrap for file in ${BASHRC_D}/*.sh; do [[ -r $file ]] &amp;&amp; . $file done unset file " property="og:description"/>
 <meta content="https://johnmathews.eu/your-bashrc-doesn-t-have-to-be-a-mess.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -259,7 +259,6 @@
 <h2 id="your-bashrc-doesnt-have-to-be-a-mess">Your .bashrc doesn’t have to be a mess</h2>
 <p><a href="https://write.as/bpsylevc6lliaspe">Blog post</a> demonstrating how to split a
 <code>.bashrc</code> file into “submodules” and keep it maintainable.</p>
-<p>Key part is below - check if something is readable and then run it.</p>
 <div class="highlight"><pre><span></span><span class="nv">BASHRC_D</span><span class="o">=</span>~/.config/bashrc.d
 <span class="o">[[</span> -r <span class="si">${</span><span class="nv">BASHRC_D</span><span class="si">}</span>/bootstrap <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="si">${</span><span class="nv">BASHRC_D</span><span class="si">}</span>/bootstrap
 </pre></div>
@@ -275,6 +274,10 @@
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
 <a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/barkley-finisher-15-john-kelly.html" id="previousArticleInCategory"> Barkley finisher 15</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/git-lfs-2.html" id="nextArticleInCategory"> git lfs 2</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
