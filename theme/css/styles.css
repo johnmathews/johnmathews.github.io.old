@@ -1131,7 +1131,7 @@ video {
   margin-bottom: 0;
 }
 
-.dark .markdown .MathJax .mo {
+.dark .markdown .MathJax .mrow {
   --tw-text-opacity: 1 !important;
   color: rgba(229, 231, 235, var(--tw-text-opacity)) !important;
 }
@@ -2349,6 +2349,10 @@ video {
 
 .mt-0 {
   margin-top: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .ml-0 {

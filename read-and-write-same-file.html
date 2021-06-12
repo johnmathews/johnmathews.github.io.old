@@ -8,22 +8,22 @@
 <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>read and write same file - John Mathews</title>
-<meta content="read and write same file -  John Mathews " name="title"/>
+<title>Read and Write the Same File in Bash - John Mathews</title>
+<meta content="Read and Write the Same File in Bash -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" bash,pipe,shell,syntax " name="keywords"/>
-<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file || rm smscrpt.$$ || removes the temporary file if it errors. $$ is the process ID and ensures that you always have a unique temporary file name. " name="description"/>
+<meta content=" I tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file || rm smscrpt.$$ || removes the temporary file if it errors. $$ is the process ID and ensures that you always have a unique temporary file name. " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content="read and write same file" property="twitter:title"/>
-<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file || rm smscrpt.$$ || removes the temporary file if it errors. $$ is the process ID and ensures that you always have a unique temporary file name. " name="twitter:description"/>
+<meta content="Read and Write the Same File in Bash" property="twitter:title"/>
+<meta content=" I tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file || rm smscrpt.$$ || removes the temporary file if it errors. $$ is the process ID and ensures that you always have a unique temporary file name. " name="twitter:description"/>
 <meta content="https://johnmathews.eu/read-and-write-same-file.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
-<meta content="read and write same file" property="og:title"/>
-<meta content=" Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file || rm smscrpt.$$ || removes the temporary file if it errors. $$ is the process ID and ensures that you always have a unique temporary file name. " property="og:description"/>
+<meta content="Read and Write the Same File in Bash" property="og:title"/>
+<meta content=" I tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead: some_script &lt; file &gt; smscrpt.$$ \ &amp;&amp; mv smscrpt.$$ file || rm smscrpt.$$ || removes the temporary file if it errors. $$ is the process ID and ensures that you always have a unique temporary file name. " property="og:description"/>
 <meta content="https://johnmathews.eu/read-and-write-same-file.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -245,7 +245,7 @@
 <div class="mx-3 xl:ml-20 my-4" id="articleParent">
 <div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
 <div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
-          read and write same file
+          Read and Write the Same File in Bash
       </div>
 <div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
         March 2021
@@ -256,7 +256,7 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>Tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead:</p>
+<p>I tried to read and write the same file in a pipeline, and got caught out by a race condition (why is the file empty?!). Do this instead:</p>
 <div class="highlight"><pre><span></span>some_script &lt; file &gt; smscrpt.<span class="nv">$$</span> <span class="se">\</span>
 <span class="o">&amp;&amp;</span> mv smscrpt.<span class="nv">$$</span> file <span class="o">||</span> rm smscrpt.<span class="nv">$$</span>
 </pre></div>
@@ -269,11 +269,11 @@ file name.</p>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ←  </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/json-tools.html" id="previousArticleInCategory"> json tools</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/json-tools.html" id="previousArticleInCategory"> <span class="caps">JSON</span> tools</a>
 </div>
 <div class="flex flex-row mt-2">
 <div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/pelican-plugin-guide.html" id="nextArticleInCategory"> pelican plugin guide</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/pelican-plugin-guide.html" id="nextArticleInCategory"> Pelican Plugin Guide</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
