@@ -112,13 +112,29 @@ $(document).ready(function () {
     ul.innerHTML = ''
 
     for (let i = 0; i < results.length; i++) {
+
       const item = results[i].item
+
+      var catFlag = ''
+      if (item.category === 'snippet'){
+        catFlag = item.category
+      }
+      console.log(item);
 
       const li = document.createElement('li')
 
       const link = document.createElement('a')
       link.setAttribute('href', item.url)
-      link.innerHTML = `<div class="flex justify-between"><div class="">${item.title}</div><div class="hidden md:inline"> ${item.date}</div></div>`
+      link.innerHTML = 
+        `
+          <div class="flex justify-between">
+            <div class="flex">
+              <div class="">${item.title}</div>
+              <div class="ml-2 text-sm text-gray-500" >${catFlag}</div>
+            </div>
+            <div class="hidden md:inline"> ${item.date}</div>
+          </div>
+        `
 
       li.appendChild(link)
       ul.appendChild(li)
