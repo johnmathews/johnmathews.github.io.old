@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+<title>Coding exercise for a technical interview - John Mathews</title>
+<meta content="Coding exercise for a technical interview -  John Mathews " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content=" finance,trading " name="keywords"/>
+<meta content=" This notebook is based on the technical exercise I worked on as part of an interview for Stoic Strategies. I forked the instructions into this repo. The exercises involve building a simple interfaces to parse order book data and calculate various quantities and derived properties. I find technical interviews that involve live coding exercises to be really useful and really stressful. Live coding definitely triggers “performance anxiety” for me (when I was a kid I really hated presenting or... " name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="Coding exercise for a technical interview" property="twitter:title"/>
+<meta content=" This notebook is based on the technical exercise I worked on as part of an interview for Stoic Strategies. I forked the instructions into this repo. The exercises involve building a simple interfaces to parse order book data and calculate various quantities and derived properties. I find technical interviews that involve live coding exercises to be really useful and really stressful. Live coding definitely triggers “performance anxiety” for me (when I was a kid I really hated presenting or... " name="twitter:description"/>
+<meta content="https://johnmathews.eu/coding-exercise.html" property="twitter:url"/>
+<meta content="https://johnmathews.eu/
+" name="twitter:image"/>
+<meta content="  summary  " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="Coding exercise for a technical interview" property="og:title"/>
+<meta content=" This notebook is based on the technical exercise I worked on as part of an interview for Stoic Strategies. I forked the instructions into this repo. The exercises involve building a simple interfaces to parse order book data and calculate various quantities and derived properties. I find technical interviews that involve live coding exercises to be really useful and really stressful. Live coding definitely triggers “performance anxiety” for me (when I was a kid I really hated presenting or... " property="og:description"/>
+<meta content="https://johnmathews.eu/coding-exercise.html" property="og:url"/>
+<meta content="https://johnmathews.eu/
+" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews Feed - all categories" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews Feed - snippets " type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews Feed - technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/non-technical.atom.xml" rel="alternate" title="John Mathews Feed - non-technical articles" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+      </script>
+<!-- Cloudflare Web Analytics -->
+<script data-cf-beacon='{"token": "514cf3cd5e214097b029daa10cd1b209"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body class="dark:bg-gray-900">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed z-50 top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                 Keyboard Shortcuts:
+                </h3>
+<hr class="mb-5"/>
+<div class="text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
+<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></div>
+<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    /
+                  </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                    cmd-K
+                  </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/book-notes.html">Books</a>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> June 2021
+  </div>
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
+ Category: 
+    <div>
+<a class="hover:underline" href="https://johnmathews.eu/category/technical/data.html">Data</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
+<div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
+<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
+          Coding exercise for a technical interview
+      </div>
+<div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
+        June 2021
+      </div>
+</div>
+<div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown"> <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This notebook is based on the technical exercise I worked on as part of an interview for Stoic Strategies. I forked the instructions into <a href="https://github.com/johnmathews/coding_assignment">this</a> repo.</p>
+<p>The exercises involve building a simple interfaces to parse order book data and calculate various quantities and derived properties.</p>
+<p>I find technical interviews that involve live coding exercises to be really useful and really stressful. Live coding definitely triggers “performance anxiety” for me (when I was a kid I really hated presenting or playing an instrument in front of anyone, even teachers) - I felt self-councious and in this case I needed to use VSCode instead of my familiar Vim+Tmux setup. Consequently progress was really slow and bumpy. Tragically, I got really muddled trying to parse some json after the initial <span class="caps">API</span> request!</p> </div> <div class="markdown">
+<body><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This notebook is based on the technical exercise I worked on as part of an interview for Stoic Strategies. I forked the instructions into <a href="https://github.com/johnmathews/coding_assignment">this</a> repo.</p>
+<p>The exercises involve building a simple interfaces to parse order book data and calculate various quantities and derived properties.</p>
+<p>I find technical interviews that involve live coding exercises to be really useful and really stressful. Live coding definitely triggers “performance anxiety” for me (when I was a kid I really hated presenting or playing an instrument in front of anyone, even teachers) - I felt self-councious and in this case I needed to use VSCode instead of my familiar Vim+Tmux setup. Consequently progress was really slow and bumpy. Tragically, I got really muddled trying to parse some json after the initial <span class="caps">API</span> request!</p>
+<p>Whilst thinking about the problem and what code to write, I also needed to think about the following:</p>
+<ul>
+<li>How to communicate my thoughts</li>
+<li>How to optimize my output for an interview context (it’s not a real problem involving tests, edge cases, scalability or performance considerations)</li>
+<li>How to use VSCode (and a mouse or trackpad). </li>
+</ul>
+<p>These additional considerations resulted in me writing code that got the job done.. but slowly. The code wasn’t great.</p>
+<p>I’m curious how much faster I’d be (and how much easier the exercise would seem) if I treated the exercise as a “take home” exercise instead of “live coding”. Here are the results - it took a couple of hourse to be honest, and the ideas flow much more easily, and i can remember methods much more accurately. I wish I didn’t get so self conscious!</p>
+<p>Despite this, I think live coding interviews are a great way of assessing me - they get under my skin and show my worst sides as well as my best. If im going to work in a high paced and demanding role then the interview should also have those elements.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-1-The-Interface">Part 1 The Interface<a class="anchor-link" href="#Part-1-The-Interface">¶</a></h2><h3 id="1.-Build-an-abstraction-that,-given-a-pair-as-an-argument-(ethusd-in-our-case)-fetches-the-latest-orderbook-and-prints-it.">1. Build an abstraction that, given a pair as an argument (ethusd in our case) fetches the latest orderbook and prints it.<a class="anchor-link" href="#1.-Build-an-abstraction-that,-given-a-pair-as-an-argument-(ethusd-in-our-case)-fetches-the-latest-orderbook-and-prints-it.">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="o">.</span><span class="n">PrettyPrinter</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'result'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#get_data("https://api.kraken.com/0/public/Depth?pair=ethusd")</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Add-some-functionality-that-takes-a-side-(bid-or-ask)-and-a-price-p-as-arguments,-and-returns-the-total-volume-available-in-the-order-book-at-p.">2. Add some functionality that takes a side (bid or ask) and a price p as arguments, and returns the total volume available in the order book at p.<a class="anchor-link" href="#2.-Add-some-functionality-that-takes-a-side-(bid-or-ask)-and-a-price-p-as-arguments,-and-returns-the-total-volume-available-in-the-order-book-at-p.">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calc_volume</span><span class="p">(</span><span class="n">ob_side</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="s2">"https://api.kraken.com/0/public/Depth?pair=ethusd"</span><span class="p">)</span>
+    
+    <span class="c1"># side should be either "asks" or "bids"</span>
+    <span class="n">side</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"XETHZUSD"</span><span class="p">][</span><span class="n">ob_side</span><span class="p">]</span>
+    <span class="n">clean_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">side</span><span class="p">):</span>
+        <span class="n">price_data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">side</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">volume</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">side</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">clean_data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">price_data</span><span class="p">,</span> <span class="n">volume</span><span class="p">))</span>
+
+    <span class="c1"># find all the items where first item is less than or equal to price</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">operate</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'bids'</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">ge</span><span class="p">,</span>
+        <span class="s1">'asks'</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="n">operate</span><span class="p">[</span><span class="n">ob_side</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clean_data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">op</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">price</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">volume</span> <span class="o">+=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">volume</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">calc_volume</span><span class="p">(</span><span class="s2">"bids"</span><span class="p">,</span> <span class="mi">2470</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>1706.7749999999996</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">calc_volume</span><span class="p">(</span><span class="s2">"asks"</span><span class="p">,</span> <span class="mi">2480</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Now-add-some-(or-modifies-existing)-functionality-that-takes-a-percentage-and-a-side-as-arguments,-and-returns-the-volume-available-between-the-best-price-for-that-side,-and-that-price-+/--the-percentage.">3. Now add some (or modifies existing) functionality that takes a percentage and a side as arguments, and returns the volume available between the best price for that side, and that price +/- the percentage.<a class="anchor-link" href="#3.-Now-add-some-(or-modifies-existing)-functionality-that-takes-a-percentage-and-a-side-as-arguments,-and-returns-the-volume-available-between-the-best-price-for-that-side,-and-that-price-+/--the-percentage.">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">slippage</span><span class="p">(</span><span class="n">ob_side</span><span class="p">,</span> <span class="n">percent</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="s2">"https://api.kraken.com/0/public/Depth?pair=ethusd"</span><span class="p">)</span>
+    
+    <span class="c1"># side should be either "asks" or "bids"</span>
+    <span class="n">side</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"XETHZUSD"</span><span class="p">][</span><span class="n">ob_side</span><span class="p">]</span>
+    <span class="n">clean_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">side</span><span class="p">):</span>
+        <span class="n">price_data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">side</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">volume</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">side</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">clean_data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">price_data</span><span class="p">,</span> <span class="n">volume</span><span class="p">))</span>
+
+    <span class="c1"># find all the items where first item is less than or equal to price</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">starting_price</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># pprint.pprint(starting_price)</span>
+
+    <span class="k">if</span> <span class="n">side</span> <span class="o">==</span> <span class="s1">'asks'</span><span class="p">:</span>
+        <span class="n">percent</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">add</span> <span class="k">if</span> <span class="n">side</span> <span class="o">==</span> <span class="s2">"ask"</span> <span class="k">else</span> <span class="n">operator</span><span class="o">.</span><span class="n">sub</span>
+    <span class="n">limit_price</span> <span class="o">=</span> <span class="n">op</span><span class="p">(</span><span class="n">starting_price</span><span class="p">,</span> <span class="p">(</span><span class="n">starting_price</span> <span class="o">*</span> <span class="n">percent</span><span class="p">))</span>
+    <span class="c1"># pp.pprint(f"limit_price: {limit_price}")</span>
+    <span class="n">operate</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'bids'</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">ge</span><span class="p">,</span>
+        <span class="s1">'asks'</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="n">operate</span><span class="p">[</span><span class="n">ob_side</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clean_data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">op</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">limit_price</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">volume</span> <span class="o">+=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="c1"># pp.pprint(volume)</span>
+    <span class="k">return</span> <span class="n">volume</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">slippage</span><span class="p">(</span><span class="s2">"bids"</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>1818.142</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Can-you-visualize-the-order-book?">3. Can you visualize the order book?<a class="anchor-link" href="#3.-Can-you-visualize-the-order-book?">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">asks</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="s2">"https://api.kraken.com/0/public/Depth?pair=ethusd"</span><span class="p">)[</span><span class="s1">'XETHZUSD'</span><span class="p">][</span><span class="s1">'asks'</span><span class="p">]</span>
+<span class="n">bids</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="s2">"https://api.kraken.com/0/public/Depth?pair=ethusd"</span><span class="p">)[</span><span class="s1">'XETHZUSD'</span><span class="p">][</span><span class="s1">'bids'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">asks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">asks</span><span class="p">)</span>
+<span class="n">asks</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'price'</span><span class="p">,</span> <span class="s1">'volume'</span><span class="p">,</span> <span class="s1">'timestamp'</span><span class="p">]</span>
+<span class="n">asks</span><span class="p">[</span><span class="s1">'volume'</span><span class="p">]</span> <span class="o">=</span> <span class="n">asks</span><span class="p">[</span><span class="s1">'volume'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">asks</span><span class="p">[</span><span class="s1">'cumulative'</span><span class="p">]</span> <span class="o">=</span> <span class="n">asks</span><span class="p">[</span><span class="s1">'volume'</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">asks</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>price</th>
+<th>volume</th>
+<th>timestamp</th>
+<th>cumulative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2487.40000</td>
+<td>8.042</td>
+<td>1623668899</td>
+<td>8.042</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2487.41000</td>
+<td>0.660</td>
+<td>1623668898</td>
+<td>8.702</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2487.96000</td>
+<td>8.040</td>
+<td>1623668883</td>
+<td>16.742</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2488.01000</td>
+<td>1.010</td>
+<td>1623668884</td>
+<td>17.752</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2488.09000</td>
+<td>14.091</td>
+<td>1623668891</td>
+<td>31.843</td>
+</tr>
+<tr>
+<th>…</th>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<th>95</th>
+<td>2500.21000</td>
+<td>0.004</td>
+<td>1623668752</td>
+<td>1061.465</td>
+</tr>
+<tr>
+<th>96</th>
+<td>2500.26000</td>
+<td>190.661</td>
+<td>1623668850</td>
+<td>1252.126</td>
+</tr>
+<tr>
+<th>97</th>
+<td>2500.76000</td>
+<td>34.668</td>
+<td>1623668886</td>
+<td>1286.794</td>
+</tr>
+<tr>
+<th>98</th>
+<td>2500.90000</td>
+<td>0.030</td>
+<td>1623664812</td>
+<td>1286.824</td>
+</tr>
+<tr>
+<th>99</th>
+<td>2501.60000</td>
+<td>0.139</td>
+<td>1623668867</td>
+<td>1286.963</td>
+</tr>
+</tbody>
+</table>
+<p>100 rows × 4 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">bids</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">bids</span><span class="p">)</span>
+<span class="n">bids</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'price'</span><span class="p">,</span> <span class="s1">'volume'</span><span class="p">,</span> <span class="s1">'timestamp'</span><span class="p">]</span>
+<span class="n">bids</span><span class="p">[</span><span class="s1">'volume'</span><span class="p">]</span> <span class="o">=</span> <span class="n">bids</span><span class="p">[</span><span class="s1">'volume'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">bids</span><span class="p">[</span><span class="s1">'cumulative'</span><span class="p">]</span> <span class="o">=</span> <span class="n">bids</span><span class="p">[</span><span class="s1">'volume'</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">bids</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>price</th>
+<th>volume</th>
+<th>timestamp</th>
+<th>cumulative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2487.35000</td>
+<td>13.100</td>
+<td>1623668896</td>
+<td>13.100</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2487.34000</td>
+<td>4.000</td>
+<td>1623668896</td>
+<td>17.100</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2486.96000</td>
+<td>6.225</td>
+<td>1623668891</td>
+<td>23.325</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2486.84000</td>
+<td>8.041</td>
+<td>1623668899</td>
+<td>31.366</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2486.57000</td>
+<td>49.090</td>
+<td>1623668882</td>
+<td>80.456</td>
+</tr>
+<tr>
+<th>…</th>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<th>95</th>
+<td>2467.20000</td>
+<td>0.018</td>
+<td>1623667404</td>
+<td>1726.547</td>
+</tr>
+<tr>
+<th>96</th>
+<td>2466.88000</td>
+<td>0.008</td>
+<td>1623666271</td>
+<td>1726.555</td>
+</tr>
+<tr>
+<th>97</th>
+<td>2466.03000</td>
+<td>2.500</td>
+<td>1623668678</td>
+<td>1729.055</td>
+</tr>
+<tr>
+<th>98</th>
+<td>2465.50000</td>
+<td>89.080</td>
+<td>1623668706</td>
+<td>1818.135</td>
+</tr>
+<tr>
+<th>99</th>
+<td>2465.28000</td>
+<td>0.007</td>
+<td>1623666885</td>
+<td>1818.142</td>
+</tr>
+</tbody>
+</table>
+<p>100 rows × 4 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ob</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">bids</span><span class="p">[[</span><span class="s2">"price"</span><span class="p">,</span><span class="s2">"cumulative"</span><span class="p">]],</span> <span class="n">asks</span><span class="p">[[</span><span class="s2">"price"</span><span class="p">,</span><span class="s2">"cumulative"</span><span class="p">]]],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ob</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"price"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ob</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"price"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">ob</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">xticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklocs</span><span class="p">()</span>
+<span class="n">xticklabels</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklabels</span><span class="p">()]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">[::</span><span class="mi">5</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">(</span><span class="n">xticklabels</span><span class="p">[::</span><span class="mi">5</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+MAAAJ/CAYAAAATVwJcAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjQuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8rg+JYAAAACXBIWXMAAAsTAAALEwEAmpwYAABT60lEQVR4nO3deZwtV1k3+t+TnEAYk0BCiITYAUEZEzFEuIjgQADjS0Bl8goEBVRAEF6Hg/penN84gvgqXIZcQJBZIHpQEiZHQsaTiTAECBAMIQYhKKCQrPtHVSf7dPpMvXdVd/X5fj+f/TnVtbufes7au2qvZ9eqVdVaCwAAADCe/dY7AQAAANjXKMYBAABgZIpxAAAAGJliHAAAAEamGAcAAICRKcYBAABgZFvWO4HdOfTQQ9vS0tJ6pwEAAAB75dxzz/231tphqz234YvxpaWlnHPOOeudBgAAAOyVqvr0zp4zTB0AAABGphgHAACAkSnGAQAAYGQb/ppxAAAA1uYb3/hGrrjiinz9619f71Q2tQMPPDBHHnlkDjjggD3+G8U4AADAJnXFFVfkNre5TZaWllJV653OptRayzXXXJMrrrgiRx999B7/nWHqAAAAm9TXv/713P72t1eID6iqcvvb336vRx8oxgEAADYxhfjw1tLGinEAAAAm7/LLL8+9733v3f7OX/7lX97w8znnnJPnPOc5Q6e2KteMAwAA7COWtm5baLzLTzlxofGGtlyM//iP/3iS5Ljjjstxxx23Lrk4Mw4AAMBgXvva1+a+971vjjnmmDzpSU/KySefnLe+9a03PH/rW986SfKBD3wgD3nIQ3LSSSflLne5S7Zu3ZrXv/71Of7443Of+9wnn/jEJ5Jkp38/6/LLL8+DH/zg3O9+98v97ne//Mu//EuSZOvWrfnHf/zHHHvssXnRi16UD3zgA/nhH/7hXH/99VlaWsqXvvSlG2Lc7W53y1VXXZWrr746P/qjP5r73//+uf/9759//ud/Xki7KMYBAAAYxCWXXJLf/u3fzvve975ccMEF+ZM/+ZNd/v4FF1yQl73sZbn00kvzF3/xF/nYxz6Ws846K0972tPyp3/6p3u83Tvc4Q4544wzct555+VNb3rTDUPRTznllDz4wQ/O9u3b87znPe+G399vv/1y0kkn5e1vf3uS5EMf+lC+9Vu/NYcffnie+9zn5nnPe17OPvvsvO1tb8vTnva0NbTETRmmDgAAwCDe97735bGPfWwOPfTQJMntbne7Xf7+/e9//xxxxBFJkrve9a454YQTkiT3uc998v73v3+Pt/uNb3wjz372s7N9+/bsv//++djHPrbbv3n84x+f3/zN38xTn/rUvPGNb8zjH//4JMl73vOefPjDH77h96699tr8x3/8x6pn5PeGYhwAAIDRbNmyJddff32S5Prrr89///d/3/DczW9+8xuW99tvvxt+3m+//fLNb35zt3+/7EUvelEOP/zwXHDBBbn++utz4IEH7javBz7wgbnsssty9dVX5x3veEd+7dd+7YZtnHnmmXsUY28Ypg4AAMAgvv/7vz9vectbcs011yRJvvjFL2ZpaSnnnntukuS0007LN77xjb2KuSd//+UvfzlHHHFE9ttvv/zFX/xFrrvuuiTJbW5zm3zlK19ZNW5V5TGPeUye//zn5x73uEduf/vbJ0lOOOGEHYbIb9++fa/y3RnFOAAAAIO4173ulV/91V/NQx7ykBxzzDF5/vOfn6c//en5+7//+xxzzDH54Ac/mFvd6lZ7FXNP/v6Zz3xmXvOa1+SYY47JRz7ykRt+5773vW/233//HHPMMXnRi150k797/OMfn9e97nU3DFFPkpe85CU555xzct/73jf3vOc987KXvWwvW2F11VpbSKChHHfcce2cc85Z7zQAAAAm59JLL8097nGP9U5jn7BaW1fVua21Ve+d5sw4AAAAjEwxDgAAACNTjAMAAMDIFOMAAACb2EafJ2wzWEsbK8YBAAA2qQMPPDDXXHONgnxArbVcc801e30f8i0D5QMAAMA6O/LII3PFFVfk6quvXu9UNrUDDzwwRx555F79jWIcAABgkzrggANy9NFHr3carMIwdQAAABjZJIrxpa3bsrR1227XAQAAwBRMohgHAACAzUQxDgAAACNTjAMAAMDIFOMAAAAwMsU4AAAAjEwxDgAAACNTjAMAAMDIFOMAAAAwMsU4AAAAjEwxDgAAACNTjAMAAMDIFOMAAAAwMsU4AAAAjEwxDgAAACPbbTFeVadW1Req6uKZdW+qqu394/Kq2t6vX6qqr80897KZv/muqrqoqi6rqpdUVQ3yPwIAAIANbsse/M6rk/yfJK9dXtFae/zyclX9UZIvz/z+J1prx64S56VJnp7kQ0ne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
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Part-2:-Time-series">Part 2: Time-series<a class="anchor-link" href="#Part-2:-Time-series">¶</a></h1><ol>
+<li><p>Build an abstraction that takes the following arguments:</p>
+<ul>
+<li>A pair</li>
+<li>A unit of time (t) that can be either “milliseconds”, “seconds”, “minutes” or “hours”.</li>
+<li>A number of time units (n)  </li>
+</ul>
+<p>Given these arguments, it should fetch and store the order book for the pair every n t. For example: if t = “second” and n = 3, it should fetch the order book every second for a total of 3 times.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">time_series</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">tunit</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">base_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://api.kraken.com/0/public/Depth?pair=</span><span class="si">{</span><span class="n">pair</span><span class="si">}</span><span class="s2">"</span>
+    <span class="n">pair_mod</span> <span class="o">=</span> <span class="s2">"X"</span><span class="o">+</span><span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">+</span><span class="s2">"Z"</span><span class="o">+</span><span class="n">pair</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="n">timeunits</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"s"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"m"</span><span class="p">:</span> <span class="mi">60</span><span class="o">*</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"ms"</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">realtime</span> <span class="o">=</span> <span class="n">timeunits</span><span class="p">[</span><span class="n">tunit</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"getting snapshot </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> of </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">r</span><span class="p">)))</span>
+        <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'result'</span><span class="p">)[</span><span class="n">pair_mod</span><span class="p">]</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">realtime</span><span class="p">)</span> <span class="c1"># had to modify by multiplying by n so that api is more likely to return different data set.</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"done!"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">time_series</span><span class="p">(</span><span class="s2">"ethusd"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>getting snapshot 1 of 3
+-2809356014931484110
+getting snapshot 2 of 3
+6929380680464173618
+getting snapshot 3 of 3
+6929380680464173618
+done!
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>we see that the hash of the api response is sometimes the same, so we would expect there to be no volume change between these identical snapshots</em></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Now-extend-your-code-to-compare-the-order-books-you've-fetched-to-each-other.-Given-the-name-of-a-pair,-n,-t-and-a-price-p,-determine-how-much-the-total-volume-available-at-p-has-changed-between-each-&quot;frame&quot;,-and-between-the-first-and-last-&quot;frame&quot;.">Now extend your code to compare the order books you’ve fetched to each other. Given the name of a pair, n, t and a price p, determine how much the total volume available at p has changed between each “frame”, and between the first and last “frame”.<a class="anchor-link" href="#Now-extend-your-code-to-compare-the-order-books-you've-fetched-to-each-other.-Given-the-name-of-a-pair,-n,-t-and-a-price-p,-determine-how-much-the-total-volume-available-at-p-has-changed-between-each-&quot;frame&quot;,-and-between-the-first-and-last-&quot;frame&quot;.">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># redefine "calc_volume" function from above to make data an input param</span>
+<span class="k">def</span> <span class="nf">calc_volume</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ob_side</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+    
+    <span class="c1"># side should be either "asks" or "bids"</span>
+    <span class="n">side</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">ob_side</span><span class="p">]</span>
+    <span class="n">clean_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">side</span><span class="p">):</span>
+        <span class="n">price_data</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">side</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">volume</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">side</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">clean_data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">price_data</span><span class="p">,</span> <span class="n">volume</span><span class="p">))</span>
+
+    <span class="c1"># find all the items where first item is less than or equal to price</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">operate</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'bids'</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">ge</span><span class="p">,</span>
+        <span class="s1">'asks'</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="n">operate</span><span class="p">[</span><span class="n">ob_side</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clean_data</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">op</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">price</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">volume</span> <span class="o">+=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">volume</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">snapshot_compare</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">ob_side</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+    <span class="n">snap_vol</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">calc_volume</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">ob_side</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
+        <span class="n">snap_vol</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        
+    <span class="n">total_change</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">snap_vol</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">snap_vol</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">incremental_changes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">snap_vol</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">snap_vol</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">snap_vol</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">snap_vol</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"vol in each snapshot: </span><span class="si">{</span><span class="n">snap_vol</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"incremental: </span><span class="si">{</span><span class="n">incremental_changes</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"total (diff between last and first): </span><span class="si">{</span><span class="n">total_change</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">time_series</span><span class="p">(</span><span class="s2">"ethusd"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>getting snapshot 1 of 3
+8057432958366361014
+getting snapshot 2 of 3
+3948803953385675868
+getting snapshot 3 of 3
+-5364025763157137240
+done!
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [22]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">snapshot_compare</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="s2">"bids"</span><span class="p">,</span> <span class="mi">2470</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>vol in each snapshot: [1714.5209999999995, 1727.4139999999998, 1773.5419999999997]
+incremental: [13, 46]
+total (diff between last and first): 59
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id='Finally,-can-you-think-of-an-efficient-way-to-get-a-"diff"-of-two-frames?-For-example,-can-you-think-of-a-way-to-determine-at-which-price-the-volume-changed-the-most?'>Finally, can you think of an efficient way to get a “diff” of two frames? For example, can you think of a way to determine at which price the volume changed the most?<a class="anchor-link" href='#Finally,-can-you-think-of-an-efficient-way-to-get-a-"diff"-of-two-frames?-For-example,-can-you-think-of-a-way-to-determine-at-which-price-the-volume-changed-the-most?'>¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quick idea:</p>
+<ul>
+<li>for each side of each order book, group the orders into buckets with a certain width, e.g. if the lowest ask is 2450, group all the asks from 2450 to 2451, then from 2451 to 2452, etc. Do this for both sides of each order book you collect.</li>
+<li>you then have multiple aggregated order books with the same indexes.</li>
+<li>compare the volumes at the same index across each orderbook</li>
+</ul>
+<p>Additional considerations:</p>
+<ul>
+<li>need to force the lowest ask or max bid to be the same in each order book snapshot. </li>
+<li>need to deal with large spreads</li>
+<li>comparisons where one side has 0 volume should be marked as suspicious and investigated further to iterate a better solution.</li>
+<li>need to present negative volumes changes correctly</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+</div>
+</div></div></div></article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/choose-boring-technology.html" id="previousArticleInCategory"> Choose Boring Technology</a>
+</div>
+<div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        Other articles in:
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/data.html" id="otherArticlesInCategory"> Data</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
+
+        // show category options window when cat icon is clicked
+        $( ".catChooser" ).click(function() {
+              $('#catModal').removeClass('hidden');
+        });
+
+
+      </script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
+      </script>
+<script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+</body>
+</html>
