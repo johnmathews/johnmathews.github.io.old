@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-12T11:00:46+02:00</updated><entry><title>Axiom</title><link href="https://johnmathews.eu/axiom.html" rel="alternate"/><published>2021-06-12T11:00:46+02:00</published><updated>2021-06-12T11:00:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-12:/axiom.html</id><summary type="html"/><content type="html">&lt;p&gt;A basic statement that is assumed to be true. E.g:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-15T14:52:28+02:00</updated><entry><title>Vim Sneak</title><link href="https://johnmathews.eu/vim-sneak.html" rel="alternate"/><published>2021-06-15T14:52:28+02:00</published><updated>2021-06-15T14:52:28+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/vim-sneak.html</id><summary type="html"/><content type="html">&lt;ul&gt;
+&lt;li&gt;Invoked with &lt;code&gt;s&lt;/code&gt; followed by 2 chars.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S&lt;/code&gt; goes backwards.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F&lt;/code&gt;, &lt;code&gt;f&lt;/code&gt;, &lt;code&gt;T&lt;/code&gt;, and &lt;code&gt;t&lt;/code&gt; are enabled to work across lines.&lt;/li&gt;
+&lt;li&gt;Jump back with &lt;code&gt;&lt;c-o&gt;&lt;/c-o&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;;&lt;/code&gt; or &lt;code&gt;,&lt;/code&gt; to go to next/previous highlighted text.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;5sxy&lt;/code&gt; searches for the next instance of &lt;code&gt;xy&lt;/code&gt; within 5 lines.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3dzqt&lt;/code&gt; delete up to the third instance of &lt;code&gt;qt&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/justinmk/vim-sneak"&gt;repo&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="vim"/><category term="plugin"/></entry><entry><title>Axiom</title><link href="https://johnmathews.eu/axiom.html" rel="alternate"/><published>2021-06-12T11:00:46+02:00</published><updated>2021-06-12T11:00:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-12:/axiom.html</id><summary type="html"/><content type="html">&lt;p&gt;A basic statement that is assumed to be true. E.g:
 “A straight line can be drawn between any two points”&lt;/p&gt;
 &lt;div class="relative mt-3" style="padding-top: 56.25%"&gt;
 &lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://www.youtube.com/embed/HeQX2HjkcNo"&gt;
