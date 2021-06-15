@@ -12,18 +12,18 @@
 <meta content="Notes From “Powerful Python” -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content="  " name="keywords"/>
-<meta content=" The parts of Aaron Maxwell’s Power Python newsletter that I don’t want to forget: Table of Contents Emergent Abstractions Practioner, Engineer, Scientist Sentinel Values Levels of Python Code Read PEPs Emergent Abstractions Get used to expecting and letting abstractions emerge from projects. If you find yourself repeatedly solving similar problems in similar ways, what can you do that will simplify the code and the implementation1? Is it a couple of convenience methods on some helper class?... " name="description"/>
+<meta content=" The parts of Aaron Maxwell’s Powerful Python newsletter that I don’t want to forget: Table of Contents Emergent Abstractions Practioner, Engineer, Scientist Sentinel Values Levels of Python Code Read PEPs Emergent Abstractions Get used to expecting and letting abstractions emerge from projects. If you find yourself repeatedly solving similar problems in similar ways, what can you do that will simplify the code and the implementation1? Is it a couple of convenience methods on some helper... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Notes From “Powerful Python”" property="twitter:title"/>
-<meta content=" The parts of Aaron Maxwell’s Power Python newsletter that I don’t want to forget: Table of Contents Emergent Abstractions Practioner, Engineer, Scientist Sentinel Values Levels of Python Code Read PEPs Emergent Abstractions Get used to expecting and letting abstractions emerge from projects. If you find yourself repeatedly solving similar problems in similar ways, what can you do that will simplify the code and the implementation1? Is it a couple of convenience methods on some helper class?... " name="twitter:description"/>
+<meta content=" The parts of Aaron Maxwell’s Powerful Python newsletter that I don’t want to forget: Table of Contents Emergent Abstractions Practioner, Engineer, Scientist Sentinel Values Levels of Python Code Read PEPs Emergent Abstractions Get used to expecting and letting abstractions emerge from projects. If you find yourself repeatedly solving similar problems in similar ways, what can you do that will simplify the code and the implementation1? Is it a couple of convenience methods on some helper... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/python-notes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Notes From “Powerful Python”" property="og:title"/>
-<meta content=" The parts of Aaron Maxwell’s Power Python newsletter that I don’t want to forget: Table of Contents Emergent Abstractions Practioner, Engineer, Scientist Sentinel Values Levels of Python Code Read PEPs Emergent Abstractions Get used to expecting and letting abstractions emerge from projects. If you find yourself repeatedly solving similar problems in similar ways, what can you do that will simplify the code and the implementation1? Is it a couple of convenience methods on some helper class?... " property="og:description"/>
+<meta content=" The parts of Aaron Maxwell’s Powerful Python newsletter that I don’t want to forget: Table of Contents Emergent Abstractions Practioner, Engineer, Scientist Sentinel Values Levels of Python Code Read PEPs Emergent Abstractions Get used to expecting and letting abstractions emerge from projects. If you find yourself repeatedly solving similar problems in similar ways, what can you do that will simplify the code and the implementation1? Is it a couple of convenience methods on some helper... " property="og:description"/>
 <meta content="https://johnmathews.eu/python-notes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -256,7 +256,7 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>The parts of Aaron Maxwell’s <a href="https://twitter.com/powerfulpython">Power Python</a>
+<p>The parts of Aaron Maxwell’s <a href="https://twitter.com/powerfulpython">Powerful Python</a>
 newsletter that I don’t want to forget:</p>
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#emergent-abstractions">Emergent Abstractions</a></li>
@@ -269,15 +269,16 @@ newsletter that I don’t want to forget:</p>
 <h2 id="emergent-abstractions">Emergent Abstractions</h2>
 <p>Get used to expecting and letting abstractions emerge from projects. If you
 find yourself repeatedly solving similar problems in similar ways, what can you
-do that will simplify the code and the implementation<sup id="sf-python-notes-1-back"><a class="simple-footnote" href="#sf-python-notes-1" title=" Abstraction as a principal of OOP">1</a></sup>?</p>
+do that will simplify the code and the implementation<sup id="sf-python-notes-1-back"><a class="simple-footnote" href="#sf-python-notes-1" title=" Abstraction is a principal of OOP">1</a></sup>?</p>
 <p>Is it a couple of convenience methods on some helper class?</p>
-<p>The below code snippet gives you three ways of instantiating the twitter <span class="caps">API</span> client:</p>
+<p>The code below gives you three ways of instantiating the twitter <span class="caps">API</span>
+client within the same class:</p>
 <ol>
 <li>A generic “normal” way</li>
 <li>A specialized way that looks for certain environment variables</li>
 <li>A specialized way that looks for a configuration file</li>
 </ol>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span> <span class="c1"># so you can get the environment variables</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">twitter</span> <span class="c1"># https://pypi.org/project/python-twitter/</span>
 
 <span class="k">class</span> <span class="nc">ApiClient</span><span class="p">:</span>
@@ -320,24 +321,36 @@ there can be no ambiguity about where it came from.</p>
 <ul>
 <li>A sentinel value is a value you can set a variable to.</li>
 <li>It’s special because it differs from all other legal or possible values that the variable could have.</li>
-<li>It’s used as a signal or as a canary that something has happened.</li>
+<li>It’s used as a signal or as a canary that something (bad or unexpected) has happened.</li>
 </ul>
 <h2 id="levels-of-python-code">Levels of Python Code</h2>
 <ol>
-<li><em>Syntax</em> - understand what indentation is important, sometimes you need
-    parenthesis, etc</li>
-<li><em>Idiom</em> - the building blocks of a program. “Paragraphs” of code that
-    follow common patterns, like for loops, or context managers.</li>
-<li><em>Design Pattern</em> - Less well defined that Idioms, but more useful.
-        - Creational Patterns, like factories
-        - Structural Patterns, like Adapters or Proxies
-        - Behavioural Patterns, like <code>Visitor</code> or <code>Strategy</code>
-    These tend to be the same across different languages.</li>
-<li><em>Architectural</em> - the large-scale structure of your software system. The
+<li>
+<p><strong>Syntax</strong> - understand what indentation is important, when you need
+    parenthesis, colons, etc</p>
+</li>
+<li>
+<p><strong>Idioms</strong> - the building blocks of a program. “Paragraphs” of code that
+    follow common patterns, like for loops, __init__() methods (boilerplate)
+    or context managers.</p>
+</li>
+<li>
+<p><strong>Design Patterns</strong> - Less well defined that Idioms, but more useful. <a href="https://johnmathews.eu/design-patterns.html">More
+    info</a>.</p>
+<ul>
+<li>Creational Patterns, like Factories</li>
+<li>Structural Patterns, like Adapters or Proxies</li>
+<li>Behavioural Patterns, like <code>Visitor</code> or <code>Strategy</code></li>
+</ul>
+<p>These tend to be the same across different languages.</p>
+</li>
+<li>
+<p><strong>Architectural</strong> - the largest structures in your software system. The
    language itself doesn’t make a lot of difference, an application would have
    the same architecture whether it is written in Python or Java. The interface
    between different components would be different, but the “organs” of the
-   body would essentially be the same.</li>
+   body would essentially be the same.</p>
+</li>
 </ol>
 <h2 id="read-peps">Read PEPs</h2>
 <p>A Python Enhancement Proposal is a document that’s written to propose a new
@@ -347,7 +360,7 @@ lots of sample code.</p>
 <p>If the <span class="caps">PEP</span> is accepted into a future version of Python, the <span class="caps">PEP</span> becomes
 the authoritative document for that feature and how to use it.</p>
 <p>PEPs tend to be written by the best programmers in the world, so hang out with them.</p><ol class="simple-footnotes"><li id="sf-python-notes-1">
-<a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction">Abstraction</a> as a
+<a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction">Abstraction</a> is a
 principal of <span class="caps">OOP</span> <a class="simple-footnote-back" href="#sf-python-notes-1-back">↩</a></li></ol>
 </div>
 </article>
