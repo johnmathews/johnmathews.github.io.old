@@ -210,14 +210,6 @@
   @apply mt-7 mb-0;
 }
 
-.markdown ul li p:first-child {
-	@apply mt-0
-}
-
-.markdown ul li p {
-	@apply mt-2
-}
-
 .markdown h2 + p {
   @apply mt-2 mb-0;
 }
@@ -240,6 +232,19 @@
 
 
 /* Lists.. */
+
+#snippets .markdown ul li:first-child {
+	@apply mt-7
+}
+
+#snippets .markdown ol li:first-child {
+	@apply mt-7
+}
+
+.markdown ul li p {
+	@apply mt-2
+}
+
 .markdown ul {
   @apply pl-8 list-disc;
 }
