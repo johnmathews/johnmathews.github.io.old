@@ -394,6 +394,10 @@ tools in a toolbox.</p><ol class="simple-footnotes"><li id="sf-mental-models-i-
         }
       </script>
 <script>
+            const url = "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname
+            $.get(url)
+        </script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 

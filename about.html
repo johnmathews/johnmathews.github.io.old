@@ -304,6 +304,10 @@ develop <a href="https://moneybar.nl">web</a> <a href="https://pippip.email">app
         }
       </script>
 <script>
+            const url = "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname
+            $.get(url)
+        </script>
+<script>
     // set or update user preference for article category if it hasnt been set
     if (localStorage.getItem('categoryChoice') === "technical") {
       // pass

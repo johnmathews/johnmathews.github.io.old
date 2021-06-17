@@ -372,5 +372,9 @@
           $("#macOrPc").html("Cmd-K");
         }
       </script>
+<script>
+            const url = "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname
+            $.get(url)
+        </script>
 </body>
 </html>
