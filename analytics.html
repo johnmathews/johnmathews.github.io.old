@@ -298,7 +298,15 @@
 <script>
     $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
       console.log(srcData)
-        $('#analytics').text(srcData.length)
+
+      $('#analytics').text(srcData.length)
+      for (var [key, value] of Object.entries(srcData)) {
+        var dateString = value[2]
+        var components = dateString.split(/\D/)
+        value[2] = new Date(components[0], --components[1], components[2]) // just the day, as a Date
+      }
+
+      console.log(srcData)
 
           const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
           var ctx = document.getElementById('myChart').getContext('2d');
@@ -308,8 +316,8 @@
                               fill: false,
                               borderColor: 'rgb(75, 192, 192)',
                               tension: 0.1 }]
-          const data = { labels: labels, datasets: datasets };
-          const config = { type: 'line', data: data, };
+          const demoData = { labels: labels, datasets: datasets };
+          const config = { type: 'line', data: demoData, };
           var myChart = new Chart(ctx, config)
       })
   </script>
