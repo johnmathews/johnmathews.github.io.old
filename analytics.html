@@ -246,6 +246,7 @@
 <div class="mt-5 grid grid-cols-1 gap-4">
 <div class="border-2 border-gray-700 p-5"><div class="mb-3">Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
 <div class="border-2 border-gray-700 p-5"><div class="mb-3">Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
+<div class="border-2 border-gray-700 p-5"><div class="mb-3">Views per Page per Day</div><div id="viewsPageDay"></div></div>
 </div>
 </article>
 </main>
@@ -308,8 +309,10 @@
 
         var dailyViews = JSON.parse(srcData['daily_views'])
         var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
+        var viewsPageDay = JSON.parse(srcData['views_per_page_per_day'])
         dailyViews = dailyViews['page']
         dailyIpAddresses = dailyIpAddresses['ip_address']
+
 
         // Page Views per day
         var dailyViewsCleaned = {}
@@ -344,6 +347,26 @@
               }
         var config = {type: 'line', data: data, options: options};
         var pageViewsPerDay = new Chart(ctx, config)
+
+        // views per page per day
+        var html = '<table>';
+        html += '<tr>';
+        html += '<th>' + 'Date' + '</th><th>' + 'Page' + '</th><th>' + 'Views' + '</th>';
+        html += '</tr>';
+        for (var i = 0; i < viewsPageDay.length; i++) {
+          html += '<tr>';
+          for( var j in viewsPageDay[i] ) {
+            if (j === 'date'){
+              var date = new Date(viewsPageDay[i][j])
+              html += '<td>' + date.toLocaleDateString("en-UK")  + '</td>';
+            } else {
+              html += '<td>' + viewsPageDay[i][j] + '</td>';
+            }
+          }
+          html += '</tr>';
+        }
+        html += '</table>';
+        document.getElementById('viewsPageDay').innerHTML = html;
 
         // Unique IP Addresses per day
         var dailyIpAddressesCleaned = {}
