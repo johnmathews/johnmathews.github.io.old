@@ -303,16 +303,16 @@
         </script>
 <script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 <script crossorigin="anonymous" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<link href="https://cdn.datatables.net/v/ju/dt-1.10.25/af-2.3.7/b-1.7.1/b-html5-1.7.1/date-1.1.0/fh-3.1.9/r-2.2.9/sc-2.0.4/datatables.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/v/ju/dt-1.10.25/af-2.3.7/b-1.7.1/b-html5-1.7.1/date-1.1.0/fh-3.1.9/r-2.2.9/sc-2.0.4/datatables.min.js" type="text/javascript"></script>
 <script>
-
     $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
-
         var dailyViews = JSON.parse(srcData['daily_views'])
         var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
         var viewsPageDay = JSON.parse(srcData['views_per_page_per_day'])
         dailyViews = dailyViews['page']
         dailyIpAddresses = dailyIpAddresses['ip_address']
-
 
         // Page Views per day
         var dailyViewsCleaned = {}
@@ -348,25 +348,6 @@
         var config = {type: 'line', data: data, options: options};
         var pageViewsPerDay = new Chart(ctx, config)
 
-        // views per page per day
-        var html = '<table>';
-        html += '<tr>';
-        html += '<th>' + 'Date' + '</th><th>' + 'Page' + '</th><th>' + 'Views' + '</th>';
-        html += '</tr>';
-        for (var i = 0; i < viewsPageDay.length; i++) {
-          html += '<tr>';
-          for( var j in viewsPageDay[i] ) {
-            if (j === 'date'){
-              var date = new Date(viewsPageDay[i][j])
-              html += '<td>' + date.toLocaleDateString("en-UK")  + '</td>';
-            } else {
-              html += '<td>' + viewsPageDay[i][j] + '</td>';
-            }
-          }
-          html += '</tr>';
-        }
-        html += '</table>';
-        document.getElementById('viewsPageDay').innerHTML = html;
 
         // Unique IP Addresses per day
         var dailyIpAddressesCleaned = {}
@@ -401,7 +382,30 @@
               }
         var config = {type: 'line', data: data, options: options};
         var UniqueIpAddressesPerDay = new Chart(ctx2, config)
+
+        // views per page per day
+        var html = '<table id="dataTable" class="display">';
+        html += '<tr>';
+        html += '<th>' + 'Date' + '</th><th>' + 'Page' + '</th><th>' + 'Views' + '</th>';
+        html += '</tr>';
+        for (var i = 0; i < viewsPageDay.length; i++) {
+          html += '<tr>';
+          for( var j in viewsPageDay[i] ) {
+            if (j === 'date'){
+              var date = new Date(viewsPageDay[i][j])
+              html += '<td>' + date.toLocaleDateString("en-UK")  + '</td>';
+            } else {
+              html += '<td>' + viewsPageDay[i][j] + '</td>';
+            }
+          }
+          html += '</tr>';
+        }
+        html += '</table>';
+        $('#viewsPageDay').html(html)
+        $('#dataTable').DataTable();
+
       })
+
   </script>
 <script>
     // set or update user preference for article category if it hasnt been set
