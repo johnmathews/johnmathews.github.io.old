@@ -238,14 +238,15 @@
 <main>
 <article>
 <div class="markdown dark:text-gray-200">
-<p>this is the summary</p>
 </div>
 <div class="markdown dark:text-gray-200">
-<p>This is the page content</p>
 </div>
 <div class="" id="analytics">
 </div>
-<canvas height="400" id="myChart" width="400"></canvas>
+<div class="mt-5 grid grid-cols-1 gap-4">
+<div class="border-2 border-gray-700 p-5"><div>Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
+<div class="border-2 border-gray-700 p-5"><div>Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
+</div>
 </article>
 </main>
 <div class="border border-gray-300 mt-10 mb-10"></div>
@@ -294,31 +295,87 @@
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 <script>
+            let analyticsEvent = document.createElement("script");
+            analyticsEvent.setAttribute("src", "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname);
+            document.body.appendChild(analyticsEvent);
+        </script>
+<script ${window.location.pathname}}`="" data='`{"path":' defer="" src="https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger"></script>
+<script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script>
+
     $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
-      console.log(srcData)
 
-      $('#analytics').text(srcData.length)
-      for (var [key, value] of Object.entries(srcData)) {
-        var dateString = value[2]
-        var components = dateString.split(/\D/)
-        value[2] = new Date(components[0], --components[1], components[2]) // just the day, as a Date
-      }
+        var dailyViews = JSON.parse(srcData['daily_views'])
+        dailyViews = dailyViews['page']
 
-      console.log(srcData)
+        // Page Views per day
+        var dailyViewsCleaned = {}
+        for (var i in Object.keys(dailyViews)) {
+            var epoch = parseInt( Object.keys(dailyViews)[i] )
+            var viewDate = new Date(epoch)
+            var viewCount = dailyViews[Object.keys(dailyViews)[i]]
+            dailyViewsCleaned[viewDate] = viewCount
+        }
 
-          const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-          var ctx = document.getElementById('myChart').getContext('2d');
-          const labels = months.slice(0,7);
-          const datasets = [{ label: 'My First Dataset',
-                              data: [65, 59, 80, 81, 56, 55, 40],
-                              fill: false,
-                              borderColor: 'rgb(75, 192, 192)',
-                              tension: 0.1 }]
-          const demoData = { labels: labels, datasets: datasets };
-          const config = { type: 'line', data: demoData, };
-          var myChart = new Chart(ctx, config)
+        var ctx = document.getElementById('pageViewsPerDay').getContext('2d')
+        var labels = Object.keys(dailyViewsCleaned).map((date) => {
+                  return moment(moment(date)).format('DD MMM')
+              })
+        var datasets = [{
+                  label: 'Page Views Per Day',
+                  data: Object.values(dailyViewsCleaned),
+                  fill: false,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0.1
+              }]
+        var data = { labels: labels, datasets: datasets };
+        var options = {
+             scales: {
+                  xAxes: [{
+                    type: 'time',
+                  }],
+                },
+              }
+        var config = {type: 'line', data: data, options: options};
+        var pageViewsPerDay = new Chart(ctx, config)
+
+        // Unique IP Addresses per day
+        var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
+        dailyIpAddresses = dailyIpAddresses['ip_address']
+              console.log('smoke')
+              console.log(dailyIpAddresses)
+
+        var dailyIpAddressesCleaned = {}
+        for (var i in Object.keys(dailyIpAddresses)) {
+            var epoch = parseInt( Object.keys(dailyIpAddresses)[i] )
+            var xDate = new Date(epoch)
+            var IPCount = dailyViews[Object.keys(dailyIpAddresses)[i]]
+                dailyIpAddressesCleaned[xDate] = IPCount
+        }
+
+        var ctx = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
+        var labels = Object.keys(dailyIpAddressesCleaned).map((date) => {
+                  return moment(moment(date)).format('DD MMM')
+              })
+        var datasets = [{
+                  label: 'Unique IP Addresses Per Day',
+                  data: Object.values(dailyIpAddressesCleaned),
+                  fill: false,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0.1
+              }]
+        var data = { labels: labels, datasets: datasets };
+        var options = {
+             scales: {
+                  xAxes: [{
+                    type: 'time',
+                  }],
+                },
+              }
+        var config = {type: 'line', data: data, options: options};
+        var UniqueIpAddressesPerDay = new Chart(ctx, config)
       })
   </script>
 <script>
