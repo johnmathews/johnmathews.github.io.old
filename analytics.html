@@ -244,9 +244,9 @@
 <div class="" id="analytics">
 </div>
 <div class="mt-5 grid grid-cols-1 gap-4">
-<div class="border-2 border-gray-700 p-5"><div class="mb-3">Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
-<div class="border-2 border-gray-700 p-5"><div class="mb-3">Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
-<div class="border-2 border-gray-700 p-5"><div class="mb-3">Views per Page per Day</div><div id="viewsPageDay"></div></div>
+<div class="border-2 border-gray-700 p-5 m-3"><div class="mb-3">Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
+<div class="border-2 border-gray-700 p-5 m-3"><div class="mb-3">Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
+<div class="border-2 border-gray-700 p-5 m-3"><div class="mb-3">Views per Page per Day</div><div id="viewsPageDay"></div></div>
 </div>
 </article>
 </main>
@@ -301,12 +301,12 @@
                // console.log(srcData)
             })
         </script>
-<script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
 <script crossorigin="anonymous" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<link href="https://cdn.datatables.net/v/ju/dt-1.10.25/af-2.3.7/b-1.7.1/b-html5-1.7.1/date-1.1.0/fh-3.1.9/r-2.2.9/sc-2.0.4/datatables.min.css" rel="stylesheet" type="text/css"/>
-<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/v/ju/dt-1.10.25/af-2.3.7/b-1.7.1/b-html5-1.7.1/date-1.1.0/fh-3.1.9/r-2.2.9/sc-2.0.4/datatables.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<script charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js" type="text/javascript"></script>
 <script>
+  $(document).ready(function() {
     $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
         var dailyViews = JSON.parse(srcData['daily_views'])
         var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
@@ -402,10 +402,9 @@
         }
         html += '</table>';
         $('#viewsPageDay').html(html)
-        $('#dataTable').DataTable();
-
+        $('#dataTable').DataTable()
       })
-
+    })
   </script>
 <script>
     // set or update user preference for article category if it hasnt been set
