@@ -2520,9 +2520,9 @@ clone ...</code> you need to use <code>git lfs clone ...</code></p>
         }
       </script>
 <script>
-            let analyticsEvent = document.createElement("script");
-            analyticsEvent.setAttribute("src", "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname);
-            document.body.appendChild(analyticsEvent);
+            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {
+               // console.log(srcData)
+            })
         </script>
 <script> $(".catChooser").removeClass('hidden') </script>
 <script> const snippetIndexURL = 'https://johnmathews.eu/fuse-search-snippets.html'</script>

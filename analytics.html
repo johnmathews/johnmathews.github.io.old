@@ -244,8 +244,8 @@
 <div class="" id="analytics">
 </div>
 <div class="mt-5 grid grid-cols-1 gap-4">
-<div class="border-2 border-gray-700 p-5"><div>Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
-<div class="border-2 border-gray-700 p-5"><div>Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
+<div class="border-2 border-gray-700 p-5"><div class="mb-3">Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
+<div class="border-2 border-gray-700 p-5"><div class="mb-3">Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
 </div>
 </article>
 </main>
@@ -296,9 +296,9 @@
         }
       </script>
 <script>
-            let analyticsEvent = document.createElement("script");
-            analyticsEvent.setAttribute("src", "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname);
-            document.body.appendChild(analyticsEvent);
+            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {
+               // console.log(srcData)
+            })
         </script>
 <script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 <script crossorigin="anonymous" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
@@ -307,7 +307,9 @@
     $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
 
         var dailyViews = JSON.parse(srcData['daily_views'])
+        var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
         dailyViews = dailyViews['page']
+        dailyIpAddresses = dailyIpAddresses['ip_address']
 
         // Page Views per day
         var dailyViewsCleaned = {}
@@ -325,12 +327,15 @@
         var datasets = [{
                   label: 'Page Views Per Day',
                   data: Object.values(dailyViewsCleaned),
-                  fill: false,
+                  fill: true,
                   borderColor: 'rgb(75, 192, 192)',
                   tension: 0.1
               }]
         var data = { labels: labels, datasets: datasets };
         var options = {
+             plugins: {
+                 legend: false,
+             },
              scales: {
                   xAxes: [{
                     type: 'time',
@@ -341,32 +346,30 @@
         var pageViewsPerDay = new Chart(ctx, config)
 
         // Unique IP Addresses per day
-        var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
-        dailyIpAddresses = dailyIpAddresses['ip_address']
-              console.log('smoke')
-              console.log(dailyIpAddresses)
-
         var dailyIpAddressesCleaned = {}
         for (var i in Object.keys(dailyIpAddresses)) {
             var epoch = parseInt( Object.keys(dailyIpAddresses)[i] )
             var xDate = new Date(epoch)
-            var IPCount = dailyViews[Object.keys(dailyIpAddresses)[i]]
+            var IPCount = dailyIpAddresses[Object.keys(dailyIpAddresses)[i]]
                 dailyIpAddressesCleaned[xDate] = IPCount
         }
 
-        var ctx = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
+        var ctx2 = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
         var labels = Object.keys(dailyIpAddressesCleaned).map((date) => {
                   return moment(moment(date)).format('DD MMM')
               })
-        var datasets = [{
+        var datasets2 = [{
                   label: 'Unique IP Addresses Per Day',
                   data: Object.values(dailyIpAddressesCleaned),
-                  fill: false,
+                  fill: true,
                   borderColor: 'rgb(75, 192, 192)',
                   tension: 0.1
               }]
-        var data = { labels: labels, datasets: datasets };
+        var data = { labels: labels, datasets: datasets2 };
         var options = {
+             plugins: {
+                 legend: false,
+             },
              scales: {
                   xAxes: [{
                     type: 'time',
@@ -374,7 +377,7 @@
                 },
               }
         var config = {type: 'line', data: data, options: options};
-        var UniqueIpAddressesPerDay = new Chart(ctx, config)
+        var UniqueIpAddressesPerDay = new Chart(ctx2, config)
       })
   </script>
 <script>

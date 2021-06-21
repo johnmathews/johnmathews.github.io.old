@@ -374,9 +374,9 @@ is not permitted to migrate from one session to another.</p>
         }
       </script>
 <script>
-            let analyticsEvent = document.createElement("script");
-            analyticsEvent.setAttribute("src", "https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname);
-            document.body.appendChild(analyticsEvent);
+            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {
+               // console.log(srcData)
+            })
         </script>
 <script>
     const technical = $( "#articleParent" ).hasClass('technical');
