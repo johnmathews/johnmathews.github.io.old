@@ -91,6 +91,9 @@ $(document).ready(function () {
   Mousetrap.bind('g c', function () {
     window.location.href = `${siteURL}/categories.html`
   })
+  Mousetrap.bind('g m', function () {
+    window.location.href = `${siteURL}/analytics.html`
+  })
   Mousetrap.bind('g a', function () {
     window.location.href = `${siteURL}/about.html`
   })
