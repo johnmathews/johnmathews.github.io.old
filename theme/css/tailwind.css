@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 
+
+.stayLight {
+ @apply dark:bg-gray-200
+}
+
 .markdown .MathJax .mrow {
  @apply dark:text-gray-200 !important;
 }

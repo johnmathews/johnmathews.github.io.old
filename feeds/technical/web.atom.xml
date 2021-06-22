@@ -4,7 +4,7 @@ making unnecessary improvements to this blog.&lt;/p&gt;
 &lt;p&gt;Some of these improvements are:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Adding keyboard shortcuts (type &lt;code&gt;?&lt;/code&gt; to find out which).&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/Adding-search.html"&gt;Implementing&lt;/a&gt;, then
+&lt;li&gt;&lt;a href="https://johnmathews.eu/adding-search.html"&gt;Implementing&lt;/a&gt;, then
    &lt;a href="https://johnmathews.eu/fuse-search.html"&gt;reimplementing&lt;/a&gt;, and then optimizing client
    side fuzzy search.&lt;/li&gt;
 &lt;li&gt;Using &lt;code&gt;src-set&lt;/code&gt; to serve responsive images
@@ -56,7 +56,7 @@ physically present with my family and friends, and ignoring as many things as
 possible so that I can focus on doing something meaningful that is necessarily hard.&lt;/p&gt;</content><category term="Technical/Web"/><category term="blog"/><category term="javascript"/><category term="self-reflection"/></entry><entry><title>Fuse Search</title><link href="https://johnmathews.eu/fuse-search.html" rel="alternate"/><published>2021-04-05T10:45:00+02:00</published><updated>2021-04-05T10:45:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/fuse-search.html</id><summary type="html"/><content type="html">&lt;h2 id="adding-search-made-the-site-feel-faster-and-more-accessible"&gt;Adding search made the site feel faster and more accessible&lt;/h2&gt;
 &lt;p&gt;I’ve reimplemented search on this site using &lt;a href="https://fusejs.io/"&gt;fuse.js&lt;/a&gt;
 instead of &lt;a href="https://github.com/tinysearch/tinysearch"&gt;tinySearch&lt;/a&gt;. You can read
-about how I implemented tinysearch &lt;a href="https://johnmathews.eu/Adding-search.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+about how I implemented tinysearch &lt;a href="https://johnmathews.eu/adding-search.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;When I first implemented search I was surprised how much faster and more accessible
 the site began to feel. I could quickly access any content by typing a few
 words, I didn’t need to scroll or follow a link.&lt;sup id="sf-fuse-search-1-back"&gt;&lt;a class="simple-footnote" href="#sf-fuse-search-1" title="It also immediately gave me the idea to add keyboard shortcuts. Type ? to see what happened"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
@@ -140,7 +140,7 @@ searching, but not the navigation or keyboard shortcuts. Getting the
 debounce function to only run on some key presses was surprisingly complex. It
 taught me a lot of JavaScript though, and it’s satisfying to have made a useful
 user interface.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-fuse-search-1"&gt;It also immediately gave
-me the idea to add keyboard shortcuts. Type &lt;code&gt;?&lt;/code&gt; to see what happened &lt;a class="simple-footnote-back" href="#sf-fuse-search-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"/><category term="Fuse"/><category term="Search"/><category term="Web"/></entry><entry><title>Adding Search</title><link href="https://johnmathews.eu/Adding-search.html" rel="alternate"/><published>2021-03-12T17:27:00+01:00</published><updated>2021-03-12T17:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-12:/Adding-search.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve added search to this blog. Results are generated as you type. Try it by
+me the idea to add keyboard shortcuts. Type &lt;code&gt;?&lt;/code&gt; to see what happened &lt;a class="simple-footnote-back" href="#sf-fuse-search-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"/><category term="Fuse"/><category term="Search"/><category term="Web"/></entry><entry><title>Adding Search</title><link href="https://johnmathews.eu/adding-search.html" rel="alternate"/><published>2021-03-12T17:27:00+01:00</published><updated>2021-03-12T17:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-12:/adding-search.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve added search to this blog. Results are generated as you type. Try it by
 typing &lt;code&gt;/&lt;/code&gt; or &lt;code&gt;cmd-k&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If you look on the Pelican &lt;a href="https://github.com/pelican-plugins"&gt;plugins&lt;/a&gt; index
 you’ll see that &lt;a href="https://github.com/pelican-plugins/tipue-search"&gt;Tipue search&lt;/a&gt;

@@ -1131,6 +1131,11 @@ video {
   margin-bottom: 0;
 }
 
+.dark .stayLight {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
 .dark .markdown .MathJax .mrow {
   --tw-text-opacity: 1 !important;
   color: rgba(229, 231, 235, var(--tw-text-opacity)) !important;
@@ -1809,6 +1814,11 @@ video {
 .hover\:bg-yellow-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(245, 158, 11, var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-gray-600 {
