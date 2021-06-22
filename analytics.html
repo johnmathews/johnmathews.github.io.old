@@ -302,7 +302,7 @@
       </script>
 <script>
             $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {
-               // console.log(srcData)
+              // console.log('site analytics:', srcData)
             })
         </script>
 <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
@@ -408,6 +408,8 @@
             if (j === 'date'){
               var date = new Date(viewsPageDay[i][j])
               html += '<td>' + date.toShortFormat()  + '</td>';
+            } else if (j === 'page') {
+                      html += '<td>' + `<a href=${viewsPageDay[i][j]}>${viewsPageDay[i][j]}</a>`  + '</td>';
             } else {
               html += '<td>' + viewsPageDay[i][j] + '</td>';
             }
@@ -417,9 +419,9 @@
         html += '</tbody>';
         html += '</table>';
         $('#viewsPageDay').html(html)
-          $('#dataTable').DataTable({
-             "order": [[ 0, "desc" ], [2, "desc"]] // sort on date
-                })
+        $('#dataTable').DataTable({
+           "order": [[ 0, "desc" ], [2, "desc"]] // sort on date
+        })
       })
     })
   </script>
