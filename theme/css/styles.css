@@ -2359,6 +2359,11 @@ video {
   margin-right: auto;
 }
 
+.-mx-5 {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -2543,10 +2548,6 @@ video {
 
 .p-3 {
   padding: 0.75rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .py-0 {
@@ -3018,12 +3019,12 @@ video {
   gap: 0.75rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .grid-flow-row {
@@ -3232,6 +3233,11 @@ video {
     margin-right: 0px;
   }
 
+  .md\:my-3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
   .md\:my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -3280,6 +3286,10 @@ video {
 
   .md\:p-0 {
     padding: 0px;
+  }
+
+  .md\:p-5 {
+    padding: 1.25rem;
   }
 
   .md\:py-2 {
