@@ -47,6 +47,33 @@
 <!-- Cloudflare Web Analytics -->
 <script data-cf-beacon='{"token": "514cf3cd5e214097b029daa10cd1b209"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
 <!-- End Cloudflare Web Analytics -->
+<style>
+    .spinner:not([hidden]) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spinner::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border: 2px solid #f3f3f3;
+      border-top: 3px solid #f25a41;
+      border-radius: 100%;
+      will-change: transform;
+      animation: spin 1s infinite linear
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body class="dark:bg-gray-900">
 <a class="pt-20 mt-20" name="top"></a>
@@ -248,9 +275,18 @@
 <div class="" id="analytics">
 </div>
 <div class="mt-5 grid grid-cols-1 gap-4">
-<div class="stayLight border-2 border-gray-700 p-5 m-3"><div class="mb-3">Page Views</div><canvas height="200" id="pageViewsPerDay" width="400"></canvas></div>
-<div class="stayLight border-2 border-gray-700 p-5 m-3"><div class="mb-3">Unique IP Addresses</div><canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas></div>
-<div class="stayLight border-2 border-gray-700 p-5 m-3"><div class="mb-3">Views per Page per Day</div><div id="viewsPageDay"></div></div>
+<div class="stayLight border-2 border-gray-700 p-5 m-3"><div class="mb-3">Page Views</div>
+<div class="spinner z-50 mx-auto my-auto" hidden=""></div>
+<canvas height="200" id="pageViewsPerDay" width="400"></canvas>
+</div>
+<div class="stayLight border-2 border-gray-700 p-5 m-3"><div class="mb-3">Unique IP Addresses</div>
+<div class="spinner z-50 mx-auto my-auto" hidden=""></div>
+<canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas>
+</div>
+<div class="stayLight border-2 border-gray-700 p-5 m-3"><div class="mb-3">Views per Page per Day</div>
+<div class="spinner z-50 mx-auto my-auto" hidden=""></div>
+<div id="viewsPageDay"></div>
+</div>
 </div>
 </article>
 </main>
@@ -310,6 +346,12 @@
 <script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 <script charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js" type="text/javascript"></script>
 <script>
+
+  // show spinners whilst the getJSON ajax call is loading
+  const spinner = $('.spinner')
+    console.log(spinner)
+  spinner.removeAttr('hidden');
+
   $(document).ready(function() {
     $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
         var dailyViews = JSON.parse(srcData['daily_views'])
@@ -317,6 +359,9 @@
         var viewsPageDay = JSON.parse(srcData['views_per_page_per_day'])
         dailyViews = dailyViews['page']
         dailyIpAddresses = dailyIpAddresses['ip_address']
+
+        // hide the spinner and show the charts
+        spinner.attr('hidden', '');
 
         // Page Views per day
         var dailyViewsCleaned = {}
