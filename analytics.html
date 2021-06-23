@@ -347,6 +347,11 @@
                   xAxes: [{
                     type: 'time',
                   }],
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero: true
+                    }
+                  }]
                 },
               }
         var config = {type: 'line', data: data, options: options};
@@ -362,18 +367,18 @@
                 dailyIpAddressesCleaned[xDate] = IPCount
         }
 
-        var ctx2 = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
+        var ctx = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
         var labels = Object.keys(dailyIpAddressesCleaned).map((date) => {
                   return moment(moment(date)).format('DD MMM')
               })
-        var datasets2 = [{
+        var datasets = [{
                   label: 'Unique IP Addresses Per Day',
                   data: Object.values(dailyIpAddressesCleaned),
                   fill: true,
                   borderColor: 'rgb(75, 192, 192)',
                   tension: 0.1
               }]
-        var data = { labels: labels, datasets: datasets2 };
+        var data = { labels: labels, datasets: datasets };
         var options = {
              plugins: {
                  legend: false,
@@ -382,10 +387,15 @@
                   xAxes: [{
                     type: 'time',
                   }],
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero: true
+                    }
+                  }]
                 },
               }
         var config = {type: 'line', data: data, options: options};
-        var UniqueIpAddressesPerDay = new Chart(ctx2, config)
+        var UniqueIpAddressesPerDay = new Chart(ctx, config)
 
         // views per page per day
         Date.prototype.toShortFormat = function() {
