@@ -307,18 +307,25 @@ mostly right and didn’t take much effort. The hardest part was figuring out
 fast and simple to edit the code, so I can iterate easily. It’ll be a good way of learning
 and playing with cloud technologies and JavaScript. </p>
 <h2 id="tasks-for-later">Tasks for later</h2>
-<ul>
-<li>Make <code>/analytics.html</code> load faster</li>
-<li>Add loading spinners</li>
-<li>Group data by weeks or months as well as day</li>
-<li>Identify bots and search engines</li>
-<li>Aggregate the data (once per day) in a Cloud Function instead of repeatedly in the browser.</li>
+<ul class="checklist">
+<li><input checked="" disabled="" type="checkbox"/>  Make <code>/analytics.html</code> load faster - latency is caused by the Cloud Function initialising. Short of paying actual money for always-on resources I can’t see a way to reduce this. However it’s only an issue if you are the first person to view the page in the last ~10 minutes - <a href="https://mikhail.io/serverless/coldstarts/gcp/">info</a>.</li>
+<li><input checked="" disabled="" type="checkbox"/>  Add loading spinners - I used the same snippets as in my <a href="https://johnmathews.eu/portfolio-image-recognition.html">Machine Vision demo</a></li>
+<li><input disabled="" type="checkbox"/>  Group data by weeks or months as well as day</li>
+<li><input disabled="" type="checkbox"/>  Identify bots and search engines - the analytics requires JavaScript to be running so I think some types of non-human activity is already filtered.</li>
+<li><input disabled="" type="checkbox"/>  Aggregate the data (once per day) in a Cloud Function instead of repeatedly in the browser.</li>
 </ul>
 <h2 id="questions">Questions</h2>
 <ol>
-<li>I’d be interested to know if there is a way to track <span class="caps">RSS</span> subscribers (I know
-    that usually server logs can be inspected for this, but my site is hosted on
-    GitHub pages so I don’t think this is possible.)</li>
+<li>I’d be interested to know if there is a way to track <span class="caps">RSS</span> subscribers. I know
+    that the usual method is to inspect server logs, but this site is hosted on
+    GitHub pages so I don’t think this is possible.</li>
+<li>To what extent does requiring JavaScript in order to log a page view filter out bots and crawlers?</li>
+<li>
+<p>I’ve used the <code>chart.js</code> library because its reasonably fast and lightweight. My
+    preferred library would be <code>Plotly</code> if it could be responsive and fast even
+    if there are &gt;10 charts to render.</p>
+<p>Has <code>plotly.js</code> improved recently to the point where it wouldn’t cause a browser to lag if multiple plots are being rendered?</p>
+</li>
 </ol>
 <p><a href="https://johnmathews.eu/analytics.html"><strong>Site Analytics</strong></a></p>
 </div>

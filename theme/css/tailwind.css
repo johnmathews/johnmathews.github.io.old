@@ -250,6 +250,14 @@
 	@apply mt-2
 }
 
+.markdown li p:first-child {
+ @apply mt-0;
+}
+
+.markdown li p {
+ @apply mt-2;
+}
+
 .markdown ul {
   @apply pl-8 list-disc;
 }

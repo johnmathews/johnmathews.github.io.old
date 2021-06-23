@@ -1636,6 +1636,14 @@ video {
   margin-top: 0.5rem
 }
 
+.markdown li p:first-child {
+  margin-top: 0px;
+}
+
+.markdown li p {
+  margin-top: 0.5rem;
+}
+
 .markdown ul {
   list-style-type: disc;
   padding-left: 2rem;
