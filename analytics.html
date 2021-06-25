@@ -351,7 +351,13 @@
   spinner.removeAttr('hidden');
 
   $(document).ready(function() {
-    $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics").done(function(srcData) {
+            $.getJSON(
+            //  "https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics"
+            {
+            url: "https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics",
+            timeout: 20000
+            }
+                  ).done(function(srcData) {
         var dailyViews = JSON.parse(srcData['daily_views'])
         var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
         var viewsPageDay = JSON.parse(srcData['views_per_page_per_day'])
@@ -397,8 +403,10 @@
         }
 
         var ctx = document.getElementById('pageViewsPerDay').getContext('2d')
+
         var labels = Object.keys(dailyViewsCleaned).map((date) => {
-                  return moment(moment(date)).format('DD MMM')
+                  console.log(date)
+                  return moment(moment(date)).format('DD MMM') // this triggers a deprecation warning
               })
         var datasets = [{
                   label: 'Page Views Per Day',
