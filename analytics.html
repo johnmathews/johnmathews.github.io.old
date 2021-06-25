@@ -405,9 +405,12 @@
         var ctx = document.getElementById('pageViewsPerDay').getContext('2d')
 
         var labels = Object.keys(dailyViewsCleaned).map((date) => {
-                  console.log(date)
-                  return moment(moment(date)).format('DD MMM') // this triggers a deprecation warning
-              })
+                var newDate = date.substring( 0, date.lastIndexOf("(") - 1 )
+                return moment(newDate, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
+            })
+
+
+
         var datasets = [{
                   label: 'Page Views Per Day',
                   data: Object.values(dailyViewsCleaned),
@@ -431,8 +434,9 @@
 
         var ctx = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
         var labels = Object.keys(dailyIpAddressesCleaned).map((date) => {
-                  return moment(moment(date)).format('DD MMM')
-              })
+                var newDate = date.substring( 0, date.lastIndexOf("(") - 1 )
+                return moment(newDate, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
+            })
         var datasets = [{
 
                   label: 'Unique IP Addresses Per Day',
