@@ -84,4 +84,17 @@ page rules to prevent malicious traffic.&lt;/p&gt;
 &lt;p&gt;Has &lt;code&gt;plotly.js&lt;/code&gt; improved recently to the point where it wouldn’t cause a browser to lag if multiple plots are being rendered?&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/analytics.html"&gt;&lt;strong&gt;Site Analytics&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Web"/><category term="cloud-functions"/><category term="data"/></entry></feed>
+&lt;p&gt;Finally, it occurs to me that I could make an analytics widget for my desktop
+using &lt;a href="https://tracesof.net/uebersicht/"&gt;Ubersicht&lt;/a&gt;. It could show page views
+for the current day perhaps. I’ve made a couple of widgets before
+(&lt;a href="http://tracesof.net/uebersicht-widgets/#time_since"&gt;1&lt;/a&gt;,
+&lt;a href="http://tracesof.net/uebersicht-widgets/#time_until"&gt;2&lt;/a&gt;) which were written in
+CoffeeScript, but the newer widgets are written in React, so I guess this is an
+opportunity to learn.&lt;/p&gt;
+&lt;p&gt;Writing the “Time Since” (my daughters birth) and “Time
+Until” (my next accounting exam&lt;sup id="sf-building-my-own-site-analytics-1-back"&gt;&lt;a class="simple-footnote" href="#sf-building-my-own-site-analytics-1" title="Ironically, I failed the exam because I’d been working on Ry’s Git Tutorial instead"&gt;1&lt;/a&gt;&lt;/sup&gt; ) widgets were my first ever taste  of &lt;span class="caps"&gt;CSS&lt;/span&gt;, &lt;span class="caps"&gt;HTML&lt;/span&gt;
+and JavaScript, and the first ever article on this blog was about the “Time
+Since” widget! CoffeeScript, and Ubersicht were just about simple enough for me
+to learn by trial and error, copying someone else’s code and changing it bit by
+bit until I have what I want.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/analytics.html"&gt;&lt;strong&gt;Site Analytics&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-building-my-own-site-analytics-1"&gt;Ironically, I failed the exam because I’d been working on &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;Ry’s Git Tutorial&lt;/a&gt; instead &lt;a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"/><category term="cloud-functions"/><category term="data"/></entry></feed>
