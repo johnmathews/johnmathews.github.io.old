@@ -12,18 +12,18 @@
 <meta content="Building my own site analytics -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud-functions,data " name="keywords"/>
-<meta content=" I’ve built a simple website analytics feature for this site, you can see it at /analytics. Google Analytics felt like massive overkill, there was so many options and metrics available that the few I wanted to look at were lost in the noise. Also I’d like this site to load quickly, and GA makes a site slower. Then I tried CloudFlare Analytics, which was certainly more light-weight, but I’m not sure the metrics are accurate. CloudFlare rounds metrics to the nearest 10, and uses a sampling... " name="description"/>
+<meta content=" Motivation I’ve built a simple website analytics feature for this site, you can see it at /analytics. You can page views per day, unique IP addresses per day, and views per page per day. Alternatives Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. Cloudflare Analytics Then I tried CloudFlare Analytics, which was certainly more light-weight,... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Building my own site analytics" property="twitter:title"/>
-<meta content=" I’ve built a simple website analytics feature for this site, you can see it at /analytics. Google Analytics felt like massive overkill, there was so many options and metrics available that the few I wanted to look at were lost in the noise. Also I’d like this site to load quickly, and GA makes a site slower. Then I tried CloudFlare Analytics, which was certainly more light-weight, but I’m not sure the metrics are accurate. CloudFlare rounds metrics to the nearest 10, and uses a sampling... " name="twitter:description"/>
+<meta content=" Motivation I’ve built a simple website analytics feature for this site, you can see it at /analytics. You can page views per day, unique IP addresses per day, and views per page per day. Alternatives Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. Cloudflare Analytics Then I tried CloudFlare Analytics, which was certainly more light-weight,... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Building my own site analytics" property="og:title"/>
-<meta content=" I’ve built a simple website analytics feature for this site, you can see it at /analytics. Google Analytics felt like massive overkill, there was so many options and metrics available that the few I wanted to look at were lost in the noise. Also I’d like this site to load quickly, and GA makes a site slower. Then I tried CloudFlare Analytics, which was certainly more light-weight, but I’m not sure the metrics are accurate. CloudFlare rounds metrics to the nearest 10, and uses a sampling... " property="og:description"/>
+<meta content=" Motivation I’ve built a simple website analytics feature for this site, you can see it at /analytics. You can page views per day, unique IP addresses per day, and views per page per day. Alternatives Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. Cloudflare Analytics Then I tried CloudFlare Analytics, which was certainly more light-weight,... " property="og:description"/>
 <meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -261,28 +261,35 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
+<h2 id="motivation">Motivation</h2>
 <p>I’ve built a simple website analytics feature for this site, you can see it at
-<a href="https://johnmathews.eu/analytics.html">/analytics</a>.</p>
-<p>Google Analytics felt like massive overkill, there was so many options and
-metrics available that the few I wanted to look at were lost in the noise. Also
-I’d like this site to load quickly, and <span class="caps">GA</span> makes a site slower.</p>
+<a href="https://johnmathews.eu/analytics.html">/analytics</a>. You can page views per day,
+unique <span class="caps">IP</span> addresses per day, and views per page per day.</p>
+<h3>Alternatives</h3>
+<h4>Google Analytics</h4>
+<p>Google Analytics felt like massive overkill. It has so many data-points that the
+useful metrics are harder to focus on. Also, I’d like this site to load quickly
+and <span class="caps">GA</span> makes it slower.</p>
+<h4>Cloudflare Analytics</h4>
 <p>Then I tried CloudFlare Analytics, which was certainly more light-weight, but
 I’m not sure the metrics are accurate. CloudFlare rounds metrics to the nearest
-10, and uses a sampling method, which for my small site with very lite traffic
-isn’t a great feature.</p>
+10 and uses a sampling method which for a site with very lite traffic
+isn’t a great feature, I think.</p>
+<h3>Design Considerations</h3>
 <p>I know from my work visualizing data and building dashboards that the metrics
 presented will alter the users perception of the underlying reality. If I
-present a particular metric as if its important, then it is very hard for a
-regular user of the dashboard to not be influenced by this design, and consider
-the metric as a Key Indicator. The way they think about their impact or the
-underlying system (product quality, performance, growth, etc) would be directly
-influenced by the design decisions I make. (Which metrics to show, and how
-prominent they are). </p>
-<p>For this reason, I wanted to see fewer, not more, metrics. And I wanted to
+present a particular metric as if its important, it becomes very difficult for a
+regular user of the dashboard to not be influenced by this design, and
+implicitly consider the metric as a Key Indicator.</p>
+<p>The way they think about their impact on the business, the value they produce,
+or the dynamics of the underlying system (product quality, performance, growth,
+etc) would be directly influenced by the design decisions I make like which
+metrics are available, and how easy they are to access.</p>
+<p>For this reason, I wanted to see fewer metrics, not more. I also wanted to
 arrange them myself. In Google Analytics it can be fun clicking around on all
 the things and seeing lots of options, but its not really useful once the
 novelty has worn off.</p>
-<p>The only things I’m really interested in from an analytics perspective are:</p>
+<p>The only metrics I’m mildly interested in are:</p>
 <ol>
 <li>How many people are reading my site</li>
 <li>What are they reading</li>
@@ -290,25 +297,37 @@ novelty has worn off.</p>
 </ol>
 <p>I’d like to be able to infer weather I have a few people who read a lot, or a lot of people
 who read a little? (Or, as is the case, a few people who read a little.)</p>
+<h2 id="method">Method</h2>
+<p>Mostly I made my own analytics system because it was a fun challenge with a
+nice tangible result. Building it required connecting a few technologies -
+Serverless Computing (Cloud Functions on <span class="caps">GCP</span>), NoSQL databases (DataStore),
+JavaScript, <span class="caps">HTTP</span> headers.</p>
 <p>I think that unique <span class="caps">IP</span> addresses is a good enough proxy for unique readers, even
 though I’m not considering crawlers, bots, or <span class="caps">RSS</span> subscribers.</p>
 <p>The analytics “engine” works because each time a page is loaded a JavaScript
-snippet sends a request to a “Cloud Function” on Google Cloud Platform. The
+snippet sends a request to a Cloud Function on Google Cloud Platform. The
 function parses the request to extract the current <span class="caps">URL</span> and the <span class="caps">IP</span> address. This
-is then added to a DataStore database along with the current datetime. </p>
+is then added to a DataStore database along with the current date and time.</p>
 <p>Viewing the analytics is as simple (and as complicated) as making a request to
 the database, parsing the data and visualizing it conveniently. For example,
 group the data by days and count the distinct <span class="caps">IP</span> Addresses to figure out how
 many people are visiting each day.</p>
 <p>It’s not a perfect solution, there are edge cases I’m not considering. But its
 mostly right and didn’t take much effort. The hardest part was figuring out
-<code>chart.js</code>.</p>
+<code>chart.js</code>, the most frustrating part was iteratively improving the Cloud Functions.</p>
+<p>I haven’t figured out how to easily test the functions locally - it would
+require setting up a nosql database and creating flask requests and responses. I
+just watched Peaky Blinders for a couple of minutes whilst each new version of
+the Cloud Function was deploying.</p>
 <p>Eventually I’ll want to group the metrics by week or month I expect, but it’s
-fast and simple to edit the code, so I can iterate easily. It’ll be a good way of learning
-and playing with cloud technologies and JavaScript. </p>
+simple enough to edit the code. It’ll be a good way of learning
+and playing with cloud technologies and JavaScript.</p>
+<p>Unless someone decides to spam the site, I expect the costs to be less than
+€1/month. This site is hosted using CloudFlare, so I suppose I could setup some
+page rules to prevent malicious traffic.</p>
 <h2 id="tasks-for-later">Tasks for later</h2>
 <ul class="checklist">
-<li><input checked="" disabled="" type="checkbox"/>  Make <code>/analytics.html</code> load faster - latency is caused by the Cloud Function initialising. Short of paying actual money for always-on resources I can’t see a way to reduce this. However it’s only an issue if you are the first person to view the page in the last ~10 minutes - <a href="https://mikhail.io/serverless/coldstarts/gcp/">info</a>.</li>
+<li><input checked="" disabled="" type="checkbox"/>  Make <code>/analytics.html</code> load faster - latency is caused by the Cloud Function initialising. Short of paying actual money for always-on resources I can’t see a way to reduce this. However it’s only an issue if you are the first person to view the page in the last ~10 minutes - this <a href="https://mikhail.io/serverless/coldstarts/gcp/">blog post</a> explains why.</li>
 <li><input checked="" disabled="" type="checkbox"/>  Add loading spinners - I used the same snippets as in my <a href="https://johnmathews.eu/portfolio-image-recognition.html">Machine Vision demo</a></li>
 <li><input disabled="" type="checkbox"/>  Group data by weeks or months as well as day</li>
 <li><input disabled="" type="checkbox"/>  Identify bots and search engines - the analytics requires JavaScript to be running so I think some types of non-human activity is already filtered.</li>
