@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-22T14:30:07+02:00</updated><entry><title>Building my own site analytics</title><link href="https://johnmathews.eu/building-my-own-site-analytics.html" rel="alternate"/><published>2021-06-22T14:30:07+02:00</published><updated>2021-06-22T14:30:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-22:/building-my-own-site-analytics.html</id><summary type="html"/><content type="html">&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;I’ve built a simple website analytics feature for this site, you can see it at
-&lt;a href="https://johnmathews.eu/analytics.html"&gt;/analytics&lt;/a&gt;. You can page views per day,
-unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses per day, and views per page per day.&lt;/p&gt;
-&lt;h3&gt;Alternatives&lt;/h3&gt;
-&lt;h4&gt;Google Analytics&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-22T14:30:07+02:00</updated><entry><title>Building my own site analytics</title><link href="https://johnmathews.eu/building-my-own-site-analytics.html" rel="alternate"/><published>2021-06-22T14:30:07+02:00</published><updated>2021-06-22T14:30:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-22:/building-my-own-site-analytics.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve built a simple website analytics feature for this site, you can see it at
+&lt;a href="https://johnmathews.eu/analytics.html"&gt;/analytics&lt;/a&gt;. It has the following metrics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Page views per day,&lt;/li&gt;
+&lt;li&gt;Unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses per day&lt;/li&gt;
+&lt;li&gt;Views per page per day.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;h3&gt;Google Analytics&lt;/h3&gt;
 &lt;p&gt;Google Analytics felt like massive overkill. It has so many data-points that the
 useful metrics are harder to focus on. Also, I’d like this site to load quickly
 and &lt;span class="caps"&gt;GA&lt;/span&gt; makes it slower.&lt;/p&gt;
-&lt;h4&gt;Cloudflare Analytics&lt;/h4&gt;
+&lt;h3&gt;CloudFlare Analytics&lt;/h3&gt;
 &lt;p&gt;Then I tried CloudFlare Analytics, which was certainly more light-weight, but
 I’m not sure the metrics are accurate. CloudFlare rounds metrics to the nearest
 10 and uses a sampling method which for a site with very lite traffic
 isn’t a great feature, I think.&lt;/p&gt;
-&lt;h3&gt;Design Considerations&lt;/h3&gt;
+&lt;h2 id="design-considerations"&gt;Design Considerations&lt;/h2&gt;
 &lt;p&gt;I know from my work visualizing data and building dashboards that the metrics
-presented will alter the users perception of the underlying reality. If I
-present a particular metric as if its important, it becomes very difficult for a
-regular user of the dashboard to not be influenced by this design, and
-implicitly consider the metric as a Key Indicator.&lt;/p&gt;
-&lt;p&gt;The way they think about their impact on the business, the value they produce,
+presented will alter the users perception of the underlying reality. The way
+that someone thinks about their impact on the business, the value they produce,
 or the dynamics of the underlying system (product quality, performance, growth,
-etc) would be directly influenced by the design decisions I make like which
-metrics are available, and how easy they are to access.&lt;/p&gt;
-&lt;p&gt;For this reason, I wanted to see fewer metrics, not more. I also wanted to
-arrange them myself. In Google Analytics it can be fun clicking around on all
-the things and seeing lots of options, but its not really useful once the
+etc) would be directly influenced by the design decisions I make, such as which
+metrics are available, how easy they are to access, or are they above the fold.&lt;/p&gt;
+&lt;p&gt;If I present a particular metric as if its important, it will become very difficult
+for someone who regularly uses the dashboard to resist that message. They will
+begin to implicitly consider the metric as a Key Indicator of some kind.&lt;/p&gt;
+&lt;p&gt;For this reason I wanted to see fewer metrics about my websites usage and I
+wanted to arrange them myself. In Google Analytics it can be fun clicking around
+on all the things and seeing lots of options, but its not really useful once the
 novelty has worn off.&lt;/p&gt;
 &lt;p&gt;The only metrics I’m mildly interested in are:&lt;/p&gt;
 &lt;ol&gt;
@@ -33,36 +36,35 @@ novelty has worn off.&lt;/p&gt;
 &lt;li&gt;What are they reading&lt;/li&gt;
 &lt;li&gt;How much are they reading.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I’d like to be able to infer weather I have a few people who read a lot, or a lot of people
+&lt;p&gt;I’d like to be able to infer whether I have a few people who read a lot, or a lot of people
 who read a little? (Or, as is the case, a few people who read a little.)&lt;/p&gt;
 &lt;h2 id="method"&gt;Method&lt;/h2&gt;
 &lt;p&gt;Mostly I made my own analytics system because it was a fun challenge with a
 nice tangible result. Building it required connecting a few technologies -
 Serverless Computing (Cloud Functions on &lt;span class="caps"&gt;GCP&lt;/span&gt;), NoSQL databases (DataStore),
 JavaScript, &lt;span class="caps"&gt;HTTP&lt;/span&gt; headers.&lt;/p&gt;
-&lt;p&gt;I think that unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses is a good enough proxy for unique readers, even
-though I’m not considering crawlers, bots, or &lt;span class="caps"&gt;RSS&lt;/span&gt; subscribers.&lt;/p&gt;
+&lt;p&gt;I’m guessing that unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses is a good enough proxy for unique readers, even
+though I’m not considering crawlers, bots, or &lt;span class="caps"&gt;RSS&lt;/span&gt; subscribers&lt;sup id="sf-building-my-own-site-analytics-1-back"&gt;&lt;a class="simple-footnote" href="#sf-building-my-own-site-analytics-1" title="I think this might be quite wrong, but I don’t know why."&gt;1&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
 &lt;p&gt;The analytics “engine” works because each time a page is loaded a JavaScript
 snippet sends a request to a Cloud Function on Google Cloud Platform. The
 function parses the request to extract the current &lt;span class="caps"&gt;URL&lt;/span&gt; and the &lt;span class="caps"&gt;IP&lt;/span&gt; address. This
-is then added to a DataStore database along with the current date and time.&lt;/p&gt;
+is then recorded in a DataStore database along with the current date and time.&lt;/p&gt;
 &lt;p&gt;Viewing the analytics is as simple (and as complicated) as making a request to
 the database, parsing the data and visualizing it conveniently. For example,
 group the data by days and count the distinct &lt;span class="caps"&gt;IP&lt;/span&gt; Addresses to figure out how
 many people are visiting each day.&lt;/p&gt;
-&lt;p&gt;It’s not a perfect solution, there are edge cases I’m not considering. But its
-mostly right and didn’t take much effort. The hardest part was figuring out
-&lt;code&gt;chart.js&lt;/code&gt;, the most frustrating part was iteratively improving the Cloud Functions.&lt;/p&gt;
-&lt;p&gt;I haven’t figured out how to easily test the functions locally - it would
-require setting up a nosql database and creating flask requests and responses. I
-just watched Peaky Blinders for a couple of minutes whilst each new version of
-the Cloud Function was deploying.&lt;/p&gt;
-&lt;p&gt;Eventually I’ll want to group the metrics by week or month I expect, but it’s
-simple enough to edit the code. It’ll be a good way of learning
-and playing with cloud technologies and JavaScript.&lt;/p&gt;
+&lt;p&gt;It’s not a perfect solution, there are edge cases I’m not considering. But I
+hope its mostly right, and it didn’t take much effort. The hardest part was
+figuring out &lt;code&gt;chart.js&lt;/code&gt;, the slowest part was iterating on the Cloud Functions.&lt;/p&gt;
+&lt;p&gt;I haven’t figured out how to easily test cloud functions locally - it would
+require setting up a NoSQL database and mocking Flask requests and responses.
+Instead of doing that, I watched Peaky Blinders for a couple of minutes whilst
+each new version of the Cloud Function was deploying.&lt;/p&gt;
+&lt;p&gt;Eventually I’ll want to group the metrics by week or month I expect. It’ll be a
+good way of learning and playing with cloud technologies and JavaScript.&lt;/p&gt;
 &lt;p&gt;Unless someone decides to spam the site, I expect the costs to be less than
 €1/month. This site is hosted using CloudFlare, so I suppose I could setup some
-page rules to prevent malicious traffic.&lt;/p&gt;
+page rules to prevent malicious traffic&lt;sup id="sf-building-my-own-site-analytics-2-back"&gt;&lt;a class="simple-footnote" href="#sf-building-my-own-site-analytics-2" title="The page is now rate limited to 5 requests per minute per IP address."&gt;2&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
 &lt;h2 id="tasks-for-later"&gt;Tasks for later&lt;/h2&gt;
 &lt;ul class="checklist"&gt;
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"/&gt;  Make &lt;code&gt;/analytics.html&lt;/code&gt; load faster - latency is caused by the Cloud Function initialising. Short of paying actual money for always-on resources I can’t see a way to reduce this. However it’s only an issue if you are the first person to view the page in the last ~10 minutes - this &lt;a href="https://mikhail.io/serverless/coldstarts/gcp/"&gt;blog post&lt;/a&gt; explains why.&lt;/li&gt;
@@ -90,14 +92,17 @@ for the current day perhaps. I’ve made a couple of widgets before
 (&lt;a href="http://tracesof.net/uebersicht-widgets/#time_since"&gt;1&lt;/a&gt;,
 &lt;a href="http://tracesof.net/uebersicht-widgets/#time_until"&gt;2&lt;/a&gt;) which were written in
 CoffeeScript, but the newer widgets are written in React, so I guess this is an
-opportunity to learn.&lt;/p&gt;
-&lt;p&gt;Writing the “Time Since” (my daughters birth) and “Time
-Until” (my next accounting exam&lt;sup id="sf-building-my-own-site-analytics-1-back"&gt;&lt;a class="simple-footnote" href="#sf-building-my-own-site-analytics-1" title="Ironically, I failed the exam because I’d been working on Ry’s Git Tutorial instead"&gt;1&lt;/a&gt;&lt;/sup&gt; ) widgets were my first ever taste  of &lt;span class="caps"&gt;CSS&lt;/span&gt;, &lt;span class="caps"&gt;HTML&lt;/span&gt;
-and JavaScript, and the first ever article on this blog was about the “Time
-Since” widget! CoffeeScript, and Ubersicht were just about simple enough for me
-to learn by trial and error, copying someone else’s code and changing it bit by
-bit until I have what I want.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/analytics.html"&gt;&lt;strong&gt;Site Analytics&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-building-my-own-site-analytics-1"&gt;Ironically, I failed the exam because I’d been working on &lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;Ry’s Git Tutorial&lt;/a&gt; instead &lt;a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"/><category term="cloud-functions"/><category term="data"/></entry><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
+opportunity to learn&lt;sup id="sf-building-my-own-site-analytics-3-back"&gt;&lt;a class="simple-footnote" href="#sf-building-my-own-site-analytics-3" title="Done! My desktop now looks like this: "&gt;3&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
+&lt;p&gt;Writing the “Time Since” (my daughters birth) and “Time Until” (my next
+accounting exam&lt;sup id="sf-building-my-own-site-analytics-4-back"&gt;&lt;a class="simple-footnote" href="#sf-building-my-own-site-analytics-4" title="Ironically, I failed the exam because I’d been working on Ry’s Git Tutorial instead"&gt;4&lt;/a&gt;&lt;/sup&gt; ) widgets were my
+first ever taste  of &lt;span class="caps"&gt;CSS&lt;/span&gt;, &lt;span class="caps"&gt;HTML&lt;/span&gt; and JavaScript. The first ever article on
+this blog was about the “Time Since” widget. CoffeeScript, and Ubersicht were
+just about simple enough for me to learn by trial and error, copying someone
+else’s code and changing it bit by bit until I had what I want.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/analytics.html"&gt;&lt;strong&gt;Site Analytics&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-building-my-own-site-analytics-1"&gt;I think this
+might be quite wrong, but I don’t know why. &lt;a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-building-my-own-site-analytics-2"&gt;The page is now rate limited to 5
+requests per minute per &lt;span class="caps"&gt;IP&lt;/span&gt; address. &lt;a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-building-my-own-site-analytics-3"&gt;Done! My desktop now looks like this: &lt;img alt="Dekstop widgets" class="image-process-grid-image" loading="lazy" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="https://johnmathews.eu/images/derivatives/grid-image/400w/widgets.png" srcset="https://johnmathews.eu/images/derivatives/grid-image/300w/widgets.png 300w, https://johnmathews.eu/images/derivatives/grid-image/320w/widgets.png 320w, https://johnmathews.eu/images/derivatives/grid-image/380w/widgets.png 380w, https://johnmathews.eu/images/derivatives/grid-image/400w/widgets.png 400w, https://johnmathews.eu/images/derivatives/grid-image/650w/widgets.png 650w"/&gt; &lt;a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-3-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;li id="sf-building-my-own-site-analytics-4"&gt;Ironically, I failed the exam because I’d been working on
+&lt;a href="https://johnmathews.eu/rys-git-tutorial.html"&gt;Ry’s Git Tutorial&lt;/a&gt; instead &lt;a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Web"/><category term="cloud-functions"/><category term="data"/></entry><entry><title>Over-Engineering this blog</title><link href="https://johnmathews.eu/over-engineering-this-blog.html" rel="alternate"/><published>2021-04-05T11:54:00+02:00</published><updated>2021-04-05T11:54:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-05:/over-engineering-this-blog.html</id><summary type="html"/><content type="html">&lt;p&gt;Over the last few weeks I’ve spent an unreasonable amount of time and energy
 making unnecessary improvements to this blog.&lt;/p&gt;
 &lt;p&gt;Some of these improvements are:&lt;/p&gt;
 &lt;ol&gt;

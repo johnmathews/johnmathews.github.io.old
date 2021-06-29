@@ -12,18 +12,18 @@
 <meta content="Building my own site analytics -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud-functions,data " name="keywords"/>
-<meta content=" Motivation I’ve built a simple website analytics feature for this site, you can see it at /analytics. You can page views per day, unique IP addresses per day, and views per page per day. Alternatives Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. Cloudflare Analytics Then I tried CloudFlare Analytics, which was certainly more light-weight,... " name="description"/>
+<meta content=" I’ve built a simple website analytics feature for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. Motivation Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. CloudFlare Analytics Then I tried CloudFlare Analytics, which was certainly more... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Building my own site analytics" property="twitter:title"/>
-<meta content=" Motivation I’ve built a simple website analytics feature for this site, you can see it at /analytics. You can page views per day, unique IP addresses per day, and views per page per day. Alternatives Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. Cloudflare Analytics Then I tried CloudFlare Analytics, which was certainly more light-weight,... " name="twitter:description"/>
+<meta content=" I’ve built a simple website analytics feature for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. Motivation Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. CloudFlare Analytics Then I tried CloudFlare Analytics, which was certainly more... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Building my own site analytics" property="og:title"/>
-<meta content=" Motivation I’ve built a simple website analytics feature for this site, you can see it at /analytics. You can page views per day, unique IP addresses per day, and views per page per day. Alternatives Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. Cloudflare Analytics Then I tried CloudFlare Analytics, which was certainly more light-weight,... " property="og:description"/>
+<meta content=" I’ve built a simple website analytics feature for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. Motivation Google Analytics Google Analytics felt like massive overkill. It has so many data-points that the useful metrics are harder to focus on. Also, I’d like this site to load quickly and GA makes it slower. CloudFlare Analytics Then I tried CloudFlare Analytics, which was certainly more... " property="og:description"/>
 <meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -261,33 +261,36 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<h2 id="motivation">Motivation</h2>
 <p>I’ve built a simple website analytics feature for this site, you can see it at
-<a href="https://johnmathews.eu/analytics.html">/analytics</a>. You can page views per day,
-unique <span class="caps">IP</span> addresses per day, and views per page per day.</p>
-<h3>Alternatives</h3>
-<h4>Google Analytics</h4>
+<a href="https://johnmathews.eu/analytics.html">/analytics</a>. It has the following metrics:</p>
+<ul>
+<li>Page views per day,</li>
+<li>Unique <span class="caps">IP</span> addresses per day</li>
+<li>Views per page per day.</li>
+</ul>
+<h2 id="motivation">Motivation</h2>
+<h3>Google Analytics</h3>
 <p>Google Analytics felt like massive overkill. It has so many data-points that the
 useful metrics are harder to focus on. Also, I’d like this site to load quickly
 and <span class="caps">GA</span> makes it slower.</p>
-<h4>Cloudflare Analytics</h4>
+<h3>CloudFlare Analytics</h3>
 <p>Then I tried CloudFlare Analytics, which was certainly more light-weight, but
 I’m not sure the metrics are accurate. CloudFlare rounds metrics to the nearest
 10 and uses a sampling method which for a site with very lite traffic
 isn’t a great feature, I think.</p>
-<h3>Design Considerations</h3>
+<h2 id="design-considerations">Design Considerations</h2>
 <p>I know from my work visualizing data and building dashboards that the metrics
-presented will alter the users perception of the underlying reality. If I
-present a particular metric as if its important, it becomes very difficult for a
-regular user of the dashboard to not be influenced by this design, and
-implicitly consider the metric as a Key Indicator.</p>
-<p>The way they think about their impact on the business, the value they produce,
+presented will alter the users perception of the underlying reality. The way
+that someone thinks about their impact on the business, the value they produce,
 or the dynamics of the underlying system (product quality, performance, growth,
-etc) would be directly influenced by the design decisions I make like which
-metrics are available, and how easy they are to access.</p>
-<p>For this reason, I wanted to see fewer metrics, not more. I also wanted to
-arrange them myself. In Google Analytics it can be fun clicking around on all
-the things and seeing lots of options, but its not really useful once the
+etc) would be directly influenced by the design decisions I make, such as which
+metrics are available, how easy they are to access, or are they above the fold.</p>
+<p>If I present a particular metric as if its important, it will become very difficult
+for someone who regularly uses the dashboard to resist that message. They will
+begin to implicitly consider the metric as a Key Indicator of some kind.</p>
+<p>For this reason I wanted to see fewer metrics about my websites usage and I
+wanted to arrange them myself. In Google Analytics it can be fun clicking around
+on all the things and seeing lots of options, but its not really useful once the
 novelty has worn off.</p>
 <p>The only metrics I’m mildly interested in are:</p>
 <ol>
@@ -295,36 +298,35 @@ novelty has worn off.</p>
 <li>What are they reading</li>
 <li>How much are they reading.</li>
 </ol>
-<p>I’d like to be able to infer weather I have a few people who read a lot, or a lot of people
+<p>I’d like to be able to infer whether I have a few people who read a lot, or a lot of people
 who read a little? (Or, as is the case, a few people who read a little.)</p>
 <h2 id="method">Method</h2>
 <p>Mostly I made my own analytics system because it was a fun challenge with a
 nice tangible result. Building it required connecting a few technologies -
 Serverless Computing (Cloud Functions on <span class="caps">GCP</span>), NoSQL databases (DataStore),
 JavaScript, <span class="caps">HTTP</span> headers.</p>
-<p>I think that unique <span class="caps">IP</span> addresses is a good enough proxy for unique readers, even
-though I’m not considering crawlers, bots, or <span class="caps">RSS</span> subscribers.</p>
+<p>I’m guessing that unique <span class="caps">IP</span> addresses is a good enough proxy for unique readers, even
+though I’m not considering crawlers, bots, or <span class="caps">RSS</span> subscribers<sup id="sf-building-my-own-site-analytics-1-back"><a class="simple-footnote" href="#sf-building-my-own-site-analytics-1" title="I think this might be quite wrong, but I don’t know why.">1</a></sup> .</p>
 <p>The analytics “engine” works because each time a page is loaded a JavaScript
 snippet sends a request to a Cloud Function on Google Cloud Platform. The
 function parses the request to extract the current <span class="caps">URL</span> and the <span class="caps">IP</span> address. This
-is then added to a DataStore database along with the current date and time.</p>
+is then recorded in a DataStore database along with the current date and time.</p>
 <p>Viewing the analytics is as simple (and as complicated) as making a request to
 the database, parsing the data and visualizing it conveniently. For example,
 group the data by days and count the distinct <span class="caps">IP</span> Addresses to figure out how
 many people are visiting each day.</p>
-<p>It’s not a perfect solution, there are edge cases I’m not considering. But its
-mostly right and didn’t take much effort. The hardest part was figuring out
-<code>chart.js</code>, the most frustrating part was iteratively improving the Cloud Functions.</p>
-<p>I haven’t figured out how to easily test the functions locally - it would
-require setting up a nosql database and creating flask requests and responses. I
-just watched Peaky Blinders for a couple of minutes whilst each new version of
-the Cloud Function was deploying.</p>
-<p>Eventually I’ll want to group the metrics by week or month I expect, but it’s
-simple enough to edit the code. It’ll be a good way of learning
-and playing with cloud technologies and JavaScript.</p>
+<p>It’s not a perfect solution, there are edge cases I’m not considering. But I
+hope its mostly right, and it didn’t take much effort. The hardest part was
+figuring out <code>chart.js</code>, the slowest part was iterating on the Cloud Functions.</p>
+<p>I haven’t figured out how to easily test cloud functions locally - it would
+require setting up a NoSQL database and mocking Flask requests and responses.
+Instead of doing that, I watched Peaky Blinders for a couple of minutes whilst
+each new version of the Cloud Function was deploying.</p>
+<p>Eventually I’ll want to group the metrics by week or month I expect. It’ll be a
+good way of learning and playing with cloud technologies and JavaScript.</p>
 <p>Unless someone decides to spam the site, I expect the costs to be less than
 €1/month. This site is hosted using CloudFlare, so I suppose I could setup some
-page rules to prevent malicious traffic.</p>
+page rules to prevent malicious traffic<sup id="sf-building-my-own-site-analytics-2-back"><a class="simple-footnote" href="#sf-building-my-own-site-analytics-2" title="The page is now rate limited to 5 requests per minute per IP address.">2</a></sup> .</p>
 <h2 id="tasks-for-later">Tasks for later</h2>
 <ul class="checklist">
 <li><input checked="" disabled="" type="checkbox"/>  Make <code>/analytics.html</code> load faster - latency is caused by the Cloud Function initialising. Short of paying actual money for always-on resources I can’t see a way to reduce this. However it’s only an issue if you are the first person to view the page in the last ~10 minutes - this <a href="https://mikhail.io/serverless/coldstarts/gcp/">blog post</a> explains why.</li>
@@ -352,14 +354,17 @@ for the current day perhaps. I’ve made a couple of widgets before
 (<a href="http://tracesof.net/uebersicht-widgets/#time_since">1</a>,
 <a href="http://tracesof.net/uebersicht-widgets/#time_until">2</a>) which were written in
 CoffeeScript, but the newer widgets are written in React, so I guess this is an
-opportunity to learn.</p>
-<p>Writing the “Time Since” (my daughters birth) and “Time
-Until” (my next accounting exam<sup id="sf-building-my-own-site-analytics-1-back"><a class="simple-footnote" href="#sf-building-my-own-site-analytics-1" title="Ironically, I failed the exam because I’d been working on Ry’s Git Tutorial instead">1</a></sup> ) widgets were my first ever taste  of <span class="caps">CSS</span>, <span class="caps">HTML</span>
-and JavaScript, and the first ever article on this blog was about the “Time
-Since” widget! CoffeeScript, and Ubersicht were just about simple enough for me
-to learn by trial and error, copying someone else’s code and changing it bit by
-bit until I have what I want.</p>
-<p><a href="https://johnmathews.eu/analytics.html"><strong>Site Analytics</strong></a></p><ol class="simple-footnotes"><li id="sf-building-my-own-site-analytics-1">Ironically, I failed the exam because I’d been working on <a href="https://johnmathews.eu/rys-git-tutorial.html">Ry’s Git Tutorial</a> instead <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-1-back">↩</a></li></ol>
+opportunity to learn<sup id="sf-building-my-own-site-analytics-3-back"><a class="simple-footnote" href="#sf-building-my-own-site-analytics-3" title="Done! My desktop now looks like this: ">3</a></sup> .</p>
+<p>Writing the “Time Since” (my daughters birth) and “Time Until” (my next
+accounting exam<sup id="sf-building-my-own-site-analytics-4-back"><a class="simple-footnote" href="#sf-building-my-own-site-analytics-4" title="Ironically, I failed the exam because I’d been working on Ry’s Git Tutorial instead">4</a></sup> ) widgets were my
+first ever taste  of <span class="caps">CSS</span>, <span class="caps">HTML</span> and JavaScript. The first ever article on
+this blog was about the “Time Since” widget. CoffeeScript, and Ubersicht were
+just about simple enough for me to learn by trial and error, copying someone
+else’s code and changing it bit by bit until I had what I want.</p>
+<p><a href="https://johnmathews.eu/analytics.html"><strong>Site Analytics</strong></a></p><ol class="simple-footnotes"><li id="sf-building-my-own-site-analytics-1">I think this
+might be quite wrong, but I don’t know why. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-1-back">↩</a></li><li id="sf-building-my-own-site-analytics-2">The page is now rate limited to 5
+requests per minute per <span class="caps">IP</span> address. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-2-back">↩</a></li><li id="sf-building-my-own-site-analytics-3">Done! My desktop now looks like this: <img alt="Dekstop widgets" class="image-process-grid-image" loading="lazy" sizes="(min-width: 1520x) 320px, (min-width: 1260px) 400px, (min-width: 760px) 300px, (min-width: 500px) 650px, (min-width: 400px) 380px, 100vw" src="https://johnmathews.eu/images/derivatives/grid-image/400w/widgets.png" srcset="https://johnmathews.eu/images/derivatives/grid-image/300w/widgets.png 300w, https://johnmathews.eu/images/derivatives/grid-image/320w/widgets.png 320w, https://johnmathews.eu/images/derivatives/grid-image/380w/widgets.png 380w, https://johnmathews.eu/images/derivatives/grid-image/400w/widgets.png 400w, https://johnmathews.eu/images/derivatives/grid-image/650w/widgets.png 650w"/> <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-3-back">↩</a></li><li id="sf-building-my-own-site-analytics-4">Ironically, I failed the exam because I’d been working on
+<a href="https://johnmathews.eu/rys-git-tutorial.html">Ry’s Git Tutorial</a> instead <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-4-back">↩</a></li></ol>
 </div>
 </article>
 </main>
