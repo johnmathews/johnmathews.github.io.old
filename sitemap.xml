@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -26,56 +26,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/book-notes.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse-search-snippets.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/snippets.html</loc>
-<lastmod>2021-06-29T12:48:06-00:00</lastmod>
+<lastmod>2021-06-29T23:26:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -83,6 +83,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/analytics.html</loc>
 <lastmod>2021-06-18T09:59:06+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/some-experience-can-be-taught-some-needs-to-be-lived.html</loc>
+<lastmod>2021-06-29T20:21:59+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/georges-st-pierre-training-meta.html</loc>
+<lastmod>2021-06-29T17:58:46+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/validating-cloudflare-analytics.html</loc>
+<lastmod>2021-06-29T17:40:38+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1559,14 +1580,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/snippet.html</loc>
-<lastmod>2021-06-24T22:14:28+00:20</lastmod>
+<lastmod>2021-06-29T20:21:59+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/category/technical.html</loc>
-<lastmod>2021-06-22T14:30:07+00:20</lastmod>
+<lastmod>2021-06-29T17:40:38+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1608,7 +1629,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/technical/web.html</loc>
-<lastmod>2021-06-22T14:30:07+00:20</lastmod>
+<lastmod>2021-06-29T17:40:38+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/meta.html</loc>
+<lastmod>2021-06-29T20:21:59+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/advice.html</loc>
+<lastmod>2021-06-29T20:21:59+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/sport.html</loc>
+<lastmod>2021-06-29T17:58:46+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/training.html</loc>
+<lastmod>2021-06-29T17:58:46+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1803,13 +1852,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://johnmathews.eu/tag/meta.html</loc>
-<lastmod>2021-06-15T11:18:37+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://johnmathews.eu/tag/software-engineering.html</loc>
 <lastmod>2021-06-15T11:18:37+00:20</lastmod>
 <changefreq>daily</changefreq>
@@ -1945,13 +1987,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/tag/proverbs.html</loc>
 <lastmod>2021-06-08T11:30:55+00:20</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://johnmathews.eu/tag/advice.html</loc>
-<lastmod>2021-06-07T12:24:05+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3372,7 +3407,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/author/john-mathews.html</loc>
-<lastmod>2021-06-25T12:00:29+00:20</lastmod>
+<lastmod>2021-06-29T20:21:59+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
