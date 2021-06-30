@@ -272,9 +272,9 @@
 <article>
 <div class="mt-5 grid grid-cols-1 gap-y-4 lg:w-4/6">
 <div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
-<div class="mb-3">Page Views</div>
-<div class="spinner z-50 mx-auto mt-20" hidden=""></div>
-<canvas height="200" id="pageViewsPerDay" width="400"></canvas>
+<div class="mb-3">Views per Page per Day</div>
+<div class="spinner z-50 mx-auto my-10" hidden=""></div>
+<div id="viewsPageDay"></div>
 </div>
 <div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
 <div class="mb-3">Unique IP Addresses</div>
@@ -282,9 +282,9 @@
 <canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas>
 </div>
 <div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
-<div class="mb-3">Views per Page per Day</div>
-<div class="spinner z-50 mx-auto my-10" hidden=""></div>
-<div id="viewsPageDay"></div>
+<div class="mb-3">Page Views</div>
+<div class="spinner z-50 mx-auto mt-20" hidden=""></div>
+<canvas height="200" id="pageViewsPerDay" width="400"></canvas>
 </div>
 </div>
 </article>
@@ -296,11 +296,12 @@
 </div></main>
 <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
 <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
-        <a class="px-3" href="#top">Back to top</a> |
+<a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
         <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
-        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
+        <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a>
 </div>
 </footer>
 <script>

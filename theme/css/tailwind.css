@@ -291,19 +291,19 @@
 }
 
 .markdown h3 {
-  @apply leading-snug text-xl font-semibold mb-3 mt-6;
+  @apply leading-snug text-xl font-semibold -mb-5 mt-6;
 }
 
 .markdown h4 {
-  @apply leading-none text-lg font-semibold mb-3 mt-6;
+  @apply leading-none text-lg font-semibold -mb-5 mt-6;
 }
 
 .markdown h5 {
-  @apply leading-tight text-lg font-semibold mb-3 mt-6;
+  @apply leading-tight text-lg font-semibold mb-0 mt-6;
 }
 
 .markdown h6 {
-  @apply leading-tight text-lg font-semibold text-gray-600 mb-3 mt-6;
+  @apply leading-tight text-lg font-semibold text-gray-600 mb-0 mt-6;
 }
 
 .markdown kbd {

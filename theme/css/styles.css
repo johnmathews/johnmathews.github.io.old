@@ -1706,8 +1706,8 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
   line-height: 1.375;
-  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
+  margin-bottom: -1.25rem;
 }
 
 .markdown h4 {
@@ -1715,8 +1715,8 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   line-height: 1;
-  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
+  margin-bottom: -1.25rem;
 }
 
 .markdown h5 {
@@ -1724,7 +1724,7 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0px;
   margin-top: 1.5rem;
 }
 
@@ -1733,7 +1733,7 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0px;
   margin-top: 1.5rem;
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
@@ -2463,8 +2463,20 @@ video {
   margin-top: -0.75rem;
 }
 
+.-mr-3 {
+  margin-right: -0.75rem;
+}
+
+.-ml-3 {
+  margin-left: -0.75rem;
+}
+
 .-mr-5 {
   margin-right: -1.25rem;
+}
+
+.-mb-5 {
+  margin-bottom: -1.25rem;
 }
 
 .-ml-5 {
@@ -3247,6 +3259,10 @@ video {
     margin-top: 0px;
   }
 
+  .md\:mr-0 {
+    margin-right: 0px;
+  }
+
   .md\:ml-0 {
     margin-left: 0px;
   }
@@ -3326,6 +3342,10 @@ video {
 
   .md\:w-10\/12 {
     width: 83.333333%;
+  }
+
+  .md\:gap-3 {
+    gap: 0.75rem;
   }
 
   .md\:grid-cols-2 {

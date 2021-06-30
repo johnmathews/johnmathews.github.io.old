@@ -12,18 +12,18 @@
 <meta content="Validating CloudFlare analytics -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content="  " name="keywords"/>
-<meta content=" I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious. The overview tab says I’ve had 234 unique visitors. The analytics tab also says I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits. Why are they different by an order of magnitude? I can understand that one measure might be including bots and another might only be reporting real people... " name="description"/>
+<meta content=" I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious. I made some screen shots at 11pm on June 29\(^{th}\) and compared the results from the CloudFlare analytics tab, the CloudFlare Analytics product (still in beta), and my own analytics tool. The overview and analytics tabs say I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits. Why are... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Validating CloudFlare analytics" property="twitter:title"/>
-<meta content=" I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious. The overview tab says I’ve had 234 unique visitors. The analytics tab also says I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits. Why are they different by an order of magnitude? I can understand that one measure might be including bots and another might only be reporting real people... " name="twitter:description"/>
+<meta content=" I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious. I made some screen shots at 11pm on June 29\(^{th}\) and compared the results from the CloudFlare analytics tab, the CloudFlare Analytics product (still in beta), and my own analytics tool. The overview and analytics tabs say I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits. Why are... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/validating-cloudflare-analytics.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Validating CloudFlare analytics" property="og:title"/>
-<meta content=" I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious. The overview tab says I’ve had 234 unique visitors. The analytics tab also says I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits. Why are they different by an order of magnitude? I can understand that one measure might be including bots and another might only be reporting real people... " property="og:description"/>
+<meta content=" I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious. I made some screen shots at 11pm on June 29\(^{th}\) and compared the results from the CloudFlare analytics tab, the CloudFlare Analytics product (still in beta), and my own analytics tool. The overview and analytics tabs say I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits. Why are... " property="og:description"/>
 <meta content="https://johnmathews.eu/validating-cloudflare-analytics.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -260,30 +260,101 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>I don’t understand why CloudFlare gives me two different measures of how many
-people have visited my website. The reasons for this don’t seem to be explained
-anywhere obvious.</p>
-<p>The overview tab says I’ve had 234 unique visitors. The analytics tab also says
-I’ve had 234 unique visitors. But their analytics product says I’ve had 11 visits.</p>
+<p>I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious.</p>
+<p>I made some screen shots at 11pm on June 29<span class="math">\(^{th}\)</span> and compared the results from
+the CloudFlare analytics tab, the CloudFlare Analytics product (still in beta), and my own <a href="https://johnmathews.eu/building-my-own-site-analytics.html">analytics
+tool</a>.</p>
+<p>The overview and analytics tabs say I’ve had 234 unique visitors. But their
+analytics product says I’ve had 11 visits.</p>
 <p>Why are they different by an order of magnitude? I can understand that one
 measure might be including bots and another might only be reporting real people
-using normal browsers, but the difference seems too high for that.</p>
-<p>Another data point is from my own <a href="https://johnmathews.eu/building-my-own-site-analytics.html">homegrown analytics</a>. They can’t give
-results from a rolling 24 hour window, but I recorded the values at 23:00 for the calendar day. My simple
-method of logging <span class="caps">IP</span> addresses when a page is loaded, and counting the unique <span class="caps">IP</span>
-addresses each day says that I’ve had 12 unique users today. Much closer to the
-CloudFlare analytics beta result.</p>
+using normal browsers, but the difference seems too high for
+that.<sup id="sf-validating-cloudflare-analytics-1-back"><a class="simple-footnote" href="#sf-validating-cloudflare-analytics-1" title="CloudFlare tell me they’ve blocked 199 attacks in the last month.">1</a></sup> I’d also expect real usage to fall during the night in the countries
+I get most traffic from, which I don’t see.</p>
+<p>My own analytics <a href="https://johnmathews.eu/analytics.html">tool</a> can’t give results
+from a rolling 24 hour window, it only groups data by day. Therefore I recorded
+the values at 11pm, which should be close enough. My simple method of logging <span class="caps">IP</span>
+addresses when a page is loaded and counting the unique <span class="caps">IP</span> addresses each day
+says that I’ve had 12 unique users. Much closer to the CloudFlare
+analytics beta result.</p>
 <p>If it were as simple as concluding that my own results agree with the CloudFlare
 analytics beta then that might be enough. But they only agree on this particular
-metric. I’ve logged 47 page views today using my own methods, and the CloudFlare
-Analytics beta reports only 11 page views (with an average load time of 90ms -
-pretty snappy if it can be believed).</p>
+metric. I’ve logged 47 page views today using my own tool but the CloudFlare
+Analytics beta reports only 11 page views<sup id="sf-validating-cloudflare-analytics-2-back"><a class="simple-footnote" href="#sf-validating-cloudflare-analytics-2" title="With an average load time of 90ms - pretty snappy if it can be believed.">2</a></sup>.</p>
 <p>Why don’t the numbers agree with each other? Please let me know on
 <a href="https://twitter.com/johnmathews">twitter</a> if you have any thoughts!</p>
-<p><a href="https://johnmathews.eu/images/cloudflare/cloudflare normal analytics overview.png"><img alt="cloudflare normal analytics" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare normal analytics overview.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare normal analytics overview.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare normal analytics overview.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare normal analytics overview.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare normal analytics overview.png 1600w"/></a>
-<a href="https://johnmathews.eu/images/cloudflare/cloudflare analytics tab.png"><img alt="cloudflare analytics tab" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics tab.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare analytics tab.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare analytics tab.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics tab.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare analytics tab.png 1600w"/></a>
-<a href="https://johnmathews.eu/images/cloudflare/cloudflare analytics beta.png"><img alt="cloudflare analytics beta" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics beta.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare analytics beta.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare analytics beta.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics beta.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare analytics beta.png 1600w"/></a>
-<a href="https://johnmathews.eu/images/cloudflare/homebrew_analytics_visitors.png"><img alt="homebrew analytics" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/homebrew_analytics_visitors.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/homebrew_analytics_visitors.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/homebrew_analytics_visitors.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/homebrew_analytics_visitors.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/homebrew_analytics_visitors.png 1600w"/></a></p>
+<h3>CloudFlare Overview</h3>
+<p><a href="https://johnmathews.eu/images/cloudflare/cloudflare normal analytics overview.png"><img alt="cloudflare normal analytics" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare normal analytics overview.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare normal analytics overview.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare normal analytics overview.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare normal analytics overview.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare normal analytics overview.png 1600w"/></a></p>
+<h3>CloudFlare Analytics Tab</h3>
+<p><a href="https://johnmathews.eu/images/cloudflare/cloudflare analytics tab.png"><img alt="cloudflare analytics tab" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics tab.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare analytics tab.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare analytics tab.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics tab.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare analytics tab.png 1600w"/></a></p>
+<h3>CloudFlare Analytics Beta</h3>
+<p><a href="https://johnmathews.eu/images/cloudflare/cloudflare analytics beta.png"><img alt="cloudflare analytics beta" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics beta.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare analytics beta.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare analytics beta.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics beta.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare analytics beta.png 1600w"/></a></p>
+<h3>My own analytics tool</h3>
+<p><a href="https://johnmathews.eu/images/cloudflare/homebrew_analytics_visitors.png"><img alt="homebrew analytics" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/homebrew_analytics_visitors.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/homebrew_analytics_visitors.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/homebrew_analytics_visitors.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/homebrew_analytics_visitors.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/homebrew_analytics_visitors.png 1600w"/></a></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script><ol class="simple-footnotes"><li id="sf-validating-cloudflare-analytics-1">CloudFlare tell me they’ve blocked 199 attacks in the last
+month. <a class="simple-footnote-back" href="#sf-validating-cloudflare-analytics-1-back">↩</a></li><li id="sf-validating-cloudflare-analytics-2">With an average load time of 90ms -
+pretty snappy if it can be believed. <a class="simple-footnote-back" href="#sf-validating-cloudflare-analytics-2-back">↩</a></li></ol>
 </div>
 </article>
 </main>
@@ -304,11 +375,12 @@ pretty snappy if it can be believed).</p>
 </main>
 <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
 <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-<a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
-        <a class="px-3" href="#top">Back to top</a> |
+<a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
         <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
         <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
-        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a>
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
+        <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a>
 </div>
 </footer>
 <script>
