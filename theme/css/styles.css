@@ -2507,6 +2507,10 @@ video {
   margin-right: -10rem;
 }
 
+.max-h-snippet {
+  max-height: 24rem;;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -2539,6 +2543,10 @@ video {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .p-0 {
