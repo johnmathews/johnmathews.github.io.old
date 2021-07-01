@@ -6,6 +6,8 @@
 &lt;li&gt;Unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses per day&lt;/li&gt;
 &lt;li&gt;Views per page per day.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my
+own tool in this follow-up &lt;a href="https://johnmathews.eu/validating-cloudflare-analytics.html"&gt;article&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;h3&gt;Google Analytics&lt;/h3&gt;
 &lt;p&gt;Google Analytics felt like overkill. It has so many data-points that the

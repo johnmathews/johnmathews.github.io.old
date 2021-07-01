@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-29T17:40:38+02:00</updated><entry><title>Validating CloudFlare analytics</title><link href="https://johnmathews.eu/validating-cloudflare-analytics.html" rel="alternate"/><published>2021-06-29T17:40:38+02:00</published><updated>2021-06-29T17:40:38+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-29:/validating-cloudflare-analytics.html</id><summary type="html"/><content type="html">&lt;p&gt;I don’t understand why CloudFlare gives me two different measures of how many people have visited my website. The reasons for this don’t seem to be explained anywhere obvious.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-29T17:40:38+02:00</updated><entry><title>Validating CloudFlare analytics</title><link href="https://johnmathews.eu/validating-cloudflare-analytics.html" rel="alternate"/><published>2021-06-29T17:40:38+02:00</published><updated>2021-06-29T17:40:38+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-29:/validating-cloudflare-analytics.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#a-mystery-cloudflare-give-me-two-different-measures-of-how-many-people-have"&gt;A mystery CloudFlare give me two different measures of how many people have&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#possible-reasons"&gt;Possible Reasons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#comparison"&gt;Comparison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cloudflare-analytics"&gt;CloudFlare Analytics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cloudflare-web-analytics"&gt;CloudFlare Web Analytics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#my-own-analytics-tool"&gt;My own analytics tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="a-mystery-cloudflare-give-me-two-different-measures-of-how-many-people-have"&gt;A mystery CloudFlare give me two different measures of how many people have&lt;/h2&gt;
+&lt;p&gt;visited my website, one using their Analytics product and other from their new
+Web Analytics product. I get very different results for page views and number of
+visitors. I also get a third distinct set of results from my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;analytics tool&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="possible-reasons"&gt;Possible Reasons&lt;/h2&gt;
+&lt;p&gt;The reasons for this don’t seem to be explained anywhere obvious, but I think it
+could be caused by ad blockers preventing the JavaScript used for the Web
+Analytics product. The normal, (not Web) Analytics product might derive its
+results from server side events, which would catch everything including bots and
+&lt;span class="caps"&gt;RSS&lt;/span&gt; clients, and be unaffected by ad blockers.&lt;/p&gt;
+&lt;p&gt;Most of my visitors read technical articles and therefore the audience is
+probably very technical and likely to be using an ad blocker. If this is the
+case then one way to test my hypothesis would be to write some articles that
+appeal to a non-technical audience who are less likely to use an ad blocker. In
+this case I would expect the two analytics methods to agree more closely.&lt;/p&gt;
+&lt;h2 id="comparison"&gt;Comparison&lt;/h2&gt;
 &lt;p&gt;I made some screen shots at 11pm on June 29&lt;span class="math"&gt;\(^{th}\)&lt;/span&gt; and compared the results from
-the CloudFlare &lt;a href="https://www.cloudflare.com/analytics/"&gt;Analytics&lt;/a&gt;, CloudFlare &lt;a href="https://www.cloudflare.com/web-analytics/"&gt;Web Analytics&lt;/a&gt;, and my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;analytics
+the CloudFlare &lt;a href="https://www.cloudflare.com/analytics/"&gt;Analytics&lt;/a&gt;, CloudFlare &lt;a href="https://www.cloudflare.com/web-analytics/"&gt;Web Analytics&lt;/a&gt;, and my own &lt;a href="https://johnmathews.eu/analytics.html"&gt;analytics
 tool&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The overview and analytics tabs say I’ve had 234 unique visitors. But their
-analytics product says I’ve had 11 visits.&lt;/p&gt;
-&lt;p&gt;Why are they so different? I can understand that one measure might be including
-bots and another might only be reporting real people using normal browsers, but
-the difference seems too high for that.&lt;sup id="sf-validating-cloudflare-analytics-1-back"&gt;&lt;a class="simple-footnote" href="#sf-validating-cloudflare-analytics-1" title="CloudFlare do tell me they’ve blocked 199 attacks in the last month, but I don’t think this explains the difference."&gt;1&lt;/a&gt;&lt;/sup&gt; I’d also expect real usage to fall when its night in the
-countries I get most traffic from, which I don’t see.&lt;/p&gt;
+&lt;p&gt;CloudFlare’s (normal) analytics say I’ve had 234 unique visitors. But their Web
+Analytics tool says I’ve had 11 visitors. My own tool reports 12 unique visitors.&lt;/p&gt;
+&lt;p&gt;Why are these results so different? Maybe one measure might be including bots
+and another might only be trying to report real people using normal browsers,
+but the difference seems too high for that.&lt;sup id="sf-validating-cloudflare-analytics-1-back"&gt;&lt;a class="simple-footnote" href="#sf-validating-cloudflare-analytics-1" title="CloudFlare do tell me they’ve blocked 199 attacks in the last month, but I don’t think this explains the difference."&gt;1&lt;/a&gt;&lt;/sup&gt; I’d also expect real usage to fall when its night in the
+countries I get most traffic from, which I don’t see. Perhaps the difference is
+caused by 95% of my readers are using an ad blocker.&lt;/p&gt;
 &lt;p&gt;My own analytics &lt;a href="https://johnmathews.eu/analytics.html"&gt;tool&lt;/a&gt; can’t give results
 from a rolling 24 hour window, it only groups data by day. Therefore I recorded
 the values at 11pm, which should be close enough. My simple method of logging &lt;span class="caps"&gt;IP&lt;/span&gt;
 addresses when a page is loaded and counting the unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses each day
 says that I’ve had 12 unique users. Much closer to the CloudFlare
-analytics beta result.&lt;/p&gt;
+analytics beta result, but I wouldn’t expect my bespoke tool to be blocked by an
+Ad Blocker.&lt;/p&gt;
 &lt;p&gt;If it were as simple as concluding that my own results agree with the CloudFlare
 analytics beta then that might be enough. But they only agree on this particular
 metric. I’ve logged 47 page views today using my own tool but the CloudFlare
 Analytics beta reports only 11 page views&lt;sup id="sf-validating-cloudflare-analytics-2-back"&gt;&lt;a class="simple-footnote" href="#sf-validating-cloudflare-analytics-2" title="With an average load time of 90ms - pretty snappy if it can be believed."&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;Why don’t the numbers agree with each other? Please let me know on
-&lt;a href="https://twitter.com/johnmathews"&gt;twitter&lt;/a&gt; if you have any thoughts!&lt;/p&gt;
-&lt;h3&gt;CloudFlare Analytics&lt;/h3&gt;
+&lt;p&gt;Please let me know on &lt;a href="https://twitter.com/johnmathews"&gt;twitter&lt;/a&gt; if you have any ideas!&lt;/p&gt;
+&lt;h2 id="cloudflare-analytics"&gt;CloudFlare Analytics&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/images/cloudflare/cloudflare analytics tab.png"&gt;&lt;img alt="cloudflare analytics tab" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics tab.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare analytics tab.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare analytics tab.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics tab.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare analytics tab.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;CloudFlare Web Analytics&lt;/h3&gt;
+&lt;h2 id="cloudflare-web-analytics"&gt;CloudFlare Web Analytics&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/images/cloudflare/cloudflare analytics beta.png"&gt;&lt;img alt="cloudflare analytics beta" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics beta.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/cloudflare analytics beta.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/cloudflare analytics beta.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/cloudflare analytics beta.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/cloudflare analytics beta.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;My own analytics tool&lt;/h3&gt;
+&lt;h2 id="my-own-analytics-tool"&gt;My own analytics tool&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.eu/images/cloudflare/homebrew_analytics_visitors.png"&gt;&lt;img alt="homebrew analytics" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/homebrew_analytics_visitors.png" srcset="https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/300w/homebrew_analytics_visitors.png 300w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/600w/homebrew_analytics_visitors.png 600w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/800w/homebrew_analytics_visitors.png 800w, https://johnmathews.eu/images/cloudflare/derivatives/article-inline-image/1600w/homebrew_analytics_visitors.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -98,6 +123,8 @@ pretty snappy if it can be believed. &lt;a class="simple-footnote-back" href="#
 &lt;li&gt;Unique &lt;span class="caps"&gt;IP&lt;/span&gt; addresses per day&lt;/li&gt;
 &lt;li&gt;Views per page per day.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my
+own tool in this follow-up &lt;a href="https://johnmathews.eu/validating-cloudflare-analytics.html"&gt;article&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;h3&gt;Google Analytics&lt;/h3&gt;
 &lt;p&gt;Google Analytics felt like overkill. It has so many data-points that the
