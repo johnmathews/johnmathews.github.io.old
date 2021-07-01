@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/blog</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/about.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -26,56 +26,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/book-notes.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/experience.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse-search-snippets.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/fuse.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/landing-images.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/portfolio.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://johnmathews.eu/snippets.html</loc>
-<lastmod>2021-06-30T12:25:14-00:00</lastmod>
+<lastmod>2021-07-01T09:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -83,6 +83,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/analytics.html</loc>
 <lastmod>2021-06-18T09:59:06+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/edward-hopper-s-paintings.html</loc>
+<lastmod>2021-06-30T13:21:42+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1580,7 +1587,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/category/snippet.html</loc>
-<lastmod>2021-06-29T20:21:59+00:20</lastmod>
+<lastmod>2021-06-30T13:21:42+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1630,6 +1637,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://johnmathews.eu/category/technical/web.html</loc>
 <lastmod>2021-06-29T17:40:38+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/art.html</loc>
+<lastmod>2021-06-30T13:21:42+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/painting.html</loc>
+<lastmod>2021-06-30T13:21:42+00:20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://johnmathews.eu/tag/photography.html</loc>
+<lastmod>2021-06-30T13:21:42+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -3407,7 +3435,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://johnmathews.eu/author/john-mathews.html</loc>
-<lastmod>2021-06-29T20:21:59+00:20</lastmod>
+<lastmod>2021-06-30T13:21:42+00:20</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
