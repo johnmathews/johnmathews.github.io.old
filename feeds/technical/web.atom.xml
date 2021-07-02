@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-29T17:40:38+02:00</updated><entry><title>Validating CloudFlare analytics</title><link href="https://johnmathews.eu/validating-cloudflare-analytics.html" rel="alternate"/><published>2021-06-29T17:40:38+02:00</published><updated>2021-06-29T17:40:38+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-29:/validating-cloudflare-analytics.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#a-mystery-cloudflare-give-me-two-different-measures-of-how-many-people-have"&gt;A mystery CloudFlare give me two different measures of how many people have&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#a-mystery"&gt;A mystery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#possible-reasons"&gt;Possible Reasons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#comparison"&gt;Comparison&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#cloudflare-analytics"&gt;CloudFlare Analytics&lt;/a&gt;&lt;/li&gt;
@@ -8,8 +8,9 @@
 &lt;li&gt;&lt;a href="#my-own-analytics-tool"&gt;My own analytics tool&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id="a-mystery-cloudflare-give-me-two-different-measures-of-how-many-people-have"&gt;A mystery CloudFlare give me two different measures of how many people have&lt;/h2&gt;
-&lt;p&gt;visited my website, one using their Analytics product and other from their new
+&lt;h2 id="a-mystery"&gt;A mystery&lt;/h2&gt;
+&lt;p&gt;CloudFlare give me two different measures of how many people have
+visited my website, one using their Analytics product and other from their new
 Web Analytics product. I get very different results for page views and number of
 visitors. I also get a third distinct set of results from my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;analytics tool&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="possible-reasons"&gt;Possible Reasons&lt;/h2&gt;
@@ -18,7 +19,7 @@ could be caused by ad blockers preventing the JavaScript used for the Web
 Analytics product. The normal, (not Web) Analytics product might derive its
 results from server side events, which would catch everything including bots and
 &lt;span class="caps"&gt;RSS&lt;/span&gt; clients, and be unaffected by ad blockers.&lt;/p&gt;
-&lt;p&gt;Most of my visitors read technical articles and therefore the audience is
+&lt;p&gt;Most of my visitors read the technical articles and therefore the audience is
 probably very technical and likely to be using an ad blocker. If this is the
 case then one way to test my hypothesis would be to write some articles that
 appeal to a non-technical audience who are less likely to use an ad blocker. In
