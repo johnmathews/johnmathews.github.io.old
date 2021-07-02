@@ -1,526 +1,494 @@
-<!doctype html>
-<html id="baz" class="" lang="en">
-  <head>
-        <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!DOCTYPE html>
 
-      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-      <!--[if lt IE 9]>
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-
-      <title>The Mom Test - John Mathews</title>
-      <meta name="title" content="The Mom Test -  John Mathews "/>
-      <meta name="author" content="John Mathews"/>
-      <meta name="keywords" content=" book " />
-      <meta name="description" content=" My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about. "/>
-
-      <meta name="twitter:creator" content="@johnmathews"/>
-      <meta name="twitter:domain" content="https://johnmathews.eu"/>
-      <meta property="twitter:title" content="The Mom Test"/>
-      <meta name="twitter:description" content=" My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about. "/>
-      <meta property="twitter:url" content="./mom-test.html"/>
-      <meta name="twitter:image" content="    .//images/mom-test.jpg"/>
-      <meta property="twitter:card" content="  summary_large_image  "/>
-
-      <meta property="og:type" content=" article "/>
-      <meta property="og:title" content="The Mom Test"/>
-      <meta property="og:description" content=" My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about. "/>
-      <meta property="og:url" content="./mom-test.html"/>
-      <meta property="og:image" content="    .//images/mom-test.jpg"/>
-
-      <link rel="alternate" type="application/atom+xml" title="John Mathews - all articles" href="./None" />
-      <link rel="alternate" type="application/atom+xml" title="John Mathews - technical articles" href="./feeds/technical.atom.xml" />
-      <link rel="alternate" type="application/atom+xml" title="John Mathews - non-Technical articles" href="./feeds/non-technical.atom.xml" />
-      <link rel="alternate" type="application/atom+xml" title="John Mathews - snippet articles" href="./feeds/snippet.atom.xml" />
-
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link async href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"/>
-      <link async href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"/>
-
-
-      <link rel="icon" href="./extra/favicon.png" />
-
-      <link href="./theme/css/styles.css" rel="stylesheet"/>
-      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
-
-      <script>
+<title>The Mom Test - John Mathews</title>
+<meta content="The Mom Test -  John Mathews " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content=" book " name="keywords"/>
+<meta content=" My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about. " name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="The Mom Test" property="twitter:title"/>
+<meta content=" My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about. " name="twitter:description"/>
+<meta content="https://johnmathews.eu/mom-test.html" property="twitter:url"/>
+<meta content="    https://johnmathews.eu//images/mom-test.jpg" name="twitter:image"/>
+<meta content="  summary_large_image  " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="The Mom Test" property="og:title"/>
+<meta content=" My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about. " property="og:description"/>
+<meta content="https://johnmathews.eu/mom-test.html" property="og:url"/>
+<meta content="    https://johnmathews.eu//images/mom-test.jpg" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
+<script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
         }
       </script>
-
-      <!-- Cloudflare Web Analytics -->
-      <!-- End Cloudflare Web Analytics -->
-
-
-
-
-  </head>
-
-  <body class="dark:bg-gray-900">
-    <a class="pt-20 mt-20" name="top"></a>
-    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="md:fixed z-50 top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900">
-      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-        <div class="mt-10 md:mt-0 flex-grow justify-between">
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./snippets.html">Snippets</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./about.html">About</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./portfolio.html">Portfolio</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./experience.html">Experience</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./book-notes.html">Books</a>
-          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./analytics.html">Analytics</a>
-          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
-        </div>
-        <div class="flex-none justify-end px-2 pt-2">
-          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
-            <div class="day modeIcon hidden">
-              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-            </div>
-            <div class="night modeIcon">
-              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-            </div>
-          </button>
-          <button class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
-            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-          </button>
-        </div>
-      </div>
-      <div class="flex-none md:hidden block md:inline-block">
-        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
-          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-        </button>
-      </div>
-    </nav>
-      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./snippets.html">Snippets</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./about.html">About</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./portfolio.html">Portfolio</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./experience.html">Experience</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./book-notes.html">Books</a>
-        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./analytics.html">Analytics</a>
-        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
-        <div class="px-3 pt-3 flex flex-row">
-          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
-            <div class="day modeIcon">
-              <i class="far fa-lightbulb fa-2x"></i>
-            </div>
-            <div class="night modeIcon hidden">
-              <i class="far fa-moon fa-2x"></i>
-            </div>
-          </button>
-          <button class="catChooser hidden ml-5" aria-label="Category chooser">
-            <i class="fas fa-paw fa-2x"></i>
-          </button>
-        </div>
-      </div>
-
-    <main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
-
-      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-              <div class="text-center">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+<!-- Cloudflare Web Analytics -->
+<script data-cf-beacon='{"token": "514cf3cd5e214097b029daa10cd1b209"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body class="dark:bg-gray-900">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed z-50 top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
-                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
-                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
-                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
-                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="keyboardShortcuts" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
-          <div class="w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="px-5 py-5">
-              <div class="">
-                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-                <hr class="mb-5">
-                <div id="" class="text-base text-gray-700" role="group">
-                  <div class="markdown">
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
-                      <div class=" pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
-                      <div class=" pb-1"><code>/</code><span class="ml-2"> search</span></div>
-                      <div class=" pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
-                      <div class=" pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
-                      <div class=" pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
-                      <div class=" pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
-                      <div class=" pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></div>
-                      <div class=" pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
-                      <div class=" pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
-                      <div class=" pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
-                      <div class=" pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
-                      <div class=" pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
-                      <div class=" pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
-                      <div class=" pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
-                      <div class=" pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
-                      <div class=" pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="fuseModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div id="searchModalBackground" class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-          </div>
-          <div class="absolute inset-x-0 w-screen px-3">
-            <div class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-              <div class="py-1 px-1">
-                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
-                <div class="hidden lg:inline-flex flex">
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+<hr class="mb-5"/>
+<div class="text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
+<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></div>
+<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+<div class="pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
+<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
                   or
-                  <div id="macOrPc" class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
                     cmd-K
                   </div>
-                </div>
-                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mx-auto w-full">
-        <div class="flex flex-row">
-          <div class="hidden xl:inline xl:w-32">
-            <div class="w-32">
-            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
-              <div class="lg:w-32">
-                    <div>
-                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
-                  </div>
-                  <div>
-                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
-                  </div>
-                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./snippets.html">Snippets</a>
-                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./about.html">About</a>
-                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./portfolio.html">Portfolio</a>
-                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./experience.html">Experience</a>
-                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./book-notes.html">Books</a>
-                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./analytics.html">Analytics</a>
-                  <div id="searchButton" > <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
-                <div class="flex my-2">
-                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
-                    <div  class="day modeIcon">
-                      <i class="far fa-lightbulb fa-lg"></i>
-                    </div>
-                    <div class="night modeIcon hidden">
-                      <i class="far fa-moon fa-lg"></i>
-                    </div>
-                  </button>
-                </div>
-
-  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> December 2020
   </div>
-  <div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br> December 2020
-  </div>
-  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
  Category: 
     <div>
-            <a class="hover:underline" href="./category/non-technical/entrepreneurship.html">Entrepreneurship</a>
-    </div>
-
-  </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <div id="contentParent" class="w-full xl:w-5/6 xl:ml-20">
-  <div id="articleParent" class="mx-3 xl:ml-20 my-4   nonTechnical ">
-      <img class="image-process-article-leading-image xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" src="/images/mom-test.jpg" alt="The Mom Test book" />
-
-    <div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
-      <div style="word-break: unset; white-space: wrap;"
-           class="leading-tight text-left
-                  font-serif
-                  lg:-mr-30 xl:-mr-40
-                  text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl
-                  font-semibold lg:font-normal
-                  dark:text-gray-200
-                  break-words md:break-all
-                  ">
-          The Mom&nbsp;Test
+<a class="hover:underline" href="https://johnmathews.eu/category/non-technical/entrepreneurship.html">Entrepreneurship</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 nonTechnical" id="articleParent">
+<img alt="The Mom Test book" class="image-process-article-leading-image xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" sizes="(min-width: 1535x) 1200px, (min-width: 1280px) 900px, (min-width: 1024px) 1000px, (min-width: 768px) 1000px, (min-width: 640px) 1000px, 100vw" src="/images/derivatives/article-leading-image/900w/mom-test.jpg" srcset="/images/derivatives/article-leading-image/1200w/mom-test.jpg 1200w, /images/derivatives/article-leading-image/1000w/mom-test.jpg 1000w, /images/derivatives/article-leading-image/900w/mom-test.jpg 900w, /images/derivatives/article-leading-image/800w/mom-test.jpg 800w, /images/derivatives/article-leading-image/720w/mom-test.jpg 720w"/>
+<div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
+<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
+          The Mom Test
       </div>
-
-      <div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
+<div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
         December 2020
       </div>
-    </div>
-
-    <div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-    </div>
-
-    <main class="lg:w-4/6">
-      <article class="">
- <div class="markdown"> <p>My notes on &ldquo;The Mom Test&rdquo; by Rob Fitzpatrick. It&rsquo;s called the Mom Test because it leads to questions that even your mom couldn&rsquo;t lie to you&nbsp;about.</p> </div>         <div class="markdown">
-          <h2 id="summary">Summary</h2>
+</div>
+<div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown"> <p>My notes on “The Mom Test” by Rob Fitzpatrick. It’s called the Mom Test because it leads to questions that even your mom couldn’t lie to you about.</p> </div> <div class="markdown">
+<h2 id="summary">Summary</h2>
 <ol>
-<li>Ask good&nbsp;questions.</li>
-<li>Avoid bad&nbsp;data.</li>
-<li>Keep it&nbsp;casual.</li>
-<li>Push for commitment and&nbsp;advancement.</li>
-<li>Frame the meeting&nbsp;well.</li>
-<li>Focus on the right, tight, customer&nbsp;segment.</li>
-<li>Prep well, take good notes, review your&nbsp;notes.</li>
+<li>Ask good questions.</li>
+<li>Avoid bad data.</li>
+<li>Keep it casual.</li>
+<li>Push for commitment and advancement.</li>
+<li>Frame the meeting well.</li>
+<li>Focus on the right, tight, customer segment.</li>
+<li>Prep well, take good notes, review your notes.</li>
 </ol>
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#chapter-1-opinions-are-worthless">Chapter 1 - Opinions are&nbsp;worthless</a></li>
-<li><a href="#chapter-2-avoid-bad-data">Chapter 2 - Avoid bad&nbsp;data</a></li>
-<li><a href="#chapter-3-ask-the-important-questions">Chapter 3 - Ask the important&nbsp;questions</a></li>
-<li><a href="#chapter-4-keep-it-casual">Chapter 4 - Keep it&nbsp;casual</a></li>
-<li><a href="#chapter-5-the-currencies-of-conversation">Chapter 5 - The currencies of&nbsp;conversation</a></li>
-<li><a href="#chapter-6-finding-good-conversations">Chapter 6 - Finding good&nbsp;conversations</a></li>
-<li><a href="#chapter-7-choosing-you-customers">Chapter 7 - Choosing you&nbsp;customers</a></li>
-<li><a href="#chapter-8-getting-the-most-from-the-conversations-by-prepping-and-reviewing">Chapter 8 - Getting the most from the conversations by prepping and&nbsp;reviewing</a></li>
+<li><a href="#chapter-1-opinions-are-worthless">Chapter 1 - Opinions are worthless</a></li>
+<li><a href="#chapter-2-avoid-bad-data">Chapter 2 - Avoid bad data</a></li>
+<li><a href="#chapter-3-ask-the-important-questions">Chapter 3 - Ask the important questions</a></li>
+<li><a href="#chapter-4-keep-it-casual">Chapter 4 - Keep it casual</a></li>
+<li><a href="#chapter-5-the-currencies-of-conversation">Chapter 5 - The currencies of conversation</a></li>
+<li><a href="#chapter-6-finding-good-conversations">Chapter 6 - Finding good conversations</a></li>
+<li><a href="#chapter-7-choosing-you-customers">Chapter 7 - Choosing you customers</a></li>
+<li><a href="#chapter-8-getting-the-most-from-the-conversations-by-prepping-and-reviewing">Chapter 8 - Getting the most from the conversations by prepping and reviewing</a></li>
 </ul>
 </div>
-<h2 id="chapter-1-opinions-are-worthless">Chapter 1 - Opinions are&nbsp;worthless</h2>
+<h2 id="chapter-1-opinions-are-worthless">Chapter 1 - Opinions are worthless</h2>
 <p><strong>Anything involving the future is an overly optimistic lie.</strong>
-You want objective facts about what happened in the&nbsp;past.</p>
+You want objective facts about what happened in the past.</p>
 <ol>
-<li>Find out if people care about your idea by never mentioning&nbsp;it.</li>
-<li>Forcing yourself not to mention your idea will force you to ask better&nbsp;questions</li>
+<li>Find out if people care about your idea by never mentioning it.</li>
+<li>Forcing yourself not to mention your idea will force you to ask better questions</li>
 <li>Make sure your questions pass the mom test:<ul>
-<li>Talk about their lives, not your&nbsp;idea.</li>
-<li>Ask about specific objective events in the past, not hypothetical&nbsp;scenarios.</li>
-<li>Spend most of your time listening, not&nbsp;talking.</li>
+<li>Talk about their lives, not your idea.</li>
+<li>Ask about specific objective events in the past, not hypothetical scenarios.</li>
+<li>Spend most of your time listening, not talking.</li>
 </ul>
 </li>
 </ol>
-<h2 id="chapter-2-avoid-bad-data">Chapter 2 - Avoid bad&nbsp;data</h2>
+<h2 id="chapter-2-avoid-bad-data">Chapter 2 - Avoid bad data</h2>
 <ul>
-<li>You aren&rsquo;t allowed to tell them what their problem&nbsp;is.</li>
-<li>They aren&rsquo;t allowed to tell you what to&nbsp;build.</li>
+<li>You aren’t allowed to tell them what their problem is.</li>
+<li>They aren’t allowed to tell you what to build.</li>
 </ul>
-<p>Bad data&nbsp;includes:</p>
+<p>Bad data includes:</p>
 <ol>
 <li>Compliments</li>
 <li>Fluff</li>
 <li>Hypotheticals</li>
 <li>Ideas</li>
 </ol>
-<h2 id="chapter-3-ask-the-important-questions">Chapter 3 - Ask the important&nbsp;questions</h2>
-<p>You should be terrified of at least one of the questions you ask in each&nbsp;conversation.</p>
+<h2 id="chapter-3-ask-the-important-questions">Chapter 3 - Ask the important questions</h2>
+<p>You should be terrified of at least one of the questions you ask in each conversation.</p>
 <ol>
-<li>Search out the scary questions you&rsquo;ve been unintentionally avoiding. What&rsquo;s the worst thing a prospect could say? What&rsquo;s the scariest question you could&nbsp;ask?</li>
-<li>A good way to find scary questions is to imagine that your company has failed and then to ask&nbsp;why.</li>
-<li>If you get an unexpected answer to one of your questions and it doesn&rsquo;t have any effect on what you&rsquo;re going to do, then was it really worth asking&nbsp;it?</li>
-<li>General advice for hard things includes asking hard questions. Imagine you were delegating the task, what would you tell the person to do? That&rsquo;s&nbsp;you.</li>
-<li>You can ask about&nbsp;money.</li>
-<li>Love bad news - if you find out that your idea is fundamentally flawed you&rsquo;ve just saved a tonne of time and energy and money. Move on. It&rsquo;s getting you closer to the&nbsp;truth.</li>
-<li>Bad news isn&rsquo;t the result of an opinion. No one knows if your idea will work, only the market&nbsp;knows.</li>
-<li>Opinions don&rsquo;t&nbsp;count.</li>
-<li>A lukewarm response to your idea can be a great conversation, because you realise that your idea isn&rsquo;t a great idea. Lukewarm means they don&rsquo;t care enough to buy the first (worst) version before it&rsquo;s&nbsp;ready.</li>
-<li>Look before you zoom. Don&rsquo;t focus on details too soon, you need to understand the big picture&nbsp;first.</li>
+<li>Search out the scary questions you’ve been unintentionally avoiding. What’s the worst thing a prospect could say? What’s the scariest question you could ask?</li>
+<li>A good way to find scary questions is to imagine that your company has failed and then to ask why.</li>
+<li>If you get an unexpected answer to one of your questions and it doesn’t have any effect on what you’re going to do, then was it really worth asking it?</li>
+<li>General advice for hard things includes asking hard questions. Imagine you were delegating the task, what would you tell the person to do? That’s you.</li>
+<li>You can ask about money.</li>
+<li>Love bad news - if you find out that your idea is fundamentally flawed you’ve just saved a tonne of time and energy and money. Move on. It’s getting you closer to the truth.</li>
+<li>Bad news isn’t the result of an opinion. No one knows if your idea will work, only the market knows.</li>
+<li>Opinions don’t count.</li>
+<li>A lukewarm response to your idea can be a great conversation, because you realise that your idea isn’t a great idea. Lukewarm means they don’t care enough to buy the first (worst) version before it’s ready.</li>
+<li>Look before you zoom. Don’t focus on details too soon, you need to understand the big picture first.</li>
 <li>You have <strong>product risk</strong> and <strong>customer risk</strong>:<ol>
-<li><strong>Product risk</strong> - can I build it and grow&nbsp;it?</li>
-<li><strong>Customer risk</strong> - is there a big enough group of people who are going to buy&nbsp;it?</li>
+<li><strong>Product risk</strong> - can I build it and grow it?</li>
+<li><strong>Customer risk</strong> - is there a big enough group of people who are going to buy it?</li>
 </ol>
 </li>
-<li>Pre-plan a list of the 3 most important questions (including a scary one) before every meeting or conversation. Be ready with these. They should change from week to week. As you get good quality answers to existing questions you can bring in new&nbsp;questions.</li>
+<li>Pre-plan a list of the 3 most important questions (including a scary one) before every meeting or conversation. Be ready with these. They should change from week to week. As you get good quality answers to existing questions you can bring in new questions.</li>
 </ol>
-<h2 id="chapter-4-keep-it-casual">Chapter 4 - Keep it&nbsp;casual</h2>
-<p><strong> Problem -&gt; Solution -&gt;&nbsp;Sales </strong></p>
+<h2 id="chapter-4-keep-it-casual">Chapter 4 - Keep it casual</h2>
+<p><strong> Problem -&gt; Solution -&gt; Sales </strong></p>
 <ol>
 <li>Normally you would have 3 meetings with a client when you make a big sale. This lets you do each stage really well without blurring the data:<ol>
-<li>Identify your prospect&rsquo;s&nbsp;problem</li>
-<li>Explain your&nbsp;solution</li>
-<li>Sell the&nbsp;solution</li>
+<li>Identify your prospect’s problem</li>
+<li>Explain your solution</li>
+<li>Sell the solution</li>
 </ol>
 </li>
-<li>Identifying a problem doesn&rsquo;t have to be a meeting, keep it casual and you will get more honest feedback much faster. It works better as a chat when people are relaxed and saying what they really&nbsp;think.</li>
-<li>It take 5 minutes (max) to identify if a problem exists and is&nbsp;important.</li>
+<li>Identifying a problem doesn’t have to be a meeting, keep it casual and you will get more honest feedback much faster. It works better as a chat when people are relaxed and saying what they really think.</li>
+<li>It take 5 minutes (max) to identify if a problem exists and is important.</li>
 </ol>
-<p><strong>Give as little info as possible about your idea whilst still nudging the conversation&nbsp;along</strong></p>
-<h2 id="chapter-5-the-currencies-of-conversation">Chapter 5 - The currencies of&nbsp;conversation</h2>
-<p><strong>In early stage sales, the main goal is learning. Money is a&nbsp;side-effect.</strong></p>
-<p>Will they spend <strong>money</strong>, <strong>time</strong>, or <strong>reputation</strong> on your&nbsp;solution?</p>
+<p><strong>Give as little info as possible about your idea whilst still nudging the conversation along</strong></p>
+<h2 id="chapter-5-the-currencies-of-conversation">Chapter 5 - The currencies of conversation</h2>
+<p><strong>In early stage sales, the main goal is learning. Money is a side-effect.</strong></p>
+<p>Will they spend <strong>money</strong>, <strong>time</strong>, or <strong>reputation</strong> on your solution?</p>
 <ol>
-<li>If someone is willing to risk reputation, or spend time or money on your idea, then you can believe that they&rsquo;re&nbsp;interested.</li>
-<li>Hearing a compliment means they&rsquo;re trying to get rid of&nbsp;you.</li>
-<li>If it&rsquo;s a bad meeting or you&rsquo;re not sure what they really think, push for a commitment of some kind. Ask them to spend time, reputation or money and you&rsquo;ll see what they really&nbsp;think.</li>
-<li>If they aren&rsquo;t excited (not just interested, but in pain and excited for your solution) then you need to find that out <span class="caps">ASAP</span>. It&rsquo;s still a good meeting if you can discover&nbsp;this.</li>
-<li>Are you offering pain relief&nbsp;medication?</li>
-<li>A lead isn&rsquo;t a real lead until you&rsquo;ve given them a concrete chance to reject&nbsp;you.</li>
-<li>Ask learning questions by using the Mom Test, then confirm by selling&nbsp;it.</li>
+<li>If someone is willing to risk reputation, or spend time or money on your idea, then you can believe that they’re interested.</li>
+<li>Hearing a compliment means they’re trying to get rid of you.</li>
+<li>If it’s a bad meeting or you’re not sure what they really think, push for a commitment of some kind. Ask them to spend time, reputation or money and you’ll see what they really think.</li>
+<li>If they aren’t excited (not just interested, but in pain and excited for your solution) then you need to find that out <span class="caps">ASAP</span>. It’s still a good meeting if you can discover this.</li>
+<li>Are you offering pain relief medication?</li>
+<li>A lead isn’t a real lead until you’ve given them a concrete chance to reject you.</li>
+<li>Ask learning questions by using the Mom Test, then confirm by selling it.</li>
 <li>You need <strong>crazy customers</strong>:<ol>
-<li>They have a painful and expensive&nbsp;problem</li>
-<li>They know they have a painful and expensive&nbsp;problem</li>
-<li>They have the money to pay you to solve&nbsp;it</li>
+<li>They have a painful and expensive problem</li>
+<li>They know they have a painful and expensive problem</li>
+<li>They have the money to pay you to solve it</li>
 <li>They already have their own bad solution to this terrible problem, and
-  yours is clearly&nbsp;better</li>
+  yours is clearly better</li>
 </ol>
 </li>
-<li>A crazy customer doesn&rsquo;t say &ldquo;yeah that&rsquo;s great, I&rsquo;m really interested, let me know when its ready&rdquo;. They say &ldquo;<span class="caps">AHHH</span> <span class="caps">THIS</span> <span class="caps">IS</span> <span class="caps">THE</span> <span class="caps">WORST</span> <span class="caps">PART</span> <span class="caps">OF</span> <span class="caps">MY</span> <span class="caps">LIFE</span> <span class="caps">AND</span> I <span class="caps">WILL</span> <span class="caps">PAY</span> <span class="caps">YOU</span> <span class="caps">RIGHT</span> <span class="caps">NOW</span> <span class="caps">TO</span> <span class="caps">FIX</span> <span class="caps">IT</span>!&rdquo;</li>
-<li>A crazy customer will front you the money when all you have is a barely functional prototype made of&nbsp;duct-tape</li>
-<li>A crazy customer is the person reading you blog, searching for workarounds, when you haven&rsquo;t spent loads of marketing and lead&nbsp;generation</li>
-<li>Keep a crazy customer close - they&rsquo;ll stick with you when times are&nbsp;tough.</li>
+<li>A crazy customer doesn’t say “yeah that’s great, I’m really interested, let me know when its ready”. They say “<span class="caps">AHHH</span> <span class="caps">THIS</span> <span class="caps">IS</span> <span class="caps">THE</span> <span class="caps">WORST</span> <span class="caps">PART</span> <span class="caps">OF</span> <span class="caps">MY</span> <span class="caps">LIFE</span> <span class="caps">AND</span> I <span class="caps">WILL</span> <span class="caps">PAY</span> <span class="caps">YOU</span> <span class="caps">RIGHT</span> <span class="caps">NOW</span> <span class="caps">TO</span> <span class="caps">FIX</span> <span class="caps">IT</span>!”</li>
+<li>A crazy customer will front you the money when all you have is a barely functional prototype made of duct-tape</li>
+<li>A crazy customer is the person reading you blog, searching for workarounds, when you haven’t spent loads of marketing and lead generation</li>
+<li>Keep a crazy customer close - they’ll stick with you when times are tough.</li>
 </ol>
-<h2 id="chapter-6-finding-good-conversations">Chapter 6 - Finding good&nbsp;conversations</h2>
-<p><strong>Vision -&gt; Framing -&gt; Weakness -&gt; Pedestal -&gt;&nbsp;Ask</strong></p>
-<p>Keep having conversations until you stop hearing new&nbsp;stuff.</p>
+<h2 id="chapter-6-finding-good-conversations">Chapter 6 - Finding good conversations</h2>
+<p><strong>Vision -&gt; Framing -&gt; Weakness -&gt; Pedestal -&gt; Ask</strong></p>
+<p>Keep having conversations until you stop hearing new stuff.</p>
 <ol>
-<li><strong>If it&rsquo;s a topic you both care about, find an excuse. You&rsquo;ll both enjoy the chat. You don&rsquo;t need to mention your idea if it breaks the&nbsp;premise.</strong></li>
-<li>Warm introductions are the ideal way to start a new conversation. 6 degrees of freedom in the world, so find someone who knows someone who knows&nbsp;them.</li>
-<li>Cold calls - LinkedIn,&nbsp;maybe.</li>
-<li>Serendipity - be prepared, be&nbsp;bold.</li>
-<li>Have a good excuse -&nbsp;hustle.</li>
-<li>Landing pages - so that googling the problems brings them to&nbsp;you.</li>
-<li>Organise an event - bring the businesses together for an event. You&rsquo;ll be considered an expert because you&rsquo;re facilitating&nbsp;it.</li>
-<li>Become a subject matter&nbsp;expert</li>
-<li>Speaking and teaching engagements - you get to have strong opinions, and you&rsquo;ll be&nbsp;respected.</li>
+<li><strong>If it’s a topic you both care about, find an excuse. You’ll both enjoy the chat. You don’t need to mention your idea if it breaks the premise.</strong></li>
+<li>Warm introductions are the ideal way to start a new conversation. 6 degrees of freedom in the world, so find someone who knows someone who knows them.</li>
+<li>Cold calls - LinkedIn, maybe.</li>
+<li>Serendipity - be prepared, be bold.</li>
+<li>Have a good excuse - hustle.</li>
+<li>Landing pages - so that googling the problems brings them to you.</li>
+<li>Organise an event - bring the businesses together for an event. You’ll be considered an expert because you’re facilitating it.</li>
+<li>Become a subject matter expert</li>
+<li>Speaking and teaching engagements - you get to have strong opinions, and you’ll be respected.</li>
 </ol>
-<h2 id="chapter-7-choosing-you-customers">Chapter 7 - Choosing you&nbsp;customers</h2>
+<h2 id="chapter-7-choosing-you-customers">Chapter 7 - Choosing you customers</h2>
 <ol>
-<li>Startups don&rsquo;t starve, they drown. In options, choices, ideas. You get&nbsp;overwhelmed.</li>
-<li>Choose a good customer segment, focus on it, and don&rsquo;t get&nbsp;distracted.</li>
+<li>Startups don’t starve, they drown. In options, choices, ideas. You get overwhelmed.</li>
+<li>Choose a good customer segment, focus on it, and don’t get distracted.</li>
 <li>In the beginning:<ol>
-<li>Google - PhD&nbsp;students.</li>
-<li>PayPal -&nbsp;eBay.</li>
-<li>Evernote - Moms with&nbsp;recipes.</li>
+<li>Google - PhD students.</li>
+<li>PayPal - eBay.</li>
+<li>Evernote - Moms with recipes.</li>
 </ol>
 </li>
-<li>It will look obvious with hindsight, probably not so obvious before you&rsquo;ve figured it&nbsp;out.</li>
-<li>If you can&rsquo;t get a consistent answer to a question, maybe you&rsquo;re speaking to different&nbsp;segments.</li>
-<li>If you aren&rsquo;t finding <strong>consistent problems and goals</strong> then you don&rsquo;t have a specific enough customer segment.<ol>
-<li>Within the group, which type of person would want it the&nbsp;most?</li>
-<li>Would everyone within the group want to buy/use it? Or only&nbsp;some?</li>
-<li>Why does the subset want&nbsp;it?</li>
-<li>Does everyone in the group have the same&nbsp;motivation?</li>
-<li>What other motivations are&nbsp;there?</li>
-<li>Who else (outside the group) has these&nbsp;motivations?</li>
+<li>It will look obvious with hindsight, probably not so obvious before you’ve figured it out.</li>
+<li>If you can’t get a consistent answer to a question, maybe you’re speaking to different segments.</li>
+<li>If you aren’t finding <strong>consistent problems and goals</strong> then you don’t have a specific enough customer segment.<ol>
+<li>Within the group, which type of person would want it the most?</li>
+<li>Would everyone within the group want to buy/use it? Or only some?</li>
+<li>Why does the subset want it?</li>
+<li>Does everyone in the group have the same motivation?</li>
+<li>What other motivations are there?</li>
+<li>Who else (outside the group) has these motivations?</li>
 </ol>
 </li>
-<li>Go for <strong>Who-Where</strong> pairs of segments. &ldquo;Finance professionals who run&nbsp;marathons&rdquo;..</li>
-<li>You want customers who are reachable, profitable, and personally&nbsp;rewarding.</li>
+<li>Go for <strong>Who-Where</strong> pairs of segments. “Finance professionals who run marathons”..</li>
+<li>You want customers who are reachable, profitable, and personally rewarding.</li>
 </ol>
-<p><strong>Good segments are usually &ldquo;who-where&rdquo; pairs. If you don&rsquo;t know where to find your customers, keep slicing until you do. Make sure the segment is reachable, profitable, and personally&nbsp;rewarding</strong></p>
-<h2 id="chapter-8-getting-the-most-from-the-conversations-by-prepping-and-reviewing">Chapter 8 - Getting the most from the conversations by prepping and&nbsp;reviewing</h2>
+<p><strong>Good segments are usually “who-where” pairs. If you don’t know where to find your customers, keep slicing until you do. Make sure the segment is reachable, profitable, and personally rewarding</strong></p>
+<h2 id="chapter-8-getting-the-most-from-the-conversations-by-prepping-and-reviewing">Chapter 8 - Getting the most from the conversations by prepping and reviewing</h2>
 <ol>
 <li>
-<p>Prepare&nbsp;well</p>
+<p>Prepare well</p>
 <ol>
-<li>Have your <strong>three big questions</strong> ready, including the scary&nbsp;ones.</li>
-<li>Know who you are speaking&nbsp;to.</li>
-<li>Know what commitment and next-steps you want to push&nbsp;for.</li>
+<li>Have your <strong>three big questions</strong> ready, including the scary ones.</li>
+<li>Know who you are speaking to.</li>
+<li>Know what commitment and next-steps you want to push for.</li>
 <li>
-<p>Spend up to an hour writing&nbsp;down:</p>
+<p>Spend up to an hour writing down:</p>
 <ol>
-<li><strong>Your best guesses about what you think they&rsquo;ll&nbsp;say.</strong></li>
-<li><strong>What they care&nbsp;about.</strong></li>
-<li><strong>What they&nbsp;want.</strong></li>
-</ol>
-</li>
-<li>
-<p>If you have a focussed segment, you&rsquo;ll only need to do this&nbsp;occasionally.</p>
-</li>
-<li>If you come across a question which can be answered using the internet, use the&nbsp;internet.</li>
+<li><strong>Your best guesses about what you think they’ll say.</strong></li>
+<li><strong>What they care about.</strong></li>
+<li><strong>What they want.</strong></li>
 </ol>
 </li>
 <li>
-<p>Take good&nbsp;notes</p>
+<p>If you have a focussed segment, you’ll only need to do this occasionally.</p>
+</li>
+<li>If you come across a question which can be answered using the internet, use the internet.</li>
+</ol>
+</li>
+<li>
+<p>Take good notes</p>
 <ol>
-<li>Ask if you can record the&nbsp;audio.</li>
-<li>Record emotions as well as words. Verbatim alone isn&rsquo;t always accurate 6 months&nbsp;later.</li>
-<li>Use shorthand for follow&nbsp;up.</li>
-<li>Observe and record emotions - happy, angry, meh,&nbsp;etc.</li>
-<li>Pains and obstacles are a lot more important if someone is embarrassed or angry when they&rsquo;re talking about&nbsp;them.</li>
-<li>Dig into the big emotions, find out what&rsquo;s causing them, or why its a big&nbsp;deal.</li>
+<li>Ask if you can record the audio.</li>
+<li>Record emotions as well as words. Verbatim alone isn’t always accurate 6 months later.</li>
+<li>Use shorthand for follow up.</li>
+<li>Observe and record emotions - happy, angry, meh, etc.</li>
+<li>Pains and obstacles are a lot more important if someone is embarrassed or angry when they’re talking about them.</li>
+<li>Dig into the big emotions, find out what’s causing them, or why its a big deal.</li>
 </ol>
 </li>
 <li>Review your notes<ol>
-<li>Meta - which questions went well or&nbsp;not?</li>
-<li>What were the answers to the scary&nbsp;questions?</li>
-<li>How can you do better next&nbsp;time?</li>
-<li>What were the clear signals? What signals did you&nbsp;miss?</li>
+<li>Meta - which questions went well or not?</li>
+<li>What were the answers to the scary questions?</li>
+<li>How can you do better next time?</li>
+<li>What were the clear signals? What signals did you miss?</li>
 </ol>
 </li>
 </ol>
-        </div>
-      </article>
-    </main>
-
-    <div class="mt-20 mb-10 text-lg dark:text-gray-200">
-        <div class="flex flex-row">
-          <div class="text-red-500 dark:text-red-500"> &#x2190;  </div>
-          <a id="previousArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./obviously-awesome.html"> Obviously&nbsp;Awesome</a>
-        </div>
-
-        <div class="flex flex-row mt-2">
-          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
-          <a id="nextArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./product-led-growth.html"> Product-Led&nbsp;Growth</a>
-        </div>
-
-      <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+</div>
+</article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/obviously-awesome.html" id="previousArticleInCategory"> Obviously Awesome</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/product-led-growth.html" id="nextArticleInCategory"> Product-Led Growth</a>
+</div>
+<div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
-          <a id="otherArticlesInCategory" class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold " href="./category/non-technical/entrepreneurship.html"> Entrepreneurship</a>
-          
-      </div>
-    </div>
-
-
-
-  </div>
-
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
-      <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-        <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="./blog.html">Blog Posts</a> |
-        <a class="px-3" href="./categories.html">Categories</a> |
-        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/non-technical/entrepreneurship.html" id="otherArticlesInCategory"> Entrepreneurship</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
-        <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a> 
-      </div>
-    </footer>
-
-        <script>
-        const light = "./theme/css/pygment-light.css"
-        const dark = "./theme/css/pygment-dark.css"
-        const indexURL = 'http://localhost:8000/fuse.html'
-        const siteURL = '.'
+        <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a>
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -529,32 +497,29 @@ You want objective facts about what happened in the&nbsp;past.</p>
 
 
       </script>
-
-      <script rel="prefetch" type="module" src="./theme/js/categoryChooser.js" crossorigin="anonymous"></script>
-      <script rel="prefetch" type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
-      <script rel="prefetch" type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
-      <script rel="prefetch" type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
-      <script rel="prefetch" type="module" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
-
-      <script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {
                   console.log('flag1')
                   $('#catModal').addClass('hidden');
                 });
       </script>
-      <script>
+<script>
         if (navigator.userAgent.indexOf('Mac OS X') != -1) {
           $("#macOrPc").html("&#8984;K");
         } else {
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-
-
-
-
-  <script>
+<script>
+            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {})
+        </script>
+<script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -578,6 +543,5 @@ You want objective facts about what happened in the&nbsp;past.</p>
       };
     }
   </script>
-  </body>
-
+</body>
 </html>

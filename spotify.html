@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+<title>Spotify song history - John Mathews</title>
+<meta content="Spotify song history -  John Mathews " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content=" Music,Spotify " name="keywords"/>
+<meta content=" Spotify recently sent me their ‘2016 Wrapped’ email containing a few statistics about my listening habits in 2016, and a playlist of my 101 most played songs. I decided to compare their statistics with those I’d gathered myself. There is an option in the Preferences menu to log (‘scrobble’) your Spotify listening history to last.fm. from where you can then download your data. I thought it would be interesting to verify my Spotify stats, and see if I could discover any other interesting insights. " name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="Spotify song history" property="twitter:title"/>
+<meta content=" Spotify recently sent me their ‘2016 Wrapped’ email containing a few statistics about my listening habits in 2016, and a playlist of my 101 most played songs. I decided to compare their statistics with those I’d gathered myself. There is an option in the Preferences menu to log (‘scrobble’) your Spotify listening history to last.fm. from where you can then download your data. I thought it would be interesting to verify my Spotify stats, and see if I could discover any other interesting insights. " name="twitter:description"/>
+<meta content="https://johnmathews.eu/spotify.html" property="twitter:url"/>
+<meta content="https://johnmathews.eu/
+" name="twitter:image"/>
+<meta content="  summary  " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="Spotify song history" property="og:title"/>
+<meta content=" Spotify recently sent me their ‘2016 Wrapped’ email containing a few statistics about my listening habits in 2016, and a playlist of my 101 most played songs. I decided to compare their statistics with those I’d gathered myself. There is an option in the Preferences menu to log (‘scrobble’) your Spotify listening history to last.fm. from where you can then download your data. I thought it would be interesting to verify my Spotify stats, and see if I could discover any other interesting insights. " property="og:description"/>
+<meta content="https://johnmathews.eu/spotify.html" property="og:url"/>
+<meta content="https://johnmathews.eu/
+" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+      </script>
+<!-- Cloudflare Web Analytics -->
+<script data-cf-beacon='{"token": "514cf3cd5e214097b029daa10cd1b209"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body class="dark:bg-gray-900">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed z-50 top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                 Keyboard Shortcuts:
+                </h3>
+<hr class="mb-5"/>
+<div class="text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
+<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></div>
+<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+<div class="pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
+<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    /
+                  </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                    cmd-K
+                  </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-20">
+</div>
+<div class="pt-20 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> December 2016
+  </div>
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
+ Category: 
+    <div>
+<a class="hover:underline" href="https://johnmathews.eu/category/technical/data.html">Data</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
+<div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
+<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
+          Spotify song history
+      </div>
+<div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
+        December 2016
+      </div>
+</div>
+<div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown"> <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Spotify recently sent me their ‘2016 Wrapped’ email containing a few statistics about my listening habits in 2016, and a playlist of my 101 most played songs.</p>
+<p>I decided to compare their statistics with those I’d gathered myself. There is an option in the Preferences menu to log (‘scrobble’) your Spotify listening history to last.fm. from where you can then download your data. I thought it would be interesting to verify my Spotify stats, and see if I could discover any other interesting insights.</p> </div> <div class="markdown">
+<body><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Spotify recently sent me their ‘2016 Wrapped’ email containing a few statistics about my listening habits in 2016, and a playlist of my 101 most played songs.</p>
+<p>I decided to compare their statistics with those I’d gathered myself. There is an option in the Preferences menu to log (‘scrobble’) your Spotify listening history to last.fm. from where you can then download your data. I thought it would be interesting to verify my Spotify stats, and see if I could discover any other interesting insights.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Notebook-set-up">1. Notebook set-up<a class="anchor-link" href="#1.-Notebook-set-up">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Display plot results inline, not in a separate window</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="o">%</span><span class="k">pylab</span> inline
+
+<span class="c1"># Set the size of all figures</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Import pandas and a nicer plotting style</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span> <span class="o">=</span> <span class="s1">'default'</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Populating the interactive namespace from numpy and matplotlib
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Make the dataframes look a bit prettier</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">css</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'style-table.css'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="o">+</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'style-notebook.css'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">'&lt;style&gt;</span><span class="si">{}</span><span class="s1">&lt;/style&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">css</span><span class="p">))</span>
+
+<span class="c1"># Print output to 2 decimal places only</span>
+<span class="c1">#pd.options.display.float_format = '{:,.2f}'.format # Just works for this cell only</span>
+
+<span class="c1"># This sets behaviour for entire notebook</span>
+<span class="o">%</span><span class="k">precision</span> %.2f  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>'%.2f'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Load-and-explore-the-data">2. Load and explore the data<a class="anchor-link" href="#2.-Load-and-explore-the-data">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Load in the data from the .csv file I downloaded</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Artist'</span><span class="p">,</span> <span class="s1">'Album'</span><span class="p">,</span> <span class="s1">'Name'</span><span class="p">,</span> <span class="s1">'d_t'</span><span class="p">]</span>
+
+<span class="c1"># Choose the column names</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'listening_history.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">column_names</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> 
+
+<span class="c1"># Convert the date time column (d_t) from a string to date time, so that I can search by date </span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'d_t'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'d_t'</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some initial questions to answer to get a feel for the data:</p>
+<ul>
+<li>How much data is there?</li>
+<li>What type of data is present? </li>
+<li>What are the maximum and minimum values? </li>
+<li>…etc. </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># View the top 10 rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Artist</th>
+<th>Album</th>
+<th>Name</th>
+<th>d_t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Bonobo</td>
+<td>Animal Magic</td>
+<td>Kota</td>
+<td>NaT</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Samaris</td>
+<td>Samaris</td>
+<td>Góða tungl</td>
+<td>2016-12-15 09:44:00</td>
+</tr>
+<tr>
+<th>2</th>
+<td>The Staves</td>
+<td>Dead <span class="amp">&amp;</span> Born <span class="amp">&amp;</span> Grown</td>
+<td>Mexico</td>
+<td>2016-12-15 09:40:00</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Bonobo</td>
+<td>Animal Magic</td>
+<td>Kota</td>
+<td>2016-12-15 09:34:00</td>
+</tr>
+<tr>
+<th>4</th>
+<td>The Gloaming</td>
+<td>The Gloaming</td>
+<td>The Sailor’s Bonnet</td>
+<td>2016-12-15 09:30:00</td>
+</tr>
+<tr>
+<th>5</th>
+<td>St. Germain</td>
+<td>St Germain</td>
+<td>Forget Me Not</td>
+<td>2016-12-15 09:24:00</td>
+</tr>
+<tr>
+<th>6</th>
+<td>Yosi Horikawa</td>
+<td>Wandering</td>
+<td>Bubbles</td>
+<td>2016-12-15 09:19:00</td>
+</tr>
+<tr>
+<th>7</th>
+<td>South</td>
+<td>Music from The <span class="caps">O.C.</span> Mix 1</td>
+<td>Paint the Silence</td>
+<td>2016-12-15 09:13:00</td>
+</tr>
+<tr>
+<th>8</th>
+<td>The Staves</td>
+<td>Sleeping In A Car</td>
+<td>Sleeping In A Car</td>
+<td>2016-12-15 09:09:00</td>
+</tr>
+<tr>
+<th>9</th>
+<td>Bonobo</td>
+<td>Days to Come</td>
+<td>Recurring</td>
+<td>2016-12-15 09:04:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#How many rows are there?</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>36454</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># How many 2016 rows</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>1983</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Are there any NaN values in 2016?</span>
+<span class="n">Ans</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'There are'</span><span class="p">,</span> <span class="n">Ans</span><span class="p">,</span> <span class="s1">'rows with NaN values in 2016'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>There are 0 rows with NaN values in 2016
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Maximum and minimum dates</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Oldest record is:"</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Most recent record is:"</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Oldest record is: 1970-01-01 00:00:00
+Most recent record is: 2016-12-15 09:44:00
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Scrobbling to last.fm was turned off for the first half of 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#print("Oldest record in 2016 is:",df[df.d_t.dt.year == 2016].d_t.min())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Scrobbling in 2016 began at:'</span><span class="p">,</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scrobbling in 2016 began at: 2016-06-14 20:24:00
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Therefore it will be important to remember that the data being analysed only represents about half of 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Verify-Spotify's-statistics">3. Verify Spotify’s statistics<a class="anchor-link" href="#3.-Verify-Spotify's-statistics">¶</a></h2><h3 id="3a.-Total-Minutes">3a. Total Minutes<a class="anchor-link" href="#3a.-Total-Minutes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>According to Spotify, I listened to 2357 unique artists this year, and 3309 unique tracks. Total streaming time was 45202 minutes. They dont tell me how many non-unique plays I accumulated.</p>
+<p>Googling ‘average song length’ reveals that most pop songs last 3.5 minutes, but I think the songs I listen to are longer than that.</p>
+<p>Spotify’s <span class="caps">UI</span> is understandably light on details, so initially I wondered how to calculate my average song length. First I just eyeballed the data (‘scanning analytics..’). Then I realised I could sort the playlist by song length and then I could pick the median, although I’d need to know how many songs were in the playlist.</p>
+<p>Whilst searching for playlist properties like ‘number of songs’ I simply spotted  what I needed below the description; 101 songs, total play time of 8hrs, 29 minutes.</p>
+<p>Spotify tell me I’ve spent 45202 minutes streaming music and listened to 3309 unique tracks in 2016.</p>
+<p>Therefore:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Average length of my 101 most listened to songs</span>
+<span class="n">Average</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="mi">8</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="mi">29</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="o">/</span><span class="mi">101</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average song length:"</span><span class="p">,</span> <span class="n">Average</span><span class="p">,</span> <span class="s2">"seconds"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"or 5 minutes, 2 seconds </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Time spent listening to Spotify in days</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Days listening to Spotify in 2016:"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="mi">45303</span><span class="o">/</span><span class="mi">60</span><span class="o">/</span><span class="mi">24</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"...Really? A whole month?!? </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Time spent listening to Spotify in seconds</span>
+<span class="n">seconds_used</span> <span class="o">=</span> <span class="mi">45202</span> <span class="o">*</span> <span class="mi">60</span> 
+
+<span class="c1"># Number of songs played </span>
+<span class="n">n_tracks</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">seconds_used</span> <span class="o">/</span> <span class="n">Average</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of songs played in 2016:"</span><span class="p">,</span><span class="n">n_tracks</span><span class="p">)</span>
+
+<span class="c1"># Average number of plays per songs</span>
+<span class="n">unique_tracks</span> <span class="o">=</span> <span class="mi">3309</span> <span class="c1"># From summary email</span>
+<span class="n">average_plays</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">n_tracks</span> <span class="o">/</span> <span class="n">unique_tracks</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"On average, I listen to each track"</span><span class="p">,</span> <span class="n">average_plays</span><span class="p">,</span> <span class="s2">"times"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Average song length: 302.38 seconds
+or 5 minutes, 2 seconds 
+
+Days listening to Spotify in 2016: 31.46
+...Really? A whole month?!? 
+
+Number of songs played in 2016: 8969.24
+On average, I listen to each track 2.71 times
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a surprisingly large amount of time spent listening to music. I cannot believe I spent 1/12 of 2016 streaming music from Spotify. I also thought I was quite a repetitive listener, so the average of 2.7 plays per song is surprisingly low. (For example, I have a short playlist with ‘Recurring’ by Bonobo in it 5 times.)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3b.-Unique-artists">3b. Unique artists<a class="anchor-link" href="#3b.-Unique-artists">¶</a></h3><p>According to Spotify, I listened to 2357 unique artists in 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">Ans</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Artist</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Number of unique artists scrobbled in 2016:'</span><span class="p">,</span> <span class="n">Ans</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of unique artists scrobbled in 2016: 510
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If all songs were being scrobbled to last.fm and my listening behaviour remained the same thoughout the year, I would have expected the result to be about half of Spotify’s result (because I only began scrobbling in June). The summary email reported 2357 unique artists in 2016. 510 is clearly much less than half of 2357.</p>
+<h3 id="3c.-Unique-tracks">3c. Unique tracks<a class="anchor-link" href="#3c.-Unique-tracks">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">Ans</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Name</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Number of unique tracks scrobbled in 2016:'</span><span class="p">,</span><span class="n">Ans</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of unique tracks scrobbled in 2016: 1060
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Spotify reported 3309 unique tracks played in 2016. My result of 1060 unique tracks in only the second half of 2016 is less than I would have expected, though the difference between expectation and result is not as great as for unique artists.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3d.-My-top-tracks">3d. My top tracks<a class="anchor-link" href="#3d.-My-top-tracks">¶</a></h3><p>According to Spotify, my 3 most played tracks in 2016 are:</p>
+<ol>
+<li>Lights Out Words Gone </li>
+<li>Shuffle</li>
+<li>Luna</li>
+</ol>
+<p>…all by Bombay Bicyle Club</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Which tracks did I listen to the most in 2016?</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Name</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Miserere                 14
+Shuffle                  14
+Lights Out Words Gone    12
+The Pilgrim’s Song       12
+Always Like This         12
+Luna                     11
+The Hare                 11
+You Already Know         11
+Koop Island Blues        10
+The Sailor's Bonnet      10
+Name: Name, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This shows that whilst the ‘top tracks’ are some of my most listened to tracks, Spotify either uses a different method to calculate plays, or ‘top’ is not synonymous to ‘most frequent’.</p>
+<p>When using data from June onwards, my ‘top tracks’ are only my joint 1st, 3rd and 6th most frequent plays.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3e.-Top-Artists">3e. Top Artists<a class="anchor-link" href="#3e.-Top-Artists">¶</a></h3><p>Results from Spotify:</p>
+<ol>
+<li>Bonobo </li>
+<li>Bombay Bicyle Club</li>
+<li>The Staves</li>
+<li>Thievery Corporation</li>
+<li>Jack Johnson</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Artist</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>The Staves                          170
+Bonobo                              161
+The Gloaming                        132
+Koop                                107
+Bombay Bicycle Club                 105
+Giovanni Pierluigi da Palestrina     70
+Jimi Hendrix                         48
+Jack Johnson                         44
+Gregorio Allegri                     43
+Broken Social Scene                  33
+Name: Artist, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>My results are different to Spotify’s, but not by much.</p>
+<table>
+<thead><tr>
+<th>Artist</th>
+<th style="text-align:center">Spotify’s results</th>
+<th style="text-align:right">My result </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Bonobo</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td> Bombay Bicycle Club</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td> The Staves</td>
+<td style="text-align:center">3</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td> Thievery Corporation</td>
+<td style="text-align:center">4</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td> Jack Johnson</td>
+<td style="text-align:center">5</td>
+<td style="text-align:right">8</td>
+</tr>
+</tbody>
+</table>
+<p>Apart from Thievery Corporation being conspicuously absent from my own scrobbled data, all other differences could reasonably be explained by listening trends being different from Jan - June than July - Dec.</p>
+<p>The results show that I prefer listening to Bonobo over Bombay Bicycle Club, but that my 3 most played songs are all by Bombay Bicyle Club. This shows that there are more songs by Bonobo that I enjoy listening to, and that I have more polarised opinions about songs by Bombay Bicyle Club.</p>
+<h3 id="3f.-Favourite-day-to-listen">3f. Favourite day to listen<a class="anchor-link" href="#3f.-Favourite-day-to-listen">¶</a></h3><p>According to Spotify, I stream more music on Saturday than any other day.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plot how many songs wer played on each day of the week in the second half of 2016</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">"bar"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x111243c88&gt;</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzkAAAFHCAYAAACCpYKBAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAGKFJREFUeJzt3X+wZnddH/D3hywERCRAbjNhN7qMBGlo64JLCIOdoTBW
+SLSJHWBCHYlM7OoUWhitdYHOoDOljR01wmjRaIDgKJBGGaJEWwxYh1YCm7CEhIisEJrdCclFfjeI
+Jnz6xz0hN8vdvffuvXef+3x5vWaeec75nu95ns8z37ln9/2cc75PdXcAAABG8ZBZFwAAALCZhBwA
+AGAoQg4AADAUIQcAABiKkAMAAAxFyAEAAIYi5AAAAEMRcgAAgKEIOQAAwFB2zLqAJDn99NN79+7d
+sy4DAADYpm688cbPdvfCWvpui5Cze/fuHDhwYNZlAAAA21RVfXqtfV2uBgAADEXIAQAAhiLkAAAA
+QxFyAACAoQg5AADAUIQcAABgKGsOOVV1SlV9uKr+aFp/QlXdUFWHquodVfWwqf3Uaf3QtH331pQO
+AADwzdZzJucVSW5btv6LSS7v7icm+XySS6f2S5N8fmq/fOoHAABwUqwp5FTVriQXJPntab2SPCfJ
+NVOXq5JcNC1fOK1n2v7cqT8AAMCWW+uZnF9N8h+SfH1af1ySL3T3vdP64SQ7p+WdSe5Ikmn7F6f+
+D1JV+6rqQFUdWFxcPMHyAQAAHmzVkFNVP5Tk7u6+cTPfuLuv6O693b13YWFhM18aAAD4FrZjDX2e
+leRfVNX5SR6e5DuSvD7JaVW1YzpbsyvJkan/kSRnJTlcVTuSPDrJ32x65QAAsM3t3v/uWZewZW6/
+7IJZl3BMq57J6e5Xdfeu7t6d5OIk7+3uH03yviQvmLpdkuRd0/K103qm7e/t7t7UqgEAAI5hI7+T
+83NJfrqqDmXpnpsrp/Yrkzxuav/pJPs3ViIAAMDareVytW/o7j9L8mfT8ieTnLtCn79N8sJNqA0A
+AGDdNnImBwAAYNsRcgAAgKEIOQAAwFDWdU8OAAAn18hTECfbexpi5pczOQAAwFCEHAAAYChCDgAA
+MBQhBwAAGIqQAwAADEXIAQAAhiLkAAAAQxFyAACAoQg5AADAUIQcAABgKEIOAAAwFCEHAAAYipAD
+AAAMRcgBAACGIuQAAABDEXIAAIChCDkAAMBQhBwAAGAoO2ZdAADzYff+d8+6hC11+2UXzLoEADbJ
+qmdyqurhVfXBqvpIVd1aVb8wtb+lqj5VVQenx56pvarqDVV1qKpurqqnbfWHAAAAuN9azuR8Lclz
+uvsrVfXQJO+vqj+etv1sd19zVP/nJzl7ejwjyRunZwAAgC236pmcXvKVafWh06OPs8uFSd467feB
+JKdV1ZkbLxUAAGB1a5p4oKpOqaqDSe5O8p7uvmHa9LrpkrTLq+rUqW1nkjuW7X54agMAANhyawo5
+3X1fd+9JsivJuVX1j5K8KsmTkzw9yWOT/Nx63riq9lXVgao6sLi4uM6yAQAAVrauKaS7+wtJ3pfk
+ed1953RJ2teSvDnJuVO3I0nOWrbbrqnt6Ne6orv3dvfehYWFE6seAADgKGuZXW2hqk6blh+R5AeS
+/OX999lUVSW5KMkt0y7XJnnJNMvaeUm+2N13bkn1AAAAR1nL7GpnJrmqqk7JUii6urv/qKreW1UL
+SSrJwSQ/NfW/Lsn5SQ4luSfJSze/bAAAgJWtGnK6++YkT12h/TnH6N9JXrbx0gAAANZvXffkAAAA
+bHdCDgAAMBQhBwAAGIqQAwAADEXIAQAAhiLkAAAAQxFyAACAoQg5AADAUIQcAABgKEIOAAAwFCEH
+AAAYipADAAAMRcgBAACGIuQAAABDEXIAAIChCDkAAMBQhBwAAGAoO2ZdwCzs3v/uWZewpW6/7IJZ
+lwAAADPjTA4AADAUIQcAABiKkAMAAAxFyAEAAIYi5AAAAEMRcgAAgKGsGnKq6uFV9cGq+khV3VpV
+vzC1P6GqbqiqQ1X1jqp62NR+6rR+aNq+e2s/AgAAwAPWcibna0me093fm2RPkudV1XlJfjHJ5d39
+xCSfT3Lp1P/SJJ+f2i+f+gEAAJwUq4acXvKVafWh06OTPCfJNVP7VUkumpYvnNYzbX9uVdWmVQwA
+AHAca7onp6pOqaqDSe5O8p4kf53kC91979TlcJKd0/LOJHckybT9i0ket8Jr7quqA1V1YHFxcWOf
+AgAAYLKmkNPd93X3niS7kpyb5MkbfePuvqK793b33oWFhY2+HAAAQJJ1zq7W3V9I8r4kz0xyWlXt
+mDbtSnJkWj6S5KwkmbY/OsnfbEq1AAAAq1jL7GoLVXXatPyIJD+Q5LYshZ0XTN0uSfKuafnaaT3T
+9vd2d29m0QAAAMeyY/UuOTPJVVV1SpZC0dXd/UdV9bEkb6+q/5Tkw0munPpfmeR3qupQks8luXgL
+6gYAAFjRqiGnu29O8tQV2j+Zpftzjm7/2yQv3JTqAAAA1mld9+QAAABsd0IOAAAwFCEHAAAYipAD
+AAAMRcgBAACGIuQAAABDEXIAAIChCDkAAMBQhBwAAGAoQg4AADAUIQcAABiKkAMAAAxFyAEAAIYi
+5AAAAEMRcgAAgKEIOQAAwFCEHAAAYChCDgAAMBQhBwAAGIqQAwAADEXIAQAAhiLkAAAAQxFyAACA
+oawacqrqrKp6X1V9rKpurapXTO0/X1VHqurg9Dh/2T6vqqpDVfXxqvrBrfwAAAAAy+1YQ597k/xM
+d99UVY9KcmNVvWfadnl3/9LyzlV1TpKLkzwlyeOT/GlVPam779vMwgEAAFay6pmc7r6zu2+alr+c
+5LYkO4+zy4VJ3t7dX+vuTyU5lOTczSgWAABgNeu6J6eqdid5apIbpqaXV9XNVfWmqnrM1LYzyR3L
+djuc44ciAACATbPmkFNV357k95O8sru/lOSNSb47yZ4kdyb55fW8cVXtq6oDVXVgcXFxPbsCAAAc
+05pCTlU9NEsB53e7+w+SpLvv6u77uvvrSX4rD1ySdiTJWct23zW1PUh3X9Hde7t778LCwkY+AwAA
+wDesZXa1SnJlktu6+1eWtZ+5rNuPJLllWr42ycVVdWpVPSHJ2Uk+uHklAwAAHNtaZld7VpIfS/LR
+qjo4tb06yYurak+STnJ7kp9Mku6+taquTvKxLM3M9jIzqwEAACfLqiGnu9+fpFbYdN1x9nldktdt
+oC4AAIATsq7Z1QAAALY7IQcAABiKkAMAAAxFyAEAAIYi5AAAAEMRcgAAgKEIOQAAwFCEHAAAYChC
+DgAAMBQhBwAAGIqQAwAADEXIAQAAhiLkAAAAQxFyAACAoQg5AADAUIQcAABgKEIOAAAwFCEHAAAY
+ipADAAAMRcgBAACGIuQAAABD2THrAgCArbd7/7tnXcKWuf2yC2ZdArDNOJMDAAAMRcgBAACGsmrI
+qaqzqup9VfWxqrq1ql4xtT+2qt5TVZ+Ynh8ztVdVvaGqDlXVzVX1tK3+EAAAAPdby5mce5P8THef
+k+S8JC+rqnOS7E9yfXefneT6aT1Jnp/k7OmxL8kbN71qAACAY1g15HT3nd1907T85SS3JdmZ5MIk
+V03drkpy0bR8YZK39pIPJDmtqs7c9MoBAABWsK57cqpqd5KnJrkhyRndfee06TNJzpiWdya5Y9lu
+h6c2AACALbfmkFNV357k95O8sru/tHxbd3eSXs8bV9W+qjpQVQcWFxfXsysAAMAxrSnkVNVDsxRw
+fre7/2Bqvuv+y9Cm57un9iNJzlq2+66p7UG6+4ru3tvdexcWFk60fgAAgAdZy+xqleTKJLd1968s
+23Rtkkum5UuSvGtZ+0umWdbOS/LFZZe1AQAAbKkda+jzrCQ/luSjVXVwant1ksuSXF1Vlyb5dJIX
+TduuS3J+kkNJ7kny0k2tGAAA4DhWDTnd/f4kdYzNz12hfyd52QbrAgAAOCHrml0NAABguxNyAACA
+oQg5AADAUIQcAABgKEIOAAAwFCEHAAAYipADAAAMRcgBAACGIuQAAABDEXIAAIChCDkAAMBQhBwA
+AGAoQg4AADAUIQcAABiKkAMAAAxFyAEAAIYi5AAAAEMRcgAAgKEIOQAAwFB2zLoAWK/d+9896xK2
+1O2XXTDrEgAA5pozOQAAwFCEHAAAYChCDgAAMBQhBwAAGMqqIaeq3lRVd1fVLcvafr6qjlTVwelx
+/rJtr6qqQ1X18ar6wa0qHAAAYCVrmV3tLUl+Lclbj2q/vLt/aXlDVZ2T5OIkT0ny+CR/WlVP6u77
+NqFWYM6ZGQ8AOBlWPZPT3X+e5HNrfL0Lk7y9u7/W3Z9KcijJuRuoDwAAYF02ck/Oy6vq5ulytsdM
+bTuT3LGsz+Gp7ZtU1b6qOlBVBxYXFzdQBgAAwANONOS8Mcl3J9mT5M4kv7zeF+juK7p7b3fvXVhY
+OMEyAAAAHuyEQk5339Xd93X315P8Vh64JO1IkrOWdd01tQEAAJwUJxRyqurMZas/kuT+mdeuTXJx
+VZ1aVU9IcnaSD26sRAAAgLVbdXa1qnpbkmcnOb2qDid5bZJnV9WeJJ3k9iQ/mSTdfWtVXZ3kY0nu
+TfIyM6sBAAAn06ohp7tfvELzlcfp/7okr9tIUQAAACdqI7OrAQAAbDtCDgAAMBQhBwAAGIqQAwAA
+DEXIAQAAhiLkAAAAQxFyAACAoQg5AADAUIQcAABgKEIOAAAwFCEHAAAYipADAAAMRcgBAACGIuQA
+AABDEXIAAIChCDkAAMBQhBwAAGAoQg4AADAUIQcAABiKkAMAAAxFyAEAAIYi5AAAAEMRcgAAgKGs
+GnKq6k1VdXdV3bKs7bFV9Z6q+sT0/JipvarqDVV1qKpurqqnbWXxAAAAR1vLmZy3JHneUW37k1zf
+3WcnuX5aT5LnJzl7euxL8sbNKRMAAGBtVg053f3nST53VPOFSa6alq9KctGy9rf2kg8kOa2qztys
+YgEAAFZzovfknNHdd07Ln0lyxrS8M8kdy/odntoAAABOig1PPNDdnaTXu19V7auqA1V1YHFxcaNl
+AAAAJDnxkHPX/ZehTc93T+1Hkpy1rN+uqe2bdPcV3b23u/cuLCycYBkAAAAPdqIh59okl0zLlyR5
+17L2l0yzrJ2X5IvLLmsDAADYcjtW61BVb0vy7CSnV9XhJK9NclmSq6vq0iSfTvKiqft1Sc5PcijJ
+PUleugU1AwAAHNOqIae7X3yMTc9doW8nedlGiwIAADhRG554AAAAYDsRcgAAgKEIOQAAwFCEHAAA
+YChCDgAAMBQhBwAAGIqQAwAADEXIAQAAhiLkAAAAQxFyAACAoQg5AADAUIQcAABgKEIOAAAwFCEH
+AAAYipADAAAMRcgBAACGIuQAAABDEXIAAIChCDkAAMBQhBwAAGAoQg4AADAUIQcAABiKkAMAAAxF
+yAEAAIayYyM7V9XtSb6c5L4k93b33qp6bJJ3JNmd5PYkL+ruz2+sTAAAgLXZjDM5/6y793T33ml9
+f5Lru/vsJNdP6wAAACfFVlyudmGSq6blq5JctAXvAQAAsKKNhpxO8j+r6saq2je1ndHdd07Ln0ly
+xko7VtW+qjpQVQcWFxc3WAYAAMCSDd2Tk+T7u/tIVf2DJO+pqr9cvrG7u6p6pR27+4okVyTJ3r17
+V+wDAACwXhs6k9PdR6bnu5O8M8m5Se6qqjOTZHq+e6NFAgAArNUJh5yqemRVPer+5ST/PMktSa5N
+csnU7ZIk79pokQAAAGu1kcvVzkjyzqq6/3V+r7v/pKo+lOTqqro0yaeTvGjjZQIAAKzNCYec7v5k
+ku9dof1vkjx3I0UBAACcqK2YQhoAAGBmhBwAAGAoQg4AADAUIQcAABiKkAMAAAxFyAEAAIYi5AAA
+AEMRcgAAgKEIOQAAwFCEHAAAYChCDgAAMBQhBwAAGIqQAwAADEXIAQAAhiLkAAAAQxFyAACAoQg5
+AADAUIQcAABgKEIOAAAwFCEHAAAYipADAAAMRcgBAACGIuQAAABD2bKQU1XPq6qPV9Whqtq/Ve8D
+AACw3JaEnKo6JcmvJ3l+knOSvLiqztmK9wIAAFhuq87knJvkUHd/srv/Lsnbk1y4Re8FAADwDVsV
+cnYmuWPZ+uGpDQAAYEtVd2/+i1a9IMnzuvsnpvUfS/KM7n75sj77kuybVr8nycc3vZDt4/Qkn511
+EZww4ze/jN18M37zy9jNN+M330Yev+/q7oW1dNyxRQUcSXLWsvVdU9s3dPcVSa7YovffVqrqQHfv
+nXUdnBjjN7+M3XwzfvPL2M034zffjN+Srbpc7UNJzq6qJ1TVw5JcnOTaLXovAACAb9iSMzndfW9V
+vTzJ/0hySpI3dfetW/FeAAAAy23V5Wrp7uuSXLdVrz9nviUuyxuY8Ztfxm6+Gb/5Zezmm/Gbb8Yv
+WzTxAAAAwKxs1T05AAAAMyHkAAAAQxFyAACAoWzZxAMkVfXYJOnuz826FvhWUVVnJNk5rR7p7rtm
+WQ/r59g5v4zd/HLsnF/GbmUmHthkVfWdSf5rkucm+UKSSvIdSd6bZH933z676lgrB4z5U1V7kvxG
+kkfngR8f3pWlv8N/0903zao2VufYOb+M3Xxz7Jxfxu74hJxNVlV/keRXk1zT3fdNbackeWGSV3b3
+ebOsj+NzwJhfVXUwyU929w1HtZ+X5De7+3tnUxlr4dg5v4zdfHPsnF/G7viEnE1WVZ/o7rPXu43t
+wQFjfq3yt3eou594smti7Rw755exm2+OnfPL2B2fe3I2341V9d+SXJXkjqntrCSXJPnwzKpirR55
+dMBJku7+QFU9chYFsWZ/XFXvTvLWPPhv7yVJ/mRmVbFWjp3zy9jNN8fO+WXsjsOZnE1WVQ9LcmmS
+C/PAPR2Hk/xhkiu7+2uzqo3VVdUbknx3Vj5gfKq7Xz6r2lhdVT0/D/7bO5Lk2u6+bnZVsRaOnfPL
+2M0/x875ZeyOTciBozhgAADMN7+TcxJV1Q/NugZW191/3N0/1d0/PD1+SsCZb1W1b9Y1cOIcO+eX
+sZtvjp3zy9gJOSfb02ddACfOAWOu1awLYEMcO+eXsZtvjp3z61t+7Ew8sAWq6slZ+XKn186uKjbB
+t/wBY7ub/vZ2Jrmhu7+ybNOnZ1QS61BV5ybp7v5QVZ2T5HlJ/tKxc/5U1Vu7+yXGbv5U1fcnOTfJ
+Ld39m7Ouh2Orqmckua27v1RVj0iyP8nTknwsyX+eaXHbgDM5m6yqfi7J27P0H+IPTo9K8raq2j/L
+2tiwv5t1ARxbVf27JO9K8m+T3FJVFy7b/C1/sN/uquq1Sd6Q5I1V9V+S/FqSRybZX1WvmWlxHFdV
+XXvU4w+T/Mv712ddH8dXVR9ctvyvs/S396gkr/X/lm3vTUnumZZfn6Xf+PvFqe3NsypquzDxwCar
+qr9K8pTu/vuj2h+W5Fa/FzC/qur/dvd3zroOVlZVH03yzO7+SlXtTnJNkt/p7tdX1Ye7+6kzLZDj
+msZvT5JTk3wmya5l307e0N3/ZKYFckxVdVOWvjn+7SSd6Yu9JBcnSXf/r9lVx2qWHx+r6kNJzu/u
+xelnEz7Q3f94thVyLFV1W3f/w2n5pu5+2rJtB7t7z+yqmz2Xq22+ryd5fL758pgzp21sY1V187E2
+JTnjZNbCuj3k/kvUuvv2qnp2kmuq6rviUsN5cG9335fknqr66+7+UpJ091eryrFze9ub5BVJXpPk
+Z7v7YFV9VbiZGw+pqsdk6eqe6u7FJOnu/1dV9862NFZxS1W9tLvfnOQjVbW3uw9U1ZOS/P1qO49O
+yNl8r0xyfVV9Ig/8zsp3JnliEr+xsv2dkeQHk3z+qPZK8n9Ofjmsw11Vtae7DybJdEbnh7J0Ot83
+kdvf31XVt3X3PUm+7/7Gqnp0fEG0rXX315NcXlX/fXq+K/5/MU8eneTGLP0711V1ZnffWVXfHl8Q
+bXc/keT1VfUfk3w2yV9U1R1Z+v/nT8y0sm3A5WpboKoekqWb9pZPPPCh6VtKtrGqujLJm7v7/Sts
++73u/lczKIs1qKpdWTob8JkVtj2ru//3DMpijarq1JV+NLKqTk9yZnd/dAZlcQKq6oIkz+ruV8+6
+Fk5cVX1bkjO6+1OzroXjq6rvSPKELH25cLi775pxSduCkAMAAAzF7GoAAMBQhBwAAGAoQg4AADAU
+IQeAbaOqfr6q/v0xtv14VT3+ZNcEwPwRcgCYFz+epd8hA4DjEnIAmKmqek1V/VVVvT/J9xyjzwuy
+9KOTv1tVB6vqESe1SADmipADwMxU1fcluTjJniTnJ3n6Sv26+5okB5L8aHfv6e6vnrwqAZg3fpEY
+gFn6p0ne2d33JElVXTvjegAYgDM5AADAUIQcAGbpz5NcVFWPqKpHJfnh4/T9cpJHnZyyAJhnLlcD
+YGa6+6aqekeSjyS5O8mHjtP9LUl+o6q+muSZ7ssB4Fiqu2ddAwAAwKZxuRoAADAUl6sBsK1U1a8n
+edZRza/v7jfPoh4A5o/L1QAAgKG4XA0AABiKkAMAAAxFyAEAAIYi5AAAAEMRcgAAgKH8f1IkeLHU
+tOoQAAAAAElFTkSuQmCC
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Monday=0 and Sunday=6.</p>
+<p>This result shows that I stream more music on a Sunday than any other day. This is a different result to Spotify’s report.</p>
+<p>The small difference could be explained (again) by my data set only relating to the second half of 2016. From January to June I listened to more music on a Saturday than a Sunday - probably when I was playing Starcraft. This hobby unfortunately was put on ice and had to come second to revision for exams in July and November.</p>
+<h3 id="4.-Time-of-day">4. Time of day<a class="anchor-link" href="#4.-Time-of-day">¶</a></h3><p>I thought it would be interesting to also see how much music I listen to at different times. I expect my listening habits to be different during the week compared to weekends, so I split the data by day and then summed the songs played whilst grouping them by hour.</p>
+<p>The figures below show an unexpected dip around 3pm at weekends, and consistent streaming through the day whilst at the office during the week. No matter which day of the week, it appears I always listen to music in the evenings.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Count number of songs played during each hour at the weekends </span>
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)]</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">"bar"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x110493dd8&gt;</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img src="data:image/png;base64,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
+GTtlTlmTeeWVdXXmlHdOWZN55ZV1deaUd05Zk3nllXV15pR3TlmTafOu4hS1Nyc5taruUlU3SvLI
+JBes4OcAAAAcZMdHcLr7M1X1hCR/kuSGSX63uy/Z6Z8DAACw2SpOUUt3vzrJq1ex7S/QSk+B22Fz
+yprMK6+sqzOnvHPKmswrr6yrM6e8c8qazCuvrKszp7xzyppMmHfHJxkAAACYyiq+gwMAADAJBQcA
+ABiGggMAAAxjJZMMTKmqTkpy8vLuVd199ZR5jmROWZOkqm6TJN39samzHM3c9i0AADtjmEkGqupe
+SX4ryQn5/IVFT0nyiSQ/1N1vnSrbZjPLeqckv5jk9CzyVZJbJvmzJPu6+/Lp0h1qTvsWAOauqk5I
+8qBs+FAxyZ909yemS3V4VXWPJA/LwXkv6O5Lp0u1tZllXavjYKSC8/Yk39/dF21aflqS3+7ue06T
+7FAzy/p/kvxqkvO6+9+Xy26Y5DuT/HB3nzZlvs3mtG+T9XtBOJqZvdjOJmsyr2NhTlmTeR0Lsq7O
+nI7buezbqnp0kqcleW0O/lDxm5M8o7tfOFW2rVTVTyb57iQvTXLlcvEpWVyU/qXdvX+qbJvNLOva
+HQcjFZz3d/eph1l3WXff9brOdDgDZT3suqnMbN+u3QvCkczsxXY2WZN5HQtzyprM61iQdXXmdNzO
+ad9W1fuSfN3mklhVt05yUXffbZpkW6uqv0nyld39b5uW3yjJJev0O83Msq7dcTBSwfm1JF+W5IVJ
+PrxcfMckj07ywe5+wlTZNptZ1pcm+ViSc3Nw1rOSnNjdj5gq21Zmtm/X7gXhSGb2YjubrMm8joU5
+ZU3mdSzIujpzOm7ntG+XWb+2uz+5afkJSS5ep6xJUlXvTfKt3X3FpuV3TvLa7r77NMkONbOsa3cc
+DDPJQHc/qaq+LYcO6T67u189XbJDzSlrFsXgcUmekc9nvTLJHyV53lShDmdm+7aSbPUJw2eX69bN
+Z5PcIckVm5bffrluncwpazKvY2FOWZN5HQuyrs6cjts57dtfSPLWqnptPv+h4p2yGBn7uclSHd4P
+J3l9Vb0/B+e9a5K1+QB0aU5Z1+44GGYEB+amqs5K8rNZnDJxyAtCd79gomhbqqoHJfmNJFu+2Hb3
+a6bKttmcsibzOhbmlDWZ17Eg6+rM6bid4b69dZJvzaHfbfr4dKkOr6pukOS+OTjvm6/9nvE6mVnW
+tToOrhcFp6rO7u5zps5xLGaW9SHd/aqpcxyrddy36/aCcDQze7GdTdZkXsfCnLIm8zoWZF2dOR23
+c9u3sG6uLwXn+7v7t6fOcSxmlvUZ3f20qXMcqzntWwCYs6o6p7vPnjrHsaqqV3X3Q6bOcSxmlnWS
+4+AG1/UPXJWq+rqquuXy9k2q6hlV9UdV9cwsZiJZG1X1pKq641br1u0X8Kq6UVU9uqoeuLz/qKr6
+jap6fJKfnzjelqrqS6vqx6vqWVX1y1X1A1V1y3Xbt0dSVWs10nQ0VTWnkbzZZE3mdSzMKWsyr2NB
+1tWZ03E7s307m/fcpf82dYAvwJyyTnIcDDOCU1WXJLlnd39m+WL1qSTnZXGBynt293dMGnCDqvpk
+kn9O8n+TvCTJ73f3gWlTba2qXpTFZBQ3zeJimTdP8sos9mu6+zGThdtCVT0pyUOS/EWSByd5Wxa5
+vz2LC32+cbp0x66q7tPdb5k6x7Gqqtt390emznEs5pQ1mdexMKesybyOBVlXZ07H7dz2LUxlpIJz
+aXd/+fL2W7v73hvWvb277zVduoNV1duS3CfJA5N8V5KHJnlLFmXnld39jxPGO0hVvbO7v7qqdmVx
+DvAduvvfq6qSvKO7v3riiAepqncludcy402TvLq7H1BVd0pyfnd/zcQRYThVdbvuvmbqHCOqqtt2
+999PnQO2spwG+KlJzkxyuyxmqrsmyflJ9m+elnudVdUfd/e3TZ3jWsuzkp6axTWQ/ri7X7xh3XO6
++4cmC7dJVX1JFteZ+mwWk3k8Mcl/SXJpkidPUcqHOUUtybur6rHL2++oqr1JUlV3S/Jvh3/aJLq7
+P9vdr+3ux2UxHeRzsrjC8gemjXaIGyzn3r9FFqM4JyyX3zjJF02W6siunf78xlmMOKW7P5Q1y1tV
+J1TV/qp6b1V9rKr+vqouXS671dT5vhBV9cdTZ9ioqm5ZVf+jqn6vqh61ad1zpsp1OFX1JVX1m1X1
+7Kq6bVU9vareVVUvr6rbT51vo6q6zaY/t03y11V166q6zdT5NlvOSHXt7ROq6nlV9c6qenFVnTRl
+ts2W//dPXN7eW1UfSHJRVV1RVd84cbyDVNVbq+pnqurLps5yLJb78w1V9b+q6o5V9bqq+mRVvbmq
+1uqDr6q6eVX996q6ZJnxQFW9qaoeM3W2Lbw8yceTPKC7b9Pdt03yn5bLXj5psi1U1b0P8+c+Sdbm
+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
+XEkJdqRVowAAAABJRU5ErkJggg==
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Count number of songs played during each hour during the week</span>
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)]</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">"bar"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11048fa58&gt;</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzkAAAFNCAYAAAAjPqHnAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAH1xJREFUeJzt3X+4ZXVdL/D3Rygf87cyEvLDUUNLbznqaHTLsrRC8Yp6
+S6EeBfOGlpZWNyPrSfvhvXO7mdfKH2Ei2BXURIMETTTTfG6ogyKC+AN1CAhhFFNL8wn43D/2Gjhz
+ODNzZs4+s/devF7Pcx72/q61135z1pmzz3uvtb67ujsAAABjcbtZBwAAAJgmJQcAABgVJQcAABgV
+JQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABiVA2cdIEkOOuig3rhx46xjAAAAc+zC
+Cy/8Undv2NN6c1FyNm7cmK1bt846BgAAMMeq6orVrOd0NQAAYFSUHAAAYFSUHAAAYFSUHAAAYFSU
+HAAAYFSUHAAAYFSUHAAAYFSUHAAAYFSUHAAAYFSUHAAAYFSUHAAAYFQOnHUAAABYbxtPPnfq29y2
+5Zipb5PpcCQHAAAYFSUHAAAYlT2WnKo6vKreV1WfrKpLq+r5w/g9qur8qvrs8N+7D+NVVX9SVZdX
+1cVV9bD1/p8AAADYYTVHcm5I8mvd/aAkRyV5blU9KMnJSd7b3Ucmee9wP0kel+TI4eukJK+eemoA
+AIBd2GPJ6e5ruvujw+2vJ7ksyaFJjk1y+rDa6UmeNNw+NskbeuKCJHerqkOmnhwAAGAFe3VNTlVt
+TPLQJB9KcnB3XzMs+mKSg4fbhya5csnDrhrGlm/rpKraWlVbt2/fvpexAQAAVrbqklNVd0pyVpIX
+dPfXli7r7k7Se/PE3X1Kd2/u7s0bNmzYm4cCAADs0qpKTlV9WyYF543d/bZh+Nodp6EN/71uGL86
+yeFLHn7YMAYAALDuVjO7WiV5XZLLuvuPlyw6J8kJw+0Tkpy9ZPwZwyxrRyX56pLT2gAAANbVgatY
+5weTPD3JJ6rqomHsRUm2JHlLVT0ryRVJnjosOy/J45NcnuQbSZ451cQAAAC7sceS090fTFK7WPyY
+FdbvJM9dYy4AAIB9slezqwEAAMw7JQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgV
+JQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcA
+ABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABiVPZacqjq1qq6rqkuWjL25qi4a
+vrZV1UXD+Maq+uaSZa9Zz/AAAADLHbiKdU5L8mdJ3rBjoLuftuN2Vb0syVeXrP+57t40rYAAAAB7
+Y48lp7s/UFUbV1pWVZXkqUl+bLqxAAAA9s1ar8l5VJJru/uzS8buW1Ufq6r3V9WjdvXAqjqpqrZW
+1dbt27evMQYAAMDEWkvO8UnOXHL/miRHdPdDk/xqkjOq6i4rPbC7T+nuzd29ecOGDWuMAQAAMLHP
+JaeqDkzylCRv3jHW3d/q7i8Pty9M8rkkD1hrSAAAgNVay5Gcxyb5VHdftWOgqjZU1QHD7fslOTLJ
+59cWEQAAYPVWM4X0mUn+MckDq+qqqnrWsOi47HyqWpL8cJKLhyml35rkOd19/TQDAwAA7M5qZlc7
+fhfjJ64wdlaSs9YeCwAAYN+sdeIBAACAuaLkAAAAo6LkAAAAo7LHa3IAAGB3Np587tS3uW3LMVPf
+JrcdjuQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACj
+ouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjouQAAACjsseS
+U1WnVtV1VXXJkrGXVNXVVXXR8PX4Jct+s6our6pPV9VPrldwAACAlazmSM5pSY5eYfzl3b1p+Dov
+SarqQUmOS/Lg4TGvqqoDphUWAABgT/ZYcrr7A0muX+X2jk3ypu7+Vnd/IcnlSR65hnwAAAB7ZS3X
+5Dyvqi4eTme7+zB2aJIrl6xz1TB2K1V1UlVtraqt27dvX0MMAACAW+xryXl1kvsn2ZTkmiQv29sN
+dPcp3b25uzdv2LBhH2MAAADsbJ9KTndf2903dvdNSV6bW05JuzrJ4UtWPWwYAwAA2C/2qeRU1SFL
+7j45yY6Z185JclxV3b6q7pvkyCQfXltEAACA1TtwTytU1ZlJHp3koKq6KsmLkzy6qjYl6STbkjw7
+Sbr70qp6S5JPJrkhyXO7+8b1iQ4AAHBreyw53X38CsOv2836L03y0rWEAgAA2FdrmV0NAABg7ig5
+AADAqCg5AADAqCg5AADAqCg5AADAqCg5AADAqCg5AADAqCg5AADAqCg5AADAqCg5AADAqCg5AADA
+qCg5AADAqBw46wAAAMDExpPPner2tm05ZqrbWxSO5AAAAKOi5AAAAKOi5AAAAKOi5AAAAKOi5AAA
+AKOi5AAAAKOi5AAAAKOi5AAAAKOi5AAAAKOi5AAAAKOyx5JTVadW1XVVdcmSsf9dVZ+qqour6u1V
+dbdhfGNVfbOqLhq+XrOe4QEAAJZbzZGc05IcvWzs/CT/qbu/L8lnkvzmkmWf6+5Nw9dzphMTAABg
+dfZYcrr7A0muXzb27u6+Ybh7QZLD1iEbAADAXpvGNTk/l+SdS+7ft6o+VlXvr6pH7epBVXVSVW2t
+qq3bt2+fQgwAAIA1lpyq+q0kNyR54zB0TZIjuvuhSX41yRlVdZeVHtvdp3T35u7evGHDhrXEAAAA
+uNk+l5yqOjHJE5L8bHd3knT3t7r7y8PtC5N8LskDppATAABgVfap5FTV0UlemOSJ3f2NJeMbquqA
+4fb9khyZ5PPTCAoAALAaB+5phao6M8mjkxxUVVcleXEms6ndPsn5VZUkFwwzqf1wkt+rqv9IclOS
+53T39StuGAAAYB3sseR09/ErDL9uF+ueleSstYYCAADYV9OYXQ0AAGBuKDkAAMCoKDkAAMCoKDkA
+AMCo7HHiAQAAZmfjyedOfZvbthwz9W3CPHEkBwAAGBUlBwAAGBUlBwAAGBUlBwAAGBUlBwAAGBUl
+BwAAGBUlBwAAGBUlBwAAGBUlBwAAGJUDZx0AAGBWNp587tS3uW3LMVPfJrB3HMkBAABGRckBAABG
+RckBAABGRckBAABGRckBAABGRckBAABGRckBAABGZVUlp6pOrarrquqSJWP3qKrzq+qzw3/vPoxX
+Vf1JVV1eVRdX1cPWKzwAAMByqz2Sc1qSo5eNnZzkvd19ZJL3DveT5HFJjhy+Tkry6rXHBAAAWJ1V
+lZzu/kCS65cNH5vk9OH26UmetGT8DT1xQZK7VdUh0wgLAACwJ2u5Jufg7r5muP3FJAcPtw9NcuWS
+9a4axnZSVSdV1daq2rp9+/Y1xAAAALjFVCYe6O5O0nv5mFO6e3N3b96wYcM0YgAAAKyp5Fy74zS0
+4b/XDeNXJzl8yXqHDWMAAADrbi0l55wkJwy3T0hy9pLxZwyzrB2V5KtLTmsDAABYVweuZqWqOjPJ
+o5McVFVXJXlxki1J3lJVz0pyRZKnDqufl+TxSS5P8o0kz5xyZgAAgF1aVcnp7uN3segxK6zbSZ67
+llAAAAD7aioTDwAAAMwLJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgV
+JQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcA
+ABgVJQcAABgVJQcAABgVJQcAABgVJQcAABgVJQcAABiVA/f1gVX1wCRvXjJ0vyS/k+RuSX4+yfZh
+/EXdfd4+JwQAANgL+1xyuvvTSTYlSVUdkOTqJG9P8swkL+/uP5pKQgAAgL0wrdPVHpPkc919xZS2
+BwAAsE+mVXKOS3LmkvvPq6qLq+rUqrr7Sg+oqpOqamtVbd2+fftKqwAAAOy1NZecqvr2JE9M8lfD
+0KuT3D+TU9muSfKylR7X3ad09+bu3rxhw4a1xgAAAEgynSM5j0vy0e6+Nkm6+9ruvrG7b0ry2iSP
+nMJzAAAArMo0Ss7xWXKqWlUdsmTZk5NcMoXnAAAAWJV9nl0tSarqjkl+PMmzlwz/YVVtStJJti1b
+BgAAsK7WVHK6+9+S3HPZ2NPXlAgAAGANpjW7GgAAwFxQcgAAgFFRcgAAgFFRcgAAgFFRcgAAgFFR
+cgAAgFFRcgAAgFFRcgAAgFFRcgAAgFFRcgAAgFFRcgAAgFFRcgAAgFFRcgAAgFE5cNYBADaefO7U
+t7ltyzFT3yYAsBiUHABYZtrFW+kG2L+UHABYQIoYwK65JgcAABgVJQcAABgVJQcAABgVJQcAABgV
+JQcAABgVJQcAABiVNU8hXVXbknw9yY1JbujuzVV1jyRvTrIxybYkT+3ur6z1uQAAAPZkWp+T86Pd
+/aUl909O8t7u3lJVJw/3f2NKzwUALIBpf5ZP4vN8gNVZr9PVjk1y+nD79CRPWqfnAQAA2Mk0Sk4n
+eXdVXVhVJw1jB3f3NcPtLyY5eArPAwAAsEfTOF3th7r76qq6V5Lzq+pTSxd2d1dVL3/QUIhOSpIj
+jjhiCjEAAACmcCSnu68e/ntdkrcneWSSa6vqkCQZ/nvdCo87pbs3d/fmDRs2rDUGAABAkjWWnKq6
+Y1XdecftJD+R5JIk5yQ5YVjthCRnr+V5AAAAVmutp6sdnOTtVbVjW2d097uq6iNJ3lJVz0pyRZKn
+rvF5AAAAVmVNJae7P5/kISuMfznJY9aybQAAgH2xXlNIAwAAzISSAwAAjIqSAwAAjIqSAwAAjIqS
+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
++JlcP1V1SnefNOscu1NV7+juJ8w6x54sQs5Z7O/RHMmZ5ykUk6Sqvj/JZd39taq6Q5KTkzwsySeT
+/I/lF2nNQlX9cpK3d/eVe1x5RoaLKY9L8s/d/Z6q+pkk/znJZUlOWX7x5axU1f2SPCWTCQduTPKZ
+JGd099dmGmyVvPhMx4JkXIR9vQgZF2FfyzglfibXrqoe3t0XzjrH7lTVId19zaxz7Mki5JzF/h5F
+yZn3KRSTpKouTfKQ7r6hqk5J8o0kb83kQy0f0t1PmWnAJFX11ST/luRzSc5M8lfdvX22qXZWVW/M
+5Ajkd2Ty4Zp3SvK2TL6P6e4TZxZuMJTFJyT5QJLHJ/lYJlmfnMmHgf797NKtjhef6ViQjIuwrxch
+4yLsaxmnxM8kzL+xlJy5nkJxyHJZd3/PcPuj3f2wJcsu6u5Ns0t3c46PJXl4kscmeVqSJya5MJPC
+87bu/voM4yVJquri7v6+qjowk6N19+7uG6uqkny8u79vxhFTVZ9IsmnI9R1JzuvuR1fVEUnO7u6H
+zjgiLISquld3XzfrHIuuqu7Z3V+edQ5ue4apg38zyZOS3CuT2equS3J2ki3Lp+eeN1X1zu5+3Kxz
+JElV3SWT7+VhSd7Z3WcsWfaq7v7FmYW7Jcd3ZvLZUjdlMmnHLyX5r5mcbfP8/V26b7c/n2wd7ZhC
+cbl5mUIxSS6pqmcOtz9eVZuTpKoekGQuTrFK0t19U3e/u7uflcn39FWZfNrz52cb7Wa3G8rrnTM5
+mnPXYfz2Sb5tZqlubcf1brfP5GhTuvufMkcZq+quVbWlqj5VVddX1Zer6rJh7G6zzrcnVfXOWWdI
+Ji88VfU/q+ovh9Mnly571axyLVVV31lVr66qV1bVPavqJVX1iap6S1UdMut8SVJV91j2dc8kH66q
+u1fVPWadL7l5Jqsdt+9aVa+rqour6oyqOniW2XYY/v0eNNzeXFWfT/Khqrqiqn5kxvGSTN7oq6rf
+rqr7zzrL7gzfv/dV1f+tqsOr6vyq+mpVfaSq5uLNqqq6U1X9XlVdOmTbXlUXVNWJs842eEuSryR5
+dHffo7vvmeRHh7G3zDTZoKoetouvhyeZ+RvQS7w+k+t6z0pyXFWdVVW3H5YdNbtYOzktk8swrkzy
+viTfzOSMln9I8pr9HWYsR3IWYQrFuyZ5RZJHJflSJtfjXDl8/XJ3f3yG8ZJMjuTs6ihDVX1Hd39j
+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
+JQcAABiV/w8o+mSaTdZnpAAAAABJRU5ErkJggg==
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="5.-Conclusions">5. Conclusions<a class="anchor-link" href="#5.-Conclusions">¶</a></h3><p>Most of the attempts to verify Spotfiy’s statistics fall short because my data only covers the second half of 2016. This shows the requirement of good quality inputs in order to achieve good quality results.</p>
+<p>Having said that, it is clear that I listen to Spotify far more than I thought I did. The observation that I like many of Bonobo’s tracks but have more polarised views about Bombay Bicycle Club’s songs is novel. Most of all, I think I’m getting great value!</p>
+<p>The chart below is number of songs played each day from 14 June 2016 to 15 December 2016.</p>
+<p>My top 101 songs of 2016 can be played at:
+<a href="https://open.spotify.com/user/spotify/playlist/37i9dQZF1CyJD4o58dMxry">https://open.spotify.com/user/spotify/playlist/37i9dQZF1CyJD4o58dMxry</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">'ignore'</span><span class="p">)</span>
+
+<span class="n">figure</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">d_t</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">"bar"</span><span class="p">)</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklocs</span><span class="p">()</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">ticks</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklocs</span><span class="p">()</span>
+<span class="n">ticklabels</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">figure</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">get_ticklabels</span><span class="p">()]</span>
+<span class="n">figure</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">ticks</span><span class="p">[::</span><span class="n">n</span><span class="p">])</span>
+<span class="n">figure</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">(</span><span class="n">ticklabels</span><span class="p">[::</span><span class="n">n</span><span class="p">])</span>
+
+<span class="n">figure</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img src="data:image/png;base64,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
+"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+</div>
+</div></div></div></article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/vim.html" id="previousArticleInCategory"> Vim!</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/reconciliation.html" id="nextArticleInCategory"> Reconciliation of a trial balance to a general ledger</a>
+</div>
+<div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        Other articles in:
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/data.html" id="otherArticlesInCategory"> Data</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
+        <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a>
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
+
+        // show category options window when cat icon is clicked
+        $( ".catChooser" ).click(function() {
+              $('#catModal').removeClass('hidden');
+        });
+
+
+      </script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
+      </script>
+<script>
+            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {})
+        </script>
+<script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+</body>
+</html>
