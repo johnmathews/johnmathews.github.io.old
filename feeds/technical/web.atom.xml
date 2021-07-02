@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-29T17:40:38+02:00</updated><entry><title>Validating CloudFlare analytics</title><link href="https://johnmathews.eu/validating-cloudflare-analytics.html" rel="alternate"/><published>2021-06-29T17:40:38+02:00</published><updated>2021-06-29T17:40:38+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-29:/validating-cloudflare-analytics.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Web</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/web.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-07-02T15:39:45+02:00</updated><entry><title>Load-testing my Web Analytics Tool</title><link href="https://johnmathews.eu/load-testing-web-analytics-tool.html" rel="alternate"/><published>2021-07-02T15:39:45+02:00</published><updated>2021-07-02T15:39:45+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-02:/load-testing-web-analytics-tool.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-hacker-news-affect"&gt;The Hacker News affect&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#bad-news"&gt;Bad news&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#good-news"&gt;Good news&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#api-traffic-for-the-tool"&gt;&lt;span class="caps"&gt;API&lt;/span&gt; traffic for the tool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#dashboard-for-the-get-analytics-cloud-function"&gt;Dashboard for the get-analytics cloud function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#dashboard-for-the-page-view-logger-function"&gt;Dashboard for the page-view-logger function&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-solution"&gt;The Solution&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#idea-1-use-global-objects"&gt;Idea 1: Use global objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#idea-2-store-the-results-themselves-in-the-database"&gt;Idea 2: Store the results themselves in the database&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#idea-3-forget-datastore-use-buckets"&gt;Idea 3: Forget DataStore, use buckets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#further-improvement"&gt;Further improvement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;p&gt;I posted my recent article about building an analytics tool onto Hacker
+News. It was quickly buried and didn’t get any attention.&lt;/p&gt;
+&lt;p&gt;To my surprise, I received an email from a Hacker News administrator (Daniel) explaining that it
+was a good quality post and would be boosted to the front page at a random time
+within the next couple of days.&lt;/p&gt;
+&lt;p&gt;Sure enough, in the early hours of the next morning, the post was boosted. I
+woke up to various notifications that people had started following me on twitter,
+which never happens. After delegating the kid’s breakfast duties, I logged into
+&lt;span class="caps"&gt;GCP&lt;/span&gt; to see what effect the extra traffic had had on my experimental tool.&lt;/p&gt;
+&lt;h1 id="the-hacker-news-affect"&gt;The Hacker News affect&lt;/h1&gt;
+&lt;p&gt;Traffic had increased by about 30x and my hastily built tool was
+looking very sub-optimal. Two problems stood out - the aggregated analytics data was taking
+anywhere from 20 - 30 seconds to load, and I was running up a bill of around €10/day. &lt;/p&gt;
+&lt;h2 id="bad-news"&gt;Bad news&lt;/h2&gt;
+&lt;p&gt;The reason for both of these problems was a shockingly inefficient and lazy
+approach to serving the analytics.&lt;/p&gt;
+&lt;p&gt;Each time the analytics page was loaded, a cloud function would fetch &lt;em&gt;all&lt;/em&gt; the
+data in the DataStore database, munch all that data and return a freshly derived
+blob of &lt;span class="caps"&gt;JSON&lt;/span&gt;. Never mind that almost the exact same computation had occurred hundreds
+of times already.&lt;/p&gt;
+&lt;p&gt;As the amount of data in the DataStore increases, so did the time required to
+serve the analytics page. In the second chart below, it looks like the execution time increases at a rate of O(log n).&lt;/p&gt;
+&lt;h2 id="good-news"&gt;Good news&lt;/h2&gt;
+&lt;p&gt;The good news though was that the &lt;code&gt;page-view-logger&lt;/code&gt; function was handling the
+extra traffic smoothly. You can see in the dashboard image below (click on it)
+that almost every request was completed in less than 200ms, which I think is
+fine for a background process. I could also see the active instances
+scaling up and down well within its preset limits, as expected.&lt;/p&gt;
+&lt;h2 id="api-traffic-for-the-tool"&gt;&lt;span class="caps"&gt;API&lt;/span&gt; traffic for the tool&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/analytics-tool/api-traffic.png"&gt;&lt;img alt="API traffic" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/800w/api-traffic.png" srcset="https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/300w/api-traffic.png 300w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/600w/api-traffic.png 600w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/800w/api-traffic.png 800w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/1600w/api-traffic.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="dashboard-for-the-get-analytics-cloud-function"&gt;Dashboard for the &lt;code&gt;get-analytics&lt;/code&gt; cloud function&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/analytics-tool/get-analytics-dashboard.png"&gt;&lt;img alt="dashboard for get-analytics function" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/800w/get-analytics-dashboard.png" srcset="https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/300w/get-analytics-dashboard.png 300w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/600w/get-analytics-dashboard.png 600w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/800w/get-analytics-dashboard.png 800w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/1600w/get-analytics-dashboard.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="dashboard-for-the-page-view-logger-function"&gt;Dashboard for the &lt;code&gt;page-view-logger&lt;/code&gt; function&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.eu/images/analytics-tool/page-view-logger-dashboard.png"&gt;&lt;img alt="dashboard for page-view-logger function" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1020px, (min-width: 1280px) 850px, (min-width: 1024px) 800px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/800w/page-view-logger-dashboard.png" srcset="https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/300w/page-view-logger-dashboard.png 300w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/600w/page-view-logger-dashboard.png 600w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/800w/page-view-logger-dashboard.png 800w, https://johnmathews.eu/images/analytics-tool/derivatives/article-inline-image/1600w/page-view-logger-dashboard.png 1600w"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="the-solution"&gt;The Solution&lt;/h1&gt;
+&lt;p&gt;I began to ponder the importance of all the things I didn’t know about database
+optimisations, and what DataStore might be good and bad at doing. Scrolling
+through the documentation I could see google boasting of super quick writes, but
+not super quick reads. I’d already seen how many &lt;span class="caps"&gt;API&lt;/span&gt; calls were being made to
+the Cloud DataStore &lt;span class="caps"&gt;API&lt;/span&gt; and knew I’d probably have to redesign part of
+the tool.&lt;/p&gt;
+&lt;h2 id="idea-1-use-global-objects"&gt;Idea 1: Use global objects&lt;/h2&gt;
+&lt;p&gt;I attempted a few easy wins, mostly using the idea that if an instance of
+a function was invoked multiple times before being powered-down then global
+objects would still be available in memory.&lt;/p&gt;
+&lt;p&gt;If I put the data collected from the DataStore into a global object then I could
+check for its existence in subsequent function calls. This would save a lot of
+&lt;span class="caps"&gt;API&lt;/span&gt; calls and likely remove the largest bottleneck, saving my readers 10+
+seconds of watching a loading spinner.&lt;/p&gt;
+&lt;p&gt;For whatever reason, this didn’t work. Even if it had, the tool could still be
+vastly improved by taking a different approach that would be even faster and
+also reduce costs. I’d like to have this tool running indefinitely so
+reducing daily costs to an absolute minimum is important.&lt;/p&gt;
+&lt;h2 id="idea-2-store-the-results-themselves-in-the-database"&gt;Idea 2: Store the results themselves in the database&lt;/h2&gt;
+&lt;p&gt;It was obviously inefficient to repeat the same calculations multiple times. A good long-term solution would require aggregating the data periodically and
+then fetching and serving these aggregated data to the client.&lt;/p&gt;
+&lt;p&gt;I tried putting the &lt;span class="caps"&gt;JSON&lt;/span&gt; into the DataStore using a different key, but ran into
+errors about the data for each entity being too large. Even if I split the
+aggregated data into multiple component parts it would still be too large, and
+would grow over time. I guess DataStore isn’t meant to be used like this.&lt;/p&gt;
+&lt;p&gt;I probably could have pursued this idea a bit further, but I didn’t want to
+change the structure of the &lt;span class="caps"&gt;JSON&lt;/span&gt; blob served to client. If I did change it then I’d
+need to rewrite the client side JavaScript as well.&lt;/p&gt;
+&lt;p&gt;Client side work is faster than back-end, but writing JavaScript is fiddly
+compared to Python in my opinion. There’s always multiple ways of doing a thing,
+and several versions of an &lt;span class="caps"&gt;API&lt;/span&gt;, so googling a solution isn’t as simple as for Python.&lt;/p&gt;
+&lt;h2 id="idea-3-forget-datastore-use-buckets"&gt;Idea 3: Forget DataStore, use buckets&lt;/h2&gt;
+&lt;p&gt;Final idea - store the results as a &lt;span class="caps"&gt;JSON&lt;/span&gt; blob in a Storage bucket and point the
+client at the bucket instead of the Cloud Function.&lt;/p&gt;
+&lt;p&gt;Turns out this is a super fast and efficient solution.
+&lt;a href="https://johnmathews.eu/analytics.html"&gt;/analytics.html&lt;/a&gt; now loads in less than
+half a second, and the only variable costs are egress on the bucket, which will
+be much smaller than the comparable costs of running a Cloud Function.&lt;/p&gt;
+&lt;p&gt;The computation expense of calculating the analytical results is fixed and
+decoupled from the number of page views using the following method:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Every few minutes Cloud Scheduler targets a Pub/Sub topic.&lt;/li&gt;
+&lt;li&gt;The topic triggers a Cloud Function.&lt;/li&gt;
+&lt;li&gt;The Cloud Function then:&lt;ol&gt;
+&lt;li&gt;Queries the DataStore and collects the data.&lt;/li&gt;
+&lt;li&gt;Calculates the analytics results.&lt;/li&gt;
+&lt;li&gt;Generates a &lt;span class="caps"&gt;JSON&lt;/span&gt; blob containing the results.&lt;/li&gt;
+&lt;li&gt;Pushes the &lt;span class="caps"&gt;JSON&lt;/span&gt; to a storage bucket which is available to a client. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="further-improvement"&gt;Further improvement&lt;/h2&gt;
+&lt;p&gt;The aggregated results for days other than the current day are still needlessly
+recalculated - once midnight rolls around the results are clearly not going to
+keep on changing.&lt;/p&gt;
+&lt;p&gt;Instead of having one &lt;span class="caps"&gt;JSON&lt;/span&gt; blob containing data for all the last 30 days, I
+could have a blob for each day (or perhaps each week). This would reduce the amount
+of data extracted from the DataStore. This would reduce costs and computational expense.&lt;/p&gt;</content><category term="Technical/Web"/><category term="google-cloud-platform"/><category term="cloud-functions"/><category term="api"/></entry><entry><title>Validating CloudFlare analytics</title><link href="https://johnmathews.eu/validating-cloudflare-analytics.html" rel="alternate"/><published>2021-06-29T17:40:38+02:00</published><updated>2021-06-29T17:40:38+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-29:/validating-cloudflare-analytics.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#a-mystery"&gt;A mystery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#possible-reasons"&gt;Possible Reasons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#comparison"&gt;Comparison&lt;/a&gt;&lt;/li&gt;
