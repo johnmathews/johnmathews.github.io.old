@@ -12,18 +12,18 @@
 <meta content="Building my own web analytics -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud-functions,data " name="keywords"/>
-<meta content=" I’ve built a simple website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my own tool in this follow-up article. Motivation Google Analytics Google Analytics felt like overkill. It has so many data-points that the useful metrics are obscured. I also like this site to load quickly and GA... " name="description"/>
+<meta content=" I’ve built a simple client-side website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. This article eventually made it to the front page of Hacker News, which resulted in a lot of extra traffic and an opportunity to see how the tool performed under a much heavier load. I wrote about the effects of this and subsequent design changes in another article I compare the different... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Building my own web analytics" property="twitter:title"/>
-<meta content=" I’ve built a simple website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my own tool in this follow-up article. Motivation Google Analytics Google Analytics felt like overkill. It has so many data-points that the useful metrics are obscured. I also like this site to load quickly and GA... " name="twitter:description"/>
+<meta content=" I’ve built a simple client-side website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. This article eventually made it to the front page of Hacker News, which resulted in a lot of extra traffic and an opportunity to see how the tool performed under a much heavier load. I wrote about the effects of this and subsequent design changes in another article I compare the different... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Building my own web analytics" property="og:title"/>
-<meta content=" I’ve built a simple website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my own tool in this follow-up article. Motivation Google Analytics Google Analytics felt like overkill. It has so many data-points that the useful metrics are obscured. I also like this site to load quickly and GA... " property="og:description"/>
+<meta content=" I’ve built a simple client-side website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. This article eventually made it to the front page of Hacker News, which resulted in a lot of extra traffic and an opportunity to see how the tool performed under a much heavier load. I wrote about the effects of this and subsequent design changes in another article I compare the different... " property="og:description"/>
 <meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -270,13 +270,17 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>I’ve built a simple website analytics tool for this site, you can see it at
+<p>I’ve built a simple client-side website analytics tool for this site, you can see it at
 <a href="https://johnmathews.eu/analytics.html">/analytics</a>. It has the following metrics:</p>
 <ul>
 <li>Page views per day,</li>
 <li>Unique <span class="caps">IP</span> addresses per day</li>
 <li>Views per page per day.</li>
 </ul>
+<p>This article eventually made it to the front page of <a href="https://news.ycombinator.com/item?id=27686873">Hacker News</a>, which resulted
+in a lot of extra traffic and an opportunity to see how the tool performed under a
+much heavier load. I wrote about the effects of this and subsequent design changes 
+in <a href="https://johnmathews.eu/load-testing-web-analytics-tool.html">another article</a></p>
 <p>I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my
 own tool in this follow-up <a href="https://johnmathews.eu/validating-cloudflare-analytics.html">article</a>.</p>
 <h2 id="motivation">Motivation</h2>
