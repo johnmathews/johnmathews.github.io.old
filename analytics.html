@@ -359,13 +359,14 @@
   spinner.removeAttr('hidden');
 
   $(document).ready(function() {
-            $.getJSON(
-            //  "https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics"
+        var URL = "https://storage.googleapis.com/johnmathews.eu/website-analytics/aggregate-website-analyics.JSON"
+        console.log("url: ", URL)
+        $.getJSON(
             {
-            url: "https://us-central1-johnmathews-website.cloudfunctions.net/get_analytics",
+            url: URL,
             timeout: 20000
             }
-                  ).done(function(srcData) {
+        ).done(function(srcData) {
         var dailyViews = JSON.parse(srcData['daily_views'])
         var dailyIpAddresses = JSON.parse(srcData['daily_ip_addresses'])
         var viewsPageDay = JSON.parse(srcData['views_per_page_per_day'])
