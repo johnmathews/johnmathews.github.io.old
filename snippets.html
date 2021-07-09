@@ -226,7 +226,7 @@
 <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
 <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/book-notes.html">Books</a>
 <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/analytics.html">Analytics</a>
-<div id="searchButton"> <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a> </div>
+<div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
 <div class="flex my-2">
 <button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
 <div class="day modeIcon">
@@ -241,7 +241,7 @@
 </div>
 </div>
 </div>
-<div class="w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
 <div class="w-full">
 <div class="xl:ml-20">
 <div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
@@ -1862,7 +1862,7 @@ same code whether the subroutine is local or remote.</p>
 <div class="markdown overflow-y-scroll max-h-snippet">
 <div class="px-4 pb-4 -mt-3 font-serif text-lg">
 <p>Save (write) a (read only) Vim file with sudo when you opened it without sudo-ing:</p>
-<p><code>:w !sudo tee %</code></p>
+<p><code>:w !sudo tee % &gt; /dev/null</code></p>
 </div>
 </div>
 </div>
@@ -1885,10 +1885,10 @@ same code whether the subroutine is local or remote.</p>
 </div>
 <div class="snippet rounded-lg shadow-lg bg-gray-100 dark:bg-gray-800 border-2 dark:border-gray-800 flex flex-col" id="climbing-higher.html">
 <div class="flex-grow">
-<div class="px-4 pt-2 mt-5 mb-0"><a class="leading-tight text-2xl font-semibold font-serif dark:text-gray-300 text-gray-800" href="climbing-higher.html">Climbing Higher</a></div>
+<div class="px-4 pt-2 mt-5 mb-0"><a class="leading-tight text-2xl font-semibold font-serif dark:text-gray-300 text-gray-800" href="climbing-higher.html">The trouble with climbing higher is that eventually you lose sight of the ground.</a></div>
 <div class="markdown overflow-y-scroll max-h-snippet">
 <div class="px-4 pb-4 -mt-3 font-serif text-lg">
-<p><em>The trouble with climbing higher is that eventually you lose sight of the ground.</em></p>
+<p>.</p>
 </div>
 </div>
 </div>
@@ -2065,7 +2065,7 @@ some shell and python scripts.</em></p>
 <div class="markdown overflow-y-scroll max-h-snippet">
 <div class="px-4 pb-4 -mt-3 font-serif text-lg">
 <p>I was running a binary in Debian that was complaining about an environment
-variable not existing. I moved the binary into a &amp;dollar<span class="caps">PATH</span> directory and logged in as a
+variable not existing. I moved the binary into a $<span class="caps">PATH</span> directory and logged in as a
 sudo user. Why did this solve the problem?</p>
 </div>
 </div>
