@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+
+
+.stayLight {
+ @apply dark:bg-gray-200
+}
+
+.markdown .MathJax .mrow {
+ @apply dark:text-gray-200 !important;
+}
+
+.image-process-logo {
+	@apply ml-0 !important;
+	@apply p-2 border-2 border-white dark:border-gray-500 !important;
+}
+
+.toc {
+	@apply mt-5;
+}
+.toc ul {
+	@apply -mt-0 list-decimal !important;
+}
+
+.toctitle {
+	@apply text-xl border-b-2 font-extrabold ;
+}
+
+#searchResults {
+	@apply border-2 border-white;
+}
+
+#searchResults li {
+	@apply mx-0 px-2 py-3 my-2 lg:my-5 text-gray-800 text-xl font-semibold border-2 border-gray-500 bg-gray-100 rounded-lg;
+}
+
+#searchResults li:hover {
+	@apply bg-blue-200 border-blue-500 !important;
+}
+
+#selected {
+	@apply border-blue-500 bg-blue-200 !important;
+}
+
+/* checkboxes in markdown */
+.markdown .checklist {
+  @apply list-none
+}
+
+.markdown .checklist input[type="checkbox"] {
+  @apply w-8 h-8 align-middle -mt-1 -ml-10
+}
+
+.markdown hr {
+  @apply mt-2 border-t-4 dark:border-gray-300 border-gray-800 border-double
+}
+
+/* icons to toggle dark mode*/
+/* delete?? */
+#darkMode:hover{
+	color:red;
+}
+
+#lightMode:hover{
+	color:red;
+}
+
+/* font awesome icon colors*/
+.far:hover, .fas:hover {
+	@apply underline;
+}
+
+.far, .fas {
+	@apply text-gray-700 dark:text-white;
+}
+
+/* footnotes */
+.markdown .simple-footnotes {
+	@apply mt-10 lg:mt-20 py-3 text-xl;
+	@apply border-double border-t-4 border-gray-200 dark:border-gray-500;
+}
+
+/* codeblocks */
+/* jupyter notebook input and output cells - scroll instead of overflow */
+.markdown .highlight {
+	overflow-x: auto;
+  @apply mt-10 ;
+}
+
+.markdown .inner_cell {
+	overflow: auto;
+}
+
+.prompt.input_prompt {
+	@apply hidden;
+}
+
+.prompt.output_prompt {
+	@apply hidden;
+}
+
+.plot-container.plotly{
+	@apply -mr-40
+}
+
+.user-select-none.svg-container{
+	@apply text-left;
+}
+
+/* code blocks */
+
+.markdown pre {
+  @apply rounded p-4;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.markdown .highlight pre {
+  @apply border-l-2 text-lg border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.markdown .highlight pre span {
+	@apply font-sans border-0 leading-normal;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.markdown .anchor-link {
+	visibility: hidden;
+}
+
+
+/* code and quotes */
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 pr-4 text-gray-600 dark:text-gray-200;
+}
+
+.markdown code {
+  @apply font-mono text-lg p-1 rounded-lg border-2 border-gray-400 bg-gray-200 dark:text-gray-700;
+	/* white-space: normal; */
+}
+
+/* .markdown pre code { */
+/*   @apply block bg-transparent p-0 overflow-visible rounded-none; */
+/* } */
+
+/* output_html */
+.markdown .output_html {
+	overflow-x: auto;
+  @apply dark:text-gray-900;
+	@apply bg-white dark:bg-gray-800;
+}
+
+.markdown .highlight hl-ipython3{
+	@apply mt-0;
+}
+
+.output_subarea.output_stream > pre{
+	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.markdown .output_execute_result {
+  @apply dark:text-gray-900;
+}
+
+.markdown .output_subarea {
+  @apply dark:bg-gray-900 dark:text-gray-200 -mr-40;
+}
+
+/* png images must have light bg cos tick marks are dark */
+.markdown .output_png.output_subarea {
+	@apply dark:bg-gray-100;
+}
+
+
+/* matplotlib images */
+.markdown .output_wrapper img[O]{
+	@apply dark:bg-gray-200;
+}
+/* matplotlib images overflow without making entire article scroll */
+.markdown .output_wrapper {
+	overflow-x: auto;
+}
+
+/* Additional vertical padding used by kbd tag. */
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+/* normal markdown */
+.markdown {
+	@apply break-words font-serif text-xl leading-relaxed font-normal text-gray-700 dark:text-gray-300;
+	counter-reset: h1
+}
+
+.markdown strong {
+  @apply font-semibold;
+}
+
+.markdown strong a {
+  @apply font-medium;
+}
+
+.markdown a {
+  @apply text-blue-600 dark:text-blue-300 font-medium;
+}
+
+
+.markdown p {
+  @apply mt-7 mb-0;
+}
+
+.markdown h2 + p {
+  @apply mt-2 mb-0;
+}
+
+.markdown p img {
+  @apply mx-auto my-3 border-solid border-2 rounded-sm border-gray-500;
+}
+
+.markdown p a img:first-child {
+  @apply -mt-0;
+}
+
+.markdown p img:first-child {
+  @apply mt-10;
+}
+
+.markdown p img:last-child {
+  @apply mb-10;
+}
+
+
+/* Lists.. */
+
+#snippets .markdown ul li:first-child {
+	@apply mt-7
+}
+
+#snippets .markdown ol li:first-child {
+	@apply mt-7
+}
+
+.markdown ul li p {
+	@apply mt-2
+}
+
+.markdown li p:first-child {
+ @apply mt-0;
+}
+
+.markdown li p {
+ @apply mt-2;
+}
+
+.markdown ul {
+  @apply pl-8 list-disc;
+}
+
+.markdown ol {
+  @apply pl-8 list-decimal;
+}
+
+.markdown ol > li:first-child {
+  @apply mt-4;
+}
+
+.markdown ol > li > ul {
+  @apply mt-0;
+}
+
+.markdown li   {
+  @apply mt-2;
+}
+
+
+/* headings */
+.markdown h1 {
+  @apply leading-tight text-4xl font-semibold mb-4 mt-6 pt-2 pb-2;
+	@apply border-b border-gray-200 dark:border-gray-500;
+	counter-reset: h2
+}
+
+.markdown h2 {
+  @apply leading-tight text-2xl font-semibold mb-2 mt-10 pb-1;
+}
+
+.markdown h3 {
+  @apply leading-snug text-xl font-semibold -mb-5 mt-6;
+}
+
+.markdown h4 {
+  @apply leading-none text-lg font-semibold -mb-5 mt-6;
+}
+
+.markdown h5 {
+  @apply leading-tight text-lg font-semibold mb-0 mt-6;
+}
+
+.markdown h6 {
+  @apply leading-tight text-lg font-semibold text-gray-600 mb-0 mt-6;
+}
+
+.markdown kbd {
+  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+
+}
+
+.markdown table {
+  @apply text-lg border-gray-600;
+}
+
+.markdown th {
+  @apply border py-1 px-3;
+}
+
+.markdown td {
+  @apply border py-1 px-3;
+}
+
+@tailwind utilities;

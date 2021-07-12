@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="" id="baz" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <![endif]-->
+<title>Obviously Awesome - John Mathews</title>
+<meta content="Obviously Awesome -  John Mathews " name="title"/>
+<meta content="John Mathews" name="author"/>
+<meta content=" book,marketing,positioning,startups " name="keywords"/>
+<meta content=" My notes on “Obviously Awesome” by April Dunford " name="description"/>
+<meta content="@johnmathews" name="twitter:creator"/>
+<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="Obviously Awesome" property="twitter:title"/>
+<meta content=" My notes on “Obviously Awesome” by April Dunford " name="twitter:description"/>
+<meta content="https://johnmathews.eu/obviously-awesome.html" property="twitter:url"/>
+<meta content="    https://johnmathews.eu//images/obviously-awesome.png" name="twitter:image"/>
+<meta content="  summary_large_image  " property="twitter:card"/>
+<meta content=" article " property="og:type"/>
+<meta content="Obviously Awesome" property="og:title"/>
+<meta content=" My notes on “Obviously Awesome” by April Dunford " property="og:description"/>
+<meta content="https://johnmathews.eu/obviously-awesome.html" property="og:url"/>
+<meta content="    https://johnmathews.eu//images/obviously-awesome.png" property="og:image"/>
+<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
+<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="https://fonts.gstatic.com" rel="preconnect"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
+<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
+<script>
+          window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments);
+          };
+          ga.l = +new Date();
+          ga("create", "UA-82253540-1", "auto");
+          ga("send", "pageview");
+        </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
+<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
+<script>
+        if (localStorage.getItem('theme') === 'dark') {
+          document.getElementById('baz').classList.add('dark')
+        }
+      </script>
+<!-- Cloudflare Web Analytics -->
+<script data-cf-beacon='{"token": "514cf3cd5e214097b029daa10cd1b209"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body class="dark:bg-gray-900">
+<a class="pt-20 mt-20" name="top"></a>
+<nav class="md:fixed z-50 top-0 w-full flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
+<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+<div class="mt-10 md:mt-0 flex-grow justify-between">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
+</div>
+<div class="flex-none justify-end px-2 pt-2">
+<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
+<div class="day modeIcon hidden">
+<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon">
+<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
+<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+</button>
+</div>
+</div>
+<div class="flex-none md:hidden block md:inline-block">
+<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
+<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+</button>
+</div>
+</nav>
+<div class="toggle hidden w-screen flex flex-col text-left mt-5">
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
+<div class="px-3 pt-3 flex flex-row">
+<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-2x"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-2x"></i>
+</div>
+</button>
+<button aria-label="Category chooser" class="catChooser hidden ml-5">
+<i class="fas fa-paw fa-2x"></i>
+</button>
+</div>
+</div>
+<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+<div class="text-center">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                  Which categories do you want to see?
+                </h3>
+<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
+<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
+<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
+<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="keyboardShortcuts">
+<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="px-5 py-5">
+<div class="">
+<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                 Keyboard Shortcuts:
+                </h3>
+<hr class="mb-5"/>
+<div class="text-base text-gray-700" id="" role="group">
+<div class="markdown">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
+<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to previous article</span></div>
+<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+<div class="pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
+<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="fuseModal">
+<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
+<div aria-hidden="true" class="fixed inset-0 transition-opacity">
+<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+</div>
+<div class="absolute inset-x-0 w-screen px-3">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-5 lg:mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
+<div class="py-1 px-1">
+<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
+<div class="hidden lg:inline-flex flex">
+<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                    /
+                  </div>
+                  or
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                    cmd-K
+                  </div>
+</div>
+<ul class="results text-lg text-bold text-gray-600" id="searchResults">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto w-full">
+<div class="flex flex-row">
+<div class="hidden xl:inline xl:w-32">
+<div class="w-32">
+<div class="mt-5 2xl:mt-20 fixed flex flex-col">
+<div class="lg:w-32">
+<div>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+</div>
+<div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+</div>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/about.html">About</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/portfolio.html">Portfolio</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/experience.html">Experience</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/book-notes.html">Books</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/analytics.html">Analytics</a>
+<div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
+<div class="flex my-2">
+<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
+<div class="day modeIcon">
+<i class="far fa-lightbulb fa-lg"></i>
+</div>
+<div class="night modeIcon hidden">
+<i class="far fa-moon fa-lg"></i>
+</div>
+</button>
+</div>
+<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-10">
+</div>
+<div class="pt-10 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br/> December 2020
+  </div>
+<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
+ Category: 
+    <div>
+<a class="hover:underline" href="https://johnmathews.eu/category/non-technical/entrepreneurship.html">Entrepreneurship</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
+<div class="mx-3 xl:ml-20 my-4 nonTechnical" id="articleParent">
+<img alt="Obviously Awesome by April Dunford " class="image-process-article-leading-image xl:-mt-5 my-5 lg:max-w-3xl 2xl:max-w-4xl" sizes="(min-width: 1535x) 1200px, (min-width: 1280px) 900px, (min-width: 1024px) 1000px, (min-width: 768px) 1000px, (min-width: 640px) 1000px, 100vw" src="/images/derivatives/article-leading-image/900w/obviously-awesome.png" srcset="/images/derivatives/article-leading-image/1200w/obviously-awesome.png 1200w, /images/derivatives/article-leading-image/1000w/obviously-awesome.png 1000w, /images/derivatives/article-leading-image/900w/obviously-awesome.png 900w, /images/derivatives/article-leading-image/800w/obviously-awesome.png 800w, /images/derivatives/article-leading-image/720w/obviously-awesome.png 720w"/>
+<div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
+<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
+          Obviously Awesome
+      </div>
+<div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
+        December 2020
+      </div>
+</div>
+<div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+</div>
+<main class="lg:w-4/6">
+<article class="">
+<div class="markdown"> <p>My notes on “Obviously Awesome” by April Dunford</p> </div> <div class="markdown">
+<h3>Intro</h3>
+<ol>
+<li>In order to do better marketing, understand your value and differentiators better</li>
+<li>Understand what makes a best-fit customer</li>
+<li>Positioning is a fundamental input to every business tactic you use</li>
+<li>If you fail at positioning, you fail at marketing and sales</li>
+<li>Positioning is “conext setting” for products</li>
+<li>Customers need to be able to easily understand<ol>
+<li>What your product does</li>
+<li>Why it is special</li>
+<li>Why it matters to them</li>
+</ol>
+</li>
+<li>If your prospects can’t figure out what your product does quickly, they will
+   invent a position for you. It might hide your key strengths or misunderstand
+   your value.</li>
+<li>Find people to demo your product to, then ask them to describe it back to
+   you. Do the same with existing customers. If they’re not saying the same
+   thing then you have a positioning problem.</li>
+<li>Products with strong positioning:<ol>
+<li>Find the best kind of customer</li>
+<li>Make the value obvious</li>
+<li>Sell quickly</li>
+</ol>
+</li>
+</ol>
+<h2 id="part-1">Part 1</h2>
+<h3>Positioning as context</h3>
+<ol>
+<li>Without positioning to guide us, we don’t know how to understnad a product</li>
+<li>Positioning lets us make assumptions about<ol>
+<li>who a product is for</li>
+<li>what its main features are</li>
+<li>how much it costs</li>
+</ol>
+</li>
+<li>Without it we would be paralyzed by choice, and we wouldnt be able to make
+   sense of all the products around us. </li>
+<li>The context and purpose of a product from the founders/engineers perspective
+   are often different to those of the prospect</li>
+<li>Products can be positioned in multiple ways, and often the best positioning
+   is not the default positioning</li>
+<li>Bad positioning makes it harder for prospects to figure out if your product
+   is worth thinking about.</li>
+<li>Positioning requires considering:<ol>
+<li>Customers point of view - what problem/pain does it solve</li>
+<li>The ways your product is uniquely different</li>
+<li>The characteristics of a potential customer</li>
+<li>The best market context to make your value uniquely obvious</li>
+</ol>
+</li>
+</ol>
+<h3>Five (plus one) components of effective positioning</h3>
+<ol>
+<li><strong>Competitive Alternatives - if you didn’t exist, what would your customers
+   use instead?</strong><ol>
+<li>Its what your prospects would use to do the task if your product didn’t
+   exist. It could be excel, or pen and paper. It could be nothing, (in
+   which case maybe you product doesn’t solve a real pain point.)</li>
+<li>You probably know a lot more about your market, and problem, and
+   alternative solutions, than your prospects do. (“Doing nothing” could be
+   an opportunity, not a red flag.)</li>
+<li>Its important to understand what customers will compare your product
+   with, because this is how they will define “better”. Is it “easier” than
+   a pen and paper?</li>
+<li>Customers might never have purchased a solution like yours before.</li>
+</ol>
+</li>
+<li><strong>Unique Attributes - What do you have that alternative do not?</strong><ol>
+<li>Could be:<ol>
+<li>Delivery Model (online vs offline, installed on-site vs not)</li>
+<li>Business model (rental vs purchase)</li>
+<li>Specific expertise (data scientist with financial and back-end web
+   dev expertise)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>Value (and quantifiable objective proof) - What value do the attributes
+   enable for customers?</strong><ol>
+<li>If unique attributes are your secret sauce, the value is why someone
+   might care about your secret sauce</li>
+<li>Fact based, provable, demonstrable, quantifiable, objective. Third party
+   opinions are relevant. </li>
+</ol>
+</li>
+<li><strong>Target market characteristics - Who cares a lot about that value?</strong><ol>
+<li>Focus on customers who are most likely to purchase quickly, wont ask for
+   discounts, will tell their friends about you.</li>
+<li>You should clearly identify who these are and </li>
+<li>Identity what sets them apart from other groups of customers. Why are
+   they uniquely likely to buy from you when others wouldnt or would take
+   longer to consider and make a purchase</li>
+</ol>
+</li>
+<li><strong>Market Category - What context makes your value obvious to the ideal
+   customer?</strong><ol>
+<li>Declaring that your product exists in a certain market triggers a
+   powerful set of assumptions</li>
+<li>make these assumptions help you, not hinder you. </li>
+<li>When presented with your product, customers will try to use what they
+   already know to figure out what your product is all about and why its
+   special. You want them to be able to do this really quickly and easily. </li>
+<li>Make these assumptions work for you, not against you. You won’t have to
+   list every feature, because most of them will be assumed by the context
+   of the market category. </li>
+<li>Get it right, and sales efforts (copy) wont be wasted battling those
+   assumptions, but can instead build off of them to show secret sauce and
+   value more obviously.</li>
+</ol>
+</li>
+<li><strong>(Bonus) Relevant Trends - what trends make your product relevant right
+   now?</strong><ol>
+<li>Used carefully, trends can show prospoects why they should pay attention
+   to your product right now. Increases urgency.</li>
+<li>It can increase urgency, excitement, coolness, credibility</li>
+<li>but the trend must be directly relevant, practically and objectively applicable. </li>
+<li>Blockchains, <span class="caps">AI</span>, <span class="caps">ML</span> are trends - they are relevant to multiple markets. </li>
+</ol>
+</li>
+</ol>
+<p>Each of these components is relevant to the others</p>
+</div>
+</article>
+</main>
+<div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ←  </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/How-I-learnt-to-code.html" id="previousArticleInCategory"> How I learnt to code</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/mom-test.html" id="nextArticleInCategory"> The Mom Test</a>
+</div>
+<div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        Other articles in:
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/non-technical/entrepreneurship.html" id="otherArticlesInCategory"> Entrepreneurship</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+<a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
+        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
+        <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a>
+</div>
+</footer>
+<script>
+        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.eu/fuse.html'
+        const siteURL = 'https://johnmathews.eu'
+
+        // show category options window when cat icon is clicked
+        $( ".catChooser" ).click(function() {
+              $('#catModal').removeClass('hidden');
+        });
+
+
+      </script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script>
+        // toggle cat modal view
+        $( "#catModal" ).click(function() {
+                  console.log('flag1')
+                  $('#catModal').addClass('hidden');
+                });
+      </script>
+<script>
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+          $("#macOrPc").html("&#8984;K");
+        } else {
+          $("#macOrPc").html("Cmd-K");
+        }
+      </script>
+<script>
+            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {})
+        </script>
+<script>
+    const technical = $( "#articleParent" ).hasClass('technical');
+    const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
+
+    // if user preference for article category has been set and is contradicted by currenct article, update it
+    if (localStorage.getItem('categoryChoice') === "technical") {
+      if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "nonTechnical") {
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'all');
+      };
+    } else if (localStorage.getItem('categoryChoice') === "all") {
+      // do nothing
+    } else {
+      // if user preference for article category hasn't been set, assign it using article type
+      if (technical) {
+        window.localStorage.setItem('categoryChoice', 'technical');
+      } else if (nonTechnical) {
+        window.localStorage.setItem('categoryChoice', 'nonTechnical');
+      };
+    }
+  </script>
+</body>
+</html>
