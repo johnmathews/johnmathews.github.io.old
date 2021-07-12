@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Engineering</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/engineering.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-06-15T11:18:37+02:00</updated><entry><title>Design Patterns</title><link href="https://johnmathews.eu/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help
+engineers create complex code reliably and quickly. I first heard about design
+patterns from Aaron Maxwell in his &lt;a href="https://powerfulpython.com/"&gt;Powerful
+Python&lt;/a&gt; newsletter, and made some
+&lt;a href="https://johnmathews.eu/python-notes.html"&gt;notes&lt;/a&gt; in an earlier article.&lt;/p&gt;
+&lt;p&gt;Then the YouTube algorithm put the following video on my front page, and down
+the rabbit hole I went.&lt;/p&gt;
+&lt;p&gt;Take a look at the Borg design pattern.&lt;/p&gt;
+&lt;div class="relative mt-3" style="padding-top: 56.25%"&gt;
+&lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://youtube.com/embed/bsyjSW46TDg"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;These are some additional resources:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://java-design-patterns.com/"&gt;Java Design Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://sourcemaking.com/design_patterns"&gt;SourceMaking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://python-3-patterns-idioms-test.readthedocs.io/en/latest/PatternConcept.html"&gt;python-3-patterns-idioms-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/faif/python-patterns"&gt;fair repo&lt;/a&gt; (and my &lt;a href="https://github.com/johnmathews/python-patterns/blob/master/patterns/creational/borg.py"&gt;fork&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some pdf resources, including the GoF book:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/All the GoF Patterns.pdf"&gt;All the GoF patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/GoF_Design_Patterns_Reference0100.pdf"&gt;GoF_Design_Patterns_Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/c-logica-gof-catalogue.pdf"&gt;c logica GoF catalogue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/DesignPatterns.pdf"&gt;Design-Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.eu/securing GoF design petterns.pdf"&gt;securing GoF design patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Design_Patterns"&gt;Wikipedia&lt;/a&gt; page about GoF book.&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="abstractions"/><category term="meta"/><category term="software-engineering"/></entry></feed>
