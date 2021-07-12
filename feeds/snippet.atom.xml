@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-07-12T14:29:15+02:00</updated><entry><title>Jeff Browning</title><link href="https://johnmathews.eu/jeff-browning.html" rel="alternate"/><published>2021-07-12T14:29:15+02:00</published><updated>2021-07-12T14:29:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-12:/jeff-browning.html</id><summary type="html"/><content type="html">&lt;p&gt;If this were me in 15 years, I’d be quite happy.&lt;/p&gt;
 &lt;div class="relative mt-3" style="padding-top: 56.25%"&gt;
 &lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://youtube.com/embed/jRft0moZRDU"&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;</content><category term="snippet"/><category term="interview"/><category term="hardrock-100"/><category term="irunfar"/></entry><entry><title>Moral tyranny</title><link href="https://johnmathews.eu/moral-tyranny.html" rel="alternate"/><published>2021-07-12T10:49:09+02:00</published><updated>2021-07-12T10:49:09+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-12:/moral-tyranny.html</id><summary type="html"/><content type="html">&lt;p&gt;Of all tyrannies, a tyranny sincerely exercised for the good of its victims may
+=======
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-07-12T10:49:09+02:00</updated><entry><title>Moral tyranny</title><link href="https://johnmathews.eu/moral-tyranny.html" rel="alternate"/><published>2021-07-12T10:49:09+02:00</published><updated>2021-07-12T10:49:09+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-12:/moral-tyranny.html</id><summary type="html"/><content type="html">&lt;p&gt;Of all tyrannies, a tyranny sincerely exercised for the good of its victims may
+>>>>>>> a94869cfcf5de47b2007bc7fba17eef8c0a939ac
 be the most oppressive. It would be better to live under robber barons than
 under omnipotent moral busybodies.&lt;/p&gt;
 &lt;p&gt;The robber baron’s cruelty may sometimes sleep, his cupidity may at some point
@@ -295,4 +299,10 @@ more likely to give you satisfying results.&lt;/p&gt;</content><category term="
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally"&gt;blog post&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://stackoverflow.com/questions/6053301/easier-way-to-navigate-between-vim-split-panes"&gt;stack overflow&lt;/a&gt;&lt;/li&gt;
+<<<<<<< HEAD
 &lt;/ul&gt;</content><category term="snippet"/><category term="vim"/></entry></feed>
+=======
+&lt;/ul&gt;</content><category term="snippet"/><category term="vim"/></entry><entry><title>Pelican Plugin Guide</title><link href="https://johnmathews.eu/pelican-plugin-guide.html" rel="alternate"/><published>2021-03-29T23:07:52+02:00</published><updated>2021-03-29T23:07:52+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-29:/pelican-plugin-guide.html</id><summary type="html"/><content type="html">&lt;p&gt;A &lt;a href="https://blog.geographer.fr/pelican-plugins"&gt;guide&lt;/a&gt;
+ about writing plugins for Pelican.&lt;/p&gt;
+&lt;p&gt;Thanks @geographeur&lt;/p&gt;</content><category term="snippet"/><category term="pelican"/><category term="plugin"/><category term="guide"/></entry></feed>
+>>>>>>> a94869cfcf5de47b2007bc7fba17eef8c0a939ac
