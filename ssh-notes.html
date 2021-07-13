@@ -12,18 +12,18 @@
 <meta content="SSH-Notes -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" linux,security,ssh " name="keywords"/>
-<meta content=" Table of Contents Background Authentication Passwords and Keys Handshake Background Secure Shell lets you securely connect to remote servers. You connect using an account that exists on the remote server. Once you’ve connected you’ll be dropped into a shell session. The computer you connect from is the “local” or “client” computer. The computer you connect to is the “host” or the “server”. When you’re connected to the server using SSH, any commands you input from the client are sent securely... " name="description"/>
+<meta content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="SSH-Notes" property="twitter:title"/>
-<meta content=" Table of Contents Background Authentication Passwords and Keys Handshake Background Secure Shell lets you securely connect to remote servers. You connect using an account that exists on the remote server. Once you’ve connected you’ll be dropped into a shell session. The computer you connect from is the “local” or “client” computer. The computer you connect to is the “host” or the “server”. When you’re connected to the server using SSH, any commands you input from the client are sent securely... " name="twitter:description"/>
+<meta content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/ssh-notes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="SSH-Notes" property="og:title"/>
-<meta content=" Table of Contents Background Authentication Passwords and Keys Handshake Background Secure Shell lets you securely connect to remote servers. You connect using an account that exists on the remote server. Once you’ve connected you’ll be dropped into a shell session. The computer you connect from is the “local” or “client” computer. The computer you connect to is the “host” or the “server”. When you’re connected to the server using SSH, any commands you input from the client are sent securely... " property="og:description"/>
+<meta content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... " property="og:description"/>
 <meta content="https://johnmathews.eu/ssh-notes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -270,79 +270,77 @@
 <article class="">
 <div class="markdown">
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
-<li><a href="#background">Background</a></li>
+<li><a href="#tldr"><span class="caps">TLDR</span></a></li>
+<li><a href="#setup-ssh-agent-to-prevent-passphrase-prompt">Setup <span class="caps">SSH</span>-Agent to prevent passphrase prompt</a></li>
 <li><a href="#authentication">Authentication</a><ul>
 <li><a href="#passwords-and-keys">Passwords and Keys</a></li>
 <li><a href="#handshake">Handshake</a></li>
 </ul>
 </li>
+<li><a href="#background">Background</a></li>
+<li><a href="#source">Source</a></li>
 </ul>
 </div>
-<h1 id="background">Background</h1>
-<ol>
-<li>
-<p>Secure Shell lets you securely connect to remote servers. You connect using
-   an account that exists on the remote server. Once you’ve connected you’ll be
-   dropped into a shell session.</p>
-</li>
-<li>
-<p>The computer you connect from is the “local” or “client” computer. The
-   computer you connect to is the “host” or the “server”.</p>
-</li>
-<li>
-<p>When you’re connected to the server using <span class="caps">SSH</span>, any commands you input from
-   the client are sent securely and privately (through a “tunnel”) to the remote
-   computer, where the commands are executed.</p>
-</li>
-<li>
-<p><span class="caps">SSH</span> is implemented using the client-server model. The server must be running
-   a small app to listen for <span class="caps">SSH</span> connections. This kind of app is
-   called a daemon (pronounced day-mon). For <span class="caps">SSH</span> to work, the host must be
-   running the <span class="caps">SSH</span> daemon. The <span class="caps">SSH</span> daemon listens for connections on a specific
-   port (22), authenticates connections requests, and (if the connection
-   request is approved) it will spawn the correct environment. The correct
-   environment is a terminal session.</p>
-</li>
-<li>
-<p>The client (the computer you connect from) must be running an <span class="caps">SSH</span> client,
-   which is a small app that can communicate using the <span class="caps">SSH</span> protocol. (A
-   protocol is a set of rules.) It needs to be able to receive information
-   about which host to connect to, which user to connect as and which
-   credentials to use when trying to connect.</p>
-</li>
-</ol>
+<h2 id="tldr"><span class="caps">TLDR</span></h2>
+<ul>
+<li>Public key only on the remote server.</li>
+<li><code>ssh-keygen -t rsa &lt;optional:email_address&gt;</code> Generate a key pair and keep the private key privately on your local remote machine.</li>
+<li>The new keys are added to <code>~/.ssh/id_rsa</code> and <code>~/.ssh/id_rsa.pub</code>.</li>
+<li>You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts.</li>
+<li><code>cat ~/.ssh/id_rsa.pub</code> to upload or copy a public key.</li>
+<li>Copy all the output from the relevant line: <code>ssh-rsa &lt;long-hash&gt; user@email.com</code>.</li>
+<li>Send the public key to the server. If it’s your server, it goes in <code>~/.ssh/authorized_keys</code>. This file contains a list of authorized public keys, one per line.</li>
+</ul>
+<h2 id="setup-ssh-agent-to-prevent-passphrase-prompt">Setup <code>SSH-Agent</code> to prevent passphrase prompt</h2>
+<ul>
+<li>Ensure that <code>ssh-agent</code> is running <code>eval $(ssh-agent -s)</code></li>
+<li>Ensure that the following is in <code>~/.ssh/config</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span>    <span class="nb">Host</span> *
+     <span class="nb">AddKeysToAgent</span> yes
+     <span class="nb">UseKeychain</span> yes
+     <span class="nb">IdentityFile</span> ~/.ssh/id_rsa
+</pre></div>
+<ul>
+<li>Add the private key to your local ssh-agent <code>/usr/bin/ssh-add -K ~/.ssh/id_rsa</code>. Use the full path to ensure that the Apple version of the command is used.</li>
+</ul>
 <h1 id="authentication">Authentication</h1>
 <h2 id="passwords-and-keys">Passwords and Keys</h2>
 <ol>
 <li>
-<p>Clients authenticate using passwords or keys. Passwords are less secure than
-   keys. Keys are very secure. You can also connect using no authentication by
-   specifying a particular <span class="caps">IP</span> address I think.</p>
+<p>There are three authentication methods:</p>
+<ol>
+<li>Keys - very secure.</li>
+<li>Passwords - less secure than keys. </li>
+<li><span class="caps">IP</span> white lists - connect without authentication by specifying a particular <span class="caps">IP</span> address, I think. Presumably via some <span class="caps">VPN</span> or proxy.</li>
+</ol>
 </li>
 <li>
-<p>Passwords are encrypted, and are conceptually familiar, but can (and will)
-   be brute forced. There are tools that will block repeated attempts or
+<p>Passwords are encrypted. They are conceptually familiar but can and will
+   be brute forced. There are tools that will block repeated attempts (e.g. fail2ban) or
    block/allow authentication attempts from particular <span class="caps">IP</span> addresses.</p>
 </li>
 <li>
 <p><span class="caps">SSH</span> keys using public and private (or secret) key pairs and are very secure.
-   Keys are generated in pairs.  The public key can be shared freely without
-   concern. The secret key must be kept as secure and secret as a password.</p>
+   Keys are generated in pairs.</p>
+<ul>
+<li>The public key can be shared freely without concern. </li>
+<li>The secret key must be kept as secure and secret as a password.</li>
+</ul>
 </li>
 <li>
-<p>To authenticate using a key pair, the client must have both keys (a key
-   pair) on their computer. The server must have the public key in a file
-   called <code>authorized_keys</code>. If the server has the private key then something
-   has gone wrong and you should be alarmed.</p>
+<p>To authenticate using a key pair:</p>
+<ul>
+<li>The client must have both keys (a key pair) on their computer.</li>
+<li>The server must have the public key in a file called <code>authorized_keys</code>.</li>
+<li>If the server has the private key then something has gone wrong and you should generate new keys and delete the compromised key.</li>
+</ul>
 </li>
-</ol>
+<li>
 <p>The server stores the public keys of users who can connect as a particular
-   user in the file <code>~/.ssh/authorized_keys</code>. The file contains a list of
-   public keys, one public key on each row.</p>
-<ol>
-<li>The default location to store the public key on the remote server is in the
-   users home folder in a subdirectory called <code>.ssh/authorized_keys</code>. The full
-   path would be <code>~/.ssh/authorized_keys</code></li>
+    user in the file <code>~/.ssh/authorized_keys</code>. This file contains a list of
+    public keys, one public key on each row.</p>
+</li>
 </ol>
 <h2 id="handshake">Handshake</h2>
 <ol>
@@ -372,7 +370,41 @@
    the server, the server can be sure that the client has the private key.</p>
 </li>
 </ol>
-<p><a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys">Source</a></p>
+<h1 id="background">Background</h1>
+<ol>
+<li>
+<p>Secure Shell lets you securely connect to remote servers. You connect using
+   an account that exists on the remote server. Once you’ve connected you’ll be
+   dropped into a shell session.</p>
+</li>
+<li>
+<p>The computer you connect from is the “local” or “client” computer. The
+   computer you connect to is the “host” or the “server”.</p>
+</li>
+<li>
+<p>When you’re connected to the server using <span class="caps">SSH</span>, any commands you input from
+   the client are sent securely and privately through a <em>tunnel</em> to the remote
+   computer, where the commands are executed.</p>
+</li>
+<li>
+<p><span class="caps">SSH</span> is implemented using the client-server model. The server must be running
+   a small app to listen for <span class="caps">SSH</span> connections. This kind of app is
+   called a daemon (<em>day-mon</em>). For <span class="caps">SSH</span> to work, the host must be
+   running the <span class="caps">SSH</span> daemon. The <span class="caps">SSH</span> daemon listens for connections on a specific
+   port (22), authenticates connections requests, and (if the connection
+   request is approved) it will spawn the correct environment. The correct
+   environment is a terminal session.</p>
+</li>
+<li>
+<p>The client (the computer you connect from) must be running an <span class="caps">SSH</span> client,
+   which is a small app that can communicate using the <span class="caps">SSH</span> protocol. (A
+   protocol is a set of rules.) It needs to be able to receive information
+   about which host to connect to, which user to connect as and which
+   credentials to use when trying to connect.</p>
+</li>
+</ol>
+<h1 id="source">Source</h1>
+<p><a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys">article</a></p>
 </div>
 </article>
 </main>

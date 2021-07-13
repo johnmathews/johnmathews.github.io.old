@@ -105,79 +105,77 @@ is also a very useful article. I made notes from it in another &lt;a href="https
 &lt;li&gt;Not as good for cloud providers as Terraform.&lt;/li&gt;
 &lt;li&gt;No more snowflake servers.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="learning"/><category term="youtube"/><category term="ansible"/><category term="ssh"/><category term="vagrant"/><category term="gcp"/><category term="service-accounts"/><category term="iam"/></entry><entry><title>SSH-Notes</title><link href="https://johnmathews.eu/ssh-notes.html" rel="alternate"/><published>2021-04-21T10:21:15+02:00</published><updated>2021-04-21T10:21:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/ssh-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tldr"&gt;&lt;span class="caps"&gt;TLDR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#setup-ssh-agent-to-prevent-passphrase-prompt"&gt;Setup &lt;span class="caps"&gt;SSH&lt;/span&gt;-Agent to prevent passphrase prompt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#authentication"&gt;Authentication&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#passwords-and-keys"&gt;Passwords and Keys&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#handshake"&gt;Handshake&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#source"&gt;Source&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h1 id="background"&gt;Background&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Secure Shell lets you securely connect to remote servers. You connect using
-   an account that exists on the remote server. Once you’ve connected you’ll be
-   dropped into a shell session.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The computer you connect from is the “local” or “client” computer. The
-   computer you connect to is the “host” or the “server”.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When you’re connected to the server using &lt;span class="caps"&gt;SSH&lt;/span&gt;, any commands you input from
-   the client are sent securely and privately (through a “tunnel”) to the remote
-   computer, where the commands are executed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; is implemented using the client-server model. The server must be running
-   a small app to listen for &lt;span class="caps"&gt;SSH&lt;/span&gt; connections. This kind of app is
-   called a daemon (pronounced day-mon). For &lt;span class="caps"&gt;SSH&lt;/span&gt; to work, the host must be
-   running the &lt;span class="caps"&gt;SSH&lt;/span&gt; daemon. The &lt;span class="caps"&gt;SSH&lt;/span&gt; daemon listens for connections on a specific
-   port (22), authenticates connections requests, and (if the connection
-   request is approved) it will spawn the correct environment. The correct
-   environment is a terminal session.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The client (the computer you connect from) must be running an &lt;span class="caps"&gt;SSH&lt;/span&gt; client,
-   which is a small app that can communicate using the &lt;span class="caps"&gt;SSH&lt;/span&gt; protocol. (A
-   protocol is a set of rules.) It needs to be able to receive information
-   about which host to connect to, which user to connect as and which
-   credentials to use when trying to connect.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id="tldr"&gt;&lt;span class="caps"&gt;TLDR&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Public key only on the remote server.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh-keygen -t rsa &lt;optional:email_address&gt;&lt;/optional:email_address&gt;&lt;/code&gt; Generate a key pair and keep the private key privately on your local remote machine.&lt;/li&gt;
+&lt;li&gt;The new keys are added to &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; and &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub&lt;/code&gt; to upload or copy a public key.&lt;/li&gt;
+&lt;li&gt;Copy all the output from the relevant line: &lt;code&gt;ssh-rsa &lt;long-hash&gt; user@email.com&lt;/long-hash&gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Send the public key to the server. If it’s your server, it goes in &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;. This file contains a list of authorized public keys, one per line.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="setup-ssh-agent-to-prevent-passphrase-prompt"&gt;Setup &lt;code&gt;SSH-Agent&lt;/code&gt; to prevent passphrase prompt&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure that &lt;code&gt;ssh-agent&lt;/code&gt; is running &lt;code&gt;eval $(ssh-agent -s)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Ensure that the following is in &lt;code&gt;~/.ssh/config&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nb"&gt;Host&lt;/span&gt; *
+     &lt;span class="nb"&gt;AddKeysToAgent&lt;/span&gt; yes
+     &lt;span class="nb"&gt;UseKeychain&lt;/span&gt; yes
+     &lt;span class="nb"&gt;IdentityFile&lt;/span&gt; ~/.ssh/id_rsa
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Add the private key to your local ssh-agent &lt;code&gt;/usr/bin/ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;. Use the full path to ensure that the Apple version of the command is used.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id="authentication"&gt;Authentication&lt;/h1&gt;
 &lt;h2 id="passwords-and-keys"&gt;Passwords and Keys&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Clients authenticate using passwords or keys. Passwords are less secure than
-   keys. Keys are very secure. You can also connect using no authentication by
-   specifying a particular &lt;span class="caps"&gt;IP&lt;/span&gt; address I think.&lt;/p&gt;
+&lt;p&gt;There are three authentication methods:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Keys - very secure.&lt;/li&gt;
+&lt;li&gt;Passwords - less secure than keys. &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;IP&lt;/span&gt; white lists - connect without authentication by specifying a particular &lt;span class="caps"&gt;IP&lt;/span&gt; address, I think. Presumably via some &lt;span class="caps"&gt;VPN&lt;/span&gt; or proxy.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Passwords are encrypted, and are conceptually familiar, but can (and will)
-   be brute forced. There are tools that will block repeated attempts or
+&lt;p&gt;Passwords are encrypted. They are conceptually familiar but can and will
+   be brute forced. There are tools that will block repeated attempts (e.g. fail2ban) or
    block/allow authentication attempts from particular &lt;span class="caps"&gt;IP&lt;/span&gt; addresses.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; keys using public and private (or secret) key pairs and are very secure.
-   Keys are generated in pairs.  The public key can be shared freely without
-   concern. The secret key must be kept as secure and secret as a password.&lt;/p&gt;
+   Keys are generated in pairs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The public key can be shared freely without concern. &lt;/li&gt;
+&lt;li&gt;The secret key must be kept as secure and secret as a password.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;To authenticate using a key pair, the client must have both keys (a key
-   pair) on their computer. The server must have the public key in a file
-   called &lt;code&gt;authorized_keys&lt;/code&gt;. If the server has the private key then something
-   has gone wrong and you should be alarmed.&lt;/p&gt;
+&lt;p&gt;To authenticate using a key pair:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The client must have both keys (a key pair) on their computer.&lt;/li&gt;
+&lt;li&gt;The server must have the public key in a file called &lt;code&gt;authorized_keys&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If the server has the private key then something has gone wrong and you should generate new keys and delete the compromised key.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
 &lt;p&gt;The server stores the public keys of users who can connect as a particular
-   user in the file &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;. The file contains a list of
-   public keys, one public key on each row.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;The default location to store the public key on the remote server is in the
-   users home folder in a subdirectory called &lt;code&gt;.ssh/authorized_keys&lt;/code&gt;. The full
-   path would be &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;&lt;/li&gt;
+    user in the file &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;. This file contains a list of
+    public keys, one public key on each row.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="handshake"&gt;Handshake&lt;/h2&gt;
 &lt;ol&gt;
@@ -207,7 +205,41 @@ is also a very useful article. I made notes from it in another &lt;a href="https
    the server, the server can be sure that the client has the private key.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;Source&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.eu/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Secure Shell lets you securely connect to remote servers. You connect using
+   an account that exists on the remote server. Once you’ve connected you’ll be
+   dropped into a shell session.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The computer you connect from is the “local” or “client” computer. The
+   computer you connect to is the “host” or the “server”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you’re connected to the server using &lt;span class="caps"&gt;SSH&lt;/span&gt;, any commands you input from
+   the client are sent securely and privately through a &lt;em&gt;tunnel&lt;/em&gt; to the remote
+   computer, where the commands are executed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; is implemented using the client-server model. The server must be running
+   a small app to listen for &lt;span class="caps"&gt;SSH&lt;/span&gt; connections. This kind of app is
+   called a daemon (&lt;em&gt;day-mon&lt;/em&gt;). For &lt;span class="caps"&gt;SSH&lt;/span&gt; to work, the host must be
+   running the &lt;span class="caps"&gt;SSH&lt;/span&gt; daemon. The &lt;span class="caps"&gt;SSH&lt;/span&gt; daemon listens for connections on a specific
+   port (22), authenticates connections requests, and (if the connection
+   request is approved) it will spawn the correct environment. The correct
+   environment is a terminal session.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The client (the computer you connect from) must be running an &lt;span class="caps"&gt;SSH&lt;/span&gt; client,
+   which is a small app that can communicate using the &lt;span class="caps"&gt;SSH&lt;/span&gt; protocol. (A
+   protocol is a set of rules.) It needs to be able to receive information
+   about which host to connect to, which user to connect as and which
+   credentials to use when trying to connect.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="source"&gt;Source&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;article&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.eu/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#razor"&gt;Razor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#one-question"&gt;One Question&lt;/a&gt;&lt;/li&gt;

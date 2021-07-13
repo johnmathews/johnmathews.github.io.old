@@ -1362,6 +1362,22 @@ video {
   margin-top: 2.5rem;
 }
 
+ul~.highlight {
+  margin-top: -0.75rem !important;
+  margin-bottom: -1.25rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+ul~.highlight pre {
+  border-left-width: 0px !important;
+}
+
+.dark ul~.highlight pre {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity)) !important;
+}
+
 .markdown .inner_cell {
   overflow: auto;
 }
@@ -2502,6 +2518,10 @@ video {
 
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-l-0 {
+  border-left-width: 0px;
 }
 
 .border-l-2 {

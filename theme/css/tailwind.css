@@ -87,6 +87,14 @@
   @apply mt-10 ;
 }
 
+ul~.highlight {
+  @apply -mt-3 py-0 -mb-5 !important;
+}
+
+ul~.highlight pre {
+  @apply border-l-0 dark:bg-gray-900 !important;
+}
+
 .markdown .inner_cell {
 	overflow: auto;
 }
