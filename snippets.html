@@ -2928,7 +2928,7 @@ clone ...</code> you need to use <code>git lfs clone ...</code></p>
         }
       </script>
 <script>
-            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {})
+            result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
         </script>
 <script> $(".catChooser").removeClass('hidden') </script>
 <script> const snippetIndexURL = 'https://johnmathews.eu/fuse-search-snippets.html'</script>

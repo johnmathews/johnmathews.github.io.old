@@ -1046,7 +1046,7 @@ Net Closing TB: 0.00
         }
       </script>
 <script>
-            $.getJSON("https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path="+window.location.pathname).done(function(srcData) {})
+            result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
         </script>
 <script>
     const technical = $( "#articleParent" ).hasClass('technical');
