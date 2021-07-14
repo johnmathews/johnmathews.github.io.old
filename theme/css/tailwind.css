@@ -84,7 +84,7 @@
 /* jupyter notebook input and output cells - scroll instead of overflow */
 .markdown .highlight {
 	overflow-x: auto;
-  @apply mt-10 ;
+  @apply mt-2;
 }
 
 ul~.highlight {
@@ -118,13 +118,13 @@ ul~.highlight pre {
 /* code blocks */
 
 .markdown pre {
-  @apply rounded p-4;
+  @apply rounded pb-3 -mb-3;
 	overflow-x: auto;
 	overflow-y: auto;
 }
 
 .markdown .highlight pre {
-  @apply border-l-2 text-lg border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
+  @apply border-l-0 text-lg border-gray-400 dark:border-gray-300 dark:bg-gray-900 dark:text-gray-200;
 	overflow-x: auto;
 	overflow-y: auto;
 }
@@ -220,7 +220,7 @@ ul~.highlight pre {
 
 
 .markdown p {
-  @apply mt-7 mb-0;
+  @apply mt-5 mb-0;
 }
 
 .markdown h2 + p {
@@ -247,11 +247,11 @@ ul~.highlight pre {
 /* Lists.. */
 
 #snippets .markdown ul li:first-child {
-	@apply mt-7
+	@apply mt-5
 }
 
 #snippets .markdown ol li:first-child {
-	@apply mt-7
+	@apply mt-5
 }
 
 .markdown ul li p {

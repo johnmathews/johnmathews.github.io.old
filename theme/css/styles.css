@@ -1359,7 +1359,7 @@ video {
 
 .markdown .highlight {
   overflow-x: auto;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
 }
 
 ul~.highlight {
@@ -1401,14 +1401,15 @@ ul~.highlight pre {
 /* code blocks */
 
 .markdown pre {
+  margin-bottom: -0.75rem;
   border-radius: 0.25rem;
-  padding: 1rem;
+  padding-bottom: 0.75rem;
   overflow-x: auto;
   overflow-y: auto;
 }
 
 .markdown .highlight pre {
-  border-left-width: 2px;
+  border-left-width: 0px;
   --tw-border-opacity: 1;
   border-color: rgba(156, 163, 175, var(--tw-border-opacity));
 }
@@ -1416,14 +1417,6 @@ ul~.highlight pre {
 .dark .markdown .highlight pre {
   --tw-border-opacity: 1;
   border-color: rgba(209, 213, 219, var(--tw-border-opacity));
-}
-
-.markdown .highlight pre {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
-
-.dark .markdown .highlight pre {
   --tw-bg-opacity: 1;
   background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
@@ -1638,7 +1631,7 @@ ul~.highlight pre {
 }
 
 .markdown p {
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
   margin-bottom: 0px;
 }
 
@@ -1674,11 +1667,11 @@ ul~.highlight pre {
 /* Lists.. */
 
 #snippets .markdown ul li:first-child {
-  margin-top: 1.75rem
+  margin-top: 1.25rem
 }
 
 #snippets .markdown ol li:first-child {
-  margin-top: 1.75rem
+  margin-top: 1.25rem
 }
 
 .markdown ul li p {
@@ -2004,10 +1997,6 @@ ul~.highlight pre {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
 }
 
 .mt-10 {
@@ -3052,16 +3041,6 @@ ul~.highlight pre {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgba(239, 68, 68, var(--tw-text-opacity));
-}
-
-.text-green-500 {
-  --tw-text-opacity: 1;
-  color: rgba(16, 185, 129, var(--tw-text-opacity));
-}
-
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgba(37, 99, 235, var(--tw-text-opacity));
@@ -3070,16 +3049,6 @@ ul~.highlight pre {
 .hover\:text-gray-50:hover {
   --tw-text-opacity: 1;
   color: rgba(249, 250, 251, var(--tw-text-opacity));
-}
-
-.hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgba(239, 68, 68, var(--tw-text-opacity));
-}
-
-.hover\:text-green-500:hover {
-  --tw-text-opacity: 1;
-  color: rgba(16, 185, 129, var(--tw-text-opacity));
 }
 
 .dark .dark\:text-white {
@@ -3107,16 +3076,6 @@ ul~.highlight pre {
   color: rgba(209, 213, 219, var(--tw-text-opacity));
 }
 
-.dark .dark\:text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgba(239, 68, 68, var(--tw-text-opacity));
-}
-
-.dark .dark\:text-green-200 {
-  --tw-text-opacity: 1;
-  color: rgba(167, 243, 208, var(--tw-text-opacity));
-}
-
 .dark .dark\:text-blue-300 {
   --tw-text-opacity: 1;
   color: rgba(147, 197, 253, var(--tw-text-opacity));
@@ -3125,16 +3084,6 @@ ul~.highlight pre {
 .dark .dark\:hover\:text-gray-50:hover {
   --tw-text-opacity: 1;
   color: rgba(249, 250, 251, var(--tw-text-opacity));
-}
-
-.dark .dark\:hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgba(239, 68, 68, var(--tw-text-opacity));
-}
-
-.dark .dark\:hover\:text-green-200:hover {
-  --tw-text-opacity: 1;
-  color: rgba(167, 243, 208, var(--tw-text-opacity));
 }
 
 .underline {
