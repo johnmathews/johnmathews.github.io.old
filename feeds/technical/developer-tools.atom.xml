@@ -678,9 +678,8 @@ such as a manual &lt;code&gt;kill&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;A &lt;code&gt;nohup&lt;/code&gt;ed process will ignore any and all &lt;code&gt;HUP&lt;/code&gt; signal, no matter how they
 are sent.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out"&gt;Source&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="good-to-know"&gt;Good-to-know:&lt;/h1&gt;
-&lt;h2 id="w"&gt;&lt;code&gt;w&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;w&lt;/code&gt; is a combination of &lt;code&gt;who&lt;/code&gt;, &lt;code&gt;uptime&lt;/code&gt;, and &lt;code&gt;ps -a&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="related"&gt;Related&lt;/h1&gt;
+&lt;h2 id="w-is-a-combination-of-who-uptime-and-ps-a"&gt;&lt;code&gt;w&lt;/code&gt; is a combination of &lt;code&gt;who&lt;/code&gt;, &lt;code&gt;uptime&lt;/code&gt;, and &lt;code&gt;ps -a&lt;/code&gt;.&lt;/h2&gt;
 &lt;p&gt;Use &lt;code&gt;w&lt;/code&gt; to see who is logged in and what they are doing. It summarises who is
 logged in, what they are currently doing, and the load of the current activities.&lt;/p&gt;
 &lt;h2 id="process-groups"&gt;Process Groups&lt;/h2&gt;
