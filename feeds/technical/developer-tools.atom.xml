@@ -638,10 +638,10 @@ where the commands are so intuitive that:&lt;/p&gt;
      where I know text is. I’m not saying I &lt;em&gt;should&lt;/em&gt; work when I’m that tired,
      but I can, if I’m already familiar with the code/file.. &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"/><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"/><content type="html">&lt;h1 id="stop-stuff-from-stopping"&gt;Stop stuff from stopping&lt;/h1&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"/><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"/><content type="html">&lt;h1 id="stop-stuff-stopping"&gt;Stop stuff stopping&lt;/h1&gt;
 &lt;p&gt;If you run a command in a terminal session and the terminal session is
-disconnected, the processes running in it will also be terminated.&lt;/p&gt;
-&lt;p&gt;I discovered this when I was trying to download a ~500gb database
+disconnected, then the processes running in it will also be terminated.&lt;/p&gt;
+&lt;p&gt;I discovered this when I was trying to download a ~&lt;span class="caps"&gt;500GB&lt;/span&gt; database
 overnight. I logged in the next morning expecting to see a completed download, but
 found I only had half the file.&lt;/p&gt;
 &lt;h1 id="use-nohup-to-ignore-hup-signals"&gt;Use &lt;code&gt;nohup&lt;/code&gt; to ignore &lt;code&gt;HUP&lt;/code&gt; signals&lt;/h1&gt;
@@ -678,11 +678,11 @@ such as a manual &lt;code&gt;kill&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;A &lt;code&gt;nohup&lt;/code&gt;ed process will ignore any and all &lt;code&gt;HUP&lt;/code&gt; signal, no matter how they
 are sent.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out"&gt;Source&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h1&gt;
-&lt;p&gt;Use &lt;code&gt;w&lt;/code&gt; to see who is logged in and what they are doing. It’s summary of every
-user logged into a computer, what each user is currently doing, and the
-load all the current activity.&lt;/p&gt;
-&lt;p&gt;It’s a combination of &lt;code&gt;who&lt;/code&gt;, &lt;code&gt;uptime&lt;/code&gt;, and &lt;code&gt;ps -a&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id="good-to-know"&gt;Good-to-know:&lt;/h1&gt;
+&lt;h2 id="w"&gt;&lt;code&gt;w&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt; is a combination of &lt;code&gt;who&lt;/code&gt;, &lt;code&gt;uptime&lt;/code&gt;, and &lt;code&gt;ps -a&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;w&lt;/code&gt; to see who is logged in and what they are doing. It summarises who is
+logged in, what they are currently doing, and the load of the current activities.&lt;/p&gt;
 &lt;h2 id="process-groups"&gt;Process Groups&lt;/h2&gt;
 &lt;p&gt;A collection of one or more processes. It’s used to control the distribution of
 a signal. When a signal is directed to a process group, the signal is delivered

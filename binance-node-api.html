@@ -12,18 +12,18 @@
 <meta content="Binance-Chain: Running a node -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content="  " name="keywords"/>
-<meta content=" This week I’ve been setting up a binance-chain node. Unlike Polkadot or Cardano, I’m not going to run it from a container until it’s working reliably. The Binance docs show a couple of ways to install a node. I used the install.sh script and went with default values as much as possible. Installation My first attempts to sync a full node used the install.sh script, but the node wouldn’t sync completely, it would get stuck. I setup a new VM and did a manual install (“Option Two”) and so far... " name="description"/>
+<meta content=" This week, I’ve been setting up a binance-chain node. Unlike Polkadot or Cardano, I’m not going to run it from a container until it’s working reliably. The Binance docs show a couple of ways to install a node. I used the install.sh script and went with default values as much as possible. Installation My first attempts to sync a full node used the install.sh script, but the node wouldn’t sync completely, it would get stuck. I setup a new VM and did a manual install (“Option Two”) and so far... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Binance-Chain: Running a node" property="twitter:title"/>
-<meta content=" This week I’ve been setting up a binance-chain node. Unlike Polkadot or Cardano, I’m not going to run it from a container until it’s working reliably. The Binance docs show a couple of ways to install a node. I used the install.sh script and went with default values as much as possible. Installation My first attempts to sync a full node used the install.sh script, but the node wouldn’t sync completely, it would get stuck. I setup a new VM and did a manual install (“Option Two”) and so far... " name="twitter:description"/>
+<meta content=" This week, I’ve been setting up a binance-chain node. Unlike Polkadot or Cardano, I’m not going to run it from a container until it’s working reliably. The Binance docs show a couple of ways to install a node. I used the install.sh script and went with default values as much as possible. Installation My first attempts to sync a full node used the install.sh script, but the node wouldn’t sync completely, it would get stuck. I setup a new VM and did a manual install (“Option Two”) and so far... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/binance-node-api.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Binance-Chain: Running a node" property="og:title"/>
-<meta content=" This week I’ve been setting up a binance-chain node. Unlike Polkadot or Cardano, I’m not going to run it from a container until it’s working reliably. The Binance docs show a couple of ways to install a node. I used the install.sh script and went with default values as much as possible. Installation My first attempts to sync a full node used the install.sh script, but the node wouldn’t sync completely, it would get stuck. I setup a new VM and did a manual install (“Option Two”) and so far... " property="og:description"/>
+<meta content=" This week, I’ve been setting up a binance-chain node. Unlike Polkadot or Cardano, I’m not going to run it from a container until it’s working reliably. The Binance docs show a couple of ways to install a node. I used the install.sh script and went with default values as much as possible. Installation My first attempts to sync a full node used the install.sh script, but the node wouldn’t sync completely, it would get stuck. I setup a new VM and did a manual install (“Option Two”) and so far... " property="og:description"/>
 <meta content="https://johnmathews.eu/binance-node-api.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -269,7 +269,7 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>This week I’ve been setting up a binance-chain node. Unlike Polkadot or
+<p>This week, I’ve been setting up a binance-chain node. Unlike Polkadot or
 Cardano, I’m not going to run it from a container until it’s working reliably.</p>
 <p>The Binance <a href="https://docs.binance.org/guides/node/install.html">docs</a> show a
 couple of ways to install a node. I used the <code>install.sh</code> script and went with
@@ -282,7 +282,7 @@ any issues. You need to download the genesis file separately in this
 case. Also, be sure to download the <code>node-binary</code> repo using <code>git lfs</code> and not
 just <code>git</code>. It will look like it worked but <code>bnbchaind</code> wont have completely
 downloaded unless you use <code>lfs</code></p>
-<p>It took me awhile to realise that the documentation assumes that you have an
+<p>It took me a while to realise that the documentation assumes that you have an
 environment variable called <code>BNCHOME</code>. You can either create it using</p>
 <div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">BNCHOME</span><span class="o">=</span>/path/to/.bnbchaind/
 </pre></div>
@@ -295,8 +295,8 @@ or not. It doesn’t give errors if it isn’t set, but I seem to be having more
 success when <code>BNCHOME</code> is defined.</p>
 <h1 id="syncing-the-node">Syncing the node</h1>
 <p>There are <a href="https://docs.binance.org/guides/node/synctypes.html">three ways</a> to sync a node.</p>
-<p>Fast-sync isn’t the fastest way to sync your node, hot-sync is. Using
-<code>install.sh</code> <em>should</em> put the correct default values in the
+<p>Fast-sync isn’t the fastest way to sync your node, hot-sync is.</p>
+<p>Using <code>install.sh</code> <em>should</em> put the correct default values in the
 <code>$BNCHOME/config/config.toml</code> file, but I needed to adjust <code>ping_interval</code> and
 <code>pong_timeout</code> to the recommended values.</p>
 <h1 id="surprises">Surprises</h1>

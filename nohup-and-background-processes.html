@@ -12,18 +12,18 @@
 <meta content="nohup and Background Processes -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content="  " name="keywords"/>
-<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this when I was trying to download a ~500gb database overnight. I logged in the next morning expecting to see a completed download, but found I only had half the file. Use nohup to ignore HUP signals One solution to this seems to be to use nohup, a command that ignores the HUP signal. It stops your programme from... " name="description"/>
+<meta content=" Stop stuff stopping If you run a command in a terminal session and the terminal session is disconnected, then the processes running in it will also be terminated. I discovered this when I was trying to download a ~500GB database overnight. I logged in the next morning expecting to see a completed download, but found I only had half the file. Use nohup to ignore HUP signals One solution to this seems to be to use nohup, a command that ignores the HUP signal. It stops your programme from... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="nohup and Background Processes" property="twitter:title"/>
-<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this when I was trying to download a ~500gb database overnight. I logged in the next morning expecting to see a completed download, but found I only had half the file. Use nohup to ignore HUP signals One solution to this seems to be to use nohup, a command that ignores the HUP signal. It stops your programme from... " name="twitter:description"/>
+<meta content=" Stop stuff stopping If you run a command in a terminal session and the terminal session is disconnected, then the processes running in it will also be terminated. I discovered this when I was trying to download a ~500GB database overnight. I logged in the next morning expecting to see a completed download, but found I only had half the file. Use nohup to ignore HUP signals One solution to this seems to be to use nohup, a command that ignores the HUP signal. It stops your programme from... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/nohup-and-background-processes.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="nohup and Background Processes" property="og:title"/>
-<meta content=" Stop stuff from stopping If you run a command in a terminal session and the terminal session is disconnected, the processes running in it will also be terminated. I discovered this when I was trying to download a ~500gb database overnight. I logged in the next morning expecting to see a completed download, but found I only had half the file. Use nohup to ignore HUP signals One solution to this seems to be to use nohup, a command that ignores the HUP signal. It stops your programme from... " property="og:description"/>
+<meta content=" Stop stuff stopping If you run a command in a terminal session and the terminal session is disconnected, then the processes running in it will also be terminated. I discovered this when I was trying to download a ~500GB database overnight. I logged in the next morning expecting to see a completed download, but found I only had half the file. Use nohup to ignore HUP signals One solution to this seems to be to use nohup, a command that ignores the HUP signal. It stops your programme from... " property="og:description"/>
 <meta content="https://johnmathews.eu/nohup-and-background-processes.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -269,10 +269,10 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<h1 id="stop-stuff-from-stopping">Stop stuff from stopping</h1>
+<h1 id="stop-stuff-stopping">Stop stuff stopping</h1>
 <p>If you run a command in a terminal session and the terminal session is
-disconnected, the processes running in it will also be terminated.</p>
-<p>I discovered this when I was trying to download a ~500gb database
+disconnected, then the processes running in it will also be terminated.</p>
+<p>I discovered this when I was trying to download a ~<span class="caps">500GB</span> database
 overnight. I logged in the next morning expecting to see a completed download, but
 found I only had half the file.</p>
 <h1 id="use-nohup-to-ignore-hup-signals">Use <code>nohup</code> to ignore <code>HUP</code> signals</h1>
@@ -309,11 +309,11 @@ such as a manual <code>kill</code> command.</p>
 <p>A <code>nohup</code>ed process will ignore any and all <code>HUP</code> signal, no matter how they
 are sent.</p>
 <p><a href="https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out">Source</a></p>
-<h1 id="update-2021-03-31">Update (2021-03-31):</h1>
-<p>Use <code>w</code> to see who is logged in and what they are doing. It’s summary of every
-user logged into a computer, what each user is currently doing, and the
-load all the current activity.</p>
-<p>It’s a combination of <code>who</code>, <code>uptime</code>, and <code>ps -a</code>.</p>
+<h1 id="good-to-know">Good-to-know:</h1>
+<h2 id="w"><code>w</code></h2>
+<p><code>w</code> is a combination of <code>who</code>, <code>uptime</code>, and <code>ps -a</code>.</p>
+<p>Use <code>w</code> to see who is logged in and what they are doing. It summarises who is
+logged in, what they are currently doing, and the load of the current activities.</p>
 <h2 id="process-groups">Process Groups</h2>
 <p>A collection of one or more processes. It’s used to control the distribution of
 a signal. When a signal is directed to a process group, the signal is delivered

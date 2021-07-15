@@ -263,7 +263,7 @@ docker build -t cardano-address .
 &lt;p&gt;Run the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;increment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
 &lt;span class="o"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;increment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;increment+1&lt;span class="o"&gt;))&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat mnumonic.txt &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address key from-recovery-phrase Shelley &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address key child 1852H/1815H/0H/0/&lt;span class="nv"&gt;$increment&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address key public --with-chain-code  &lt;span class="p"&gt;|&lt;/span&gt; docker run --rm -i cardano-address address payment --network-tag testnet &amp;gt; payment.addr &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat payment.addr &lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Cryptocurrencies"/></entry><entry><title>Binance-Chain: Running a node</title><link href="https://johnmathews.eu/binance-node-api.html" rel="alternate"/><published>2021-03-03T15:28:00+01:00</published><updated>2021-03-03T15:28:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/binance-node-api.html</id><summary type="html"/><content type="html">&lt;p&gt;This week I’ve been setting up a binance-chain node. Unlike Polkadot or
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Cryptocurrencies"/></entry><entry><title>Binance-Chain: Running a node</title><link href="https://johnmathews.eu/binance-node-api.html" rel="alternate"/><published>2021-03-03T15:28:00+01:00</published><updated>2021-03-03T15:28:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-03:/binance-node-api.html</id><summary type="html"/><content type="html">&lt;p&gt;This week, I’ve been setting up a binance-chain node. Unlike Polkadot or
 Cardano, I’m not going to run it from a container until it’s working reliably.&lt;/p&gt;
 &lt;p&gt;The Binance &lt;a href="https://docs.binance.org/guides/node/install.html"&gt;docs&lt;/a&gt; show a
 couple of ways to install a node. I used the &lt;code&gt;install.sh&lt;/code&gt; script and went with
@@ -276,7 +276,7 @@ any issues. You need to download the genesis file separately in this
 case. Also, be sure to download the &lt;code&gt;node-binary&lt;/code&gt; repo using &lt;code&gt;git lfs&lt;/code&gt; and not
 just &lt;code&gt;git&lt;/code&gt;. It will look like it worked but &lt;code&gt;bnbchaind&lt;/code&gt; wont have completely
 downloaded unless you use &lt;code&gt;lfs&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;It took me awhile to realise that the documentation assumes that you have an
+&lt;p&gt;It took me a while to realise that the documentation assumes that you have an
 environment variable called &lt;code&gt;BNCHOME&lt;/code&gt;. You can either create it using&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;BNCHOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/.bnbchaind/
 &lt;/pre&gt;&lt;/div&gt;
@@ -289,8 +289,8 @@ or not. It doesn’t give errors if it isn’t set, but I seem to be having more
 success when &lt;code&gt;BNCHOME&lt;/code&gt; is defined.&lt;/p&gt;
 &lt;h1 id="syncing-the-node"&gt;Syncing the node&lt;/h1&gt;
 &lt;p&gt;There are &lt;a href="https://docs.binance.org/guides/node/synctypes.html"&gt;three ways&lt;/a&gt; to sync a node.&lt;/p&gt;
-&lt;p&gt;Fast-sync isn’t the fastest way to sync your node, hot-sync is. Using
-&lt;code&gt;install.sh&lt;/code&gt; &lt;em&gt;should&lt;/em&gt; put the correct default values in the
+&lt;p&gt;Fast-sync isn’t the fastest way to sync your node, hot-sync is.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;install.sh&lt;/code&gt; &lt;em&gt;should&lt;/em&gt; put the correct default values in the
 &lt;code&gt;$BNCHOME/config/config.toml&lt;/code&gt; file, but I needed to adjust &lt;code&gt;ping_interval&lt;/code&gt; and
 &lt;code&gt;pong_timeout&lt;/code&gt; to the recommended values.&lt;/p&gt;
 &lt;h1 id="surprises"&gt;Surprises&lt;/h1&gt;
