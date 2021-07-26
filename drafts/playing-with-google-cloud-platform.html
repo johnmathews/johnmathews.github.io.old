@@ -12,18 +12,18 @@
 <meta content="Playing with Google Cloud Platform -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud,google,serverless " name="keywords"/>
-<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learn about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. " name="description"/>
+<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learnt about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: 1. A cloud function is triggered by a JavaScript function in the browser 1. The function parses the page URL and the IP address and creates a record in DataStore 1. Each time the analytics page is... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Playing with Google Cloud Platform" property="twitter:title"/>
-<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learn about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. " name="twitter:description"/>
+<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learnt about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: 1. A cloud function is triggered by a JavaScript function in the browser 1. The function parses the page URL and the IP address and creates a record in DataStore 1. Each time the analytics page is... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/drafts/playing-with-google-cloud-platform.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Playing with Google Cloud Platform" property="og:title"/>
-<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learn about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. " property="og:description"/>
+<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learnt about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: 1. A cloud function is triggered by a JavaScript function in the browser 1. The function parses the page URL and the IP address and creates a record in DataStore 1. Each time the analytics page is... " property="og:description"/>
 <meta content="https://johnmathews.eu/drafts/playing-with-google-cloud-platform.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -270,8 +270,24 @@
 <article class="">
 <div class="markdown">
 <p>My project to build my own web analytics has been a great gateway to learning
-more about Google Cloud Platform (<span class="caps">GCP</span>, or gcloud). So far I’ve learn about
+more about Google Cloud Platform (<span class="caps">GCP</span>, or gcloud). So far I’ve learnt about
 DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.</p>
+<h2 id="version-1">Version 1</h2>
+<p>My first version of the analytics tool took the following form:
+1.  A cloud function is triggered by a JavaScript function in the browser
+1.  The function parses the page <span class="caps">URL</span> and the <span class="caps">IP</span> address and creates a record in
+    DataStore
+1.  Each time the analytics page is loaded, a cloud function is triggered that
+    gets every record from DataStore, parses the data and creates a <span class="caps">JSON</span> blob
+    with aggregated data.
+1.  The browser receives the <span class="caps">JSON</span> blob, parses it and creates some charts and tables.</p>
+<p>The good: It works, it was quick and simple to build
+The bad: Its expensive. Loading the analytics page is slow - when the DataStore
+was small it took 3 or 4 seconds, after a few thousand page views it took about
+40 seconds.</p>
+<h2 id="version-2">Version 2</h2>
+<p>The second version still used DataStore, but didn’t read the entire database and
+generate the analytics every time the analytics page was viewed. </p>
 </div>
 </article>
 </main>
