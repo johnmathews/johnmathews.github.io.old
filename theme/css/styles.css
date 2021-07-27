@@ -2374,6 +2374,10 @@ ul~.highlight pre {
   resize: both;
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
 .list-none {
   list-style-type: none;
 }
