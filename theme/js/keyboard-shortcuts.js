@@ -64,23 +64,36 @@ $(document).ready(function () {
   Mousetrap.bind('G', function () {
     $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 500)
   })
-  Mousetrap.bind('g g', function () {
-    $('html, body').animate({ scrollTop: 0 }, 500)
+  Mousetrap.bind('g a', function () {
+    window.location.href = `${siteURL}/about.html`
   })
   Mousetrap.bind('g b', function () {
     window.history.back()
   })
+  Mousetrap.bind('g c', function () {
+    window.location.href = `${siteURL}/categories.html`
+  })
+  Mousetrap.bind('g e', function () {
+    window.location.href = `${siteURL}/experience.html`
+  })
   Mousetrap.bind('g f', function () {
     window.history.forward()
+  })
+  Mousetrap.bind('g g', function () {
+    $('html, body').animate({ scrollTop: 0 }, 500)
+  })
+  Mousetrap.bind('g k', function () {
+    window.location.href = `${siteURL}/book-notes.html`
+  })
+  Mousetrap.bind('g l', function () {
+    window.location.href = `${siteURL}`
+  })
+  Mousetrap.bind('g m', function () {
+    window.location.href = `${siteURL}/analytics.html`
   })
   Mousetrap.bind('g n', function () {
     if ($('#nextArticleInCategory').length) {
       $('#nextArticleInCategory')[0].click()
-    }
-  })
-  Mousetrap.bind('g p', function () {
-    if ($('#previousArticleInCategory').length) {
-      $('#previousArticleInCategory')[0].click()
     }
   })
   Mousetrap.bind('g o', function () {
@@ -88,29 +101,18 @@ $(document).ready(function () {
       $('#otherArticlesInCategory')[0].click()
     }
   })
-  Mousetrap.bind('g c', function () {
-    window.location.href = `${siteURL}/categories.html`
-  })
-  Mousetrap.bind('g m', function () {
-    window.location.href = `${siteURL}/analytics.html`
-  })
-  Mousetrap.bind('g a', function () {
-    window.location.href = `${siteURL}/about.html`
-  })
-  Mousetrap.bind('g e', function () {
-    window.location.href = `${siteURL}/experience.html`
-  })
-  Mousetrap.bind('g s', function () {
-    window.location.href = `${siteURL}/snippets.html`
-  })
-  Mousetrap.bind('g k', function () {
-    window.location.href = `${siteURL}/book-notes.html`
+  Mousetrap.bind('g p', function () {
+    if ($('#previousArticleInCategory').length) {
+      $('#previousArticleInCategory')[0].click()
+    } else {
+      window.location.href = `${siteURL}/pages.html`
+    }
   })
   Mousetrap.bind('g r', function () {
     window.location.href = `${siteURL}/portfolio.html`
   })
-  Mousetrap.bind('g l', function () {
-    window.location.href = `${siteURL}`
+  Mousetrap.bind('g s', function () {
+    window.location.href = `${siteURL}/snippets.html`
   })
   Mousetrap.bind('v t', function () {
     window.localStorage.setItem('categoryChoice', 'Technical')
