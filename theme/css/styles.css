@@ -2027,6 +2027,10 @@ ul~.highlight pre {
   margin-right: 1.25rem;
 }
 
+.mr-20 {
+  margin-right: 5rem;
+}
+
 .-mr-3 {
   margin-right: -0.75rem;
 }
@@ -2077,6 +2081,10 @@ ul~.highlight pre {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .-mb-5 {
@@ -3249,6 +3257,11 @@ ul~.highlight pre {
     margin-bottom: 4rem;
   }
 
+  .md\:my-24 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
   .md\:my-auto {
     margin-top: auto;
     margin-bottom: auto;
@@ -3348,6 +3361,10 @@ ul~.highlight pre {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:gap-3 {
