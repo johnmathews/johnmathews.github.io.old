@@ -3616,8 +3616,16 @@ ul~.highlight pre {
     width: 83.333333%;
   }
 
+  .xl\:grid-flow-col {
+    grid-auto-flow: column;
+  }
+
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 }
 
