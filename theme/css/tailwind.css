@@ -86,7 +86,7 @@ ul~.highlight pre {
 }
 
 .markdown .inner_cell {
-	overflow-x: auto;
+	/* overflow-x: auto; */
 }
 
 .prompt.input_prompt {
