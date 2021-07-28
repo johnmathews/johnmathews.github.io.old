@@ -71,7 +71,18 @@
 }
 
 /* codeblocks */
+/* ########## */
+
 /* jupyter notebook input and output cells - scroll instead of overflow */
+
+.code_cell {
+	@apply mt-5 bg-gray-100 dark:bg-gray-800 rounded-lg;
+}
+
+.code_cell .input {
+	@apply pl-3 pt-2;
+}
+
 .markdown .highlight {
 	/* overflow-x: auto; */
   @apply mt-2;
@@ -152,17 +163,17 @@ ul~.highlight pre {
 	@apply mt-0;
 }
 
-.output_subarea.output_stream > pre{
-	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
-	overflow-x: auto;
-}
+/* .output_subarea.output_stream > pre{ */
+	/* @apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200; */
+	/* overflow-x: auto; */
+/* } */
 
-.markdown .output_execute_result {
-  @apply dark:text-gray-900;
-}
+/* .markdown .output_execute_result { */
+  /* @apply dark:text-gray-900; */
+/* } */
 
 .markdown .output_subarea {
-  @apply dark:bg-gray-900 dark:text-gray-200 -mr-40;
+  @apply dark:bg-gray-800 dark:text-gray-200;
 }
 
 /* png images must have light bg cos tick marks are dark */
@@ -177,7 +188,8 @@ ul~.highlight pre {
 }
 /* matplotlib images overflow without making entire article scroll */
 .markdown .output_wrapper {
-	overflow-x: auto;
+	/* overflow-x: auto; */
+	@apply text-base pl-5;
 }
 
 /* Additional vertical padding used by kbd tag. */
