@@ -114,6 +114,9 @@ $(document).ready(function () {
   Mousetrap.bind('g s', function () {
     window.location.href = `${siteURL}/snippets.html`
   })
+  Mousetrap.bind('g t', function () {
+    window.location.href = `${siteURL}/tags.html`
+  })
   Mousetrap.bind('v t', function () {
     window.localStorage.setItem('categoryChoice', 'Technical')
     if (typeof chooseTechnical === 'function') {

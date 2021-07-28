@@ -55,16 +55,6 @@
   @apply mt-2 border-t-4 dark:border-gray-300 border-gray-800 border-double
 }
 
-/* icons to toggle dark mode*/
-/* delete?? */
-#darkMode:hover{
-	color:red;
-}
-
-#lightMode:hover{
-	color:red;
-}
-
 /* font awesome icon colors*/
 .far:hover, .fas:hover {
 	@apply underline;
@@ -83,7 +73,7 @@
 /* codeblocks */
 /* jupyter notebook input and output cells - scroll instead of overflow */
 .markdown .highlight {
-	overflow-x: auto;
+	/* overflow-x: auto; */
   @apply mt-2;
 }
 
@@ -96,7 +86,7 @@ ul~.highlight pre {
 }
 
 .markdown .inner_cell {
-	overflow: auto;
+	overflow-x: auto;
 }
 
 .prompt.input_prompt {
@@ -120,19 +110,16 @@ ul~.highlight pre {
 .markdown pre {
   @apply rounded pb-3 -mb-3;
 	overflow-x: auto;
-	overflow-y: auto;
 }
 
 .markdown .highlight pre {
   @apply border-l-0 text-lg border-gray-400 dark:border-gray-300 dark:bg-gray-900 dark:text-gray-200;
-	overflow-x: auto;
-	overflow-y: auto;
+	/* overflow-x: auto; */
 }
 
 .markdown .highlight pre span {
 	@apply font-sans border-0 leading-normal;
-	overflow-x: auto;
-	overflow-y: auto;
+	/* overflow-x: auto; */
 }
 
 .markdown .anchor-link {
@@ -168,7 +155,6 @@ ul~.highlight pre {
 .output_subarea.output_stream > pre{
 	@apply border-l-2 border-gray-400 dark:border-gray-300 bg-white dark:bg-gray-900 dark:text-gray-200;
 	overflow-x: auto;
-	overflow-y: auto;
 }
 
 .markdown .output_execute_result {
@@ -315,7 +301,7 @@ ul~.highlight pre {
 }
 
 .markdown kbd {
-  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+  @apply text-xs inline-block rounded border px-1 py-5 align-middle font-normal font-mono shadow;
 
 }
 
