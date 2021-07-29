@@ -155,8 +155,12 @@ ul~.highlight pre {
 /* output_html */
 .markdown .output_html {
 	overflow-x: auto;
-  @apply dark:text-gray-900;
-	@apply bg-white dark:bg-gray-800;
+	@apply -ml-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-900;
+
+}
+
+.dataframe {
+	@apply bg-gray-50 dark:bg-gray-800 my-5;
 }
 
 .markdown .highlight hl-ipython3{
