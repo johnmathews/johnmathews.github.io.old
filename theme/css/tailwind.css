@@ -44,7 +44,7 @@
 
 /* checkboxes in markdown */
 .markdown .checklist {
-  @apply list-none
+  @apply list-none mt-8
 }
 
 .markdown .checklist input[type="checkbox"] {
