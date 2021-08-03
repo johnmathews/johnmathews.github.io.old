@@ -1622,7 +1622,7 @@ ul~.highlight pre {
 }
 
 .markdown p {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   margin-bottom: 0px;
 }
 
@@ -1688,7 +1688,7 @@ ul~.highlight pre {
 }
 
 .markdown ol > li:first-child {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .markdown ol > li > ul {

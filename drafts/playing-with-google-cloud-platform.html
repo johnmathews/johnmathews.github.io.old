@@ -12,18 +12,18 @@
 <meta content="Playing with Google Cloud Platform -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud,google,serverless " name="keywords"/>
-<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learnt about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: 1. A cloud function is triggered by a JavaScript function in the browser 1. The function parses the page URL and the IP address and creates a record in DataStore 1. Each time the analytics page is... " name="description"/>
+<meta content=" My project to build my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database.... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Playing with Google Cloud Platform" property="twitter:title"/>
-<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learnt about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: 1. A cloud function is triggered by a JavaScript function in the browser 1. The function parses the page URL and the IP address and creates a record in DataStore 1. Each time the analytics page is... " name="twitter:description"/>
+<meta content=" My project to build my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database.... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/drafts/playing-with-google-cloud-platform.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Playing with Google Cloud Platform" property="og:title"/>
-<meta content=" My project to build my own web analytics has been a great gateway to learning more about Google Cloud Platform (GCP, or gcloud). So far I’ve learnt about DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: 1. A cloud function is triggered by a JavaScript function in the browser 1. The function parses the page URL and the IP address and creates a record in DataStore 1. Each time the analytics page is... " property="og:description"/>
+<meta content=" My project to build my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database.... " property="og:description"/>
 <meta content="https://johnmathews.eu/drafts/playing-with-google-cloud-platform.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -261,25 +261,81 @@
 <main class="lg:w-4/6">
 <article class="">
 <div class="markdown">
-<p>My project to build my own web analytics has been a great gateway to learning
-more about Google Cloud Platform (<span class="caps">GCP</span>, or gcloud). So far I’ve learnt about
-DataStore, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.</p>
+<p>My project to build my own web analytics has been a gateway to learning more
+about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions,
+Pub/Sub, Storage Buckets and Scheduler.</p>
 <h2 id="version-1">Version 1</h2>
-<p>My first version of the analytics tool took the following form:
-1.  A cloud function is triggered by a JavaScript function in the browser
-1.  The function parses the page <span class="caps">URL</span> and the <span class="caps">IP</span> address and creates a record in
-    DataStore
-1.  Each time the analytics page is loaded, a cloud function is triggered that
-    gets every record from DataStore, parses the data and creates a <span class="caps">JSON</span> blob
-    with aggregated data.
-1.  The browser receives the <span class="caps">JSON</span> blob, parses it and creates some charts and tables.</p>
-<p>The good: It works, it was quick and simple to build
-The bad: Its expensive. Loading the analytics page is slow - when the DataStore
+<p>My first version of the analytics tool took the following form:</p>
+<h3>Logger Function</h3>
+<ol>
+<li>A cloud function is triggered when the browser loads the analytics page and
+    sends a JavaScript beacon.</li>
+<li>The function parses the page <span class="caps">URL</span> and the <span class="caps">IP</span> address, and creates a record in
+    the database.</li>
+</ol>
+<h3>Aggregator Function</h3>
+<ol>
+<li>Each time the analytics page is loaded, a cloud function is triggered that
+    gets every record from DataStore, parses the data and returns a <span class="caps">JSON</span> blob
+    containing the aggregated data.</li>
+<li>The browser receives the <span class="caps">JSON</span>, parses it and creates some charts and tables.</li>
+</ol>
+<p>The good: It works, it was quick and simple to build</p>
+<p>The bad: Its expensive. Loading the analytics page is slow - when the DataStore
 was small it took 3 or 4 seconds, after a few thousand page views it took about
 40 seconds.</p>
+<p>Conclusion - keep the logger function as it is, but improve the aggregator function.</p>
 <h2 id="version-2">Version 2</h2>
-<p>The second version still used DataStore, but didn’t read the entire database and
-generate the analytics every time the analytics page was viewed.</p>
+<p>The second version still used DataStore but was much more computationally
+efficient. It didn’t read the entire database and generate the analytics every
+time the analytics page was viewed.</p>
+<p>Instead, a cloud function periodically collected all the records in the
+datastore database and calculated the aggregated results. The results were
+written to a <span class="caps">JSON</span> blob and put in a storage bucket. </p>
+<p>When the analytics page was loaded in a browser, the browser collects and
+processes the <span class="caps">JSON</span> blob from the storage bucket. This is much faster, performant
+and cheaper than creating the <span class="caps">JSON</span> blob each time the analytics page is viewed.</p>
+<p>The good: The analytics page loads at the same speed regardless of how much data
+has been aggregated and how frequently the analytics page is being viewed.
+Performance issues have been solved, though I still don’t think DataStore is the
+best database solution for this use case.</p>
+<p>The bad: DataStore seems expensive - I am being charged for AppEngine
+services (which I don’t really understand but is caused by using
+DataStore). If I can get monthly costs down to about a cup of coffee (about
+€4/month or €0.15/day) then I don’t mind running it indefinitely. </p>
+<h2 id="version-3">Version 3</h2>
+<p>Instead of using DataStore I will use BigQuery - its a Data Warehouse that is
+well suited for analytics. It is not well suited for transactional use cases -
+where data is being read, updated or created many times per second. </p>
+<p>This is fine for my use case - The Page Logger function writes a record to a
+BigQuery table each time it is invoked. During times of high traffic it’s
+possible that concurrency issues might arise and some page views will be lost
+but this isn’t an issue 99% of the time when traffic is very light. I believe I
+could use a newer <span class="caps">API</span> that google recently released to solve this problem but
+for now I’ll use the normal <span class="caps">API</span>.</p>
+<p>The rest of the process is unchanged - the aggregator function periodically
+reads the (BigQuery) database, crunches that data and puts a <span class="caps">JSON</span> blob into a
+storage bucket.</p>
+<p>The good: This is completely free. The analytics page can be viewed quickly
+regardless of the amount of site traffic.</p>
+<p>The bad: Under heavy traffic some page views might be lost due to a limit on how
+quickly new rows can be added to BigQuery tables. Using a new <span class="caps">API</span> might resolve this.</p>
+<h2 id="conclusion">Conclusion</h2>
+<h3>Totally free tools forever</h3>
+<p>The combination of Cloud Functions, Storage buckets and Big Query (along with
+Scheduler and Pub/Sub) seems really versatile and I think there are many
+interesting things that could be done by combining these services.</p>
+<p>Using them all for free (my usage is well within the free tier) makes the
+possibilities even more interesting. - Having compute and storage services
+running indefinitely in the cloud for free is amazing.</p>
+<h3>Aggregate by calendar month</h3>
+<p>An improvement to this analytics setup would be creating aggregated metrics for
+each calendar month and storing them in separate <span class="caps">JSON</span> files. This would prevent
+data older than one month being processed repeatedly, and create a cap on the
+amount of computational effort required (the maximum amount of data processed
+by one cloud function instance would become capped at one month).</p>
+<p>If the browser wanted to display more than one month of data, it would simply
+request more than one <span class="caps">JSON</span> file from the storage bucket.</p>
 </div>
 </article>
 </main>

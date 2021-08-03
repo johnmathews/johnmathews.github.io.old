@@ -222,7 +222,7 @@ ul~.highlight pre {
 
 
 .markdown p {
-  @apply mt-5 mb-0;
+  @apply mt-6 mb-0;
 }
 
 .markdown h2 + p {
@@ -277,7 +277,7 @@ ul~.highlight pre {
 }
 
 .markdown ol > li:first-child {
-  @apply mt-4;
+  @apply mt-8;
 }
 
 .markdown ol > li > ul {
