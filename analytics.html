@@ -342,18 +342,17 @@
             result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
         </script>
 <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
-<script crossorigin="anonymous" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 <script charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js" type="text/javascript"></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer" src="http://cdn.datatables.net/plug-ins/1.10.25/sorting/datetime-moment.js"></script>
 <script>
-
   // show spinners whilst the getJSON ajax call is loading
   const spinner = $('.spinner')
   spinner.removeAttr('hidden');
 
   $(document).ready(function() {
         var URL = "https://storage.googleapis.com/johnmathews.eu/website-analytics/aggregate-website-analyics.JSON"
-        console.log("url: ", URL)
         $.getJSON(
             {
             url: URL,
@@ -454,31 +453,16 @@
         var UniqueIpAddressesPerDay = new Chart(ctx, config)
 
         // views per page per day
-        Date.prototype.toShortFormat = function() {
-            let monthNames =["Jan","Feb","March","April", "May","June","July","Aug", "Sep", "Oct","Nov","Dec"];
-            let day = this.getDate();
-            let monthIndex = this.getMonth();
-            let monthName = monthNames[monthIndex];
-            let year = this.getFullYear();
-            return `${day} ${monthName}` // ${year}
-        }
+        // Date.prototype.toShortFormat = function() {
+        //     let monthNames =["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        //     let day = this.getDate();
+        //     let monthIndex = this.getMonth();
+        //     let monthName = monthNames[monthIndex];
+        //     let year = this.getFullYear();
+        //     return `${day} ${monthName}` // ${year}
+        // }
 
-        // datatables data sort plugin https://datatables.net/blog/2014-12-18
-        $.fn.dataTable.moment = function ( format, locale ) {
-            var types = $.fn.dataTable.ext.type;
 
-            // Add type detection
-            types.detect.unshift( function ( d ) {
-                return moment( d, format, locale, true ).isValid() ?
-                    'moment-'+format :
-                    null;
-            } );
-
-            // Add sorting method - use an integer for the sorting
-            types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
-                return moment( d, format, locale, true ).unix();
-            };
-        };
         // make a normal html table of all the views per page per day, then call DataTable() on it.
         var html = '<table id="dataTable" class="display">';
         html += '<thead>';
@@ -490,7 +474,7 @@
           for( var j in viewsPageDay[i] ) {
             if (j === 'date'){
               var date = new Date(viewsPageDay[i][j])
-              html += '<td>' + date.toShortFormat()  + '</td>';
+              html += '<td>' + date + '</td>';
             } else if (j === 'page') {
                       html += '<td>' + `<a href=${viewsPageDay[i][j]}>${viewsPageDay[i][j]}</a>`  + '</td>';
             } else {
@@ -502,9 +486,14 @@
         html += '</tbody>';
         html += '</table>';
         $('#viewsPageDay').html(html)
-        $.fn.dataTable.moment( 'D MMMM' ); // this uses the plugin defined above. seems magical.
+        $.fn.dataTable.moment("D MMM"); // datatables data sort plugin https://datatables.net/blog/2014-12-18 
         $('#dataTable').DataTable({
-           "order": [[ 0, "desc" ], [2, "desc"]] // sort on date and then by views
+           "order": [[ 0, "desc" ], [2, "desc"]], // sort on date and then by views
+                  "columns": [
+                            {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
+                            null,
+                            null
+                        ]
         })
       })
     })

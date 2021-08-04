@@ -76,7 +76,7 @@ by one cloud function instance would become capped at one month).&lt;/p&gt;
 request more than one &lt;span class="caps"&gt;JSON&lt;/span&gt; file from the storage bucket.&lt;/p&gt;
 &lt;h3&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h3&gt;
 &lt;ul class="checklist"&gt;
-&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Frontend - the DataTables column containing the date is being sorted like a normal string.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"/&gt; Frontend - the DataTables column containing the date is being sorted like a normal string.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Backend - create separate &lt;span class="caps"&gt;JSON&lt;/span&gt; files for each month.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Technical/Engineering"/><category term="cloud"/><category term="google"/><category term="serverless"/></entry><entry><title>Design Patterns</title><link href="https://johnmathews.eu/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help
 engineers create complex code reliably and quickly. I first heard about design
