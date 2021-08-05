@@ -1658,16 +1658,8 @@ ul~.highlight pre {
 
 /* Lists.. */
 
-#snippets .markdown ul li:first-child {
-  margin-top: 1.25rem
-}
-
-#snippets .markdown ol li:first-child {
-  margin-top: 1.25rem
-}
-
-.markdown ul li p {
-  margin-top: 0.5rem
+.markdown li   {
+  margin-top: 1.25rem;
 }
 
 .markdown li p:first-child {
@@ -1676,6 +1668,10 @@ ul~.highlight pre {
 
 .markdown li p {
   margin-top: 0.5rem;
+}
+
+.markdown ul li p {
+  margin-top: 0.5rem
 }
 
 .markdown ul {
@@ -1689,15 +1685,19 @@ ul~.highlight pre {
 }
 
 .markdown ol > li:first-child {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 
 .markdown ol > li > ul {
   margin-top: 0px;
 }
 
-.markdown li   {
-  margin-top: 0.5rem;
+#snippets .markdown ul li:first-child {
+  margin-top: 1.25rem
+}
+
+#snippets .markdown ol li:first-child {
+  margin-top: 1.25rem
 }
 
 /* headings */

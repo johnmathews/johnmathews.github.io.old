@@ -248,16 +248,8 @@ ul~.highlight pre {
 
 /* Lists.. */
 
-#snippets .markdown ul li:first-child {
-	@apply mt-5
-}
-
-#snippets .markdown ol li:first-child {
-	@apply mt-5
-}
-
-.markdown ul li p {
-	@apply mt-2
+.markdown li   {
+  @apply mt-5;
 }
 
 .markdown li p:first-child {
@@ -266,6 +258,9 @@ ul~.highlight pre {
 
 .markdown li p {
  @apply mt-2;
+}
+.markdown ul li p {
+	@apply mt-2
 }
 
 .markdown ul {
@@ -277,16 +272,21 @@ ul~.highlight pre {
 }
 
 .markdown ol > li:first-child {
-  @apply mt-8;
+  @apply mt-5;
 }
 
 .markdown ol > li > ul {
   @apply mt-0;
 }
 
-.markdown li   {
-  @apply mt-2;
+#snippets .markdown ul li:first-child {
+	@apply mt-5
 }
+
+#snippets .markdown ol li:first-child {
+	@apply mt-5
+}
+
 
 
 /* headings */
