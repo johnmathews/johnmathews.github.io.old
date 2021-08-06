@@ -249,11 +249,11 @@ ul~.highlight pre {
 /* Lists.. */
 
 .markdown li   {
-  @apply mt-5;
+  @apply mt-2;
 }
 
 .markdown li p:first-child {
- @apply mt-0;
+ @apply mt-2;
 }
 
 .markdown li p {
@@ -275,8 +275,12 @@ ul~.highlight pre {
   @apply mt-5;
 }
 
-.markdown ol > li > ul {
-  @apply mt-0;
+.markdown ul > li:first-child {
+  @apply mt-5;
+}
+
+.markdown ol li ul li:first-child {
+  @apply mt-2;
 }
 
 #snippets .markdown ul li:first-child {

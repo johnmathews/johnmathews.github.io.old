@@ -1659,11 +1659,11 @@ ul~.highlight pre {
 /* Lists.. */
 
 .markdown li   {
-  margin-top: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 .markdown li p:first-child {
-  margin-top: 0px;
+  margin-top: 0.5rem;
 }
 
 .markdown li p {
@@ -1688,8 +1688,12 @@ ul~.highlight pre {
   margin-top: 1.25rem;
 }
 
-.markdown ol > li > ul {
-  margin-top: 0px;
+.markdown ul > li:first-child {
+  margin-top: 1.25rem;
+}
+
+.markdown ol li ul li:first-child {
+  margin-top: 0.5rem;
 }
 
 #snippets .markdown ul li:first-child {
