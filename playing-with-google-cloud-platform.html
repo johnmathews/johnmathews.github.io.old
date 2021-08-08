@@ -12,18 +12,18 @@
 <meta content="Playing with Google Cloud Platform -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud,google,serverless " name="keywords"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Playing with Google Cloud Platform" property="twitter:title"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="twitter:description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/playing-with-google-cloud-platform.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Playing with Google Cloud Platform" property="og:title"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " property="og:description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " property="og:description"/>
 <meta content="https://johnmathews.eu/playing-with-google-cloud-platform.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -307,8 +307,8 @@ DataStore). If I can get monthly costs down to about a cup of coffee (about
 <p>Instead of using DataStore I will use BigQuery - its a Data Warehouse that is
 well suited for analytics. It is not well suited for transactional use cases -
 where data is being read, updated or created many times per second.</p>
-<p>This is fine for my use case - The Page Logger function writes a record to a
-BigQuery table each time it is invoked. During times of high traffic it’s
+<p>This is fine for my use case - the Page Logger function writes a record to a
+BigQuery table each time each time a page view is logged. During times of high traffic it’s
 possible that concurrency issues might arise and some page views will be lost,
 but this isn’t an issue 99% of the time. My site traffic is very light. I believe I
 could use a newer <span class="caps">API</span> that google recently released to solve this problem but
@@ -322,9 +322,9 @@ regardless of the amount of site traffic.</p>
 quickly new rows can be added to BigQuery tables. Using a new <span class="caps">API</span> might resolve this.</p>
 <h2 id="conclusion">Conclusion</h2>
 <h3>Totally free tools forever</h3>
-<p>The combination of Cloud Functions, Storage buckets and Big Query (along with
+<p>The combination of Cloud Functions, Storage Buckets and Big Query (along with
 Scheduler and Pub/Sub) seems really versatile and I think there are many
-interesting things that could be done by combining these services.</p>
+interesting things that could be done by combining these services<sup id="sf-playing-with-google-cloud-platform-1-back"><a class="simple-footnote" href="#sf-playing-with-google-cloud-platform-1" title="The question then becomes: “Just because you could do it, should you do it?”">1</a></sup> .</p>
 <p>Using them all for free (my usage is well within the free tier) makes the
 possibilities even more interesting. Having compute and storage services
 running indefinitely in the cloud for free is amazing.</p>
@@ -340,11 +340,20 @@ request more than one <span class="caps">JSON</span> file from the storage buck
 <ul class="checklist">
 <li><input checked="" disabled="" type="checkbox"/> Frontend - the DataTables column containing the date is being sorted like a normal string.</li>
 <li><input disabled="" type="checkbox"/> Backend - create separate <span class="caps">JSON</span> files for each month.</li>
-</ul>
+</ul><ol class="simple-footnotes"><li id="sf-playing-with-google-cloud-platform-1">The
+question then becomes: “Just because you could do it, should you do it?” <a class="simple-footnote-back" href="#sf-playing-with-google-cloud-platform-1-back">↩</a></li></ol>
 </div>
 </article>
 </main>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
+<div class="flex flex-row">
+<div class="text-red-500 dark:text-red-500"> ← </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/load-testing-web-analytics-tool.html" id="previousArticleInCategory"> Load-testing my Web Analytics Tool</a>
+</div>
+<div class="flex flex-row mt-2">
+<div class="text-green-500 dark:text-green-200"> → </div>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/elon-musk-s-engineering-philosophy.html" id="nextArticleInCategory"> Elon Musk’s Engineering Philosophy</a>
+</div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
           <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/engineering.html" id="otherArticlesInCategory"> Engineering</a>

@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Engineering</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/engineering.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-07-13T21:18:29+02:00</updated><entry><title>Playing with Google Cloud Platform</title><link href="https://johnmathews.eu/playing-with-google-cloud-platform.html" rel="alternate"/><published>2021-07-13T21:18:29+02:00</published><updated>2021-07-13T21:18:29+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-13:/playing-with-google-cloud-platform.html</id><summary type="html"/><content type="html">&lt;p&gt;Building my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;web analytics&lt;/a&gt; has
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Engineering</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/engineering.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-08-08T16:41:00+02:00</updated><entry><title>Elon Musk’s Engineering Philosophy</title><link href="https://johnmathews.eu/elon-musk-s-engineering-philosophy.html" rel="alternate"/><published>2021-08-08T16:41:00+02:00</published><updated>2021-08-08T16:41:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-08-08:/elon-musk-s-engineering-philosophy.html</id><summary type="html"/><content type="html">&lt;p&gt;Musk overviewed his five step engineering process, which must be completed in order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Make the requirements less dumb&lt;/strong&gt;. The requirements are definitely dumb; it
+    does not matter who gave them to you. He notes that it’s particularly
+    dangerous if an intelligent person gives you the requirements, as you may
+    not question the requirements enough. “Everyone’s wrong. No matter who you
+    are, everyone is wrong some of the time.” He further notes that “all designs
+    are wrong, it’s just a matter of how wrong.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Try very hard to delete the part or process&lt;/strong&gt;. If parts are not being added
+    back into the design at least 10% of the time, not enough parts are being
+    deleted. Musk noted that the bias tends to be very strongly toward “let’s
+    add this part or process step in case we need it.” Additionally, each
+    required part and process must come from a name, not a department, as a
+    department cannot be asked why a requirement exists, but a person can.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simplify and optimize the design&lt;/strong&gt;. This is step three as the most common
+    error of a smart engineer is to optimize something that should not exist.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Accelerate cycle time&lt;/strong&gt;. Musk states “you’re moving too slowly, go faster! But
+    don’t go faster until you’ve worked on the other three things first.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Automate&lt;/strong&gt;. An important part of this is to remove in-process testing after
+    the problems have been diagnosed; if a product is reaching the end of a
+    production line with a high acceptance rate, there is no need for in-process testing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;div class="relative mt-3" style="padding-top: 56.25%"&gt;
+&lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://youtube.com/embed/t705r8ICkRw"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;/p&gt;</content><category term="Technical/Engineering"/></entry><entry><title>Playing with Google Cloud Platform</title><link href="https://johnmathews.eu/playing-with-google-cloud-platform.html" rel="alternate"/><published>2021-07-13T21:18:29+02:00</published><updated>2021-07-13T21:18:29+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-13:/playing-with-google-cloud-platform.html</id><summary type="html"/><content type="html">&lt;p&gt;Building my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;web analytics&lt;/a&gt; has
 been a gateway to learning more about Google Cloud Platform. So far I’ve used
 DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.&lt;/p&gt;
 &lt;h2 id="version-1"&gt;Version 1&lt;/h2&gt;
@@ -45,8 +81,8 @@ DataStore). If I can get monthly costs down to about a cup of coffee (about
 &lt;p&gt;Instead of using DataStore I will use BigQuery - its a Data Warehouse that is
 well suited for analytics. It is not well suited for transactional use cases -
 where data is being read, updated or created many times per second.&lt;/p&gt;
-&lt;p&gt;This is fine for my use case - The Page Logger function writes a record to a
-BigQuery table each time it is invoked. During times of high traffic it’s
+&lt;p&gt;This is fine for my use case - the Page Logger function writes a record to a
+BigQuery table each time each time a page view is logged. During times of high traffic it’s
 possible that concurrency issues might arise and some page views will be lost,
 but this isn’t an issue 99% of the time. My site traffic is very light. I believe I
 could use a newer &lt;span class="caps"&gt;API&lt;/span&gt; that google recently released to solve this problem but
@@ -60,9 +96,9 @@ regardless of the amount of site traffic.&lt;/p&gt;
 quickly new rows can be added to BigQuery tables. Using a new &lt;span class="caps"&gt;API&lt;/span&gt; might resolve this.&lt;/p&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 &lt;h3&gt;Totally free tools forever&lt;/h3&gt;
-&lt;p&gt;The combination of Cloud Functions, Storage buckets and Big Query (along with
+&lt;p&gt;The combination of Cloud Functions, Storage Buckets and Big Query (along with
 Scheduler and Pub/Sub) seems really versatile and I think there are many
-interesting things that could be done by combining these services.&lt;/p&gt;
+interesting things that could be done by combining these services&lt;sup id="sf-playing-with-google-cloud-platform-1-back"&gt;&lt;a class="simple-footnote" href="#sf-playing-with-google-cloud-platform-1" title="The question then becomes: “Just because you could do it, should you do it?”"&gt;1&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
 &lt;p&gt;Using them all for free (my usage is well within the free tier) makes the
 possibilities even more interesting. Having compute and storage services
 running indefinitely in the cloud for free is amazing.&lt;/p&gt;
@@ -78,7 +114,8 @@ request more than one &lt;span class="caps"&gt;JSON&lt;/span&gt; file from the s
 &lt;ul class="checklist"&gt;
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"/&gt; Frontend - the DataTables column containing the date is being sorted like a normal string.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Backend - create separate &lt;span class="caps"&gt;JSON&lt;/span&gt; files for each month.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Engineering"/><category term="cloud"/><category term="google"/><category term="serverless"/></entry><entry><title>Design Patterns</title><link href="https://johnmathews.eu/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help
+&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-playing-with-google-cloud-platform-1"&gt;The
+question then becomes: “Just because you could do it, should you do it?” &lt;a class="simple-footnote-back" href="#sf-playing-with-google-cloud-platform-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="cloud"/><category term="google"/><category term="serverless"/></entry><entry><title>Design Patterns</title><link href="https://johnmathews.eu/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help
 engineers create complex code reliably and quickly. I first heard about design
 patterns from Aaron Maxwell in his &lt;a href="https://powerfulpython.com/"&gt;Powerful
 Python&lt;/a&gt; newsletter, and made some
