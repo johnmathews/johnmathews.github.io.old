@@ -3,7 +3,7 @@ import './mouseTrap.js'
 /* global Mousetrap siteURL chooseBoth chooseTechnical chooseNonTechnical */
 
 function goToSelected () {
-  $('.selected')[0].click()
+  $('.selected')[$('.selected').length-1].click()
 }
 
 function focusSelectedListItem (n) {
