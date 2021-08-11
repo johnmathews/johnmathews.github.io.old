@@ -268,7 +268,7 @@ ul~.highlight pre {
 }
 
 .markdown ol {
-  @apply pl-8 list-decimal;
+  @apply pl-8 pt-4 list-decimal;
 }
 
 .markdown ol > li:first-child {

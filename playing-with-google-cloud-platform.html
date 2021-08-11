@@ -12,18 +12,18 @@
 <meta content="Playing with Google Cloud Platform -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud,google,serverless " name="keywords"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Playing with Google Cloud Platform" property="twitter:title"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="twitter:description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/playing-with-google-cloud-platform.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Playing with Google Cloud Platform" property="og:title"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " property="og:description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " property="og:description"/>
 <meta content="https://johnmathews.eu/playing-with-google-cloud-platform.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -263,7 +263,7 @@
 <div class="markdown">
 <p>Building my own <a href="https://johnmathews.eu/building-my-own-site-analytics.html">web analytics</a> has
 been a gateway to learning more about Google Cloud Platform. So far I’ve used
-DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.</p>
+DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.</p>
 <h2 id="version-1">Version 1</h2>
 <p>My first version of the analytics tool took the following form:</p>
 <h3>Logger Function</h3>
@@ -338,7 +338,7 @@ by one cloud function instance would become capped at one month).</p>
 request more than one <span class="caps">JSON</span> file from the storage bucket.</p>
 <h3><span class="caps">TODO</span></h3>
 <ul class="checklist">
-<li><input checked="" disabled="" type="checkbox"/> Frontend - the DataTables column containing the date is being sorted like a normal string.</li>
+<li><input checked="" disabled="" type="checkbox"/> Frontend - the DataTables column containing the date should be sorted as a Date object. It is being sorted like a normal string.</li>
 <li><input disabled="" type="checkbox"/> Backend - create separate <span class="caps">JSON</span> files for each month.</li>
 </ul><ol class="simple-footnotes"><li id="sf-playing-with-google-cloud-platform-1">The
 question then becomes: “Just because you could do it, should you do it?” <a class="simple-footnote-back" href="#sf-playing-with-google-cloud-platform-1-back">↩</a></li></ol>

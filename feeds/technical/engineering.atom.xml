@@ -38,7 +38,7 @@
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://storage.googleapis.com/johnmathews.eu/movies/Starbase-Factory-Tour-with-Elon-Musk-Part-1.mp4"&gt;archive&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Engineering"/></entry><entry><title>Playing with Google Cloud Platform</title><link href="https://johnmathews.eu/playing-with-google-cloud-platform.html" rel="alternate"/><published>2021-07-13T21:18:29+02:00</published><updated>2021-07-13T21:18:29+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-13:/playing-with-google-cloud-platform.html</id><summary type="html"/><content type="html">&lt;p&gt;Building my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;web analytics&lt;/a&gt; has
 been a gateway to learning more about Google Cloud Platform. So far I’ve used
-DataStore, Big Query, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.&lt;/p&gt;
+DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.&lt;/p&gt;
 &lt;h2 id="version-1"&gt;Version 1&lt;/h2&gt;
 &lt;p&gt;My first version of the analytics tool took the following form:&lt;/p&gt;
 &lt;h3&gt;Logger Function&lt;/h3&gt;
@@ -113,7 +113,7 @@ by one cloud function instance would become capped at one month).&lt;/p&gt;
 request more than one &lt;span class="caps"&gt;JSON&lt;/span&gt; file from the storage bucket.&lt;/p&gt;
 &lt;h3&gt;&lt;span class="caps"&gt;TODO&lt;/span&gt;&lt;/h3&gt;
 &lt;ul class="checklist"&gt;
-&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"/&gt; Frontend - the DataTables column containing the date is being sorted like a normal string.&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"/&gt; Frontend - the DataTables column containing the date should be sorted as a Date object. It is being sorted like a normal string.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Backend - create separate &lt;span class="caps"&gt;JSON&lt;/span&gt; files for each month.&lt;/li&gt;
 &lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-playing-with-google-cloud-platform-1"&gt;The
 question then becomes: “Just because you could do it, should you do it?” &lt;a class="simple-footnote-back" href="#sf-playing-with-google-cloud-platform-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="cloud"/><category term="google"/><category term="serverless"/></entry><entry><title>Design Patterns</title><link href="https://johnmathews.eu/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help

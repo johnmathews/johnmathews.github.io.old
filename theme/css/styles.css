@@ -1681,6 +1681,7 @@ ul~.highlight pre {
 
 .markdown ol {
   list-style-type: decimal;
+  padding-top: 1rem;
   padding-left: 2rem;
 }
 
