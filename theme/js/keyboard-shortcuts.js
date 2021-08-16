@@ -59,6 +59,9 @@ $(document).ready(function () {
     window.scrollBy({ top: -200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('g i', function () {
+    // var url = `https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path=${window.location.pathname}`
+    // var data = {'category':'shortcut','event':'gi'}
+    // navigator.sendBeacon(url, data);
     window.location.href = `${siteURL}/blog.html`
   })
   Mousetrap.bind('G', function () {
