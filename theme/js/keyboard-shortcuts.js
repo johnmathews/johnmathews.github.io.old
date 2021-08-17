@@ -47,29 +47,29 @@ function incrementFocus (direction) {
 }
 
 $(document).ready(function () {
-  var url = 'https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger'
+  var url = 'https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname
   window.selectedListItem = -1
 
   Mousetrap.bind('ctrl+j', function () { incrementFocus('f') })
   Mousetrap.bind('ctrl+k', function () { incrementFocus('b') })
   Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
-    var data = {'category':'keyboard-shortcut','event':'j'}
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'j'});
     navigator.sendBeacon(url, data);
     window.scrollBy({ top: 200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('k', function () {
-    var data = {'category':'keyboard-shortcut','event':'k'}
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'k'});
     navigator.sendBeacon(url, data);
     window.scrollBy({ top: -200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('g i', function () {
-    var data = {'category':'keyboard-shortcut','event':'gi'}
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'gi'});
     navigator.sendBeacon(url, data);
     window.location.href = `${siteURL}/blog.html`
   })
   Mousetrap.bind('G', function () {
-    var data = {'category':'keyboard-shortcut','event':'G'}
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'G'});
     navigator.sendBeacon(url, data);
     $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 500)
   })
