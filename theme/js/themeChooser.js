@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $("#viewShortcuts").click(function(){
         $("#keyboardShortcuts").toggleClass("hidden")
         var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`

@@ -62,13 +62,13 @@ $(document).ready(function () {
   })
   Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
-    var data = JSON.stringify({'category':'keyboard-shortcut','event':'j'});
-    navigator.sendBeacon(url, data);
+    // var data = JSON.stringify({'category':'keyboard-shortcut','event':'j'});
+    // navigator.sendBeacon(url, data);
     window.scrollBy({ top: 200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('k', function () {
-    var data = JSON.stringify({'category':'keyboard-shortcut','event':'k'});
-    navigator.sendBeacon(url, data);
+    // var data = JSON.stringify({'category':'keyboard-shortcut','event':'k'});
+    // navigator.sendBeacon(url, data);
     window.scrollBy({ top: -200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('g i', function () {
