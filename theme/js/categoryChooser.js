@@ -11,10 +11,6 @@ function toggleMenu(){
 
 // choosing which articles to make visible based on choice in cat modal
 function chooseBoth() {
-  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
-  var data = JSON.stringify({'category':'category-chooser','event':'chooseBoth'});
-  navigator.sendBeacon(url, data);
-
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'all');
 
@@ -36,10 +32,6 @@ function chooseBoth() {
 }
 
 function chooseTechnical(){
-  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
-  var data = JSON.stringify({'category':'category-chooser','event':'chooseTechnical'});
-  navigator.sendBeacon(url, data);
-
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'technical');
 
@@ -62,10 +54,6 @@ function chooseTechnical(){
 }
 
 function chooseNonTechnical() {
-  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
-  var data = JSON.stringify({'category':'category-chooser','event':'chooseNonTechnical'});
-  navigator.sendBeacon(url, data);
-
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'nonTechnical');
 
@@ -116,9 +104,25 @@ $( document ).ready(function() {
     chooseBoth()
   }
 
-  $( "#chooseBoth" ).click(chooseBoth);
-  $( "#chooseTechnical" ).click(chooseTechnical);
-  $( "#chooseNonTechnical" ).click(chooseNonTechnical);
+  $( "#chooseBoth" ).click(function() {
+    chooseBoth();
+    var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+    var data = JSON.stringify({'category':'click','event':'chooseBoth'});
+    navigator.sendBeacon(url, data);
+
+  });
+  $( "#chooseTechnical" ).click(function() {
+    chooseTechnical()
+    var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+    var data = JSON.stringify({'category':'click','event':'chooseTechnical'});
+    navigator.sendBeacon(url, data);
+  });
+  $( "#chooseNonTechnical" ).click(function() {
+    chooseNonTechnical()
+    var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+    var data = JSON.stringify({'category':'click','event':'chooseNonTechnical'});
+    navigator.sendBeacon(url, data);
+  });
 
   // hide cat modal if its clicked.
   // must be at bottom
