@@ -62,13 +62,9 @@ $(document).ready(function () {
   })
   Mousetrap.bind('return', goToSelected)
   Mousetrap.bind('j', function () {
-    // var data = JSON.stringify({'category':'keyboard-shortcut','event':'j'});
-    // navigator.sendBeacon(url, data);
     window.scrollBy({ top: 200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('k', function () {
-    // var data = JSON.stringify({'category':'keyboard-shortcut','event':'k'});
-    // navigator.sendBeacon(url, data);
     window.scrollBy({ top: -200, left: 0, behavior: 'smooth' })
   })
   Mousetrap.bind('g i', function () {
@@ -82,12 +78,12 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 500)
   })
   Mousetrap.bind('g a', function () {
-    var data = JSON.stringify({'category':'keyboard-shortcut','event':'a'});
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'ga'});
     navigator.sendBeacon(url, data);
     window.location.href = `${siteURL}/about.html`
   })
   Mousetrap.bind('g b', function () {
-    var data = JSON.stringify({'category':'keyboard-shortcut','event':'b'});
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'gb'});
     navigator.sendBeacon(url, data);
     window.history.back()
   })
