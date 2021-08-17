@@ -2,14 +2,23 @@ $(document).ready(function () {
 
     $("#viewShortcuts").click(function(){
         $("#keyboardShortcuts").toggleClass("hidden")
+        var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+        var data = JSON.stringify({'category':'buttonClick','event':'viewShortcuts'});
+        navigator.sendBeacon(url, data);
     })
     $("#keyboardShortcuts").click(function(){
+        var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+        var data = JSON.stringify({'category':'buttonClick','event':'keyboardShortcuts'});
+        navigator.sendBeacon(url, data);
         $("#keyboardShortcuts").toggleClass("hidden")
     })
 
     if (document.getElementById('hamburger') != null) {
         $('.fa-bars').click(function () {
             window.hamburgerUsed = true
+            var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+            var data = JSON.stringify({'category':'buttonClick','event':'hamburgerMenu'});
+            navigator.sendBeacon(url, data);
         })
         document.getElementById('hamburger').onclick = toggleMenu
     };
@@ -58,6 +67,9 @@ $(document).ready(function () {
 
     Mousetrap.bind('t t', function () {
         modeSwitcher()
+        var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+        var data = JSON.stringify({'category':'keyboard-shortcut','event':'tt'});
+        navigator.sendBeacon(url, data);
     })
 
     // change theme if theme switcher button is clicked

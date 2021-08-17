@@ -1,4 +1,8 @@
 function toggleMenu(){
+  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+  var data = JSON.stringify({'category':'category-chooser','event':'toggleMenu'});
+  navigator.sendBeacon(url, data);
+
   const navToggle = document.getElementsByClassName("toggle");
   for (let i = 0; i < navToggle.length; i++) {
     navToggle.item(i).classList.toggle("hidden");
@@ -7,6 +11,10 @@ function toggleMenu(){
 
 // choosing which articles to make visible based on choice in cat modal
 function chooseBoth() {
+  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+  var data = JSON.stringify({'category':'category-chooser','event':'chooseBoth'});
+  navigator.sendBeacon(url, data);
+
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'all');
 
@@ -28,6 +36,10 @@ function chooseBoth() {
 }
 
 function chooseTechnical(){
+  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+  var data = JSON.stringify({'category':'category-chooser','event':'chooseTechnical'});
+  navigator.sendBeacon(url, data);
+
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'technical');
 
@@ -50,6 +62,10 @@ function chooseTechnical(){
 }
 
 function chooseNonTechnical() {
+  var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+  var data = JSON.stringify({'category':'category-chooser','event':'chooseNonTechnical'});
+  navigator.sendBeacon(url, data);
+
   window.selectedListItem = -1
   window.localStorage.setItem('categoryChoice', 'nonTechnical');
 
@@ -107,6 +123,10 @@ $( document ).ready(function() {
   // hide cat modal if its clicked.
   // must be at bottom
   $( "#catModal" ).click(function() {
+    var url = `https://us-central1-johnmathews-website.cloudfunctions.net/client-event-logger?path=${window.location.pathname}`
+    var data = JSON.stringify({'category':'category-chooser','event':'catModal'});
+    navigator.sendBeacon(url, data);
+
     $('#catModal').addClass('hidden');
     // toggle cat modal view if catModal icon is clicked
     if (window.hamburgerUsed === true) {
