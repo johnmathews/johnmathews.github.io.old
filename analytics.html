@@ -287,6 +287,11 @@
 <div class="spinner z-50 mx-auto mt-20" hidden=""></div>
 <canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas>
 </div>
+<div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
+<div class="mb-3">Shortcuts</div>
+<div class="spinner z-50 mx-auto mt-20" hidden=""></div>
+<canvas height="200" id="js-events" width="400"></canvas>
+</div>
 </div>
 </article>
 </main>
@@ -352,6 +357,87 @@
   spinner.removeAttr('hidden');
 
   $(document).ready(function() {
+	var eventsURL = "https://storage.googleapis.com/johnmathews.eu/website-analytics/aggregate-client-js-events.JSON"
+        $.getJSON(
+            {
+            url: eventsURL,
+            timeout: 20000
+            }
+        ).done(function(srcData) {
+	// JavaScript shortcut events
+	var uniqueDates = []
+	var dailyEvents = JSON.parse(srcData['daily_events_by_type'])
+	var dailyEventsCleaned = {}
+
+	labels = []
+	for (var i in Object.keys(dailyEvents['time'])){
+	  value = Object.values(dailyEvents['time'])[i]
+	  // need to make this a nice string probs
+	  labels.push(new Date(value).toString().slice(0,10))
+	}
+
+	var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+			  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+			  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
+			  '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+			  '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+			  '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+			  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+			  '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+			  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+			  '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+
+	datasets = []
+	for (var i in Object.keys(dailyEvents)){
+	  if ((Object.keys(dailyEvents)[i] === 'time') == false){
+		set = {}
+		set['label'] = Object.keys(dailyEvents)[i]
+		set['backgroundColor'] = colorArray[i]
+		set['data'] = []
+		for (var j in Object.keys(dailyEvents[Object.keys(dailyEvents)[i]])) {
+		  value = Object.values(dailyEvents[Object.keys(dailyEvents)[i]])[j]
+		  set['data'].push(value)
+		}
+	    datasets.push(set)
+	  } 
+	}
+
+	data = {}
+	data['labels'] = labels
+	data['datasets'] = datasets
+
+        // options for both the line charts
+        const options = {
+             responsive: true,
+             plugins: {
+               legend: false,
+                  tooltip: {
+                     enabled: true,
+                     displayColors: true,
+                     callbacks: {
+                       title: () => null,
+                     }
+                 }
+             },
+             scales: {
+               x: {
+		 stacked: true,
+               },
+               y: {
+		 stacked: true,
+                }
+              }
+           }
+
+	var ctx = document.getElementById('js-events').getContext('2d')
+	var ActionsPerDay = new Chart(ctx, {
+	  type: 'bar',
+	  data: data,
+	  options: options
+	})
+
+	});
+
         var URL = "https://storage.googleapis.com/johnmathews.eu/website-analytics/aggregate-website-analyics.JSON"
         $.getJSON(
             {
@@ -451,16 +537,6 @@
         var data = { labels: labels, datasets: datasets };
         var config = {type: 'line', data: data, options: options};
         var UniqueIpAddressesPerDay = new Chart(ctx, config)
-
-        // views per page per day
-        // Date.prototype.toShortFormat = function() {
-        //     let monthNames =["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        //     let day = this.getDate();
-        //     let monthIndex = this.getMonth();
-        //     let monthName = monthNames[monthIndex];
-        //     let year = this.getFullYear();
-        //     return `${day} ${monthName}` // ${year}
-        // }
 
 
         // make a normal html table of all the views per page per day, then call DataTable() on it.
