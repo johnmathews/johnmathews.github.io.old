@@ -288,7 +288,7 @@
 <canvas height="200" id="UniqueIpAddressesPerDay" width="400"></canvas>
 </div>
 <div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
-<div class="mb-3">Shortcuts</div>
+<div class="mb-3">User Interactions</div>
 <div class="spinner z-50 mx-auto mt-20" hidden=""></div>
 <canvas height="200" id="js-events" width="400"></canvas>
 </div>
@@ -357,6 +357,8 @@
   spinner.removeAttr('hidden');
 
   $(document).ready(function() {
+
+	// 1. JavaScript shortcut events
 	var eventsURL = "https://storage.googleapis.com/johnmathews.eu/website-analytics/aggregate-client-js-events.JSON"
         $.getJSON(
             {
@@ -364,17 +366,19 @@
             timeout: 20000
             }
         ).done(function(srcData) {
-	// JavaScript shortcut events
-	var uniqueDates = []
 	var dailyEvents = JSON.parse(srcData['daily_events_by_type'])
-	var dailyEventsCleaned = {}
 
-	labels = []
-	for (var i in Object.keys(dailyEvents['time'])){
-	  value = Object.values(dailyEvents['time'])[i]
-	  // need to make this a nice string probs
-	  labels.push(new Date(value).toString().slice(0,10))
+	var labels = []
+	for (var i in Object.keys(dailyEvents['index'])){
+	  value = Object.values(dailyEvents['index'])[i]
+	  labels.push(new Date(value))
 	}
+
+			  console.log(dailyEvents)
+	labels = labels.sort((a, b) => b.date - a.date)
+        labels = labels.map((date) => {
+          return moment(date, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
+        })
 
 	var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
 			  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
@@ -389,7 +393,7 @@
 
 	datasets = []
 	for (var i in Object.keys(dailyEvents)){
-	  if ((Object.keys(dailyEvents)[i] === 'time') == false){
+	  if ((Object.keys(dailyEvents)[i] === 'index') == false){
 		set = {}
 		set['label'] = Object.keys(dailyEvents)[i]
 		set['backgroundColor'] = colorArray[i]
@@ -406,7 +410,6 @@
 	data['labels'] = labels
 	data['datasets'] = datasets
 
-        // options for both the line charts
         const options = {
              responsive: true,
              plugins: {
@@ -420,10 +423,13 @@
                  }
              },
              scales: {
-               x: {
+               xAxes: {
 		 stacked: true,
+                 // type: 'time', // doesn't make sense for a bar chart. just sort stuff properly.
                },
                y: {
+                 beginAtZero: true,
+                 // type: 'logarithmic',
 		 stacked: true,
                 }
               }
@@ -437,7 +443,8 @@
 	})
 
 	});
-
+	
+	// 2. Other metrics
         var URL = "https://storage.googleapis.com/johnmathews.eu/website-analytics/aggregate-website-analyics.JSON"
         $.getJSON(
             {
