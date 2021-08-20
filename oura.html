@@ -349,26 +349,6 @@
       var activity = DATA["activity"]
       var readiness = DATA["readiness"]
 
-      sleep.shift()
-      readiness.shift()
-
-      function movingAverage(val, index, array){
-	  if (index == 0){
-            return val.toFixed(0)
-	  } else if (index == 1) {
-	    return ((array[index] + array[index-1])/2).toFixed(0)
-	  } else {
-            return ((array[index] + array[index-1] + array[index-2])/3).toFixed(0)
-          }
-       }
-
-	//activity = activity.map(movingAverage)
-	//sleep = sleep.map(movingAverage)
-	//readiness = readiness.map(movingAverage)
-	
-        sleep.unshift(null)
-        readiness.unshift(null)
-
         const options = {
           responsive: true,
           plugins: {
