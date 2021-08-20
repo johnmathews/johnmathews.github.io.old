@@ -8,21 +8,21 @@
 <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>Oura API (WIP) - John Mathews</title>
-<meta content="Oura API (WIP) -  John Mathews " name="title"/>
+<title>Oura - John Mathews</title>
+<meta content="Oura -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content="  " name="keywords"/>
 <meta content="" name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content="Oura API (WIP)" property="twitter:title"/>
+<meta content="Oura" property="twitter:title"/>
 <meta content="" name="twitter:description"/>
 <meta content="https://johnmathews.eu/oura.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content=" " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
-<meta content="Oura API (WIP)" property="og:title"/>
+<meta content="Oura" property="og:title"/>
 <meta content="" property="og:description"/>
 <meta content="https://johnmathews.eu/oura.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
@@ -265,7 +265,7 @@
 <div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
 <div class="w-full" id="PageParent">
 <div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
-        Oura <span class="caps">API</span> (<span class="caps">WIP</span>)
+        Oura
     </div>
 <div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
 </div>
@@ -273,9 +273,9 @@
 <article>
 <div class="mt-5 grid grid-cols-1 gap-y-4 lg:w-4/6">
 <div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
-<div class="mb-3">Oura</div>
+<div class="mb-3"></div>
 <div class="spinner z-50 mx-auto my-10" hidden=""></div>
-<div id="ouraDiv"></div>
+<canvas height="200" id="ouraDiv" width="400"></canvas>
 <div id="cal-heatmap"></div>
 </div>
 </div>
@@ -332,16 +332,103 @@
 <script>
             result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
         </script>
+<script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+<script charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js" type="text/javascript"></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer" src="http://cdn.datatables.net/plug-ins/1.10.25/sorting/datetime-moment.js"></script>
 <script>
     const URL = "https://storage.googleapis.com/johnmathews.eu/fitness-data/oura-data.JSON"
     $.ajax({
       url: URL,
       type: "GET",
       success: function(data) {
-        $("#ouraDiv").html(data)
+      const DATA = JSON.parse(data)
+      var dates = DATA["dates"]
+      var sleep = DATA["sleep"]
+      var activity = DATA["activity"]
+      var readiness = DATA["readiness"]
+
+      sleep.shift()
+      readiness.shift()
+
+      function movingAverage(val, index, array){
+	  if (index == 0){
+            return val.toFixed(0)
+	  } else if (index == 1) {
+	    return ((array[index] + array[index-1])/2).toFixed(0)
+	  } else {
+            return ((array[index] + array[index-1] + array[index-2])/3).toFixed(0)
+          }
+       }
+
+	activity = activity.map(movingAverage)
+	sleep = sleep.map(movingAverage)
+	readiness = readiness.map(movingAverage)
+	
+        sleep.unshift(null)
+        readiness.unshift(null)
+
+        const options = {
+          responsive: true,
+          plugins: {
+          legend: {display: true,
+	  position: 'bottom'
+        },
+	  tooltip: {
+	    enabled: true,
+	    displayColors: false,
+	    callbacks: {
+	      title: () => null,
+	      label: function(context) {
+		var item = context.parsed['x'] // index of datapoint
+		return labels[item] + ': ' + context.parsed['y']
+	      }
+	    }
+	  }
+        },
+        scales: {
+          xAxes: [{
+            type: 'time',
+          }],
+        }
       }
-    });
-  </script>
+
+      var ctx = document.getElementById('ouraDiv').getContext('2d')
+
+      var labels = dates.map((date) => {
+        return moment(date, "YYYY-MM-DD").format('D MMM') // this triggers a deprecation warning
+      })
+
+      var datasets = [
+        {
+          label: 'Sleep',
+	  data: sleep,
+	  fill: false,
+	  borderColor: '#FF6633',
+	  tension: 0.3
+	},
+	{
+	  label: 'Readiness',
+	  data: readiness,
+	  fill: false,
+	  borderColor: '#E6B333',
+	  tension: 0.3
+	},
+	{
+	  label: 'Activity',
+	  data: activity,
+	  fill: false,
+	  borderColor: 'green',
+	  tension: 0.3
+	},
+      ]
+      var data = { labels: labels, datasets: datasets };
+      var config = {type: 'line', data: data, options: options};
+      var scores = new Chart(ctx, config)
+    }
+  });
+</script>
 <script>
     // set or update user preference for article category if it hasnt been set
     if (localStorage.getItem('categoryChoice') === "technical") {
