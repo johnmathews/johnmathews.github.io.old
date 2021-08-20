@@ -107,6 +107,11 @@ $(document).ready(function () {
     navigator.sendBeacon(url, data);
     $('html, body').animate({ scrollTop: 0 }, 500)
   })
+  Mousetrap.bind('g h', function () {
+    var data = JSON.stringify({'category':'keyboard-shortcut','event':'gh'});
+    navigator.sendBeacon(url, data);
+    window.location.href = `${siteURL}/oura.html`
+  })
   Mousetrap.bind('g k', function () {
     var data = JSON.stringify({'category':'keyboard-shortcut','event':'gk'});
     navigator.sendBeacon(url, data);
