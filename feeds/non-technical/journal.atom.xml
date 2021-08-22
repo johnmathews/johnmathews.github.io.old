@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-07-06T16:53:56+02:00</updated><entry><title>Can an explanation of an historical event ever be completely true?</title><link href="https://johnmathews.eu/historical-truths.html" rel="alternate"/><published>2021-07-06T16:53:56+02:00</published><updated>2021-07-06T16:53:56+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-06:/historical-truths.html</id><summary type="html"/><content type="html">&lt;p&gt;We use historical events as examples to learn from, but is it possible to
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-08-22T21:07:12+02:00</updated><entry><title>Daddy-Daughter To-Do List</title><link href="https://johnmathews.eu/daddy-daughter-to-do-list.html" rel="alternate"/><published>2021-08-22T21:07:12+02:00</published><updated>2021-08-22T21:07:12+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-08-22:/daddy-daughter-to-do-list.html</id><summary type="html"/><content type="html">&lt;p&gt;Things we want to do together:&lt;/p&gt;
+&lt;ul class="checklist"&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Make some furniture&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Run to the beach&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Parkour&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Go on bike rides&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Go to work together (when she is older)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Go on long train journeys together (Paris and Salzburg)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Go to restaurants and have long conversations&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Take interesting people to lunch and ask them questions&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Non-technical/Journal"/><category term="daughter"/><category term="family"/></entry><entry><title>Can an explanation of an historical event ever be completely true?</title><link href="https://johnmathews.eu/historical-truths.html" rel="alternate"/><published>2021-07-06T16:53:56+02:00</published><updated>2021-07-06T16:53:56+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-06:/historical-truths.html</id><summary type="html"/><content type="html">&lt;p&gt;We use historical events as examples to learn from, but is it possible to
 acquire a true understanding of a historical event?&lt;/p&gt;
 &lt;p&gt;The answer is important because we use that understanding to learn by example,
 and identify patterns of cause and effect. Is it possible for a normal person to
