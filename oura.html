@@ -351,29 +351,37 @@
       var activity = DATA["activity"]
       var readiness = DATA["readiness"]
 
-        const options = {
-          responsive: true,
-          plugins: {
-          legend: {display: true,
-	  position: 'bottom'
-        },
-	  tooltip: {
-	    enabled: true,
-	    displayColors: false,
-	    callbacks: {
-	      title: () => null,
-	      label: function(context) {
-		var item = context.parsed['x'] // index of datapoint
-		var date = moment(labels[item], "D MMM").format('ddd D MMM')
-		return date + ': ' + context.parsed['y']
+      const options = {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+	        position: 'bottom'
+          },
+	      tooltip: {
+	        enabled: true,
+	        displayColors: false,
+	        callbacks: {
+	          title: () => null,
+	          label: function(context) {
+		        var item = context.parsed['x'] // index of datapoint
+		        var date = moment(labels[item], "D MMM").format('ddd D MMM')
+		        return date + ': ' + context.parsed['y']
+	          }
+	        }
 	      }
-	    }
-	  }
         },
         scales: {
           xAxes: [{
             type: 'time',
           }],
+        },
+        elements: {
+          point: {
+            radius: 0,
+            pointHitRadius: 10,
+            pointStyle: "line",
+          }
         }
       }
 

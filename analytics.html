@@ -413,25 +413,28 @@
         const options = {
              responsive: true,
              plugins: {
-               legend: false,
-                  tooltip: {
-                     enabled: true,
-                     displayColors: true,
-                     callbacks: {
-                       title: () => null,
-                     }
+                legend: {
+                   display: true,
+                   position: "bottom",
+                },
+                tooltip: {
+                   enabled: true,
+                   displayColors: true,
+                   callbacks: {
+                     title: () => null,
+                   }
                  }
              },
              scales: {
                xAxes: {
-		 stacked: true,
+               stacked: true,
                  // type: 'time', // doesn't make sense for a bar chart. just sort stuff properly.
                },
                y: {
                  beginAtZero: true,
-                 type: 'logarithmic',
-		 stacked: true,
-                }
+                 // type: 'logarithmic',
+		         stacked: true,
+               }
               }
            }
 
@@ -481,12 +484,19 @@
              scales: {
                xAxes: [{
                  type: 'time',
-               }],
-               y: {
-                 beginAtZero: true,
-                 type: 'logarithmic',
-                }
-              }
+              }],
+              y: {
+                beginAtZero: true,
+                type: 'logarithmic',
+               }
+             },
+             elements: {
+               point: {
+                 radius: 0,
+                 pointHitRadius: 10,
+                 pointStyle: "line",
+               }
+             }
            }
 
         // Page Views per day
@@ -511,7 +521,8 @@
                   label: 'Page Views Per Day',
                   data: Object.values(dailyViewsCleaned),
                   fill: true,
-                  borderColor: 'rgb(75, 192, 192)',
+                  backgroundColor: "rgba(220,220,220,0.5)",
+                  borderColor: 'blue',
                   tension: 0.1
               }]
         var data = { labels: labels, datasets: datasets };
@@ -525,22 +536,22 @@
             var epoch = parseInt( Object.keys(dailyIpAddresses)[i] )
             var xDate = new Date(epoch)
             var IPCount = dailyIpAddresses[Object.keys(dailyIpAddresses)[i]]
-                dailyIpAddressesCleaned[xDate] = IPCount
+            dailyIpAddressesCleaned[xDate] = IPCount
         }
 
         var ctx = document.getElementById('UniqueIpAddressesPerDay').getContext('2d')
         var labels = Object.keys(dailyIpAddressesCleaned).map((date) => {
-                var newDate = date.substring( 0, date.lastIndexOf("(") - 1 )
-                return moment(newDate, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
-            })
+          var newDate = date.substring( 0, date.lastIndexOf("(") - 1 )
+          return moment(newDate, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
+        })
         var datasets = [{
-
-                  label: 'Unique IP Addresses Per Day',
-                  data: Object.values(dailyIpAddressesCleaned),
-                  fill: true,
-                  borderColor: 'rgb(75, 192, 192)',
-                  tension: 0.1
-              }]
+          label: 'Unique IP Addresses Per Day',
+          data: Object.values(dailyIpAddressesCleaned),
+          fill: true,
+          backgroundColor: "rgba(220,220,220,0.5)",
+          borderColor: 'blue',
+          tension: 0.1
+        }]
         var data = { labels: labels, datasets: datasets };
         var config = {type: 'line', data: data, options: options};
         var UniqueIpAddressesPerDay = new Chart(ctx, config)
