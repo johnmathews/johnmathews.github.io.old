@@ -8,21 +8,21 @@
 <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>Oura - John Mathews</title>
-<meta content="Oura -  John Mathews " name="title"/>
+<title>Averages - John Mathews</title>
+<meta content="Averages -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content="  " name="keywords"/>
 <meta content="" name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content="Oura" property="twitter:title"/>
+<meta content="Averages" property="twitter:title"/>
 <meta content="" name="twitter:description"/>
 <meta content="https://johnmathews.eu/oura.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content=" " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
-<meta content="Oura" property="og:title"/>
+<meta content="Averages" property="og:title"/>
 <meta content="" property="og:description"/>
 <meta content="https://johnmathews.eu/oura.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
@@ -265,7 +265,7 @@
 <div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
 <div class="w-full" id="PageParent">
 <div class="font-serif text-6xl lg:text-8xl 2xl:text-9xl dark:text-gray-50 mt-10 md:mt-24 mx-3 lg:mx-auto">
-        Oura
+        Averages
     </div>
 <div class="mt-5 md:mt-20 md:mb-10 border-b-8 border-gray-600 dark:border-gray-200 border-double">
 </div>
@@ -275,7 +275,7 @@
 <div class="stayLight border-2 border-gray-700 p-2 md:p-5 mx-0 my-1 md:my-3">
 <div class="mb-3"></div>
 <div class="spinner z-50 mx-auto my-10" hidden=""></div>
-<canvas height="200" id="ouraDiv" width="400"></canvas>
+<canvas height="200" id="chartDiv" width="400"></canvas>
 <div id="cal-heatmap"></div>
 </div>
 </div>
@@ -385,32 +385,32 @@
         }
       }
 
-      var ctx = document.getElementById('ouraDiv').getContext('2d')
+      var ctx = document.getElementById('chartDiv').getContext('2d')
       var labels = dates.map((date) => {
         return moment(date, "YYYY-MM-DD").format('D MMM') // this triggers a deprecation warning
       })
       var datasets = [
         {
-          label: 'Sleep',
-	  data: sleep,
-	  fill: false,
-	  borderColor: '#FF6633',
-	  tension: 0.3
-	},
-	{
-	  label: 'Readiness',
-	  data: readiness,
-	  fill: false,
-	  borderColor: '#E6B333',
-	  tension: 0.3
-	},
-	{
-	  label: 'Activity',
-	  data: activity,
-	  fill: false,
-	  borderColor: 'green',
-	  tension: 0.3
-	},
+          label: 'S',
+	      data: sleep,
+	      fill: false,
+    	  borderColor: '#FF6633',
+    	  tension: 0.3
+    	},
+    	{
+    	  label: 'R',
+    	  data: readiness,
+    	  fill: false,
+    	  borderColor: '#E6B333',
+    	  tension: 0.3
+    	},
+    	{
+    	  label: 'A',
+    	  data: activity,
+    	  fill: false,
+    	  borderColor: 'green',
+    	  tension: 0.3
+    	},
       ]
       var data = { labels: labels, datasets: datasets };
       var config = {type: 'line', data: data, options: options};

@@ -509,20 +509,16 @@
         }
 
         var ctx = document.getElementById('pageViewsPerDay').getContext('2d')
-
         var labels = Object.keys(dailyViewsCleaned).map((date) => {
                 var newDate = date.substring( 0, date.lastIndexOf("(") - 1 )
                 return moment(newDate, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
             })
-
-
-
         var datasets = [{
                   label: 'Page Views Per Day',
                   data: Object.values(dailyViewsCleaned),
                   fill: true,
                   backgroundColor: "rgba(220,220,220,0.5)",
-                  borderColor: 'blue',
+                  borderColor: 'darkGreen',
                   tension: 0.1
               }]
         var data = { labels: labels, datasets: datasets };
