@@ -338,10 +338,12 @@
 <script charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js" type="text/javascript"></script>
 <script crossorigin="anonymous" referrerpolicy="no-referrer" src="http://cdn.datatables.net/plug-ins/1.10.25/sorting/datetime-moment.js"></script>
 <script>
+    // oura data chart
     const URL = "https://storage.googleapis.com/johnmathews.eu/fitness-data/oura-data.JSON"
     $.ajax({
       url: URL,
       type: "GET",
+      cache: false,
       success: function(data) {
       const DATA = JSON.parse(data)
       var dates = DATA["dates"]
@@ -362,7 +364,8 @@
 	      title: () => null,
 	      label: function(context) {
 		var item = context.parsed['x'] // index of datapoint
-		return labels[item] + ': ' + context.parsed['y']
+		var date = moment(labels[item], "D MMM").format('ddd D MMM')
+		return date + ': ' + context.parsed['y']
 	      }
 	    }
 	  }
@@ -375,11 +378,9 @@
       }
 
       var ctx = document.getElementById('ouraDiv').getContext('2d')
-
       var labels = dates.map((date) => {
         return moment(date, "YYYY-MM-DD").format('D MMM') // this triggers a deprecation warning
       })
-
       var datasets = [
         {
           label: 'Sleep',
