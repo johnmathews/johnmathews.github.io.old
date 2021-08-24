@@ -416,25 +416,31 @@
                 display: false,
                 position: "bottom",
               },
-              tooltip: {
-                 enabled: true,
-                 displayColors: true,
-                 callbacks: {
-                   title: () => null,
-                 }
+
+             tooltip: {
+               enabled: true,
+               displayColors: true,
+               callbacks: {
+                 title: () => null, // labels[item]
+                 label: function(context) {
+		   if (context.parsed['y'] > 0){
+                     return  context.dataset.label + ': ' + context.parsed.y
+		   }
+	         },
                }
+             }
+           },
+           scales: {
+             xAxes: {
+             stacked: true,
              },
-             scales: {
-               xAxes: {
-               stacked: true,
-               },
-               y: {
-                 beginAtZero: true,
-		 position: 'right',
-		 stacked: true,
-               }
-              }
+             y: {
+               beginAtZero: true,
+	       position: 'right',
+	       stacked: true,
+             }
            }
+         }
 
       	    var ctx = document.getElementById('js-events').getContext('2d')
   	    var ActionsPerDay = new Chart(ctx, {
