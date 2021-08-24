@@ -374,7 +374,6 @@
 	  labels.push(new Date(value))
 	}
 
-			  console.log(dailyEvents)
 	labels = labels.sort((a, b) => b.date - a.date)
         labels = labels.map((date) => {
           return moment(date, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
@@ -411,40 +410,38 @@
 	data['datasets'] = datasets
 
         const options = {
-             responsive: true,
-             plugins: {
-                legend: {
-                   display: false,
-                   position: "bottom",
-                },
-                tooltip: {
-                   enabled: true,
-                   displayColors: true,
-                   callbacks: {
-                     title: () => null,
-                   }
+           responsive: true,
+           plugins: {
+             legend: {
+                display: false,
+                position: "bottom",
+              },
+              tooltip: {
+                 enabled: true,
+                 displayColors: true,
+                 callbacks: {
+                   title: () => null,
                  }
+               }
              },
              scales: {
                xAxes: {
                stacked: true,
-                 // type: 'time', // doesn't make sense for a bar chart. just sort stuff properly.
                },
                y: {
                  beginAtZero: true,
-                 // type: 'logarithmic',
-		         stacked: true,
+		 position: 'right',
+		 stacked: true,
                }
               }
            }
 
-	var ctx = document.getElementById('js-events').getContext('2d')
-	var ActionsPerDay = new Chart(ctx, {
-	  type: 'bar',
-	  data: data,
-	  options: options
-	})
-
+      	    var ctx = document.getElementById('js-events').getContext('2d')
+  	    var ActionsPerDay = new Chart(ctx, {
+	    type: 'bar',
+	    data: data,
+	    options: options
+	  })
 	});
 	
 	// 2. Other metrics
@@ -488,6 +485,7 @@
               y: {
                 beginAtZero: true,
                 type: 'logarithmic',
+ 	    position: 'right',
                }
              },
              elements: {
