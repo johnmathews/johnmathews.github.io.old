@@ -363,6 +363,7 @@
         $.getJSON(
             {
             url: eventsURL,
+		cache: false,
             timeout: 20000
             }
         ).done(function(srcData) {
@@ -404,6 +405,7 @@
 	    datasets.push(set)
 	  } 
 	}
+	datasets = datasets.reverse() // so that stacked bar chart is stacked alphabetically
 
 	data = {}
 	data['labels'] = labels
