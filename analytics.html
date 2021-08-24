@@ -420,6 +420,9 @@
              tooltip: {
                enabled: true,
                displayColors: true,
+		 itemSort: function(a, b) {
+		   return b.datasetIndex - a.datasetIndex
+	   	 },
                callbacks: {
                  title: () => null, // labels[item]
                  label: function(context) {
