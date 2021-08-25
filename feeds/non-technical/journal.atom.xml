@@ -1,5 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-08-22T21:07:12+02:00</updated><entry><title>Daddy-Daughter To-Do List</title><link href="https://johnmathews.eu/daddy-daughter-to-do-list.html" rel="alternate"/><published>2021-08-22T21:07:12+02:00</published><updated>2021-08-22T21:07:12+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-08-22:/daddy-daughter-to-do-list.html</id><summary type="html"/><content type="html">&lt;p&gt;Things we want to do together:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Non-technical/Journal</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/non-technical/journal.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-08-25T15:26:07+02:00</updated><entry><title>1 Peter 1 vs 1</title><link href="https://johnmathews.eu/1-peter-1-1.html" rel="alternate"/><published>2021-08-25T15:26:07+02:00</published><updated>2021-08-25T15:26:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-08-25:/1-peter-1-1.html</id><summary type="html"/><content type="html">&lt;p&gt;&lt;span class="math"&gt;\(^{1}\)&lt;/span&gt;&lt;mark&gt;To those who are elect exiles of the Dispersion in Pontus, Galatia,
+Cappadocia, Asia, and Bithynia, according to the foreknowledge of God the
+Father, in the sanctification of the Spirit, for obedience to Jesus Christ and
+for sprinkling with his blood:&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;May grace and peace be multiplied to you.&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;This is the start of a letter to a specific group of people. It’s intended to be
+encouraging and dense from the very beginning. It is intended that the letter is
+remembered and paid attention to.&lt;/p&gt;
+&lt;p&gt;The sentence structure is awkward when its translated into modern English
+because its a translation. Presumably in the original language you could create
+long statements with many clauses in them and people would be comfortable with
+that. I’m unaware of the letter writing customs of the day, so maybe Peter is
+using a very normal type of introduction, or maybe he is deliberately imitating
+the style of a specific type of letter, or person. &lt;/p&gt;
+&lt;p&gt;The first sentence implies that exiles of the Dispersion (what dispersion? I
+don’t know.) are not exiles by accident. Even though I bet becoming exiled felt like an
+unplanned interruption to their life. The first sentence says that God chose
+them, and that there is a purpose. There is a chain of reasoning that involves
+God the Father, God the Son and God the Holy Spirit - the trinity. One God in
+three persons… I don’t get it, I can’t explain it, but I’m going to try and
+work with this understanding.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;According to the foreknowledge of God the Father → &lt;/li&gt;
+&lt;li&gt;in the sanctification of the Spirit → &lt;/li&gt;
+&lt;li&gt;for obedience to Jesus Christ and 
+    for sprinkling with his blood&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It’s like 1 and 2 and requirements for 3, because “for” means “the reason
+why something was done”.&lt;/p&gt;
+&lt;p&gt;I should find out what “sprinkling with his blood” means, instead of guessing.
+Clearly its a weird and gross idea…&lt;/p&gt;
+&lt;p&gt;It means… being marked by Jesus’ blood. It seems clear enough that this is the
+blood that was spilt when he was sacrificially murdered, and it seems that the benefit or the
+reason why this would be desirable is already obvious to the readers. Having
+Jesus’ blood on you is to associate yourself with the benefits of that sacrifice
+as well as to count the cost of the sacrifice.&lt;/p&gt;
+&lt;p&gt;It’s probably a line of reasoning that would be intuitive to believers with a
+Jewish background if they’ve previously sacrificed animals in temples during
+various festivals. Is this letter written to a group of believers with a Jewish
+(rather than gentile) background?&lt;/p&gt;
+&lt;p&gt;Back to the chain of reasoning: the foreknowledge of the Father and the
+sanctification of the Spirit is necessary for being associated with Jesus
+sacrifice and for being obedient to Jesus. That’s a big conclusion from only the
+first sentence.&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;May grace and peace be multiplied to you.&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;I like that exhortation so much I could get it as a tattoo. Grace and Peace,
+better than fine dining and a comfortable bed. Also, chewing over the
+implications of the previous sentence is enough to cause confusion and angst -
+so the exhortation is well timed. Chill - even though you’ve been exiled, you
+weren’t planning on being a migrant, and God planned this for you, and this is
+part of your necessary sanctification in order to be associated with Jesus’
+sacrifice - you can be full of peace, and there is lots of grace (which is
+forgiveness, and patience, and maybe gentleness) available to you.&lt;/p&gt;
+&lt;p&gt;Next sentence…&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Non-technical/Journal"/><category term="bible"/></entry><entry><title>Daddy-Daughter To-Do List</title><link href="https://johnmathews.eu/daddy-daughter-to-do-list.html" rel="alternate"/><published>2021-08-22T21:07:12+02:00</published><updated>2021-08-22T21:07:12+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-08-22:/daddy-daughter-to-do-list.html</id><summary type="html"/><content type="html">&lt;p&gt;Things we want to do together:&lt;/p&gt;
 &lt;ul class="checklist"&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Make some furniture&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Run to the beach&lt;/li&gt;
