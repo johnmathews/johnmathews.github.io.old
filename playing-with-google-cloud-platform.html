@@ -12,18 +12,18 @@
 <meta content="Playing with Google Cloud Platform -  John Mathews " name="title"/>
 <meta content="John Mathews" name="author"/>
 <meta content=" cloud,google,serverless " name="keywords"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function When the browser navigates to a page on the site, a JavaScript beacon is sent which triggers a cloud function. The function parses the page URL and the IP address, and creates a record in the database. Aggregator... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
 <meta content="https://johnmathews.eu" name="twitter:domain"/>
 <meta content="Playing with Google Cloud Platform" property="twitter:title"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " name="twitter:description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function When the browser navigates to a page on the site, a JavaScript beacon is sent which triggers a cloud function. The function parses the page URL and the IP address, and creates a record in the database. Aggregator... " name="twitter:description"/>
 <meta content="https://johnmathews.eu/playing-with-google-cloud-platform.html" property="twitter:url"/>
 <meta content="https://johnmathews.eu/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Playing with Google Cloud Platform" property="og:title"/>
-<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function A cloud function is triggered when the browser loads the analytics page and sends a JavaScript beacon. The function parses the page URL and the IP address, and creates a record in the database. Aggregator Function... " property="og:description"/>
+<meta content=" Building my own web analytics has been a gateway to learning more about Google Cloud Platform. So far I’ve used DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler. Version 1 My first version of the analytics tool took the following form: Logger Function When the browser navigates to a page on the site, a JavaScript beacon is sent which triggers a cloud function. The function parses the page URL and the IP address, and creates a record in the database. Aggregator... " property="og:description"/>
 <meta content="https://johnmathews.eu/playing-with-google-cloud-platform.html" property="og:url"/>
 <meta content="https://johnmathews.eu/
 " property="og:image"/>
@@ -268,15 +268,15 @@ DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.</
 <p>My first version of the analytics tool took the following form:</p>
 <h3>Logger Function</h3>
 <ol>
-<li>A cloud function is triggered when the browser loads the analytics page and
-    sends a JavaScript beacon.</li>
+<li>When the browser navigates to a page on the site, a JavaScript beacon is
+    sent which triggers a cloud function.</li>
 <li>The function parses the page <span class="caps">URL</span> and the <span class="caps">IP</span> address, and creates a record in
     the database.</li>
 </ol>
 <h3>Aggregator Function</h3>
 <ol>
 <li>Each time the analytics page is loaded, a cloud function is triggered that
-    gets every record from DataStore, parses the data and returns a <span class="caps">JSON</span> blob
+    gets every record from DataStore, parses the data and returns a <span class="caps">JSON</span> object
     containing the aggregated data.</li>
 <li>The browser receives the <span class="caps">JSON</span>, parses it and creates some charts and tables.</li>
 </ol>
@@ -293,8 +293,8 @@ page was viewed.</p>
 datastore database and calculated the results. The results were
 written to a <span class="caps">JSON</span> file and sent to a storage bucket. </p>
 <p>When the analytics page was loaded in a browser, the browser collects and
-processes the <span class="caps">JSON</span> blob from the bucket. This is much faster, performant
-and cheaper than creating a new <span class="caps">JSON</span> blob each time the analytics page is viewed.</p>
+processes the <span class="caps">JSON</span> file from the bucket. This is much faster, performant
+and cheaper than creating a new <span class="caps">JSON</span> object each time the analytics page is viewed.</p>
 <p>The good: The analytics page loads at the same speed regardless of how much data
 has been aggregated and how frequently the analytics page is being viewed.
 Performance issues have been solved, though I still don’t think DataStore is the
@@ -304,7 +304,7 @@ services (which I don’t really understand but is caused by using
 DataStore). If I can get monthly costs down to about a cup of coffee (about
 €4/month or €0.15/day) then I don’t mind running it indefinitely. </p>
 <h2 id="version-3">Version 3</h2>
-<p>Instead of using DataStore I will use BigQuery - its a Data Warehouse that is
+<p>Use BigQuery instead of DataStore. BigQuery is a Data Warehouse that is
 well suited for analytics. It is not well suited for transactional use cases -
 where data is being read, updated or created many times per second.</p>
 <p>This is fine for my use case - the Page Logger function writes a record to a
@@ -346,14 +346,6 @@ question then becomes: “Just because you could do it, should you do it?” <a 
 </article>
 </main>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
-<div class="flex flex-row">
-<div class="text-red-500 dark:text-red-500"> ← </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/load-testing-web-analytics-tool.html" id="previousArticleInCategory"> Load-testing my Web Analytics Tool</a>
-</div>
-<div class="flex flex-row mt-2">
-<div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/elon-musk-s-engineering-philosophy.html" id="nextArticleInCategory"> Elon Musk’s Engineering Philosophy</a>
-</div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
           <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/engineering.html" id="otherArticlesInCategory"> Engineering</a>

@@ -43,15 +43,15 @@ DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.&l
 &lt;p&gt;My first version of the analytics tool took the following form:&lt;/p&gt;
 &lt;h3&gt;Logger Function&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;A cloud function is triggered when the browser loads the analytics page and
-    sends a JavaScript beacon.&lt;/li&gt;
+&lt;li&gt;When the browser navigates to a page on the site, a JavaScript beacon is
+    sent which triggers a cloud function.&lt;/li&gt;
 &lt;li&gt;The function parses the page &lt;span class="caps"&gt;URL&lt;/span&gt; and the &lt;span class="caps"&gt;IP&lt;/span&gt; address, and creates a record in
     the database.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;Aggregator Function&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Each time the analytics page is loaded, a cloud function is triggered that
-    gets every record from DataStore, parses the data and returns a &lt;span class="caps"&gt;JSON&lt;/span&gt; blob
+    gets every record from DataStore, parses the data and returns a &lt;span class="caps"&gt;JSON&lt;/span&gt; object
     containing the aggregated data.&lt;/li&gt;
 &lt;li&gt;The browser receives the &lt;span class="caps"&gt;JSON&lt;/span&gt;, parses it and creates some charts and tables.&lt;/li&gt;
 &lt;/ol&gt;
@@ -68,8 +68,8 @@ page was viewed.&lt;/p&gt;
 datastore database and calculated the results. The results were
 written to a &lt;span class="caps"&gt;JSON&lt;/span&gt; file and sent to a storage bucket. &lt;/p&gt;
 &lt;p&gt;When the analytics page was loaded in a browser, the browser collects and
-processes the &lt;span class="caps"&gt;JSON&lt;/span&gt; blob from the bucket. This is much faster, performant
-and cheaper than creating a new &lt;span class="caps"&gt;JSON&lt;/span&gt; blob each time the analytics page is viewed.&lt;/p&gt;
+processes the &lt;span class="caps"&gt;JSON&lt;/span&gt; file from the bucket. This is much faster, performant
+and cheaper than creating a new &lt;span class="caps"&gt;JSON&lt;/span&gt; object each time the analytics page is viewed.&lt;/p&gt;
 &lt;p&gt;The good: The analytics page loads at the same speed regardless of how much data
 has been aggregated and how frequently the analytics page is being viewed.
 Performance issues have been solved, though I still don’t think DataStore is the
@@ -79,7 +79,7 @@ services (which I don’t really understand but is caused by using
 DataStore). If I can get monthly costs down to about a cup of coffee (about
 €4/month or €0.15/day) then I don’t mind running it indefinitely. &lt;/p&gt;
 &lt;h2 id="version-3"&gt;Version 3&lt;/h2&gt;
-&lt;p&gt;Instead of using DataStore I will use BigQuery - its a Data Warehouse that is
+&lt;p&gt;Use BigQuery instead of DataStore. BigQuery is a Data Warehouse that is
 well suited for analytics. It is not well suited for transactional use cases -
 where data is being read, updated or created many times per second.&lt;/p&gt;
 &lt;p&gt;This is fine for my use case - the Page Logger function writes a record to a
