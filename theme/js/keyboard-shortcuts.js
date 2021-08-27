@@ -130,8 +130,10 @@ $(document).ready(function () {
   Mousetrap.bind('g n', function () {
     var data = JSON.stringify({'category':'keyboard-shortcut','event':'gn'});
     navigator.sendBeacon(url, data);
-    if ($('#nextArticleInCategory').length) {
-      $('#nextArticleInCategory')[0].click()
+    if ($('#previousArticleInCategory').length) {
+      $('#previousArticleInCategory')[0].click()
+    } else {
+      window.location.href = `${siteURL}/pages.html`
     }
   })
   Mousetrap.bind('g o', function () {
@@ -144,10 +146,8 @@ $(document).ready(function () {
   Mousetrap.bind('g p', function () {
     var data = JSON.stringify({'category':'keyboard-shortcut','event':'gp'});
     navigator.sendBeacon(url, data);
-    if ($('#previousArticleInCategory').length) {
-      $('#previousArticleInCategory')[0].click()
-    } else {
-      window.location.href = `${siteURL}/pages.html`
+    if ($('#nextArticleInCategory').length) {
+      $('#nextArticleInCategory')[0].click()
     }
   })
   Mousetrap.bind('g r', function () {

@@ -1861,16 +1861,17 @@ easy to find.&lt;/p&gt;
 &lt;p&gt;I usually find the commands difficult to remember though, and the concepts
 which Git is built on often seem counter-intuitive to me. This means I spend a
 lot of time searching for answers and trying to remember how I can use Git to
-experiment with a project without fear of losing any hard won progress.&lt;/p&gt;
+experiment with a project without fear of losing any hard-won progress.&lt;/p&gt;
 &lt;p&gt;Ry’s Git Tutorial by Ryan Hodson is the best way to learn Git that I have come
 across. Its simple, practical, and clear. The reader learns how to use Git by
-creating and maintaining a simple website. This gives the Git commands a
-meaningful context, which makes them a lot easier to remember and use in the future.&lt;/p&gt;
+creating and maintaining a simple website&lt;sup id="sf-rys-git-tutorial-1-back"&gt;&lt;a class="simple-footnote" href="#sf-rys-git-tutorial-1" title="This tutorial was also the first time I created a simple website, and it led to so many “ahah!” moments. It unlocked all the web development progress that followed."&gt;1&lt;/a&gt;&lt;/sup&gt; . This gives the
+Git commands a meaningful context, which makes them a lot easier to remember and
+use in the future.&lt;/p&gt;
 &lt;p&gt;The tutorial was first published in 2012 and the website which originally
 hosted the examples no longer exists. Each tutorial chapter starts with a link
 to download the project files up to that point, so the reader doesn’t need to
-start at the beginning but can jump into any part of the guide.&lt;/p&gt;
-&lt;p&gt;Unfortunately these links no longer work. Therefore I’m going to make the materials available here
+start at the beginning but can jump into the guide at any point.&lt;/p&gt;
+&lt;p&gt;Unfortunately these links no longer work and I’m going to make the materials available here
 so that they can continue to be useful. If the author would like to get in touch,
 please do. I’d like to keep this great resource available so that others can
 benefit from it.&lt;/p&gt;
@@ -1890,7 +1891,9 @@ benefit from it.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://johnmathews.eu/chapter11.zip"&gt;Chapter 11: Tips &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Tricks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://johnmathews.eu/chapter12.zip"&gt;Chapter 12: Plumbing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://johnmathews.eu/chapter13.zip"&gt;end&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="Git"/><category term="Rys"/><category term="Tutorial"/><category term="Ryan Hodson"/></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"/><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"/><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
+&lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-rys-git-tutorial-1"&gt;This tutorial was also the first
+time I created a simple website, and it led to so many “ahah!” moments. It
+unlocked all the web development progress that followed. &lt;a class="simple-footnote-back" href="#sf-rys-git-tutorial-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="Git"/><category term="Rys"/><category term="Tutorial"/><category term="Ryan Hodson"/></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"/><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"/><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
 shortcuts. It’s based on the Vi text editor from the 1970’s. It was first
 released in 1991 and is still being developed today. It comes pre-installed on
 Unix systems (including MacOS) and can be run from the terminal.&lt;/p&gt;
