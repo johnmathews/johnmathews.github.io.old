@@ -1685,8 +1685,12 @@ ul~.highlight pre {
   padding-left: 2rem;
 }
 
-.markdown ol > li:first-child {
+.snippet .markdown ol > li:first-child {
   margin-top: 1.25rem;
+}
+
+.markdown ol > li:first-child {
+  margin-top: 0px;
 }
 
 .markdown ul > li:first-child {

@@ -271,8 +271,11 @@ ul~.highlight pre {
   @apply pl-8 pt-4 list-decimal;
 }
 
-.markdown ol > li:first-child {
+.snippet .markdown ol > li:first-child {
   @apply mt-5;
+}
+.markdown ol > li:first-child {
+  @apply mt-0;
 }
 
 .markdown ul > li:first-child {
