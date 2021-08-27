@@ -354,9 +354,16 @@
       const options = {
         responsive: true,
         plugins: {
-          legend: {
+	  legend: {
+	    labels: {
+	      //usePointStyle: true,
+	      //pointStyle: "circle",
+	      boxWidth: 10,
+	      boxHeight: 2
+	    },
             display: true,
-	        position: 'bottom'
+	      position: 'bottom',
+	      align: "start"
           },
 	      tooltip: {
 	        enabled: true,

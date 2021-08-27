@@ -522,13 +522,14 @@
                 return moment(newDate, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
             })
         var datasets = [{
-                  label: 'Page Views Per Day',
-                  data: Object.values(dailyViewsCleaned),
-                  fill: true,
-                  backgroundColor: "rgba(220,220,220,0.5)",
-                  borderColor: 'darkGreen',
-                  tension: 0.1
-              }]
+	  label: 'Page Views Per Day',
+	  data: Object.values(dailyViewsCleaned),
+	  fill: true,
+	  // green
+	  backgroundColor: "rgb(8, 143, 143, 0.2)",
+	  borderColor: 'rgb(8, 143, 143, 1)',
+	  tension: 0.1
+        }]
         var data = { labels: labels, datasets: datasets };
         var config = {type: 'line', data: data, options: options};
         var pageViewsPerDay = new Chart(ctx, config)
@@ -552,8 +553,9 @@
           label: 'Unique IP Addresses Per Day',
           data: Object.values(dailyIpAddressesCleaned),
           fill: true,
-          backgroundColor: "rgba(220,220,220,0.5)",
-          borderColor: 'blue',
+	  // blue
+          backgroundColor: 'rgb(100, 149, 237, 0.25)',
+          borderColor: 'rgb(100, 149, 237, 1)',
           tension: 0.1
         }]
         var data = { labels: labels, datasets: datasets };
