@@ -387,9 +387,7 @@ first principals <a class="simple-footnote-back" href="#sf-faith-in-jesus-2-back
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script> result =
-	      navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-</script>
+<script> navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname); </script>
 <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');

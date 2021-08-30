@@ -332,9 +332,7 @@
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script> result =
-	      navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-</script>
+<script> navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname); </script>
 <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
 <script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 <script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
@@ -577,12 +575,13 @@
         $('#viewsPageDay').html(html)
         $.fn.dataTable.moment("D MMM"); // datatables data sort plugin https://datatables.net/blog/2014-12-18 
         $('#dataTable').DataTable({
-           "order": [[ 0, "desc" ], [2, "desc"]], // sort on date and then by views
-                  "columns": [
-                            {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
-                            null,
-                            null
-                        ]
+	  "pageLength": 15,
+          "order": [[ 0, "desc" ], [2, "desc"]], // sort on date and then by views
+	    "columns": [
+	     {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
+	     null,
+	     null
+            ]
         })
       })
     })

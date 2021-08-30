@@ -425,9 +425,7 @@ look… Indeed, looking at the definition of <code>URLWrapper</code> shows that 
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script> result =
-	      navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-</script>
+<script> navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname); </script>
 <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');

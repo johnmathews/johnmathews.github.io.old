@@ -780,9 +780,7 @@ There are 3 unreconciled accounts with equal and opposite differences
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script> result =
-	      navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-</script>
+<script> navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname); </script>
 <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
