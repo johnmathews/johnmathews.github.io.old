@@ -1,261 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<html class="" id="baz" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>SSH-Notes - John Mathews</title>
-<meta content="SSH-Notes -  John Mathews " name="title"/>
-<meta content="John Mathews" name="author"/>
-<meta content=" linux,security,ssh " name="keywords"/>
-<meta content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... " name="description"/>
-<meta content="@johnmathews" name="twitter:creator"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content="SSH-Notes" property="twitter:title"/>
-<meta content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... " name="twitter:description"/>
-<meta content="https://johnmathews.eu/ssh-notes.html" property="twitter:url"/>
-<meta content="https://johnmathews.eu/
-" name="twitter:image"/>
-<meta content="  summary  " property="twitter:card"/>
-<meta content=" article " property="og:type"/>
-<meta content="SSH-Notes" property="og:title"/>
-<meta content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... " property="og:description"/>
-<meta content="https://johnmathews.eu/ssh-notes.html" property="og:url"/>
-<meta content="https://johnmathews.eu/
-" property="og:image"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
-<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
-<link href="https://fonts.gstatic.com" rel="preconnect"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
-<script>
+
+      <title>SSH-Notes - John Mathews</title>
+      <meta name="title" content="SSH-Notes -  John Mathews "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="keywords" content=" linux,security,ssh " />
+      <meta name="description" content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... "/>
+
+      <meta name="twitter:creator" content="@johnmathews"/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+      <meta property="twitter:title" content="SSH-Notes"/>
+      <meta name="twitter:description" content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... "/>
+      <meta property="twitter:url" content="./ssh-notes.html"/>
+      <meta name="twitter:image" content="./
+"/>
+      <meta property="twitter:card" content="  summary  "/>
+
+      <meta property="og:type" content=" article "/>
+      <meta property="og:title" content="SSH-Notes"/>
+      <meta property="og:description" content=" Table of Contents TLDR Setup SSH-Agent to prevent passphrase prompt Authentication Passwords and Keys Handshake Background Source TLDR Public key only on the remote server. ssh-keygen -t rsa &lt;optional:email_address&gt; Generate a key pair and keep the private key privately on your local remote machine. The new keys are added to ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub. You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts. cat ~/.ssh/id_rsa.pub to... "/>
+      <meta property="og:url" content="./ssh-notes.html"/>
+      <meta property="og:image" content="./
+"/>
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - all articles" href="./None" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - technical articles" href="./feeds/technical.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - non-Technical articles" href="./feeds/non-technical.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - snippet articles" href="./feeds/snippet.atom.xml" />
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link async href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"/>
+      <link async href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"/>
+
+
+      <link rel="icon" href="./extra/favicon.png" />
+
+      <link href="./theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
         }
       </script>
-<!-- Cloudflare Web Analytics -->
-<!-- End Cloudflare Web Analytics -->
-</head>
-<body class="dark:bg-gray-900">
-<a class="pt-20 mt-20" name="top"></a>
-<nav class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
-<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-<div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/categories.html">Categories</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
-</div>
-<div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
-<div class="day modeIcon hidden">
-<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon">
-<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
-<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-</button>
-</div>
-</div>
-<div class="flex-none md:hidden block md:inline-block">
-<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
-<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-</button>
-</div>
-</nav>
-<div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/categories.html">Categories</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
-<div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-2x"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-2x"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5">
-<i class="fas fa-paw fa-2x"></i>
-</button>
-</div>
-</div>
-<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-<div class="text-center">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+
+      <!-- Cloudflare Web Analytics -->
+	  <script>console.log("cloudflare analytics is False")</script>
+      <!-- End Cloudflare Web Analytics -->
+
+
+
+
+  </head>
+
+  <body class="dark:bg-gray-900">
+    <a class="pt-20 mt-20" name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./snippets.html">Snippets</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./pages.html">Pages</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./categories.html">Categories</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
+            <div class="day modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./snippets.html">Snippets</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./pages.html">Pages</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./categories.html">Categories</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
-<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
-<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-40 inset-0 overflow-y-auto" id="keyboardShortcuts">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-11/12 lg:w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all my-8 sm:align-middle" role="dialog">
-<div class="px-5 py-5">
-<div class="">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboardShortcuts" class="hidden fixed z-40 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+	  <div class="w-11/12 lg:w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="px-5 py-5">
+              <div class="">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-<hr class="mb-5"/>
-<div class="text-base text-gray-700" id="" role="group">
-<div class="markdown">
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
-<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
-<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
-<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
-<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
-<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
-<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
-<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
-<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
-<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
-<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
-<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
-<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
-<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
-<div class="pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
-<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
-<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
-<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to pages page, or previous article</span></div>
-<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
-<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
-<div class="pb-1 -ml-2"><code>gt</code><span class="ml-2"> go to tags page</span></div>
-<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
-<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
-<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-50 inset-0 overflow-y-auto" id="fuseModal">
-<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<div class="absolute inset-x-0 w-screen px-3">
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle" role="dialog">
-<div class="py-1 px-1">
-<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
-<div class="hidden lg:inline-flex flex">
-<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                <hr class="mb-5">
+                <div id="" class="text-base text-gray-700" role="group">
+                  <div class="markdown">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+                      <div class=" pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+                      <div class=" pb-1"><code>/</code><span class="ml-2"> search</span></div>
+                      <div class=" pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+                      <div class=" pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+                      <div class=" pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+                      <div class=" pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+                      <div class=" pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+                      <div class=" pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+                      <div class=" pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to pages page, or previous article</span></div>
+                      <div class=" pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gt</code><span class="ml-2"> go to tags page</span></div>
+                      <div class=" pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fuseModal" class="hidden fixed z-50 inset-0 overflow-y-auto">
+        <div id="searchModalBackground" class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <div class="absolute inset-x-0 w-screen px-3">
+            <div class="w-full md:w-10/12 lg:w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="py-1 px-1">
+                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
+                <div class="hidden lg:inline-flex flex">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
                   or
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                  <div id="macOrPc" class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     cmd-K
                   </div>
-</div>
-<ul class="results text-lg text-bold text-gray-600" id="searchResults">
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mx-auto w-full">
-<div class="flex flex-row">
-<div class="hidden xl:inline xl:w-32">
-<div class="w-32">
-<div class="mt-5 2xl:mt-20 fixed flex flex-col">
-<div class="lg:w-32">
-<div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-</div>
-<div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-</div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/categories.html">Categories</a>
-<div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
-<div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-lg"></i>
-</div>
-</button>
-</div>
-<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-10">
-</div>
-<div class="pt-10 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br/> April 2021
+                </div>
+                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                    <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                  </div>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./snippets.html">Snippets</a>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./pages.html">Pages</a>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./categories.html">Categories</a>
+                  <div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+
+  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-10">
   </div>
-<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
+  <div class="pt-10 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br> April 2021
+  </div>
+  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
  Category: 
     <div>
-<a class="hover:underline" href="https://johnmathews.eu/category/technical/developer-tools.html">Developer Tools</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
-<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
-<div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
-<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
-<span class="caps">SSH</span>-Notes
+            <a class="hover:underline" href="./category/technical/developer-tools.html">Developer Tools</a>
+    </div>
+
+  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="min-h-screen w-full xl:w-5/6 xl:ml-20">
+  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
+
+    <div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
+      <div style="word-break: unset; white-space: wrap;"
+           class="leading-tight text-left
+                  font-serif
+                  lg:-mr-30 xl:-mr-40
+                  text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl
+                  font-semibold lg:font-normal
+                  dark:text-gray-200
+                  break-words md:break-all
+                  ">
+          <span class="caps">SSH</span>-Notes
       </div>
-<div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
+
+      <div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
         April 2021
       </div>
-</div>
-<div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-</div>
-<main class="lg:w-4/6">
-<article class="">
-<div class="markdown">
-<div class="toc"><span class="toctitle">Table of Contents</span><ul>
+    </div>
+
+    <div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+    </div>
+
+    <main class="lg:w-4/6">
+      <article class="">
+        <div class="markdown">
+          <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#tldr"><span class="caps">TLDR</span></a></li>
-<li><a href="#setup-ssh-agent-to-prevent-passphrase-prompt">Setup <span class="caps">SSH</span>-Agent to prevent passphrase prompt</a></li>
+<li><a href="#setup-ssh-agent-to-prevent-passphrase-prompt">Setup <span class="caps">SSH</span>-Agent to prevent passphrase&nbsp;prompt</a></li>
 <li><a href="#authentication">Authentication</a><ul>
-<li><a href="#passwords-and-keys">Passwords and Keys</a></li>
+<li><a href="#passwords-and-keys">Passwords and&nbsp;Keys</a></li>
 <li><a href="#handshake">Handshake</a></li>
 </ul>
 </li>
@@ -265,15 +298,15 @@
 </div>
 <h2 id="tldr"><span class="caps">TLDR</span></h2>
 <ul>
-<li>Public key only on the remote server.</li>
-<li><code>ssh-keygen -t rsa &lt;optional:email_address&gt;</code> Generate a key pair and keep the private key privately on your local remote machine.</li>
+<li>Public key only on the remote&nbsp;server.</li>
+<li><code>ssh-keygen -t rsa &lt;optional:email_address&gt;</code> Generate a key pair and keep the private key privately on your local remote&nbsp;machine.</li>
 <li>The new keys are added to <code>~/.ssh/id_rsa</code> and <code>~/.ssh/id_rsa.pub</code>.</li>
-<li>You could reuse an existing key pair but if it gets compromised you’ll need to reset several accounts.</li>
-<li><code>cat ~/.ssh/id_rsa.pub</code> to upload or copy a public key.</li>
+<li>You could reuse an existing key pair but if it gets compromised you&rsquo;ll need to reset several&nbsp;accounts.</li>
+<li><code>cat ~/.ssh/id_rsa.pub</code> to upload or copy a public&nbsp;key.</li>
 <li>Copy all the output from the relevant line: <code>ssh-rsa &lt;long-hash&gt; user@email.com</code>.</li>
-<li>Send the public key to the server. If it’s your server, it goes in <code>~/.ssh/authorized_keys</code>. This file contains a list of authorized public keys, one per line.</li>
+<li>Send the public key to the server. If it&rsquo;s your server, it goes in <code>~/.ssh/authorized_keys</code>. This file contains a list of authorized public keys, one per&nbsp;line.</li>
 </ul>
-<h2 id="setup-ssh-agent-to-prevent-passphrase-prompt">Setup <code>SSH-Agent</code> to prevent passphrase prompt</h2>
+<h2 id="setup-ssh-agent-to-prevent-passphrase-prompt">Setup <code>SSH-Agent</code> to prevent passphrase&nbsp;prompt</h2>
 <ul>
 <li>Ensure that <code>ssh-agent</code> is running <code>eval $(ssh-agent -s)</code></li>
 <li>Ensure that the following is in <code>~/.ssh/config</code>:</li>
@@ -283,45 +316,47 @@
      <span class="nb">UseKeychain</span> yes
      <span class="nb">IdentityFile</span> ~/.ssh/id_rsa
 </pre></div>
+
+
 <ul>
-<li>Add the private key to your local ssh-agent <code>/usr/bin/ssh-add -K ~/.ssh/id_rsa</code>. Use the full path to ensure that the Apple version of the command is used.</li>
+<li>Add the private key to your local ssh-agent <code>/usr/bin/ssh-add -K ~/.ssh/id_rsa</code>. Use the full path to ensure that the Apple version of the command is&nbsp;used.</li>
 </ul>
 <h1 id="authentication">Authentication</h1>
-<h2 id="passwords-and-keys">Passwords and Keys</h2>
+<h2 id="passwords-and-keys">Passwords and&nbsp;Keys</h2>
 <ol>
 <li>
-<p>There are three authentication methods:</p>
+<p>There are three authentication&nbsp;methods:</p>
 <ol>
-<li>Keys - very secure.</li>
-<li>Passwords - less secure than keys. </li>
-<li><span class="caps">IP</span> white lists - connect without authentication by specifying a particular <span class="caps">IP</span> address, I think. Presumably via some <span class="caps">VPN</span> or proxy.</li>
+<li>Keys - very&nbsp;secure.</li>
+<li>Passwords - less secure than&nbsp;keys. </li>
+<li><span class="caps">IP</span> white lists - connect without authentication by specifying a particular <span class="caps">IP</span> address, I think. Presumably via some <span class="caps">VPN</span> or&nbsp;proxy.</li>
 </ol>
 </li>
 <li>
 <p>Passwords are encrypted. They are conceptually familiar but can and will
    be brute forced. There are tools that will block repeated attempts (e.g. fail2ban) or
-   block/allow authentication attempts from particular <span class="caps">IP</span> addresses.</p>
+   block/allow authentication attempts from particular <span class="caps">IP</span>&nbsp;addresses.</p>
 </li>
 <li>
 <p><span class="caps">SSH</span> keys using public and private (or secret) key pairs and are very secure.
-   Keys are generated in pairs.</p>
+   Keys are generated in&nbsp;pairs.</p>
 <ul>
-<li>The public key can be shared freely without concern. </li>
-<li>The secret key must be kept as secure and secret as a password.</li>
+<li>The public key can be shared freely without&nbsp;concern. </li>
+<li>The secret key must be kept as secure and secret as a&nbsp;password.</li>
 </ul>
 </li>
 <li>
-<p>To authenticate using a key pair:</p>
+<p>To authenticate using a key&nbsp;pair:</p>
 <ul>
-<li>The client must have both keys (a key pair) on their computer.</li>
+<li>The client must have both keys (a key pair) on their&nbsp;computer.</li>
 <li>The server must have the public key in a file called <code>authorized_keys</code>.</li>
-<li>If the server has the private key then something has gone wrong and you should generate new keys and delete the compromised key.</li>
+<li>If the server has the private key then something has gone wrong and you should generate new keys and delete the compromised&nbsp;key.</li>
 </ul>
 </li>
 <li>
 <p>The server stores the public keys of users who can connect as a particular
     user in the file <code>~/.ssh/authorized_keys</code>. This file contains a list of
-    public keys, one public key on each row.</p>
+    public keys, one public key on each&nbsp;row.</p>
 </li>
 </ol>
 <h2 id="handshake">Handshake</h2>
@@ -329,44 +364,44 @@
 <li>
 <p>When a client wants to connect to a server using <span class="caps">SSH</span>, it tells the server
    which public key to use. The server then checks in the <code>authorized_keys</code> file
-   for the public key. </p>
+   for the public&nbsp;key. </p>
 </li>
 <li>
-<p>A unique session <span class="caps">ID</span> is generated and shared between the client and server.</p>
+<p>A unique session <span class="caps">ID</span> is generated and shared between the client and&nbsp;server.</p>
 </li>
 <li>
 <p>If the server has the same public key that the client sent when it  began
    the connection attempt, the server generates a random string and encrypts
    it using the public key. This random string can only be decrypted using the
-   private (secret) key associated with the public key.</p>
+   private (secret) key associated with the public&nbsp;key.</p>
 </li>
 <li>
 <p>The server sends the encrypted string to the client. The client decrypts it
    using the secret key and combines the original random string with the
    session <span class="caps">ID</span>. The client then hashes the combined string and sends the hash
-   back to the server. </p>
+   back to the&nbsp;server. </p>
 </li>
 <li>
 <p>The server already has the hash of the string combining the original random
    string and the session <span class="caps">ID</span>. If the hash from the client matches the hash on
-   the server, the server can be sure that the client has the private key.</p>
+   the server, the server can be sure that the client has the private&nbsp;key.</p>
 </li>
 </ol>
 <h1 id="background">Background</h1>
 <ol>
 <li>
 <p>Secure Shell lets you securely connect to remote servers. You connect using
-   an account that exists on the remote server. Once you’ve connected you’ll be
-   dropped into a shell session.</p>
+   an account that exists on the remote server. Once you&rsquo;ve connected you&rsquo;ll be
+   dropped into a shell&nbsp;session.</p>
 </li>
 <li>
-<p>The computer you connect from is the “local” or “client” computer. The
-   computer you connect to is the “host” or the “server”.</p>
+<p>The computer you connect from is the &ldquo;local&rdquo; or &ldquo;client&rdquo; computer. The
+   computer you connect to is the &ldquo;host&rdquo; or the&nbsp;&ldquo;server&rdquo;.</p>
 </li>
 <li>
-<p>When you’re connected to the server using <span class="caps">SSH</span>, any commands you input from
+<p>When you&rsquo;re connected to the server using <span class="caps">SSH</span>, any commands you input from
    the client are sent securely and privately through a <em>tunnel</em> to the remote
-   computer, where the commands are executed.</p>
+   computer, where the commands are&nbsp;executed.</p>
 </li>
 <li>
 <p><span class="caps">SSH</span> is implemented using the client-server model. The server must be running
@@ -375,56 +410,66 @@
    running the <span class="caps">SSH</span> daemon. The <span class="caps">SSH</span> daemon listens for connections on a specific
    port (22), authenticates connections requests, and (if the connection
    request is approved) it will spawn the correct environment. The correct
-   environment is a terminal session.</p>
+   environment is a terminal&nbsp;session.</p>
 </li>
 <li>
 <p>The client (the computer you connect from) must be running an <span class="caps">SSH</span> client,
    which is a small app that can communicate using the <span class="caps">SSH</span> protocol. (A
    protocol is a set of rules.) It needs to be able to receive information
    about which host to connect to, which user to connect as and which
-   credentials to use when trying to connect.</p>
+   credentials to use when trying to&nbsp;connect.</p>
 </li>
 </ol>
 <h1 id="source">Source</h1>
 <p><a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys">article</a></p>
-</div>
-</article>
-</main>
-<div class="mt-20 mb-10 text-lg dark:text-gray-200">
-<div class="flex flex-row">
-<div class="text-red-500 dark:text-red-500"> ← </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/chezmoi.html" id="previousArticleInCategory"> ChezMoi</a>
-</div>
-<div class="flex flex-row mt-2">
-<div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/tweets-april-2021.html" id="nextArticleInCategory"> Tweets - April 2021</a>
-</div>
-<div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        </div>
+      </article>
+    </main>
+
+    <div class="mt-20 mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190; </div>
+          <a id="previousArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./chezmoi.html"> ChezMoi</a>
+        </div>
+
+        <div class="flex flex-row mt-2">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a id="nextArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./tweets-april-2021.html"> Tweets - April&nbsp;2021</a>
+        </div>
+
+      <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
-          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/developer-tools.html" id="otherArticlesInCategory"> Developer Tools</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
-<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-<a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+          <a id="otherArticlesInCategory" class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold " href="./category/technical/developer-tools.html"> Developer Tools</a>
+          
+      </div>
+    </div>
+
+
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="./blog.html">Blog Posts</a> |
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
         <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a> |
-        <a class="px-3" href="https://johnmathews.eu/tags.html">Tags</a>
-</div>
-</footer>
-<script>
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-        const indexURL = 'https://johnmathews.eu/fuse.html'
-        const siteURL = 'https://johnmathews.eu'
+        <a class="px-3" href="./tags.html">Tags</a>
+      </div>
+    </footer>
+
+        <script>
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
+        const indexURL = 'http://localhost:8000/fuse.html'
+        const siteURL = '.'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -433,29 +478,31 @@
 
 
       </script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
-<script>
+
+      <script rel="prefetch" type="module" src="./theme/js/categoryChooser.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
+
+      <script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {
-                  console.log('flag1')
-                  $('#catModal').addClass('hidden');
-                });
+	  $('#catModal').addClass('hidden');
+	});
       </script>
-<script>
+      <script>
         if (navigator.userAgent.indexOf('Mac OS X') != -1) {
           $("#macOrPc").html("&#8984;K");
         } else {
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script>
-            result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-        </script>
-<script>
+
+
+
+
+  <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -479,5 +526,6 @@
       };
     }
   </script>
-</body>
+  </body>
+
 </html>

@@ -119,10 +119,7 @@ $(document).ready(function () {
       if (item.category === 'snippet'){
         catFlag = item.category
       }
-      console.log(item);
-
       const li = document.createElement('li')
-
       const link = document.createElement('a')
       link.setAttribute('href', item.url)
       link.innerHTML = 
@@ -163,7 +160,6 @@ $(document).ready(function () {
       incrementFocus(false)
       focussResult(window.focussedResult)
     } else if (event.keyCode == 13) { // return key
-      console.log(window.focussedResult);
       if (window.focussedResult >= 0) {
         $('#selected a')[0].click()
       } else {

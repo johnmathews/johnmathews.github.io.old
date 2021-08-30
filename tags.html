@@ -1,550 +1,546 @@
-<!DOCTYPE html>
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<html class="" id="baz" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>John Mathews</title>
-<meta content=" John Mathews " name="title"/>
-<meta content="John Mathews" name="author"/>
-<meta content=" blog, john mathews, blockchain, developer, bitcoin, data, python " name="keywords"/>
-<meta content="John Mathews' personal blog" name="description"/>
-<meta content="@johnmathews" name="twitter:creator"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content=" John Mathews " property="twitter:title"/>
-<meta content="John Mathews' personal blog" name="twitter:description"/>
-<meta content=" https://johnmathews.eu " property="twitter:url"/>
-<meta content="" name="twitter:image"/>
-<meta content=" summary_large_image " property="twitter:card"/>
-<meta content="website" property="og:type"/>
-<meta content=" John Mathews " property="og:title"/>
-<meta content="John Mathews' personal blog" property="og:description"/>
-<meta content=" https://johnmathews.eu " property="og:url"/>
-<meta content="" property="og:image"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
-<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
-<link href="https://fonts.gstatic.com" rel="preconnect"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
-<script>
+
+      <title>John Mathews</title>
+      <meta name="title" content=" John Mathews "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="keywords" content=" blog, john mathews, blockchain, developer, bitcoin, data, python " />
+      <meta name="description" content="John Mathews' personal blog"/>
+
+      <meta name="twitter:creator" content="@johnmathews"/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+      <meta property="twitter:title" content=" John Mathews "/>
+      <meta name="twitter:description" content="John Mathews' personal blog"/>
+      <meta property="twitter:url" content=" . "/>
+      <meta name="twitter:image" content=""/>
+      <meta property="twitter:card" content=" summary_large_image "/>
+
+      <meta property="og:type" content="website"/>
+      <meta property="og:title" content=" John Mathews "/>
+      <meta property="og:description" content="John Mathews' personal blog"/>
+      <meta property="og:url" content=" . "/>
+      <meta property="og:image" content=""/>
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - all articles" href="./None" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - technical articles" href="./feeds/technical.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - non-Technical articles" href="./feeds/non-technical.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - snippet articles" href="./feeds/snippet.atom.xml" />
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link async href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"/>
+      <link async href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"/>
+
+
+      <link rel="icon" href="./extra/favicon.png" />
+
+      <link href="./theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
         }
       </script>
-<!-- Cloudflare Web Analytics -->
-<!-- End Cloudflare Web Analytics -->
-</head>
-<body class="dark:bg-gray-900">
-<a class="pt-20 mt-20" name="top"></a>
-<nav class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
-<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-<div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/categories.html">Categories</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
-</div>
-<div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
-<div class="day modeIcon hidden">
-<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon">
-<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
-<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-</button>
-</div>
-</div>
-<div class="flex-none md:hidden block md:inline-block">
-<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
-<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-</button>
-</div>
-</nav>
-<div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/categories.html">Categories</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
-<div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-2x"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-2x"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5">
-<i class="fas fa-paw fa-2x"></i>
-</button>
-</div>
-</div>
-<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-<div class="text-center">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+
+      <!-- Cloudflare Web Analytics -->
+	  <script>console.log("cloudflare analytics is False")</script>
+      <!-- End Cloudflare Web Analytics -->
+
+  </head>
+
+  <body class="dark:bg-gray-900">
+    <a class="pt-20 mt-20" name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./snippets.html">Snippets</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./pages.html">Pages</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./categories.html">Categories</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
+            <div class="day modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./snippets.html">Snippets</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./pages.html">Pages</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./categories.html">Categories</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
-<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
-<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-40 inset-0 overflow-y-auto" id="keyboardShortcuts">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-11/12 lg:w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all my-8 sm:align-middle" role="dialog">
-<div class="px-5 py-5">
-<div class="">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboardShortcuts" class="hidden fixed z-40 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+	  <div class="w-11/12 lg:w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="px-5 py-5">
+              <div class="">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-<hr class="mb-5"/>
-<div class="text-base text-gray-700" id="" role="group">
-<div class="markdown">
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
-<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
-<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
-<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
-<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
-<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
-<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
-<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
-<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
-<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
-<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
-<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
-<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
-<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
-<div class="pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
-<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
-<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
-<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to pages page, or previous article</span></div>
-<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
-<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
-<div class="pb-1 -ml-2"><code>gt</code><span class="ml-2"> go to tags page</span></div>
-<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
-<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
-<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-50 inset-0 overflow-y-auto" id="fuseModal">
-<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<div class="absolute inset-x-0 w-screen px-3">
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle" role="dialog">
-<div class="py-1 px-1">
-<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
-<div class="hidden lg:inline-flex flex">
-<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                <hr class="mb-5">
+                <div id="" class="text-base text-gray-700" role="group">
+                  <div class="markdown">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+                      <div class=" pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+                      <div class=" pb-1"><code>/</code><span class="ml-2"> search</span></div>
+                      <div class=" pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+                      <div class=" pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+                      <div class=" pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+                      <div class=" pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+                      <div class=" pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+                      <div class=" pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+                      <div class=" pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to pages page, or previous article</span></div>
+                      <div class=" pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gt</code><span class="ml-2"> go to tags page</span></div>
+                      <div class=" pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fuseModal" class="hidden fixed z-50 inset-0 overflow-y-auto">
+        <div id="searchModalBackground" class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <div class="absolute inset-x-0 w-screen px-3">
+            <div class="w-full md:w-10/12 lg:w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="py-1 px-1">
+                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
+                <div class="hidden lg:inline-flex flex">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
                   or
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                  <div id="macOrPc" class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     cmd-K
                   </div>
-</div>
-<ul class="results text-lg text-bold text-gray-600" id="searchResults">
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mx-auto w-full">
-<div class="flex flex-row">
-<div class="hidden xl:inline xl:w-32">
-<div class="w-32">
-<div class="mt-5 2xl:mt-20 fixed flex flex-col">
-<div class="lg:w-32">
-<div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-</div>
-<div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-</div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/categories.html">Categories</a>
-<div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
-<div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-lg"></i>
-</div>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
-<main class="py-1 md:-mr-64 mx-3 lg:mx-0">
-<div class="font-serif text-6xl lg:text-8xl dark:text-gray-50 mt-10 mb-5 md:my-24 mx-0">Tags</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row">
-<div><a class="" href="https://johnmathews.eu/tag/abstractions.html">abstractions (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/aca.html">aca (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/accounting.html">accounting (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/admin.html">admin (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/advice.html">advice (8)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/æternity.html">æternity (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/alias.html">alias (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ansible.html">ansible (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/api.html">api (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/apple.html">apple (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/applescript.html">applescript (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/art.html">art (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/automation.html">automation (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/barkley.html">barkley (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bash.html">bash (13)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/betting.html">betting (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bible.html">bible (8)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/binary.html">binary (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bitcoin.html">bitcoin (11)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bitcoin-cash.html">bitcoin cash (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bitcoin-sv.html">bitcoin sv (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bitnation.html">bitnation (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/blockchain.html">blockchain (5)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/blockchains.html">blockchains (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/blog.html">blog (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/book.html">book (4)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/books.html">books (5)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/brexit.html">brexit (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/broot.html">broot (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/bsh.html">bsh (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/btc-core.html">btc-core (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/builtin.html">builtin (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/business.html">business (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/caesar.html">caesar (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/career.html">career (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cat.html">cat (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/chaos.html">chaos (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/classification.html">classification (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cli.html">cli (10)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cloud.html">cloud (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cloud-functions.html">cloud-functions (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cocreate.html">cocreate (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/code.html">code (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/coffeescript.html">coffeescript (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/colinearity.html">colinearity (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/communication.html">communication (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/comparmentalization.html">comparmentalization (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/competition.html">competition (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/confusion-matrix.html">confusion-matrix (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/consent.html">consent (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/console.html">console (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/consulting.html">consulting (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/corporate.html">corporate (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/corporations.html">corporations (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cors.html">cors (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/coursera.html">coursera (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/coworking.html">coworking (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/credentials.html">credentials (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/crypto.html">crypto (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cryptocurrencies.html">cryptocurrencies (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/cryptography.html">cryptography (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/data.html">data (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/data-analysis.html">data analysis (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/data-science.html">data science (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/daughter.html">daughter (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/death.html">death (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/debian.html">debian (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/df.html">df (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/digital-currencies.html">digital currencies (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/disintermediation.html">disintermediation (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/distributed-applications.html">distributed applications (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/distributed-consensus.html">distributed consensus (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/distributed-ledger-technology.html">distributed ledger technology (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/django.html">django (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/dlt.html">dlt (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/docker.html">docker (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/doctorate.html">doctorate (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/dogecoin.html">dogecoin (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/dotfiles.html">dotfiles (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/dream.html">dream (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/du.html">du (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/dublin.html">dublin (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/element78.html">element78 (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/elon-musk.html">elon-musk (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/emacs.html">emacs (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/email.html">email (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/encryption.html">encryption (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/engineering.html">engineering (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/entrepreneur.html">entrepreneur (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ethereum.html">ethereum (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/europe.html">europe (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/f-score.html">f-score (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/f1.html">f1 (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/f2.html">f2 (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/facebook.html">facebook (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/fail.html">fail (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/family.html">family (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/filesystem.html">filesystem (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/finance.html">finance (12)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/fintech.html">fintech (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/founder.html">founder (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/freelance.html">freelance (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/fuse.html">fuse (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/fzf.html">fzf (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/gcp.html">gcp (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/general-ledger.html">general ledger (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/git.html">git (5)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/git-lfs.html">git-lfs (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/github.html">github (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/github-pages.html">github-pages (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/glandore.html">glandore (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/gnosis.html">gnosis (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/gold.html">gold (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/google.html">google (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/google-cloud-platform.html">google-cloud-platform (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/granular-flow.html">granular flow (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/granular-materials.html">granular materials (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/grep.html">grep (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/growth.html">growth (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/guide.html">guide (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/haarlem.html">haarlem (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/habits.html">habits (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/hack.html">hack (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/hacking.html">hacking (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/hard-rock.html">hard-rock (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/hashing.html">hashing (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/history.html">history (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/html.html">html (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/http.html">http (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/humanity.html">humanity (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/iam.html">iam (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/icaew.html">icaew (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/icloud.html">icloud (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ico.html">ico (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/identity.html">identity (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/interview.html">interview (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/isbn.html">isbn (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/jam.html">jam (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/javascript.html">javascript (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/jinja.html">jinja (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/journals.html">journals (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/jquery.html">jquery (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/json.html">json (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/jupyter-notebook.html">jupyter notebook (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/keys.html">keys (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/kids.html">kids (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/knowledge-system.html">knowledge-system (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/learning.html">learning (4)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/learning-notes.html">learning notes (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/lfs.html">lfs (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/life.html">life (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/life-expectancy.html">life-expectancy (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/lifestyle.html">lifestyle (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/lightning.html">lightning (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/linus.html">linus (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/linux.html">linux (21)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/lis.html">lis (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/litecoin.html">litecoin (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/logistic-regression.html">logistic-regression (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/london.html">london (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/macos.html">macos (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/management.html">management (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/marketing.html">marketing (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/markets.html">markets (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/math.html">math (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/meta.html">meta (9)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/money.html">money (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/movie.html">movie (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/multi-sig.html">multi-sig (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/music.html">music (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/netherlands.html">netherlands (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/netrw.html">netrw (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/notes.html">notes (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/officesuites.html">officesuites (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/onion.html">onion (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/oppression.html">oppression (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/organisations.html">organisations (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/painting.html">painting (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/pair-programming.html">pair-programming (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/pandas.html">pandas (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/pangea.html">pangea (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/parenting.html">parenting (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/parity.html">parity (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/path.html">path (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/paul-graham.html">paul-graham (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/peaky-blinders.html">peaky-blinders (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/pelican.html">pelican (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/penetration-testing.html">penetration-testing (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/phd.html">phd (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/photography.html">photography (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/pipe.html">pipe (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/pippip.html">pippip (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/plugin.html">plugin (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/poetry.html">poetry (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/positioning.html">positioning (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/precision.html">precision (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/prediction.html">prediction (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/productivity.html">productivity (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/profiling.html">profiling (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/programming.html">programming (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/proverb.html">proverb (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/proverbs.html">proverbs (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/psychology.html">psychology (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/public-key-cryptography.html">public key cryptography (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/python.html">python (11)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/quote.html">quote (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/r.html">r (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ranger.html">ranger (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/reading.html">reading (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/recall.html">recall (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/reconciliation.html">reconciliation (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/reflection.html">reflection (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/regex.html">regex (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/regression.html">regression (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/regus.html">regus (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/remote.html">remote (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/rent.html">rent (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/research.html">research (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ripgrep.html">ripgrep (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/rpc.html">rpc (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/rsa.html">rsa (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/running.html">running (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ryan-hodson.html">ryan hodson (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/rys.html">rys (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/saas.html">saas (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/safe-haven.html">safe haven (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/school.html">school (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/search.html">search (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/security.html">security (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/self-reflection.html">self-reflection (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/serverless.html">serverless (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/servers.html">servers (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/service-account.html">service-account (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/service-accounts.html">service-accounts (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/shell.html">shell (9)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/silo.html">silo (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/sleep.html">sleep (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/software-engineering.html">software-engineering (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/sport.html">sport (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/spotify.html">spotify (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ssh.html">ssh (4)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/starbase.html">starbase (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/startup.html">startup (4)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/startups.html">startups (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/static-site.html">static site (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/statistics.html">statistics (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/studio9.html">studio9 (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/sudo.html">sudo (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/sybil.html">sybil (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/syntax.html">syntax (4)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/tcube.html">tcube (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/teaching.html">teaching (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/teams.html">teams (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/testing.html">testing (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/text.html">text (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/theology.html">theology (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/thesis.html">thesis (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/thinking.html">thinking (4)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/thoughts.html">thoughts (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/time-since.html">time since (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/time-until.html">time until (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/tinysearch.html">tinysearch (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/tips.html">tips (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/tmux.html">tmux (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/tools.html">tools (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/trading.html">trading (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/training.html">training (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/trial-balance.html">trial balance (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/tutorial.html">tutorial (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/twitter.html">twitter (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/typescript.html">typescript (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/übersicht.html">übersicht (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/ui.html">ui (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/unix.html">unix (6)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/user.html">user (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/vagrant.html">vagrant (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/variance-inflation-factor.html">variance-inflation-factor (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/vcs.html">vcs (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/versioning.html">versioning (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/vienna.html">vienna (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/vim.html">vim (17)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/vpn.html">vpn (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/wallet.html">wallet (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/water.html">water (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/web.html">web (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/web-app.html">web-app (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/web-apps.html">web-apps (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/whale.html">whale (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/widgets.html">widgets (2)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/wisdom.html">wisdom (7)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/workflow.html">workflow (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/writing.html">writing (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/xss.html">xss (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/youtube.html">youtube (3)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/zettelkasten.html">zettelkasten (1)</a></div>
-<div><a class="" href="https://johnmathews.eu/tag/zsh.html">zsh (4)</a></div>
-</div>
-</main>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
-<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-<a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+                </div>
+                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                  <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                  </div>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./snippets.html">Snippets</a>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./pages.html">Pages</a>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./categories.html">Categories</a>
+                  <div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="min-h-screen w-full xl:w-5/6 xl:ml-20">
+    <main class="py-1 md:-mr-64 mx-3 lg:mx-0">
+        <div class="font-serif text-6xl lg:text-8xl dark:text-gray-50 mt-10 mb-5 md:my-24 mx-0">Tags</div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row">
+		    <div ><a class="" href="./tag/abstractions.html">abstractions (1)</a></div>
+		    <div ><a class="" href="./tag/aca.html">aca (1)</a></div>
+		    <div ><a class="" href="./tag/accounting.html">accounting (1)</a></div>
+		    <div ><a class="" href="./tag/admin.html">admin (1)</a></div>
+		    <div ><a class="" href="./tag/advice.html">advice (8)</a></div>
+		    <div ><a class="" href="./tag/æternity.html">æternity (2)</a></div>
+		    <div ><a class="" href="./tag/alias.html">alias (2)</a></div>
+		    <div ><a class="" href="./tag/ansible.html">ansible (2)</a></div>
+		    <div ><a class="" href="./tag/api.html">api (1)</a></div>
+		    <div ><a class="" href="./tag/apple.html">apple (1)</a></div>
+		    <div ><a class="" href="./tag/applescript.html">applescript (2)</a></div>
+		    <div ><a class="" href="./tag/art.html">art (1)</a></div>
+		    <div ><a class="" href="./tag/automation.html">automation (1)</a></div>
+		    <div ><a class="" href="./tag/barkley.html">barkley (1)</a></div>
+		    <div ><a class="" href="./tag/bash.html">bash (13)</a></div>
+		    <div ><a class="" href="./tag/betting.html">betting (1)</a></div>
+		    <div ><a class="" href="./tag/bible.html">bible (8)</a></div>
+		    <div ><a class="" href="./tag/binary.html">binary (1)</a></div>
+		    <div ><a class="" href="./tag/bitcoin.html">bitcoin (8)</a></div>
+		    <div ><a class="" href="./tag/bitnation.html">bitnation (2)</a></div>
+		    <div ><a class="" href="./tag/blockchain.html">blockchain (3)</a></div>
+		    <div ><a class="" href="./tag/blockchains.html">blockchains (6)</a></div>
+		    <div ><a class="" href="./tag/blog.html">blog (6)</a></div>
+		    <div ><a class="" href="./tag/book.html">book (4)</a></div>
+		    <div ><a class="" href="./tag/books.html">books (5)</a></div>
+		    <div ><a class="" href="./tag/brexit.html">brexit (1)</a></div>
+		    <div ><a class="" href="./tag/broot.html">broot (1)</a></div>
+		    <div ><a class="" href="./tag/bsh.html">bsh (1)</a></div>
+		    <div ><a class="" href="./tag/btc-core.html">btc-core (1)</a></div>
+		    <div ><a class="" href="./tag/builtin.html">builtin (1)</a></div>
+		    <div ><a class="" href="./tag/business.html">business (2)</a></div>
+		    <div ><a class="" href="./tag/caesar.html">caesar (1)</a></div>
+		    <div ><a class="" href="./tag/career.html">career (2)</a></div>
+		    <div ><a class="" href="./tag/cat.html">cat (1)</a></div>
+		    <div ><a class="" href="./tag/chaos.html">chaos (1)</a></div>
+		    <div ><a class="" href="./tag/classification.html">classification (1)</a></div>
+		    <div ><a class="" href="./tag/cli.html">cli (10)</a></div>
+		    <div ><a class="" href="./tag/cloud.html">cloud (1)</a></div>
+		    <div ><a class="" href="./tag/cloud-functions.html">cloud-functions (2)</a></div>
+		    <div ><a class="" href="./tag/cocreate.html">cocreate (1)</a></div>
+		    <div ><a class="" href="./tag/code.html">code (1)</a></div>
+		    <div ><a class="" href="./tag/coffeescript.html">coffeescript (2)</a></div>
+		    <div ><a class="" href="./tag/communication.html">communication (1)</a></div>
+		    <div ><a class="" href="./tag/comparmentalization.html">comparmentalization (1)</a></div>
+		    <div ><a class="" href="./tag/competition.html">competition (1)</a></div>
+		    <div ><a class="" href="./tag/consent.html">consent (1)</a></div>
+		    <div ><a class="" href="./tag/console.html">console (1)</a></div>
+		    <div ><a class="" href="./tag/consulting.html">consulting (1)</a></div>
+		    <div ><a class="" href="./tag/corporate.html">corporate (1)</a></div>
+		    <div ><a class="" href="./tag/corporations.html">corporations (2)</a></div>
+		    <div ><a class="" href="./tag/cors.html">cors (1)</a></div>
+		    <div ><a class="" href="./tag/coursera.html">coursera (1)</a></div>
+		    <div ><a class="" href="./tag/coworking.html">coworking (2)</a></div>
+		    <div ><a class="" href="./tag/credentials.html">credentials (1)</a></div>
+		    <div ><a class="" href="./tag/crypto.html">crypto (2)</a></div>
+		    <div ><a class="" href="./tag/cryptocurrencies.html">cryptocurrencies (1)</a></div>
+		    <div ><a class="" href="./tag/cryptography.html">cryptography (1)</a></div>
+		    <div ><a class="" href="./tag/data.html">data (2)</a></div>
+		    <div ><a class="" href="./tag/data-science.html">data science (1)</a></div>
+		    <div ><a class="" href="./tag/daughter.html">daughter (1)</a></div>
+		    <div ><a class="" href="./tag/death.html">death (1)</a></div>
+		    <div ><a class="" href="./tag/debian.html">debian (1)</a></div>
+		    <div ><a class="" href="./tag/df.html">df (1)</a></div>
+		    <div ><a class="" href="./tag/digital-currencies.html">digital currencies (6)</a></div>
+		    <div ><a class="" href="./tag/disintermediation.html">disintermediation (1)</a></div>
+		    <div ><a class="" href="./tag/distributed-consensus.html">distributed consensus (1)</a></div>
+		    <div ><a class="" href="./tag/distributed-ledger-technology.html">distributed ledger technology (2)</a></div>
+		    <div ><a class="" href="./tag/django.html">django (2)</a></div>
+		    <div ><a class="" href="./tag/dlt.html">dlt (3)</a></div>
+		    <div ><a class="" href="./tag/docker.html">docker (2)</a></div>
+		    <div ><a class="" href="./tag/doctorate.html">doctorate (1)</a></div>
+		    <div ><a class="" href="./tag/dotfiles.html">dotfiles (1)</a></div>
+		    <div ><a class="" href="./tag/dream.html">dream (1)</a></div>
+		    <div ><a class="" href="./tag/du.html">du (1)</a></div>
+		    <div ><a class="" href="./tag/dublin.html">dublin (1)</a></div>
+		    <div ><a class="" href="./tag/element78.html">element78 (1)</a></div>
+		    <div ><a class="" href="./tag/elon-musk.html">elon-musk (1)</a></div>
+		    <div ><a class="" href="./tag/emacs.html">emacs (1)</a></div>
+		    <div ><a class="" href="./tag/email.html">email (1)</a></div>
+		    <div ><a class="" href="./tag/encryption.html">encryption (1)</a></div>
+		    <div ><a class="" href="./tag/engineering.html">engineering (6)</a></div>
+		    <div ><a class="" href="./tag/entrepreneur.html">entrepreneur (2)</a></div>
+		    <div ><a class="" href="./tag/ethereum.html">ethereum (1)</a></div>
+		    <div ><a class="" href="./tag/europe.html">europe (2)</a></div>
+		    <div ><a class="" href="./tag/facebook.html">facebook (1)</a></div>
+		    <div ><a class="" href="./tag/fail.html">fail (1)</a></div>
+		    <div ><a class="" href="./tag/family.html">family (2)</a></div>
+		    <div ><a class="" href="./tag/filesystem.html">filesystem (1)</a></div>
+		    <div ><a class="" href="./tag/finance.html">finance (5)</a></div>
+		    <div ><a class="" href="./tag/fintech.html">fintech (6)</a></div>
+		    <div ><a class="" href="./tag/founder.html">founder (1)</a></div>
+		    <div ><a class="" href="./tag/freelance.html">freelance (2)</a></div>
+		    <div ><a class="" href="./tag/fuse.html">fuse (1)</a></div>
+		    <div ><a class="" href="./tag/fzf.html">fzf (1)</a></div>
+		    <div ><a class="" href="./tag/gcp.html">gcp (1)</a></div>
+		    <div ><a class="" href="./tag/git.html">git (5)</a></div>
+		    <div ><a class="" href="./tag/git-lfs.html">git-lfs (1)</a></div>
+		    <div ><a class="" href="./tag/github.html">github (2)</a></div>
+		    <div ><a class="" href="./tag/github-pages.html">github-pages (1)</a></div>
+		    <div ><a class="" href="./tag/glandore.html">glandore (1)</a></div>
+		    <div ><a class="" href="./tag/gnosis.html">gnosis (1)</a></div>
+		    <div ><a class="" href="./tag/gold.html">gold (1)</a></div>
+		    <div ><a class="" href="./tag/google.html">google (1)</a></div>
+		    <div ><a class="" href="./tag/google-cloud-platform.html">google-cloud-platform (2)</a></div>
+		    <div ><a class="" href="./tag/granular-flow.html">granular flow (1)</a></div>
+		    <div ><a class="" href="./tag/granular-materials.html">granular materials (1)</a></div>
+		    <div ><a class="" href="./tag/grep.html">grep (1)</a></div>
+		    <div ><a class="" href="./tag/growth.html">growth (1)</a></div>
+		    <div ><a class="" href="./tag/guide.html">guide (1)</a></div>
+		    <div ><a class="" href="./tag/haarlem.html">haarlem (1)</a></div>
+		    <div ><a class="" href="./tag/habits.html">habits (1)</a></div>
+		    <div ><a class="" href="./tag/hack.html">hack (1)</a></div>
+		    <div ><a class="" href="./tag/hacking.html">hacking (1)</a></div>
+		    <div ><a class="" href="./tag/hard-rock.html">hard-rock (1)</a></div>
+		    <div ><a class="" href="./tag/hashing.html">hashing (1)</a></div>
+		    <div ><a class="" href="./tag/history.html">history (2)</a></div>
+		    <div ><a class="" href="./tag/html.html">html (1)</a></div>
+		    <div ><a class="" href="./tag/http.html">http (1)</a></div>
+		    <div ><a class="" href="./tag/humanity.html">humanity (2)</a></div>
+		    <div ><a class="" href="./tag/iam.html">iam (1)</a></div>
+		    <div ><a class="" href="./tag/icaew.html">icaew (1)</a></div>
+		    <div ><a class="" href="./tag/icloud.html">icloud (1)</a></div>
+		    <div ><a class="" href="./tag/ico.html">ico (1)</a></div>
+		    <div ><a class="" href="./tag/identity.html">identity (1)</a></div>
+		    <div ><a class="" href="./tag/interview.html">interview (1)</a></div>
+		    <div ><a class="" href="./tag/jam.html">jam (2)</a></div>
+		    <div ><a class="" href="./tag/javascript.html">javascript (3)</a></div>
+		    <div ><a class="" href="./tag/jinja.html">jinja (1)</a></div>
+		    <div ><a class="" href="./tag/jquery.html">jquery (1)</a></div>
+		    <div ><a class="" href="./tag/json.html">json (2)</a></div>
+		    <div ><a class="" href="./tag/jupyter-notebook.html">jupyter notebook (1)</a></div>
+		    <div ><a class="" href="./tag/keys.html">keys (1)</a></div>
+		    <div ><a class="" href="./tag/kids.html">kids (1)</a></div>
+		    <div ><a class="" href="./tag/knowledge-system.html">knowledge-system (1)</a></div>
+		    <div ><a class="" href="./tag/learning.html">learning (4)</a></div>
+		    <div ><a class="" href="./tag/learning-notes.html">learning notes (1)</a></div>
+		    <div ><a class="" href="./tag/lfs.html">lfs (1)</a></div>
+		    <div ><a class="" href="./tag/life.html">life (1)</a></div>
+		    <div ><a class="" href="./tag/life-expectancy.html">life-expectancy (1)</a></div>
+		    <div ><a class="" href="./tag/lifestyle.html">lifestyle (2)</a></div>
+		    <div ><a class="" href="./tag/lightning.html">lightning (1)</a></div>
+		    <div ><a class="" href="./tag/linus.html">linus (1)</a></div>
+		    <div ><a class="" href="./tag/linux.html">linux (21)</a></div>
+		    <div ><a class="" href="./tag/lis.html">lis (3)</a></div>
+		    <div ><a class="" href="./tag/london.html">london (2)</a></div>
+		    <div ><a class="" href="./tag/macos.html">macos (6)</a></div>
+		    <div ><a class="" href="./tag/management.html">management (2)</a></div>
+		    <div ><a class="" href="./tag/marketing.html">marketing (6)</a></div>
+		    <div ><a class="" href="./tag/markets.html">markets (2)</a></div>
+		    <div ><a class="" href="./tag/math.html">math (3)</a></div>
+		    <div ><a class="" href="./tag/meta.html">meta (10)</a></div>
+		    <div ><a class="" href="./tag/money.html">money (1)</a></div>
+		    <div ><a class="" href="./tag/movie.html">movie (2)</a></div>
+		    <div ><a class="" href="./tag/multi-sig.html">multi-sig (1)</a></div>
+		    <div ><a class="" href="./tag/netherlands.html">netherlands (1)</a></div>
+		    <div ><a class="" href="./tag/netrw.html">netrw (1)</a></div>
+		    <div ><a class="" href="./tag/notes.html">notes (1)</a></div>
+		    <div ><a class="" href="./tag/officesuites.html">officesuites (1)</a></div>
+		    <div ><a class="" href="./tag/onion.html">onion (1)</a></div>
+		    <div ><a class="" href="./tag/oppression.html">oppression (1)</a></div>
+		    <div ><a class="" href="./tag/organisations.html">organisations (3)</a></div>
+		    <div ><a class="" href="./tag/painting.html">painting (1)</a></div>
+		    <div ><a class="" href="./tag/pair-programming.html">pair-programming (1)</a></div>
+		    <div ><a class="" href="./tag/pandas.html">pandas (1)</a></div>
+		    <div ><a class="" href="./tag/pangea.html">pangea (1)</a></div>
+		    <div ><a class="" href="./tag/parenting.html">parenting (1)</a></div>
+		    <div ><a class="" href="./tag/parity.html">parity (1)</a></div>
+		    <div ><a class="" href="./tag/path.html">path (1)</a></div>
+		    <div ><a class="" href="./tag/paul-graham.html">paul-graham (1)</a></div>
+		    <div ><a class="" href="./tag/peaky-blinders.html">peaky-blinders (1)</a></div>
+		    <div ><a class="" href="./tag/pelican.html">pelican (3)</a></div>
+		    <div ><a class="" href="./tag/penetration-testing.html">penetration-testing (1)</a></div>
+		    <div ><a class="" href="./tag/phd.html">phd (1)</a></div>
+		    <div ><a class="" href="./tag/photography.html">photography (1)</a></div>
+		    <div ><a class="" href="./tag/pipe.html">pipe (1)</a></div>
+		    <div ><a class="" href="./tag/pippip.html">pippip (1)</a></div>
+		    <div ><a class="" href="./tag/plugin.html">plugin (2)</a></div>
+		    <div ><a class="" href="./tag/poetry.html">poetry (1)</a></div>
+		    <div ><a class="" href="./tag/positioning.html">positioning (1)</a></div>
+		    <div ><a class="" href="./tag/prediction.html">prediction (1)</a></div>
+		    <div ><a class="" href="./tag/productivity.html">productivity (1)</a></div>
+		    <div ><a class="" href="./tag/profiling.html">profiling (1)</a></div>
+		    <div ><a class="" href="./tag/programming.html">programming (1)</a></div>
+		    <div ><a class="" href="./tag/proverb.html">proverb (1)</a></div>
+		    <div ><a class="" href="./tag/proverbs.html">proverbs (3)</a></div>
+		    <div ><a class="" href="./tag/psychology.html">psychology (1)</a></div>
+		    <div ><a class="" href="./tag/public-key-cryptography.html">public key cryptography (2)</a></div>
+		    <div ><a class="" href="./tag/python.html">python (8)</a></div>
+		    <div ><a class="" href="./tag/quote.html">quote (2)</a></div>
+		    <div ><a class="" href="./tag/r.html">r (1)</a></div>
+		    <div ><a class="" href="./tag/ranger.html">ranger (1)</a></div>
+		    <div ><a class="" href="./tag/reading.html">reading (3)</a></div>
+		    <div ><a class="" href="./tag/reflection.html">reflection (1)</a></div>
+		    <div ><a class="" href="./tag/regex.html">regex (1)</a></div>
+		    <div ><a class="" href="./tag/regression.html">regression (1)</a></div>
+		    <div ><a class="" href="./tag/regus.html">regus (1)</a></div>
+		    <div ><a class="" href="./tag/remote.html">remote (1)</a></div>
+		    <div ><a class="" href="./tag/rent.html">rent (1)</a></div>
+		    <div ><a class="" href="./tag/research.html">research (1)</a></div>
+		    <div ><a class="" href="./tag/ripgrep.html">ripgrep (1)</a></div>
+		    <div ><a class="" href="./tag/rpc.html">rpc (1)</a></div>
+		    <div ><a class="" href="./tag/rsa.html">rsa (1)</a></div>
+		    <div ><a class="" href="./tag/running.html">running (2)</a></div>
+		    <div ><a class="" href="./tag/ryan-hodson.html">ryan hodson (1)</a></div>
+		    <div ><a class="" href="./tag/rys.html">rys (1)</a></div>
+		    <div ><a class="" href="./tag/saas.html">saas (2)</a></div>
+		    <div ><a class="" href="./tag/safe-haven.html">safe haven (1)</a></div>
+		    <div ><a class="" href="./tag/school.html">school (1)</a></div>
+		    <div ><a class="" href="./tag/search.html">search (2)</a></div>
+		    <div ><a class="" href="./tag/security.html">security (2)</a></div>
+		    <div ><a class="" href="./tag/self-reflection.html">self-reflection (1)</a></div>
+		    <div ><a class="" href="./tag/serverless.html">serverless (1)</a></div>
+		    <div ><a class="" href="./tag/servers.html">servers (1)</a></div>
+		    <div ><a class="" href="./tag/service-account.html">service-account (1)</a></div>
+		    <div ><a class="" href="./tag/service-accounts.html">service-accounts (1)</a></div>
+		    <div ><a class="" href="./tag/shell.html">shell (9)</a></div>
+		    <div ><a class="" href="./tag/silo.html">silo (1)</a></div>
+		    <div ><a class="" href="./tag/sleep.html">sleep (2)</a></div>
+		    <div ><a class="" href="./tag/software-engineering.html">software-engineering (1)</a></div>
+		    <div ><a class="" href="./tag/sport.html">sport (3)</a></div>
+		    <div ><a class="" href="./tag/ssh.html">ssh (4)</a></div>
+		    <div ><a class="" href="./tag/starbase.html">starbase (1)</a></div>
+		    <div ><a class="" href="./tag/startup.html">startup (5)</a></div>
+		    <div ><a class="" href="./tag/startups.html">startups (3)</a></div>
+		    <div ><a class="" href="./tag/static-site.html">static site (2)</a></div>
+		    <div ><a class="" href="./tag/statistics.html">statistics (1)</a></div>
+		    <div ><a class="" href="./tag/studio9.html">studio9 (1)</a></div>
+		    <div ><a class="" href="./tag/sudo.html">sudo (2)</a></div>
+		    <div ><a class="" href="./tag/sybil.html">sybil (1)</a></div>
+		    <div ><a class="" href="./tag/syntax.html">syntax (4)</a></div>
+		    <div ><a class="" href="./tag/tcube.html">tcube (1)</a></div>
+		    <div ><a class="" href="./tag/teaching.html">teaching (1)</a></div>
+		    <div ><a class="" href="./tag/teams.html">teams (1)</a></div>
+		    <div ><a class="" href="./tag/testing.html">testing (1)</a></div>
+		    <div ><a class="" href="./tag/text.html">text (1)</a></div>
+		    <div ><a class="" href="./tag/theology.html">theology (1)</a></div>
+		    <div ><a class="" href="./tag/thesis.html">thesis (1)</a></div>
+		    <div ><a class="" href="./tag/thinking.html">thinking (4)</a></div>
+		    <div ><a class="" href="./tag/thoughts.html">thoughts (1)</a></div>
+		    <div ><a class="" href="./tag/time-since.html">time since (1)</a></div>
+		    <div ><a class="" href="./tag/time-until.html">time until (2)</a></div>
+		    <div ><a class="" href="./tag/tinysearch.html">tinysearch (1)</a></div>
+		    <div ><a class="" href="./tag/tips.html">tips (1)</a></div>
+		    <div ><a class="" href="./tag/tmux.html">tmux (2)</a></div>
+		    <div ><a class="" href="./tag/tools.html">tools (2)</a></div>
+		    <div ><a class="" href="./tag/training.html">training (1)</a></div>
+		    <div ><a class="" href="./tag/tutorial.html">tutorial (1)</a></div>
+		    <div ><a class="" href="./tag/twitter.html">twitter (2)</a></div>
+		    <div ><a class="" href="./tag/typescript.html">typescript (1)</a></div>
+		    <div ><a class="" href="./tag/übersicht.html">übersicht (2)</a></div>
+		    <div ><a class="" href="./tag/ui.html">ui (1)</a></div>
+		    <div ><a class="" href="./tag/unix.html">unix (6)</a></div>
+		    <div ><a class="" href="./tag/user.html">user (1)</a></div>
+		    <div ><a class="" href="./tag/vagrant.html">vagrant (1)</a></div>
+		    <div ><a class="" href="./tag/vcs.html">vcs (1)</a></div>
+		    <div ><a class="" href="./tag/versioning.html">versioning (1)</a></div>
+		    <div ><a class="" href="./tag/vienna.html">vienna (1)</a></div>
+		    <div ><a class="" href="./tag/vim.html">vim (17)</a></div>
+		    <div ><a class="" href="./tag/vpn.html">vpn (1)</a></div>
+		    <div ><a class="" href="./tag/wallet.html">wallet (2)</a></div>
+		    <div ><a class="" href="./tag/water.html">water (1)</a></div>
+		    <div ><a class="" href="./tag/web.html">web (3)</a></div>
+		    <div ><a class="" href="./tag/web-app.html">web-app (1)</a></div>
+		    <div ><a class="" href="./tag/web-apps.html">web-apps (1)</a></div>
+		    <div ><a class="" href="./tag/whale.html">whale (1)</a></div>
+		    <div ><a class="" href="./tag/widgets.html">widgets (2)</a></div>
+		    <div ><a class="" href="./tag/wisdom.html">wisdom (7)</a></div>
+		    <div ><a class="" href="./tag/workflow.html">workflow (1)</a></div>
+		    <div ><a class="" href="./tag/writing.html">writing (1)</a></div>
+		    <div ><a class="" href="./tag/xss.html">xss (1)</a></div>
+		    <div ><a class="" href="./tag/youtube.html">youtube (3)</a></div>
+		    <div ><a class="" href="./tag/zettelkasten.html">zettelkasten (1)</a></div>
+		    <div ><a class="" href="./tag/zsh.html">zsh (4)</a></div>
+        </div>
+  </main>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="./blog.html">Blog Posts</a> |
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
         <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a> |
-        <a class="px-3" href="https://johnmathews.eu/tags.html">Tags</a>
-</div>
-</footer>
-<script>
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-        const indexURL = 'https://johnmathews.eu/fuse.html'
-        const siteURL = 'https://johnmathews.eu'
+        <a class="px-3" href="./tags.html">Tags</a>
+      </div>
+    </footer>
+
+      <script>
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
+        const indexURL = 'http://localhost:8000/fuse.html'
+        const siteURL = '.'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -553,27 +549,28 @@
 
 
       </script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
-<script>
+
+      <script rel="prefetch" type="module" src="./theme/js/categoryChooser.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
+
+      <script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {
-                  console.log('flag1')
-                  $('#catModal').addClass('hidden');
-                });
+	  $('#catModal').addClass('hidden');
+	});
       </script>
-<script>
+      <script>
         if (navigator.userAgent.indexOf('Mac OS X') != -1) {
           $("#macOrPc").html("&#8984;K");
         } else {
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script>
-            result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-        </script>
-</body>
+
+
+  </body>
+
 </html>

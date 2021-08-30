@@ -1,338 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
+<html id="baz" class="" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<html class="" id="baz" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
-<title>Encryption - John Mathews</title>
-<meta content="Encryption -  John Mathews " name="title"/>
-<meta content="John Mathews" name="author"/>
-<meta content=" Bitcoin,Blockchains,Digital Currencies,DLT,Encryption,Public Key Cryptography,RSA " name="keywords"/>
-<meta content=" Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption 1 To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers 2 which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers... " name="description"/>
-<meta content="@johnmathews" name="twitter:creator"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
-<meta content="Encryption" property="twitter:title"/>
-<meta content=" Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption 1 To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers 2 which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers... " name="twitter:description"/>
-<meta content="https://johnmathews.eu/encryption.html" property="twitter:url"/>
-<meta content="https://johnmathews.eu/
-" name="twitter:image"/>
-<meta content="  summary  " property="twitter:card"/>
-<meta content=" article " property="og:type"/>
-<meta content="Encryption" property="og:title"/>
-<meta content=" Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption 1 To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers 2 which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers... " property="og:description"/>
-<meta content="https://johnmathews.eu/encryption.html" property="og:url"/>
-<meta content="https://johnmathews.eu/
-" property="og:image"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
-<script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
-<link href="https://fonts.gstatic.com" rel="preconnect"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
-<link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
-<script>
+
+      <title>Encryption - John Mathews</title>
+      <meta name="title" content="Encryption -  John Mathews "/>
+      <meta name="author" content="John Mathews"/>
+      <meta name="keywords" content=" Bitcoin,Blockchains,Digital Currencies,DLT,Encryption,Public Key Cryptography,RSA " />
+      <meta name="description" content=" Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption 1 To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers 2 which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers... "/>
+
+      <meta name="twitter:creator" content="@johnmathews"/>
+      <meta name="twitter:domain" content="https://johnmathews.eu"/>
+      <meta property="twitter:title" content="Encryption"/>
+      <meta name="twitter:description" content=" Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption 1 To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers 2 which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers... "/>
+      <meta property="twitter:url" content="./encryption.html"/>
+      <meta name="twitter:image" content="./
+"/>
+      <meta property="twitter:card" content="  summary  "/>
+
+      <meta property="og:type" content=" article "/>
+      <meta property="og:title" content="Encryption"/>
+      <meta property="og:description" content=" Blockchains use Elliptical Curve Cryptography (ECC) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption 1 To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers 2 which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers... "/>
+      <meta property="og:url" content="./encryption.html"/>
+      <meta property="og:image" content="./
+"/>
+
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - all articles" href="./None" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - technical articles" href="./feeds/technical.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - non-Technical articles" href="./feeds/non-technical.atom.xml" />
+      <link rel="alternate" type="application/atom+xml" title="John Mathews - snippet articles" href="./feeds/snippet.atom.xml" />
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link async href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet"/>
+      <link async href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet"/>
+
+
+      <link rel="icon" href="./extra/favicon.png" />
+
+      <link href="./theme/css/styles.css" rel="stylesheet"/>
+      <link id="PygmentCSS" href="./theme/css/pygment-light.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+      <script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
         }
       </script>
-<!-- Cloudflare Web Analytics -->
-<!-- End Cloudflare Web Analytics -->
-</head>
-<body class="dark:bg-gray-900">
-<a class="pt-20 mt-20" name="top"></a>
-<nav class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
-<div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
-<div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/categories.html">Categories</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
-</div>
-<div class="flex-none justify-end px-2 pt-2">
-<button aria-label="themeToggle" class="inline-block theme-toggle" id="modeSwitcher1">
-<div class="day modeIcon hidden">
-<i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon">
-<i class="mb-2 pb-2 far fa-moon fa-lg"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden md:mt-0 ml-5 md:pl-0">
-<i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
-</button>
-</div>
-</div>
-<div class="flex-none md:hidden block md:inline-block">
-<button aria-label="Menu" class="mx-2 my-1" id="hamburger">
-<div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
-<div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
-</button>
-</div>
-</nav>
-<div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/categories.html">Categories</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
-<div class="px-3 pt-3 flex flex-row">
-<button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-2x"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-2x"></i>
-</div>
-</button>
-<button aria-label="Category chooser" class="catChooser hidden ml-5">
-<i class="fas fa-paw fa-2x"></i>
-</button>
-</div>
-</div>
-<main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
-<div class="hidden fixed z-10 inset-0 overflow-y-auto" id="catModal">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog">
-<div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
-<div class="text-center">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+
+      <!-- Cloudflare Web Analytics -->
+	  <script>console.log("cloudflare analytics is False")</script>
+      <!-- End Cloudflare Web Analytics -->
+
+
+
+
+  </head>
+
+  <body class="dark:bg-gray-900">
+    <a class="pt-20 mt-20" name="top"></a>
+    <nav id="navbar" style="transition: top 0.3s ease-in-out;" class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900">
+      <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
+        <div class="mt-10 md:mt-0 flex-grow justify-between">
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./blog.html">Blog</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./snippets.html">Snippets</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./pages.html">Pages</a>
+          <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="./categories.html">Categories</a>
+          <a id="searchButton2" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;">Search</a>
+        </div>
+        <div class="flex-none justify-end px-2 pt-2">
+          <button class="inline-block theme-toggle" aria-label="themeToggle" id="modeSwitcher1">
+            <div class="day modeIcon hidden">
+              <i class="mb-2 pb-2 far fa-lightbulb fa-lg"></i>
+            </div>
+            <div class="night modeIcon">
+              <i class="mb-2 pb-2 far fa-moon fa-lg"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden md:mt-0 ml-5 md:pl-0" aria-label="Category chooser">
+            <i class="mb-2 pb-2 fas fa-paw fa-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-none md:hidden block md:inline-block">
+        <button class="mx-2 my-1" id="hamburger" aria-label="Menu" >
+          <div class="toggle"><i class="fas fa-bars fa-lg"></i></div>
+          <div class="hidden toggle"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+      </div>
+    </nav>
+      <div class="toggle hidden w-screen flex flex-col text-left mt-5">
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./blog.html">Blog</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./snippets.html">Snippets</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./pages.html">Pages</a>
+        <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="./categories.html">Categories</a>
+        <a id="searchButton3" class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;">Search</a>
+        <div class="px-3 pt-3 flex flex-row">
+          <button class="mx-1 theme-toggle" aria-label="themeToggle" id="modeSwitcher3">
+            <div class="day modeIcon">
+              <i class="far fa-lightbulb fa-2x"></i>
+            </div>
+            <div class="night modeIcon hidden">
+              <i class="far fa-moon fa-2x"></i>
+            </div>
+          </button>
+          <button class="catChooser hidden ml-5" aria-label="Category chooser">
+            <i class="fas fa-paw fa-2x"></i>
+          </button>
+        </div>
+      </div>
+
+    <main class="lg:mt-10 lg:pt-5 mx-3 lg:mx-auto lg:w-5/6">
+
+      <div id="catModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-gradient-to-t from-blue-300 to-yellow-300 px-5 py-5">
+              <div class="text-center">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                   Which categories do you want to see?
                 </h3>
-<hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4"/>
-<div class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" id="" role="group">
-<button class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline" id="chooseBoth">All</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500" id="chooseTechnical">Technical</button>
-<button class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline" id="chooseNonTechnical">Non-Technical</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-40 inset-0 overflow-y-auto" id="keyboardShortcuts">
-<div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<span aria-hidden="true" class="hidden sm:inline-block sm:align-middle md:h-screen">​</span>
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-11/12 lg:w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all my-8 sm:align-middle" role="dialog">
-<div class="px-5 py-5">
-<div class="">
-<h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
+                <hr class="border -ml-6 -mr-6 border-blue-500 border-4 mt-2 mb-4">
+                <div id="" class="flex items-center flex-row space-x-4 justify-center text-base my-auto text-gray-700" role="group">
+                  <button id="chooseBoth" class="text-xl py-1 px-2 py-0 mx-0 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 border-0 outline-none focus:shadow-outline">All</button>
+                  <button id="chooseTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline active:bg-red-500 ">Technical</button>
+                  <button id="chooseNonTechnical" class="text-xl py-1 px-2 bg-none rounded-xl hover:text-gray-50 hover:bg-yellow-500 outline-none focus:shadow-outline">Non-Technical</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboardShortcuts" class="hidden fixed z-40 inset-0 overflow-y-auto">
+        <div class="flex items-end justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span class="hidden sm:inline-block sm:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+	  <div class="w-11/12 lg:w-5/6 inline-block align-bottom bg-white border-4 border-gray-50 rounded-xl text-left overflow-hidden shadow-xl transform transition-all my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="px-5 py-5">
+              <div class="">
+                <h3 class="text-2xl font-medium leading-8 md:leading-6 pb-2 text-gray-700" id="modal-headlinemd">
                  Keyboard Shortcuts:
                 </h3>
-<hr class="mb-5"/>
-<div class="text-base text-gray-700" id="" role="group">
-<div class="markdown">
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
-<div class="pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
-<div class="pb-1"><code>/</code><span class="ml-2"> search</span></div>
-<div class="pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
-<div class="pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
-<div class="pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
-<div class="pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
-<div class="pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
-<div class="pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
-<div class="pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
-<div class="pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
-<div class="pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
-<div class="pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
-<div class="pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
-<div class="pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
-<div class="pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
-<div class="pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
-<div class="pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to pages page, or previous article</span></div>
-<div class="pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
-<div class="pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
-<div class="pb-1 -ml-2"><code>gt</code><span class="ml-2"> go to tags page</span></div>
-<div class="pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
-<div class="pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
-<div class="pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden fixed z-50 inset-0 overflow-y-auto" id="fuseModal">
-<div class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0" id="searchModalBackground">
-<div aria-hidden="true" class="fixed inset-0 transition-opacity">
-<div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-</div>
-<div class="absolute inset-x-0 w-screen px-3">
-<div aria-labelledby="modal-headline" aria-modal="true" class="w-full md:w-10/12 lg:w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle" role="dialog">
-<div class="py-1 px-1">
-<input class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox" style="outline:0;" type="text"/>
-<div class="hidden lg:inline-flex flex">
-<div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
+                <hr class="mb-5">
+                <div id="" class="text-base text-gray-700" role="group">
+                  <div class="markdown">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row text-black text-base leading-loose">
+                      <div class=" pb-1"><code>?</code><span class="ml-2">toggle shortcut descriptions</span></div>
+                      <div class=" pb-1"><code>/</code><span class="ml-2"> search</span></div>
+                      <div class=" pb-1"><code>j</code><span class="ml-2"> scroll down</span></div>
+                      <div class=" pb-1"><code>k</code><span class="ml-2"> scroll up</span></div>
+                      <div class=" pb-1 -ml-2"><code>tt</code><span class="ml-2"> toggle dark theme</span></div>
+                      <div class=" pb-1 -ml-2"><code>ga</code><span class="ml-2"> go to about page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gb</code><span class="ml-2"> go to previous page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gc</code><span class="ml-2"> go to categories page</span></div>
+                      <div class=" pb-1 -ml-2"><code>ge</code><span class="ml-2"> go to experience page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gf</code><span class="ml-2"> go forwards</span></div>
+                      <div class=" pb-1 -ml-2"><code>gi</code><span class="ml-2"> go to blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gk</code><span class="ml-2"> go to books page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gl</code><span class="ml-2"> go to landing page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gm</code><span class="ml-2"> go to analytics (metrics) page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gn</code><span class="ml-2"> go to next article</span></div>
+                      <div class=" pb-1 -ml-2"><code>go</code><span class="ml-2"> go to article's category page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gp</code><span class="ml-2"> go to pages page, or previous article</span></div>
+                      <div class=" pb-1 -ml-2"><code>gr</code><span class="ml-2"> go to portfolio page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gs</code><span class="ml-2"> go to snippets page</span></div>
+                      <div class=" pb-1 -ml-2"><code>gt</code><span class="ml-2"> go to tags page</span></div>
+                      <div class=" pb-1 -ml-2"><code>vt</code><span class="ml-2"> only show technical articles on blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>vn</code><span class="ml-2"> only show non-technical articles on blog index page</span></div>
+                      <div class=" pb-1 -ml-2"><code>va</code><span class="ml-2"> show articles from all categories on blog index page</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fuseModal" class="hidden fixed z-50 inset-0 overflow-y-auto">
+        <div id="searchModalBackground" class="flex items-start justify-center text-center min-h-screen pb-80 px-4 md:block md:p-0">
+          <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <div class="absolute inset-x-0 w-screen px-3">
+            <div class="w-full md:w-10/12 lg:w-8/12 mt-20 inline-block align-bottom bg-white border-4 border-gray-50 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+              <div class="py-1 px-1">
+                <input style="outline:0;" type="text" class="mt-5 mb-3 px-3 mb-5 w-full text-gray-800 text-xl font-semibold border-2 border-gray-200 rounded-lg" id="searchBox">
+                <div class="hidden lg:inline-flex flex">
+                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     /
                   </div>
                   or
-                  <div class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg" id="macOrPc">
+                  <div id="macOrPc" class="width-12 mx-1 px-2 text-gray-500 border border-gray-300 rounded-lg">
                     cmd-K
                   </div>
-</div>
-<ul class="results text-lg text-bold text-gray-600" id="searchResults">
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mx-auto w-full">
-<div class="flex flex-row">
-<div class="hidden xl:inline xl:w-32">
-<div class="w-32">
-<div class="mt-5 2xl:mt-20 fixed flex flex-col">
-<div class="lg:w-32">
-<div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
-</div>
-<div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
-</div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/categories.html">Categories</a>
-<div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
-<div class="flex my-2">
-<button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
-<div class="day modeIcon">
-<i class="far fa-lightbulb fa-lg"></i>
-</div>
-<div class="night modeIcon hidden">
-<i class="far fa-moon fa-lg"></i>
-</div>
-</button>
-</div>
-<div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-10">
-</div>
-<div class="pt-10 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
-    Published: <br/> August 2016
+                </div>
+                <ul id="searchResults" class="results text-lg text-bold text-gray-600">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full">
+        <div class="flex flex-row">
+          <div class="hidden xl:inline xl:w-32">
+            <div class="w-32">
+            <div class="mt-5 2xl:mt-20 fixed flex flex-col">
+              <div class="lg:w-32">
+                    <div>
+                    <a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./index.html"><i class="far fa-md fa-star"></i></a>
+                  </div>
+                  <div>
+                    <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./blog.html">Blog</a>
+                  </div>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./snippets.html">Snippets</a>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./pages.html">Pages</a>
+                  <a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="./categories.html">Categories</a>
+                  <div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
+                <div class="flex my-2">
+                  <button class="md:pl-0 my-2 theme-toggle" aria-label="themeToggle" id="modeSwitcher2">
+                    <div  class="day modeIcon">
+                      <i class="far fa-lightbulb fa-lg"></i>
+                    </div>
+                    <div class="night modeIcon hidden">
+                      <i class="far fa-moon fa-lg"></i>
+                    </div>
+                  </button>
+                </div>
+
+  <div class="-mr-10 border-t-4 border-double border-gray-800 dark:border-gray-100 mt-10">
   </div>
-<div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
+  <div class="pt-10 font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+    Published: <br> August 2016
+  </div>
+  <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
  Category: 
     <div>
-<a class="hover:underline" href="https://johnmathews.eu/category/technical/cryptocurrencies.html">Cryptocurrencies</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="min-h-screen w-full xl:w-5/6 xl:ml-20" id="contentParent">
-<div class="mx-3 xl:ml-20 my-4 technical" id="articleParent">
-<div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
-<div class="leading-tight text-left font-serif lg:-mr-30 xl:-mr-40 text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl font-semibold lg:font-normal dark:text-gray-200 break-words md:break-all" style="word-break: unset; white-space: wrap;">
+            <a class="hover:underline" href="./category/technical/cryptocurrencies.html">Cryptocurrencies</a>
+    </div>
+
+  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div id="contentParent" class="min-h-screen w-full xl:w-5/6 xl:ml-20">
+  <div id="articleParent" class="mx-3 xl:ml-20 my-4  technical  ">
+
+    <div class="mt-20 md:mt-40 lg:mt-20 xl:mt-8 2xl:mt-20">
+      <div style="word-break: unset; white-space: wrap;"
+           class="leading-tight text-left
+                  font-serif
+                  lg:-mr-30 xl:-mr-40
+                  text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl
+                  font-semibold lg:font-normal
+                  dark:text-gray-200
+                  break-words md:break-all
+                  ">
           Encryption
       </div>
-<div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
+
+      <div class="lg:hidden mt-10 md:mt-20 text-lg font-serif font-light text-gray-600 dark:text-gray-300">
         August 2016
       </div>
-</div>
-<div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
-</div>
-<main class="lg:w-4/6">
-<article class="">
-<div class="markdown">
-<p>Blockchains use Elliptical Curve Cryptography (<span class="caps">ECC</span>) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers back into the original message.</p>
+    </div>
+
+    <div class="mt-10 lg:mt-20 2xl:mt-40 2xl:mb-10 border-b-0 border-gray-600 dark:border-gray-200 border-double">
+    </div>
+
+    <main class="lg:w-4/6">
+      <article class="">
+        <div class="markdown">
+          <p>Blockchains use Elliptical Curve Cryptography (<span class="caps">ECC</span>) to authenticate users and authorise transactions. These notes introduce the field of cryptography and explains how modern cryptographic methods work. I wrote them to teach myself about encryption <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>To begin with the absolute basics, encryption generally works by taking a message and representing it as a series of numbers <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> which are then turned into a series of random looking numbers. Decryption works by turning the random looking numbers back into the original&nbsp;message.</p>
 <h2 id="background">Background</h2>
-<p>The history of Cryptography can be split into classical and modern eras. Modern cryptography began in 1977 with the introduction of the <span class="caps">RSA</span> and Diffie-Hellman algorithms.  Until then, Cryptography required using a single key (the secret code) to encrypt and decrypt the message. This was transferred from sender to receiver secretly, but not cryptographically. In classical cryptography, the code is a <em>shared</em> secret.</p>
-<p>The modern era removed the requirement for a shared secret and instead used number theory as a basis for quantifying the strength of an encryption method. The strength of a modern cryptographic technique is quantifiable and provable by reference to number theory, rather than a users ability to transport or transfer a secret code.</p>
-<p>Modern cryptography is defined by Public Key Cryptographic systems. They use one key (code) for encryption and another for decryption. The encryption key can be made public without any risk of the message being decrypted, and is therefore known as the public key. The key used to decrypt data is the private key, and must not be revealed. If a message is encrypted with the public key it can only be decrypted with the private key.</p>
-<p>Public Key Cryptographic (<span class="caps">PKC</span>) systems use algorithms that are easy to process in one direction but difficult to reverse, which are known as mathematical trap-door functions. A simple example of a trap-door function is the product of two prime numbers. If two random prime numbers are chosen, it is trivial to find their product. However if only the product of the two numbers is known, it is relatively difficult to find either of the factors used to create the number (this is factorisation). This was first noticed in 1874, when <a href="https://en.wikipedia.org/wiki/William_Stanley_Jevons#Jevons.27_number">Jevons</a> remarked:</p>
+<p>The history of Cryptography can be split into classical and modern eras. Modern cryptography began in 1977 with the introduction of the <span class="caps">RSA</span> and Diffie-Hellman algorithms.  Until then, Cryptography required using a single key (the secret code) to encrypt and decrypt the message. This was transferred from sender to receiver secretly, but not cryptographically. In classical cryptography, the code is a <em>shared</em>&nbsp;secret.</p>
+<p>The modern era removed the requirement for a shared secret and instead used number theory as a basis for quantifying the strength of an encryption method. The strength of a modern cryptographic technique is quantifiable and provable by reference to number theory, rather than a users ability to transport or transfer a secret&nbsp;code.</p>
+<p>Modern cryptography is defined by Public Key Cryptographic systems. They use one key (code) for encryption and another for decryption. The encryption key can be made public without any risk of the message being decrypted, and is therefore known as the public key. The key used to decrypt data is the private key, and must not be revealed. If a message is encrypted with the public key it can only be decrypted with the private&nbsp;key.</p>
+<p>Public Key Cryptographic (<span class="caps">PKC</span>) systems use algorithms that are easy to process in one direction but difficult to reverse, which are known as mathematical trap-door functions. A simple example of a trap-door function is the product of two prime numbers. If two random prime numbers are chosen, it is trivial to find their product. However if only the product of the two numbers is known, it is relatively difficult to find either of the factors used to create the number (this is factorisation). This was first noticed in 1874, when <a href="https://en.wikipedia.org/wiki/William_Stanley_Jevons#Jevons.27_number">Jevons</a>&nbsp;remarked:</p>
 <blockquote>
-<p><span class="dquo">“</span>Can the reader say what two numbers multiplied together will produce the number 8,616,460,799? I think it unlikely that anyone but myself will ever know.”*</p>
+<p><span class="dquo">&ldquo;</span>Can the reader say what two numbers multiplied together will produce the number 8,616,460,799? I think it unlikely that anyone but myself will ever&nbsp;know.&rdquo;*</p>
 </blockquote>
-<p>This simple problem shows that finding the product of two (secret) prime numbers is computationally simple, but factorising the result is not. This type of problem is a key feature of modern cryptography. Factoring prime numbers is a super famous mathematical problem, it was studied by <a href="https://en.wikipedia.org/wiki/Eratosthenes">Eratosthenes</a> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> in the 3rd century <span class="caps">BC</span> and more recently the <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"><span class="caps">RSA</span> Factoring Challenge</a> has intended to track state-of-the-art factorisation techniques by issues cash prizes for the factorisation of products of large primes.</p>
-<p>Generally, the bigger the difference in difficulty between executing the function and reversing it, the better the cryptographic technique.</p>
-<p>The <span class="caps">RSA</span> algorithm below uses factorisation as the foundation of its security, but factorisation is not the hardest problem to solve relative to the size of the keys required. Algorithms have been developed to factor the products of large prime numbers, and are much more efficient than randomly guessing possible factors. The greater the size of the primes being factored, the more efficient these algorithms become, and therefore the difference in difficulty between executing the function (multiplying two large primes) and reversing it (factorisation) becomes smaller as the size of the cryptographic key length increases. This is a problem because as public key cryptography becomes more commonly used the resources available to factor products of primes increases, and consequently larger keys are required.</p>
-<p>Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is required.</p>
-<h2 id="overview-of-the-rsa-algorithm">Overview of the <span class="caps">RSA</span> algorithm</h2>
-<p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a>, and <a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard">Leonard Adleman</a>), <span class="caps">RSA</span> was one of the first public-key encryption algorithms and is still widely used.</p>
-<p><span class="caps">RSA</span> (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number <span class="math">\(n\)</span> has been defined, if a number greater than <span class="math">\(n\)</span> is created the result simply loops around to 0 and begins counting from 0 again. i.e. if <span class="math">\(n = 10\)</span>, then <span class="math">\(7 + 5 = 12 - 10 = 2\)</span>. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. <span class="math">\(12 / 10 = 1\)</span> with <span class="math">\(2\)</span> remaining.</p>
-<h2 id="generation-of-a-pair-of-rsa-keys">Generation of a pair of <span class="caps">RSA</span> keys:</h2>
-<h3>1. Generate the <span class="caps">RSA</span> module</h3>
+<p>This simple problem shows that finding the product of two (secret) prime numbers is computationally simple, but factorising the result is not. This type of problem is a key feature of modern cryptography. Factoring prime numbers is a super famous mathematical problem, it was studied by <a href="https://en.wikipedia.org/wiki/Eratosthenes">Eratosthenes</a> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> in the 3rd century <span class="caps">BC</span> and more recently the <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge"><span class="caps">RSA</span> Factoring Challenge</a> has intended to track state-of-the-art factorisation techniques by issues cash prizes for the factorisation of products of large&nbsp;primes.</p>
+<p>Generally, the bigger the difference in difficulty between executing the function and reversing it, the better the cryptographic&nbsp;technique.</p>
+<p>The <span class="caps">RSA</span> algorithm below uses factorisation as the foundation of its security, but factorisation is not the hardest problem to solve relative to the size of the keys required. Algorithms have been developed to factor the products of large prime numbers, and are much more efficient than randomly guessing possible factors. The greater the size of the primes being factored, the more efficient these algorithms become, and therefore the difference in difficulty between executing the function (multiplying two large primes) and reversing it (factorisation) becomes smaller as the size of the cryptographic key length increases. This is a problem because as public key cryptography becomes more commonly used the resources available to factor products of primes increases, and consequently larger keys are&nbsp;required.</p>
+<p>Ultimately, encryption techniques based on the difficulty of factorisation will become redundant as the difficulty gap between creating and solving them shrinks. A better trap door function is&nbsp;required.</p>
+<h2 id="overview-of-the-rsa-algorithm">Overview of the <span class="caps">RSA</span>&nbsp;algorithm</h2>
+<p>Named after its founders (<a href="https://en.wikipedia.org/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a>, <a href="https://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a>, and <a href="https://en.wikipedia.org/wiki/Leonard_Adleman" title="Leonard">Leonard Adleman</a>), <span class="caps">RSA</span> was one of the first public-key encryption algorithms and is still widely&nbsp;used.</p>
+<p><span class="caps">RSA</span> (as well as other cryptographic techniques) makes use of a number line which loops back to zero after reaching a maximum value, rather than increasing indefinitely. This means that once a maximum number <span class="math">\(n\)</span> has been defined, if a number greater than <span class="math">\(n\)</span> is created the result simply loops around to 0 and begins counting from 0 again. i.e. if <span class="math">\(n = 10\)</span>, then <span class="math">\(7 + 5 = 12 - 10 = 2\)</span>. The result of a calculation on a looping number line may easily be found by doing long division and using the remainder as the final answer, i.e. <span class="math">\(12 / 10 = 1\)</span> with <span class="math">\(2\)</span>&nbsp;remaining.</p>
+<h2 id="generation-of-a-pair-of-rsa-keys">Generation of a pair of <span class="caps">RSA</span>&nbsp;keys:</h2>
+<h3>1. Generate the <span class="caps">RSA</span>&nbsp;module</h3>
 <ul>
-<li>Select two large random prime numbers, <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. They need to be random because anyone who knows or guesses them will be able to decrypt the encryption.</li>
-<li>Calculate <span class="math">\(n = pq\)</span></li>
+<li>Select two large random prime numbers, <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. They need to be random because anyone who knows or guesses them will be able to decrypt the&nbsp;encryption.</li>
+<li>Calculate <span class="math">\(n =&nbsp;pq\)</span></li>
 </ul>
-<h3>2. Find derived number (e)</h3>
+<h3>2. Find derived number&nbsp;(e)</h3>
 <ul>
 <li><em>e</em> must be greater than 1 and less than <span class="math">\(( p - 1)( q - 1)\)</span>.</li>
 <li>There must be no common factor for e and <span class="math">\(( p - 1)( q - 1)\)</span> except for 1. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
 </ul>
-<h3>3. Form the public key</h3>
+<h3>3. Form the public&nbsp;key</h3>
 <ul>
-<li>The pair of numbers <span class="math">\((n, e)\)</span> form the public key and can be made public.</li>
-<li>Even though <span class="math">\(n\)</span> is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of <span class="caps">RSA</span> rests entirely on the difficulty of factoring <span class="math">\(n\)</span> into its two component prime numbers.</li>
+<li>The pair of numbers <span class="math">\((n, e)\)</span> form the public key and can be made&nbsp;public.</li>
+<li>Even though <span class="math">\(n\)</span> is public, it is so difficult to factor the product of 2 large prime numbers that an attacker would not be able to find its component primes in the time available. The strength of <span class="caps">RSA</span> rests entirely on the difficulty of factoring <span class="math">\(n\)</span> into its two component prime&nbsp;numbers.</li>
 </ul>
-<h3>4. Generate the private key (d)</h3>
+<h3>4. Generate the private key&nbsp;(d)</h3>
 <ul>
 <li>The private key is generated from using <span class="math">\(p\)</span>, <span class="math">\(q\)</span> and e as inputs to the Extended Euclidean Algorithm. For a given set of values, there is a unique answer <span class="math">\(d\)</span>.</li>
 <li><span class="math">\(d\)</span> is the inverse of <span class="math">\(e\)</span> modulo <span class="math">\(( p - 1)( q - 1 )\)</span>. This means that <span class="math">\(d\)</span> is the number less than <span class="math">\(( p - 1 ) ( q - 1 )\)</span> such that when it is multiplied by e, it is equal to <span class="math">\(1\)</span> modulo <span class="math">\(( p - 1 ) ( q - 1 )\)</span>.</li>
 </ul>
-<h2 id="rsa-example"><span class="caps">RSA</span> example:</h2>
-<p><span class="caps">RSA</span> does not directly operate on strings as bits, it operates on numbers modulo (less than) <span class="math">\(n\)</span>. and it is necessary to represent plain text as a series of numbers less than <span class="math">\(n\)</span>. The dominant encoding on the internet is <a href="https://en.wikipedia.org/wiki/UTF-8"><span class="caps">UTF</span>-8</a>, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message “<span class="caps">HELLO</span>” would become “<span class="math">\(72, 69, 76, 76, 79\)</span>”.</p>
-<p>The maximum number <span class="math">\(n\)</span> needs to be the product of the two prime numbers <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. For this example choose <span class="math">\(p = 7\)</span> and <span class="math">\(q = 13\)</span>, so <span class="math">\(n  = 91\)</span> <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<h2 id="rsa-example"><span class="caps">RSA</span>&nbsp;example:</h2>
+<p><span class="caps">RSA</span> does not directly operate on strings as bits, it operates on numbers modulo (less than) <span class="math">\(n\)</span>. and it is necessary to represent plain text as a series of numbers less than <span class="math">\(n\)</span>. The dominant encoding on the internet is <a href="https://en.wikipedia.org/wiki/UTF-8"><span class="caps">UTF</span>-8</a>, which represents each upper case Latin letter as a number between 65 and 90. Using this encoding, a message &ldquo;<span class="caps">HELLO</span>&rdquo; would become &ldquo;<span class="math">\(72, 69, 76, 76, 79\)</span>&rdquo;.</p>
+<p>The maximum number <span class="math">\(n\)</span> needs to be the product of the two prime numbers <span class="math">\(p\)</span> and <span class="math">\(q\)</span>. For this example choose <span class="math">\(p = 7\)</span> and <span class="math">\(q = 13\)</span>, so <span class="math">\(n  = 91\)</span>  <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
 <p>The public key component <em>e</em> can be any number we choose,  as long as there is no number other than 1 which is a common factor of <em>e</em> and <span class="math">\(( p - 1 ) ( q - 1 )\)</span>. In our example, this requires that there be no common factor between 72 and e other than 1, so let <em>e</em> <span class="math">\(= 5\)</span>.</p>
-<p>Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime numbers.</p>
-<p>Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key <span class="math">\(d\)</span>, which is 29.</p>
-<p>Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional <span class="caps">RSA</span> system.</p>
+<p>Therefore our public key is (91, 5). This can be made available to anyone without messages being decrypted because of the difficulty of factoring the product of (very large) prime&nbsp;numbers.</p>
+<p>Using the fact that we know 5 and 11 are the prime factors of 55 and e is 5, we can use the Extended Euclidean Algorithm  to compute our private key <span class="math">\(d\)</span>, which is&nbsp;29.</p>
+<p>Therefore when the prime factors 7 and 13 are used, the public key is (91, 5) and the private key is (91, 29). These parameters fully define a functional <span class="caps">RSA</span>&nbsp;system.</p>
 <h3>Encoding</h3>
-<p>To encode a letter H in a message (‘H’ is <span class="math">\(72\)</span> in <span class="caps">UTF</span>-8), we need to multiply it by itself <span class="math">\(e\)</span> times (<span class="math">\(e = 5\)</span>), remembering to wrap around each time we pass our maximum value of <span class="math">\(n = 91\)</span>.</p>
+<p>To encode a letter H in a message (&lsquo;H&rsquo; is <span class="math">\(72\)</span> in <span class="caps">UTF</span>-8), we need to multiply it by itself <span class="math">\(e\)</span> times (<span class="math">\(e = 5\)</span>), remembering to wrap around each time we pass our maximum value of <span class="math">\(n = 91\)</span>.</p>
 <p><span class="math">\(72 \times 72 = 5184, 5184 / 91 = 56\)</span> with <span class="math">\(88\)</span> remaining, (i.e. <span class="math">\(5184 = 91 \times 56 + 88\)</span>). Therefore:
 <span class="math">\(72 \times 72 = 5184 = 88\)</span>
 <span class="math">\(88 \times 72 = 6336 = 57\)</span>
 <span class="math">\(57 \times 72 = 4104 = 9\)</span>
-<span class="math">\(9 \times 72 = 648 = 11\)</span></p>
-<p>Therefore the encrypted value of “H” is “<span class="math">\(11\)</span><span class="dquo">“</span></p>
-<p>Using the method for each character in the message “<span class="caps">HELLO</span>” results in the encoded message “\<span class="math">\(11,62,20,20,53\\)</span>”.</p>
+<span class="math">\(9 \times 72 = 648 =&nbsp;11\)</span></p>
+<p>Therefore the encrypted value of &ldquo;H&rdquo; is &ldquo;<span class="math">\(11\)</span><span class="dquo">&ldquo;</span></p>
+<p>Using the method for each character in the message &ldquo;<span class="caps">HELLO</span>&rdquo; results in the encoded message &ldquo;\<span class="math">\(11,62,20,20,53\\)</span>&rdquo;.</p>
 <p>To decrypt the message, we take each number and multiply it by itself <span class="math">\(d\)</span> times, (<span class="math">\(d=29\)</span>) wrapping around each time we pass <span class="math">\(91\)</span>.</p>
 <p><span class="math">\(11 \times 11 = 121 = 30\)</span>
 <span class="math">\(30 \times 11 = 330 = 57\)</span>
-…
+&hellip;
 <span class="math">\(57 \times 11 = 627 = 81\)</span>
-<span class="math">\(81 \times 11 = 891 = 72\)</span></p>
-<p>And we’re back to our original encoding.</p>
+<span class="math">\(81 \times 11 = 891 =&nbsp;72\)</span></p>
+<p>And we&rsquo;re back to our original&nbsp;encoding.</p>
 <h2 id="files">Files</h2>
-<p>The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded <a href="https://johnmathews.eu/RSA-Example.xlsx">here</a>.</p>
-<p>A simple python script to encrypt and decrypt a message is <a href="https://johnmathews.eu/AES_Example.py">here</a>. It uses the <span class="caps">AES</span> encryption method.</p>
+<p>The spreadsheet I used to calculate the encrypted and decrypted values can be downloaded <a href="./RSA-Example.xlsx">here</a>.</p>
+<p>A simple python script to encrypt and decrypt a message is <a href="./AES_Example.py">here</a>. It uses the <span class="caps">AES</span> encryption&nbsp;method.</p>
 <h3>Footnotes</h3>
 <div class="footnote">
-<hr/>
+<hr>
 <ol>
 <li id="fn:1">
-<p>I used the explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a lot. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>I used the explanations <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a> a lot.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>A simple example is <span class="math">\(A=1, B=2\)</span> etc <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+<p>A simple example is <span class="math">\(A=1, B=2\)</span> etc&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving algorithm</a> which finds all the primes up to a given limit. <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+<p>Eratosthenes invented his famous <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieving algorithm</a> which finds all the primes up to a given limit.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>If this is the case then e and ( p - 1) ( q - 1 ) are called “coprime” <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+<p>If this is the case then e and ( p - 1) ( q - 1 ) are called &ldquo;coprime&rdquo;&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5">
-<p>Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I’ve used the same numbers in the following example as in the tutorials <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a>. <a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a></p>
+<p>Whilst the Extended Euclidean Algorithm is apparently simple to compute, its description is not. Therefore I&rsquo;ve used the same numbers in the following example as in the tutorials <a href="http://www.tutorialspoint.com/cryptography/public_key_encryption.htm">here</a> and <a href="http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">here</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -398,44 +431,54 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-</div>
-</article>
-</main>
-<div class="mt-20 mb-10 text-lg dark:text-gray-200">
-<div class="flex flex-row">
-<div class="text-red-500 dark:text-red-500"> ← </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/digital-currencies-the-basics.html" id="previousArticleInCategory"> Digital currencies: the basics</a>
-</div>
-<div class="flex flex-row mt-2">
-<div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/silos.html" id="nextArticleInCategory"> Introduction to my doctorate research - Silos</a>
-</div>
-<div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
+        </div>
+      </article>
+    </main>
+
+    <div class="mt-20 mb-10 text-lg dark:text-gray-200">
+        <div class="flex flex-row">
+          <div class="text-red-500 dark:text-red-500"> &#x2190; </div>
+          <a id="previousArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="./digital-currencies-the-basics.html"> Digital currencies: the&nbsp;basics</a>
+        </div>
+
+        <div class="flex flex-row mt-2">
+          <div class="text-green-500 dark:text-green-200"> &#x2192; </div>
+          <a id="nextArticleInCategory" class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="./silos.html"> Introduction to my doctorate research -&nbsp;Silos</a>
+        </div>
+
+      <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
-          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/cryptocurrencies.html" id="otherArticlesInCategory"> Cryptocurrencies</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
-<div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
-<a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+          <a id="otherArticlesInCategory" class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold " href="./category/technical/cryptocurrencies.html"> Cryptocurrencies</a>
+          
+      </div>
+    </div>
+
+
+
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
+      <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
+        <a class="px-3" href="#top">Back to top</a> |
+        <a class="px-3" href="./blog.html">Blog Posts</a> |
+        <a class="px-3" href="./categories.html">Categories</a> |
+        <a class="px-3" href="./feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
         <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a> |
-        <a class="px-3" href="https://johnmathews.eu/tags.html">Tags</a>
-</div>
-</footer>
-<script>
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-        const indexURL = 'https://johnmathews.eu/fuse.html'
-        const siteURL = 'https://johnmathews.eu'
+        <a class="px-3" href="./tags.html">Tags</a>
+      </div>
+    </footer>
+
+        <script>
+        const light = "./theme/css/pygment-light.css"
+        const dark = "./theme/css/pygment-dark.css"
+        const indexURL = 'http://localhost:8000/fuse.html'
+        const siteURL = '.'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -444,29 +487,31 @@
 
 
       </script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
-<script>
+
+      <script rel="prefetch" type="module" src="./theme/js/categoryChooser.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="text/javascript" src="./theme/js/navbar.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/fuseSearch.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/keyboard-shortcuts.js" crossorigin="anonymous"></script>
+      <script rel="prefetch" type="module" src="./theme/js/themeChooser.js" crossorigin="anonymous"></script>
+
+      <script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {
-                  console.log('flag1')
-                  $('#catModal').addClass('hidden');
-                });
+	  $('#catModal').addClass('hidden');
+	});
       </script>
-<script>
+      <script>
         if (navigator.userAgent.indexOf('Mac OS X') != -1) {
           $("#macOrPc").html("&#8984;K");
         } else {
           $("#macOrPc").html("Cmd-K");
         }
       </script>
-<script>
-            result = navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname);
-        </script>
-<script>
+
+
+
+
+  <script>
     const technical = $( "#articleParent" ).hasClass('technical');
     const nonTechnical = $( "#articleParent" ).hasClass('nonTechnical');
 
@@ -490,5 +535,6 @@
       };
     }
   </script>
-</body>
+  </body>
+
 </html>
