@@ -443,13 +443,6 @@ before uploading.</p>
       </script>
 <script> navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname); </script>
 <script>
-    // mailing list subscribe button
-    document.getElementById("signupButton").addEventListener("click", function(e) {
-      $('#signupButton').removeClass('block').addClass('hidden')
-      $('#subscribeBox').removeClass('hidden').addClass('block')
-    });
-  </script>
-<script>
     // show uploaded image
     function preview_image(event) {
       var reader = new FileReader();
