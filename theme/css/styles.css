@@ -1653,7 +1653,7 @@ ul~.highlight pre {
 }
 
 .markdown p img:last-child {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Lists.. */
@@ -3356,6 +3356,14 @@ ul~.highlight pre {
 
   .lg\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .lg\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .lg\:ml-0 {
+    margin-left: 0px;
   }
 
   .lg\:ml-5 {

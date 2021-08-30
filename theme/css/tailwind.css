@@ -242,7 +242,7 @@ ul~.highlight pre {
 }
 
 .markdown p img:last-child {
-  @apply mb-10;
+  @apply mb-5;
 }
 
 
