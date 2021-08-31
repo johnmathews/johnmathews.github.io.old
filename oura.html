@@ -326,22 +326,22 @@
 <script crossorigin="anonymous" referrerpolicy="no-referrer" src="http://cdn.datatables.net/plug-ins/1.10.25/sorting/datetime-moment.js"></script>
 <script>
     // oura data chart
-    const URL = "https://storage.googleapis.com/johnmathews.eu/fitness-data/oura-data.JSON"
+    const URL = "https://storage.googleapis.com/johnmathews-eu/fitness-data/averages.JSON"
     $.ajax({
       url: URL,
       type: "GET",
-      cache: false,
+      cache: true,
       success: function(data) {
-      const DATA = JSON.parse(data)
-      var dates = DATA["dates"]
-      var sleep = DATA["sleep"]
-      var activity = DATA["activity"]
-      var readiness = DATA["readiness"]
+        const DATA = JSON.parse(data)
+        var dates = DATA["dates"]
+        var sleep = DATA["sleep"]
+        var activity = DATA["activity"]
+        var readiness = DATA["readiness"]
 
-      const options = {
-        responsive: true,
-        plugins: {
-	  legend: {
+        const options = {
+          responsive: true,
+          plugins: {
+      	  legend: {
 	    labels: {
 	      //usePointStyle: true,
 	      //pointStyle: "circle",
