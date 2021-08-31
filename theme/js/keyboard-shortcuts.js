@@ -110,7 +110,7 @@ $(document).ready(function () {
   Mousetrap.bind('g h', function () {
     var data = JSON.stringify({'category':'keyboard-shortcut','event':'gh'});
     navigator.sendBeacon(url, data);
-    window.location.href = `${siteURL}/oura.html`
+    window.location.href = `${siteURL}/health.html`
   })
   Mousetrap.bind('g k', function () {
     var data = JSON.stringify({'category':'keyboard-shortcut','event':'gk'});
