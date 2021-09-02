@@ -103,6 +103,7 @@ interesting things that could be done by combining these services&lt;sup id="sf-
 &lt;p&gt;Using them all for free (my usage is well within the free tier) makes the
 possibilities even more interesting. Having compute and storage services
 running indefinitely in the cloud for free is amazing.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cloud.google.com/free/docs/gcp-free-tier#free-tier-usage-limits"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Aggregate by calendar month&lt;/h3&gt;
 &lt;p&gt;An improvement to this analytics setup would be creating aggregated metrics for
 each calendar month and storing them in separate &lt;span class="caps"&gt;JSON&lt;/span&gt; files. This would prevent
