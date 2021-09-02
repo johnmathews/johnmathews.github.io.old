@@ -282,7 +282,7 @@ read the entire database and generate the aggregated results every time the anal
 page was viewed.</p>
 <p>Instead, a cloud function periodically collected all the records in the
 datastore database and calculated the results. The results were
-written to a <span class="caps">JSON</span> file and sent to a storage bucket. </p>
+written to a <span class="caps">JSON</span> file and sent to a storage bucket.</p>
 <p>When the analytics page was loaded in a browser, the browser collects and
 processes the <span class="caps">JSON</span> file from the bucket. This is much faster, performant
 and cheaper than creating a new <span class="caps">JSON</span> object each time the analytics page is viewed.</p>
@@ -293,7 +293,7 @@ best database solution for this use case.</p>
 <p>The bad: DataStore seems expensive - I am being charged for AppEngine
 services (which I don’t really understand but is caused by using
 DataStore). If I can get monthly costs down to about a cup of coffee (about
-€4/month or €0.15/day) then I don’t mind running it indefinitely. </p>
+€4/month or €0.15/day) then I don’t mind running it indefinitely.</p>
 <h2 id="version-3">Version 3</h2>
 <p>Use BigQuery instead of DataStore. BigQuery is a Data Warehouse that is
 well suited for analytics. It is not well suited for transactional use cases -
