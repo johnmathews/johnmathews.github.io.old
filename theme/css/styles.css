@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.4 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -544,14 +544,6 @@ img,
 video {
   max-width: 100%;
   height: auto;
-}
-
-/**
- * Ensure the default browser behavior of the `hidden` attribute.
- */
-
-[hidden] {
-  display: none;
 }
 
 *, ::before, ::after {
@@ -3560,6 +3552,10 @@ ul~.highlight pre {
 
   .\32xl\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .\32xl\:w-5\/6 {
+    width: 83.333333%;
   }
 
   .\32xl\:max-w-4xl {
