@@ -331,7 +331,8 @@
     $.ajax({
       url: URL,
       type: "GET",
-      cache: true,
+      cache: false,
+      timeout: 20000,
       success: function(data) {
         const DATA = JSON.parse(data)
         var dates = DATA["dates"]
