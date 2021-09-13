@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Engineering</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/engineering.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-08-08T16:41:00+02:00</updated><entry><title>Elon Musk’s Engineering Philosophy</title><link href="https://johnmathews.eu/elon-musk-s-engineering-philosophy.html" rel="alternate"/><published>2021-08-08T16:41:00+02:00</published><updated>2021-08-08T16:41:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-08-08:/elon-musk-s-engineering-philosophy.html</id><summary type="html"/><content type="html">&lt;p&gt;Whilst giving Tim Dodd a tour of a SpaceX facility, Musk described an interesting five-step engineering process:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Engineering</title><link href="https://johnmathews.is/" rel="alternate"/><link href="https://johnmathews.is/feeds/technical/engineering.atom.xml" rel="self"/><id>https://johnmathews.is/</id><updated>2021-08-08T16:41:00+02:00</updated><entry><title>Elon Musk’s Engineering Philosophy</title><link href="https://johnmathews.is/elon-musk-s-engineering-philosophy.html" rel="alternate"/><published>2021-08-08T16:41:00+02:00</published><updated>2021-08-08T16:41:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-08-08:/elon-musk-s-engineering-philosophy.html</id><summary type="html"/><content type="html">&lt;p&gt;Whilst giving Tim Dodd a tour of a SpaceX facility, Musk described an interesting five-step engineering process:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Make the requirements less dumb&lt;/strong&gt;. The requirements are definitely dumb; it
@@ -36,7 +36,7 @@
 &lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://youtube.com/embed/t705r8ICkRw"&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://storage.googleapis.com/johnmathews-eu/movies/Starbase-Factory-Tour-with-Elon-Musk-Part-1.mp4"&gt;archive&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Engineering"/></entry><entry><title>Playing with Google Cloud Platform</title><link href="https://johnmathews.eu/playing-with-google-cloud-platform.html" rel="alternate"/><published>2021-07-13T21:18:29+02:00</published><updated>2021-07-13T21:18:29+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-07-13:/playing-with-google-cloud-platform.html</id><summary type="html"/><content type="html">&lt;p&gt;Building my own &lt;a href="https://johnmathews.eu/building-my-own-site-analytics.html"&gt;web analytics&lt;/a&gt; has
+&lt;p&gt;&lt;a href="https://storage.googleapis.com/johnmathews-eu/movies/Starbase-Factory-Tour-with-Elon-Musk-Part-1.mp4"&gt;archive&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Engineering"/></entry><entry><title>Playing with Google Cloud Platform</title><link href="https://johnmathews.is/playing-with-google-cloud-platform.html" rel="alternate"/><published>2021-07-13T21:18:29+02:00</published><updated>2021-07-13T21:18:29+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-07-13:/playing-with-google-cloud-platform.html</id><summary type="html"/><content type="html">&lt;p&gt;Building my own &lt;a href="https://johnmathews.is/building-my-own-site-analytics.html"&gt;web analytics&lt;/a&gt; has
 been a gateway to learning more about Google Cloud Platform. So far I’ve used
 DataStore, BigQuery, Cloud Functions, Pub/Sub, Storage Buckets and Scheduler.&lt;/p&gt;
 &lt;h2 id="version-1"&gt;Version 1&lt;/h2&gt;
@@ -117,11 +117,11 @@ request more than one &lt;span class="caps"&gt;JSON&lt;/span&gt; file from the s
 &lt;li&gt;&lt;input checked="" disabled="" type="checkbox"/&gt; Frontend - the DataTables column containing the date should be sorted as a Date object. It is being sorted like a normal string.&lt;/li&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"/&gt; Backend - create separate &lt;span class="caps"&gt;JSON&lt;/span&gt; files for each month.&lt;/li&gt;
 &lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-playing-with-google-cloud-platform-1"&gt;The
-question then becomes: “Just because you could do it, should you do it?” &lt;a class="simple-footnote-back" href="#sf-playing-with-google-cloud-platform-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="cloud"/><category term="google"/><category term="serverless"/></entry><entry><title>Design Patterns</title><link href="https://johnmathews.eu/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help
+question then becomes: “Just because you could do it, should you do it?” &lt;a class="simple-footnote-back" href="#sf-playing-with-google-cloud-platform-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="cloud"/><category term="google"/><category term="serverless"/></entry><entry><title>Design Patterns</title><link href="https://johnmathews.is/design-patterns.html" rel="alternate"/><published>2021-06-15T11:18:37+02:00</published><updated>2021-06-15T11:18:37+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-06-15:/design-patterns.html</id><summary type="html"/><content type="html">&lt;p&gt;Design patterns are generalized abstractions that solve common problems and help
 engineers create complex code reliably and quickly. I first heard about design
 patterns from Aaron Maxwell in his &lt;a href="https://powerfulpython.com/"&gt;Powerful
 Python&lt;/a&gt; newsletter, and made some
-&lt;a href="https://johnmathews.eu/python-notes.html"&gt;notes&lt;/a&gt; in an earlier article.&lt;/p&gt;
+&lt;a href="https://johnmathews.is/python-notes.html"&gt;notes&lt;/a&gt; in an earlier article.&lt;/p&gt;
 &lt;p&gt;Then the YouTube algorithm put the following video on my front page, and down
 the rabbit hole I went.&lt;/p&gt;
 &lt;p&gt;Take a look at the Borg design pattern.&lt;/p&gt;
@@ -138,13 +138,13 @@ the rabbit hole I went.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;Some pdf resources, including the GoF book:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/All the GoF Patterns.pdf"&gt;All the GoF patterns&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/GoF_Design_Patterns_Reference0100.pdf"&gt;GoF_Design_Patterns_Reference&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/c-logica-gof-catalogue.pdf"&gt;c logica GoF catalogue&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/DesignPatterns.pdf"&gt;Design-Patterns&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/securing GoF design petterns.pdf"&gt;securing GoF design patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/All the GoF Patterns.pdf"&gt;All the GoF patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/GoF_Design_Patterns_Reference0100.pdf"&gt;GoF_Design_Patterns_Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/c-logica-gof-catalogue.pdf"&gt;c logica GoF catalogue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/DesignPatterns.pdf"&gt;Design-Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/securing GoF design petterns.pdf"&gt;securing GoF design patterns&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Design_Patterns"&gt;Wikipedia&lt;/a&gt; page about GoF book.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="abstractions"/><category term="meta"/><category term="software-engineering"/></entry><entry><title>Choose Boring Technology</title><link href="https://johnmathews.eu/choose-boring-technology.html" rel="alternate"/><published>2021-06-07T12:24:05+02:00</published><updated>2021-06-07T12:24:05+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-07:/choose-boring-technology.html</id><summary type="html"/><content type="html">&lt;p&gt;I’m surprised I haven’t posted this before because the “choose boring tech” article
+&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="abstractions"/><category term="meta"/><category term="software-engineering"/></entry><entry><title>Choose Boring Technology</title><link href="https://johnmathews.is/choose-boring-technology.html" rel="alternate"/><published>2021-06-07T12:24:05+02:00</published><updated>2021-06-07T12:24:05+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-06-07:/choose-boring-technology.html</id><summary type="html"/><content type="html">&lt;p&gt;I’m surprised I haven’t posted this before because the “choose boring tech” article
 by Dan McKinley made a big impression when I first read it, about 3 years ago.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://mcfunley.com/choose-boring-technology"&gt;original article&lt;/a&gt;&lt;/li&gt;
@@ -168,7 +168,7 @@ by Dan McKinley made a big impression when I first read it, about 3 years ago.&
 &lt;p&gt;This should be on my imaginary list of “things I should read every couple of
 years”. Actually, a few lists might be really useful. A list of python articles,
 a list of advice articles, etc. It would be similar to the books page, which is just a
-list of book articles.&lt;/p&gt;</content><category term="Technical/Engineering"/><category term="advice"/><category term="management"/></entry><entry><title>An incomplete list of skills senior engineers need</title><link href="https://johnmathews.eu/an-incomplete-list-of-skills-senior-engineers-need.html" rel="alternate"/><published>2021-06-07T12:12:07+02:00</published><updated>2021-06-07T12:12:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-06-07:/an-incomplete-list-of-skills-senior-engineers-need.html</id><summary type="html"/><content type="html">&lt;p&gt;This is copied from &lt;a href="https://skamille.medium.com/"&gt;Camille Fournier&lt;/a&gt;‘s article
+list of book articles.&lt;/p&gt;</content><category term="Technical/Engineering"/><category term="advice"/><category term="management"/></entry><entry><title>An incomplete list of skills senior engineers need</title><link href="https://johnmathews.is/an-incomplete-list-of-skills-senior-engineers-need.html" rel="alternate"/><published>2021-06-07T12:12:07+02:00</published><updated>2021-06-07T12:12:07+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-06-07:/an-incomplete-list-of-skills-senior-engineers-need.html</id><summary type="html"/><content type="html">&lt;p&gt;This is copied from &lt;a href="https://skamille.medium.com/"&gt;Camille Fournier&lt;/a&gt;‘s article
 on medium. I copied it rather than linked to it because who knows if and when
 Medium will change the &lt;span class="caps"&gt;URL&lt;/span&gt; or put the content behind a paywall.&lt;/p&gt;
 &lt;p&gt;Highlights are simply an impulsive “I can think about this for the next
@@ -199,7 +199,7 @@ few months.” After that I might change them.&lt;/p&gt;
 &lt;li&gt;How to &lt;mark&gt;find interesting work on your own&lt;/mark&gt;, instead of waiting for someone to bring it to you&lt;/li&gt;
 &lt;li&gt;How to tell someone they’re wrong without making them feel ashamed&lt;/li&gt;
 &lt;li&gt;How to take negative feedback gracefully&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="advice"/><category term="management"/></entry><entry><title>Lessons from 45 years in the software industry</title><link href="https://johnmathews.eu/45-years-in-software.html" rel="alternate"/><published>2021-05-27T10:37:18+02:00</published><updated>2021-05-27T10:37:18+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-27:/45-years-in-software.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://web.archive.org/web/20210527083359/https://www.bti360.com/what-ive-learned-in-45-years-in-the-software-industry/"&gt;article&lt;/a&gt;
+&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="advice"/><category term="management"/></entry><entry><title>Lessons from 45 years in the software industry</title><link href="https://johnmathews.is/45-years-in-software.html" rel="alternate"/><published>2021-05-27T10:37:18+02:00</published><updated>2021-05-27T10:37:18+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-05-27:/45-years-in-software.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://web.archive.org/web/20210527083359/https://www.bti360.com/what-ive-learned-in-45-years-in-the-software-industry/"&gt;article&lt;/a&gt;
 from a recently retired software engineer about lessons learned over 4 decades.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Beware the curse of knowledge&lt;/li&gt;
@@ -208,7 +208,7 @@ from a recently retired software engineer about lessons learned over 4 decades.
 &lt;li&gt;Seek first to understand&lt;/li&gt;
 &lt;li&gt;Beware lock-in - cost of change, swapping problems&lt;/li&gt;
 &lt;li&gt;Be honest and acknowledge when you don’t fit the role&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="advice"/></entry><entry><title>I Leaked Credentials Onto A Public GitHub Repo</title><link href="https://johnmathews.eu/i-leaked-credentials-onto-a-public-github-repo.html" rel="alternate"/><published>2021-04-15T19:19:35+02:00</published><updated>2021-04-15T19:19:35+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-15:/i-leaked-credentials-onto-a-public-github-repo.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;/ol&gt;</content><category term="Technical/Engineering"/><category term="advice"/></entry><entry><title>I Leaked Credentials Onto A Public GitHub Repo</title><link href="https://johnmathews.is/i-leaked-credentials-onto-a-public-github-repo.html" rel="alternate"/><published>2021-04-15T19:19:35+02:00</published><updated>2021-04-15T19:19:35+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-04-15:/i-leaked-credentials-onto-a-public-github-repo.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#dont-post-secrets-to-public-github-repositories"&gt;Don’t post secrets to public GitHub repositories.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#the-hack"&gt;The hack&lt;/a&gt;&lt;/li&gt;

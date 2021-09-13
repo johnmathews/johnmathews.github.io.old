@@ -14,31 +14,31 @@
 <meta content=" cloud-functions,data " name="keywords"/>
 <meta content=" I’ve built a simple client-side website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. This article eventually made it to the front page of Hacker News, which resulted in a lot of extra traffic and an opportunity to see how the tool performed under a much heavier load. I wrote about the affects of this and subsequent design changes here. I compare the different results from... " name="description"/>
 <meta content="@johnmathews" name="twitter:creator"/>
-<meta content="https://johnmathews.eu" name="twitter:domain"/>
+<meta content="https://johnmathews.is" name="twitter:domain"/>
 <meta content="Building my own web analytics" property="twitter:title"/>
 <meta content=" I’ve built a simple client-side website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. This article eventually made it to the front page of Hacker News, which resulted in a lot of extra traffic and an opportunity to see how the tool performed under a much heavier load. I wrote about the affects of this and subsequent design changes here. I compare the different results from... " name="twitter:description"/>
-<meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="twitter:url"/>
-<meta content="https://johnmathews.eu/
+<meta content="https://johnmathews.is/building-my-own-site-analytics.html" property="twitter:url"/>
+<meta content="https://johnmathews.is/
 " name="twitter:image"/>
 <meta content="  summary  " property="twitter:card"/>
 <meta content=" article " property="og:type"/>
 <meta content="Building my own web analytics" property="og:title"/>
 <meta content=" I’ve built a simple client-side website analytics tool for this site, you can see it at /analytics. It has the following metrics: Page views per day, Unique IP addresses per day Views per page per day. This article eventually made it to the front page of Hacker News, which resulted in a lot of extra traffic and an opportunity to see how the tool performed under a much heavier load. I wrote about the affects of this and subsequent design changes here. I compare the different results from... " property="og:description"/>
-<meta content="https://johnmathews.eu/building-my-own-site-analytics.html" property="og:url"/>
-<meta content="https://johnmathews.eu/
+<meta content="https://johnmathews.is/building-my-own-site-analytics.html" property="og:url"/>
+<meta content="https://johnmathews.is/
 " property="og:image"/>
-<link href="https://johnmathews.eu/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
-<link href="https://johnmathews.eu/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
+<link href="https://johnmathews.is/feeds/all.atom.xml" rel="alternate" title="John Mathews - all articles" type="application/atom+xml"/>
+<link href="https://johnmathews.is/feeds/technical.atom.xml" rel="alternate" title="John Mathews - technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.is/feeds/non-technical.atom.xml" rel="alternate" title="John Mathews - non-Technical articles" type="application/atom+xml"/>
+<link href="https://johnmathews.is/feeds/snippet.atom.xml" rel="alternate" title="John Mathews - snippet articles" type="application/atom+xml"/>
 <script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
 <link href="https://fonts.gstatic.com" rel="preconnect"/>
 <link async="" href="https://fonts.googleapis.com/css2?family=Cardo&amp;display=swap" rel="stylesheet"/>
 <link async="" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&amp;display=swap" rel="stylesheet"/>
-<link href="https://johnmathews.eu/extra/favicon.png" rel="icon"/>
-<link href="https://johnmathews.eu/theme/css/styles.css" rel="stylesheet"/>
-<link href="https://johnmathews.eu/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="https://johnmathews.is/extra/favicon.png" rel="icon"/>
+<link href="https://johnmathews.is/theme/css/styles.css" rel="stylesheet"/>
+<link href="https://johnmathews.is/theme/css/pygment-light.css" id="PygmentCSS" media="print" onload="this.media='all'" rel="stylesheet"/>
 <script>
         if (localStorage.getItem('theme') === 'dark') {
           document.getElementById('baz').classList.add('dark')
@@ -52,10 +52,10 @@
 <nav class="md:fixed z-30 top-0 w-screen flex flex-row justify-between pt-2 text-xl bg-white dark:bg-gray-900" id="navbar" style="transition: top 0.3s ease-in-out;">
 <div class="text-bold pr-3 hidden md:flex md:flex-grow xl:hidden">
 <div class="mt-10 md:mt-0 flex-grow justify-between">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.eu/categories.html">Categories</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.is/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.is/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.is/pages.html">Pages</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="https://johnmathews.is/categories.html">Categories</a>
 <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1" href="javaScript:;" id="searchButton2">Search</a>
 </div>
 <div class="flex-none justify-end px-2 pt-2">
@@ -80,10 +80,10 @@
 </div>
 </nav>
 <div class="toggle hidden w-screen flex flex-col text-left mt-5">
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/blog.html">Blog</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.eu/categories.html">Categories</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.is/blog.html">Blog</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.is/snippets.html">Snippets</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.is/pages.html">Pages</a>
+<a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="https://johnmathews.is/categories.html">Categories</a>
 <a class="text-gray-700 dark:text-gray-200 hover:underline font-semibold px-3 py-1 text-2xl" href="javaScript:;" id="searchButton3">Search</a>
 <div class="px-3 pt-3 flex flex-row">
 <button aria-label="themeToggle" class="mx-1 theme-toggle" id="modeSwitcher3">
@@ -203,14 +203,14 @@
 <div class="mt-5 2xl:mt-20 fixed flex flex-col">
 <div class="lg:w-32">
 <div>
-<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/index.html"><i class="far fa-md fa-star"></i></a>
+<a class="my-2 prose prose-xl leading-8 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.is/index.html"><i class="far fa-md fa-star"></i></a>
 </div>
 <div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/blog.html">Blog</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.is/blog.html">Blog</a>
 </div>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/snippets.html">Snippets</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/pages.html">Pages</a>
-<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.eu/categories.html">Categories</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.is/snippets.html">Snippets</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.is/pages.html">Pages</a>
+<a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="https://johnmathews.is/categories.html">Categories</a>
 <div id="searchButton"><a class="text-lg my-2 text-gray-700 dark:text-gray-200 hover:underline font-semibold block md:inline-block" href="javaScript:;">Search</a></div>
 <div class="flex my-2">
 <button aria-label="themeToggle" class="md:pl-0 my-2 theme-toggle" id="modeSwitcher2">
@@ -230,8 +230,8 @@
 <div class="pt-5 font-serif text-lg text-gray-700 font-bold dark:text-gray-300 w-36">
  Categories: 
     <div>
-<a class="hover:underline" href="https://johnmathews.eu/category/technical/web.html">Web</a>
-<span class="-ml-1">,<span> <a class="hover:underline" href="https://johnmathews.eu/category/.html"></a>
+<a class="hover:underline" href="https://johnmathews.is/category/technical/web.html">Web</a>
+<span class="-ml-1">,<span> <a class="hover:underline" href="https://johnmathews.is/category/.html"></a>
 </span></span></div>
 </div>
 </div>
@@ -254,7 +254,7 @@
 <article class="">
 <div class="markdown">
 <p>I’ve built a simple client-side website analytics tool for this site, you can see it at
-<a href="https://johnmathews.eu/analytics.html">/analytics</a>. It has the following metrics:</p>
+<a href="https://johnmathews.is/analytics.html">/analytics</a>. It has the following metrics:</p>
 <ul>
 <li>Page views per day,</li>
 <li>Unique <span class="caps">IP</span> addresses per day</li>
@@ -262,9 +262,9 @@
 </ul>
 <p>This article eventually made it to the front page of <a href="https://news.ycombinator.com/item?id=27686873">Hacker News</a>, which resulted
 in a lot of extra traffic and an opportunity to see how the tool performed under a
-much heavier load. I wrote about the affects of this and subsequent design changes <a href="https://johnmathews.eu/load-testing-web-analytics-tool.html">here</a>.</p>
+much heavier load. I wrote about the affects of this and subsequent design changes <a href="https://johnmathews.is/load-testing-web-analytics-tool.html">here</a>.</p>
 <p>I compare the different results from CloudFlare Analytics, CloudFlare Web Analytics and my
-own tool in this follow-up <a href="https://johnmathews.eu/validating-cloudflare-analytics.html">article</a>.</p>
+own tool in this follow-up <a href="https://johnmathews.is/validating-cloudflare-analytics.html">article</a>.</p>
 <h2 id="motivation">Motivation</h2>
 <h3>Google Analytics</h3>
 <p>Google Analytics felt like overkill. It has so many data-points that the
@@ -332,7 +332,7 @@ page rules to prevent malicious traffic<sup id="sf-building-my-own-site-analytic
 <h2 id="tasks-for-later">Tasks for later</h2>
 <ul class="checklist">
 <li><input checked="" disabled="" type="checkbox"/>  Make <code>/analytics.html</code> load faster - latency is caused by the Cloud Function initialising. Short of paying actual money for always-on resources I can’t see a way to reduce this. However it’s only an issue if you are the first person to view the page in the last ~10 minutes - this <a href="https://mikhail.io/serverless/coldstarts/gcp/">blog post</a> explains whj.</li>
-<li><input checked="" disabled="" type="checkbox"/>  Add loading spinners - I used the same snippets as in my <a href="https://johnmathews.eu/portfolio-image-recognition.html">Machine Vision demo</a>.</li>
+<li><input checked="" disabled="" type="checkbox"/>  Add loading spinners - I used the same snippets as in my <a href="https://johnmathews.is/portfolio-image-recognition.html">Machine Vision demo</a>.</li>
 <li><input disabled="" type="checkbox"/>  Group data by weeks or months as well as day.</li>
 <li><input disabled="" type="checkbox"/>  Identify bots and search engines - the analytics requires JavaScript to be running so I think some types of non-human activity is already filtered. How can I do this?</li>
 <li><input disabled="" type="checkbox"/>  Aggregate the data (once per day) in a Cloud Function instead of repeatedly in the browser.</li>
@@ -364,29 +364,29 @@ first ever taste  of <span class="caps">CSS</span>, <span class="caps">HTML</spa
 this blog was about the “Time Since” widget. CoffeeScript, and Ubersicht were
 just about simple enough for me to learn by trial and error, copying someone
 else’s code and changing it bit by bit until I had what I want.</p>
-<p><a href="https://johnmathews.eu/analytics.html"><strong>Site Analytics</strong></a></p><ol class="simple-footnotes"><li id="sf-building-my-own-site-analytics-1">In Google
+<p><a href="https://johnmathews.is/analytics.html"><strong>Site Analytics</strong></a></p><ol class="simple-footnotes"><li id="sf-building-my-own-site-analytics-1">In Google
 Analytics it can be fun clicking around on all the things and seeing lots of
 options, but its not really useful once the novelty has worn off. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-1-back">↩</a></li><li id="sf-building-my-own-site-analytics-2">I think this
 might be quite wrong, but I don’t know why. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-2-back">↩</a></li><li id="sf-building-my-own-site-analytics-3">The page is now rate limited to 5
-requests per minute per <span class="caps">IP</span> address. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-3-back">↩</a></li><li id="sf-building-my-own-site-analytics-4">Done! My desktop now looks like this: <img alt="Dekstop widgets" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1600px, (min-width: 1280px) 1300px, (min-width: 1024px) 1100px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.eu/images/derivatives/article-inline-image/1600w/widgets.png" srcset="https://johnmathews.eu/images/derivatives/article-inline-image/300w/widgets.png 300w, https://johnmathews.eu/images/derivatives/article-inline-image/600w/widgets.png 600w, https://johnmathews.eu/images/derivatives/article-inline-image/800w/widgets.png 800w, https://johnmathews.eu/images/derivatives/article-inline-image/1600w/widgets.png 1600w"/> <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-4-back">↩</a></li><li id="sf-building-my-own-site-analytics-5">I failed the exam because I’d been working on
-<a href="https://johnmathews.eu/rys-git-tutorial.html">Ry’s Git Tutorial</a> instead. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-5-back">↩</a></li></ol>
+requests per minute per <span class="caps">IP</span> address. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-3-back">↩</a></li><li id="sf-building-my-own-site-analytics-4">Done! My desktop now looks like this: <img alt="Dekstop widgets" class="image-process-article-inline-image" loading="lazy" sizes="(min-width: 1536x) 1600px, (min-width: 1280px) 1300px, (min-width: 1024px) 1100px, (min-width: 768px) 800px, (min-width: 640px) 800px, 100vw" src="https://johnmathews.is/images/derivatives/article-inline-image/1600w/widgets.png" srcset="https://johnmathews.is/images/derivatives/article-inline-image/300w/widgets.png 300w, https://johnmathews.is/images/derivatives/article-inline-image/600w/widgets.png 600w, https://johnmathews.is/images/derivatives/article-inline-image/800w/widgets.png 800w, https://johnmathews.is/images/derivatives/article-inline-image/1600w/widgets.png 1600w"/> <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-4-back">↩</a></li><li id="sf-building-my-own-site-analytics-5">I failed the exam because I’d been working on
+<a href="https://johnmathews.is/rys-git-tutorial.html">Ry’s Git Tutorial</a> instead. <a class="simple-footnote-back" href="#sf-building-my-own-site-analytics-5-back">↩</a></li></ol>
 </div>
 </article>
 </main>
 <div class="mt-20 mb-10 text-lg dark:text-gray-200">
 <div class="flex flex-row">
 <div class="text-red-500 dark:text-red-500"> ← </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.eu/design-patterns.html" id="previousArticleInCategory"> Design Patterns</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 px-1 hover:text-red-500 dark:hover:text-red-500" href="https://johnmathews.is/design-patterns.html" id="previousArticleInCategory"> Design Patterns</a>
 </div>
 <div class="flex flex-row mt-2">
 <div class="text-green-500 dark:text-green-200"> → </div>
-<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.eu/validating-cloudflare-analytics.html" id="nextArticleInCategory"> Validating CloudFlare analytics</a>
+<a class="font-serif text-lg font-extrabold dark:text-gray-300 text-left px-1 hover:text-green-500 dark:hover:text-green-200" href="https://johnmathews.is/validating-cloudflare-analytics.html" id="nextArticleInCategory"> Validating CloudFlare analytics</a>
 </div>
 <div class="hidden mt-2 flex flex-row font-serif text-lg text-gray-700 font-bold dark:text-gray-300">
         Other articles in:
-          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/technical/web.html" id="otherArticlesInCategory"> Web</a>
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.is/category/technical/web.html" id="otherArticlesInCategory"> Web</a>
           , 
-          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.eu/category/.html" id="otherArticlesInCategory"> </a>
+          <a class="hover:underline ml-1 text-gray-600 dark:text-gray-300 font-serif text-lg font-bold" href="https://johnmathews.is/category/.html" id="otherArticlesInCategory"> </a>
 </div>
 </div>
 </div>
@@ -397,19 +397,19 @@ requests per minute per <span class="caps">IP</span> address. <a class="simple-f
 <footer class="footer w-5/6 mx-auto border-t-2 border-single border-gray-200 mt-10 py-3">
 <div class="text-center font-serif text-lg text-gray-700 dark:text-gray-200">
 <a class="px-3" href="#top">Back to top</a> |
-        <a class="px-3" href="https://johnmathews.eu/blog.html">Blog Posts</a> |
-        <a class="px-3" href="https://johnmathews.eu/categories.html">Categories</a> |
-        <a class="px-3" href="https://johnmathews.eu/feeds/all.atom.xml">RSS</a> |
+        <a class="px-3" href="https://johnmathews.is/blog.html">Blog Posts</a> |
+        <a class="px-3" href="https://johnmathews.is/categories.html">Categories</a> |
+        <a class="px-3" href="https://johnmathews.is/feeds/all.atom.xml">RSS</a> |
         <a class="px-3" href="JavaScript:void(0)" id="viewShortcuts">Shortcuts</a> |
         <a class="px-3" href="https://twitter.com/johnmathews">Twitter</a> |
-        <a class="px-3" href="https://johnmathews.eu/tags.html">Tags</a>
+        <a class="px-3" href="https://johnmathews.is/tags.html">Tags</a>
 </div>
 </footer>
 <script>
-        const light = "https://johnmathews.eu/theme/css/pygment-light.css"
-        const dark = "https://johnmathews.eu/theme/css/pygment-dark.css"
-        const indexURL = 'https://johnmathews.eu/fuse.html'
-        const siteURL = 'https://johnmathews.eu'
+        const light = "https://johnmathews.is/theme/css/pygment-light.css"
+        const dark = "https://johnmathews.is/theme/css/pygment-dark.css"
+        const indexURL = 'https://johnmathews.is/fuse.html'
+        const siteURL = 'https://johnmathews.is'
 
         // show category options window when cat icon is clicked
         $( ".catChooser" ).click(function() {
@@ -418,11 +418,11 @@ requests per minute per <span class="caps">IP</span> address. <a class="simple-f
 
 
       </script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/categoryChooser.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/navbar.js" type="text/javascript"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/fuseSearch.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/keyboard-shortcuts.js" type="module"></script>
-<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.eu/theme/js/themeChooser.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.is/theme/js/categoryChooser.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.is/theme/js/navbar.js" type="text/javascript"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.is/theme/js/fuseSearch.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.is/theme/js/keyboard-shortcuts.js" type="module"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.is/theme/js/themeChooser.js" type="module"></script>
 <script>
         // toggle cat modal view
         $( "#catModal" ).click(function() {

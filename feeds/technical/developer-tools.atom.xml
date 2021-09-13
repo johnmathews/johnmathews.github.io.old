@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.eu/" rel="alternate"/><link href="https://johnmathews.eu/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.eu/</id><updated>2021-05-10T10:44:00+02:00</updated><entry><title>More VIM Notes</title><link href="https://johnmathews.eu/more-vim-notes.html" rel="alternate"/><published>2021-05-10T10:44:00+02:00</published><updated>2021-05-10T10:44:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-05-10:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;&lt;/ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - Technical/Developer Tools</title><link href="https://johnmathews.is/" rel="alternate"/><link href="https://johnmathews.is/feeds/technical/developer-tools.atom.xml" rel="self"/><id>https://johnmathews.is/</id><updated>2021-05-10T10:44:00+02:00</updated><entry><title>More VIM Notes</title><link href="https://johnmathews.is/more-vim-notes.html" rel="alternate"/><published>2021-05-10T10:44:00+02:00</published><updated>2021-05-10T10:44:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-05-10:/more-vim-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;&lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3&gt;Quickfix list&lt;/h3&gt;
 &lt;ul&gt;
@@ -70,7 +70,7 @@ lines 3 blocks to the right.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href="https://thevaluable.dev/vim-advanced/"&gt;The Valuable Dev&lt;/a&gt;&lt;/em&gt; has a lot of great tips.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;Vim for Python&lt;/a&gt;&lt;/em&gt; has some great notes on linting and code completion plugins that I’ve either copied or was more or less doing already.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="tips"/><category term="vim"/></entry><entry><title>Learning - April 2021</title><link href="https://johnmathews.eu/learning-april-2021.html" rel="alternate"/><published>2021-04-21T11:09:19+02:00</published><updated>2021-04-21T11:09:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/learning-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="tips"/><category term="vim"/></entry><entry><title>Learning - April 2021</title><link href="https://johnmathews.is/learning-april-2021.html" rel="alternate"/><published>2021-04-21T11:09:19+02:00</published><updated>2021-04-21T11:09:19+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-04-21:/learning-april-2021.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#google-cloud-platform-service-accounts"&gt;Google Cloud Platform Service Accounts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ansible"&gt;Ansible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#ssh"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -97,14 +97,14 @@ guy. I’m going to try listen to one of these each day.&lt;/p&gt;
 &lt;h1 id="ssh"&gt;&lt;a href="https://www.youtube.com/watch?v=hQWRp-FdTpc&amp;amp;list=PLQGMHRkCCyDw5arrPInZT_T8TbDdzmeBp&amp;amp;index=4"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;br/&gt;&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/hQWRp-FdTpc" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;This&lt;/a&gt;
-is also a very useful article. I made notes from it in another &lt;a href="https://johnmathews.eu/ssh-notes.html"&gt;post&lt;/a&gt;.&lt;/p&gt;
+is also a very useful article. I made notes from it in another &lt;a href="https://johnmathews.is/ssh-notes.html"&gt;post&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id="vagrant"&gt;&lt;a href="https://www.youtube.com/watch?v=vBrezgo&amp;amp;list=PLQGMHRkCCyDw5arrPInZT_T8TbDdzmeBp&amp;amp;index=2X"&gt;Vagrant&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;br/&gt;&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/vBreXjkizgo" title="YouTube video player" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Good for local development. (Especially when on aeroplanes?)&lt;/li&gt;
 &lt;li&gt;Not as good for cloud providers as Terraform.&lt;/li&gt;
 &lt;li&gt;No more snowflake servers.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="learning"/><category term="youtube"/><category term="ansible"/><category term="ssh"/><category term="vagrant"/><category term="gcp"/><category term="service-accounts"/><category term="iam"/></entry><entry><title>SSH-Notes</title><link href="https://johnmathews.eu/ssh-notes.html" rel="alternate"/><published>2021-04-21T10:21:15+02:00</published><updated>2021-04-21T10:21:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-21:/ssh-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="learning"/><category term="youtube"/><category term="ansible"/><category term="ssh"/><category term="vagrant"/><category term="gcp"/><category term="service-accounts"/><category term="iam"/></entry><entry><title>SSH-Notes</title><link href="https://johnmathews.is/ssh-notes.html" rel="alternate"/><published>2021-04-21T10:21:15+02:00</published><updated>2021-04-21T10:21:15+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-04-21:/ssh-notes.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#tldr"&gt;&lt;span class="caps"&gt;TLDR&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#setup-ssh-agent-to-prevent-passphrase-prompt"&gt;Setup &lt;span class="caps"&gt;SSH&lt;/span&gt;-Agent to prevent passphrase prompt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#authentication"&gt;Authentication&lt;/a&gt;&lt;ul&gt;
@@ -239,7 +239,7 @@ is also a very useful article. I made notes from it in another &lt;a href="https
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id="source"&gt;Source&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;article&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.eu/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;p&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys"&gt;article&lt;/a&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="ssh"/><category term="linux"/><category term="security"/></entry><entry><title>ChezMoi</title><link href="https://johnmathews.is/chezmoi.html" rel="alternate"/><published>2021-04-20T11:46:46+02:00</published><updated>2021-04-20T11:46:46+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-04-20:/chezmoi.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#background"&gt;Background&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#razor"&gt;Razor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#one-question"&gt;One Question&lt;/a&gt;&lt;/li&gt;
@@ -341,7 +341,7 @@ as experience increases but nonetheless it’s gratifying to realise.&lt;br clas
 management was a fairly new and interesting concept when I first began
 symlinking into my home directory. It still feels amazing to bootstrap a fresh
 machine and have it feel like home in just a few minutes, but the
-technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.eu/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
+technicalities of it are now familiar. &lt;a class="simple-footnote-back" href="#sf-chezmoi-2-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="linux"/></entry><entry><title>Ansible</title><link href="https://johnmathews.is/ansible.html" rel="alternate"/><published>2021-04-12T11:40:41+02:00</published><updated>2021-04-12T11:40:41+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-04-12:/ansible.html</id><summary type="html"/><content type="html">&lt;h1 id="background"&gt;Background&lt;/h1&gt;
 &lt;p&gt;I’ve been spending a lot of time lately working on nodes for various blockchain
 projects (Polkadot, Cardano, Tron, Binance Chain, Ethereum, …). The rosetta
 api spec is super interesting, but like most things in crypto the documentation
@@ -423,7 +423,7 @@ explains why.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ansible-config view|list|dump&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ansible-inventory -i inventory.compute.gcp.yml --graph&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ansible -i inventory.compute.gcp.yml all -m ping&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>Vim: GoTo Tag Definition</title><link href="https://johnmathews.eu/vim-notes-goto-tag-definition.html" rel="alternate"/><published>2021-03-31T15:57:00+02:00</published><updated>2021-03-31T15:57:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-31:/vim-notes-goto-tag-definition.html</id><summary type="html"/><content type="html">&lt;h2 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/><category term="ansible"/><category term="servers"/><category term="ssh"/><category term="automation"/></entry><entry><title>Vim: GoTo Tag Definition</title><link href="https://johnmathews.is/vim-notes-goto-tag-definition.html" rel="alternate"/><published>2021-03-31T15:57:00+02:00</published><updated>2021-03-31T15:57:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-03-31:/vim-notes-goto-tag-definition.html</id><summary type="html"/><content type="html">&lt;h2 id="update-2021-03-31"&gt;Update (2021-03-31):&lt;/h2&gt;
 &lt;p&gt;Just use neovim.coc instead of YouCompleteMe or Syntastic.&lt;/p&gt;
 &lt;p&gt;It’s faster, easier to setup, and works intuitively. &lt;span class="caps"&gt;ALE&lt;/span&gt; is still wonderful and
 useful, though there’s a lot of overlap - coc can lint as well.&lt;/p&gt;
@@ -471,7 +471,7 @@ do. &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-3
 &lt;span class="caps"&gt;ALE&lt;/span&gt; work fine for goto definition and linting, but they don’t give me
 satisfactory autocompletion. &lt;code&gt;neoclide/coc.nvim&lt;/code&gt; looks like it might offer some
 improvements.
-&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;neoclide/coc.nvim&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.eu/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
+&lt;a href="https://www.vimfromscratch.com/articles/vim-for-python/"&gt;neoclide/coc.nvim&lt;/a&gt; &lt;a class="simple-footnote-back" href="#sf-vim-notes-goto-tag-definition-4-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Python Notes</title><link href="https://johnmathews.is/python-notes-2.html" rel="alternate"/><published>2021-03-17T09:12:00+01:00</published><updated>2021-03-17T09:12:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-03-17:/python-notes-2.html</id><summary type="html"/><content type="html">&lt;h1 id="95_call__"&gt;__call__()&lt;/h1&gt;
 &lt;p&gt;In Python, every time you call a function or method such as &lt;code&gt;my_function()&lt;/code&gt; or
 &lt;code&gt;my_class.my_method()&lt;/code&gt; the interpreter will replace the &lt;code&gt;(&lt;/code&gt; with
 &lt;code&gt;.__call__(&lt;/code&gt;&lt;/p&gt;
@@ -498,12 +498,12 @@ improvements.
 &lt;p&gt;It’s in the ‘zen of Python’, which is a set of guidelines that help make
 design decisions. It’s a choice that Python made, and other languages do it differently.&lt;/p&gt;
 &lt;p&gt;There are different
-&lt;a href="https://johnmathews.eu/python-notes.html#levels-of-python-code"&gt;levels&lt;/a&gt; to
+&lt;a href="https://johnmathews.is/python-notes.html#levels-of-python-code"&gt;levels&lt;/a&gt; to
 languages and this applies more to the idiom level than the design pattern
 level. It applies even less at the architectural level where there can be
 several equally good ways of organizing business logic and data representations.&lt;/p&gt;
 &lt;p&gt;Perl has the “&lt;span class="caps"&gt;TMTOWTDI&lt;/span&gt;” (tim towtdi) principle - “There’s More Than One Way To Do
-It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="learning notes"/></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.eu/two-years-of-vim.html" rel="alternate"/><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-04:/two-years-of-vim.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been feeling very comfortable with my Vim + Tmux setup recently.
+It”. Perl’s philosophy is to give users more than one way to do something.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="learning notes"/></entry><entry><title>Two Years Of Vim</title><link href="https://johnmathews.is/two-years-of-vim.html" rel="alternate"/><published>2021-03-04T10:44:00+01:00</published><updated>2021-03-04T10:44:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-03-04:/two-years-of-vim.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been feeling very comfortable with my Vim + Tmux setup recently.
 Navigating around shells and files isn’t taking much mental effort anymore. Wohoo!&lt;/p&gt;
 &lt;p&gt;It’s taken about 2 years of working full time with vim to get to the stage
 where the commands are so intuitive that:&lt;/p&gt;
@@ -534,7 +534,7 @@ where the commands are so intuitive that:&lt;/p&gt;
      where I know text is. I’m not saying I &lt;em&gt;should&lt;/em&gt; work when I’m that tired,
      but I can, if I’m already familiar with the code/file.. &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.eu/nohup-and-background-processes.html" rel="alternate"/><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"/><content type="html">&lt;h1 id="stop-stuff-stopping"&gt;Stop stuff stopping&lt;/h1&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>nohup and Background Processes</title><link href="https://johnmathews.is/nohup-and-background-processes.html" rel="alternate"/><published>2021-03-02T13:10:00+01:00</published><updated>2021-03-02T13:10:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-03-02:/nohup-and-background-processes.html</id><summary type="html"/><content type="html">&lt;h1 id="stop-stuff-stopping"&gt;Stop stuff stopping&lt;/h1&gt;
 &lt;p&gt;If you run a command in a terminal session and the terminal session is
 disconnected, then the processes running in it will also be terminated.&lt;/p&gt;
 &lt;p&gt;I discovered this when I was trying to download a ~&lt;span class="caps"&gt;500GB&lt;/span&gt; database
@@ -586,7 +586,7 @@ to each process that is a member of the group.&lt;/p&gt;
 &lt;p&gt;A collection of one or more process groups. A process may not create a process
 group that belongs to another session. A process is not permitted
 to join a process group that is a member of another session. A process
-is not permitted to migrate from one session to another.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.eu/file-descriptors.html" rel="alternate"/><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-03-02:/file-descriptors.html</id><summary type="html"/><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
+is not permitted to migrate from one session to another.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>File Descriptors and /dev/null</title><link href="https://johnmathews.is/file-descriptors.html" rel="alternate"/><published>2021-03-02T11:36:00+01:00</published><updated>2021-03-02T11:36:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-03-02:/file-descriptors.html</id><summary type="html"/><content type="html">&lt;h2 id="devnull"&gt;/dev/null&lt;/h2&gt;
 &lt;p&gt;In Linux everything is a file, including virtual devices like keyboards. Processes
 (programmes) can request access to or from these devices.&lt;/p&gt;
 &lt;p&gt;The only difference between these virtual device “files” and real files, is
@@ -644,7 +644,7 @@ anymore. It also means you can pipe &lt;code&gt;stderr&lt;/code&gt; the same as 
 &lt;p&gt;You can redirect &lt;code&gt;stdin&lt;/code&gt; similarly. If you run &lt;code&gt; then if the program
 attempt to read from &lt;code&gt;stdin&lt;/code&gt; then it will get end-of-file. &lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The merge (or redirect) syntax (for example &lt;code&gt;&amp;lt;&amp;amp;2&lt;/code&gt;) won’t work, because you can
-only redirect in the same direction.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Microservices, Docker, Azure</title><link href="https://johnmathews.eu/microservices_events_docker.html" rel="alternate"/><published>2021-02-02T13:31:00+01:00</published><updated>2021-02-02T13:31:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-02-02:/microservices_events_docker.html</id><summary type="html"/><content type="html">&lt;p&gt;This is a great presentation about microservices and event driven architectures.&lt;/p&gt;
+only redirect in the same direction.&lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Microservices, Docker, Azure</title><link href="https://johnmathews.is/microservices_events_docker.html" rel="alternate"/><published>2021-02-02T13:31:00+01:00</published><updated>2021-02-02T13:31:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-02-02:/microservices_events_docker.html</id><summary type="html"/><content type="html">&lt;p&gt;This is a great presentation about microservices and event driven architectures.&lt;/p&gt;
 &lt;div class="relative" style="padding-top: 56.25%"&gt;
 &lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://www.youtube.com/embed/sSm2dRarhPo"&gt;
 &lt;/iframe&gt;
@@ -653,7 +653,7 @@ only redirect in the same direction.&lt;/p&gt;</content><category term="Technic
 &lt;div class="relative" style="padding-top: 56.25%"&gt;
 &lt;iframe allow="autoplay; encrypted-media" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://www.youtube.com/embed/NKEFWyqJ5XA"&gt;
 &lt;/iframe&gt;
-&lt;/div&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Notes From “Mastering Vim Quickly”</title><link href="https://johnmathews.eu/notes-from-mastering-vim-quickly.html" rel="alternate"/><published>2021-01-21T16:22:00+01:00</published><updated>2021-01-21T16:22:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/notes-from-mastering-vim-quickly.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
+&lt;/div&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Notes From “Mastering Vim Quickly”</title><link href="https://johnmathews.is/notes-from-mastering-vim-quickly.html" rel="alternate"/><published>2021-01-21T16:22:00+01:00</published><updated>2021-01-21T16:22:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-21:/notes-from-mastering-vim-quickly.html</id><summary type="html"/><content type="html">&lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#verbs"&gt;Verbs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#registers"&gt;Registers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#insert-mode"&gt;Insert Mode&lt;/a&gt;&lt;/li&gt;
@@ -760,7 +760,7 @@ only redirect in the same direction.&lt;/p&gt;</content><category term="Technic
     and then put you back into Insert Mode automatically.&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;.dot&lt;/code&gt; command only repeats commands that changes the buffer content. It
     wont repeat navigation commands.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Notes From “Powerful Python”</title><link href="https://johnmathews.eu/python-notes.html" rel="alternate"/><published>2021-01-21T14:55:00+01:00</published><updated>2021-01-21T14:55:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-21:/python-notes.html</id><summary type="html"/><content type="html">&lt;p&gt;The parts of Aaron Maxwell’s &lt;a href="https://twitter.com/powerfulpython"&gt;Powerful Python&lt;/a&gt;
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Notes From “Powerful Python”</title><link href="https://johnmathews.is/python-notes.html" rel="alternate"/><published>2021-01-21T14:55:00+01:00</published><updated>2021-01-21T14:55:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-21:/python-notes.html</id><summary type="html"/><content type="html">&lt;p&gt;The parts of Aaron Maxwell’s &lt;a href="https://twitter.com/powerfulpython"&gt;Powerful Python&lt;/a&gt;
 newsletter that I don’t want to forget:&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toctitle"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#emergent-abstractions"&gt;Emergent Abstractions&lt;/a&gt;&lt;/li&gt;
@@ -839,7 +839,7 @@ there can be no ambiguity about where it came from.&lt;/p&gt;
     or context managers.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Design Patterns&lt;/strong&gt; - Less well defined that Idioms, but more useful. &lt;a href="https://johnmathews.eu/design-patterns.html"&gt;More
+&lt;p&gt;&lt;strong&gt;Design Patterns&lt;/strong&gt; - Less well defined that Idioms, but more useful. &lt;a href="https://johnmathews.is/design-patterns.html"&gt;More
     info&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Creational Patterns, like Factories&lt;/li&gt;
@@ -864,8 +864,8 @@ lots of sample code.&lt;/p&gt;
 &lt;p&gt;If the &lt;span class="caps"&gt;PEP&lt;/span&gt; is accepted into a future version of Python, the &lt;span class="caps"&gt;PEP&lt;/span&gt; becomes
 the authoritative document for that feature and how to use it.&lt;/p&gt;
 &lt;p&gt;PEPs tend to be written by the best programmers in the world, so hang out with them.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-python-notes-1"&gt;
-&lt;a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction"&gt;Abstraction&lt;/a&gt; is a
-principal of &lt;span class="caps"&gt;OOP&lt;/span&gt; &lt;a class="simple-footnote-back" href="#sf-python-notes-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Debugging the more_categories plugin for Pelican</title><link href="https://johnmathews.eu/debugging-more-categories-pelican-plugin.html" rel="alternate"/><published>2021-01-19T12:00:00+01:00</published><updated>2021-01-19T12:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-19:/debugging-more-categories-pelican-plugin.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve realised that one of the plugins I use to make this blog is not working
+&lt;a href="https://johnmathews.is/principles-of-oop.html#2-abstraction"&gt;Abstraction&lt;/a&gt; is a
+principal of &lt;span class="caps"&gt;OOP&lt;/span&gt; &lt;a class="simple-footnote-back" href="#sf-python-notes-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Debugging the more_categories plugin for Pelican</title><link href="https://johnmathews.is/debugging-more-categories-pelican-plugin.html" rel="alternate"/><published>2021-01-19T12:00:00+01:00</published><updated>2021-01-19T12:00:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-19:/debugging-more-categories-pelican-plugin.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve realised that one of the plugins I use to make this blog is not working
 correctly. I use the &lt;code&gt;more_categories&lt;/code&gt; plugin to:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;add subcategories&lt;/li&gt;
@@ -974,7 +974,7 @@ called or mentioned within the class definition, but is called from the
 function returns. I don’t understand why it needs an &lt;code&gt;@property&lt;/code&gt; decorator though.&lt;/p&gt;
 &lt;p&gt;The class inherits from &lt;code&gt;URLWrapper&lt;/code&gt; so that is probably the next best place to
 look… Indeed, looking at the definition of &lt;code&gt;URLWrapper&lt;/code&gt; shows that the
-&lt;code&gt;as_dict&lt;/code&gt; method is overriding the definition in the base class.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-debugging-more-categories-pelican-plugin-1"&gt;I guess it’s the “curse of knowledge” &lt;a class="simple-footnote-back" href="#sf-debugging-more-categories-pelican-plugin-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Python: Becoming A Better Python Developer</title><link href="https://johnmathews.eu/becoming-a-better-python-developer.html" rel="alternate"/><published>2021-01-18T11:25:00+01:00</published><updated>2021-01-18T11:25:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-18:/becoming-a-better-python-developer.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been subscribed to Aaron Maxwell’s “Powerful Python” newsletter for over a
+&lt;code&gt;as_dict&lt;/code&gt; method is overriding the definition in the base class.&lt;/p&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-debugging-more-categories-pelican-plugin-1"&gt;I guess it’s the “curse of knowledge” &lt;a class="simple-footnote-back" href="#sf-debugging-more-categories-pelican-plugin-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Python: Becoming A Better Python Developer</title><link href="https://johnmathews.is/becoming-a-better-python-developer.html" rel="alternate"/><published>2021-01-18T11:25:00+01:00</published><updated>2021-01-18T11:25:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-18:/becoming-a-better-python-developer.html</id><summary type="html"/><content type="html">&lt;p&gt;I’ve been subscribed to Aaron Maxwell’s “Powerful Python” newsletter for over a
 year and I really like it. His emails are opinionated and candid, and
 singularly focussed. He seems passionate about what he does and I like that.&lt;/p&gt;
 &lt;p&gt;Ultimately, the emails are designed to drive sign-ups for his courses which I
@@ -1002,7 +1002,7 @@ to try again with what eluded me the first time.&lt;/p&gt;
    be used (everywhere).&lt;/li&gt;
 &lt;li&gt;A machine learning model - I’ve already studied this, from theory (&lt;code&gt;numpy&lt;/code&gt;)
    to frameworks (&lt;code&gt;tensorflow&lt;/code&gt;). I’m happy to see it’s included.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Using Vim with large codebases</title><link href="https://johnmathews.eu/vim-for-large-projects.html" rel="alternate"/><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-15:/vim-for-large-projects.html</id><summary type="html"/><content type="html">&lt;p&gt;I use Vim as my text editor and &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free, open
+&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Using Vim with large codebases</title><link href="https://johnmathews.is/vim-for-large-projects.html" rel="alternate"/><published>2021-01-15T15:02:00+01:00</published><updated>2021-01-15T15:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-15:/vim-for-large-projects.html</id><summary type="html"/><content type="html">&lt;p&gt;I use Vim as my text editor and &lt;span class="caps"&gt;IDE&lt;/span&gt;. I like that its free, open
 source and customizable. Below are some of the most useful
 plugins and features I’ve started using this year when I was building Moneybar
 and learning how to use Django.&lt;/p&gt;
@@ -1577,7 +1577,7 @@ Plug &lt;span class="s1"&gt;'valloric/matchtagalways'&lt;/span&gt;
 &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:closetag_filenames &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"*.html, *.xhtml, *.phtml"&lt;/span&gt;
 
 &lt;span class="k"&gt;call&lt;/span&gt; plug#&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Data Science vs Web Development: Larger Code Bases</title><link href="https://johnmathews.eu/larger-code-bases.html" rel="alternate"/><published>2021-01-14T13:40:00+01:00</published><updated>2021-01-14T13:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-14:/larger-code-bases.html</id><summary type="html"/><content type="html">&lt;h2 id="code-structure"&gt;Code Structure&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Data Science vs Web Development: Larger Code Bases</title><link href="https://johnmathews.is/larger-code-bases.html" rel="alternate"/><published>2021-01-14T13:40:00+01:00</published><updated>2021-01-14T13:40:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-14:/larger-code-bases.html</id><summary type="html"/><content type="html">&lt;h2 id="code-structure"&gt;Code Structure&lt;/h2&gt;
 &lt;p&gt;One of the most immediate and basic differences between working as a data
 scientist or as a web developer is the number of files the codebase
 is spread across and the amount of code within each file.&lt;/p&gt;
@@ -1592,7 +1592,7 @@ files spread across a tree of directories, and the average number of lines of co
 &lt;p&gt;These differences mean that code organization tools and &lt;span class="caps"&gt;IDE&lt;/span&gt; features play very
 different roles within each industry. In web development you really need to be able to jump between different files (or buffers) quickly, and search for text across multiple files. Writing idiomatically becomes more important, and writing code within discreet testable units becomes essential so that things don’t break without being noticed.&lt;/p&gt;
 &lt;p&gt;In data science, linting feels more optional, and searching for text within  methods or functions outside the current module is rarer.&lt;/p&gt;
-&lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Test Driven Development</title><link href="https://johnmathews.eu/test-driven-development.html" rel="alternate"/><published>2021-01-06T17:50:00+01:00</published><updated>2021-01-06T17:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-06:/test-driven-development.html</id><summary type="html"/><content type="html">&lt;p&gt;Test Driven Development was mind-bending when I first grappled with it: &lt;/p&gt;
+&lt;p&gt;I didn’t appreciate this until I paused my work as a Data Scientist and began building non-trivial web apps. &lt;/p&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Test Driven Development</title><link href="https://johnmathews.is/test-driven-development.html" rel="alternate"/><published>2021-01-06T17:50:00+01:00</published><updated>2021-01-06T17:50:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-06:/test-driven-development.html</id><summary type="html"/><content type="html">&lt;p&gt;Test Driven Development was mind-bending when I first grappled with it: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Write a test for the code before you write the code”&lt;/li&gt;
 &lt;li&gt;&lt;span class="dquo"&gt;“&lt;/span&gt;Assert that your code matches your expectations by understanding &lt;em&gt;all&lt;/em&gt; the inputs and &lt;em&gt;all&lt;/em&gt; the outputs for &lt;em&gt;every&lt;/em&gt; function or method I write”. &lt;/li&gt;
@@ -1627,7 +1627,7 @@ coverage reports to keep coverage &lt;em&gt;close&lt;/em&gt; to 100%&lt;sup id="
    codebase complexity and size.&lt;/li&gt;
 &lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-test-driven-development-1"&gt;Which is fun and all, but
 testing for the sake of it doesn’t necessarily stop bad things happening. Its very possible to write a test that covers the code you’ve just
-written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours happen. &lt;a class="simple-footnote-back" href="#sf-test-driven-development-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="django"/><category term="testing"/><category term="web-app"/></entry><entry><title>API Design Principles</title><link href="https://johnmathews.eu/api-design.html" rel="alternate"/><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/api-design.html</id><summary type="html"/><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt; design:&lt;/p&gt;
+written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours happen. &lt;a class="simple-footnote-back" href="#sf-test-driven-development-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="python"/><category term="django"/><category term="testing"/><category term="web-app"/></entry><entry><title>API Design Principles</title><link href="https://johnmathews.is/api-design.html" rel="alternate"/><published>2021-01-04T16:59:00+01:00</published><updated>2021-01-04T16:59:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-04:/api-design.html</id><summary type="html"/><content type="html">&lt;p&gt;Some super brief notes I made about &lt;span class="caps"&gt;API&lt;/span&gt; design:&lt;/p&gt;
 &lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;It’s more of an art than a science&lt;/li&gt;
@@ -1637,7 +1637,7 @@ written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours�
 &lt;li&gt;&lt;code&gt;GraphQL&lt;/code&gt; - doesnt overfetch. Graph query language made by Facebook.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;APIs are everywhere (not just web APIs). They’re an &lt;a href="https://johnmathews.eu/principles-of-oop.html#2-abstraction"&gt;abstraction&lt;/a&gt; that hides an implementation. &lt;code&gt;Django&lt;/code&gt; model managers are an &lt;span class="caps"&gt;API&lt;/span&gt; (and also part of Django’s &lt;span class="caps"&gt;ORM&lt;/span&gt;), JavaScript is an &lt;span class="caps"&gt;API&lt;/span&gt;, etc.&lt;/li&gt;
+&lt;li&gt;APIs are everywhere (not just web APIs). They’re an &lt;a href="https://johnmathews.is/principles-of-oop.html#2-abstraction"&gt;abstraction&lt;/a&gt; that hides an implementation. &lt;code&gt;Django&lt;/code&gt; model managers are an &lt;span class="caps"&gt;API&lt;/span&gt; (and also part of Django’s &lt;span class="caps"&gt;ORM&lt;/span&gt;), JavaScript is an &lt;span class="caps"&gt;API&lt;/span&gt;, etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="restful-apis"&gt;RESTful APIs&lt;/h2&gt;
 &lt;ul&gt;
@@ -1683,7 +1683,7 @@ written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours�
 &lt;li&gt;Use the &lt;span class="caps"&gt;HTTP&lt;/span&gt; location header to contain a link on resource creation, or for &lt;span class="caps"&gt;GET&lt;/span&gt; with pagination, use first, last, next, prev.&lt;/li&gt;
 &lt;li&gt;Connectedness - return links in the response which link to useful resources. At minimum, a link to show how the data was received, or posted.&lt;/li&gt;
 &lt;li&gt;Idempotence - clients making the same repeated requests create the same result on the server side. I.e. making repeated requests has the same result as making a similar request, server side. On the client side, a response code may change, of course. &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Principles Of Object Orientated Programming</title><link href="https://johnmathews.eu/principles-of-oop.html" rel="alternate"/><published>2021-01-04T16:27:00+01:00</published><updated>2021-01-04T16:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/principles-of-oop.html</id><summary type="html"/><content type="html">&lt;p&gt;I recently interviewed for a lead developer role at &lt;a href="https://labdigital.nl/en/"&gt;Lab Digital&lt;/a&gt;&lt;sup id="sf-principles-of-oop-1-back"&gt;&lt;a class="simple-footnote" href="#sf-principles-of-oop-1" title="Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with Infrastructure As Code, and also working at an agency. Can’t win them all."&gt;1&lt;/a&gt;&lt;/sup&gt; and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (&lt;span class="caps"&gt;OOP&lt;/span&gt;).&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Principles Of Object Orientated Programming</title><link href="https://johnmathews.is/principles-of-oop.html" rel="alternate"/><published>2021-01-04T16:27:00+01:00</published><updated>2021-01-04T16:27:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-04:/principles-of-oop.html</id><summary type="html"/><content type="html">&lt;p&gt;I recently interviewed for a lead developer role at &lt;a href="https://labdigital.nl/en/"&gt;Lab Digital&lt;/a&gt;&lt;sup id="sf-principles-of-oop-1-back"&gt;&lt;a class="simple-footnote" href="#sf-principles-of-oop-1" title="Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with Infrastructure As Code, and also working at an agency. Can’t win them all."&gt;1&lt;/a&gt;&lt;/sup&gt; and thought it would be sensible to review some of the fundamental aspects of Object Orientated Programming (&lt;span class="caps"&gt;OOP&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;You might think that’s a unusual way to prepare for an interview, and you’d be right. Nothing close to these notes arose during the interview, but I find this stuff interesting. If I’m motivated enough to study it, then I think that’s a good enough reason by itself, without a specific reason. These are some brief notes.&lt;/p&gt;
 &lt;p&gt;Object Orientated Programming has four key aspects:&lt;/p&gt;
 &lt;ol&gt;
@@ -1734,7 +1734,7 @@ written without ensuring that &lt;em&gt;only&lt;/em&gt; the intended behaviours�
 &lt;li&gt;Instance methods compared to class methods.&lt;/li&gt;
 &lt;li&gt;Inheritance, mixins, and decorators.&lt;/li&gt;
 &lt;li&gt;The “magic” within the &lt;code&gt;Django&lt;/code&gt; source code that requires &lt;code&gt;mypy&lt;/code&gt; to use extensions in order to do its static type checking correctly.&lt;/li&gt;
-&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-principles-of-oop-1"&gt;Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with &lt;code&gt;Infrastructure As Code&lt;/code&gt;, and also working at an agency. Can’t win them all. &lt;a class="simple-footnote-back" href="#sf-principles-of-oop-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Unix: Utilities To Analyse And Update Multiple Text Files</title><link href="https://johnmathews.eu/using-unix-utilities-to-analyse-and-update-multiple-files.html" rel="alternate"/><published>2021-01-04T13:02:00+01:00</published><updated>2021-01-04T13:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2021-01-04:/using-unix-utilities-to-analyse-and-update-multiple-files.html</id><summary type="html"/><content type="html">&lt;p&gt;As part of the redesign of this blog I wanted to make an article’s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple categories.&lt;/p&gt;
+&lt;/ol&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-principles-of-oop-1"&gt;Unfortunately, I didn’t get the job. They wanted a senior Python developer with experience with &lt;code&gt;Infrastructure As Code&lt;/code&gt;, and also working at an agency. Can’t win them all. &lt;a class="simple-footnote-back" href="#sf-principles-of-oop-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>Unix: Utilities To Analyse And Update Multiple Text Files</title><link href="https://johnmathews.is/using-unix-utilities-to-analyse-and-update-multiple-files.html" rel="alternate"/><published>2021-01-04T13:02:00+01:00</published><updated>2021-01-04T13:02:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-01-04:/using-unix-utilities-to-analyse-and-update-multiple-files.html</id><summary type="html"/><content type="html">&lt;p&gt;As part of the redesign of this blog I wanted to make an article’s category more meaningful. Previously, I simply picked a handful of categories and then assigned a single category to each post. This method becomes limiting when an article is relevant to multiple categories.&lt;/p&gt;
 &lt;p&gt;Also, using nested categories seems like a good way of grouping similar content and allowing more nuanced filtering of interests.&lt;/p&gt;
 &lt;p&gt;As I considered how to update the categories of existing articles, I realised this would be a good opportunity to practice analyzing and updating text files using unix utilities.&lt;/p&gt;
 &lt;p&gt;Here is how I reviewed and updated the categories of my existing articles:&lt;/p&gt;
@@ -1827,7 +1827,7 @@ grep -l &lt;span class="s2"&gt;"Category: .*Non-technical/&lt;/span&gt;&lt;span 
     want to access variables or commands inside a string.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;.*&lt;/code&gt; is a wildcard operator allowing any number of characters. It’s
     required when an article belongs to multiple categories.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>A faster shell</title><link href="https://johnmathews.eu/shell.html" rel="alternate"/><published>2019-02-14T11:32:00+01:00</published><updated>2019-02-14T11:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2019-02-14:/shell.html</id><summary type="html">&lt;p&gt;zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&amp;nbsp;down&lt;/p&gt;</summary><content type="html">&lt;p&gt;Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a niggle.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Technical/Developer Tools"/></entry><entry><title>A faster shell</title><link href="https://johnmathews.is/shell.html" rel="alternate"/><published>2019-02-14T11:32:00+01:00</published><updated>2019-02-14T11:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2019-02-14:/shell.html</id><summary type="html">&lt;p&gt;zsh was loading significantly slower than bash, so I used profiling to see what was slowing things&amp;nbsp;down&lt;/p&gt;</summary><content type="html">&lt;p&gt;Opening up a new shell was annoyingly slow. Not terrible, but enough to notice. Its a niggle.&lt;/p&gt;
 &lt;p&gt;I wanted to find out which components were causing the most delay, so I used
 &lt;code&gt;time&lt;/code&gt; to measure how long it took to launch a shell. Even though shells
 might appear to be part of the low level ‘guts’ of a computer, each shell is
@@ -1835,13 +1835,13 @@ just an executable and can be treated as such.&lt;/p&gt;
 &lt;p&gt;To measure the startup speed of your shell, do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="k"&gt;$(&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; /usr/bin/time &lt;span class="nv"&gt;$SHELL&lt;/span&gt; -i -c exit&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.is/images/zsh_startup_speed.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;This shows that it takes 0.84 seconds to start &lt;code&gt;zsh&lt;/code&gt; - not terrible, but not great:&lt;/p&gt;
 &lt;p&gt;You can compare the performance of different shells by replacing &lt;code&gt;$SHELL&lt;/code&gt; with
 &lt;code&gt;zsh&lt;/code&gt;, &lt;code&gt;bash&lt;/code&gt;, &lt;code&gt;fish&lt;/code&gt; etc.&lt;/p&gt;
 &lt;p&gt;Here are the results if I used &lt;code&gt;BASH&lt;/code&gt; instead of &lt;code&gt;zsh&lt;/code&gt; - 9.3x faster! (but
 without useful tools and plugins):
-&lt;img alt="bash profile" src="https://johnmathews.eu/images/bash_startup_speed.jpg"/&gt;&lt;/p&gt;
+&lt;img alt="bash profile" src="https://johnmathews.is/images/bash_startup_speed.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Now that I can measure how long it takes to start, it would be useful to know
 which proccesses are causing the greatest delays. This could be done with
 something like &lt;code&gt;zsh -xv&lt;/code&gt; which enables verbose output and xtrace. This creates
@@ -1849,13 +1849,13 @@ a tonne of output, but doesnt inlcude timestamps. All I really want is
 a summary of how much time each subproccess required to run, i.e. an order blind profiler.&lt;/p&gt;
 &lt;p&gt;Add &lt;code&gt;zmodload zsh/zprof&lt;/code&gt; at the start of &lt;code&gt;.zshrc&lt;/code&gt; and &lt;code&gt;zprof&lt;/code&gt; at the very end.
 Now when I start &lt;code&gt;zsh&lt;/code&gt; I see the following:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="zsh startup components" src="https://johnmathews.eu/images/zsh_order_blind_profiling.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zsh startup components" src="https://johnmathews.is/images/zsh_order_blind_profiling.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Next steps - make virtualenvwrapper run faster, or asyncronously, or
 not at all…&lt;/p&gt;
 &lt;p&gt;Update:
 &lt;code&gt;virtualenvwrapper&lt;/code&gt; is the biggest cause of slow loading. Using the &lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html"&gt;lazy
 loading&lt;/a&gt; option decreased loading time by 0.3s&lt;/p&gt;
-&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.eu/images/zsh_startup_speed_lazy_load.jpg"/&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="shell"/><category term="unix"/><category term="zsh"/><category term="bash"/><category term="profiling"/></entry><entry><title>Ry’s Git Tutorial</title><link href="https://johnmathews.eu/rys-git-tutorial.html" rel="alternate"/><published>2018-06-01T17:11:00+02:00</published><updated>2018-06-01T17:11:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2018-06-01:/rys-git-tutorial.html</id><summary type="html">&lt;p&gt;Ry&amp;rsquo;s Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For tracking changes to a collection of files, Git is the ubiquitous solution.
+&lt;p&gt;&lt;img alt="zsh profile" src="https://johnmathews.is/images/zsh_startup_speed_lazy_load.jpg"/&gt;&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="shell"/><category term="unix"/><category term="zsh"/><category term="bash"/><category term="profiling"/></entry><entry><title>Ry’s Git Tutorial</title><link href="https://johnmathews.is/rys-git-tutorial.html" rel="alternate"/><published>2018-06-01T17:11:00+02:00</published><updated>2018-06-01T17:11:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2018-06-01:/rys-git-tutorial.html</id><summary type="html">&lt;p&gt;Ry&amp;rsquo;s Git Tutorial is a great way to learn Git. Learn by doing as you create and maintain a simple&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;For tracking changes to a collection of files, Git is the ubiquitous solution.
 It’s free, robust, comprehensive, and there is a plethora of resources that are
 easy to find.&lt;/p&gt;
 &lt;p&gt;I usually find the commands difficult to remember though, and the concepts
@@ -1875,25 +1875,25 @@ start at the beginning but can jump into the guide at any point.&lt;/p&gt;
 so that they can continue to be useful. If the author would like to get in touch,
 please do. I’d like to keep this great resource available so that others can
 benefit from it.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://johnmathews.eu/Rys Git Tutorial.epub"&gt;.epub&lt;/a&gt; or
-&lt;a href="https://johnmathews.eu/Rys Git Tutorial.pdf"&gt;.pdf&lt;/a&gt; versions are available to download.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://johnmathews.is/Rys Git Tutorial.epub"&gt;.epub&lt;/a&gt; or
+&lt;a href="https://johnmathews.is/Rys Git Tutorial.pdf"&gt;.pdf&lt;/a&gt; versions are available to download.&lt;/p&gt;
 &lt;p&gt;Download the example files for each module below:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter2.zip"&gt;Chapter 2: Undoing Changes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter3.zip"&gt;Chapter 3: Branches I&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter4.zip"&gt;Chapter 4: Branches &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter5.zip"&gt;Chapter 5: Rebasing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter6.zip"&gt;Chapter 6: Rewriting History&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter7.zip"&gt;Chapter 7: Remotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter8.zip"&gt;Chapter 8: Centralized Workflows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter9.zip"&gt;Chapter 9: Distributed Workflows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter10.zip"&gt;Chapter 10: Patch Workflows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter11.zip"&gt;Chapter 11: Tips &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Tricks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter12.zip"&gt;Chapter 12: Plumbing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://johnmathews.eu/chapter13.zip"&gt;end&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter2.zip"&gt;Chapter 2: Undoing Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter3.zip"&gt;Chapter 3: Branches I&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter4.zip"&gt;Chapter 4: Branches &lt;span class="caps"&gt;II&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter5.zip"&gt;Chapter 5: Rebasing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter6.zip"&gt;Chapter 6: Rewriting History&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter7.zip"&gt;Chapter 7: Remotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter8.zip"&gt;Chapter 8: Centralized Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter9.zip"&gt;Chapter 9: Distributed Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter10.zip"&gt;Chapter 10: Patch Workflows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter11.zip"&gt;Chapter 11: Tips &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter12.zip"&gt;Chapter 12: Plumbing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://johnmathews.is/chapter13.zip"&gt;end&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;ol class="simple-footnotes"&gt;&lt;li id="sf-rys-git-tutorial-1"&gt;This tutorial was also the first
 time I created a simple website, and it led to so many “ahah!” moments. It
-unlocked all the web development progress that followed. &lt;a class="simple-footnote-back" href="#sf-rys-git-tutorial-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="Git"/><category term="Rys"/><category term="Tutorial"/><category term="Ryan Hodson"/></entry><entry><title>Vim!</title><link href="https://johnmathews.eu/vim.html" rel="alternate"/><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/vim.html</id><summary type="html"/><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
+unlocked all the web development progress that followed. &lt;a class="simple-footnote-back" href="#sf-rys-git-tutorial-1-back"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</content><category term="Technical/Developer Tools"/><category term="Git"/><category term="Rys"/><category term="Tutorial"/><category term="Ryan Hodson"/></entry><entry><title>Vim!</title><link href="https://johnmathews.is/vim.html" rel="alternate"/><published>2016-12-01T22:32:00+01:00</published><updated>2016-12-01T22:32:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2016-12-01:/vim.html</id><summary type="html"/><content type="html">&lt;p&gt;Vim is a text editor renowned for its efficiency and its use of keyboard
 shortcuts. It’s based on the Vi text editor from the 1970’s. It was first
 released in 1991 and is still being developed today. It comes pre-installed on
 Unix systems (including MacOS) and can be run from the terminal.&lt;/p&gt;
@@ -1917,7 +1917,7 @@ a text editor into an &lt;span class="caps"&gt;IDE&lt;/span&gt;. &lt;a href="htt
 post&lt;/a&gt; walks
 you through setting up Vim as a Python &lt;span class="caps"&gt;IDE&lt;/span&gt; and explains how to manage various add-ons.&lt;/p&gt;
 &lt;p&gt;I recommend Daniel Mieslers &lt;a href="https://danielmiessler.com/study/vim/"&gt;blog post&lt;/a&gt;
-for a quick overview of how to use Vim.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="Vim"/></entry><entry><title>Autumn, BIN and $PATH</title><link href="https://johnmathews.eu/autumn-bin-and-path.html" rel="alternate"/><published>2016-12-01T21:53:00+01:00</published><updated>2016-12-01T21:53:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-12-01:/autumn-bin-and-path.html</id><summary type="html"/><content type="html">&lt;p&gt;Two small things have been learnt recently: the importance of &lt;span class="caps"&gt;PATH&lt;/span&gt; and
+for a quick overview of how to use Vim.&lt;/p&gt;</content><category term="Technical/Developer Tools"/><category term="Vim"/></entry><entry><title>Autumn, BIN and $PATH</title><link href="https://johnmathews.is/autumn-bin-and-path.html" rel="alternate"/><published>2016-12-01T21:53:00+01:00</published><updated>2016-12-01T21:53:00+01:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2016-12-01:/autumn-bin-and-path.html</id><summary type="html"/><content type="html">&lt;p&gt;Two small things have been learnt recently: the importance of &lt;span class="caps"&gt;PATH&lt;/span&gt; and
 the contents of various &lt;span class="caps"&gt;BIN&lt;/span&gt; folders.&lt;/p&gt;
 &lt;p&gt;Autumn 2016 has not gone as planned. Whilst studying for a couple of
 exams plans were put on hold and hobbies were ceased. Now that life is
@@ -1937,7 +1937,7 @@ normal folders, which the &lt;span class="caps"&gt;OS&lt;/span&gt; is set to loo
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;/Users/John/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/&lt;/span&gt;
 &lt;span class="err"&gt;3.5/bin:/Users/John/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/&lt;/span&gt;
 &lt;span class="err"&gt;Library/TeX/texbin&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"/><category term="Unix"/></entry><entry><title>Jupyter (iPython) notebooks + Pandas</title><link href="https://johnmathews.eu/Jupyter-ipython-notebooks-pandas.html" rel="alternate"/><published>2016-08-03T13:04:00+02:00</published><updated>2016-08-03T13:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.eu,2016-08-03:/Jupyter-ipython-notebooks-pandas.html</id><summary type="html"/><content type="html">&lt;p&gt;When working with more data than can fit in an Excel file, or when you
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Technical/Developer Tools"/><category term="Unix"/></entry><entry><title>Jupyter (iPython) notebooks + Pandas</title><link href="https://johnmathews.is/Jupyter-ipython-notebooks-pandas.html" rel="alternate"/><published>2016-08-03T13:04:00+02:00</published><updated>2016-08-03T13:04:00+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2016-08-03:/Jupyter-ipython-notebooks-pandas.html</id><summary type="html"/><content type="html">&lt;p&gt;When working with more data than can fit in an Excel file, or when you
 want to be sure the data won’t be edited, you usually need to interact with
 the data by writing scripts.&lt;/p&gt;
 &lt;p&gt;One of the biggest time sinks (for me) when working with these tools
