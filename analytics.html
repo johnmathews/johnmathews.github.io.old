@@ -350,10 +350,12 @@
 
 	// 1. JavaScript shortcut events
 	var eventsURL = "https://storage.googleapis.com/johnmathews-eu/website-analytics/aggregate-client-js-events.JSON"
+	const ms = Date.now();
         $.getJSON(
             {
-            url: eventsURL,
-            cache: false,
+            url: eventsURL+"?dummy="+ms,
+            cache: "no-store",
+	    //cache: false,
             timeout: 20000
             }
         ).done(function(srcData) {
