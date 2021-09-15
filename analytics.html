@@ -556,19 +556,32 @@
         // make a normal html table of all the views per page per day, then call DataTable() on it.
         var html = '<table id="dataTable" class="display">';
         html += '<thead>';
-        html += '<tr>' + '<th>' + 'Date' + '</th><th>' + 'Page' + '</th><th>' + 'Views' + '</th>' + '</tr>';
+        html += '<tr>' + '<th>' + 'Date' + '</th><th>' + 'Page' + '</th><th>' + 'Views' + '</th><th>' + 'Location'  + '</th>' + '</tr>';
         html += '</thead>';
         html += '<tbody>';
         for (var i = 0; i < viewsPageDay.length; i++) {
           html += '<tr>';
-          for( var j in viewsPageDay[i] ) {
+          for (var j in viewsPageDay[i]) {
             if (j === 'date'){
               var date = new Date(viewsPageDay[i][j])
               html += '<td>' + date + '</td>';
             } else if (j === 'page') {
                       html += '<td>' + `<a href=${viewsPageDay[i][j]}>${viewsPageDay[i][j]}</a>`  + '</td>';
-            } else {
-              html += '<td>' + viewsPageDay[i][j] + '</td>';
+            } else if (j === 'country_count') {
+		      var value = 0
+		      if (viewsPageDay[i][j] == null)
+			      {value = 'unknown'}
+		      else 
+		        {
+				value = viewsPageDay[i][j]
+				value = value.replaceAll("(", "[").replaceAll(")", "]").replaceAll("'", '"')
+				value = JSON.parse(value)
+				value = Object.assign(...value.map(([key, val]) => ({[key]: val})))
+				value = JSON.stringify(value) //.toString()
+			}
+		      html += '<td>' + `${value}`  + '</td>';
+            } else if (j === 'views') {
+                      html += '<td>' + viewsPageDay[i][j]  + '</td>';
             }
           }
           html += '</tr>';
@@ -581,9 +594,10 @@
 	  "pageLength": 15,
           "order": [[ 0, "desc" ], [2, "desc"]], // sort on date and then by views
 	    "columns": [
-	     {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
-	     null,
-	     null
+	      {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
+	      null,
+	      null,
+	      null
             ]
         })
       })
