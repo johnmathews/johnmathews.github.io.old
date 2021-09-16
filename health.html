@@ -321,6 +321,7 @@
       </script>
 <script> navigator.sendBeacon('https://us-central1-johnmathews-website.cloudfunctions.net/page_view_logger?path='+window.location.pathname); </script>
 <script crossorigin="anonymous" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<script crossorigin="anonymous" rel="prefetch" src="https://johnmathews.is/theme/js/chartjs-plugin-annotation.min.js" type="text/javascript"></script>
 <script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
 <script charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js" type="text/javascript"></script>
@@ -340,32 +341,51 @@
         var activity = DATA["activity"]
         var readiness = DATA["readiness"]
 
+	function makeAnnotations(dates){
+	  var dates = dates.map(date => new Date(date))
+	  var boxes = new Object()
+      	  dates.map((date, index) => {
+	    if (date.getDay()==6) {
+	      boxes[`box${index}`] = {
+	        type: 'box',
+	        xScaleID: 'xAxes',
+	        xMin: index-0.5,
+	        xMax: index+1.5,
+		borderWidth: 0,
+	        backgroundColor: 'rgba(20, 20, 0, 0.10)'
+	      }
+	    }
+          })
+          return boxes
+        }
+
         const options = {
           responsive: true,
           plugins: {
-      	  legend: {
-	    labels: {
-	      //usePointStyle: true,
-	      //pointStyle: "circle",
-	      boxWidth: 10,
-	      boxHeight: 2
+	    annotation: {
+	      annotations: makeAnnotations(dates)
 	    },
-            display: true,
-	      position: 'bottom',
-	      align: "start"
-          },
-	      tooltip: {
-	        enabled: true,
-	        displayColors: false,
-	        callbacks: {
+      	    legend: {
+	      labels: {
+	        boxWidth: 10,
+	        boxHeight: 2
+	      },
+              display: true,
+	        position: 'bottom',
+	        align: "start"
+            },
+	    tooltip: {
+	      enabled: true,
+	      displayColors: false,
+	      callbacks: {
 	          title: () => null,
 	          label: function(context) {
 		        var item = context.parsed['x'] // index of datapoint
 		        var date = moment(labels[item], "D MMM").format('ddd D MMM')
 		        return date + ': ' + context.parsed['y']
-	          }
 	        }
 	      }
+	    }
         },
         scales: {
           xAxes: [{
