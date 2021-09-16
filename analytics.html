@@ -593,26 +593,26 @@
             } else if (j === 'page') {
                       html += '<td class="all">' + `<a href=${viewsPageDay[i][j]}>${viewsPageDay[i][j]}</a>`  + '</td>';
             } else if (j === 'country_count') {
-		      var value = 0
-		      if (viewsPageDay[i][j] == null)
-			      {value = 'unknown'}
-		      else
-		        {
-			  value = viewsPageDay[i][j]
-			  value = value.replaceAll("(", "[").replaceAll(")", "]").replaceAll("'", '"')
-			  value = JSON.parse(value)
-			  value = Object.assign(...value.map(([key, val]) => ({[key]: val})))
-			  flag_string = ""
-			  innerHtml = "<div class='flex flex-wrap'>"
-			  for (var item in value) {
-			    url = `https://www.countryflags.io/${item}/shiny/24.png`
-			    innerHtml += `<div title="${get_long_name(item)}" class='flex flex-row rounded-lg px-1 mb-1 mx-1 border-2 border-gray-300'><div class="mr-1"><img loading=lazy src="${url}" alt="${item} flag"></div><div class="ml-1 ">${value[item]}</div></div>`
-		  	  }
-			  innerHtml += "</div>"
-			}
-		      html += '<td class="min-tablet-l">' + `${innerHtml}`  + '</td>';
+	        var value = 0
+	        if (viewsPageDay[i][j] == null)
+  		  {value = 'unknown'}
+  	        else
+	  	  {
+		    value = viewsPageDay[i][j]
+		    value = value.replaceAll("(", "[").replaceAll(")", "]").replaceAll("'", '"')
+		    value = JSON.parse(value)
+		    value = Object.assign(...value.map(([key, val]) => ({[key]: val})))
+		    flag_string = ""
+		    innerHtml = "<div class='flex flex-wrap'>"
+		    for (var item in value) {
+		      url = `https://www.countryflags.io/${item}/shiny/24.png`
+		      innerHtml += `<div title="${get_long_name(item)}" class='flex flex-row rounded-lg px-1 mb-1 mx-1 border-2 border-gray-300'><div class="mr-1"><img loading=lazy src="${url}" alt="${item} flag"></div><div class="ml-1 ">${value[item]}</div></div>`
+		    }
+		    innerHtml += "</div>"
+		  }
+	      html += '<td class="min-tablet-l">' + `${innerHtml}`  + '</td>';
             } else if (j === 'views') {
-                      html += '<td class="all">' + viewsPageDay[i][j]  + '</td>';
+              html += '<td class="all">' + viewsPageDay[i][j]  + '</td>';
             }
           }
           html += '</tr>';
