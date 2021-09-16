@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.is/" rel="alternate"/><link href="https://johnmathews.is/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.is/</id><updated>2021-09-11T11:30:51+02:00</updated><entry><title>Visual mathematical proofs</title><link href="https://johnmathews.is/visual-mathematical-proofs.html" rel="alternate"/><published>2021-09-11T11:30:51+02:00</published><updated>2021-09-11T11:30:51+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-11:/visual-mathematical-proofs.html</id><summary type="html"/><content type="html">&lt;p&gt;A
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.is/" rel="alternate"/><link href="https://johnmathews.is/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.is/</id><updated>2021-09-16T10:37:28+02:00</updated><entry><title>The dangers of social media</title><link href="https://johnmathews.is/the-dangers-of-social-media.html" rel="alternate"/><published>2021-09-16T10:37:28+02:00</published><updated>2021-09-16T10:37:28+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-16:/the-dangers-of-social-media.html</id><summary type="html"/><content type="html">&lt;p&gt;A &lt;a href="https://ledger.humanetech.com/"&gt;ledger&lt;/a&gt; (what’s a ledger? It’s a webpage)
+from the “Center For Humane Technology” showing some of the dangers of social media.&lt;/p&gt;
+&lt;p&gt;The “Do unto others” section is outstanding. It describes the views of some tech
+company leaders, including how they limit usage of devices and social media for
+themselves and their kids.&lt;/p&gt;</content><category term="snippet"/><category term="technology"/><category term="mobile"/><category term="social-media"/></entry><entry><title>Visual mathematical proofs</title><link href="https://johnmathews.is/visual-mathematical-proofs.html" rel="alternate"/><published>2021-09-11T11:30:51+02:00</published><updated>2021-09-11T11:30:51+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-11:/visual-mathematical-proofs.html</id><summary type="html"/><content type="html">&lt;p&gt;A
 &lt;a href="https://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain"&gt;question&lt;/a&gt;
 on Stack Overflow asking for great visual proofs of mathematical ideas&lt;/p&gt;
 &lt;ul&gt;
@@ -412,7 +416,4 @@ percent inspiration and ninety-nine percent perspiration’ mantra. It’s almos
 all about the little details and the everyday grunt-work.&lt;/p&gt;
 &lt;p&gt;But there is that occasional ‘inspiration’ part, that ‘good taste’ thing that
 is about more than just solving some problem - solving it cleanly and nicely
-and yes, even beautifully.&lt;/p&gt;</content><category term="snippet"/><category term="linux"/><category term="interview"/><category term="linus"/></entry><entry><title>Remote Procedure Calls</title><link href="https://johnmathews.is/rpc.html" rel="alternate"/><published>2021-04-29T17:37:38+02:00</published><updated>2021-04-29T17:37:38+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-04-29:/rpc.html</id><summary type="html"/><content type="html">&lt;p&gt;A &lt;span class="caps"&gt;RPC&lt;/span&gt; is when an executable causes a procedure (subroutine) to execute on
-another computer, It’s coded as if it were a normal (local) subroutine. You
-don’t explicitly code the details for the remote interaction. You write the
-same code whether the subroutine is local or remote.&lt;/p&gt;</content><category term="snippet"/><category term="rpc"/><category term="linux"/></entry></feed>
+and yes, even beautifully.&lt;/p&gt;</content><category term="snippet"/><category term="linux"/><category term="interview"/><category term="linus"/></entry></feed>
