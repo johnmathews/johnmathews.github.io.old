@@ -372,15 +372,15 @@
           return moment(date, "ddd MMM DD HH:mm:ss zZZ").format('D MMM') // this triggers a deprecation warning
         })
 
-	var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+	var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
 			  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
-			  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
+			  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
 			  '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
-			  '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+			  '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC',
 			  '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
-			  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+			  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680',
 			  '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
-			  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+			  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3',
 			  '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
 
 	datasets = []
@@ -395,7 +395,7 @@
 		  set['data'].push(value)
 		}
 	    datasets.push(set)
-	  } 
+	  }
 	}
 	datasets = datasets.reverse() // so that stacked bar chart is stacked alphabetically
 
@@ -438,7 +438,7 @@
            }
          }
 
-      	    var ctx = document.getElementById('js-events').getContext('2d')
+        var ctx = document.getElementById('js-events').getContext('2d')
   	    var ActionsPerDay = new Chart(ctx, {
 	    type: 'bar',
 	    data: data,
@@ -487,7 +487,7 @@
               y: {
                 beginAtZero: true,
                 type: 'logarithmic',
- 	    position: 'right',
+ 	            position: 'right',
                }
              },
              elements: {
@@ -518,7 +518,6 @@
 	  label: 'Page Views Per Day',
 	  data: Object.values(dailyViewsCleaned).reverse(),
 	  fill: true,
-	  // green
 	  backgroundColor: "rgb(8, 143, 143, 0.2)",
 	  borderColor: 'rgb(8, 143, 143, 1)',
 	  tension: 0.1
@@ -556,6 +555,28 @@
         var config = {type: 'line', data: data, options: options};
         var UniqueIpAddressesPerDay = new Chart(ctx, config)
 
+	function get_long_name(code){
+  	  mapping = {
+		    "NL": "Netherlands",
+	            "MX": "Mexico",
+		    "AR": "Argentina",
+		    "US": "USA",
+		    "DE": "Germany",
+		    "PL": "Poland",
+		    "KR": "South Korea",
+		    "NO": "Norway",
+		    "GB": "Great Britain",
+		    "AU": "Australia",
+		    "GR": "Greece",
+		    "SK": "Slovakia",
+		    "IN": "India",
+		    "CH": "Switzerland",
+		    "CO": "Colombia",
+		    "ZA": "South Africa",
+	  }
+	  if (code in mapping){return mapping[code]} else {return code};
+	};
+
 
         // make a normal html table of all the views per page per day, then call DataTable() on it.
         var html = '<table id="dataTable" class="display">';
@@ -575,15 +596,21 @@
 		      var value = 0
 		      if (viewsPageDay[i][j] == null)
 			      {value = 'unknown'}
-		      else 
+		      else
 		        {
-				value = viewsPageDay[i][j]
-				value = value.replaceAll("(", "[").replaceAll(")", "]").replaceAll("'", '"')
-				value = JSON.parse(value)
-				value = Object.assign(...value.map(([key, val]) => ({[key]: val})))
-				value = JSON.stringify(value) //.toString()
+			  value = viewsPageDay[i][j]
+			  value = value.replaceAll("(", "[").replaceAll(")", "]").replaceAll("'", '"')
+			  value = JSON.parse(value)
+			  value = Object.assign(...value.map(([key, val]) => ({[key]: val})))
+			  flag_string = ""
+			  innerHtml = "<div class='flex flex-wrap'>"
+			  for (var item in value) {
+			    url = `https://www.countryflags.io/${item}/shiny/24.png`
+			    innerHtml += `<div title="${get_long_name(item)}" class='flex flex-row rounded-lg px-1 mb-1 mx-1 border-2 border-gray-300'><div class="mr-1"><img loading=lazy src="${url}" alt="${item} flag"></div><div class="ml-1 ">${value[item]}</div></div>`
+		  	  }
+			  innerHtml += "</div>"
 			}
-		      html += '<td class="min-tablet-l">' + `${value}`  + '</td>';
+		      html += '<td class="min-tablet-l">' + `${innerHtml}`  + '</td>';
             } else if (j === 'views') {
                       html += '<td class="all">' + viewsPageDay[i][j]  + '</td>';
             }
@@ -593,16 +620,16 @@
         html += '</tbody>';
         html += '</table>';
         $('#viewsPageDay').html(html)
-        $.fn.dataTable.moment("D MMM"); // datatables data sort plugin https://datatables.net/blog/2014-12-18 
+        $.fn.dataTable.moment("D MMM"); // datatables data sort plugin https://datatables.net/blog/2014-12-18
         $('#dataTable').DataTable({
-	  "responsive": true,
-	  "pageLength": 15,
+          "responsive": true,
+          "pageLength": 15,
           "order": [[ 0, "desc" ], [2, "desc"]], // sort on date and then by views
-	    "columns": [
-	      {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
-	      null,
-	      null,
-	      null
+            "columns": [
+              {render: function (data, type, row) { return moment(new Date(data).toString()).format('D MMM');}},
+              null,
+              null,
+              null
             ]
         })
       })

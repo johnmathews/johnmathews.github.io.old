@@ -2,7 +2,75 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>John Mathews - snippet</title><link href="https://johnmathews.is/" rel="alternate"/><link href="https://johnmathews.is/feeds/snippet.atom.xml" rel="self"/><id>https://johnmathews.is/</id><updated>2021-09-11T11:30:51+02:00</updated><entry><title>Visual mathematical proofs</title><link href="https://johnmathews.is/visual-mathematical-proofs.html" rel="alternate"/><published>2021-09-11T11:30:51+02:00</published><updated>2021-09-11T11:30:51+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-11:/visual-mathematical-proofs.html</id><summary type="html"/><content type="html">&lt;p&gt;A
 &lt;a href="https://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain"&gt;question&lt;/a&gt;
 on Stack Overflow asking for great visual proofs of mathematical ideas&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://web.archive.org/web/20210911092903/https://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain"&gt;archive&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="math"/></entry><entry><title>9/11 and the American psyche</title><link href="https://johnmathews.is/9-11-and-the-american-psyche.html" rel="alternate"/><published>2021-09-10T11:42:03+02:00</published><updated>2021-09-10T11:42:03+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-10:/9-11-and-the-american-psyche.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://www.ft.com/content/7e50735e-17a8-4417-9d91-5db0b8ca9eed"&gt;essay&lt;/a&gt; in the &lt;span class="caps"&gt;FT&lt;/span&gt;:
+&lt;ul&gt;
+&lt;li&gt;circles, trigonometry, angles&lt;/li&gt;
+&lt;li&gt;Fourier transforms&lt;/li&gt;
+&lt;li&gt;right angle triangles - &lt;span class="math"&gt;\(a^2 + b^2 = c^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;the area of a circle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://web.archive.org/web/20210911092903/https://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain"&gt;archive&lt;/a&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="snippet"/><category term="math"/></entry><entry><title>9/11 and the American psyche</title><link href="https://johnmathews.is/9-11-and-the-american-psyche.html" rel="alternate"/><published>2021-09-10T11:42:03+02:00</published><updated>2021-09-10T11:42:03+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-10:/9-11-and-the-american-psyche.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://www.ft.com/content/7e50735e-17a8-4417-9d91-5db0b8ca9eed"&gt;essay&lt;/a&gt; in the &lt;span class="caps"&gt;FT&lt;/span&gt;:
 “Twenty years later, the political and psychological consequences of the attack
 have become more intelligible”&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://johnmathews.is/Siri Hustvedt 9_11 and the American psyche | Financial Times.pdf"&gt;archive&lt;/a&gt;&lt;/p&gt;</content><category term="snippet"/><category term="history"/><category term="essay"/></entry><entry><title>How doctors die</title><link href="https://johnmathews.is/how-doctors-die.html" rel="alternate"/><published>2021-09-09T10:24:08+02:00</published><updated>2021-09-09T10:24:08+02:00</updated><author><name>John Mathews</name></author><id>tag:johnmathews.is,2021-09-09:/how-doctors-die.html</id><summary type="html"/><content type="html">&lt;p&gt;An &lt;a href="https://archive.cancerworld.net/featured/how-doctors-die/"&gt;article&lt;/a&gt; about
